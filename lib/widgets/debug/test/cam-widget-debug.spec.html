@@ -103,12 +103,8 @@
           }]);
 
 
-          angular.element(document).ready(function() {
-            if (location.search.indexOf('test=protractor') > -1) {
-              window.name = 'NG_DEFER_BOOTSTRAP!' + window.name;
-              document.body.setAttribute('ng-app', '');
-            }
 
+          angular.element(document).ready(function() {
             angular.bootstrap(document.body, [testModule.name]);
           });
         });
