@@ -193,9 +193,9 @@ $scope.diagramXML = /* bpmn xml string */;
           'text!lib/widgets/bpmn-viewer/test/test.xml'
         ], function (angular, camCommonsUi, testXML) {
 
-          var ngModule = angular.module('myModule', [camCommonsUi.name]);
+          var testModule = angular.module('myModule', [camCommonsUi.name]);
 
-          ngModule.controller('testController', ['$scope', function($scope) {
+          testModule.controller('testController', ['$scope', function($scope) {
             $scope.diagramXML = testXML;
 
             $scope.control = {};
@@ -232,7 +232,7 @@ $scope.diagramXML = /* bpmn xml string */;
 
 
           angular.element(document).ready(function() {
-            angular.bootstrap(document.body, [ngModule.name]);
+            angular.bootstrap(document.body, [testModule.name]);
           });
         });
       });
