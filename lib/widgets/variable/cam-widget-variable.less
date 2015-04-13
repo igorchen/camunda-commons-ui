@@ -3,6 +3,13 @@
   &[display] {
     .make-row();
 
+    > .type,
+    > .name,
+    > .value {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     > .type {
       .make-xs-column(2);
     }
