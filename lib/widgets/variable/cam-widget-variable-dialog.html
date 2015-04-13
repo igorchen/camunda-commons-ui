@@ -1,1 +1,93 @@
-yada yada
+<!-- # CE - camunda-commons-ui/lib/widgets/variable/cam-widget-variable-dialog.html -->
+<div class="modal-header">
+  <h3>Inspect "{{ variable.name }}" Object Variable</h3>
+</div>
+
+<div class="modal-body">
+  <div notifications-panel></div>
+
+  <p>
+    <strong>Value Info:</strong>
+  </p>
+
+  <p>
+   Object type name: <code>{{ variable.valueInfo.objectTypeName }}</code>
+  </p>
+  <p>
+   Serialization Data Format: <code>{{ variable.valueInfo.serializationDataFormat }}</code>
+  </p>
+
+  <form name="serializableVariable"
+        ng-show="status === 'beforeChange' || status === 'confirmChange'">
+    <tabset>
+      <tab heading="Serialized">
+        <textarea name="originalValue"
+                  ng-model="variable.value"
+                  ng-keyup="typeIn(this, 'serialized')"
+                  rows="10"
+                  class="form-control"></textarea>
+      </tab>
+
+      <tab heading="Deserialized"
+           select="deserialize()">
+        <div class="alert alert-danger"
+             ng-show="deserializationError">
+          <strong>Deserialization Error</strong>:
+          {{ deserializationError }}
+        </div>
+
+        <textarea ng-show="!deserializationError"
+                  name="deserializedValue"
+                  ng-model="variable.deserializedValue"
+                  ng-keyup="typeIn(this, 'deserialized')"
+                  rows="10"
+                  class="form-control"></textarea>
+      </tab>
+    </tabset>
+  </form>
+
+
+  <div class="alert alert-block"
+       ng-show="status === 'confirmChange'">
+    <span class="glyphicon glyphicon-warning-sign"></span>
+    <strong>Warning:</strong>
+    Are you sure you want to change the value of this Object? Changing the variable in an incompatible way may lead to severe runtime problems.
+  </div>
+
+  <div ng-show="status === 'changeSuccess'">
+    <p>
+      Variable <code>{{variableInstance.name}}</code> of execution <code>{{variableInstance.executionId}}</code>
+      was successfully updated.
+    </p>
+  </div>
+</div>
+
+<div class="modal-footer">
+  <button class="btn btn-default"
+          ng-click="$dismiss()"
+          ng-hide="status === 'changeSuccess'">
+    Close
+  </button>
+
+  <![if gt IE 9]>
+    <button class="btn btn-primary"
+            ng-click="$close()"
+            ng-show="status === 'changeSuccess'">
+      OK
+    </button>
+
+    <button class="btn btn-primary"
+            ng-click="change()"
+            ng-disabled="status !== 'beforeChange' || !hasChanged()"
+            ng-hide="status != 'beforeChange' || !variable.instanceId">
+      Change
+    </button>
+
+    <button class="btn btn-warning"
+            ng-click="change()"
+            ng-hide="status != 'confirmChange' || !variable.instanceId">
+      Confirm Change
+    </button>
+  <![endif]>
+</div>
+<!-- / CE - camunda-commons-ui/lib/widgets/variable/cam-widget-variable-dialog.html -->
