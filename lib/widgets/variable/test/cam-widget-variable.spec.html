@@ -146,9 +146,21 @@
           angular,
           variableDefinition
         ) {
+          var mockedDependenciesModule = angular.module('mockedDependencies', []);
+          mockedDependenciesModule.provider('Uri', function () {
+            this.$get = [function () {
+              return {
+                appUri: function () { return '-replaced-'; }
+              };
+            }];
+          });
+          mockedDependenciesModule.service('Notification', [function () {}]);
+
           var variableModule = angular.module('variableModule', [
-            'ui.bootstrap'
+            'ui.bootstrap',
+            mockedDependenciesModule.name
           ]);
+
           variableModule.directive('camWidgetVariable', variableDefinition);
 
 

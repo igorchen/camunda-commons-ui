@@ -31,14 +31,14 @@
       <tab heading="Deserialized"
            select="deserialize()">
         <div class="alert alert-danger"
-             ng-show="deserializationError">
+             ng-show="inpect.error">
           <strong>Deserialization Error</strong>:
           {{ deserializationError }}
         </div>
 
         <textarea ng-show="!deserializationError"
                   name="deserializedValue"
-                  ng-model="variable.deserializedValue"
+                  ng-model="inpsect.deserialized"
                   ng-keyup="typeIn(this, 'deserialized')"
                   rows="10"
                   class="form-control"></textarea>
@@ -79,13 +79,13 @@
     <button class="btn btn-primary"
             ng-click="change()"
             ng-disabled="status !== 'beforeChange' || !hasChanged()"
-            ng-hide="status != 'beforeChange' || !variable.instanceId">
+            ng-hide="status !== 'beforeChange' || !variable.id">
       Change
     </button>
 
     <button class="btn btn-warning"
             ng-click="change()"
-            ng-hide="status != 'confirmChange' || !variable.instanceId">
+            ng-hide="status !== 'confirmChange' || !variable.id">
       Confirm Change
     </button>
   <![endif]>
