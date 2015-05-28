@@ -1,5 +1,5 @@
 <html>
-<!-- Thu May 28 2015 11:05:35 GMT+0200 (CEST) -->
+<!-- Thu May 28 2015 13:45:59 GMT+0200 (CEST) -->
 <head>
 <title>Camunda commons UI library</title>
 <link rel="icon" href="resources/img/favicon.ico" />
@@ -73,6 +73,8 @@ variable
 <li><a href="https://github.com/camunda/camunda-cockpit-ui">cockpit</a></li>
 <li><a href="https://github.com/camunda/camunda-tasklist-ui">tasklist</a></li>
 </ul>
+<h2 id="important-notes">Important notes</h2>
+<p>This project is used internally and the API of its components are subject to changes at any time.</p>
 <h2 id="content">Content</h2>
 <ul>
 <li><code>lib</code><ul>
@@ -94,16 +96,10 @@ variable
 </li>
 <li><a href="#widgets"><code>widgets</code></a></li>
 </ul>
-<h2 id="test">Test</h2>
-<p>To test the components install karma via</p>
-<pre><code class="lang-sh">npm install -g karma-cli
-npm install
-</code></pre>
-<p>and execute the test suite via</p>
-<pre><code class="lang-sh">karma start test/karma.conf.js
-</code></pre>
 <h3 id="widgets">Widgets</h3>
 <p>Widgets are reusable components which should be easy to integrate in the Camunda webapps (<a href="https://github.com/camunda/camunda-admin-ui">admin</a>, <a href="https://github.com/camunda/camunda-cockpit-ui">cockpit</a> and <a href="https://github.com/camunda/camunda-tasklist-ui">tasklist</a>) and your own projects.</p>
+<h4 id="usage">Usage</h4>
+<p>A good way to get familiar with the widgets integration in your projects is by reading the source code of the <code>lib/widgets/*/test/*.spec.html</code> or their online versions (see the <em>widgets</em> menu on the <a href="//camunda.github.io/camunda-commons-ui">GitHub page</a>).<br>In those examples, we use uncompiled versions of the library and its dependencies and wire the whole with <a href="//requirejs.org">requirejs</a>.</p>
 <h4 id="available-widgets">Available widgets</h4>
 <ul>
 <li><code>cam-widget-bpmn-viewer</code></li>
@@ -131,6 +127,9 @@ nodemon -w lib/widgets/ --exec &quot;protractor ./test/protractor.conf.js&quot;
 <p>You can also run the tests on a single widget like that:</p>
 <pre><code>TESTED=variable nodemon -w lib/widgets/ --exec &quot;protractor ./test/protractor.conf.js&quot;
 </code></pre><p>This will only run the <code>cam-widget-variable</code> tests.</p>
+<h2 id="test">Test</h2>
+<pre><code class="lang-sh">grunt karma
+</code></pre>
 <h2 id="license">License</h2>
 <p>Unless otherwise specified this project is licensed under <a href="./LICENSE">Apache License Version 2.0</a>.</p>
 <h2 id="authors">Authors</h2>
