@@ -1,0 +1,131 @@
+{
+  "stubModules": [
+    "text"
+  ],
+  "paths": {
+    "camunda-commons-ui": "lib",
+    "angular-data-depend": "node_modules/angular-data-depend/src/dataDepend",
+    "angular-translate": "node_modules/angular-translate/dist/angular-translate",
+    "angular-moment": "node_modules/angular-moment/angular-moment",
+    "camunda-bpm-sdk-js": "node_modules/camunda-bpm-sdk-js/dist/camunda-bpm-sdk-angular",
+    "camunda-bpm-sdk-js-type-utils": "node_modules/camunda-bpm-sdk-js/dist/camunda-bpm-sdk-type-utils",
+    "jquery": "node_modules/jquery/dist/jquery",
+    "moment": "node_modules/moment/moment",
+    "requirejs": "node_modules/requirejs/require",
+    "ngDefine": "node_modules/requirejs-angular-define/dist/ngDefine",
+    "text": "node_modules/requirejs-text/text",
+    "lodash": "node_modules/lodash/lodash",
+    "angular": "vendor/angular",
+    "angular-animate": "vendor/angular-animate",
+    "angular-cookies": "vendor/angular-cookies",
+    "angular-loader": "vendor/angular-loader",
+    "angular-mocks": "vendor/angular-mocks",
+    "angular-resource": "vendor/angular-resource",
+    "angular-route": "vendor/angular-route",
+    "angular-sanitize": "vendor/angular-sanitize",
+    "angular-scenario": "vendor/angular-scenario",
+    "angular-touch": "vendor/angular-touch",
+    "angular-bootstrap": "vendor/ui-bootstrap-tpls-0.11.2-camunda",
+    "jquery-ui-core": "vendor/jquery.ui.core",
+    "jquery-ui-mouse": "vendor/jquery.ui.mouse",
+    "jquery-ui-widget": "vendor/jquery.ui.widget",
+    "jquery-ui-draggable": "vendor/jquery.ui.draggable",
+    "jquery-mousewheel": "vendor/jquery.mousewheel",
+    "jquery-overscroll": "vendor/jquery.overscroll",
+    "domReady": "vendor/domReady",
+    "placeholders-js": "vendor/placeholders.main",
+    "bpmn-io": "vendor/bpmn-viewer"
+  },
+  "shim": {
+    "angular": {
+      "deps": [
+        "jquery"
+      ],
+      "exports": "angular"
+    },
+    "placeholders-js": [
+      "vendor/placeholders.utils.js",
+      "vendor/placeholders.jquery.js"
+    ],
+    "camunda-commons-ui": [
+      "angular",
+      "angular-resource",
+      "angular-route",
+      "angular-sanitize",
+      "angular-translate",
+      "angular-bootstrap",
+      "moment",
+      "placeholders-js"
+    ],
+    "angular-animate": [
+      "angular"
+    ],
+    "angular-cookies": [
+      "angular"
+    ],
+    "angular-loader": [
+      "angular"
+    ],
+    "angular-mocks": [
+      "angular"
+    ],
+    "angular-resource": [
+      "angular"
+    ],
+    "angular-route": [
+      "angular"
+    ],
+    "angular-sanitize": [
+      "angular"
+    ],
+    "angular-scenario": [
+      "angular"
+    ],
+    "angular-touch": [
+      "angular"
+    ],
+    "angular-bootstrap": [
+      "angular"
+    ],
+    "angular-translate": [
+      "angular"
+    ],
+    "jquery-overscroll": [
+      "jquery"
+    ],
+    "jquery-mousewheel": [
+      "jquery"
+    ],
+    "jquery-ui-core": [
+      "jquery"
+    ],
+    "jquery-ui-widget": [
+      "jquery-ui-core"
+    ],
+    "jquery-ui-mouse": [
+      "jquery-ui-widget"
+    ],
+    "jquery-ui-draggable": [
+      "jquery-ui-widget",
+      "jquery-ui-mouse"
+    ]
+  },
+  "packages": [
+    {
+      "name": "camunda-commons-ui",
+      "location": "lib",
+      "main": "index"
+    },
+    {
+      "name": "camunda-commons-ui/util",
+      "location": "lib/util",
+      "main": "index"
+    },
+    {
+      "name": "camunda-commons-ui/widgets",
+      "location": "lib/widgets",
+      "main": "index"
+    }
+  ],
+  "baseUrl": "./"
+}

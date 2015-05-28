@@ -1,0 +1,135 @@
+<!-- CE # camunda-commons-ui/lib/widgets/search-pill/search-pill.html -->
+<span class="search-label"
+      ng-class="{'invalid': !valid}">
+  <a href
+     ng-click="onDelete()"
+     tooltip-placement="top"
+     tooltip="{{ deleteText }}"
+     class="remove-search glyphicon glyphicon-remove">
+  </a>
+
+  <span class="glyphicon glyphicon-exclamation-sign valid-hide"
+        ng-if="invalidText"
+        tooltip-placement="top"
+        tooltip="{{ invalidText }}"></span>
+  <span class="glyphicon glyphicon-exclamation-sign valid-hide"
+        ng-if="!invalidText"></span>
+
+  <span cam-widget-inline-field
+        class="set-value"
+        type="option"
+        options="type.values"
+        change="changeSearch('type', varValue, $event)"
+        on-start-editing="clearEditTrigger('type')"
+        value="type.value">
+    <span ng-if="type.tooltip"
+          tooltip-placement="top"
+          tooltip="{{type.tooltip}}">
+      {{ type.value.value | camQueryComponent }}
+    </span>
+    <span ng-if="!type.tooltip">
+      {{ type.value.value | camQueryComponent }}
+    </span>
+  </span>
+  <span ng-if="extended">
+    :
+    <span ng-if="potentialNames.length <= 0">
+      <span ng-if="!!name.value.value">
+        <span cam-widget-inline-field
+              class="set-value"
+              type="text"
+              change="changeSearch('name', varValue, $event)"
+              on-start-editing="clearEditTrigger('name')"
+              value="name.value.value">
+          <span ng-if="name.tooltip"
+                tooltip-placement="top"
+                tooltip="{{name.tooltip}}">
+              {{ name.value.value | camQueryComponent }}
+          </span>
+          <span ng-if="!name.tooltip">
+              {{ name.value.value | camQueryComponent }}
+          </span>
+        </span>
+      </span>
+      <span ng-if="!name.value.value">
+        <span cam-widget-inline-field
+              class="set-value"
+              type="text"
+              change="changeSearch('name', varValue, $event)"
+              on-start-editing="clearEditTrigger('name')"
+              value="name.value">
+          <span ng-if="name.tooltip"
+                tooltip-placement="top"
+                tooltip="{{name.tooltip}}">
+              {{ name.value | camQueryComponent }}
+          </span>
+          <span ng-if="!name.tooltip">
+              {{ name.value | camQueryComponent }}
+          </span>
+        </span>
+      </span>
+    </span>
+    <span ng-if="potentialNames.length > 0">
+      <span cam-widget-inline-field
+            class="set-value"
+            type="option"
+            options="potentialNames"
+            allow-non-options="true"
+            change="changeSearch('name', varValue, $event)"
+            on-start-editing="clearEditTrigger('name')"
+            value="name.value">
+        <span ng-if="name.tooltip"
+              tooltip-placement="top"
+              tooltip="{{name.tooltip}}">
+          <span ng-if="name.value.key">
+            {{ name.value.value | camQueryComponent }}
+          </span>
+          <span ng-if="!name.value.key">
+            {{ name.value | camQueryComponent }}
+          </span>
+        </span>
+        <span ng-if="!name.tooltip">
+          <span ng-if="name.value.key">
+            {{ name.value.value | camQueryComponent }}
+          </span>
+          <span ng-if="!name.value.key">
+            {{ name.value | camQueryComponent }}
+          </span>
+        </span>
+      </span>
+    </span>
+  </span>
+
+  <span cam-widget-inline-field
+        class="set-value"
+        type="option"
+        options="operator.values"
+        change="changeSearch('operator', varValue, $event)"
+        on-start-editing="clearEditTrigger('operator')"
+        value="operator.value">
+    <span ng-if="operator.tooltip"
+          tooltip-placement="top"
+          tooltip="{{operator.tooltip}}">
+      {{ operator.value.value | camQueryComponent }}
+    </span>
+    <span ng-if="!operator.tooltip">
+      {{ operator.value.value | camQueryComponent }}
+    </span>
+  </span>
+
+  <span cam-widget-inline-field
+        class="set-value"
+        type="{{ valueType }}"
+        change="changeSearch('value', varValue, $event)"
+        on-start-editing="clearEditTrigger('value')"
+        value="value.value"
+        flexible="{{ allowDates }}">
+    <span class="visible-whitespace"
+          ng-if="value.tooltip"
+          tooltip-placement="top"
+          tooltip="{{value.tooltip}}">{{ value.value | camQueryComponent }}</span>
+    <span class="visible-whitespace"
+          ng-if="!value.tooltip">{{ value.value | camQueryComponent }}</span>
+  </span>
+</span>
+<!-- CE / camunda-commons-ui/lib/widgets/search-pill/search-pill.html -->

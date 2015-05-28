@@ -1,0 +1,155 @@
+<html>
+<!-- Thu May 28 2015 11:05:35 GMT+0200 (CEST) -->
+<head>
+<title>Camunda commons UI library</title>
+<link rel="icon" href="resources/img/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="./styles.css" />
+<link type="text/css" rel="stylesheet" href="./test-styles.css" />
+</head>
+<body class="gh-pages readme">
+<header>
+<h1>
+<a href="./">Camunda commons UI</a>
+<small>7.3.0-SNAPSHOT</small>
+</h1>
+</header>
+<div class="page-wrapper">
+<nav>
+<h4>Widgets</h4>
+<ul class="list-inline">
+
+<li>
+<a href="./cam-widget-bpmn-viewer.html">
+bpmn-viewer
+</a>
+</li>
+<li>
+<a href="./cam-widget-debug.html">
+debug
+</a>
+</li>
+<li>
+<a href="./cam-widget-footer.html">
+footer
+</a>
+</li>
+<li>
+<a href="./cam-widget-header.html">
+header
+</a>
+</li>
+<li>
+<a href="./cam-widget-inline-field.html">
+inline-field
+</a>
+</li>
+<li>
+<a href="./cam-widget-loader.html">
+loader
+</a>
+</li>
+<li>
+<a href="./cam-widget-search-pill.html">
+search-pill
+</a>
+</li>
+<li>
+<a href="./cam-widget-search.html">
+search
+</a>
+</li>
+<li>
+<a href="./cam-widget-variable.html">
+variable
+</a>
+</li>
+</ul>
+</nav>
+<section>
+<div class="content">
+<p>Common frontend / UI resources and libraries for camunda web applications:</p>
+<ul>
+<li><a href="https://github.com/camunda/camunda-admin-ui">admin</a></li>
+<li><a href="https://github.com/camunda/camunda-cockpit-ui">cockpit</a></li>
+<li><a href="https://github.com/camunda/camunda-tasklist-ui">tasklist</a></li>
+</ul>
+<h2 id="content">Content</h2>
+<ul>
+<li><code>lib</code><ul>
+<li><code>auth</code> - for authentication mechanisms and tools, <a href="./lib/auth/README.md">read more</a></li>
+<li><code>util</code> - commonly used utilities <a href="./lib/util/README.md">read more</a></li>
+<li><code>directives</code></li>
+<li><code>pages</code></li>
+<li><code>plugin</code></li>
+<li><code>resources</code></li>
+<li><code>search</code></li>
+<li><code>services</code></li>
+</ul>
+</li>
+<li><code>resources</code><ul>
+<li><code>locales</code> - translation files</li>
+<li><code>img</code></li>
+<li><code>less</code> - base less files to generate CSS stylesheets</li>
+</ul>
+</li>
+<li><a href="#widgets"><code>widgets</code></a></li>
+</ul>
+<h2 id="test">Test</h2>
+<p>To test the components install karma via</p>
+<pre><code class="lang-sh">npm install -g karma-cli
+npm install
+</code></pre>
+<p>and execute the test suite via</p>
+<pre><code class="lang-sh">karma start test/karma.conf.js
+</code></pre>
+<h3 id="widgets">Widgets</h3>
+<p>Widgets are reusable components which should be easy to integrate in the Camunda webapps (<a href="https://github.com/camunda/camunda-admin-ui">admin</a>, <a href="https://github.com/camunda/camunda-cockpit-ui">cockpit</a> and <a href="https://github.com/camunda/camunda-tasklist-ui">tasklist</a>) and your own projects.</p>
+<h4 id="available-widgets">Available widgets</h4>
+<ul>
+<li><code>cam-widget-bpmn-viewer</code></li>
+<li><code>cam-widget-debug</code></li>
+<li><code>cam-widget-footer</code></li>
+<li><code>cam-widget-header</code></li>
+<li><code>cam-widget-inline-field</code></li>
+<li><code>cam-widget-loader</code></li>
+<li><code>cam-widget-search</code></li>
+<li><code>cam-widget-search-pill</code></li>
+<li><code>cam-widget-variable</code></li>
+</ul>
+<h4 id="developing-the-widgets">Developing the widgets</h4>
+<pre><code class="lang-sh">grunt auto-build
+</code></pre>
+<h4 id="testing-the-widgets">Testing the widgets</h4>
+<pre><code class="lang-sh">npm install
+./node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager --chrome update
+grunt
+</code></pre>
+<p>While developing widgets, you may want to run the tests as a change occurs, here is a way to achieve that:</p>
+<pre><code class="lang-sh">npm install -g nodemon
+nodemon -w lib/widgets/ --exec &quot;protractor ./test/protractor.conf.js&quot;
+</code></pre>
+<p>You can also run the tests on a single widget like that:</p>
+<pre><code>TESTED=variable nodemon -w lib/widgets/ --exec &quot;protractor ./test/protractor.conf.js&quot;
+</code></pre><p>This will only run the <code>cam-widget-variable</code> tests.</p>
+<h2 id="license">License</h2>
+<p>Unless otherwise specified this project is licensed under <a href="./LICENSE">Apache License Version 2.0</a>.</p>
+<h2 id="authors">Authors</h2>
+<ul>
+<li><a href="https://github.com/meyerdan">Daniel <em>meyerdan</em> Meyer</a> - <a href="http://twitter.com/meyerdan">@meyerdan</a></li>
+<li><a href="https://github.com/zeropaper">Valentin <em>zeropaper</em> Vago</a> - <a href="http://twitter.com/zeropaper">@zeropaper</a></li>
+<li><a href="https://github.com/nikku">Nico <em>Nikku</em> Rehwaldt</a> - <a href="http://twitter.com/nrehwaldt">@nrehwaldt</a></li>
+<li><a href="https://github.com/SebastianStamm">Sebastian Stamm</a> - <a href="https://twitter.com/seb_stamm">@seb_stamm</a></li>
+</ul>
+</div>
+</section>
+</div>
+<footer>
+<nav>
+<ul class="list-inline">
+<li><a href="//camunda.org">Camunda BPM</a></li>
+<li><a href="//github.com/camunda/camunda-commons-ui">commons UI lib</a></li>
+</ul>
+</nav>
+</footer>
+</body>
+</html>

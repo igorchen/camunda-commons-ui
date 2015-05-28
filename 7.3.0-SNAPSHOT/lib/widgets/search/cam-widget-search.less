@@ -1,0 +1,20 @@
+[cam-widget-search] {
+  .search-container {
+    .form-control();
+    padding: @padding-base-vertical;
+    height: auto;
+    position: relative;
+  }
+
+  .search-container > input {
+    padding: 0;
+    height: auto;
+    border: none;
+    .box-shadow(none);
+
+    &:focus {
+      border: none;
+      .box-shadow(none);
+    }
+  }
+}

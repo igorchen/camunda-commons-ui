@@ -1,0 +1,330 @@
+<html>
+  <head>
+    <title>Camunda commons UI library</title>
+    
+    <link rel="icon" href="resources/img/favicon.ico" />
+    <link href="styles.css" rel="stylesheet" />
+    <link href="test-styles.css" rel="stylesheet" />
+  </head>
+  <body class="gh-pages cam-widget-variable-test-page">
+    <header>
+<h1>
+<a href="./">Camunda commons UI</a>
+<small>7.3.0-SNAPSHOT</small>
+</h1>
+</header>
+<div class="page-wrapper">
+<nav>
+<h4>Widgets</h4>
+<ul class="list-inline">
+
+<li>
+<a href="./cam-widget-bpmn-viewer.html">
+bpmn-viewer
+</a>
+</li>
+<li>
+<a href="./cam-widget-debug.html">
+debug
+</a>
+</li>
+<li>
+<a href="./cam-widget-footer.html">
+footer
+</a>
+</li>
+<li>
+<a href="./cam-widget-header.html">
+header
+</a>
+</li>
+<li>
+<a href="./cam-widget-inline-field.html">
+inline-field
+</a>
+</li>
+<li>
+<a href="./cam-widget-loader.html">
+loader
+</a>
+</li>
+<li>
+<a href="./cam-widget-search-pill.html">
+search-pill
+</a>
+</li>
+<li>
+<a href="./cam-widget-search.html">
+search
+</a>
+</li>
+<li class="active">
+<a href="./cam-widget-variable.html">
+variable
+</a>
+</li>
+</ul>
+</nav>
+
+    <header>
+      <div>
+        <h1>Variable</h1>
+      </div>
+    </header>
+
+    <section class="widget-description">
+      <header>
+        <h2>Description</h2>
+      </header>
+      <p>A widget to display and manipulate variables used by the Camunda BPM suite.</p>
+    </section>
+
+    <section class="widget-reference">
+      <header>
+        <h2>Usage</h2>
+      </header>
+
+      <h3>Options</h3>
+      <dl>
+        <dt><span class="badge">=</span> cam-variable</dt>
+        <dd>The variable to be edited / displayed</dd>
+
+        <dt><span class="badge">@?</span> display</dt>
+        <dd>
+          Takes a boolean determining if the widget is only aimed to display the variable.
+          <a href="#example-3">Example</a>
+        </dd>
+
+        <dt><span class="badge">@?</span> shown</dt>
+        <dd>
+          Takes an array of strings to determine which parts of the variable is shown.<br/>
+          Valid strings:
+          <ul>
+            <li><code>type</code></li>
+            <li><code>name</code></li>
+            <li><code>value</code></li>
+          </ul>
+          <a href="#example-3">Example</a>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="widget-examples">
+      <header>
+        <h2>Examples</h2>
+      </header>
+
+
+      <div class="widget-example"
+           id="example-1"
+           ng-controller="example1Controller">
+        <h3>Editable variables</h3>
+        <pre ng-non-bindable>&lt;div ng-repeat="variable in vars"
+     class="table-row"
+     cam-widget-variable
+     cam-variable="variable"&gt;
+&lt;/div&gt;</pre>
+        <div class="test-container">
+          <div ng-repeat="variable in vars"
+               class="table-row"
+               cam-widget-variable
+               cam-variable="variable">
+          </div>
+        </div><!-- /.test-container -->
+      </div><!-- /.widget-example -->
+
+      <div class="widget-example"
+           id="example-2"
+           ng-controller="example2Controller">
+        <h3>Displayed variables</h3>
+        <pre ng-non-bindable>&lt;div ng-repeat="variable in vars"
+     cam-widget-variable
+     cam-variable="variable"
+     display="true"&gt;
+&lt;/div&gt;</pre>
+        <div class="test-container">
+          <div ng-repeat="variable in vars"
+               cam-widget-variable
+               cam-variable="variable"
+               display="true">
+          </div>
+        </div><!-- /.test-container -->
+      </div><!-- /.widget-example -->
+
+      <div class="widget-example"
+           id="example-3"
+           ng-controller="example3Controller">
+        <h3>Shown variable parts</h3>
+        <pre ng-non-bindable>&lt;div cam-widget-variable
+     cam-variable="vars[9]"
+     shown="nameValue"&gt;&lt;/div&gt;
+&lt;div cam-widget-variable
+     cam-variable="vars[9]"
+     shown="typeValue"&gt;&lt;/div&gt;
+&lt;div cam-widget-variable
+     cam-variable="vars[9]"
+     shown="typeName"&gt;&lt;/div&gt;</pre>
+        <div class="test-container">
+          <div cam-widget-variable
+               cam-variable="vars[9]"
+               shown="nameValue"></div>
+          <div cam-widget-variable
+               cam-variable="vars[9]"
+               shown="typeValue"></div>
+          <div cam-widget-variable
+               cam-variable="vars[9]"
+               shown="typeName"></div>
+        </div><!-- /.test-container -->
+      </div><!-- /.widget-example -->
+
+     <div class="widget-example"
+           id="example-4"
+           ng-controller="example3Controller">
+        <h3>Use within form</h3>
+        <pre ng-non-bindable>&lt;form name="testForm"&gt;
+            &lt;div cam-widget-variable
+                 cam-variable="vars[4]"&gt;&lt;/div&gt;
+            &lt;div cam-widget-variable
+                 cam-variable="vars[5]"&gt;&lt;/div&gt;
+            &lt;div cam-widget-variable
+                 cam-variable="vars[6]"&gt;&lt;/div&gt;
+            &lt;button class="btn btn-primary"
+                   ng-disabled="testForm.$invalid"&gt;
+              Submit changes
+            &lt;/button&gt;
+          &lt;/form&gt;</pre>
+        <div class="test-container">
+          <form name="testForm">
+            <div cam-widget-variable
+                 cam-variable="vars[4]"></div>
+            <div cam-widget-variable
+                 cam-variable="vars[5]"></div>
+            <div cam-widget-variable
+                 cam-variable="vars[6]"></div>
+            <button class="btn btn-primary"
+                   ng-disabled="testForm.$invalid">
+              Submit changes
+            </button>
+          </form>
+        </div><!-- /.test-container -->
+      </div><!-- /.widget-example -->
+    </section>
+
+    </div>
+<footer>
+<nav>
+<ul class="list-inline">
+<li><a href="//camunda.org">Camunda BPM</a></li>
+<li><a href="//github.com/camunda/camunda-commons-ui">commons UI lib</a></li>
+</ul>
+</nav>
+</footer>
+
+    <script src="node_modules/requirejs/require.js"></script>
+    <script>
+      require.config({
+        paths: {text: 'node_modules/requirejs-text/text'}
+      });
+      require(['text!test-conf.json'], function(rConf) {
+        'use strict';
+        rConf = JSON.parse(rConf);
+        require.config(rConf);
+        require([
+          'angular',
+          'lib/widgets/variable/cam-widget-variable',
+          'lib/widgets/variable/cam-variable-validator',
+          'angular-bootstrap'
+        ], function (
+          angular,
+          variableDefinition,
+          variableValidator
+        ) {
+
+          var variableModule = angular.module('variableModule', [
+            'ui.bootstrap'
+          ]);
+
+          variableModule.directive('camWidgetVariable', variableDefinition);
+          variableModule.directive('camVariableValidator', variableValidator);
+
+
+          var testModule = angular.module('testModule', [variableModule.name]);
+          var vars = [
+            {
+              name:   null,
+              type:   null
+            },
+            {
+              name:   'booleanVar',
+              type:   'Boolean',
+              value:  true
+            },
+            {
+              name:   'dateVar',
+              type:   'Date',
+              value:  '2015-03-23T13:14:06.340Z'
+            },
+            {
+              name:   'doubleVar',
+              type:   'Double',
+              value:  '12.34'
+            },
+            {
+              name:   'integerVar',
+              type:   'Integer',
+              value:  '1000'
+            },
+            {
+              name:   'longVar',
+              type:   'Long',
+              value:  '-100000000'
+            },
+            {
+              name:   'nullVar',
+              type:   'Null',
+              value:  null
+            },
+            {
+              name:   'objectVar',
+              type:   'Object',
+              value:  'rO0ABXNyACpvcmcuY2FtdW5kYS5icG0ucGEuc2VydmljZS5Db2NrcGl0VmFyaWFibGUAAAAAAAAAAQIAA0wABWRhdGVzdAAQTGphdmEvdXRpbC9MaXN0O0wABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZztMAAV2YWx1ZXEAfgACeHBzcgATamF2YS51dGlsLkFycmF5TGlzdHiB0h2Zx2GdAwABSQAEc2l6ZXhwAAAAAXcEAAAAAXNyAA5qYXZhLnV0aWwuRGF0ZWhqgQFLWXQZAwAAeHB3CAAAAUyieV6meHh0AAR0ZXN0dAAUY29ja3BpdFZhcmlhYmxlVmFsdWU',
+              valueInfo: {
+                objectTypeName: 'org.camunda.bpm.pa.service.CockpitVariable',
+                serializationDataFormat: 'application/x-java-serialized-object'
+              }
+            },
+            {
+              name:   'shortVar',
+              type:   'Short',
+              value:  '-32768'
+            },
+            {
+              name:   'stringVar',
+              type:   'String',
+              value:  'Some string value'
+            }
+          ];
+
+          testModule.controller('example1Controller', ['$scope', function($scope) {
+            $scope.vars = vars;
+          }]);
+
+          testModule.controller('example2Controller', ['$scope', function($scope) {
+            $scope.vars = vars;
+          }]);
+
+          testModule.controller('example3Controller', ['$scope', function($scope) {
+            $scope.nameValue =  ['name', 'value'];
+            $scope.typeValue =  ['type', 'value'];
+            $scope.typeName =   ['type', 'name'];
+            $scope.vars = vars;
+          }]);
+
+          angular.element(document).ready(function() {
+            angular.bootstrap(document.body, [testModule.name]);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
