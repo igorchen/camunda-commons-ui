@@ -3079,8 +3079,8 @@ tbody.collapse.in {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('/node_modules/bootstrap/fonts/glyphicons-halflings-regular.eot');
-  src: url('/node_modules/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/node_modules/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/node_modules/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/node_modules/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('node_modules/bootstrap/fonts/glyphicons-halflings-regular.eot');
+  src: url('node_modules/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('node_modules/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('node_modules/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('node_modules/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 /* line 21, /home/vale/repos/camunda-commons-ui/node_modules/bootstrap/less/glyphicons.less */
 .glyphicon {
@@ -7620,8 +7620,8 @@ body > .page-wrapper:after,
 }
 @font-face {
   font-family: 'bpmn';
-  src: url('/node_modules/bpmn-font/dist/font/bpmn.eot');
-  src: url('/node_modules/bpmn-font/dist/font/bpmn.eot#iefix') format('embedded-opentype'), url('/node_modules/bpmn-font/dist/font/bpmn.woff') format('woff'), url('/node_modules/bpmn-font/dist/font/bpmn.ttf') format('truetype'), url('/node_modules/bpmn-font/dist/font/bpmn.svg#bpmn') format('svg');
+  src: url('node_modules/bpmn-font/dist/font/bpmn.eot');
+  src: url('node_modules/bpmn-font/dist/font/bpmn.eot#iefix') format('embedded-opentype'), url('node_modules/bpmn-font/dist/font/bpmn.woff') format('woff'), url('node_modules/bpmn-font/dist/font/bpmn.ttf') format('truetype'), url('node_modules/bpmn-font/dist/font/bpmn.svg#bpmn') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -8841,8 +8841,8 @@ body {
 }
 @font-face {
   font-family: 'open_sanslight';
-  src: url('/vendor/fonts/opensans-light-webfont.eot');
-  src: url('/vendor/fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('/vendor/fonts/opensans-light-webfont.woff2') format('woff2'), url('/vendor/fonts/opensans-light-webfont.woff') format('woff'), url('/vendor/fonts/opensans-light-webfont.ttf') format('truetype'), url('/vendor/fonts/opensans-light-webfont.svg#open_sansregular') format('svg');
+  src: url('vendor/fonts/opensans-light-webfont.eot');
+  src: url('vendor/fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('vendor/fonts/opensans-light-webfont.woff2') format('woff2'), url('vendor/fonts/opensans-light-webfont.woff') format('woff'), url('vendor/fonts/opensans-light-webfont.ttf') format('truetype'), url('vendor/fonts/opensans-light-webfont.svg#open_sansregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -8853,8 +8853,8 @@ body {
 }
 @font-face {
   font-family: 'open_sansregular';
-  src: url('/vendor/fonts/opensans-regular-webfont.eot');
-  src: url('/vendor/fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('/vendor/fonts/opensans-regular-webfont.woff2') format('woff2'), url('/vendor/fonts/opensans-regular-webfont.woff') format('woff'), url('/vendor/fonts/opensans-regular-webfont.ttf') format('truetype'), url('/vendor/fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+  src: url('vendor/fonts/opensans-regular-webfont.eot');
+  src: url('vendor/fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('vendor/fonts/opensans-regular-webfont.woff2') format('woff2'), url('vendor/fonts/opensans-regular-webfont.woff') format('woff'), url('vendor/fonts/opensans-regular-webfont.ttf') format('truetype'), url('vendor/fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -8865,8 +8865,8 @@ body {
 }
 @font-face {
   font-family: 'open_sansbold';
-  src: url('/vendor/fonts/opensans-bold-webfont.eot');
-  src: url('/vendor/fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('/vendor/fonts/opensans-bold-webfont.woff2') format('woff2'), url('/vendor/fonts/opensans-bold-webfont.woff') format('woff'), url('/vendor/fonts/opensans-bold-webfont.ttf') format('truetype'), url('/vendor/fonts/opensans-bold-webfont.svg#open_sansregular') format('svg');
+  src: url('vendor/fonts/opensans-bold-webfont.eot');
+  src: url('vendor/fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('vendor/fonts/opensans-bold-webfont.woff2') format('woff2'), url('vendor/fonts/opensans-bold-webfont.woff') format('woff'), url('vendor/fonts/opensans-bold-webfont.ttf') format('truetype'), url('vendor/fonts/opensans-bold-webfont.svg#open_sansregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
