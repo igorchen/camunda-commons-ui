@@ -3079,8 +3079,8 @@ tbody.collapse.in {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('node_modules/bootstrap/fonts/glyphicons-halflings-regular.eot');
-  src: url('node_modules/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('node_modules/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('node_modules/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('node_modules/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('/node_modules/bootstrap/fonts/glyphicons-halflings-regular.eot');
+  src: url('/node_modules/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/node_modules/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/node_modules/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/node_modules/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 /* line 21, /home/camunda/workspace/7.3-commons-ui-ghpages/node_modules/bootstrap/less/glyphicons.less */
 .glyphicon {
@@ -7620,8 +7620,8 @@ body > .page-wrapper:after,
 }
 @font-face {
   font-family: 'bpmn';
-  src: url('node_modules/bpmn-font/dist/font/bpmn.eot');
-  src: url('node_modules/bpmn-font/dist/font/bpmn.eot#iefix') format('embedded-opentype'), url('node_modules/bpmn-font/dist/font/bpmn.woff') format('woff'), url('node_modules/bpmn-font/dist/font/bpmn.ttf') format('truetype'), url('node_modules/bpmn-font/dist/font/bpmn.svg#bpmn') format('svg');
+  src: url('/node_modules/bpmn-font/dist/font/bpmn.eot');
+  src: url('/node_modules/bpmn-font/dist/font/bpmn.eot#iefix') format('embedded-opentype'), url('/node_modules/bpmn-font/dist/font/bpmn.woff') format('woff'), url('/node_modules/bpmn-font/dist/font/bpmn.ttf') format('truetype'), url('/node_modules/bpmn-font/dist/font/bpmn.svg#bpmn') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -8841,8 +8841,8 @@ body {
 }
 @font-face {
   font-family: 'open_sanslight';
-  src: url('vendor/fonts/opensans-light-webfont.eot');
-  src: url('vendor/fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('vendor/fonts/opensans-light-webfont.woff2') format('woff2'), url('vendor/fonts/opensans-light-webfont.woff') format('woff'), url('vendor/fonts/opensans-light-webfont.ttf') format('truetype'), url('vendor/fonts/opensans-light-webfont.svg#open_sansregular') format('svg');
+  src: url('/vendor/fonts/opensans-light-webfont.eot');
+  src: url('/vendor/fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('/vendor/fonts/opensans-light-webfont.woff2') format('woff2'), url('/vendor/fonts/opensans-light-webfont.woff') format('woff'), url('/vendor/fonts/opensans-light-webfont.ttf') format('truetype'), url('/vendor/fonts/opensans-light-webfont.svg#open_sansregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -8853,8 +8853,8 @@ body {
 }
 @font-face {
   font-family: 'open_sansregular';
-  src: url('vendor/fonts/opensans-regular-webfont.eot');
-  src: url('vendor/fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('vendor/fonts/opensans-regular-webfont.woff2') format('woff2'), url('vendor/fonts/opensans-regular-webfont.woff') format('woff'), url('vendor/fonts/opensans-regular-webfont.ttf') format('truetype'), url('vendor/fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+  src: url('/vendor/fonts/opensans-regular-webfont.eot');
+  src: url('/vendor/fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('/vendor/fonts/opensans-regular-webfont.woff2') format('woff2'), url('/vendor/fonts/opensans-regular-webfont.woff') format('woff'), url('/vendor/fonts/opensans-regular-webfont.ttf') format('truetype'), url('/vendor/fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -8865,8 +8865,8 @@ body {
 }
 @font-face {
   font-family: 'open_sansbold';
-  src: url('vendor/fonts/opensans-bold-webfont.eot');
-  src: url('vendor/fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('vendor/fonts/opensans-bold-webfont.woff2') format('woff2'), url('vendor/fonts/opensans-bold-webfont.woff') format('woff'), url('vendor/fonts/opensans-bold-webfont.ttf') format('truetype'), url('vendor/fonts/opensans-bold-webfont.svg#open_sansregular') format('svg');
+  src: url('/vendor/fonts/opensans-bold-webfont.eot');
+  src: url('/vendor/fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('/vendor/fonts/opensans-bold-webfont.woff2') format('woff2'), url('/vendor/fonts/opensans-bold-webfont.woff') format('woff'), url('/vendor/fonts/opensans-bold-webfont.ttf') format('truetype'), url('/vendor/fonts/opensans-bold-webfont.svg#open_sansregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -9306,14 +9306,26 @@ body > header small {
   }
 }
 /* line 63, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
+body.gh-pages h1,
+body.gh-pages h2,
+body.gh-pages h3,
+body.gh-pages h4 {
+  font-family: 'open_sanslight', Helvetica, Arial, Verdana, sans-serif;
+  font-weight: normal;
+}
+/* line 70, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
+body.gh-pages h1 {
+  text-transform: uppercase;
+}
+/* line 74, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages.readme .content {
   margin-top: 10px;
 }
-/* line 67, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 78, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages > .page-wrapper {
   padding-left: 160px;
 }
-/* line 69, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 80, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages > .page-wrapper > nav {
   width: 130px;
   position: fixed;
@@ -9323,60 +9335,48 @@ body.gh-pages > .page-wrapper > nav {
   top: 60px;
   bottom: 45px;
 }
-/* line 78, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 89, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages > .page-wrapper > nav li {
   display: block;
 }
-/* line 82, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 93, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages > .page-wrapper > nav a {
   display: inline-block;
   font-size: 1.2em;
 }
-/* line 87, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 98, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages > .page-wrapper > nav .active a {
   text-decoration: underline;
 }
-/* line 94, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 105, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
 body > footer,
 body > footer > nav {
   text-align: right;
   overflow: hidden;
 }
-/* line 101, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'open_sanslight', Helvetica, Arial, Verdana, sans-serif;
-  font-weight: normal;
-}
-/* line 108, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
-h1 {
-  text-transform: uppercase;
-}
-/* line 113, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 112, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
 dd {
   padding-left: 30px;
   max-width: 550px;
 }
-/* line 117, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 116, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
 dt + dd {
   margin-bottom: 15px;
 }
-/* line 122, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 121, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
 .widget-reference dt {
   font-family: monospace;
 }
-/* line 127, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 126, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
 .widget-example {
   margin: 15px 0;
   padding: 15px 0;
 }
-/* line 130, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 129, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
 .widget-example [ng-non-bindable] {
   margin-bottom: 30px;
 }
-/* line 135, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 134, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
 .test-container {
   margin-right: auto;
   margin-left: auto;
@@ -9419,16 +9419,16 @@ dt + dd {
     margin-left: 0;
   }
 }
-/* line 147, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 146, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
 .cam-widget-header-test-page .test-container {
   padding-top: 41px;
 }
-/* line 149, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 148, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
 .cam-widget-header-test-page .test-container .test-container {
   overflow: hidden;
   min-height: 200px;
 }
-/* line 155, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 154, /home/camunda/workspace/7.3-commons-ui-ghpages/resources/less/test-styles.less */
 .test-container > [cam-widget-header],
 .test-container > [cam-widget-footer] {
   position: absolute;
