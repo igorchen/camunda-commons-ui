@@ -8771,7 +8771,41 @@ body {
 [cam-widget-bpmn-viewer] .navigation.reset span {
   top: 3px;
 }
-/* line 105, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/bpmn-viewer/cam-widget-bpmn-viewer.less */
+/* line 104, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/bpmn-viewer/cam-widget-bpmn-viewer.less */
+[cam-widget-bpmn-viewer] .actions {
+  float: right;
+  position: relative;
+  right: 15px;
+  top: 15px;
+}
+/* line 110, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/bpmn-viewer/cam-widget-bpmn-viewer.less */
+[cam-widget-bpmn-viewer] .actions ul {
+  display: inline-block;
+  list-style: none;
+}
+/* line 114, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/bpmn-viewer/cam-widget-bpmn-viewer.less */
+[cam-widget-bpmn-viewer] .actions ul li {
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  border-color: #adadad;
+  border-radius: 2px;
+  padding: 5px;
+}
+/* line 121, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/bpmn-viewer/cam-widget-bpmn-viewer.less */
+[cam-widget-bpmn-viewer] .actions ul li a {
+  border: none;
+  color: #555555;
+  padding: 0;
+}
+/* line 126, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/bpmn-viewer/cam-widget-bpmn-viewer.less */
+[cam-widget-bpmn-viewer] .actions ul li a:hover {
+  background-color: white;
+}
+/* line 129, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/bpmn-viewer/cam-widget-bpmn-viewer.less */
+[cam-widget-bpmn-viewer] .actions ul li a:visited {
+  background-color: white;
+}
+/* line 138, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/bpmn-viewer/cam-widget-bpmn-viewer.less */
 .djs-cursor-move {
   cursor: move;
   cursor: -webkit-grabbing;
