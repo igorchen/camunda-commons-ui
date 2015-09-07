@@ -6,7 +6,7 @@
     <link href="styles.css" rel="stylesheet" />
     <link href="test-styles.css" rel="stylesheet" />
   </head>
-  <body class="gh-pages cam-widget-debug-test-page">
+  <body class="gh-pages">
     <header>
 <h1>
 <a href="./">Camunda commons UI</a>
@@ -23,12 +23,12 @@
 bpmn-viewer
 </a>
 </li>
-<li class="active">
+<li>
 <a href="./cam-widget-debug.html">
 debug
 </a>
 </li>
-<li>
+<li class="active">
 <a href="./cam-widget-dmn-viewer.html">
 dmn-viewer
 </a>
@@ -73,53 +73,78 @@ variable
 
     <header>
       <div>
-        <h1>Debug</h1>
+        <h1>Dmn-Viewer</h1>
       </div>
     </header>
 
-        <section class="widget-description">
+    <section class='widget-description'>
       <header>
         <h2>Description</h2>
       </header>
-      <p>Simple utility for development puproses that prints a variable.
-      Can become useful when you get lost in the scopes madness.</p>
+      <p>This widget displays a DMN table.</p>
     </section>
 
-    <section class="widget-reference">
+    <section class='widget-reference'>
       <header>
         <h2>Usage</h2>
       </header>
 
       <h3>Options</h3>
       <dl>
-        <dt><span class="badge">@</span> open</dt>
-        <dd>can be used to determine the initial state (open or not) of the debug widget</dd>
-
-        <dt><span class="badge">=</span> debugged</dt>
-        <dd>can be used to pass the variable to debug</dd>
+        <dt><span class="badge">=</span> tableXml</dt>
+        <dd>A string containing the XML content of the DMN model to render.</dd>
+        <dt><span class="badge">=</span> control</dt>
+        <dd>An object containing the control API of the widget. After initialization of the widget, the object provided in by this variable contains the following methods:
+          <ul>
+            <li>
+              <b>getViewer()</b>: Returns the dmn.io viewer instance of the table
+            </li>
+            <li>
+              <b>getElement(id)</b>: Returns the dmn.io object representing an element with a given ID.
+            </li>
+            <li>
+              <b>isLoaded()</b>: Returns whether the table is loaded and displayed.
+            </li>
+          </ul>
+        </dd>
       </dl>
     </section>
 
-    <section class="widget-examples">
+    <section class='widget-examples'>
       <header>
-        <h2>Examples</h2>
+        <h2>Example</h2>
       </header>
 
-      <div class="widget-example"
-           id="default"
-           ng-controller="testController">
-        <h3>Default usage</h3>
-        <pre ng-non-bindable>&lt;div cam-widget-debug
-     debugged=&quot;varToDebug&quot;&gt;&lt;/div&gt;</pre>
-        <div class="test-container"
-             id="test-container">
-          <div cam-widget-debug
-               debugged="varToDebug"></div>
-        </div><!-- /.test-container -->
+      <div class='widget-example'
+           id='example'>
+        <h3>Viewer</h3>
+        <div ng-controller='testController'>
+          <div cam-widget-dmn-viewer
+            table-xml='decisionTable'
+            control='control'
+            id="viewer1"
+            style='height: 300px;'>
+          </div>
+        </div>
+
+        <pre ng-non-bindable>
+$scope.tableXML = /* dmn xml string */;
+$scope.control = {};
+
+&lt;div cam-widget-dmn-viewer
+            table-xml='decisionTable'
+            control='control'
+            style='height: 300px;'&gt;&lt;/div&gt;
+</pre>
       </div><!-- /.widget-example -->
+
     </section>
 
+
+
     </div>
+    <footer>
+      </div>
 <footer>
 <nav>
 <ul class="list-inline">
@@ -128,6 +153,7 @@ variable
 </ul>
 </nav>
 </footer>
+    </footer>
 
     <script src="node_modules/requirejs/require.js"></script>
     <script>
@@ -140,32 +166,17 @@ variable
         require.config(rConf);
         require([
           'angular',
-          'lib/widgets/debug/cam-widget-debug'
-        ], function (
-          angular,
-          debugDefinition
-        ) {
-          var debugModule = angular.module('debugModule', []);
-          debugModule.directive('camWidgetDebug', debugDefinition);
+          'camunda-commons-ui/widgets',
+          'text!lib/widgets/dmn-viewer/test/test.xml'
+        ], function (angular, camCommonsUi, testXML) {
 
+          var testModule = angular.module('myModule', [camCommonsUi.name]);
 
+          testModule.controller('testController', ['$scope', function($scope) {
+            $scope.decisionTable = testXML;
 
-          var testModule = angular.module('testModule', [debugModule.name]);
-          testModule.controller('testController', [
-            '$scope',
-          function(
-            $scope
-          ) {
-            $scope.varToDebug = {
-              something: {
-                to: {
-                  debug: new Date()
-                }
-              },
-              array: 'abcdef'.split('')
-            };
+            $scope.control = {};
           }]);
-
 
 
           angular.element(document).ready(function() {
