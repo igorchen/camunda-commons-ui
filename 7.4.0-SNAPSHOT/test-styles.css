@@ -11591,6 +11591,10 @@ fieldset[disabled] [cam-widget-variables-table] .value-wrapper .null-value.activ
 [cam-widget-variables-table] .ng-invalid .value-wrapper {
   color: #d9534f;
 }
+/* line 2, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/dmn-viewer/cam-widget-dmn-viewer.less */
+[cam-widget-dmn-viewer] .fired > td {
+  background-color: #FFBDC6;
+}
 @font-face {
   font-family: 'open_sanslight';
   src: url('vendor/fonts/opensans-light-webfont.eot');
