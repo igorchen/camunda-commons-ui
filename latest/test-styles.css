@@ -8635,13 +8635,23 @@ fieldset[disabled] [cam-widget-header] .btn-link:focus {
 [cam-widget-header] > .cam-nav {
   float: right;
 }
+/* line 51, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+[cam-widget-header] > .cam-nav.collapse {
+  visibility: visible;
+  display: block;
+}
 @media screen and (max-width: 768px) {
-  /* line 54, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  /* line 60, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] > [ng-transclude],
   [cam-widget-header] > .cam-nav {
     float: left;
     margin-left: 0;
     width: 100%;
+  }
+  /* line 66, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  [cam-widget-header] > .cam-nav.collapse {
+    visibility: hidden;
+    display: none;
   }
 }
 /* line 1, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/footer/cam-widget-footer.less */
