@@ -12064,11 +12064,11 @@ textarea[cam-widget-search] .search-container {
   content: '\e816';
 }
 /* '' */
-/* line 22, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 21, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 body {
   padding-top: 0;
 }
-/* line 24, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 23, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 body > header,
 body > .page-wrapper {
   margin-right: auto;
@@ -12094,12 +12094,12 @@ body > .page-wrapper > .navbar-collapse {
     margin-left: 0;
   }
 }
-/* line 29, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 28, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 body > header {
   color: #ffffff;
   background-color: #b5152b;
 }
-/* line 34, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 33, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 body > header h1:before {
   font-family: bpmn;
   font-weight: normal;
@@ -12107,7 +12107,7 @@ body > header h1:before {
   display: inline-block;
   margin-right: 15px;
 }
-/* line 43, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 42, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 body > header a,
 body > header a:hover,
 body > header small {
@@ -12115,24 +12115,24 @@ body > header small {
   margin-right: 15px;
 }
 @media (min-width: 768px) {
-  /* line 52, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+  /* line 51, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
   body > .page-wrapper {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  /* line 55, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+  /* line 54, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
   body > .page-wrapper {
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  /* line 58, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+  /* line 57, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
   body > .page-wrapper {
     width: 1170px;
   }
 }
-/* line 64, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 63, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages h1,
 body.gh-pages h2,
 body.gh-pages h3,
@@ -12140,19 +12140,19 @@ body.gh-pages h4 {
   font-family: 'open_sanslight', Helvetica, Arial, Verdana, sans-serif;
   font-weight: normal;
 }
-/* line 71, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 70, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages h1 {
   text-transform: uppercase;
 }
-/* line 75, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 74, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages.readme .content {
   margin-top: 10px;
 }
-/* line 79, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 78, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages > .page-wrapper {
   padding-left: 160px;
 }
-/* line 81, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 80, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages > .page-wrapper > nav {
   width: 130px;
   position: fixed;
@@ -12162,61 +12162,61 @@ body.gh-pages > .page-wrapper > nav {
   top: 60px;
   bottom: 45px;
 }
-/* line 90, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 89, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages > .page-wrapper > nav li {
   display: block;
 }
-/* line 94, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 93, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages > .page-wrapper > nav a {
   display: inline-block;
   font-size: 1.2em;
 }
-/* line 99, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 98, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages > .page-wrapper > nav .active a {
   text-decoration: underline;
 }
-/* line 106, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 105, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 body > footer,
 body > footer > nav {
   text-align: right;
   overflow: hidden;
 }
-/* line 113, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 112, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 dd {
   padding-left: 30px;
   max-width: 550px;
 }
-/* line 117, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 116, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 dt + dd {
   margin-bottom: 15px;
 }
-/* line 122, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 121, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 .widget-reference dt {
   font-family: monospace;
 }
-/* line 125, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 124, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 .widget-reference dt > .function-definition {
   color: #777777;
   font-weight: lighter;
 }
-/* line 129, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 128, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 .widget-reference dt > .function-definition > .params {
   font-style: italic;
 }
-/* line 133, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 132, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 .widget-reference dt > .function-definition > .returns {
   font-weight: bolder;
 }
-/* line 140, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 139, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 .widget-example {
   margin: 15px 0;
   padding: 15px 0;
 }
-/* line 143, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 142, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 .widget-example [ng-non-bindable] {
   margin-bottom: 30px;
 }
-/* line 148, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 147, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 .test-container {
   margin-right: auto;
   margin-left: auto;
@@ -12259,16 +12259,16 @@ dt + dd {
     margin-left: 0;
   }
 }
-/* line 160, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 159, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 .cam-widget-header-test-page .test-container {
   padding-top: 41px;
 }
-/* line 162, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 161, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 .cam-widget-header-test-page .test-container .test-container {
   overflow: hidden;
   min-height: 200px;
 }
-/* line 168, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 167, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 .test-container > [cam-widget-header],
 .test-container > [cam-widget-footer] {
   position: absolute;
