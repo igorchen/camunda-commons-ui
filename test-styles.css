@@ -8902,10 +8902,11 @@ body {
   color: #606060;
   overflow: auto;
   /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-  font-size: 16px;
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+  color: #808080;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -8944,25 +8945,25 @@ body {
   }
   */
 }
-/* line 97, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 91, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table a {
   background-color: transparent;
 }
-/* line 105, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 99, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table a:active,
 .dmn-table a:hover {
   outline: 0;
 }
-/* line 143, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 137, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-/* line 161, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 155, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table small {
   font-size: 80%;
 }
-/* line 169, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 163, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table sub,
 .dmn-table sup {
   font-size: 75%;
@@ -8970,23 +8971,23 @@ body {
   position: relative;
   vertical-align: baseline;
 }
-/* line 177, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 171, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table sup {
   top: -0.5em;
 }
-/* line 181, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 175, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table sub {
   bottom: -0.25em;
 }
-/* line 192, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 186, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table img {
   border: 0;
 }
-/* line 200, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 194, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table svg:not(:root) {
   overflow: hidden;
 }
-/* line 260, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 254, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table button,
 .dmn-table input,
 .dmn-table optgroup,
@@ -8996,84 +8997,90 @@ body {
   font: inherit;
   margin: 0;
 }
-/* line 274, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 268, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table button {
   overflow: visible;
 }
-/* line 285, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 279, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table button,
 .dmn-table select {
   text-transform: none;
 }
-/* line 298, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 292, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table button,
 .dmn-table input[type="reset"],
 .dmn-table input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
 }
-/* line 313, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 307, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table button[disabled] {
   cursor: default;
 }
-/* line 323, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 317, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table button::-moz-focus-inner,
 .dmn-table input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-/* line 334, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 328, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table input {
   line-height: normal;
 }
-/* line 346, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 340, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table input[type="checkbox"],
 .dmn-table input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
-/* line 358, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 352, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table input[type="number"]::-webkit-inner-spin-button,
 .dmn-table input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
-/* line 369, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 363, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
-/* line 382, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 376, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table input[type="search"]::-webkit-search-cancel-button,
 .dmn-table input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-/* line 411, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 405, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table textarea {
   overflow: auto;
 }
-/* line 420, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 414, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table optgroup {
   font-weight: bold;
 }
-/* line 431, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 425, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* line 436, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 430, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table td,
 .dmn-table th {
   padding: 0;
 }
-/* line 158, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
+/* line 443, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.dmn-table input,
+.dmn-table textarea {
+  font-size: 16px;
+  color: #808080;
+}
+/* line 164, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
 .dmn-table * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 162, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
+/* line 168, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
 .dmn-table *:before,
 .dmn-table *:after {
   -webkit-box-sizing: border-box;
@@ -9140,18 +9147,22 @@ body {
 .dmn-table th.focused {
   box-shadow: 0px 0px 6px 0px rgba(82, 180, 21, 0.6) inset;
 }
-/* line 60, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 63, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+.dmn-table tbody:empty {
+  display: none;
+}
+/* line 67, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table td,
 .dmn-table th {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 64, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 71, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table td [contenteditable],
 .dmn-table th [contenteditable] {
+  text-overflow: ellipsis;
   display: block;
   overflow: hidden;
-  text-overflow: ellipsis;
   width: 100%;
   height: 100%;
   white-space: pre-wrap;
@@ -9165,14 +9176,14 @@ body {
   color: #a0a0a0;
   text-align: center;
 }
-/* line 75, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 81, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table td.invalid,
 .dmn-table th.invalid {
   background-color: #f4cecd;
   border-color: #d9534f;
   color: #c9302c;
 }
-/* line 80, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 86, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table header {
   background-color: #fff;
   display: inline-block;
@@ -9180,46 +9191,60 @@ body {
   margin-bottom: -1px;
   position: relative;
 }
-/* line 87, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 93, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table header h3 {
-  margin: auto;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0.3em auto;
+  font-weight: bold;
+  text-align: center;
 }
-/* line 89, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 100, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table header h3:empty:before {
   display: inline;
   content: '<Set a name>';
   color: #f0ad4e;
 }
-/* line 96, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
-.dmn-table header .table-id {
+/* line 107, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+.dmn-table header .tjs-table-id {
+  font-size: 18px;
   background-color: #c0c0c0;
   font-family: monospace;
+  font-weight: 300;
   color: white;
   text-align: center;
   margin: 0px -6px -3px;
   padding: 2px;
 }
-/* line 106, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 119, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table table {
   font-size: 90%;
-  color: #606060;
   background-color: #ffffff;
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
 }
-/* line 116, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 128, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table thead {
   border-bottom: 3px double #a0a0a0;
 }
-/* line 118, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 132, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+.dmn-table thead > tr:first-of-type .hit {
+  cursor: pointer;
+}
+/* line 135, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+.dmn-table thead > tr:first-of-type th {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+/* line 141, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table thead .annotation {
   vertical-align: bottom;
   position: relative;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 123, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 146, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table thead .annotation .dmn-js-logo {
   text-decoration: none;
   display: block;
@@ -9258,40 +9283,40 @@ body {
   transition: color 0.218s ease;
   text-decoration: none;
 }
-/* line 131, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 154, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table thead > tr .icon-dmn {
   cursor: pointer;
   color: #52b415;
 }
-/* line 136, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 159, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table thead th {
   text-align: center;
 }
-/* line 141, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 164, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table .hit {
   vertical-align: top;
   width: 3em;
 }
-/* line 146, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 169, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table .labels,
 .dmn-table .values,
 .dmn-table .mappings {
   text-align: center;
 }
-/* line 152, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 175, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table .values,
 .dmn-table .mappings {
   background-color: #cfcfcf;
   color: #fff;
 }
-/* line 157, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 180, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table .values td,
 .dmn-table .mappings td,
 .dmn-table .values th,
 .dmn-table .mappings th {
   cursor: pointer;
 }
-/* line 160, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 183, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table .values td.invalid,
 .dmn-table .mappings td.invalid,
 .dmn-table .values th.invalid,
@@ -9300,35 +9325,35 @@ body {
   border-color: #d9534f;
   color: #c9302c;
 }
-/* line 167, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 190, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table .values td {
   background-color: #cfcfcf;
 }
-/* line 171, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 194, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table .values .col-focused {
   background-color: #dcdbc4;
 }
-/* line 176, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 199, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table .mappings {
   font-family: monospace;
 }
-/* line 178, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 201, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table .mappings td {
   background-color: #c0c0c0;
 }
-/* line 182, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 205, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table .mappings .col-focused {
   background-color: #d2d1ba;
 }
-/* line 187, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 210, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table.hide-mappings .mappings {
   display: none;
 }
-/* line 191, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 214, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table.hide-mappings .values {
   display: none;
 }
-/* line 195, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 218, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table .labels td:empty:before {
   font-family: "dmn-icon";
   font-style: normal;
@@ -9353,63 +9378,63 @@ body {
   content: '\e813';
   color: #d9534f;
 }
-/* line 201, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 224, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table tbody {
   border: 2px solid #a0a0a0;
   border-top: none;
 }
-/* line 206, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 229, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table tbody tr:nth-child(1) td,
 .dmn-table tbody tr:nth-child(1) th {
   border-top: none;
 }
-/* line 211, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 234, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table tbody .input {
   color: #808080;
 }
-/* line 213, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 236, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table tbody .input.set {
   color: #606060;
 }
-/* line 219, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 242, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table tfoot {
   border: 2px solid #eeeeee;
   border-top: none;
 }
-/* line 222, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 245, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table tfoot tr,
 .dmn-table tfoot td {
   border-color: #eeeeee;
 }
-/* line 226, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 249, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table tfoot .add-rule {
   text-align: right;
 }
-/* line 229, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 252, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table tfoot .add-rule a {
   cursor: pointer;
   color: #52b415;
 }
-/* line 232, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 255, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table tfoot .add-rule a:before {
   padding: 0;
   margin: 0;
 }
-/* line 239, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 262, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table tfoot:empty {
   display: none;
 }
-/* line 245, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 268, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table .col-focused,
 .dmn-table .row-focused td {
   background-color: #fefde6;
 }
-/* line 250, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 273, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table tr > .input + .output {
   border-left: 3px double #a0a0a0;
 }
-/* line 296, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
-.dmn-table .controls {
+/* line 319, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+.dmn-table .tjs-controls {
   float: right;
   text-align: right;
   max-width: 50%;
@@ -9417,25 +9442,25 @@ body {
   font-size: 90%;
   background-color: #f0f0f0;
 }
-/* line 304, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
-.dmn-table .controls a {
+/* line 327, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+.dmn-table .tjs-controls a {
   cursor: pointer;
 }
-/* line 311, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 334, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table.dmn-table-compact {
   font-size: 95%;
 }
-/* line 313, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 336, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table.dmn-table-compact header,
 .dmn-table.dmn-table-compact td,
 .dmn-table.dmn-table-compact th {
   padding: 1px 2px;
 }
-/* line 320, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 343, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table.dmn-table-bold {
   font-size: 110%;
 }
-/* line 322, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
+/* line 345, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table.dmn-table-bold header,
 .dmn-table.dmn-table-bold td,
 .dmn-table.dmn-table-bold th {
@@ -9444,10 +9469,10 @@ body {
 /* line 1, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-choice.less */
 .dmn-suggestions-helper {
   /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-  font-size: 16px;
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-size: 16px;
   z-index: 1070;
   visibility: visible;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -9467,25 +9492,25 @@ body {
   padding: 3px 6px;
   margin: 3px 0 0 6px;
 }
-/* line 97, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 91, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper a {
   background-color: transparent;
 }
-/* line 105, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 99, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper a:active,
 .dmn-suggestions-helper a:hover {
   outline: 0;
 }
-/* line 143, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 137, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-/* line 161, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 155, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper small {
   font-size: 80%;
 }
-/* line 169, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 163, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper sub,
 .dmn-suggestions-helper sup {
   font-size: 75%;
@@ -9493,23 +9518,23 @@ body {
   position: relative;
   vertical-align: baseline;
 }
-/* line 177, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 171, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper sup {
   top: -0.5em;
 }
-/* line 181, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 175, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper sub {
   bottom: -0.25em;
 }
-/* line 192, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 186, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper img {
   border: 0;
 }
-/* line 200, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 194, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper svg:not(:root) {
   overflow: hidden;
 }
-/* line 260, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 254, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper button,
 .dmn-suggestions-helper input,
 .dmn-suggestions-helper optgroup,
@@ -9519,76 +9544,82 @@ body {
   font: inherit;
   margin: 0;
 }
-/* line 274, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 268, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper button {
   overflow: visible;
 }
-/* line 285, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 279, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper button,
 .dmn-suggestions-helper select {
   text-transform: none;
 }
-/* line 298, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 292, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper button,
 .dmn-suggestions-helper input[type="reset"],
 .dmn-suggestions-helper input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
 }
-/* line 313, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 307, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper button[disabled] {
   cursor: default;
 }
-/* line 323, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 317, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper button::-moz-focus-inner,
 .dmn-suggestions-helper input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-/* line 334, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 328, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper input {
   line-height: normal;
 }
-/* line 346, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 340, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper input[type="checkbox"],
 .dmn-suggestions-helper input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
-/* line 358, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 352, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper input[type="number"]::-webkit-inner-spin-button,
 .dmn-suggestions-helper input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
-/* line 369, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 363, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
-/* line 382, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 376, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper input[type="search"]::-webkit-search-cancel-button,
 .dmn-suggestions-helper input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-/* line 411, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 405, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper textarea {
   overflow: auto;
 }
-/* line 420, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 414, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper optgroup {
   font-weight: bold;
 }
-/* line 431, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 425, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* line 436, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 430, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-suggestions-helper td,
 .dmn-suggestions-helper th {
   padding: 0;
+}
+/* line 443, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.dmn-suggestions-helper input,
+.dmn-suggestions-helper textarea {
+  font-size: 16px;
+  color: #808080;
 }
 /* line 19, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/bootstrap/less/tooltip.less */
 .dmn-suggestions-helper.in {
@@ -9703,14 +9734,13 @@ body {
 .dmn-suggestions-helper li:after {
   display: inline-block;
   content: ' / ';
-  color: #c0c0c0;
   margin: 0 0.2em;
 }
-/* line 24, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-choice.less */
+/* line 23, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-choice.less */
 .dmn-suggestions-helper li:last-child:after {
   display: none;
 }
-/* line 28, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-choice.less */
+/* line 27, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-choice.less */
 .dmn-suggestions-helper li span {
   color: #52b415;
   text-decoration: underline;
@@ -9718,10 +9748,10 @@ body {
 /* line 1, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-controls.less */
 .dmn-table-clause-controls {
   /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-  font-size: 16px;
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-size: 16px;
   z-index: 1070;
   visibility: visible;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -9740,25 +9770,25 @@ body {
   margin: 0;
   padding: 0;
 }
-/* line 97, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 91, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls a {
   background-color: transparent;
 }
-/* line 105, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 99, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls a:active,
 .dmn-table-clause-controls a:hover {
   outline: 0;
 }
-/* line 143, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 137, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-/* line 161, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 155, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls small {
   font-size: 80%;
 }
-/* line 169, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 163, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls sub,
 .dmn-table-clause-controls sup {
   font-size: 75%;
@@ -9766,23 +9796,23 @@ body {
   position: relative;
   vertical-align: baseline;
 }
-/* line 177, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 171, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls sup {
   top: -0.5em;
 }
-/* line 181, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 175, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls sub {
   bottom: -0.25em;
 }
-/* line 192, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 186, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls img {
   border: 0;
 }
-/* line 200, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 194, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls svg:not(:root) {
   overflow: hidden;
 }
-/* line 260, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 254, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls button,
 .dmn-table-clause-controls input,
 .dmn-table-clause-controls optgroup,
@@ -9792,76 +9822,82 @@ body {
   font: inherit;
   margin: 0;
 }
-/* line 274, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 268, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls button {
   overflow: visible;
 }
-/* line 285, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 279, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls button,
 .dmn-table-clause-controls select {
   text-transform: none;
 }
-/* line 298, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 292, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls button,
 .dmn-table-clause-controls input[type="reset"],
 .dmn-table-clause-controls input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
 }
-/* line 313, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 307, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls button[disabled] {
   cursor: default;
 }
-/* line 323, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 317, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls button::-moz-focus-inner,
 .dmn-table-clause-controls input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-/* line 334, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 328, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls input {
   line-height: normal;
 }
-/* line 346, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 340, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls input[type="checkbox"],
 .dmn-table-clause-controls input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
-/* line 358, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 352, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls input[type="number"]::-webkit-inner-spin-button,
 .dmn-table-clause-controls input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
-/* line 369, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 363, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
-/* line 382, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 376, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls input[type="search"]::-webkit-search-cancel-button,
 .dmn-table-clause-controls input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-/* line 411, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 405, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls textarea {
   overflow: auto;
 }
-/* line 420, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 414, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls optgroup {
   font-weight: bold;
 }
-/* line 431, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 425, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* line 436, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 430, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-table-clause-controls td,
 .dmn-table-clause-controls th {
   padding: 0;
+}
+/* line 443, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.dmn-table-clause-controls input,
+.dmn-table-clause-controls textarea {
+  font-size: 16px;
+  color: #808080;
 }
 /* line 19, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/bootstrap/less/tooltip.less */
 .dmn-table-clause-controls.in {
@@ -9959,12 +9995,12 @@ body {
   cursor: pointer;
 }
 /* line 1, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu {
+.tjs-context-menu {
   /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-  font-size: 16px;
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-size: 16px;
   position: absolute;
   display: block;
   z-index: 99;
@@ -9980,171 +10016,177 @@ body {
   transition: left 0.218s ease;
   min-width: 180px;
 }
-/* line 97, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu a {
+/* line 91, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu a {
   background-color: transparent;
 }
-/* line 105, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu a:active,
-.dmn-context-menu a:hover {
+/* line 99, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu a:active,
+.tjs-context-menu a:hover {
   outline: 0;
 }
-/* line 143, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu h1 {
+/* line 137, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-/* line 161, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu small {
+/* line 155, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu small {
   font-size: 80%;
 }
-/* line 169, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu sub,
-.dmn-context-menu sup {
+/* line 163, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu sub,
+.tjs-context-menu sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
-/* line 177, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu sup {
+/* line 171, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu sup {
   top: -0.5em;
 }
-/* line 181, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu sub {
+/* line 175, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu sub {
   bottom: -0.25em;
 }
-/* line 192, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu img {
+/* line 186, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu img {
   border: 0;
 }
-/* line 200, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu svg:not(:root) {
+/* line 194, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu svg:not(:root) {
   overflow: hidden;
 }
-/* line 260, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu button,
-.dmn-context-menu input,
-.dmn-context-menu optgroup,
-.dmn-context-menu select,
-.dmn-context-menu textarea {
+/* line 254, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu button,
+.tjs-context-menu input,
+.tjs-context-menu optgroup,
+.tjs-context-menu select,
+.tjs-context-menu textarea {
   color: inherit;
   font: inherit;
   margin: 0;
 }
-/* line 274, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu button {
+/* line 268, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu button {
   overflow: visible;
 }
-/* line 285, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu button,
-.dmn-context-menu select {
+/* line 279, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu button,
+.tjs-context-menu select {
   text-transform: none;
 }
-/* line 298, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu button,
-.dmn-context-menu input[type="reset"],
-.dmn-context-menu input[type="submit"] {
+/* line 292, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu button,
+.tjs-context-menu input[type="reset"],
+.tjs-context-menu input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
 }
-/* line 313, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu button[disabled] {
+/* line 307, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu button[disabled] {
   cursor: default;
 }
-/* line 323, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu button::-moz-focus-inner,
-.dmn-context-menu input::-moz-focus-inner {
+/* line 317, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu button::-moz-focus-inner,
+.tjs-context-menu input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-/* line 334, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu input {
+/* line 328, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu input {
   line-height: normal;
 }
-/* line 346, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu input[type="checkbox"],
-.dmn-context-menu input[type="radio"] {
+/* line 340, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu input[type="checkbox"],
+.tjs-context-menu input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
-/* line 358, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu input[type="number"]::-webkit-inner-spin-button,
-.dmn-context-menu input[type="number"]::-webkit-outer-spin-button {
+/* line 352, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu input[type="number"]::-webkit-inner-spin-button,
+.tjs-context-menu input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
-/* line 369, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu input[type="search"] {
+/* line 363, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
-/* line 382, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu input[type="search"]::-webkit-search-cancel-button,
-.dmn-context-menu input[type="search"]::-webkit-search-decoration {
+/* line 376, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu input[type="search"]::-webkit-search-cancel-button,
+.tjs-context-menu input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-/* line 411, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu textarea {
+/* line 405, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu textarea {
   overflow: auto;
 }
-/* line 420, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu optgroup {
+/* line 414, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu optgroup {
   font-weight: bold;
 }
-/* line 431, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu table {
+/* line 425, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* line 436, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
-.dmn-context-menu td,
-.dmn-context-menu th {
+/* line 430, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu td,
+.tjs-context-menu th {
   padding: 0;
 }
+/* line 443, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.tjs-context-menu input,
+.tjs-context-menu textarea {
+  font-size: 16px;
+  color: #808080;
+}
 /* line 9, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu .coordinates {
+.tjs-context-menu .coordinates {
   padding: 3px 6px;
   display: none;
 }
 /* line 14, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu a {
+.tjs-context-menu a {
   color: #52b415;
   text-decoration: none;
   cursor: pointer;
   display: block;
   padding: 3px 6px;
 }
-/* line 134, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
-.dmn-context-menu a:hover {
+/* line 140, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
+.tjs-context-menu a:hover {
   color: #3d8610;
 }
-/* line 147, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
-.dmn-context-menu a:hover {
+/* line 153, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
+.tjs-context-menu a:hover {
   background-color: #c0c0c0;
 }
 /* line 18, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu ul,
-.dmn-context-menu li {
+.tjs-context-menu ul,
+.tjs-context-menu li {
   margin: 0;
   padding: 0;
 }
 /* line 24, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu ul {
+.tjs-context-menu ul {
   list-style: none;
 }
 /* line 89, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
-.dmn-context-menu ul li {
+.tjs-context-menu ul li {
   position: relative;
 }
 /* line 92, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
-.dmn-context-menu ul li:after,
-.dmn-context-menu ul li > a {
+.tjs-context-menu ul li:after,
+.tjs-context-menu ul li > a {
   display: block;
 }
 /* line 97, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
-.dmn-context-menu ul li:after {
+.tjs-context-menu ul li:after {
   content: '';
   position: absolute;
   z-index: 1;
@@ -10158,42 +10200,44 @@ body {
   transition: width 0.218s ease;
 }
 /* line 109, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
-.dmn-context-menu ul li:hover:after {
+.tjs-context-menu ul li:hover:after {
   width: 1.6em;
 }
 /* line 113, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
-.dmn-context-menu ul li li:hover:after {
+.tjs-context-menu ul li li:hover:after {
   width: 100%;
 }
 /* line 117, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
-.dmn-context-menu ul li > a {
+.tjs-context-menu ul li > a {
   background-color: transparent;
   position: relative;
   z-index: 2;
 }
 /* line 121, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
-.dmn-context-menu ul li > a:hover {
+.tjs-context-menu ul li > a:hover {
   background-color: transparent;
 }
 /* line 29, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu span {
+.tjs-context-menu span {
   display: inline-block;
 }
 /* line 33, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu .label {
-  color: #808080;
+.tjs-context-menu .tjs-label {
+  color: #606060;
+  font-weight: bold;
+  background-color: transparent;
+  font-size: 100%;
   font-weight: normal;
   padding: 0;
-  font-size: 100%;
 }
 /* line 40, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu .icon {
+.tjs-context-menu .tjs-icon {
   width: 1em;
   margin-left: 0;
   margin-right: .4em;
 }
 /* line 41, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu .icon:before {
+.tjs-context-menu .tjs-icon:before {
   font-family: "dmn-icon";
   font-style: normal;
   font-weight: normal;
@@ -10217,139 +10261,139 @@ body {
   margin: 0;
 }
 /* line 50, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu .icon.undo:before {
+.tjs-context-menu .tjs-icon.undo:before {
   content: '\e80d';
 }
 /* line 51, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu .icon.redo:before {
+.tjs-context-menu .tjs-icon.redo:before {
   content: '\e80e';
 }
 /* line 53, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu .icon.plus:before {
+.tjs-context-menu .tjs-icon.plus:before {
   content: '\e803';
 }
 /* line 54, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu .icon.minus:before {
+.tjs-context-menu .tjs-icon.minus:before {
   content: '\e804';
 }
 /* line 56, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu .icon.input:before {
+.tjs-context-menu .tjs-icon.input:before {
   content: '\e809';
 }
 /* line 57, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu .icon.output:before {
+.tjs-context-menu .tjs-icon.output:before {
   content: '\e80a';
 }
 /* line 59, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu .icon.copy:before {
+.tjs-context-menu .tjs-icon.copy:before {
   content: '\e80b';
 }
 /* line 61, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu .icon.above:before {
+.tjs-context-menu .tjs-icon.above:before {
   content: '\e800';
 }
 /* line 62, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu .icon.below:before {
+.tjs-context-menu .tjs-icon.below:before {
   content: '\e801';
 }
 /* line 63, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu .icon.left:before {
+.tjs-context-menu .tjs-icon.left:before {
   content: '\e806';
 }
 /* line 64, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu .icon.right:before {
+.tjs-context-menu .tjs-icon.right:before {
   content: '\e808';
 }
 /* line 66, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu .icon.clear:before {
+.tjs-context-menu .tjs-icon.clear:before {
   content: '\e812';
 }
 /* line 69, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu a.disabled,
-.dmn-context-menu a.disabled:hover {
+.tjs-context-menu a.disabled,
+.tjs-context-menu a.disabled:hover {
   color: #808080;
   cursor: default;
 }
 /* line 75, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu ul:empty {
+.tjs-context-menu ul:empty {
   display: none;
 }
 /* line 79, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu > ul > li {
+.tjs-context-menu > ul > li {
   padding-top: 3px;
   padding-bottom: 3px;
   border-bottom: 1px dotted #c0c0c0;
 }
 /* line 83, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu > ul > li:last-child {
+.tjs-context-menu > ul > li:last-child {
   border-bottom: none;
 }
 /* line 88, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu > ul > li > ul .label {
+.tjs-context-menu > ul > li > ul .label {
   padding-left: 0.4em;
 }
 /* line 94, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu ul ul {
+.tjs-context-menu ul ul {
   overflow: hidden;
 }
 /* line 96, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu ul ul li {
+.tjs-context-menu ul ul li {
   overflow: hidden;
   position: relative;
   float: left;
   clear: both;
 }
 /* line 103, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu ul ul li > a {
+.tjs-context-menu ul ul li > a {
   display: inline-block;
 }
 /* line 107, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu ul ul li > ul {
+.tjs-context-menu ul ul li > ul {
   float: right;
 }
 /* line 110, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu ul ul li.popup-dropdown {
+.tjs-context-menu ul ul li.tjs-dropdown {
   width: 100%;
 }
 /* line 116, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu ul ul ul {
+.tjs-context-menu ul ul ul {
   display: inline-block;
   text-align: right;
 }
 /* line 120, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu ul ul ul li {
+.tjs-context-menu ul ul ul li {
   float: left;
   clear: none;
   width: auto;
 }
 /* line 125, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu ul ul ul li:after {
+.tjs-context-menu ul ul ul li:after {
   display: none;
 }
 /* line 129, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu ul ul ul li .icon {
+.tjs-context-menu ul ul ul li .icon {
   width: 1em;
   margin: 0 0.2em;
 }
 /* line 134, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu ul ul ul li .label {
+.tjs-context-menu ul ul ul li .label {
   display: none;
 }
 /* line 141, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu li.input {
+.tjs-context-menu li.input {
   background-color: #eff9e8;
 }
 /* line 144, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
-.dmn-context-menu li.output {
+.tjs-context-menu li.output {
   background-color: #e1f3d5;
 }
 /* line 1, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
 .dmn-clausevalues-setter {
   /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-  font-size: 16px;
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-size: 16px;
   position: absolute;
   display: block;
   z-index: 99;
@@ -10358,29 +10402,30 @@ body {
   -webkit-box-shadow: 0 0 3px 1px rgba(96, 96, 96, 0.5);
   box-shadow: 0 0 3px 1px rgba(96, 96, 96, 0.5);
   min-width: 180px;
+  max-width: 370px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 97, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 91, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter a {
   background-color: transparent;
 }
-/* line 105, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 99, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter a:active,
 .dmn-clausevalues-setter a:hover {
   outline: 0;
 }
-/* line 143, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 137, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-/* line 161, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 155, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter small {
   font-size: 80%;
 }
-/* line 169, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 163, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter sub,
 .dmn-clausevalues-setter sup {
   font-size: 75%;
@@ -10388,23 +10433,23 @@ body {
   position: relative;
   vertical-align: baseline;
 }
-/* line 177, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 171, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter sup {
   top: -0.5em;
 }
-/* line 181, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 175, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter sub {
   bottom: -0.25em;
 }
-/* line 192, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 186, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter img {
   border: 0;
 }
-/* line 200, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 194, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter svg:not(:root) {
   overflow: hidden;
 }
-/* line 260, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 254, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter button,
 .dmn-clausevalues-setter input,
 .dmn-clausevalues-setter optgroup,
@@ -10414,84 +10459,90 @@ body {
   font: inherit;
   margin: 0;
 }
-/* line 274, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 268, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter button {
   overflow: visible;
 }
-/* line 285, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 279, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter button,
 .dmn-clausevalues-setter select {
   text-transform: none;
 }
-/* line 298, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 292, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter button,
 .dmn-clausevalues-setter input[type="reset"],
 .dmn-clausevalues-setter input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
 }
-/* line 313, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 307, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter button[disabled] {
   cursor: default;
 }
-/* line 323, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 317, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter button::-moz-focus-inner,
 .dmn-clausevalues-setter input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-/* line 334, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 328, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter input {
   line-height: normal;
 }
-/* line 346, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 340, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter input[type="checkbox"],
 .dmn-clausevalues-setter input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
-/* line 358, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 352, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter input[type="number"]::-webkit-inner-spin-button,
 .dmn-clausevalues-setter input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
-/* line 369, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 363, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
-/* line 382, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 376, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter input[type="search"]::-webkit-search-cancel-button,
 .dmn-clausevalues-setter input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-/* line 411, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 405, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter textarea {
   overflow: auto;
 }
-/* line 420, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 414, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter optgroup {
   font-weight: bold;
 }
-/* line 431, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 425, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* line 436, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 430, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clausevalues-setter td,
 .dmn-clausevalues-setter th {
   padding: 0;
 }
-/* line 158, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
+/* line 443, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.dmn-clausevalues-setter input,
+.dmn-clausevalues-setter textarea {
+  font-size: 16px;
+  color: #808080;
+}
+/* line 164, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
 .dmn-clausevalues-setter * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 162, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
+/* line 168, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
 .dmn-clausevalues-setter *:before,
 .dmn-clausevalues-setter *:after {
   -webkit-box-sizing: border-box;
@@ -10507,79 +10558,75 @@ body {
 /* line 64, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
 .dmn-clausevalues-setter:after {
   right: 100%;
-  top: 20px;
+  top: 16px;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
   border-right: 8px solid #ffffff;
 }
-/* line 11, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
+/* line 12, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
 .dmn-clausevalues-setter .datatype,
 .dmn-clausevalues-setter .allowed-values {
-  padding: 6px;
   max-width: 100%;
+  padding: 3px 6px;
 }
-/* line 17, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
+/* line 18, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
+.dmn-clausevalues-setter .ranged-values,
+.dmn-clausevalues-setter .allowed-values {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 6px;
+}
+/* line 25, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
 .dmn-clausevalues-setter .datatype {
   display: table;
   width: 100%;
 }
-/* line 20, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
+/* line 28, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
 .dmn-clausevalues-setter .datatype label,
 .dmn-clausevalues-setter .datatype input {
   vertical-align: middle;
   display: table-cell;
 }
-/* line 27, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
-.dmn-clausevalues-setter .allowed-values,
-.dmn-clausevalues-setter .ranged-values {
-  max-height: 0;
-  overflow: hidden;
-  padding: 0 6px;
-}
-/* line 36, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
+/* line 37, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
 .dmn-clausevalues-setter.choices .datatype,
 .dmn-clausevalues-setter.range .datatype {
   border-bottom: 1px solid #f0f0f0;
 }
-/* line 41, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
+/* line 42, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
 .dmn-clausevalues-setter.choices .allowed-values,
 .dmn-clausevalues-setter.range .ranged-values {
   padding: 6px;
   max-height: 1000px;
 }
-/* line 49, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
+/* line 50, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
 .dmn-clausevalues-setter .allowed-values ul,
 .dmn-clausevalues-setter .ranged-values ul {
   max-height: 180px;
+  overflow: auto;
 }
-/* line 55, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
-.dmn-clausevalues-setter .allowed-values ul {
-  overflow-y: scroll;
-}
-/* line 58, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
+/* line 57, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
 .dmn-clausevalues-setter .allowed-values input {
   width: 100%;
 }
-/* line 63, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
+/* line 62, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
 .dmn-clausevalues-setter .ranged-values li {
   display: table;
 }
-/* line 65, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
+/* line 64, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
 .dmn-clausevalues-setter .ranged-values li label,
 .dmn-clausevalues-setter .ranged-values li input {
   vertical-align: middle;
   display: table-cell;
 }
-/* line 72, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
+/* line 71, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
 .dmn-clausevalues-setter .invalid {
   background-color: #f4cecd;
   border-color: #d9534f;
   color: #c9302c;
 }
-/* line 76, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
+/* line 75, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
 .dmn-clausevalues-setter input {
   border: 1px solid #a0a0a0;
-  /*background-color: #fff;*/
   padding: 3px 6px;
   -webkit-transition: box-shadow 0.218s ease;
   -o-transition: box-shadow 0.218s ease;
@@ -10591,45 +10638,46 @@ body {
   box-shadow: 0px 0px 4px 0px rgba(82, 180, 21, 0.6) inset;
   border-color: #52b415;
 }
-/* line 83, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
+/* line 81, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
 .dmn-clausevalues-setter label {
   color: #606060;
+  font-weight: bold;
+  background-color: transparent;
   min-width: 50px;
-  font-weight: lighter;
   padding: 3px 0;
   margin-right: 6px;
 }
-/* line 91, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
+/* line 88, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
 .dmn-clausevalues-setter ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 97, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
+/* line 94, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
 .dmn-clausevalues-setter li {
   margin: 3px 0 0 0;
   padding: 0;
 }
-/* line 104, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
+/* line 101, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
 .dmn-clausevalues-setter.read-only input {
   background-color: transparent;
   border: none;
 }
-/* line 109, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
-.dmn-clausevalues-setter.read-only .dmn-combobox .caret {
+/* line 106, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
+.dmn-clausevalues-setter.read-only .dmn-combobox .cb-caret {
   display: none;
 }
-/* line 112, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
+/* line 109, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clausevalues-setter.less */
 .dmn-clausevalues-setter.read-only .dmn-combobox input {
   padding-bottom: 0;
 }
 /* line 1, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter {
   /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-  font-size: 16px;
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-size: 16px;
   position: absolute;
   display: block;
   z-index: 99;
@@ -10642,25 +10690,25 @@ body {
   box-sizing: border-box;
   transition: all 0.218s linear;
 }
-/* line 97, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 91, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter a {
   background-color: transparent;
 }
-/* line 105, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 99, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter a:active,
 .dmn-clauseexpression-setter a:hover {
   outline: 0;
 }
-/* line 143, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 137, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-/* line 161, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 155, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter small {
   font-size: 80%;
 }
-/* line 169, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 163, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter sub,
 .dmn-clauseexpression-setter sup {
   font-size: 75%;
@@ -10668,23 +10716,23 @@ body {
   position: relative;
   vertical-align: baseline;
 }
-/* line 177, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 171, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter sup {
   top: -0.5em;
 }
-/* line 181, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 175, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter sub {
   bottom: -0.25em;
 }
-/* line 192, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 186, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter img {
   border: 0;
 }
-/* line 200, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 194, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter svg:not(:root) {
   overflow: hidden;
 }
-/* line 260, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 254, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter button,
 .dmn-clauseexpression-setter input,
 .dmn-clauseexpression-setter optgroup,
@@ -10694,84 +10742,90 @@ body {
   font: inherit;
   margin: 0;
 }
-/* line 274, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 268, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter button {
   overflow: visible;
 }
-/* line 285, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 279, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter button,
 .dmn-clauseexpression-setter select {
   text-transform: none;
 }
-/* line 298, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 292, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter button,
 .dmn-clauseexpression-setter input[type="reset"],
 .dmn-clauseexpression-setter input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
 }
-/* line 313, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 307, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter button[disabled] {
   cursor: default;
 }
-/* line 323, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 317, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter button::-moz-focus-inner,
 .dmn-clauseexpression-setter input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-/* line 334, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 328, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter input {
   line-height: normal;
 }
-/* line 346, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 340, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter input[type="checkbox"],
 .dmn-clauseexpression-setter input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
-/* line 358, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 352, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter input[type="number"]::-webkit-inner-spin-button,
 .dmn-clauseexpression-setter input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
-/* line 369, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 363, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
-/* line 382, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 376, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter input[type="search"]::-webkit-search-cancel-button,
 .dmn-clauseexpression-setter input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-/* line 411, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 405, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter textarea {
   overflow: auto;
 }
-/* line 420, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 414, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter optgroup {
   font-weight: bold;
 }
-/* line 431, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 425, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* line 436, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 430, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-clauseexpression-setter td,
 .dmn-clauseexpression-setter th {
   padding: 0;
 }
-/* line 158, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
+/* line 443, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.dmn-clauseexpression-setter input,
+.dmn-clauseexpression-setter textarea {
+  font-size: 16px;
+  color: #808080;
+}
+/* line 164, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
 .dmn-clauseexpression-setter * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 162, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
+/* line 168, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
 .dmn-clauseexpression-setter *:before,
 .dmn-clauseexpression-setter *:after {
   -webkit-box-sizing: border-box;
@@ -10794,9 +10848,12 @@ body {
 }
 /* line 12, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter label {
+  color: #606060;
+  font-weight: bold;
+  background-color: transparent;
   margin-right: 6px;
 }
-/* line 16, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+/* line 17, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter input,
 .dmn-clauseexpression-setter textarea {
   -webkit-transition: box-shadow 0.218s ease;
@@ -10812,7 +10869,7 @@ body {
   box-shadow: 0px 0px 4px 0px rgba(82, 180, 21, 0.6) inset;
   border-color: #52b415;
 }
-/* line 23, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+/* line 24, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter textarea {
   z-index: 1;
   display: block;
@@ -10822,146 +10879,105 @@ body {
   font-family: monospace;
   resize: vertical;
 }
-/* line 34, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+/* line 35, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter .links {
   display: table;
   width: 100%;
   border-bottom: 1px solid #f0f0f0;
 }
-/* line 38, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+/* line 39, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter .links a {
   cursor: pointer;
   color: #52b415;
 }
 /* line 45, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
-.dmn-clauseexpression-setter .links .expression:before,
-.dmn-clauseexpression-setter .links .script:before {
-  display: inline-block;
-  margin: 0 0.3em;
-  color: #a0a0a0;
-}
-/* line 51, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
-.dmn-clauseexpression-setter .links .expression:before {
-  content: 'Use: ';
-  margin-left: 0;
-}
-/* line 55, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
-.dmn-clauseexpression-setter .links .script:before {
-  content: ' / ';
-}
-/* line 60, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
-.dmn-clauseexpression-setter .links {
-  display: table;
-  width: 100%;
-  border-bottom: 1px solid #f0f0f0;
-}
-/* line 64, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
-.dmn-clauseexpression-setter .links a {
-  cursor: pointer;
-  color: #52b415;
-}
-/* line 71, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
-.dmn-clauseexpression-setter .links .expression:before,
-.dmn-clauseexpression-setter .links .script:before {
-  display: inline-block;
-  margin: 0 0.3em;
-  color: #a0a0a0;
-}
-/* line 77, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
-.dmn-clauseexpression-setter .links .expression:before {
-  content: 'Use: ';
-  margin-left: 0;
-}
-/* line 81, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
-.dmn-clauseexpression-setter .links .script:before {
-  content: ' / ';
-}
-/* line 86, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter .icon-clear {
   text-align: right;
 }
-/* line 88, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+/* line 47, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter .icon-clear:before {
   margin: 0;
 }
-/* line 93, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+/* line 52, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter .toggle-type,
 .dmn-clauseexpression-setter .icon-clear,
 .dmn-clauseexpression-setter .region {
   padding: 6px;
 }
-/* line 99, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+/* line 58, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter .toggle-type,
 .dmn-clauseexpression-setter .icon-clear {
   display: table-cell;
 }
-/* line 104, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+/* line 63, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter .language {
   width: auto;
+  max-width: 350px;
   margin-bottom: 3px;
 }
-/* line 109, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+/* line 69, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter .invalid {
   background-color: #f4cecd;
   border-color: #d9534f;
   color: #c9302c;
 }
-/* line 113, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+/* line 73, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter .expression input {
   min-width: 300px;
 }
-/* line 117, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+/* line 77, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter .links .expression {
   text-decoration: underline;
 }
-/* line 121, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+/* line 81, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter .region.script {
   display: none;
 }
-/* line 125, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+/* line 85, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter.use-script {
   max-width: none;
 }
-/* line 129, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+/* line 89, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter.use-script .links .script {
   text-decoration: underline;
 }
-/* line 132, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+/* line 92, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter.use-script .links .expression {
   text-decoration: none;
 }
-/* line 138, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+/* line 98, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter.use-script .region.expression {
   display: none;
 }
-/* line 141, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+/* line 101, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter.use-script .region.script {
   display: block;
 }
-/* line 146, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+/* line 106, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter.use-script:after {
   display: none;
 }
-/* line 153, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+/* line 113, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter.read-only input {
   background-color: transparent;
   border: none;
 }
-/* line 158, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
-.dmn-clauseexpression-setter.read-only .dmn-combobox .caret {
+/* line 118, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+.dmn-clauseexpression-setter.read-only .dmn-combobox .cb-caret {
   display: none;
 }
-/* line 161, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
+/* line 121, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter.read-only .dmn-combobox input {
   padding-bottom: 0;
 }
 /* line 1, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
 .dmn-combobox {
   /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-  font-size: 16px;
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+  color: #808080;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -10969,25 +10985,25 @@ body {
   display: table;
   width: 100%;
 }
-/* line 97, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 91, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox a {
   background-color: transparent;
 }
-/* line 105, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 99, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox a:active,
 .dmn-combobox a:hover {
   outline: 0;
 }
-/* line 143, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 137, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-/* line 161, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 155, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox small {
   font-size: 80%;
 }
-/* line 169, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 163, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox sub,
 .dmn-combobox sup {
   font-size: 75%;
@@ -10995,23 +11011,23 @@ body {
   position: relative;
   vertical-align: baseline;
 }
-/* line 177, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 171, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox sup {
   top: -0.5em;
 }
-/* line 181, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 175, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox sub {
   bottom: -0.25em;
 }
-/* line 192, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 186, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox img {
   border: 0;
 }
-/* line 200, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 194, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox svg:not(:root) {
   overflow: hidden;
 }
-/* line 260, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 254, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox button,
 .dmn-combobox input,
 .dmn-combobox optgroup,
@@ -11021,84 +11037,90 @@ body {
   font: inherit;
   margin: 0;
 }
-/* line 274, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 268, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox button {
   overflow: visible;
 }
-/* line 285, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 279, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox button,
 .dmn-combobox select {
   text-transform: none;
 }
-/* line 298, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 292, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox button,
 .dmn-combobox input[type="reset"],
 .dmn-combobox input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
 }
-/* line 313, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 307, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox button[disabled] {
   cursor: default;
 }
-/* line 323, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 317, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox button::-moz-focus-inner,
 .dmn-combobox input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-/* line 334, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 328, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox input {
   line-height: normal;
 }
-/* line 346, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 340, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox input[type="checkbox"],
 .dmn-combobox input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
-/* line 358, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 352, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox input[type="number"]::-webkit-inner-spin-button,
 .dmn-combobox input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
-/* line 369, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 363, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
-/* line 382, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 376, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox input[type="search"]::-webkit-search-cancel-button,
 .dmn-combobox input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-/* line 411, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 405, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox textarea {
   overflow: auto;
 }
-/* line 420, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 414, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox optgroup {
   font-weight: bold;
 }
-/* line 431, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 425, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* line 436, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+/* line 430, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
 .dmn-combobox td,
 .dmn-combobox th {
   padding: 0;
 }
-/* line 158, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
+/* line 443, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-normalize.less */
+.dmn-combobox input,
+.dmn-combobox textarea {
+  font-size: 16px;
+  color: #808080;
+}
+/* line 164, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
 .dmn-combobox * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 162, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
+/* line 168, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
 .dmn-combobox *:before,
 .dmn-combobox *:after {
   -webkit-box-sizing: border-box;
@@ -11113,9 +11135,12 @@ body {
 }
 /* line 16, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
 .dmn-combobox label {
+  color: #606060;
+  font-weight: bold;
+  background-color: transparent;
   padding-right: 6px;
 }
-/* line 20, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
+/* line 21, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
 .dmn-combobox input {
   -webkit-transition: box-shadow 0.218s ease;
   -o-transition: box-shadow 0.218s ease;
@@ -11132,21 +11157,19 @@ body {
   box-shadow: 0px 0px 4px 0px rgba(82, 180, 21, 0.6) inset;
   border-color: #52b415;
 }
-/* line 29, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
-.dmn-combobox .caret {
+/* line 30, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
+.dmn-combobox .cb-caret {
   position: absolute;
-  top: 6px;
   right: 6px;
-  bottom: 6px;
+  top: 3px;
+  bottom: 3px;
   display: block;
   z-index: 2;
   text-align: center;
-  height: 26px;
-  border: none;
   cursor: pointer;
 }
-/* line 41, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
-.dmn-combobox .caret:before {
+/* line 40, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
+.dmn-combobox .cb-caret:before {
   font-family: "dmn-icon";
   font-style: normal;
   font-weight: normal;
@@ -11168,24 +11191,25 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: absolute;
-  height: 100%;
-  right: 0;
-  top: 50%;
-  margin-top: -8px;
-  content: '\E801';
   display: block;
-  height: 26px;
-  width: 16px;
+  right: 0;
+  width: 1.2em;
+  height: 20px;
+  line-height: 20px;
+  height: 1.2em;
+  top: 50%;
+  margin-top: -0.6em;
+  content: '\E801';
 }
-/* line 55, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
-.dmn-combobox .caret:hover:before {
+/* line 54, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
+.dmn-combobox .cb-caret:hover:before {
   color: #52b415;
 }
-/* line 60, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
-.dmn-combobox.expanded .caret:before {
+/* line 59, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
+.dmn-combobox.expanded .cb-caret:before {
   content: '\E800';
 }
-/* line 65, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
+/* line 64, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
 .dmn-combobox-suggestions {
   position: absolute;
   display: block;
@@ -11201,7 +11225,7 @@ body {
   border: 1px solid #a0a0a0;
   margin-top: 5px;
 }
-/* line 75, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
+/* line 74, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
 .dmn-combobox-suggestions:before {
   content: '';
   display: block;
@@ -11215,7 +11239,7 @@ body {
   left: -1px;
   z-index: 1;
 }
-/* line 90, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
+/* line 89, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
 .dmn-combobox-suggestions li {
   position: relative;
   z-index: 2;
@@ -11239,15 +11263,15 @@ body {
   box-shadow: 0px 0px 4px 0px rgba(82, 180, 21, 0.6) inset;
   border-color: #52b415;
 }
-/* line 106, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
+/* line 105, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
 .dmn-combobox-suggestions li:hover {
   background-color: #eefce5;
 }
-/* line 109, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
+/* line 108, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
 .dmn-combobox-suggestions li:first-child {
   margin-top: -4px;
 }
-/* line 112, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
+/* line 111, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
 .dmn-combobox-suggestions li:last-child {
   border-bottom: 0;
 }
