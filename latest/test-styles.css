@@ -8282,19 +8282,20 @@ a.dropdown-toggle {
 /* line 5, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/_modal.less */
 .modal-content {
   background-color: #eeeeee;
+  cursor: default;
 }
-/* line 9, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/_modal.less */
+/* line 10, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/_modal.less */
 .modal-body {
   background-color: #ffffff;
   border: 1px solid #c8c8c8;
   border-width: 1px 0;
 }
-/* line 14, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/_modal.less */
+/* line 15, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/_modal.less */
 .modal-body > form {
   overflow: hidden;
   padding: 15px;
 }
-/* line 17, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/_modal.less */
+/* line 18, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/_modal.less */
 .modal-body > form > fieldset {
   max-width: 100%;
 }
