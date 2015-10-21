@@ -11807,7 +11807,8 @@ fieldset[disabled] [cam-widget-variables-table] .value-wrapper .null-value.activ
   background-color: #FFBDC6;
 }
 /* line 6, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/dmn-viewer/cam-widget-dmn-viewer.less */
-[cam-widget-dmn-viewer] span.dmn-input {
+[cam-widget-dmn-viewer] span.dmn-input,
+[cam-widget-dmn-viewer] span.dmn-output {
   font-weight: bold;
 }
 @font-face {
