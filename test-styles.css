@@ -8634,15 +8634,16 @@ fieldset[disabled] [cam-widget-header] .btn-link:focus {
 }
 /* line 20, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
 [cam-widget-header] > [ng-transclude] {
-  float: left;
+  float: right;
+  border-right: 1px solid #871020;
 }
-/* line 22, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+/* line 23, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
 [cam-widget-header] > [ng-transclude] > ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 26, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+/* line 27, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
 [cam-widget-header] > [ng-transclude] > ul > li > a {
   position: relative;
   display: block;
@@ -8668,16 +8669,18 @@ fieldset[disabled] [cam-widget-header] .btn-link:focus {
 /* line 57, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
 [cam-widget-header] > .cam-nav {
   float: right;
+  border-left: 1px solid #e31a36;
 }
 @media screen and (max-width: 768px) {
-  /* line 63, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  /* line 64, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] > [ng-transclude],
   [cam-widget-header] > .cam-nav {
     float: left;
     margin-left: 0;
     width: 100%;
+    border: none;
   }
-  /* line 69, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  /* line 71, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] > [ng-transclude].collapse,
   [cam-widget-header] > .cam-nav.collapse {
     visibility: hidden;
