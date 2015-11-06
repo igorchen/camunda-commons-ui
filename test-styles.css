@@ -8661,32 +8661,37 @@ fieldset[disabled] [cam-widget-header] .btn-link:focus {
 [cam-widget-header] > [ng-transclude] > ul > li > a > .glyphicon {
   margin-top: 2px;
 }
-/* line 52, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+/* line 50, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+[cam-widget-header] > [ng-transclude],
+[cam-widget-header] > .cam-nav {
+  min-height: 40px;
+}
+/* line 53, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
 [cam-widget-header] > [ng-transclude].collapse,
 [cam-widget-header] > .cam-nav.collapse {
   visibility: visible;
   display: block;
 }
-/* line 58, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+/* line 59, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
 [cam-widget-header] > .cam-nav {
   float: right;
   border-left: 1px solid #e31a36;
 }
-/* line 64, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+/* line 65, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
 [cam-widget-header] .small-screen-warning {
   display: none;
   font-size: 20px;
   height: 20px;
-  margin-top: 10px;
+  line-height: 44px;
   margin-right: 10px;
   float: right;
 }
-@media screen and (max-width: 768px) {
-  /* line 75, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+@media screen and (max-width: 767px) {
+  /* line 76, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] .small-screen-warning {
     display: inline-block;
   }
-  /* line 79, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  /* line 80, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] > [ng-transclude],
   [cam-widget-header] > .cam-nav {
     float: left;
@@ -8694,7 +8699,7 @@ fieldset[disabled] [cam-widget-header] .btn-link:focus {
     width: 100%;
     border: none;
   }
-  /* line 86, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  /* line 87, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] > [ng-transclude].collapse,
   [cam-widget-header] > .cam-nav.collapse {
     visibility: hidden;
