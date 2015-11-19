@@ -9303,7 +9303,7 @@ body {
 }
 /* line 77, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-mixins.less */
 .dmn-table thead .annotation .dmn-js-logo:after {
-  font-family: "dmn-icon";
+  font-family: "dmn-js";
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -9333,7 +9333,7 @@ body {
   text-decoration: none;
 }
 /* line 155, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
-.dmn-table thead > tr .icon-dmn {
+.dmn-table thead > tr .dmn-icon-dmn {
   cursor: pointer;
   color: #52b415;
 }
@@ -9404,7 +9404,7 @@ body {
 }
 /* line 219, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-table.less */
 .dmn-table .labels td:empty:before {
-  font-family: "dmn-icon";
+  font-family: "dmn-js";
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -10287,7 +10287,7 @@ body {
 }
 /* line 41, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-contextmenu.less */
 .tjs-context-menu .tjs-icon:before {
-  font-family: "dmn-icon";
+  font-family: "dmn-js";
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -11024,22 +11024,22 @@ body {
   color: #52b415;
 }
 /* line 45, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
-.dmn-clauseexpression-setter .icon-clear {
+.dmn-clauseexpression-setter .dmn-icon-clear {
   text-align: right;
 }
 /* line 47, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
-.dmn-clauseexpression-setter .icon-clear:before {
+.dmn-clauseexpression-setter .dmn-icon-clear:before {
   margin: 0;
 }
 /* line 52, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter .toggle-type,
-.dmn-clauseexpression-setter .icon-clear,
+.dmn-clauseexpression-setter .dmn-icon-clear,
 .dmn-clauseexpression-setter .region {
   padding: 6px;
 }
 /* line 58, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
 .dmn-clauseexpression-setter .toggle-type,
-.dmn-clauseexpression-setter .icon-clear {
+.dmn-clauseexpression-setter .dmn-icon-clear {
   display: table-cell;
 }
 /* line 63, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-clauseexpression-setter.less */
@@ -11303,7 +11303,7 @@ body {
 }
 /* line 40, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-combobox.less */
 .dmn-combobox .cb-caret:before {
-  font-family: "dmn-icon";
+  font-family: "dmn-js";
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -12080,17 +12080,16 @@ textarea[cam-widget-search] .search-container {
   cursor: progress;
 }
 @font-face {
-  font-family: 'dmn-icon';
-  src: url('../../vendor/fonts/dmn.eot');
-  src: url('../../vendor/fonts/dmn.eot#iefix') format('embedded-opentype'), url('../../vendor/fonts/dmn.woff') format('woff'), url('../../vendor/fonts/dmn.ttf') format('truetype'), url('../../vendor/fonts/dmn.svg#dmn') format('svg');
+  font-family: 'dmn-js';
+  src: url('../../vendor/fonts/dmn-js.eot');
+  src: url('../../vendor/fonts/dmn-js.eot#iefix') format('embedded-opentype'), url('../../vendor/fonts/dmn-js.woff') format('woff'), url('../../vendor/fonts/dmn-js.ttf') format('truetype'), url('../../vendor/fonts/dmn-js.svg#dmn') format('svg');
   font-weight: normal;
   font-style: normal;
 }
-/* line 42, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-dmn:before,
-[class^="icon-dmn"]:before,
-[class*=" icon-dmn"]:before {
-  font-family: "dmn-icon";
+/* line 41, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+[class^="dmn-icon"]:before,
+[class*=" dmn-icon"]:before {
+  font-family: "dmn-js";
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -12111,121 +12110,121 @@ textarea[cam-widget-search] .search-container {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 47, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-up:before {
+/* line 46, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-up:before {
   content: '\e800';
 }
-/* '' */
-/* line 48, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-down:before {
+/* 'î €' */
+/* line 47, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-down:before {
   content: '\e801';
 }
-/* '' */
-/* line 49, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-clear:before {
+/* 'î ' */
+/* line 48, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-clear:before {
   content: '\e802';
 }
-/* '' */
-/* line 50, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-plus:before {
+/* 'î ‚' */
+/* line 49, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-plus:before {
   content: '\e803';
 }
-/* '' */
-/* line 51, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-minus:before {
+/* 'î ƒ' */
+/* line 50, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-minus:before {
   content: '\e804';
 }
-/* '' */
-/* line 52, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-info:before {
+/* 'î „' */
+/* line 51, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-info:before {
   content: '\e805';
 }
-/* '' */
-/* line 53, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-left:before {
+/* 'î …' */
+/* line 52, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-left:before {
   content: '\e806';
 }
-/* '' */
-/* line 54, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-dmn-io:before {
+/* 'î †' */
+/* line 53, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-dmn-io:before {
   content: '\e807';
 }
-/* '' */
-/* line 55, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-right:before {
+/* 'î ‡' */
+/* line 54, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-right:before {
   content: '\e808';
 }
-/* '' */
-/* line 56, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-input:before {
+/* 'î ˆ' */
+/* line 55, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-input:before {
   content: '\e809';
 }
-/* '' */
-/* line 57, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-output:before {
+/* 'î ‰' */
+/* line 56, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-output:before {
   content: '\e80a';
 }
-/* '' */
-/* line 58, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-copy:before {
+/* 'î Š' */
+/* line 57, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-copy:before {
   content: '\e80b';
 }
-/* '' */
-/* line 59, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-keyboard:before {
+/* 'î ‹' */
+/* line 58, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-keyboard:before {
   content: '\e80c';
 }
-/* '' */
-/* line 60, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-undo:before {
+/* 'î Œ' */
+/* line 59, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-undo:before {
   content: '\e80d';
 }
-/* '' */
-/* line 61, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-redo:before {
+/* 'î ' */
+/* line 60, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-redo:before {
   content: '\e80e';
 }
-/* '' */
-/* line 62, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-menu:before {
+/* 'î Ž' */
+/* line 61, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-menu:before {
   content: '\e80f';
 }
-/* '' */
-/* line 63, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-setting:before {
+/* 'î ' */
+/* line 62, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-setting:before {
   content: '\e810';
 }
-/* '' */
-/* line 64, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-wrench:before {
+/* 'î ' */
+/* line 63, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-wrench:before {
   content: '\e811';
 }
-/* '' */
-/* line 65, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-eraser:before {
+/* 'î ‘' */
+/* line 64, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-eraser:before {
   content: '\e812';
 }
-/* '' */
-/* line 66, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-attention:before {
+/* 'î ’' */
+/* line 65, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-attention:before {
   content: '\e813';
 }
-/* '' */
-/* line 67, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-resize-big:before {
+/* 'î “' */
+/* line 66, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-resize-big:before {
   content: '\e814';
 }
-/* '' */
-/* line 68, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-resize-small:before {
+/* 'î ”' */
+/* line 67, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-resize-small:before {
   content: '\e815';
 }
-/* '' */
-/* line 69, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
-.icon-file-code:before {
+/* 'î •' */
+/* line 68, /home/camunda/workspace/7.4-commons-ui-ghpages/node_modules/dmn-js/styles/dmn-font.less */
+.dmn-icon-file-code:before {
   content: '\e816';
 }
-/* '' */
+/* 'î –' */
 /* line 21, /home/camunda/workspace/7.4-commons-ui-ghpages/resources/less/test-styles.less */
 body {
   padding-top: 0;
