@@ -11832,6 +11832,12 @@ fieldset[disabled] [cam-widget-variables-table] .value-wrapper .null-value.activ
 [cam-widget-dmn-viewer] span.dmn-output {
   font-weight: bold;
 }
+/* line 11, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/dmn-viewer/cam-widget-dmn-viewer.less */
+[cam-widget-dmn-viewer] span.dmn-input-object,
+[cam-widget-dmn-viewer] span.dmn-output-object {
+  font-style: italic;
+  font-weight: bold;
+}
 @font-face {
   font-family: 'open_sanslight';
   src: url('vendor/fonts/opensans-light-webfont.eot');
