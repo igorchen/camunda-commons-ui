@@ -11825,14 +11825,15 @@ fieldset[disabled] [cam-widget-variables-table] .value-wrapper .null-value.activ
 }
 /* line 2, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/dmn-viewer/cam-widget-dmn-viewer.less */
 [cam-widget-dmn-viewer] .fired > td {
-  background-color: #FFBDC6;
+  background-color: #9CCFE8;
+  color: #333;
 }
-/* line 6, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/dmn-viewer/cam-widget-dmn-viewer.less */
+/* line 7, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/dmn-viewer/cam-widget-dmn-viewer.less */
 [cam-widget-dmn-viewer] span.dmn-input,
 [cam-widget-dmn-viewer] span.dmn-output {
   font-weight: bold;
 }
-/* line 11, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/dmn-viewer/cam-widget-dmn-viewer.less */
+/* line 12, /home/camunda/workspace/7.4-commons-ui-ghpages/lib/widgets/dmn-viewer/cam-widget-dmn-viewer.less */
 [cam-widget-dmn-viewer] span.dmn-input-object,
 [cam-widget-dmn-viewer] span.dmn-output-object {
   font-style: italic;
