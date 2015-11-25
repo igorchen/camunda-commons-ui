@@ -1,0 +1,93 @@
+body {
+  padding-top: @header-height;
+}
+
+[cam-widget-header] {
+  .navbar;
+  .navbar-inverse;
+  .navbar-fixed-top;
+  margin-bottom: 0;
+
+  color: @navbar-inverse-brand-color;
+
+  .navbar-brand {
+    background: no-repeat url(@brand-logo);
+  }
+
+  a {
+    color: @navbar-inverse-link-color;
+  }
+
+  > [ng-transclude] {
+    float: right;
+    border-right: 1px solid darken(@navbar-inverse-bg, 10%);
+    > ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      > li > a {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+      }
+    }
+  }
+
+
+  > ul,
+  > [ng-transclude] > ul {
+    > li {
+      > a {
+        line-height: (@navbar-height / 2);
+        height: @navbar-height;
+        > .glyphicon {
+          margin-top: 2px;
+        }
+      }
+    }
+  }
+
+  > [ng-transclude],
+  > .cam-nav {
+    min-height: @navbar-height;
+    &.collapse {
+      visibility: visible;
+      display: block;
+    }
+  }
+
+  > .cam-nav {
+    float: right;
+    border-left: 1px solid lighten(@navbar-inverse-bg, 10%);
+  }
+
+
+  .small-screen-warning {
+    display: none;
+    font-size: (@navbar-height / 2);
+    height: (@navbar-height / 2);
+    line-height: @navbar-height + 4;
+    margin-right: (@navbar-height / 4);
+    float: right;
+  }
+
+
+  @media screen and (max-width: (@grid-float-breakpoint - 1)) {
+    .small-screen-warning {
+      display: inline-block;
+    }
+
+    > [ng-transclude],
+    > .cam-nav {
+      float: left;
+      margin-left: 0;
+      width: 100%;
+      border: none;
+
+      &.collapse {
+        visibility: hidden;
+        display: none;
+      }
+    }
+  }
+}
