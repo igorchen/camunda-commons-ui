@@ -16,7 +16,7 @@ var template = "<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div
 },{}],2:[function(require,module,exports){
 'use strict';
 
-var angular = require('angular'),
+var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     footerDefinition = require('../cam-widget-footer');
 
 var footerModule = angular.module('footerModule', []);
@@ -25,7 +25,7 @@ footerModule.directive('camWidgetFooter', footerDefinition);
 
 angular.bootstrap(document.body, [footerModule.name]);
 
-},{"../cam-widget-footer":1,"angular":4}],3:[function(require,module,exports){
+},{"../cam-widget-footer":1,"camunda-bpm-sdk-js/vendor/angular":5}],3:[function(require,module,exports){
 /**
  * @license AngularJS v1.2.29
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -22199,4 +22199,9 @@ var styleDirective = valueFn({
 require('./angular');
 module.exports = angular;
 
-},{"./angular":3}]},{},[2]);
+},{"./angular":3}],5:[function(require,module,exports){
+'use strict';
+
+module.exports = require('angular');
+
+},{"angular":4}]},{},[2]);

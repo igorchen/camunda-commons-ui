@@ -2,7 +2,7 @@
 'use strict';
 
 
-var angular = require('angular'),
+var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
     template = "<div class=\"navbar-header\">\n  <button type=\"button\"\n          class=\"navbar-toggle\"\n          ng-class=\"{open: !!navbarOpen}\"\n          ng-click=\"navbarOpen = !navbarOpen\">\n    <em class=\"sr-only\">{{ toggleNavigation }}</em>\n    <span></span>\n    <span></span>\n    <span></span>\n  </button>\n\n  <a class=\"navbar-brand\"\n     href=\"#/\"\n     title=\"{{ brandName }} {{ appName }}\">\n    <span class=\"brand-logo\"></span>\n    <span class=\"brand-name\" ng-cloak>{{ brandName }}</span>\n  </a>\n\n  <div class=\"small-screen-warning\">\n    <span class=\"glyphicon glyphicon-exclamation-sign\"\n          tooltip=\"{{ smallScreenWarning }}\"\n          tooltip-placement=\"bottom\"></span>\n  </div>\n</div>\n\n<ul class=\"cam-nav nav navbar-nav\"\n    ng-class=\"{collapse: !navbarOpen}\">\n\n  <li engine-select></li>\n\n  <li class=\"account dropdown\"\n      ng-if=\"authentication.name\"\n      ng-cloak>\n    <a href\n       class=\"dropdown-toggle\">\n      <span class=\"glyphicon glyphicon-user \"></span>\n      {{ (userName || authentication.name) }}\n    </a>\n\n    <ul class=\"dropdown-menu dropdown-menu-right\">\n      <li class=\"profile\">\n        <a ng-href=\"{{ '../../admin/:engine/#/users/' + authentication.name + '?tab=profile' | uri }}\">\n          {{ myProfile }}\n        </a>\n      </li>\n\n      <li class=\"divider\"></li>\n\n      <li class=\"logout\">\n        <a href\n           ng-click=\"logout()\">\n          {{ signOut }}\n        </a>\n      </li>\n    </ul>\n  </li>\n\n  <li class=\"divider-vertical\"\n      ng-if=\"authentication.name\"\n      ng-cloak></li>\n\n  <li class=\"app-switch dropdown\">\n    <a href\n       class=\"dropdown-toggle\">\n      <span class=\"glyphicon glyphicon-home\"></span>\n      <span class=\"caret\"></span>\n    </a>\n\n    <ul class=\"dropdown-menu dropdown-menu-right\">\n      <li ng-repeat=\"(appName, app) in apps\"\n          ng-if=\"appName !== currentApp && (!authentication || authentication.canAccess(appName))\"\n          ng-class=\"appName\">\n        <a ng-href=\"{{ '../../' + appName + '/:engine/' | uri }}\">\n          {{ app.label }}\n        </a>\n      </li>\n    </ul>\n  </li>\n</ul>\n\n<div ng-transclude ng-class=\"{collapse: !navbarOpen}\"></div>\n";
 
@@ -70,10 +70,10 @@ var angular = require('angular'),
     };
   }];
 
-},{"angular":4}],2:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":5}],2:[function(require,module,exports){
 'use strict';
 
-var angular = require('angular'),
+var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     headerDefinition = require('../cam-widget-header');
 
 require('../../../../vendor/ui-bootstrap-tpls-0.11.2-camunda');
@@ -137,7 +137,7 @@ angular.element(document).ready(function() {
   angular.bootstrap(document.body, [testModule.name]);
 });
 
-},{"../../../../vendor/ui-bootstrap-tpls-0.11.2-camunda":5,"../cam-widget-header":1,"angular":4}],3:[function(require,module,exports){
+},{"../../../../vendor/ui-bootstrap-tpls-0.11.2-camunda":6,"../cam-widget-header":1,"camunda-bpm-sdk-js/vendor/angular":5}],3:[function(require,module,exports){
 /**
  * @license AngularJS v1.2.29
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -22312,6 +22312,11 @@ require('./angular');
 module.exports = angular;
 
 },{"./angular":3}],5:[function(require,module,exports){
+'use strict';
+
+module.exports = require('angular');
+
+},{"angular":4}],6:[function(require,module,exports){
 /*
  * angular-ui-bootstrap
  * http://angular-ui.github.io/bootstrap/
