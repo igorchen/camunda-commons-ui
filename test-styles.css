@@ -4367,15 +4367,15 @@ tbody.collapse.in {
   clear: both;
   font-weight: normal;
   line-height: 1.6;
-  color: #2e6886;
+  color: #555555;
   white-space: nowrap;
 }
 /* line 78, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/dropdowns.less */
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   text-decoration: none;
-  color: #4294be;
-  background-color: #eeeeee;
+  color: #333333;
+  background-color: transparent;
 }
 /* line 88, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/dropdowns.less */
 .dropdown-menu > .active > a,
@@ -4384,7 +4384,7 @@ tbody.collapse.in {
   color: #333333;
   text-decoration: none;
   outline: 0;
-  background-color: #eeeeee;
+  background-color: transparent;
 }
 /* line 103, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/dropdowns.less */
 .dropdown-menu > .disabled > a,
@@ -7042,8 +7042,8 @@ button.list-group-item-danger.active:focus {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #e3e3e3;
+  background-color: #ffffff;
+  border: 1px solid #b3b3b3;
   border-radius: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -8685,6 +8685,23 @@ strong {
 [ng-click],
 [onclick] {
   cursor: pointer;
+}
+/* line 49, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-common.less */
+.well {
+  min-height: 20px;
+  padding: 13px;
+  margin-bottom: 15px;
+  color: #b3b3b3;
+  background-color: #ffffff;
+  border: 2px solid #b3b3b3;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 58, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-common.less */
+.well blockquote {
+  border-color: #ddd;
+  border-color: rgba(0, 0, 0, 0.15);
 }
 @font-face {
   font-family: 'open_sanslight';
@@ -11733,10 +11750,16 @@ body {
 /* line 96, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
 [cam-widget-header] > .cam-nav > li > a {
   height: 40px;
-  display: inline-block;
+  display: block;
+  line-height: 45px;
   padding: 0 12px;
 }
-/* line 102, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+/* line 101, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+[cam-widget-header] > .cam-nav > li > a:hover,
+[cam-widget-header] > .cam-nav > li > a:focus {
+  background-color: transparent;
+}
+/* line 107, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
 [cam-widget-header] > .cam-nav > li.active,
 [cam-widget-header] > .cam-nav > li:hover,
 [cam-widget-header] > .cam-nav > li:focus,
@@ -11744,7 +11767,7 @@ body {
 [cam-widget-header] > .cam-nav > li.active:focus {
   background-color: transparent;
 }
-/* line 108, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+/* line 113, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
 [cam-widget-header] > .cam-nav > li.active > a,
 [cam-widget-header] > .cam-nav > li:hover > a,
 [cam-widget-header] > .cam-nav > li:focus > a,
@@ -11753,11 +11776,11 @@ body {
   background-color: transparent;
 }
 @media screen and (max-width: 767px) {
-  /* line 125, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  /* line 130, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] .small-screen-warning {
     display: inline-block;
   }
-  /* line 129, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  /* line 134, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] > [ng-transclude],
   [cam-widget-header] > .cam-nav {
     float: left;
@@ -11765,24 +11788,24 @@ body {
     width: 100%;
     border: none;
   }
-  /* line 136, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  /* line 141, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] > [ng-transclude].collapse,
   [cam-widget-header] > .cam-nav.collapse {
     visibility: hidden;
     display: none;
   }
-  /* line 142, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  /* line 147, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] > [ng-transclude] > ul,
   [cam-widget-header] > .cam-nav {
     line-height: 1.6;
   }
-  /* line 145, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  /* line 150, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] > [ng-transclude] > ul > li,
   [cam-widget-header] > .cam-nav > li {
     display: inline-block;
     height: auto;
   }
-  /* line 148, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  /* line 153, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] > [ng-transclude] > ul > li > view > a,
   [cam-widget-header] > .cam-nav > li > view > a,
   [cam-widget-header] > [ng-transclude] > ul > li > a,
@@ -11791,25 +11814,25 @@ body {
     height: 30px;
     padding: 0 12px;
   }
-  /* line 157, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  /* line 162, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] > [ng-transclude] {
     border-top: 1px solid #eeeeee;
   }
-  /* line 159, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  /* line 164, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] > [ng-transclude] ul {
     padding-right: 0;
     padding-left: 0;
   }
-  /* line 166, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  /* line 171, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] .cam-nav .open > a {
     background-color: transparent;
   }
-  /* line 168, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  /* line 173, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] .cam-nav .open > a:hover,
   [cam-widget-header] .cam-nav .open > a:focus {
     background-color: transparent;
   }
-  /* line 174, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  /* line 179, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] .cam-nav .open .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -11853,11 +11876,88 @@ body {
     clear: both;
     font-weight: normal;
     line-height: 1.6;
-    color: #2e6886;
+    color: #555555;
     white-space: nowrap;
   }
 }
-/* line 3, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/loader/cam-widget-loader.less */
+/* line 3, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/_animate-spin.less */
+.animate-spin {
+  display: inline-block;
+  -webkit-animation: spin 1s infinite linear;
+  -o-animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
+}
+/* line 6, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/_animate-spin.less */
+.animate-spin:before {
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+@-moz-keyframes spin {
+  /* line 14, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/_animate-spin.less */
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  /* line 19, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/_animate-spin.less */
+  100% {
+    -moz-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes spin {
+  /* line 26, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/_animate-spin.less */
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  /* line 31, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/_animate-spin.less */
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-o-keyframes spin {
+  /* line 38, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/_animate-spin.less */
+  0% {
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  /* line 43, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/_animate-spin.less */
+  100% {
+    -o-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-ms-keyframes spin {
+  /* line 50, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/_animate-spin.less */
+  0% {
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  /* line 55, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/_animate-spin.less */
+  100% {
+    -ms-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  /* line 62, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/_animate-spin.less */
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  /* line 69, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/_animate-spin.less */
+  100% {
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+/* line 4, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/loader/cam-widget-loader.less */
 [cam-widget-loader] > .loader-state.loading,
 [cam-widget-loader] > .loader-state.empty,
 [cam-widget-loader] > .loader-state.alert-danger {
@@ -11865,13 +11965,13 @@ body {
   margin-top: 6px;
   margin-bottom: 6px;
 }
-/* line 12, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/loader/cam-widget-loader.less */
+/* line 13, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/loader/cam-widget-loader.less */
 [cam-widget-loader] > .loading,
 [cam-widget-loader] > .empty {
   font-style: italic;
   color: #777777;
 }
-/* line 18, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/loader/cam-widget-loader.less */
+/* line 19, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/loader/cam-widget-loader.less */
 [cam-widget-loader] > .loading {
   cursor: wait;
   cursor: progress;
