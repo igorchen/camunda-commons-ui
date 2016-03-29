@@ -801,7 +801,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular');
       return $location.search.apply($location, arguments);
     }
 
-    search.updateSilently = function(params) {
+    search.updateSilently = function(params, replaceFlag) {
       var oldPath = $location.absUrl();
 
       angular.forEach(params, function(value, key) {
@@ -812,6 +812,10 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular');
 
       if (newPath != oldPath) {
         silent = true;
+      }
+
+      if(replaceFlag) {
+        $location.replace();
       }
     };
 
