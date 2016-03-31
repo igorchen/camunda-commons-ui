@@ -11791,7 +11791,7 @@ body {
   /* line 138, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] > [ng-transclude],
   [cam-widget-header] > .cam-nav {
-    float: left;
+    text-align: right;
     margin-left: 0;
     width: 100%;
     border: none;
@@ -11825,19 +11825,20 @@ body {
   /* line 166, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] > [ng-transclude] {
     border-top: 1px solid #eeeeee;
+    border-right: none;
   }
-  /* line 168, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  /* line 169, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] > [ng-transclude] ul {
     padding-right: 0;
     padding-left: 0;
   }
-  /* line 176, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  /* line 177, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] .cam-nav li.open > a,
   [cam-widget-header] .cam-nav li.open > a:hover,
   [cam-widget-header] .cam-nav li.open > a:focus {
     background-color: transparent;
   }
-  /* line 183, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  /* line 184, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] .cam-nav li.open .dropdown-menu {
     position: absolute;
     top: 100%;
