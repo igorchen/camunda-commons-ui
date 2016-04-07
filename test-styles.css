@@ -11524,7 +11524,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 1030;
   margin-bottom: 0;
   border-bottom: 5px solid #b5152b;
   color: #777777;
@@ -12715,7 +12715,7 @@ fieldset[disabled] [cam-widget-variables-table] .value-wrapper .null-value.focus
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 1030;
   margin-bottom: 0;
   border-bottom: 5px solid #b5152b;
   color: #777777;
