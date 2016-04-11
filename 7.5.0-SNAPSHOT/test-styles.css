@@ -11841,6 +11841,49 @@ body {
   }
 }
 /* line 22, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+[cam-widget-header] [ng-transclude] li > view > a {
+  display: block;
+  height: 40px;
+  line-height: 45px;
+  padding: 0 9px;
+}
+@media screen and (max-width: 767px) {
+  /* line 304, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/_mixins.less */
+  [cam-widget-header] [ng-transclude] li > view > a {
+    height: auto;
+    line-height: 1.6;
+  }
+}
+/* line 309, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/_mixins.less */
+[cam-widget-header] [ng-transclude] li > view > a:hover,
+[cam-widget-header] [ng-transclude] li > view > a:focus {
+  background-color: transparent;
+}
+/* line 314, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/_mixins.less */
+[cam-widget-header] [ng-transclude] li > view > a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+/* line 26, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+[cam-widget-header] [ng-transclude] li:hover,
+[cam-widget-header] [ng-transclude] li:focus {
+  background-color: transparent;
+}
+/* line 30, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+[cam-widget-header] [ng-transclude] li:hover > view > a,
+[cam-widget-header] [ng-transclude] li:focus > view > a {
+  background-color: transparent;
+}
+/* line 35, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+[cam-widget-header] [ng-transclude] li.active {
+  background-color: #eeeeee;
+}
+/* line 37, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+[cam-widget-header] [ng-transclude] li.active > view > a {
+  color: #000000;
+}
+/* line 44, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
 [cam-widget-header] .small-screen-warning {
   display: none;
   font-size: 18px;
@@ -11848,12 +11891,12 @@ body {
   margin-right: 10px;
   float: right;
 }
-/* line 29, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+/* line 51, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
 [cam-widget-header] .small-screen-warning .glyphicon {
   margin-top: 10px;
 }
 @media screen and (max-width: 767px) {
-  /* line 33, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
+  /* line 55, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
   [cam-widget-header] .small-screen-warning {
     display: inline-block;
   }
