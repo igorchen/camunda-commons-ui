@@ -11512,6 +11512,7 @@ body {
   background-color: #ffffff;
   border-top: 1px solid #eeeeee;
   color: #777777;
+  text-align: right;
 }
 /* line 1, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/header/cam-widget-header.less */
 body {
@@ -11645,7 +11646,7 @@ body {
   display: block;
   height: 40px;
   line-height: 45px;
-  padding: 0 9px;
+  padding: 0 6px;
 }
 @media screen and (max-width: 767px) {
   /* line 304, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/_mixins.less */
@@ -11730,7 +11731,7 @@ body {
   display: block;
   height: 40px;
   line-height: 45px;
-  padding: 0 9px;
+  padding: 0 6px;
 }
 @media screen and (max-width: 767px) {
   /* line 304, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/_mixins.less */
@@ -11800,7 +11801,7 @@ body {
   display: block;
   height: 40px;
   line-height: 45px;
-  padding: 0 9px;
+  padding: 0 6px;
 }
 @media screen and (max-width: 767px) {
   /* line 304, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/_mixins.less */
@@ -11845,7 +11846,7 @@ body {
   display: block;
   height: 40px;
   line-height: 45px;
-  padding: 0 9px;
+  padding: 0 6px;
 }
 @media screen and (max-width: 767px) {
   /* line 304, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/_mixins.less */
