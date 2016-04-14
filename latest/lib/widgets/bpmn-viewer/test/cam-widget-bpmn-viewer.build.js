@@ -681,6 +681,7 @@ var $ = require('jquery');
           var permission = attr.authPermission;
           var resourceName = attr.authResourceName;
           var resourceId = $scope.$eval(attr.authResourceId);
+          var invertCheck = (attr.authInverse === 'true');
 
           AuthorizationResource.check(mapParameters(permission, resourceName, resourceId)).$promise.then(function(response) {
 
@@ -696,7 +697,7 @@ var $ = require('jquery');
             }
 
             // if (!!response.data.authorized) {
-            if (!!response.authorized) {
+            if ( (!!response.authorized && !invertCheck) || (!response.authorized && invertCheck )) {
               childScope = $scope.$new();
               transclude(childScope, function (clone) {
                 childElement = clone;
@@ -68166,7 +68167,6 @@ function done(stream, er) {
   return stream.push(null);
 }
 },{"./_stream_duplex":502,"core-util-is":507,"inherits":498}],506:[function(require,module,exports){
-(function (process){
 // A bit simpler than readable streams.
 // Implement an async ._write(chunk, encoding, cb), and it'll handle all
 // the drain event emission and buffering.
@@ -68180,7 +68180,7 @@ var processNextTick = require('process-nextick-args');
 /*</replacement>*/
 
 /*<replacement>*/
-var asyncWrite = !process.browser && ['v0.10', 'v0.9.'].indexOf(process.version.slice(0, 5)) > -1 ? setImmediate : processNextTick;
+var asyncWrite = !true ? setImmediate : processNextTick;
 /*</replacement>*/
 
 /*<replacement>*/
@@ -68683,8 +68683,7 @@ function CorkedRequest(state) {
     }
   };
 }
-}).call(this,require('_process'))
-},{"./_stream_duplex":502,"_process":500,"buffer":493,"core-util-is":507,"events":497,"inherits":498,"process-nextick-args":509,"util-deprecate":510}],507:[function(require,module,exports){
+},{"./_stream_duplex":502,"buffer":493,"core-util-is":507,"events":497,"inherits":498,"process-nextick-args":509,"util-deprecate":510}],507:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -68909,7 +68908,13 @@ exports.Duplex = require('./lib/_stream_duplex.js');
 exports.Transform = require('./lib/_stream_transform.js');
 exports.PassThrough = require('./lib/_stream_passthrough.js');
 
-},{"./lib/_stream_duplex.js":502,"./lib/_stream_passthrough.js":503,"./lib/_stream_readable.js":504,"./lib/_stream_transform.js":505,"./lib/_stream_writable.js":506}],513:[function(require,module,exports){
+// inline-process-browser and unreachable-branch-transform make sure this is
+// removed in browserify builds
+if (!true) {
+  module.exports = require('stream');
+}
+
+},{"./lib/_stream_duplex.js":502,"./lib/_stream_passthrough.js":503,"./lib/_stream_readable.js":504,"./lib/_stream_transform.js":505,"./lib/_stream_writable.js":506,"stream":515}],513:[function(require,module,exports){
 module.exports = require("./lib/_stream_transform.js")
 
 },{"./lib/_stream_transform.js":505}],514:[function(require,module,exports){
