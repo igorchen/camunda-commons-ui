@@ -2068,1177 +2068,6 @@ table th[class*="col-"] {
     border-bottom: 0;
   }
 }
-/* line 10, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-fieldset {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  min-width: 0;
-}
-/* line 20, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-legend {
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin-bottom: 25px;
-  font-size: 24px;
-  line-height: inherit;
-  color: #333333;
-  border: 0;
-  border-bottom: 1px solid #e5e5e5;
-}
-/* line 32, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-label {
-  display: inline-block;
-  max-width: 100%;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-/* line 47, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-input[type="search"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-/* line 52, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-input[type="radio"],
-input[type="checkbox"] {
-  margin: 4px 0 0;
-  margin-top: 1px \9;
-  line-height: normal;
-}
-/* line 59, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-input[type="file"] {
-  display: block;
-}
-/* line 64, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-input[type="range"] {
-  display: block;
-  width: 100%;
-}
-/* line 70, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-select[multiple],
-select[size] {
-  height: auto;
-}
-/* line 76, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-/* line 83, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-output {
-  display: block;
-  padding-top: 7px;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #555555;
-}
-/* line 114, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.form-control {
-  display: block;
-  width: 100%;
-  height: 39px;
-  padding: 6px 12px;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #555555;
-  background-color: #ffffff;
-  background-image: none;
-  border: 1px solid #cccccc;
-  border-radius: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-}
-/* line 57, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
-.form-control:focus {
-  border-color: #276e8c;
-  outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(39, 110, 140, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(39, 110, 140, 0.6);
-}
-/* line 103, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/vendor-prefixes.less */
-.form-control::-moz-placeholder {
-  color: #999999;
-  opacity: 1;
-}
-/* line 107, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/vendor-prefixes.less */
-.form-control:-ms-input-placeholder {
-  color: #999999;
-}
-/* line 108, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/vendor-prefixes.less */
-.form-control::-webkit-input-placeholder {
-  color: #999999;
-}
-/* line 136, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.form-control::-ms-expand {
-  border: 0;
-  background-color: transparent;
-}
-/* line 146, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.form-control[disabled],
-.form-control[readonly],
-fieldset[disabled] .form-control {
-  background-color: #eeeeee;
-  opacity: 1;
-}
-/* line 153, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.form-control[disabled],
-fieldset[disabled] .form-control {
-  cursor: not-allowed;
-}
-/* line 159, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-textarea.form-control {
-  height: auto;
-}
-/* line 172, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-input[type="search"] {
-  -webkit-appearance: none;
-}
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  /* line 191, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-  input[type="date"].form-control,
-  input[type="time"].form-control,
-  input[type="datetime-local"].form-control,
-  input[type="month"].form-control {
-    line-height: 39px;
-  }
-  /* line 195, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-  input[type="date"].input-sm,
-  input[type="time"].input-sm,
-  input[type="datetime-local"].input-sm,
-  input[type="month"].input-sm,
-  .input-group-sm input[type="date"],
-  .input-group-sm input[type="time"],
-  .input-group-sm input[type="datetime-local"],
-  .input-group-sm input[type="month"] {
-    line-height: 33px;
-  }
-  /* line 200, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-  input[type="date"].input-lg,
-  input[type="time"].input-lg,
-  input[type="datetime-local"].input-lg,
-  input[type="month"].input-lg,
-  .input-group-lg input[type="date"],
-  .input-group-lg input[type="time"],
-  .input-group-lg input[type="datetime-local"],
-  .input-group-lg input[type="month"] {
-    line-height: 49px;
-  }
-}
-/* line 213, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.form-group {
-  margin-bottom: 15px;
-}
-/* line 222, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.radio,
-.checkbox {
-  position: relative;
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-/* line 229, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.radio label,
-.checkbox label {
-  min-height: 25px;
-  padding-left: 20px;
-  margin-bottom: 0;
-  font-weight: normal;
-  cursor: pointer;
-}
-/* line 237, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.radio input[type="radio"],
-.radio-inline input[type="radio"],
-.checkbox input[type="checkbox"],
-.checkbox-inline input[type="checkbox"] {
-  position: absolute;
-  margin-left: -20px;
-  margin-top: 4px \9;
-}
-/* line 246, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.radio + .radio,
-.checkbox + .checkbox {
-  margin-top: -5px;
-}
-/* line 252, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.radio-inline,
-.checkbox-inline {
-  position: relative;
-  display: inline-block;
-  padding-left: 20px;
-  margin-bottom: 0;
-  vertical-align: middle;
-  font-weight: normal;
-  cursor: pointer;
-}
-/* line 262, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.radio-inline + .radio-inline,
-.checkbox-inline + .checkbox-inline {
-  margin-top: 0;
-  margin-left: 10px;
-}
-/* line 274, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-input[type="radio"][disabled],
-input[type="checkbox"][disabled],
-input[type="radio"].disabled,
-input[type="checkbox"].disabled,
-fieldset[disabled] input[type="radio"],
-fieldset[disabled] input[type="checkbox"] {
-  cursor: not-allowed;
-}
-/* line 283, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.radio-inline.disabled,
-.checkbox-inline.disabled,
-fieldset[disabled] .radio-inline,
-fieldset[disabled] .checkbox-inline {
-  cursor: not-allowed;
-}
-/* line 293, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.radio.disabled label,
-.checkbox.disabled label,
-fieldset[disabled] .radio label,
-fieldset[disabled] .checkbox label {
-  cursor: not-allowed;
-}
-/* line 305, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.form-control-static {
-  padding-top: 7px;
-  padding-bottom: 7px;
-  margin-bottom: 0;
-  min-height: 41px;
-}
-/* line 313, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.form-control-static.input-lg,
-.form-control-static.input-sm {
-  padding-left: 0;
-  padding-right: 0;
-}
-/* line 329, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.input-sm {
-  height: 33px;
-  padding: 5px 10px;
-  font-size: 14px;
-  line-height: 1.5;
-  border-radius: 0;
-}
-/* line 76, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
-select.input-sm {
-  height: 33px;
-  line-height: 33px;
-}
-/* line 81, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
-textarea.input-sm,
-select[multiple].input-sm {
-  height: auto;
-}
-/* line 333, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.form-group-sm .form-control {
-  height: 33px;
-  padding: 5px 10px;
-  font-size: 14px;
-  line-height: 1.5;
-  border-radius: 0;
-}
-/* line 340, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.form-group-sm select.form-control {
-  height: 33px;
-  line-height: 33px;
-}
-/* line 344, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.form-group-sm textarea.form-control,
-.form-group-sm select[multiple].form-control {
-  height: auto;
-}
-/* line 348, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.form-group-sm .form-control-static {
-  height: 33px;
-  min-height: 39px;
-  padding: 6px 10px;
-  font-size: 14px;
-  line-height: 1.5;
-}
-/* line 357, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.input-lg {
-  height: 49px;
-  padding: 10px 16px;
-  font-size: 20px;
-  line-height: 1.3333333;
-  border-radius: 0;
-}
-/* line 76, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
-select.input-lg {
-  height: 49px;
-  line-height: 49px;
-}
-/* line 81, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
-textarea.input-lg,
-select[multiple].input-lg {
-  height: auto;
-}
-/* line 361, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.form-group-lg .form-control {
-  height: 49px;
-  padding: 10px 16px;
-  font-size: 20px;
-  line-height: 1.3333333;
-  border-radius: 0;
-}
-/* line 368, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.form-group-lg select.form-control {
-  height: 49px;
-  line-height: 49px;
-}
-/* line 372, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.form-group-lg textarea.form-control,
-.form-group-lg select[multiple].form-control {
-  height: auto;
-}
-/* line 376, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.form-group-lg .form-control-static {
-  height: 49px;
-  min-height: 45px;
-  padding: 11px 16px;
-  font-size: 20px;
-  line-height: 1.3333333;
-}
-/* line 390, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.has-feedback {
-  position: relative;
-}
-/* line 395, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.has-feedback .form-control {
-  padding-right: 48.75px;
-}
-/* line 400, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.form-control-feedback {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  display: block;
-  width: 39px;
-  height: 39px;
-  line-height: 39px;
-  text-align: center;
-  pointer-events: none;
-}
-/* line 412, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.input-lg + .form-control-feedback,
-.input-group-lg + .form-control-feedback,
-.form-group-lg .form-control + .form-control-feedback {
-  width: 49px;
-  height: 49px;
-  line-height: 49px;
-}
-/* line 419, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.input-sm + .form-control-feedback,
-.input-group-sm + .form-control-feedback,
-.form-group-sm .form-control + .form-control-feedback {
-  width: 33px;
-  height: 33px;
-  line-height: 33px;
-}
-/* line 8, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
-.has-success .help-block,
-.has-success .control-label,
-.has-success .radio,
-.has-success .checkbox,
-.has-success .radio-inline,
-.has-success .checkbox-inline,
-.has-success.radio label,
-.has-success.checkbox label,
-.has-success.radio-inline label,
-.has-success.checkbox-inline label {
-  color: #3c763d;
-}
-/* line 21, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
-.has-success .form-control {
-  border-color: #3c763d;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-}
-/* line 24, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
-.has-success .form-control:focus {
-  border-color: #2b542c;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
-}
-/* line 31, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
-.has-success .input-group-addon {
-  color: #3c763d;
-  border-color: #3c763d;
-  background-color: #dff0d8;
-}
-/* line 37, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
-.has-success .form-control-feedback {
-  color: #3c763d;
-}
-/* line 8, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
-.has-warning .help-block,
-.has-warning .control-label,
-.has-warning .radio,
-.has-warning .checkbox,
-.has-warning .radio-inline,
-.has-warning .checkbox-inline,
-.has-warning.radio label,
-.has-warning.checkbox label,
-.has-warning.radio-inline label,
-.has-warning.checkbox-inline label {
-  color: #8a6d3b;
-}
-/* line 21, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
-.has-warning .form-control {
-  border-color: #8a6d3b;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-}
-/* line 24, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
-.has-warning .form-control:focus {
-  border-color: #66512c;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
-}
-/* line 31, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
-.has-warning .input-group-addon {
-  color: #8a6d3b;
-  border-color: #8a6d3b;
-  background-color: #fcf8e3;
-}
-/* line 37, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
-.has-warning .form-control-feedback {
-  color: #8a6d3b;
-}
-/* line 8, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
-.has-error .help-block,
-.has-error .control-label,
-.has-error .radio,
-.has-error .checkbox,
-.has-error .radio-inline,
-.has-error .checkbox-inline,
-.has-error.radio label,
-.has-error.checkbox label,
-.has-error.radio-inline label,
-.has-error.checkbox-inline label {
-  color: #a94442;
-}
-/* line 21, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
-.has-error .form-control {
-  border-color: #a94442;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-}
-/* line 24, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
-.has-error .form-control:focus {
-  border-color: #843534;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
-}
-/* line 31, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
-.has-error .input-group-addon {
-  color: #a94442;
-  border-color: #a94442;
-  background-color: #f2dede;
-}
-/* line 37, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
-.has-error .form-control-feedback {
-  color: #a94442;
-}
-/* line 441, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.has-feedback label ~ .form-control-feedback {
-  top: 30px;
-}
-/* line 444, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.has-feedback label.sr-only ~ .form-control-feedback {
-  top: 0;
-}
-/* line 455, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.help-block {
-  display: block;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  color: #959595;
-}
-@media (min-width: 768px) {
-  /* line 479, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-  .form-inline .form-group {
-    display: inline-block;
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-  /* line 486, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-  .form-inline .form-control {
-    display: inline-block;
-    width: auto;
-    vertical-align: middle;
-  }
-  /* line 493, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-  .form-inline .form-control-static {
-    display: inline-block;
-  }
-  /* line 497, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-  .form-inline .input-group {
-    display: inline-table;
-    vertical-align: middle;
-  }
-  /* line 501, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-  .form-inline .input-group .input-group-addon,
-  .form-inline .input-group .input-group-btn,
-  .form-inline .input-group .form-control {
-    width: auto;
-  }
-  /* line 509, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-  .form-inline .input-group > .form-control {
-    width: 100%;
-  }
-  /* line 513, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-  .form-inline .control-label {
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-  /* line 520, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-  .form-inline .radio,
-  .form-inline .checkbox {
-    display: inline-block;
-    margin-top: 0;
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
-  /* line 527, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-  .form-inline .radio label,
-  .form-inline .checkbox label {
-    padding-left: 0;
-  }
-  /* line 531, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-  .form-inline .radio input[type="radio"],
-  .form-inline .checkbox input[type="checkbox"] {
-    position: relative;
-    margin-left: 0;
-  }
-  /* line 538, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-  .form-inline .has-feedback .form-control-feedback {
-    top: 0;
-  }
-}
-/* line 555, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.form-horizontal .radio,
-.form-horizontal .checkbox,
-.form-horizontal .radio-inline,
-.form-horizontal .checkbox-inline {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 7px;
-}
-/* line 565, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.form-horizontal .radio,
-.form-horizontal .checkbox {
-  min-height: 32px;
-}
-/* line 571, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.form-horizontal .form-group {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-@media (min-width: 768px) {
-  /* line 578, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-  .form-horizontal .control-label {
-    text-align: right;
-    margin-bottom: 0;
-    padding-top: 7px;
-  }
-}
-/* line 589, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-.form-horizontal .has-feedback .form-control-feedback {
-  right: 15px;
-}
-@media (min-width: 768px) {
-  /* line 599, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-  .form-horizontal .form-group-lg .control-label {
-    padding-top: 11px;
-    font-size: 20px;
-  }
-}
-@media (min-width: 768px) {
-  /* line 607, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
-  .form-horizontal .form-group-sm .control-label {
-    padding-top: 6px;
-    font-size: 14px;
-  }
-}
-/* line 9, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 16px;
-  line-height: 1.6;
-  border-radius: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-/* line 26, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn:focus,
-.btn:active:focus,
-.btn.active:focus,
-.btn.focus,
-.btn:active.focus,
-.btn.active.focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-/* line 32, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn:hover,
-.btn:focus,
-.btn.focus {
-  color: #333333;
-  text-decoration: none;
-}
-/* line 39, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn:active,
-.btn.active {
-  outline: 0;
-  background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-/* line 46, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn.disabled,
-.btn[disabled],
-fieldset[disabled] .btn {
-  cursor: not-allowed;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-/* line 55, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-a.btn.disabled,
-fieldset[disabled] a.btn {
-  pointer-events: none;
-}
-/* line 66, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn-default {
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc;
-}
-/* line 11, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-default:focus,
-.btn-default.focus {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #8c8c8c;
-}
-/* line 17, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-default:hover {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
-}
-/* line 22, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-default:active,
-.btn-default.active,
-.open > .dropdown-toggle.btn-default {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
-}
-/* line 29, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-default:active:hover,
-.btn-default.active:hover,
-.open > .dropdown-toggle.btn-default:hover,
-.btn-default:active:focus,
-.btn-default.active:focus,
-.open > .dropdown-toggle.btn-default:focus,
-.btn-default:active.focus,
-.btn-default.active.focus,
-.open > .dropdown-toggle.btn-default.focus {
-  color: #333333;
-  background-color: #d4d4d4;
-  border-color: #8c8c8c;
-}
-/* line 37, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-default:active,
-.btn-default.active,
-.open > .dropdown-toggle.btn-default {
-  background-image: none;
-}
-/* line 45, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-default.disabled:hover,
-.btn-default[disabled]:hover,
-fieldset[disabled] .btn-default:hover,
-.btn-default.disabled:focus,
-.btn-default[disabled]:focus,
-fieldset[disabled] .btn-default:focus,
-.btn-default.disabled.focus,
-.btn-default[disabled].focus,
-fieldset[disabled] .btn-default.focus {
-  background-color: #ffffff;
-  border-color: #cccccc;
-}
-/* line 53, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-default .badge {
-  color: #ffffff;
-  background-color: #333333;
-}
-/* line 69, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn-primary {
-  color: #ffffff;
-  background-color: #b5152b;
-  border-color: #9e1226;
-}
-/* line 11, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-primary:focus,
-.btn-primary.focus {
-  color: #ffffff;
-  background-color: #871020;
-  border-color: #2c050a;
-}
-/* line 17, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-primary:hover {
-  color: #ffffff;
-  background-color: #871020;
-  border-color: #670c19;
-}
-/* line 22, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-primary:active,
-.btn-primary.active,
-.open > .dropdown-toggle.btn-primary {
-  color: #ffffff;
-  background-color: #871020;
-  border-color: #670c19;
-}
-/* line 29, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-primary:active:hover,
-.btn-primary.active:hover,
-.open > .dropdown-toggle.btn-primary:hover,
-.btn-primary:active:focus,
-.btn-primary.active:focus,
-.open > .dropdown-toggle.btn-primary:focus,
-.btn-primary:active.focus,
-.btn-primary.active.focus,
-.open > .dropdown-toggle.btn-primary.focus {
-  color: #ffffff;
-  background-color: #670c19;
-  border-color: #2c050a;
-}
-/* line 37, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-primary:active,
-.btn-primary.active,
-.open > .dropdown-toggle.btn-primary {
-  background-image: none;
-}
-/* line 45, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-primary.disabled:hover,
-.btn-primary[disabled]:hover,
-fieldset[disabled] .btn-primary:hover,
-.btn-primary.disabled:focus,
-.btn-primary[disabled]:focus,
-fieldset[disabled] .btn-primary:focus,
-.btn-primary.disabled.focus,
-.btn-primary[disabled].focus,
-fieldset[disabled] .btn-primary.focus {
-  background-color: #b5152b;
-  border-color: #9e1226;
-}
-/* line 53, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-primary .badge {
-  color: #b5152b;
-  background-color: #ffffff;
-}
-/* line 73, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn-success {
-  color: #ffffff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
-}
-/* line 11, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-success:focus,
-.btn-success.focus {
-  color: #ffffff;
-  background-color: #449d44;
-  border-color: #255625;
-}
-/* line 17, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-success:hover {
-  color: #ffffff;
-  background-color: #449d44;
-  border-color: #398439;
-}
-/* line 22, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-success:active,
-.btn-success.active,
-.open > .dropdown-toggle.btn-success {
-  color: #ffffff;
-  background-color: #449d44;
-  border-color: #398439;
-}
-/* line 29, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-success:active:hover,
-.btn-success.active:hover,
-.open > .dropdown-toggle.btn-success:hover,
-.btn-success:active:focus,
-.btn-success.active:focus,
-.open > .dropdown-toggle.btn-success:focus,
-.btn-success:active.focus,
-.btn-success.active.focus,
-.open > .dropdown-toggle.btn-success.focus {
-  color: #ffffff;
-  background-color: #398439;
-  border-color: #255625;
-}
-/* line 37, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-success:active,
-.btn-success.active,
-.open > .dropdown-toggle.btn-success {
-  background-image: none;
-}
-/* line 45, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-success.disabled:hover,
-.btn-success[disabled]:hover,
-fieldset[disabled] .btn-success:hover,
-.btn-success.disabled:focus,
-.btn-success[disabled]:focus,
-fieldset[disabled] .btn-success:focus,
-.btn-success.disabled.focus,
-.btn-success[disabled].focus,
-fieldset[disabled] .btn-success.focus {
-  background-color: #5cb85c;
-  border-color: #4cae4c;
-}
-/* line 53, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-success .badge {
-  color: #5cb85c;
-  background-color: #ffffff;
-}
-/* line 77, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn-info {
-  color: #ffffff;
-  background-color: #5bc0de;
-  border-color: #46b8da;
-}
-/* line 11, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-info:focus,
-.btn-info.focus {
-  color: #ffffff;
-  background-color: #31b0d5;
-  border-color: #1b6d85;
-}
-/* line 17, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-info:hover {
-  color: #ffffff;
-  background-color: #31b0d5;
-  border-color: #269abc;
-}
-/* line 22, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-info:active,
-.btn-info.active,
-.open > .dropdown-toggle.btn-info {
-  color: #ffffff;
-  background-color: #31b0d5;
-  border-color: #269abc;
-}
-/* line 29, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-info:active:hover,
-.btn-info.active:hover,
-.open > .dropdown-toggle.btn-info:hover,
-.btn-info:active:focus,
-.btn-info.active:focus,
-.open > .dropdown-toggle.btn-info:focus,
-.btn-info:active.focus,
-.btn-info.active.focus,
-.open > .dropdown-toggle.btn-info.focus {
-  color: #ffffff;
-  background-color: #269abc;
-  border-color: #1b6d85;
-}
-/* line 37, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-info:active,
-.btn-info.active,
-.open > .dropdown-toggle.btn-info {
-  background-image: none;
-}
-/* line 45, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-info.disabled:hover,
-.btn-info[disabled]:hover,
-fieldset[disabled] .btn-info:hover,
-.btn-info.disabled:focus,
-.btn-info[disabled]:focus,
-fieldset[disabled] .btn-info:focus,
-.btn-info.disabled.focus,
-.btn-info[disabled].focus,
-fieldset[disabled] .btn-info.focus {
-  background-color: #5bc0de;
-  border-color: #46b8da;
-}
-/* line 53, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-info .badge {
-  color: #5bc0de;
-  background-color: #ffffff;
-}
-/* line 81, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn-warning {
-  color: #ffffff;
-  background-color: #f0ad4e;
-  border-color: #eea236;
-}
-/* line 11, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-warning:focus,
-.btn-warning.focus {
-  color: #ffffff;
-  background-color: #ec971f;
-  border-color: #985f0d;
-}
-/* line 17, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-warning:hover {
-  color: #ffffff;
-  background-color: #ec971f;
-  border-color: #d58512;
-}
-/* line 22, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-warning:active,
-.btn-warning.active,
-.open > .dropdown-toggle.btn-warning {
-  color: #ffffff;
-  background-color: #ec971f;
-  border-color: #d58512;
-}
-/* line 29, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-warning:active:hover,
-.btn-warning.active:hover,
-.open > .dropdown-toggle.btn-warning:hover,
-.btn-warning:active:focus,
-.btn-warning.active:focus,
-.open > .dropdown-toggle.btn-warning:focus,
-.btn-warning:active.focus,
-.btn-warning.active.focus,
-.open > .dropdown-toggle.btn-warning.focus {
-  color: #ffffff;
-  background-color: #d58512;
-  border-color: #985f0d;
-}
-/* line 37, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-warning:active,
-.btn-warning.active,
-.open > .dropdown-toggle.btn-warning {
-  background-image: none;
-}
-/* line 45, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-warning.disabled:hover,
-.btn-warning[disabled]:hover,
-fieldset[disabled] .btn-warning:hover,
-.btn-warning.disabled:focus,
-.btn-warning[disabled]:focus,
-fieldset[disabled] .btn-warning:focus,
-.btn-warning.disabled.focus,
-.btn-warning[disabled].focus,
-fieldset[disabled] .btn-warning.focus {
-  background-color: #f0ad4e;
-  border-color: #eea236;
-}
-/* line 53, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-warning .badge {
-  color: #f0ad4e;
-  background-color: #ffffff;
-}
-/* line 85, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn-danger {
-  color: #ffffff;
-  background-color: #d9534f;
-  border-color: #d43f3a;
-}
-/* line 11, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-danger:focus,
-.btn-danger.focus {
-  color: #ffffff;
-  background-color: #c9302c;
-  border-color: #761c19;
-}
-/* line 17, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-danger:hover {
-  color: #ffffff;
-  background-color: #c9302c;
-  border-color: #ac2925;
-}
-/* line 22, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-danger:active,
-.btn-danger.active,
-.open > .dropdown-toggle.btn-danger {
-  color: #ffffff;
-  background-color: #c9302c;
-  border-color: #ac2925;
-}
-/* line 29, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-danger:active:hover,
-.btn-danger.active:hover,
-.open > .dropdown-toggle.btn-danger:hover,
-.btn-danger:active:focus,
-.btn-danger.active:focus,
-.open > .dropdown-toggle.btn-danger:focus,
-.btn-danger:active.focus,
-.btn-danger.active.focus,
-.open > .dropdown-toggle.btn-danger.focus {
-  color: #ffffff;
-  background-color: #ac2925;
-  border-color: #761c19;
-}
-/* line 37, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-danger:active,
-.btn-danger.active,
-.open > .dropdown-toggle.btn-danger {
-  background-image: none;
-}
-/* line 45, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-danger.disabled:hover,
-.btn-danger[disabled]:hover,
-fieldset[disabled] .btn-danger:hover,
-.btn-danger.disabled:focus,
-.btn-danger[disabled]:focus,
-fieldset[disabled] .btn-danger:focus,
-.btn-danger.disabled.focus,
-.btn-danger[disabled].focus,
-fieldset[disabled] .btn-danger.focus {
-  background-color: #d9534f;
-  border-color: #d43f3a;
-}
-/* line 53, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-.btn-danger .badge {
-  color: #d9534f;
-  background-color: #ffffff;
-}
-/* line 94, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn-link {
-  color: #276e8c;
-  font-weight: normal;
-  border-radius: 0;
-}
-/* line 99, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn-link,
-.btn-link:active,
-.btn-link.active,
-.btn-link[disabled],
-fieldset[disabled] .btn-link {
-  background-color: transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-/* line 107, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn-link,
-.btn-link:hover,
-.btn-link:focus,
-.btn-link:active {
-  border-color: transparent;
-}
-/* line 113, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn-link:hover,
-.btn-link:focus {
-  color: #074762;
-  text-decoration: none;
-  background-color: transparent;
-}
-/* line 121, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn-link[disabled]:hover,
-fieldset[disabled] .btn-link:hover,
-.btn-link[disabled]:focus,
-fieldset[disabled] .btn-link:focus {
-  color: #777777;
-  text-decoration: none;
-}
-/* line 133, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn-lg,
-.btn-group-lg > .btn {
-  padding: 10px 16px;
-  font-size: 20px;
-  line-height: 1.3333333;
-  border-radius: 0;
-}
-/* line 137, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn-sm,
-.btn-group-sm > .btn {
-  padding: 5px 10px;
-  font-size: 14px;
-  line-height: 1.5;
-  border-radius: 0;
-}
-/* line 141, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn-xs,
-.btn-group-xs > .btn {
-  padding: 1px 5px;
-  font-size: 14px;
-  line-height: 1.5;
-  border-radius: 0;
-}
-/* line 149, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn-block {
-  display: block;
-  width: 100%;
-}
-/* line 155, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-.btn-block + .btn-block {
-  margin-top: 5px;
-}
-/* line 163, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-input[type="submit"].btn-block,
-input[type="reset"].btn-block,
-input[type="button"].btn-block {
-  width: 100%;
-}
-/* line 10, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/component-animations.less */
-.fade {
-  opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
-  -o-transition: opacity 0.15s linear;
-  transition: opacity 0.15s linear;
-}
-/* line 13, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/component-animations.less */
-.fade.in {
-  opacity: 1;
-}
-/* line 18, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/component-animations.less */
-.collapse {
-  display: none;
-}
-/* line 21, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/component-animations.less */
-.collapse.in {
-  display: block;
-}
-/* line 22, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/component-animations.less */
-tr.collapse.in {
-  display: table-row;
-}
-/* line 23, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/component-animations.less */
-tbody.collapse.in {
-  display: table-row-group;
-}
-/* line 26, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/component-animations.less */
-.collapsing {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  -webkit-transition-property: height, visibility;
-  transition-property: height, visibility;
-  -webkit-transition-duration: 0.35s;
-  transition-duration: 0.35s;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
-}
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('node_modules/bootstrap/fonts/glyphicons-halflings-regular.eot');
@@ -4305,6 +3134,1177 @@ tbody.collapse.in {
 .glyphicon-menu-up:before {
   content: "\e260";
 }
+/* line 10, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
+}
+/* line 20, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 25px;
+  font-size: 24px;
+  line-height: inherit;
+  color: #333333;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* line 32, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+/* line 47, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 52, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+}
+/* line 59, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+input[type="file"] {
+  display: block;
+}
+/* line 64, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+input[type="range"] {
+  display: block;
+  width: 100%;
+}
+/* line 70, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+select[multiple],
+select[size] {
+  height: auto;
+}
+/* line 76, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+/* line 83, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+output {
+  display: block;
+  padding-top: 7px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: currentColor;
+}
+/* line 114, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.form-control {
+  display: block;
+  width: 100%;
+  height: 39px;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: currentColor;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid #555555;
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+/* line 57, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
+.form-control:focus {
+  border-color: #276e8c;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(39, 110, 140, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(39, 110, 140, 0.6);
+}
+/* line 103, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/vendor-prefixes.less */
+.form-control::-moz-placeholder {
+  color: #999999;
+  opacity: 1;
+}
+/* line 107, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/vendor-prefixes.less */
+.form-control:-ms-input-placeholder {
+  color: #999999;
+}
+/* line 108, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/vendor-prefixes.less */
+.form-control::-webkit-input-placeholder {
+  color: #999999;
+}
+/* line 136, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.form-control::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+/* line 146, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  background-color: transparent;
+  opacity: 1;
+}
+/* line 153, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.form-control[disabled],
+fieldset[disabled] .form-control {
+  cursor: not-allowed;
+}
+/* line 159, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+textarea.form-control {
+  height: auto;
+}
+/* line 172, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+input[type="search"] {
+  -webkit-appearance: none;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* line 191, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+  input[type="date"].form-control,
+  input[type="time"].form-control,
+  input[type="datetime-local"].form-control,
+  input[type="month"].form-control {
+    line-height: 39px;
+  }
+  /* line 195, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+  input[type="date"].input-sm,
+  input[type="time"].input-sm,
+  input[type="datetime-local"].input-sm,
+  input[type="month"].input-sm,
+  .input-group-sm input[type="date"],
+  .input-group-sm input[type="time"],
+  .input-group-sm input[type="datetime-local"],
+  .input-group-sm input[type="month"] {
+    line-height: 33px;
+  }
+  /* line 200, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+  input[type="date"].input-lg,
+  input[type="time"].input-lg,
+  input[type="datetime-local"].input-lg,
+  input[type="month"].input-lg,
+  .input-group-lg input[type="date"],
+  .input-group-lg input[type="time"],
+  .input-group-lg input[type="datetime-local"],
+  .input-group-lg input[type="month"] {
+    line-height: 49px;
+  }
+}
+/* line 213, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.form-group {
+  margin-bottom: 15px;
+}
+/* line 222, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.radio,
+.checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/* line 229, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.radio label,
+.checkbox label {
+  min-height: 25px;
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+/* line 237, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 4px \9;
+}
+/* line 246, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.radio + .radio,
+.checkbox + .checkbox {
+  margin-top: -5px;
+}
+/* line 252, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.radio-inline,
+.checkbox-inline {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  font-weight: normal;
+  cursor: pointer;
+}
+/* line 262, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-top: 0;
+  margin-left: 10px;
+}
+/* line 274, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"].disabled,
+input[type="checkbox"].disabled,
+fieldset[disabled] input[type="radio"],
+fieldset[disabled] input[type="checkbox"] {
+  cursor: not-allowed;
+}
+/* line 283, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.radio-inline.disabled,
+.checkbox-inline.disabled,
+fieldset[disabled] .radio-inline,
+fieldset[disabled] .checkbox-inline {
+  cursor: not-allowed;
+}
+/* line 293, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.radio.disabled label,
+.checkbox.disabled label,
+fieldset[disabled] .radio label,
+fieldset[disabled] .checkbox label {
+  cursor: not-allowed;
+}
+/* line 305, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.form-control-static {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 0;
+  min-height: 41px;
+}
+/* line 313, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.form-control-static.input-lg,
+.form-control-static.input-sm {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 329, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.input-sm {
+  height: 33px;
+  padding: 5px 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 0;
+}
+/* line 76, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
+select.input-sm {
+  height: 33px;
+  line-height: 33px;
+}
+/* line 81, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
+textarea.input-sm,
+select[multiple].input-sm {
+  height: auto;
+}
+/* line 333, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.form-group-sm .form-control {
+  height: 33px;
+  padding: 5px 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 0;
+}
+/* line 340, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.form-group-sm select.form-control {
+  height: 33px;
+  line-height: 33px;
+}
+/* line 344, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.form-group-sm textarea.form-control,
+.form-group-sm select[multiple].form-control {
+  height: auto;
+}
+/* line 348, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.form-group-sm .form-control-static {
+  height: 33px;
+  min-height: 39px;
+  padding: 6px 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+/* line 357, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.input-lg {
+  height: 49px;
+  padding: 10px 16px;
+  font-size: 20px;
+  line-height: 1.3333333;
+  border-radius: 0;
+}
+/* line 76, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
+select.input-lg {
+  height: 49px;
+  line-height: 49px;
+}
+/* line 81, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
+textarea.input-lg,
+select[multiple].input-lg {
+  height: auto;
+}
+/* line 361, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.form-group-lg .form-control {
+  height: 49px;
+  padding: 10px 16px;
+  font-size: 20px;
+  line-height: 1.3333333;
+  border-radius: 0;
+}
+/* line 368, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.form-group-lg select.form-control {
+  height: 49px;
+  line-height: 49px;
+}
+/* line 372, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.form-group-lg textarea.form-control,
+.form-group-lg select[multiple].form-control {
+  height: auto;
+}
+/* line 376, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.form-group-lg .form-control-static {
+  height: 49px;
+  min-height: 45px;
+  padding: 11px 16px;
+  font-size: 20px;
+  line-height: 1.3333333;
+}
+/* line 390, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.has-feedback {
+  position: relative;
+}
+/* line 395, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.has-feedback .form-control {
+  padding-right: 48.75px;
+}
+/* line 400, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.form-control-feedback {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 39px;
+  height: 39px;
+  line-height: 39px;
+  text-align: center;
+  pointer-events: none;
+}
+/* line 412, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.input-lg + .form-control-feedback,
+.input-group-lg + .form-control-feedback,
+.form-group-lg .form-control + .form-control-feedback {
+  width: 49px;
+  height: 49px;
+  line-height: 49px;
+}
+/* line 419, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.input-sm + .form-control-feedback,
+.input-group-sm + .form-control-feedback,
+.form-group-sm .form-control + .form-control-feedback {
+  width: 33px;
+  height: 33px;
+  line-height: 33px;
+}
+/* line 8, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
+.has-success .help-block,
+.has-success .control-label,
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline,
+.has-success.radio label,
+.has-success.checkbox label,
+.has-success.radio-inline label,
+.has-success.checkbox-inline label {
+  color: #3c763d;
+}
+/* line 21, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
+.has-success .form-control {
+  border-color: #3c763d;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+/* line 24, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
+.has-success .form-control:focus {
+  border-color: #2b542c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+}
+/* line 31, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
+.has-success .input-group-addon {
+  color: #3c763d;
+  border-color: #3c763d;
+  background-color: #dff0d8;
+}
+/* line 37, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
+.has-success .form-control-feedback {
+  color: #3c763d;
+}
+/* line 8, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
+.has-warning .help-block,
+.has-warning .control-label,
+.has-warning .radio,
+.has-warning .checkbox,
+.has-warning .radio-inline,
+.has-warning .checkbox-inline,
+.has-warning.radio label,
+.has-warning.checkbox label,
+.has-warning.radio-inline label,
+.has-warning.checkbox-inline label {
+  color: #8a6d3b;
+}
+/* line 21, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
+.has-warning .form-control {
+  border-color: #8a6d3b;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+/* line 24, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
+.has-warning .form-control:focus {
+  border-color: #66512c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+}
+/* line 31, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
+.has-warning .input-group-addon {
+  color: #8a6d3b;
+  border-color: #8a6d3b;
+  background-color: #fcf8e3;
+}
+/* line 37, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
+.has-warning .form-control-feedback {
+  color: #8a6d3b;
+}
+/* line 8, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline,
+.has-error.radio label,
+.has-error.checkbox label,
+.has-error.radio-inline label,
+.has-error.checkbox-inline label {
+  color: #a94442;
+}
+/* line 21, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
+.has-error .form-control {
+  border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+/* line 24, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
+.has-error .form-control:focus {
+  border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+/* line 31, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
+.has-error .input-group-addon {
+  color: #a94442;
+  border-color: #a94442;
+  background-color: #f2dede;
+}
+/* line 37, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/forms.less */
+.has-error .form-control-feedback {
+  color: #a94442;
+}
+/* line 441, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.has-feedback label ~ .form-control-feedback {
+  top: 30px;
+}
+/* line 444, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.has-feedback label.sr-only ~ .form-control-feedback {
+  top: 0;
+}
+/* line 455, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.help-block {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #959595;
+}
+@media (min-width: 768px) {
+  /* line 479, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+  .form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  /* line 486, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+  .form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+  /* line 493, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+  .form-inline .form-control-static {
+    display: inline-block;
+  }
+  /* line 497, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+  .form-inline .input-group {
+    display: inline-table;
+    vertical-align: middle;
+  }
+  /* line 501, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+  .form-inline .input-group .input-group-addon,
+  .form-inline .input-group .input-group-btn,
+  .form-inline .input-group .form-control {
+    width: auto;
+  }
+  /* line 509, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+  .form-inline .input-group > .form-control {
+    width: 100%;
+  }
+  /* line 513, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+  .form-inline .control-label {
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  /* line 520, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+  .form-inline .radio,
+  .form-inline .checkbox {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  /* line 527, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+  .form-inline .radio label,
+  .form-inline .checkbox label {
+    padding-left: 0;
+  }
+  /* line 531, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+  .form-inline .radio input[type="radio"],
+  .form-inline .checkbox input[type="checkbox"] {
+    position: relative;
+    margin-left: 0;
+  }
+  /* line 538, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+  .form-inline .has-feedback .form-control-feedback {
+    top: 0;
+  }
+}
+/* line 555, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.form-horizontal .radio,
+.form-horizontal .checkbox,
+.form-horizontal .radio-inline,
+.form-horizontal .checkbox-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px;
+}
+/* line 565, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.form-horizontal .radio,
+.form-horizontal .checkbox {
+  min-height: 32px;
+}
+/* line 571, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.form-horizontal .form-group {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media (min-width: 768px) {
+  /* line 578, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+  .form-horizontal .control-label {
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 7px;
+  }
+}
+/* line 589, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+.form-horizontal .has-feedback .form-control-feedback {
+  right: 15px;
+}
+@media (min-width: 768px) {
+  /* line 599, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+  .form-horizontal .form-group-lg .control-label {
+    padding-top: 11px;
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 607, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
+  .form-horizontal .form-group-sm .control-label {
+    padding-top: 6px;
+    font-size: 14px;
+  }
+}
+/* line 9, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  border-radius: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 26, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+/* line 32, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn:hover,
+.btn:focus,
+.btn.focus {
+  color: #333333;
+  text-decoration: none;
+}
+/* line 39, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn:active,
+.btn.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+/* line 46, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 55, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+a.btn.disabled,
+fieldset[disabled] a.btn {
+  pointer-events: none;
+}
+/* line 66, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn-default {
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+/* line 11, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-default:focus,
+.btn-default.focus {
+  color: #333333;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c;
+}
+/* line 17, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-default:hover {
+  color: #333333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+/* line 22, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  color: #333333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+/* line 29, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-default:active:hover,
+.btn-default.active:hover,
+.open > .dropdown-toggle.btn-default:hover,
+.btn-default:active:focus,
+.btn-default.active:focus,
+.open > .dropdown-toggle.btn-default:focus,
+.btn-default:active.focus,
+.btn-default.active.focus,
+.open > .dropdown-toggle.btn-default.focus {
+  color: #333333;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+}
+/* line 37, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  background-image: none;
+}
+/* line 45, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled.focus,
+.btn-default[disabled].focus,
+fieldset[disabled] .btn-default.focus {
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+/* line 53, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-default .badge {
+  color: #ffffff;
+  background-color: #333333;
+}
+/* line 69, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn-primary {
+  color: #ffffff;
+  background-color: #b5152b;
+  border-color: #9e1226;
+}
+/* line 11, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-primary:focus,
+.btn-primary.focus {
+  color: #ffffff;
+  background-color: #871020;
+  border-color: #2c050a;
+}
+/* line 17, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-primary:hover {
+  color: #ffffff;
+  background-color: #871020;
+  border-color: #670c19;
+}
+/* line 22, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #ffffff;
+  background-color: #871020;
+  border-color: #670c19;
+}
+/* line 29, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+  color: #ffffff;
+  background-color: #670c19;
+  border-color: #2c050a;
+}
+/* line 37, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+/* line 45, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus {
+  background-color: #b5152b;
+  border-color: #9e1226;
+}
+/* line 53, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-primary .badge {
+  color: #b5152b;
+  background-color: #ffffff;
+}
+/* line 73, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn-success {
+  color: #ffffff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+/* line 11, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-success:focus,
+.btn-success.focus {
+  color: #ffffff;
+  background-color: #449d44;
+  border-color: #255625;
+}
+/* line 17, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-success:hover {
+  color: #ffffff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+/* line 22, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-success:active,
+.btn-success.active,
+.open > .dropdown-toggle.btn-success {
+  color: #ffffff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+/* line 29, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-success:active:hover,
+.btn-success.active:hover,
+.open > .dropdown-toggle.btn-success:hover,
+.btn-success:active:focus,
+.btn-success.active:focus,
+.open > .dropdown-toggle.btn-success:focus,
+.btn-success:active.focus,
+.btn-success.active.focus,
+.open > .dropdown-toggle.btn-success.focus {
+  color: #ffffff;
+  background-color: #398439;
+  border-color: #255625;
+}
+/* line 37, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-success:active,
+.btn-success.active,
+.open > .dropdown-toggle.btn-success {
+  background-image: none;
+}
+/* line 45, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-success.disabled:hover,
+.btn-success[disabled]:hover,
+fieldset[disabled] .btn-success:hover,
+.btn-success.disabled:focus,
+.btn-success[disabled]:focus,
+fieldset[disabled] .btn-success:focus,
+.btn-success.disabled.focus,
+.btn-success[disabled].focus,
+fieldset[disabled] .btn-success.focus {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+/* line 53, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-success .badge {
+  color: #5cb85c;
+  background-color: #ffffff;
+}
+/* line 77, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn-info {
+  color: #ffffff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+/* line 11, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-info:focus,
+.btn-info.focus {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: #1b6d85;
+}
+/* line 17, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-info:hover {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+/* line 22, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-info:active,
+.btn-info.active,
+.open > .dropdown-toggle.btn-info {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+/* line 29, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-info:active:hover,
+.btn-info.active:hover,
+.open > .dropdown-toggle.btn-info:hover,
+.btn-info:active:focus,
+.btn-info.active:focus,
+.open > .dropdown-toggle.btn-info:focus,
+.btn-info:active.focus,
+.btn-info.active.focus,
+.open > .dropdown-toggle.btn-info.focus {
+  color: #ffffff;
+  background-color: #269abc;
+  border-color: #1b6d85;
+}
+/* line 37, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-info:active,
+.btn-info.active,
+.open > .dropdown-toggle.btn-info {
+  background-image: none;
+}
+/* line 45, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info:hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+fieldset[disabled] .btn-info:focus,
+.btn-info.disabled.focus,
+.btn-info[disabled].focus,
+fieldset[disabled] .btn-info.focus {
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+/* line 53, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-info .badge {
+  color: #5bc0de;
+  background-color: #ffffff;
+}
+/* line 81, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn-warning {
+  color: #ffffff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+/* line 11, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-warning:focus,
+.btn-warning.focus {
+  color: #ffffff;
+  background-color: #ec971f;
+  border-color: #985f0d;
+}
+/* line 17, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-warning:hover {
+  color: #ffffff;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+/* line 22, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-warning:active,
+.btn-warning.active,
+.open > .dropdown-toggle.btn-warning {
+  color: #ffffff;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
+/* line 29, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-warning:active:hover,
+.btn-warning.active:hover,
+.open > .dropdown-toggle.btn-warning:hover,
+.btn-warning:active:focus,
+.btn-warning.active:focus,
+.open > .dropdown-toggle.btn-warning:focus,
+.btn-warning:active.focus,
+.btn-warning.active.focus,
+.open > .dropdown-toggle.btn-warning.focus {
+  color: #ffffff;
+  background-color: #d58512;
+  border-color: #985f0d;
+}
+/* line 37, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-warning:active,
+.btn-warning.active,
+.open > .dropdown-toggle.btn-warning {
+  background-image: none;
+}
+/* line 45, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-warning.disabled:hover,
+.btn-warning[disabled]:hover,
+fieldset[disabled] .btn-warning:hover,
+.btn-warning.disabled:focus,
+.btn-warning[disabled]:focus,
+fieldset[disabled] .btn-warning:focus,
+.btn-warning.disabled.focus,
+.btn-warning[disabled].focus,
+fieldset[disabled] .btn-warning.focus {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+/* line 53, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-warning .badge {
+  color: #f0ad4e;
+  background-color: #ffffff;
+}
+/* line 85, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn-danger {
+  color: #ffffff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+/* line 11, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-danger:focus,
+.btn-danger.focus {
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: #761c19;
+}
+/* line 17, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-danger:hover {
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+/* line 22, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-danger:active,
+.btn-danger.active,
+.open > .dropdown-toggle.btn-danger {
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+/* line 29, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-danger:active:hover,
+.btn-danger.active:hover,
+.open > .dropdown-toggle.btn-danger:hover,
+.btn-danger:active:focus,
+.btn-danger.active:focus,
+.open > .dropdown-toggle.btn-danger:focus,
+.btn-danger:active.focus,
+.btn-danger.active.focus,
+.open > .dropdown-toggle.btn-danger.focus {
+  color: #ffffff;
+  background-color: #ac2925;
+  border-color: #761c19;
+}
+/* line 37, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-danger:active,
+.btn-danger.active,
+.open > .dropdown-toggle.btn-danger {
+  background-image: none;
+}
+/* line 45, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-danger.disabled:hover,
+.btn-danger[disabled]:hover,
+fieldset[disabled] .btn-danger:hover,
+.btn-danger.disabled:focus,
+.btn-danger[disabled]:focus,
+fieldset[disabled] .btn-danger:focus,
+.btn-danger.disabled.focus,
+.btn-danger[disabled].focus,
+fieldset[disabled] .btn-danger.focus {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+/* line 53, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
+.btn-danger .badge {
+  color: #d9534f;
+  background-color: #ffffff;
+}
+/* line 94, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn-link {
+  color: #276e8c;
+  font-weight: normal;
+  border-radius: 0;
+}
+/* line 99, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn-link,
+.btn-link:active,
+.btn-link.active,
+.btn-link[disabled],
+fieldset[disabled] .btn-link {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 107, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn-link,
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:active {
+  border-color: transparent;
+}
+/* line 113, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn-link:hover,
+.btn-link:focus {
+  color: #074762;
+  text-decoration: none;
+  background-color: transparent;
+}
+/* line 121, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn-link[disabled]:hover,
+fieldset[disabled] .btn-link:hover,
+.btn-link[disabled]:focus,
+fieldset[disabled] .btn-link:focus {
+  color: #777777;
+  text-decoration: none;
+}
+/* line 133, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn-lg,
+.btn-group-lg > .btn {
+  padding: 10px 16px;
+  font-size: 20px;
+  line-height: 1.3333333;
+  border-radius: 0;
+}
+/* line 137, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn-sm,
+.btn-group-sm > .btn {
+  padding: 5px 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 0;
+}
+/* line 141, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn-xs,
+.btn-group-xs > .btn {
+  padding: 1px 5px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 0;
+}
+/* line 149, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn-block {
+  display: block;
+  width: 100%;
+}
+/* line 155, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+/* line 163, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+  width: 100%;
+}
+/* line 10, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/component-animations.less */
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+/* line 13, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/component-animations.less */
+.fade.in {
+  opacity: 1;
+}
+/* line 18, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/component-animations.less */
+.collapse {
+  display: none;
+}
+/* line 21, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/component-animations.less */
+.collapse.in {
+  display: block;
+}
+/* line 22, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/component-animations.less */
+tr.collapse.in {
+  display: table-row;
+}
+/* line 23, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/component-animations.less */
+tbody.collapse.in {
+  display: table-row-group;
+}
+/* line 26, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/component-animations.less */
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-property: height, visibility;
+  transition-property: height, visibility;
+  -webkit-transition-duration: 0.35s;
+  transition-duration: 0.35s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
 /* line 7, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/dropdowns.less */
 .caret {
   display: inline-block;
@@ -4778,10 +4778,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-size: 16px;
   font-weight: normal;
   line-height: 1;
-  color: #555555;
+  color: currentColor;
   text-align: center;
   background-color: #eeeeee;
-  border: 1px solid #cccccc;
+  border: 1px solid #555555;
   border-radius: 0;
 }
 /* line 89, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/input-groups.less */
@@ -8680,7 +8680,8 @@ strong {
 [onclick] {
   cursor: pointer;
 }
-/* line 49, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-common.less */
+/* ---------------------------------------------------------------- */
+/* line 51, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-common.less */
 .well {
   min-height: 20px;
   padding: 13px;
@@ -8692,10 +8693,136 @@ strong {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 58, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-common.less */
+/* line 60, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-common.less */
 .well blockquote {
   border-color: #ddd;
   border-color: rgba(0, 0, 0, 0.15);
+}
+/* ---------------------------------------------------------------- */
+/* line 1, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+.form-control {
+  border-width: 0 0 1px 0;
+  border-bottom-style: dashed;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 6, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 10, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+.form-control[required] {
+  border-style: solid;
+}
+/* line 14, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+.form-control[type="checkbox"],
+.form-control[type="radio"] {
+  width: auto;
+  height: auto;
+}
+/* line 22, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+.form-control.ng-dirty.ng-invalid {
+  color: #a94442;
+  border-color: #a94442;
+}
+/* line 30, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+textarea.form-control {
+  border-width: 0 0 0 1px;
+  border-style: dashed;
+}
+/* line 34, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+textarea.form-control[required] {
+  border-style: solid;
+}
+/* line 38, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+textarea.form-control:focus {
+  border-color: #276e8c;
+}
+/* line 47, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+:not(.form-inline) .form-control[type=color],
+:not(.form-inline) .form-control[type=date],
+:not(.form-inline) .form-control[type=datetime],
+:not(.form-inline) .form-control[type=email],
+:not(.form-inline) .form-control[type=image],
+:not(.form-inline) .form-control[type=month],
+:not(.form-inline) .form-control[type=number],
+:not(.form-inline) .form-control[type=password],
+:not(.form-inline) .form-control[type=range],
+:not(.form-inline) .form-control[type=min],
+:not(.form-inline) .form-control[type=max],
+:not(.form-inline) .form-control[type=value],
+:not(.form-inline) .form-control[type=step],
+:not(.form-inline) .form-control[type=search],
+:not(.form-inline) .form-control[type=tel],
+:not(.form-inline) .form-control[type=text],
+:not(.form-inline) .form-control[type=time],
+:not(.form-inline) .form-control[type=url],
+:not(.form-inline) .form-control[type=week] {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 75, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+:not(.form-inline) .form-control.padded {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+/* line 81, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+:not(.form-inline) select.form-control {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 85, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+:not(.form-inline) select.form-control.padded {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+/* line 92, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+.input-group .form-control {
+  border-width: 1px;
+  border-style: solid;
+}
+/* line 96, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+.input-group .form-control:not([type=checkbox]),
+.input-group .form-control:not([type=radio]) {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+/* line 103, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+.help-block {
+  margin-top: 6px;
+  font-size: 90%;
+}
+/* line 108, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+.control-group {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+/* line 112, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+.control-group .help {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #959595;
+  margin-top: 6px;
+  font-size: 90%;
+}
+/* line 117, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+.disabled-form {
+  position: relative;
+}
+/* line 120, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+.disabled-form:before {
+  display: block;
+  content: ' ';
+  background-color: rgba(255, 255, 255, 0.33);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: not-allowed;
+  z-index: 1000;
 }
 @font-face {
   font-family: 'open_sanslight';
@@ -11955,17 +12082,22 @@ body {
   padding: 6px 12px;
   font-size: 16px;
   line-height: 1.6;
-  color: #555555;
-  background-color: #ffffff;
+  color: currentColor;
+  background-color: transparent;
   background-image: none;
-  border: 1px solid #cccccc;
+  border: 1px solid #555555;
   border-radius: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  padding: 6px;
+  border-width: 0 0 1px 0;
+  border-bottom-style: dashed;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
   height: auto;
   position: relative;
 }
@@ -11998,7 +12130,7 @@ body {
 [cam-widget-search] .search-container[disabled],
 [cam-widget-search] .search-container[readonly],
 fieldset[disabled] [cam-widget-search] .search-container {
-  background-color: #eeeeee;
+  background-color: transparent;
   opacity: 1;
 }
 /* line 153, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
@@ -12010,7 +12142,27 @@ fieldset[disabled] [cam-widget-search] .search-container {
 textarea[cam-widget-search] .search-container {
   height: auto;
 }
-/* line 9, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
+/* line 6, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+[cam-widget-search] .search-container:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 10, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+[cam-widget-search] .search-container[required] {
+  border-style: solid;
+}
+/* line 14, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+[cam-widget-search] .search-container[type="checkbox"],
+[cam-widget-search] .search-container[type="radio"] {
+  width: auto;
+  height: auto;
+}
+/* line 22, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+[cam-widget-search] .search-container.ng-dirty.ng-invalid {
+  color: #a94442;
+  border-color: #a94442;
+}
+/* line 10, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
 [cam-widget-search] .search-container > input {
   padding: 0;
   height: auto;
@@ -12018,7 +12170,7 @@ textarea[cam-widget-search] .search-container {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 15, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
+/* line 16, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
 [cam-widget-search] .search-container > input:focus {
   border: none;
   -webkit-box-shadow: none;
