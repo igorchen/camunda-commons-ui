@@ -12237,6 +12237,11 @@ textarea[cam-widget-search] .search-container {
 .cam-widget-variable-dialog .tab-content {
   padding-top: 15px;
 }
+/* line 151, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/variable/cam-widget-variable.less */
+[disabled].cam-string-variable {
+  cursor: default;
+  background-color: white;
+}
 /* line 2, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
 [cam-widget-variables-table] table {
   width: 100%;
