@@ -3371,14 +3371,6 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
           });
         };
 
-        $scope.readVariableValue = function (v) {
-          var info = $scope.variables[v];
-          $scope.readLongStringVar(info, v).then(function (result) {
-            _getVar(v).value = result.value;
-          });
-        };
-
-
         $scope.addVariable = function () {
           $scope.variables.push(angular.copy(emptyVariable));
         };
