@@ -54123,8 +54123,7 @@ module.exports = Modeler;
 
 var assign = require('lodash/object/assign'),
     omit = require('lodash/object/omit'),
-    isString = require('lodash/lang/isString'),
-    isNumber = require('lodash/lang/isNumber');
+    isString = require('lodash/lang/isString');
 
 var domify = require('min-dom/lib/domify'),
     domQuery = require('min-dom/lib/query'),
@@ -54173,18 +54172,8 @@ function checkValidationError(err) {
 }
 
 var DEFAULT_OPTIONS = {
-  width: '100%',
-  position: 'relative',
   container: 'body'
 };
-
-
-/**
- * Ensure the passed argument is a proper unit (defaulting to px)
- */
-function ensureUnit(val) {
-  return val + (isNumber(val) ? 'px' : '');
-}
 
 /**
  * A viewer for DMN tables.
@@ -54249,12 +54238,6 @@ function Viewer(options) {
 
   var container = this.container = domify('<div class="dmn-table"></div>');
   parent.appendChild(container);
-
-  assign(container.style, {
-    width: ensureUnit(options.width),
-    height: ensureUnit(options.height),
-    position: options.position
-  });
 }
 
 Viewer.prototype.importXML = function(xml, done) {
@@ -54346,6 +54329,19 @@ Viewer.prototype.importDefinitions = function(definitions, done) {
 
 Viewer.prototype._init = function(table) {
   initListeners(table, this.__listeners || []);
+
+  var container = table.get('sheet').getContainer();
+
+  /**
+   * The code in the <project-logo></project-logo> area
+   * must not be changed, see http://bpmn.io/license for more information
+   *
+   * <project-logo>
+   */
+  container.appendChild(domify('<a href="http://bpmn.io" class="dmn-js-logo"></a>'));
+  /**
+   * </project-logo>
+   */
 };
 
 Viewer.prototype._createTable = function(options) {
@@ -54361,7 +54357,11 @@ Viewer.prototype._createTable = function(options) {
   options = omit(options, 'additionalModules');
 
   options = assign(options, {
-    sheet: { container: this.container },
+    sheet: {
+      width: options.width,
+      height: options.height,
+      container: this.container
+    },
     modules: modules
   });
 
@@ -54436,7 +54436,7 @@ Viewer.prototype._modules = [
 
 module.exports = Viewer;
 
-},{"./core":244,"./features/annotations":249,"./features/hide-tech-control":261,"./features/hit-policy":264,"./features/io-label":268,"./features/mappings-row":271,"./features/table-name":282,"./features/type-row":285,"./import/Importer":288,"dmn-moddle":307,"dmn-moddle/lib/id-support":309,"ids":326,"lodash/lang/isNumber":419,"lodash/lang/isString":421,"lodash/object/assign":423,"lodash/object/omit":426,"min-dom/lib/domify":434,"min-dom/lib/query":437,"min-dom/lib/remove":438,"table-js":448,"table-js/lib/features/combo-box":462,"table-js/lib/features/complex-cell":464,"table-js/lib/features/controls":466,"table-js/lib/features/interaction-events":474,"table-js/lib/features/line-numbers":478}],244:[function(require,module,exports){
+},{"./core":244,"./features/annotations":249,"./features/hide-tech-control":261,"./features/hit-policy":264,"./features/io-label":268,"./features/mappings-row":271,"./features/table-name":282,"./features/type-row":285,"./import/Importer":288,"dmn-moddle":307,"dmn-moddle/lib/id-support":309,"ids":326,"lodash/lang/isString":421,"lodash/object/assign":423,"lodash/object/omit":426,"min-dom/lib/domify":434,"min-dom/lib/query":437,"min-dom/lib/remove":438,"table-js":448,"table-js/lib/features/combo-box":462,"table-js/lib/features/complex-cell":464,"table-js/lib/features/controls":466,"table-js/lib/features/interaction-events":474,"table-js/lib/features/line-numbers":478}],244:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../import'),
@@ -54525,16 +54525,8 @@ function Annotations(eventBus, sheet, elementRegistry, graphicsFactory, hideTech
         return element._type === 'cell' && element.column === self.column && element.row.isLabelRow;
       })[0];
     labelCell.rowspan = hideTechControl.isHidden() ? 2 : 4;
-    /**
-     * The code in the <project-logo></project-logo> area
-     * must not be changed, see http://bpmn.io/license for more information
-     *
-     * <project-logo>
-     */
 
-    labelCell.content = domify('<a href="http://bpmn.io" class="dmn-js-logo"></a>Annotation');
-
-    /* </project-logo> */
+    labelCell.content = domify('Annotation');
 
     graphicsFactory.update('column', self.column, elementRegistry.getGraphics(self.column.id));
 
@@ -56025,7 +56017,7 @@ function MappingsRow(eventBus, sheet, elementRegistry, graphicsFactory, complexC
       // cell content is the input expression of the clause
       evt.element.content = evt.element.column.businessObject.inputExpression;
 
-      var template = domify("<div>\n  <div class=\"links\">\n    <div class=\"toggle-type\">\n      <label>Use:</label>\n      <a class=\"expression\">Expression</a>\n      /\n      <a class=\"script\">Script</a>\n    </div>\n    <a class=\"dmn-icon-clear\"></a>\n  </div>\n  <div class=\"expression region\">\n    <label>Expression:</label>\n    <input placeholder=\"propertyName\">\n  </div>\n  <div class=\"script region\">\n    <textarea placeholder=\"return obj.propertyName;\"></textarea>\n  </div>\n</div>\n");
+      var template = domify("<div>\r\n  <div class=\"links\">\r\n    <div class=\"toggle-type\">\r\n      <label>Use:</label>\r\n      <a class=\"expression\">Expression</a>\r\n      /\r\n      <a class=\"script\">Script</a>\r\n    </div>\r\n    <a class=\"dmn-icon-clear\"></a>\r\n  </div>\r\n  <div class=\"expression region\">\r\n    <label>Expression:</label>\r\n    <input placeholder=\"propertyName\">\r\n  </div>\r\n  <div class=\"script region\">\r\n    <textarea placeholder=\"return obj.propertyName;\"></textarea>\r\n  </div>\r\n</div>\r\n");
 
       // initializing the comboBox
       var comboBox = new ComboBox({
@@ -57251,7 +57243,7 @@ function TypeRow(eventBus, sheet, elementRegistry, graphicsFactory, complexCell,
 
       evt.element.content = evt.element.column.businessObject;
 
-      var template = domify("<div>\n</div>\n");
+      var template = domify("<div>\r\n</div>\r\n");
 
       // initializing the comboBox
       var comboBox = new ComboBox({
@@ -57694,8 +57686,16 @@ function importDmnTable(sheet, definitions, done) {
 module.exports.importDmnTable = importDmnTable;
 
 },{"./DmnTreeWalker":287}],289:[function(require,module,exports){
-arguments[4][49][0].apply(exports,arguments)
-},{"dup":49}],290:[function(require,module,exports){
+'use strict';
+
+module.exports.elementToString = function(e) {
+  if (!e) {
+    return '<null>';
+  }
+
+  return '<' + e.$type + (e.id ? ' id="' + e.id : '') + '" />';
+};
+},{}],290:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../features/factory')
@@ -62014,13 +62014,6 @@ function createContainer(options) {
   var parent = document.createElement('div');
   parent.setAttribute('class', 'tjs-container');
 
-  assign(parent.style, {
-    position: 'relative',
-    overflow: 'hidden',
-    width: ensurePx(options.width),
-    height: ensurePx(options.height)
-  });
-
   container.appendChild(parent);
 
   return parent;
@@ -62168,7 +62161,8 @@ Sheet.prototype._init = function(config) {
   this._rootNode = document.createElement('table');
 
   assign(this._rootNode.style, {
-    width: '100%'
+    width: ensurePx(config.width),
+    height: ensurePx(config.height)
   });
 
   container.appendChild(this._rootNode);
@@ -63429,8 +63423,8 @@ function Controls(eventBus) {
     domClasses(domNode).add('tjs-controls');
 
     self.controlsContainer = domNode;
-    evt.sheet.parentNode.insertBefore(domNode, evt.sheet.parentNode.firstChild);
-
+    evt.sheet.parentNode.appendChild(domNode);
+    
     eventBus.fire('controls.init', {
       node: domNode,
       controls: self
@@ -65791,7 +65785,7 @@ function TableName(eventBus, sheet, tableName) {
 
   this.tableName = tableName;
 
-  this.node = domify('<header><h3 class="tjs-table-name">'+this.tableName+'</h3></header');
+  this.node = domify('<header><h3 class="tjs-table-name">'+this.tableName+'</h3></header>');
 
   var self = this;
   eventBus.on('sheet.init', function(event) {
