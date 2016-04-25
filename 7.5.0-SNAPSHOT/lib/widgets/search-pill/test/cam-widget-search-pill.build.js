@@ -2070,7 +2070,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular');
 var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     $ = require('jquery'),
 
-    template = "<!-- CE # camunda-commons-ui/lib/widgets/search-pill/search-pill.html -->\n<span class=\"search-label\"\n      ng-class=\"{'invalid': !valid}\">\n  <a href\n     ng-click=\"onDelete()\"\n     tooltip-placement=\"top\"\n     tooltip=\"{{ deleteText }}\"\n     class=\"remove-search glyphicon glyphicon-remove\">\n  </a>\n\n  <span class=\"glyphicon glyphicon-exclamation-sign valid-hide\"\n        ng-if=\"invalidText\"\n        tooltip-placement=\"top\"\n        tooltip=\"{{ invalidText }}\"></span>\n  <span class=\"glyphicon glyphicon-exclamation-sign valid-hide\"\n        ng-if=\"!invalidText\"></span>\n\n  <span cam-widget-inline-field\n        class=\"set-value\"\n        tabindex=\"0\"\n        ng-keydown=\"onKeydown($event, 'type')\"\n        type=\"option\"\n        options=\"type.values\"\n        change=\"changeSearch('type', varValue, $event)\"\n        on-start-editing=\"clearEditTrigger('type')\"\n        value=\"type.value\">\n    <span ng-if=\"type.tooltip\"\n          tooltip-placement=\"top\"\n          tooltip=\"{{type.tooltip}}\">\n      {{ type.value.value | camQueryComponent }}\n    </span>\n    <span ng-if=\"!type.tooltip\">\n      {{ type.value.value | camQueryComponent }}\n    </span>\n  </span>\n  <span ng-if=\"extended\">\n    :\n    <span ng-if=\"potentialNames.length <= 0\">\n      <span ng-if=\"!!name.value.value\">\n        <span cam-widget-inline-field\n              class=\"set-value\"\n              type=\"text\"\n              tabindex=\"0\"\n              ng-keydown=\"onKeydown($event,'name')\"\n              change=\"changeSearch('name', varValue, $event)\"\n              on-start-editing=\"clearEditTrigger('name')\"\n              value=\"name.value.value\">\n          <span ng-if=\"name.tooltip\"\n                tooltip-placement=\"top\"\n                tooltip=\"{{name.tooltip}}\">\n              {{ name.value.value | camQueryComponent }}\n          </span>\n          <span ng-if=\"!name.tooltip\">\n              {{ name.value.value | camQueryComponent }}\n          </span>\n        </span>\n      </span>\n      <span ng-if=\"!name.value.value\">\n        <span cam-widget-inline-field\n              class=\"set-value\"\n              tabindex=\"0\"\n              ng-keydown=\"onKeydown($event, 'name')\"\n              type=\"text\"\n              change=\"changeSearch('name', varValue, $event)\"\n              on-start-editing=\"clearEditTrigger('name')\"\n              value=\"name.value\">\n          <span ng-if=\"name.tooltip\"\n                tooltip-placement=\"top\"\n                tooltip=\"{{name.tooltip}}\">\n              {{ name.value | camQueryComponent }}\n          </span>\n          <span ng-if=\"!name.tooltip\">\n              {{ name.value | camQueryComponent }}\n          </span>\n        </span>\n      </span>\n    </span>\n    <span ng-if=\"potentialNames.length > 0\">\n      <span cam-widget-inline-field\n            class=\"set-value\"\n            tabindex=\"0\"\n            ng-keydown=\"onKeydown($event, 'name')\"\n            type=\"option\"\n            options=\"potentialNames\"\n            allow-non-options=\"true\"\n            change=\"changeSearch('name', varValue, $event)\"\n            on-start-editing=\"clearEditTrigger('name')\"\n            value=\"name.value\">\n        <span ng-if=\"name.tooltip\"\n              tooltip-placement=\"top\"\n              tooltip=\"{{name.tooltip}}\">\n          <span ng-if=\"name.value.key\">\n            {{ name.value.value | camQueryComponent }}\n          </span>\n          <span ng-if=\"!name.value.key\">\n            {{ name.value | camQueryComponent }}\n          </span>\n        </span>\n        <span ng-if=\"!name.tooltip\">\n          <span ng-if=\"name.value.key\">\n            {{ name.value.value | camQueryComponent }}\n          </span>\n          <span ng-if=\"!name.value.key\">\n            {{ name.value | camQueryComponent }}\n          </span>\n        </span>\n      </span>\n    </span>\n  </span>\n\n  <span cam-widget-inline-field\n        class=\"set-value\"\n        tabindex=\"0\"\n        ng-keydown=\"onKeydown($event, 'operator')\"\n        type=\"option\"\n        options=\"operator.values\"\n        change=\"changeSearch('operator', varValue, $event)\"\n        on-start-editing=\"clearEditTrigger('operator')\"\n        ng-if=\"!basic\"\n        value=\"operator.value\">\n    <span ng-if=\"operator.tooltip\"\n          tooltip-placement=\"top\"\n          tooltip=\"{{operator.tooltip}}\">\n      {{ operator.value.value | camQueryComponent }}\n    </span>\n    <span ng-if=\"!operator.tooltip\">\n      {{ operator.value.value | camQueryComponent }}\n    </span>\n  </span>\n\n  <span cam-widget-inline-field\n        class=\"set-value\"\n        tabindex=\"0\"\n        ng-keydown=\"onKeydown($event, 'value')\"\n        type=\"{{ valueType }}\"\n        change=\"changeSearch('value', varValue, $event)\"\n        on-start-editing=\"clearEditTrigger('value')\"\n        ng-if=\"!basic\"\n        value=\"value.value\"\n        flexible=\"{{ allowDates }}\">\n    <span class=\"visible-whitespace\"\n          ng-if=\"value.tooltip\"\n          tooltip-placement=\"top\"\n          tooltip=\"{{value.tooltip}}\">{{ value.value | camQueryComponent }}</span>\n    <span class=\"visible-whitespace\"\n          ng-if=\"!value.tooltip\">{{ value.value | camQueryComponent }}</span>\n  </span>\n</span>\n<!-- CE / camunda-commons-ui/lib/widgets/search-pill/search-pill.html -->\n";
+    template = "<!-- CE # camunda-commons-ui/lib/widgets/search-pill/search-pill.html -->\n<span class=\"search-label\"\n      ng-class=\"{'invalid': !valid}\">\n  <!--\n  <span class=\"glyphicon glyphicon-exclamation-sign\"\n        ng-if=\"invalidText && !valid\"\n        tooltip-placement=\"top\"\n        tooltip=\"{{ invalidText }}\"></span>\n  <span class=\"glyphicon glyphicon-exclamation-sign\"\n        ng-if=\"!invalidText && !valid\"></span>\n  -->\n  <span cam-widget-inline-field\n        class=\"set-value type-field\"\n        tabindex=\"0\"\n        ng-keydown=\"onKeydown($event, 'type')\"\n        type=\"option\"\n        options=\"type.values\"\n        change=\"changeSearch('type', varValue, $event)\"\n        on-start-editing=\"clearEditTrigger('type')\"\n        value=\"type.value\">\n    <span ng-if=\"type.tooltip\"\n          tooltip-placement=\"top\"\n          tooltip=\"{{type.tooltip}}\">\n      {{ type.value.value | camQueryComponent }}\n    </span>\n    <span ng-if=\"!type.tooltip\">\n      {{ type.value.value | camQueryComponent }}\n    </span>\n  </span>\n\n  <span ng-if=\"extended\">:</span>\n\n  <span ng-if=\"extended && potentialNames.length <= 0 && !!name.value.value\"\n        cam-widget-inline-field\n        class=\"set-value name-field\"\n        type=\"text\"\n        tabindex=\"0\"\n        ng-keydown=\"onKeydown($event,'name')\"\n        change=\"changeSearch('name', varValue, $event)\"\n        on-start-editing=\"clearEditTrigger('name')\"\n        value=\"name.value.value\">\n    <span ng-if=\"name.tooltip\"\n          tooltip-placement=\"top\"\n          tooltip=\"{{name.tooltip}}\">\n        {{ name.value.value | camQueryComponent }}\n    </span>\n    <span ng-if=\"!name.tooltip\">\n        {{ name.value.value | camQueryComponent }}\n    </span>\n  </span>\n\n  <span ng-if=\"extended && potentialNames.length <= 0 && !name.value.value\"\n        cam-widget-inline-field\n        class=\"set-value name-field\"\n        tabindex=\"0\"\n        ng-keydown=\"onKeydown($event, 'name')\"\n        type=\"text\"\n        change=\"changeSearch('name', varValue, $event)\"\n        on-start-editing=\"clearEditTrigger('name')\"\n        value=\"name.value\">\n    <span ng-if=\"name.tooltip\"\n          tooltip-placement=\"top\"\n          tooltip=\"{{name.tooltip}}\">\n        {{ name.value | camQueryComponent }}\n    </span>\n    <span ng-if=\"!name.tooltip\">\n        {{ name.value | camQueryComponent }}\n    </span>\n  </span>\n\n  <span ng-if=\"extended && potentialNames.length > 0\"\n        cam-widget-inline-field\n        class=\"set-value name-field\"\n        tabindex=\"0\"\n        ng-keydown=\"onKeydown($event, 'name')\"\n        type=\"option\"\n        options=\"potentialNames\"\n        allow-non-options=\"true\"\n        change=\"changeSearch('name', varValue, $event)\"\n        on-start-editing=\"clearEditTrigger('name')\"\n        value=\"name.value\">\n    <span ng-if=\"extended && name.tooltip && name.value.key\">\n      {{ name.value.value | camQueryComponent }}\n    </span>\n    <span ng-if=\"extended && name.tooltip && !name.value.key\">\n      {{ name.value | camQueryComponent }}\n    </span>\n    <span ng-if=\"extended && !name.tooltip && name.value.key\">\n      {{ name.value.value | camQueryComponent }}\n    </span>\n    <span ng-if=\"extended && !name.tooltip && !name.value.key\">\n      {{ name.value | camQueryComponent }}\n    </span>\n  </span>\n\n  <span ng-if=\"!basic && operator.values.length > 1\"\n        cam-widget-inline-field\n        class=\"set-value operator-field\"\n        tabindex=\"0\"\n        ng-keydown=\"onKeydown($event, 'operator')\"\n        type=\"option\"\n        options=\"operator.values\"\n        change=\"changeSearch('operator', varValue, $event)\"\n        on-start-editing=\"clearEditTrigger('operator')\"\n        value=\"operator.value\">\n    <span ng-if=\"operator.tooltip\"\n          tooltip-placement=\"top\"\n          tooltip=\"{{operator.tooltip}}\">\n      {{ operator.value.value | camQueryComponent }}\n    </span>\n    <span ng-if=\"!operator.tooltip\">\n      {{ operator.value.value | camQueryComponent }}\n    </span>\n  </span>\n\n  <span ng-if=\"operator.values.length < 2 && operator.tooltip\"\n        tooltip-placement=\"top\"\n        tooltip=\"{{operator.tooltip}}\"\n        class=\"operator-field\">\n    {{ operator.value.value | camQueryComponent }}\n  </span>\n  <span ng-if=\"operator.values.length < 2 && !operator.tooltip\"\n        class=\"operator-field\">\n    {{ operator.value.value | camQueryComponent }}\n  </span>\n\n  <span cam-widget-inline-field\n        class=\"set-value value-field\"\n        tabindex=\"0\"\n        ng-keydown=\"onKeydown($event, 'value')\"\n        type=\"{{ valueType }}\"\n        change=\"changeSearch('value', varValue, $event)\"\n        on-start-editing=\"clearEditTrigger('value')\"\n        ng-if=\"!basic\"\n        value=\"value.value\"\n        flexible=\"{{ allowDates }}\">\n    <span class=\"visible-whitespace\"\n          ng-if=\"value.tooltip\"\n          tooltip-placement=\"top\"\n          tooltip=\"{{value.tooltip}}\">{{ value.value | camQueryComponent }}</span>\n    <span class=\"visible-whitespace\"\n          ng-if=\"!value.tooltip\">{{ value.value | camQueryComponent }}</span>\n  </span>\n\n  <a href\n     ng-click=\"onDelete()\"\n     tooltip-placement=\"top\"\n     tooltip=\"{{ deleteText }}\"\n     class=\"remove-search glyphicon glyphicon-remove\">\n  </a>\n</span>\n<!-- CE / camunda-commons-ui/lib/widgets/search-pill/search-pill.html -->\n";
 
   module.exports = ['$timeout',
   function($timeout) {
@@ -2147,6 +2147,9 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
           return newValue && newValue.inEdit && focusField('type');
         }, true);
         $scope.$watch('operator', function(newValue) {
+          if (newValue && !newValue.value && newValue.values.length === 1) {
+            newValue.value = newValue.values[0];
+          }
           return newValue && newValue.inEdit && focusField('operator');
         }, true);
 
@@ -2183,6 +2186,27 @@ ngModule.controller('testController', ['$scope', function($scope) {
         $scope.search1.type.value !== null &&
         $scope.search1.operator.value !== null &&
         $scope.search1.value.value !== '';
+    }
+  };
+
+  $scope.singleOperator = {
+    type: {
+      values: [{key: 'foo', value: 'Foo'}, {key: 'bar', value: 'Bar'}],
+      value: null
+    },
+    operator: {
+      values: [{key:'eq', value: '='}],
+      value: null
+    },
+    value: {
+      value: ''
+    },
+    valid: false,
+    update: function() {
+      $scope.singleOperator.valid =
+        $scope.singleOperator.type.value !== null &&
+        $scope.singleOperator.operator.value !== null &&
+        $scope.singleOperator.value.value !== '';
     }
   };
 
@@ -2227,7 +2251,7 @@ angular.element(document).ready(function() {
 var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     $ = require('jquery'),
 
-    template = "<form class=\"search-field\"\n      ng-submit=\"createSearch()\"\n      ng-class=\"{'has-search': searches.length}\">\n  <div class=\"form-container search-container\">\n    <span cam-widget-search-pill\n          ng-repeat=\"search in searches\"\n          extended=\"search.extended\"\n          basic=\"search.basic\"\n          allow-dates=\"search.allowDates\"\n          enforce-dates=\"search.enforceDates\"\n          valid=\"search.valid\"\n          name=\"search.name\"\n          potential-names=\"search.potentialNames\"\n          type=\"search.type\"\n          operator=\"search.operator\"\n          value=\"search.value\"\n          invalid-text=\"{{ translations.invalid }}\"\n          delete-text=\"{{ translations.deleteSearch }}\"\n          on-change=\"handleChange($index, field, before, value, $event)\"\n          on-delete=\"deleteSearch($index)\"></span>\n\n    <input class=\"form-control main-field\"\n           type=\"text\"\n           ng-model=\"inputQuery\"\n           ng-keydown=\"onKeydown($event)\"\n           typeahead=\"type as type.value for type in dropdownTypes | filter:$viewValue:instantTypeahead\"\n           typeahead-on-select=\"createSearch($item)\"\n           instant-typeahead></input>\n\n  </div>\n</form>\n";
+    template = "<form class=\"search-field\"\n      ng-submit=\"createSearch()\"\n      ng-class=\"{'has-search': searches.length}\">\n\n  <div class=\"form-container search-container\">\n    <span cam-widget-search-pill\n          ng-repeat=\"search in searches\"\n          extended=\"search.extended\"\n          basic=\"search.basic\"\n          allow-dates=\"search.allowDates\"\n          enforce-dates=\"search.enforceDates\"\n          valid=\"search.valid\"\n          name=\"search.name\"\n          potential-names=\"search.potentialNames\"\n          type=\"search.type\"\n          operator=\"search.operator\"\n          value=\"search.value\"\n          invalid-text=\"{{ translations.invalid }}\"\n          delete-text=\"{{ translations.deleteSearch }}\"\n          on-change=\"handleChange($index, field, before, value, $event)\"\n          on-delete=\"deleteSearch($index)\"></span>\n    <input class=\"form-control main-field\"\n           type=\"text\"\n           ng-model=\"inputQuery\"\n           ng-keydown=\"onKeydown($event)\"\n           typeahead=\"type as type.value for type in dropdownTypes | filter:$viewValue:instantTypeahead\"\n           typeahead-on-select=\"createSearch($item)\"\n           instant-typeahead />\n  </div>\n</form>\n";
 
 
   var dateRegex = /(\d\d\d\d)-(\d\d)-(\d\d)T(\d\d):(\d\d):(\d\d)(?:.(\d\d\d)| )?$/;
@@ -2324,11 +2348,12 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
         searches: '=?camWidgetSearchSearches',
         validSearches: '=?camWidgetSearchValidSearches',
 
+        mode: '@?camWidgetSearchMode',
+
         searchId: '@camWidgetSearchId'
       },
 
       link: function($scope, element) {
-
         // test for IE focus bug
         checkIEfocusBug(function (hasBug) {
           if(hasBug) {
@@ -2704,6 +2729,11 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
         $scope.dropdownTypes = getTypes();
 
+        $scope.focusMainField = function () {
+          var mainField = element[0].querySelector('.main-field');
+          mainField.focus();
+          angular.element(mainField).trigger('click');
+        };
       },
 
       template: template

@@ -146,14 +146,16 @@ variables-table
       placeholder="Please enter a name here"&gt;
   {{name}}
 &lt;/span&gt;</pre>
-          <span cam-widget-inline-field
-                class="set-value"
-                type="text"
-                value="name"
-                placeholder="Please enter a name here"
-                id="field1">
-            {{name}}
-          </span>
+          <div class="test-container">
+            <span cam-widget-inline-field
+                  class="set-value"
+                  type="text"
+                  value="name"
+                  placeholder="Please enter a name here"
+                  id="field1">
+              {{name}}
+            </span>
+          </div>
         </div>
       </div><!-- /.widget-example -->
 
@@ -169,13 +171,15 @@ variables-table
       value="date"&gt;
   {{ date | camDate }}
 &lt;/span&gt;</pre>
-          <span cam-widget-inline-field
-                class="set-value"
-                type="datetime"
-                value="date"
-                id="field2">
-            {{ date | camDate }}
-          </span>
+          <div class="test-container">
+              <span cam-widget-inline-field
+                  class="set-value"
+                  type="datetime"
+                  value="date"
+                  id="field2">
+              {{ date | camDate }}
+            </span>
+          </div>
         </div>
       </div><!-- /.widget-example -->
 
@@ -192,14 +196,16 @@ variables-table
       value="selectedOption"&gt;
   {{ selectedOption }}
 &lt;/span&gt;</pre>
-          <span cam-widget-inline-field
+          <div class="test-container">
+            <span cam-widget-inline-field
                 class="set-value"
                 type="option"
                 options="options"
                 value="selectedOption"
                 id="field3">
-            {{ selectedOption }}
-          </span>
+              {{ selectedOption }}
+            </span>
+          </div>
         </div>
       </div><!-- /.widget-example -->
 
@@ -216,14 +222,16 @@ variables-table
       value="selectedKeyOption"&gt;
   {{ selectedKeyOption.key }} : {{ selectedKeyOption.value }}
 &lt;/span&gt;</pre>
-          <span cam-widget-inline-field
-                class="set-value"
-                type="option"
-                options="keyOptions"
-                value="selectedKeyOption"
-                id="field4">
-                {{ selectedKeyOption.key }} : {{ selectedKeyOption.value }}
-          </span>
+          <div class="test-container">
+            <span cam-widget-inline-field
+                  class="set-value"
+                  type="option"
+                  options="keyOptions"
+                  value="selectedKeyOption"
+                  id="field4">
+                  {{ selectedKeyOption.key }} : {{ selectedKeyOption.value }}
+            </span>
+          </div>
         </div>
       </div><!-- /.widget-example -->
 
@@ -241,15 +249,17 @@ variables-table
       value="selectedOption2"&gt;
   {{ selectedOption2 }}
 &lt;/span&gt;</pre>
-          <span cam-widget-inline-field
-                class="set-value"
-                type="option"
-                options="options"
-                value="selectedOption2"
-                allow-non-options="true"
-                id="field6">
-                  {{ selectedOption2 }}
-          </span>
+          <div class="test-container">
+            <span cam-widget-inline-field
+                  class="set-value"
+                  type="option"
+                  options="options"
+                  value="selectedOption2"
+                  allow-non-options="true"
+                  id="field6">
+                    {{ selectedOption2 }}
+            </span>
+          </div>
         </div>
       </div><!-- /.widget-example -->
 
@@ -266,14 +276,16 @@ variables-table
       flexible="true"&gt;
   {{ dateText }}
 &lt;/span&gt;</pre>
-          <span cam-widget-inline-field
-                class="set-value"
-                type="text"
-                value="dateText"
-                flexible="true"
-                id="field5">
-            {{ dateText }}
-          </span>
+          <div class="test-container">
+            <span cam-widget-inline-field
+                  class="set-value"
+                  type="text"
+                  value="dateText"
+                  flexible="true"
+                  id="field5">
+              {{ dateText }}
+            </span>
+          </div>
         </div>
       </div><!-- /.widget-example -->
 
