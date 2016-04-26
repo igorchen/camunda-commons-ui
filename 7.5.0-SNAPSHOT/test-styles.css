@@ -12120,7 +12120,7 @@ body {
   cursor: wait;
   cursor: progress;
 }
-/* line 41, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
+/* line 48, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
 [cam-widget-search] form {
   display: block;
   height: auto;
@@ -12129,7 +12129,7 @@ body {
   background-color: #fafafa;
   border-bottom: 1px solid #aaaaaa;
 }
-/* line 50, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
+/* line 57, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
 [cam-widget-search] .main-field {
   width: auto;
   height: auto;
@@ -12139,52 +12139,59 @@ body {
   vertical-align: top;
   margin: 7px 0 1px 0;
 }
-/* line 60, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
+/* line 67, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
 [cam-widget-search] .search-container {
   position: relative;
   display: block;
   min-height: 37px;
   padding: 3px 12px 2px 12px;
 }
-/* line 67, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
+/* line 74, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
 [cam-widget-search] .main-field,
 [cam-widget-search] [cam-widget-search-pill] {
   margin-top: 6px;
   margin-right: 12px;
 }
 /* line 2, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
+[cam-widget-search].multiline-pills [cam-widget-search-pill] {
+  width: 100%;
+}
+/* line 6, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
 [cam-widget-search].multiline-pills .search-label,
 [cam-widget-search].multiline-pills .type-field,
 [cam-widget-search].multiline-pills .name-field,
-[cam-widget-search].multiline-pills .operator-field {
+[cam-widget-search].multiline-pills .operator-field,
+[cam-widget-search].multiline-pills .value-field {
   display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  float: left;
 }
-/* line 9, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
+/* line 17, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
 [cam-widget-search].multiline-pills .type-field,
 [cam-widget-search].multiline-pills .name-field,
 [cam-widget-search].multiline-pills .operator-field {
-  margin-top: 0;
-  float: left;
+  clear: both;
+}
+/* line 23, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
+[cam-widget-search].multiline-pills .operator-field {
   clear: left;
 }
-/* line 17, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
+/* line 27, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
 [cam-widget-search].multiline-pills .name-field {
   width: 100%;
   display: inline-block;
 }
-/* line 22, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
+/* line 32, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
 [cam-widget-search].multiline-pills .search-label {
+  width: 100%;
   position: relative;
   padding-left: 1.4em;
 }
-/* line 27, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
-[cam-widget-search].multiline-pills .glyphicon-exclamation-sign {
-  padding-bottom: 2px;
-}
-/* line 31, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
+/* line 38, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
 [cam-widget-search].multiline-pills .remove-search {
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 0;
 }
 /* line 1, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search-pill/cam-widget-search-pill.less */
