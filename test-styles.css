@@ -1881,7 +1881,7 @@ th {
 }
 /* line 125, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/tables.less */
 .table-hover > tbody > tr:hover {
-  background-color: #f5f5f5;
+  background-color: #dfe8ec;
 }
 /* line 135, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/tables.less */
 table col[class*="col-"] {
@@ -1909,7 +1909,7 @@ table th[class*="col-"] {
 .table > thead > tr.active > th,
 .table > tbody > tr.active > th,
 .table > tfoot > tr.active > th {
-  background-color: #f5f5f5;
+  background-color: #dfe8ec;
 }
 /* line 20, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/table-row.less */
 .table-hover > tbody > tr > td.active:hover,
@@ -1917,7 +1917,7 @@ table th[class*="col-"] {
 .table-hover > tbody > tr.active:hover > td,
 .table-hover > tbody > tr:hover > .active,
 .table-hover > tbody > tr.active:hover > th {
-  background-color: #e8e8e8;
+  background-color: #cfdde3;
 }
 /* line 9, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/mixins/table-row.less */
 .table > thead > tr > td.success,
