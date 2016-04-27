@@ -8887,6 +8887,7 @@ a.form-control-static {
   overflow: hidden;
   text-overflow: ellipsis;
   min-height: auto;
+  max-width: 100%;
   color: #276e8c;
 }
 /* line 313, /home/camunda/workspace/7.5-commons-ui-ghpages/node_modules/bootstrap/less/forms.less */
@@ -8897,12 +8898,12 @@ a.form-control-static {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 22, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
+/* line 23, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
 [cam-widget-inline-field] > .view-value:hover,
 [cam-widget-inline-field] > .preview:hover {
   color: #074762;
 }
-/* line 27, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
+/* line 28, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
 [cam-widget-inline-field] > .view-value,
 [cam-widget-inline-field] > .preview,
 [cam-widget-inline-field] .form-control {
@@ -8911,7 +8912,7 @@ a.form-control-static {
   padding-top: 0;
   padding-bottom: 0;
 }
-/* line 37, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
+/* line 38, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
 [cam-widget-inline-field] .form-control {
   width: auto;
   min-width: 40px;
@@ -8919,11 +8920,11 @@ a.form-control-static {
   margin-bottom: -1px;
   height: auto;
 }
-/* line 45, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
+/* line 46, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
 [cam-widget-inline-field] .dropdown-menu {
   min-width: 0;
 }
-/* line 53, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
+/* line 54, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
 [cam-widget-inline-field][type="date"] > .edit,
 [cam-widget-inline-field][type="time"] > .edit,
 [cam-widget-inline-field][type="datetime"] > .edit {
@@ -8931,7 +8932,7 @@ a.form-control-static {
   z-index: 99;
   min-width: 90px;
 }
-/* line 59, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
+/* line 60, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
 [cam-widget-inline-field][type="date"] .field,
 [cam-widget-inline-field][type="time"] .field,
 [cam-widget-inline-field][type="datetime"] .field {
@@ -8940,22 +8941,22 @@ a.form-control-static {
   left: 0;
   background-color: #ffffff;
 }
-/* line 68, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
+/* line 69, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
 [cam-widget-inline-field] .visible-whitespace {
   white-space: nowrap;
   width: auto;
   max-width: none;
 }
-/* line 75, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
+/* line 76, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
 .list-inline > [cam-widget-inline-field] {
   padding-right: 0;
 }
-/* line 81, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
+/* line 82, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
 .cam-widget-inline-field.btn-group,
 .cam-widget-inline-field.field-control {
   display: none;
 }
-/* line 89, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
+/* line 90, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
 body > .cam-widget-inline-field.btn-group,
 body > .cam-widget-inline-field.field-control {
   position: absolute;
@@ -8963,42 +8964,42 @@ body > .cam-widget-inline-field.field-control {
   display: block;
   background-color: #ffffff;
 }
-/* line 97, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
+/* line 98, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
 body > .cam-widget-inline-field.btn-group {
   border-radius: 0 0 0 0;
 }
-/* line 101, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
+/* line 102, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
 body > .cam-widget-inline-field.btn-group > button.btn:first-child {
   border-radius: 0 0 0 0;
 }
-/* line 104, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
+/* line 105, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
 body > .cam-widget-inline-field.btn-group > button.btn:last-child {
   border-radius: 0 0 0 0;
 }
-/* line 110, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
+/* line 111, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
 body > .cam-widget-inline-field.field-control {
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   margin-top: -2px;
 }
-/* line 114, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
+/* line 115, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
 body > .cam-widget-inline-field.field-control table button {
   border: none;
   width: 100%;
 }
-/* line 118, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
+/* line 119, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
 body > .cam-widget-inline-field.field-control thead button {
   height: 28px;
 }
-/* line 122, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
+/* line 123, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
 body > .cam-widget-inline-field.field-control .timepicker {
   margin: auto;
 }
-/* line 124, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
+/* line 125, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
 body > .cam-widget-inline-field.field-control .timepicker input {
   max-width: 50px;
 }
-/* line 129, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
+/* line 130, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/inline-field/cam-widget-inline-field.less */
 body > .cam-widget-inline-field.field-control > .dropdown-menu {
   display: block;
   min-width: initial;
