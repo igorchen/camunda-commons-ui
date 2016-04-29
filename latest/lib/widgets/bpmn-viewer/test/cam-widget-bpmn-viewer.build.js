@@ -1425,13 +1425,14 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
       template: template,
 
       scope: {
-        debugged: '=',
-        open:     '@',
-        tooltip:  '@camWidgetDebugTooltip'
+        debugged:    '=',
+        displayName: '=?',
+        open:        '@',
+        tooltip:     '@camWidgetDebugTooltip'
       },
 
       link: function (scope, element, attrs) {
-        scope.varName = attrs.debugged;
+        scope.varName = attrs.displayName || attrs.debugged;
 
         scope.toggleOpen = function() {
           scope.open = !scope.open;
@@ -72868,6 +72869,7 @@ function done(stream, er) {
   return stream.push(null);
 }
 },{"./_stream_duplex":547,"core-util-is":552,"inherits":543}],551:[function(require,module,exports){
+(function (process){
 // A bit simpler than readable streams.
 // Implement an async ._write(chunk, encoding, cb), and it'll handle all
 // the drain event emission and buffering.
@@ -72881,7 +72883,7 @@ var processNextTick = require('process-nextick-args');
 /*</replacement>*/
 
 /*<replacement>*/
-var asyncWrite = !true ? setImmediate : processNextTick;
+var asyncWrite = !process.browser && ['v0.10', 'v0.9.'].indexOf(process.version.slice(0, 5)) > -1 ? setImmediate : processNextTick;
 /*</replacement>*/
 
 /*<replacement>*/
@@ -73384,7 +73386,8 @@ function CorkedRequest(state) {
     }
   };
 }
-},{"./_stream_duplex":547,"buffer":538,"core-util-is":552,"events":542,"inherits":543,"process-nextick-args":554,"util-deprecate":555}],552:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./_stream_duplex":547,"_process":545,"buffer":538,"core-util-is":552,"events":542,"inherits":543,"process-nextick-args":554,"util-deprecate":555}],552:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -73596,6 +73599,7 @@ function config (name) {
 module.exports = require("./lib/_stream_passthrough.js")
 
 },{"./lib/_stream_passthrough.js":548}],557:[function(require,module,exports){
+(function (process){
 var Stream = (function (){
   try {
     return require('st' + 'ream'); // hack to fix a circular dependency issue when used with browserify
@@ -73609,13 +73613,12 @@ exports.Duplex = require('./lib/_stream_duplex.js');
 exports.Transform = require('./lib/_stream_transform.js');
 exports.PassThrough = require('./lib/_stream_passthrough.js');
 
-// inline-process-browser and unreachable-branch-transform make sure this is
-// removed in browserify builds
-if (!true) {
-  module.exports = require('stream');
+if (!process.browser && process.env.READABLE_STREAM === 'disable' && Stream) {
+  module.exports = Stream;
 }
 
-},{"./lib/_stream_duplex.js":547,"./lib/_stream_passthrough.js":548,"./lib/_stream_readable.js":549,"./lib/_stream_transform.js":550,"./lib/_stream_writable.js":551,"stream":560}],558:[function(require,module,exports){
+}).call(this,require('_process'))
+},{"./lib/_stream_duplex.js":547,"./lib/_stream_passthrough.js":548,"./lib/_stream_readable.js":549,"./lib/_stream_transform.js":550,"./lib/_stream_writable.js":551,"_process":545}],558:[function(require,module,exports){
 module.exports = require("./lib/_stream_transform.js")
 
 },{"./lib/_stream_transform.js":550}],559:[function(require,module,exports){
