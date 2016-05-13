@@ -8840,15 +8840,19 @@ a.form-control-static {
 .help-block {
   font-size: 90%;
 }
-/* line 117, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+/* line 115, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+.help-block.error {
+  color: #d9534f;
+}
+/* line 120, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
 .form-group + .help-block {
   margin-top: -6px;
 }
-/* line 121, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+/* line 124, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
 .disabled-form {
   position: relative;
 }
-/* line 124, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
+/* line 127, /home/camunda/workspace/7.5-commons-ui-ghpages/resources/less/cam-form.less */
 .disabled-form:before {
   display: block;
   content: ' ';
@@ -12148,12 +12152,12 @@ body {
   border-bottom: 1px solid #aaaaaa;
 }
 /* line 56, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
-[cam-widget-search] form:hover {
-  background-color: #edf1f3;
+[cam-widget-search] form .form-control {
+  background-color: transparent;
 }
-/* line 58, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
-[cam-widget-search] form:hover .form-control {
-  background-color: #edf1f3;
+/* line 59, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
+[cam-widget-search] form:hover {
+  border-bottom-color: #074762;
 }
 /* line 64, /home/camunda/workspace/7.5-commons-ui-ghpages/lib/widgets/search/cam-widget-search.less */
 [cam-widget-search] .main-field {
