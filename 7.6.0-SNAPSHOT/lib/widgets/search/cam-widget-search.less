@@ -1,0 +1,90 @@
+.cam-widget-search-multiline-pill() {
+  [cam-widget-search-pill] {
+    width: 100%;
+  }
+
+  .search-label,
+  .type-field,
+  .name-field,
+  .operator-field,
+  .value-field {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    float: left;
+  }
+
+  .type-field,
+  .name-field,
+  .operator-field {
+    clear: both;
+  }
+
+  .operator-field {
+    clear: left;
+  }
+
+  .name-field {
+    width: 100%;
+    display: inline-block;
+  }
+
+  .search-label {
+    width: 100%;
+    position: relative;
+    padding-left: 1.4em;
+  }
+
+  .remove-search {
+    position: absolute;
+    top: 2px;
+    left: 0;
+  }
+}
+
+
+
+[cam-widget-search] {
+  form {
+    display: block;
+    height: auto;
+    overflow: visible;
+    position: relative;
+    background-color: @input-bg;
+    border-bottom: 1px solid @input-border;
+
+    .form-control {
+      background-color: transparent;
+    }
+    &:hover {
+      border-bottom-color: @input-border-focus;
+    }
+  }
+
+  .main-field {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    padding: 0;
+    border: none;
+    vertical-align: top;
+    margin: (@padding-base-vertical + 1) 0 1px 0;
+  }
+
+  .search-container {
+    position: relative;
+    display: block;
+    min-height: 37px;
+    padding: (@padding-base-vertical - 3px) @padding-base-horizontal (@padding-base-vertical - 4px) @padding-base-horizontal;
+  }
+
+  .main-field,
+  [cam-widget-search-pill] {
+    margin-top: @padding-base-vertical;
+    margin-right: @padding-base-horizontal;
+  }
+
+  &.multiline-pills {
+    .cam-widget-search-multiline-pill();
+  }
+}

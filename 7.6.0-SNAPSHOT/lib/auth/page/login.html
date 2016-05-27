@@ -1,0 +1,32 @@
+<!-- # CE - camunda-commons-ui/lib/auth/page/login.html -->
+<div class="form-signin-container">
+  <form class="form-signin"
+        ng-submit="login()"
+        name="signinForm"
+        request-aware>
+    <h2 class="form-signin-heading">Please sign in</h2>
+
+    <div notifications-panel
+         class="notifications-panel"></div>
+
+    <input autofocus
+           tabindex="1"
+           type="text"
+           class="form-control"
+           placeholder="Username"
+           auto-fill
+           required
+           ng-model="username"></input>
+    <input tabindex="2"
+           type="password"
+           class="form-control"
+           placeholder="Password"
+           auto-fill
+           required
+           ng-model="password"></input>
+    <button tabindex="3"
+            class="btn btn-lg btn-primary"
+            type="submit">Sign in</button>
+  </form>
+</div>
+<!-- / CE - camunda-commons-ui/lib/auth/page/login.html -->
