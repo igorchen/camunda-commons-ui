@@ -8699,6 +8699,11 @@ strong {
   border-color: rgba(0, 0, 0, 0.15);
 }
 /* ---------------------------------------------------------------- */
+/* line 68, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/cam-common.less */
+.tooltip {
+  overflow-wrap: break-word;
+}
+/* ---------------------------------------------------------------- */
 /* line 1, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/cam-form.less */
 .form-control {
   border-width: 0 0 1px 0;
@@ -9953,6 +9958,7 @@ body > .cam-widget-inline-field.field-control > .dropdown-menu {
   font-size: 14px;
   opacity: 0;
   filter: alpha(opacity=0);
+  overflow-wrap: break-word;
   position: absolute;
   display: block;
   z-index: 99;
@@ -12419,11 +12425,11 @@ body {
   padding-bottom: 0;
   margin-bottom: 0;
 }
-/* line 146, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variable/cam-widget-variable.less */
+/* line 147, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variable/cam-widget-variable.less */
 .cam-widget-variable-dialog .tab-content {
   padding-top: 15px;
 }
-/* line 151, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variable/cam-widget-variable.less */
+/* line 152, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variable/cam-widget-variable.less */
 [disabled].cam-string-variable {
   cursor: default;
   background-color: white;
@@ -12470,54 +12476,69 @@ body {
 [cam-widget-variables-table] tbody td {
   vertical-align: middle;
 }
-/* line 48, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
-[cam-widget-variables-table] tbody td.col-type,
-[cam-widget-variables-table] tbody td.col-name,
-[cam-widget-variables-table] tbody td.col-value {
-  font-family: monospace;
+/* line 55, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
+[cam-widget-variables-table] .col-type a,
+[cam-widget-variables-table] .col-name a,
+[cam-widget-variables-table] .col-value a,
+[cam-widget-variables-table] .col-scope a,
+[cam-widget-variables-table] .col-type span,
+[cam-widget-variables-table] .col-name span,
+[cam-widget-variables-table] .col-value span,
+[cam-widget-variables-table] .col-scope span,
+[cam-widget-variables-table] .col-type div,
+[cam-widget-variables-table] .col-name div,
+[cam-widget-variables-table] .col-value div,
+[cam-widget-variables-table] .col-scope div {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+  vertical-align: middle;
+  display: inline-block;
 }
-/* line 59, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
+/* line 71, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
 [cam-widget-variables-table] table.cam-table > thead > tr > td,
 [cam-widget-variables-table] table.cam-table > tbody > tr > td {
   vertical-align: middle;
   white-space: nowrap;
   padding: 6px 12px;
 }
-/* line 67, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
+/* line 79, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
 [cam-widget-variables-table] table.cam-table > tbody > tr.editing > td.editable {
   padding: 0;
 }
-/* line 73, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
+/* line 85, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
 [cam-widget-variables-table] td.actions {
   text-align: right;
   width: 108px;
 }
-/* line 78, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
-[cam-widget-variables-table] .value-wrapper {
+/* line 90, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
+[cam-widget-variables-table] td.editable > .value-wrapper {
   display: table;
   width: 100%;
   table-layout: fixed;
 }
-/* line 83, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
-[cam-widget-variables-table] .value-wrapper > a,
-[cam-widget-variables-table] .value-wrapper > input {
+/* line 95, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
+[cam-widget-variables-table] td.editable > .value-wrapper > a,
+[cam-widget-variables-table] td.editable > .value-wrapper > input {
   display: table-cell;
 }
-/* line 88, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
-[cam-widget-variables-table] .value-wrapper > input[type=checkbox] {
+/* line 100, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
+[cam-widget-variables-table] td.editable > .value-wrapper > input[type=checkbox] {
   margin: 12px auto 0 12px;
 }
-/* line 92, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
-[cam-widget-variables-table] .value-wrapper > a {
+/* line 104, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
+[cam-widget-variables-table] td.editable > .value-wrapper > a {
   width: auto;
   overflow: hidden;
   text-overflow: ellipsis;
   vertical-align: middle;
   padding: 6px 12px;
 }
-/* line 100, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
-[cam-widget-variables-table] .value-wrapper > .set-null,
-[cam-widget-variables-table] .value-wrapper .null-value {
+/* line 112, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -12545,49 +12566,49 @@ body {
   color: #777777;
 }
 /* line 26, /home/camunda/workspace/7.6-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-[cam-widget-variables-table] .value-wrapper > .set-null:focus,
-[cam-widget-variables-table] .value-wrapper .null-value:focus,
-[cam-widget-variables-table] .value-wrapper > .set-null:active:focus,
-[cam-widget-variables-table] .value-wrapper .null-value:active:focus,
-[cam-widget-variables-table] .value-wrapper > .set-null.active:focus,
-[cam-widget-variables-table] .value-wrapper .null-value.active:focus,
-[cam-widget-variables-table] .value-wrapper > .set-null.focus,
-[cam-widget-variables-table] .value-wrapper .null-value.focus,
-[cam-widget-variables-table] .value-wrapper > .set-null:active.focus,
-[cam-widget-variables-table] .value-wrapper .null-value:active.focus,
-[cam-widget-variables-table] .value-wrapper > .set-null.active.focus,
-[cam-widget-variables-table] .value-wrapper .null-value.active.focus {
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null:focus,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value:focus,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null:active:focus,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value:active:focus,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null.active:focus,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value.active:focus,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null.focus,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value.focus,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null:active.focus,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value:active.focus,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null.active.focus,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value.active.focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 /* line 32, /home/camunda/workspace/7.6-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-[cam-widget-variables-table] .value-wrapper > .set-null:hover,
-[cam-widget-variables-table] .value-wrapper .null-value:hover,
-[cam-widget-variables-table] .value-wrapper > .set-null:focus,
-[cam-widget-variables-table] .value-wrapper .null-value:focus,
-[cam-widget-variables-table] .value-wrapper > .set-null.focus,
-[cam-widget-variables-table] .value-wrapper .null-value.focus {
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null:hover,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value:hover,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null:focus,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value:focus,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null.focus,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value.focus {
   color: #333333;
   text-decoration: none;
 }
 /* line 39, /home/camunda/workspace/7.6-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-[cam-widget-variables-table] .value-wrapper > .set-null:active,
-[cam-widget-variables-table] .value-wrapper .null-value:active,
-[cam-widget-variables-table] .value-wrapper > .set-null.active,
-[cam-widget-variables-table] .value-wrapper .null-value.active {
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null:active,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value:active,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null.active,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value.active {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 /* line 46, /home/camunda/workspace/7.6-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-[cam-widget-variables-table] .value-wrapper > .set-null.disabled,
-[cam-widget-variables-table] .value-wrapper .null-value.disabled,
-[cam-widget-variables-table] .value-wrapper > .set-null[disabled],
-[cam-widget-variables-table] .value-wrapper .null-value[disabled],
-fieldset[disabled] [cam-widget-variables-table] .value-wrapper > .set-null,
-fieldset[disabled] [cam-widget-variables-table] .value-wrapper .null-value {
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null.disabled,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value.disabled,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null[disabled],
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value[disabled],
+fieldset[disabled] [cam-widget-variables-table] td.editable > .value-wrapper > .set-null,
+fieldset[disabled] [cam-widget-variables-table] td.editable > .value-wrapper .null-value {
   cursor: not-allowed;
   opacity: 0.65;
   filter: alpha(opacity=65);
@@ -12595,125 +12616,210 @@ fieldset[disabled] [cam-widget-variables-table] .value-wrapper .null-value {
   box-shadow: none;
 }
 /* line 55, /home/camunda/workspace/7.6-commons-ui-ghpages/node_modules/bootstrap/less/buttons.less */
-a[cam-widget-variables-table] .value-wrapper > .set-null.disabled,
-a[cam-widget-variables-table] .value-wrapper .null-value.disabled,
-fieldset[disabled] a[cam-widget-variables-table] .value-wrapper > .set-null,
-fieldset[disabled] a[cam-widget-variables-table] .value-wrapper .null-value {
+a[cam-widget-variables-table] td.editable > .value-wrapper > .set-null.disabled,
+a[cam-widget-variables-table] td.editable > .value-wrapper .null-value.disabled,
+fieldset[disabled] a[cam-widget-variables-table] td.editable > .value-wrapper > .set-null,
+fieldset[disabled] a[cam-widget-variables-table] td.editable > .value-wrapper .null-value {
   pointer-events: none;
 }
 /* line 11, /home/camunda/workspace/7.6-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-[cam-widget-variables-table] .value-wrapper > .set-null:focus,
-[cam-widget-variables-table] .value-wrapper .null-value:focus,
-[cam-widget-variables-table] .value-wrapper > .set-null.focus,
-[cam-widget-variables-table] .value-wrapper .null-value.focus {
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null:focus,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value:focus,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null.focus,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value.focus {
   color: #333333;
   background-color: #e6e6e6;
   border-color: #8c8c8c;
 }
 /* line 17, /home/camunda/workspace/7.6-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-[cam-widget-variables-table] .value-wrapper > .set-null:hover,
-[cam-widget-variables-table] .value-wrapper .null-value:hover {
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null:hover,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value:hover {
   color: #333333;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
 /* line 22, /home/camunda/workspace/7.6-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-[cam-widget-variables-table] .value-wrapper > .set-null:active,
-[cam-widget-variables-table] .value-wrapper .null-value:active,
-[cam-widget-variables-table] .value-wrapper > .set-null.active,
-[cam-widget-variables-table] .value-wrapper .null-value.active,
-.open > .dropdown-toggle[cam-widget-variables-table] .value-wrapper > .set-null,
-.open > .dropdown-toggle[cam-widget-variables-table] .value-wrapper .null-value {
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null:active,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value:active,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null.active,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value.active,
+.open > .dropdown-toggle[cam-widget-variables-table] td.editable > .value-wrapper > .set-null,
+.open > .dropdown-toggle[cam-widget-variables-table] td.editable > .value-wrapper .null-value {
   color: #333333;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
 /* line 29, /home/camunda/workspace/7.6-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-[cam-widget-variables-table] .value-wrapper > .set-null:active:hover,
-[cam-widget-variables-table] .value-wrapper .null-value:active:hover,
-[cam-widget-variables-table] .value-wrapper > .set-null.active:hover,
-[cam-widget-variables-table] .value-wrapper .null-value.active:hover,
-.open > .dropdown-toggle[cam-widget-variables-table] .value-wrapper > .set-null:hover,
-.open > .dropdown-toggle[cam-widget-variables-table] .value-wrapper .null-value:hover,
-[cam-widget-variables-table] .value-wrapper > .set-null:active:focus,
-[cam-widget-variables-table] .value-wrapper .null-value:active:focus,
-[cam-widget-variables-table] .value-wrapper > .set-null.active:focus,
-[cam-widget-variables-table] .value-wrapper .null-value.active:focus,
-.open > .dropdown-toggle[cam-widget-variables-table] .value-wrapper > .set-null:focus,
-.open > .dropdown-toggle[cam-widget-variables-table] .value-wrapper .null-value:focus,
-[cam-widget-variables-table] .value-wrapper > .set-null:active.focus,
-[cam-widget-variables-table] .value-wrapper .null-value:active.focus,
-[cam-widget-variables-table] .value-wrapper > .set-null.active.focus,
-[cam-widget-variables-table] .value-wrapper .null-value.active.focus,
-.open > .dropdown-toggle[cam-widget-variables-table] .value-wrapper > .set-null.focus,
-.open > .dropdown-toggle[cam-widget-variables-table] .value-wrapper .null-value.focus {
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null:active:hover,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value:active:hover,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null.active:hover,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value.active:hover,
+.open > .dropdown-toggle[cam-widget-variables-table] td.editable > .value-wrapper > .set-null:hover,
+.open > .dropdown-toggle[cam-widget-variables-table] td.editable > .value-wrapper .null-value:hover,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null:active:focus,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value:active:focus,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null.active:focus,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value.active:focus,
+.open > .dropdown-toggle[cam-widget-variables-table] td.editable > .value-wrapper > .set-null:focus,
+.open > .dropdown-toggle[cam-widget-variables-table] td.editable > .value-wrapper .null-value:focus,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null:active.focus,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value:active.focus,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null.active.focus,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value.active.focus,
+.open > .dropdown-toggle[cam-widget-variables-table] td.editable > .value-wrapper > .set-null.focus,
+.open > .dropdown-toggle[cam-widget-variables-table] td.editable > .value-wrapper .null-value.focus {
   color: #333333;
   background-color: #d4d4d4;
   border-color: #8c8c8c;
 }
 /* line 37, /home/camunda/workspace/7.6-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-[cam-widget-variables-table] .value-wrapper > .set-null:active,
-[cam-widget-variables-table] .value-wrapper .null-value:active,
-[cam-widget-variables-table] .value-wrapper > .set-null.active,
-[cam-widget-variables-table] .value-wrapper .null-value.active,
-.open > .dropdown-toggle[cam-widget-variables-table] .value-wrapper > .set-null,
-.open > .dropdown-toggle[cam-widget-variables-table] .value-wrapper .null-value {
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null:active,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value:active,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null.active,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value.active,
+.open > .dropdown-toggle[cam-widget-variables-table] td.editable > .value-wrapper > .set-null,
+.open > .dropdown-toggle[cam-widget-variables-table] td.editable > .value-wrapper .null-value {
   background-image: none;
 }
 /* line 45, /home/camunda/workspace/7.6-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-[cam-widget-variables-table] .value-wrapper > .set-null.disabled:hover,
-[cam-widget-variables-table] .value-wrapper .null-value.disabled:hover,
-[cam-widget-variables-table] .value-wrapper > .set-null[disabled]:hover,
-[cam-widget-variables-table] .value-wrapper .null-value[disabled]:hover,
-fieldset[disabled] [cam-widget-variables-table] .value-wrapper > .set-null:hover,
-fieldset[disabled] [cam-widget-variables-table] .value-wrapper .null-value:hover,
-[cam-widget-variables-table] .value-wrapper > .set-null.disabled:focus,
-[cam-widget-variables-table] .value-wrapper .null-value.disabled:focus,
-[cam-widget-variables-table] .value-wrapper > .set-null[disabled]:focus,
-[cam-widget-variables-table] .value-wrapper .null-value[disabled]:focus,
-fieldset[disabled] [cam-widget-variables-table] .value-wrapper > .set-null:focus,
-fieldset[disabled] [cam-widget-variables-table] .value-wrapper .null-value:focus,
-[cam-widget-variables-table] .value-wrapper > .set-null.disabled.focus,
-[cam-widget-variables-table] .value-wrapper .null-value.disabled.focus,
-[cam-widget-variables-table] .value-wrapper > .set-null[disabled].focus,
-[cam-widget-variables-table] .value-wrapper .null-value[disabled].focus,
-fieldset[disabled] [cam-widget-variables-table] .value-wrapper > .set-null.focus,
-fieldset[disabled] [cam-widget-variables-table] .value-wrapper .null-value.focus {
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null.disabled:hover,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value.disabled:hover,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null[disabled]:hover,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value[disabled]:hover,
+fieldset[disabled] [cam-widget-variables-table] td.editable > .value-wrapper > .set-null:hover,
+fieldset[disabled] [cam-widget-variables-table] td.editable > .value-wrapper .null-value:hover,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null.disabled:focus,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value.disabled:focus,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null[disabled]:focus,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value[disabled]:focus,
+fieldset[disabled] [cam-widget-variables-table] td.editable > .value-wrapper > .set-null:focus,
+fieldset[disabled] [cam-widget-variables-table] td.editable > .value-wrapper .null-value:focus,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null.disabled.focus,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value.disabled.focus,
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null[disabled].focus,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value[disabled].focus,
+fieldset[disabled] [cam-widget-variables-table] td.editable > .value-wrapper > .set-null.focus,
+fieldset[disabled] [cam-widget-variables-table] td.editable > .value-wrapper .null-value.focus {
   background-color: #ffffff;
   border-color: #cccccc;
 }
 /* line 53, /home/camunda/workspace/7.6-commons-ui-ghpages/node_modules/bootstrap/less/mixins/buttons.less */
-[cam-widget-variables-table] .value-wrapper > .set-null .badge,
-[cam-widget-variables-table] .value-wrapper .null-value .badge {
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null .badge,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value .badge {
   color: #ffffff;
   background-color: #333333;
 }
-/* line 111, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
-[cam-widget-variables-table] .value-wrapper > .set-null {
-  width: 38px;
-}
-/* line 115, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
-[cam-widget-variables-table] .value-wrapper .null-value {
+/* line 121, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null span,
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value span {
   width: auto;
 }
-/* line 119, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
-[cam-widget-variables-table] .value-wrapper.read-only {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block;
+/* line 132, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
+[cam-widget-variables-table] td.editable > .value-wrapper > .set-null {
+  width: 38px;
 }
-/* line 126, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
+/* line 136, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
+[cam-widget-variables-table] td.editable > .value-wrapper .null-value {
+  width: auto;
+}
+/* line 141, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
 [cam-widget-variables-table] .type-object .read-only[ng-click] {
   cursor: pointer;
   color: #276e8c;
 }
-/* line 132, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
+/* line 147, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
 [cam-widget-variables-table] .ng-invalid input,
 [cam-widget-variables-table] .ng-invalid .form-control,
 [cam-widget-variables-table] .ng-invalid .value-wrapper {
   color: #d9534f;
 }
-/* line 31, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 155, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
+[cam-widget-variables-table] [cam-widget-clipboard] > [ng-transclude] {
+  width: auto;
+  max-width: calc(100% - 2em);
+}
+/* line 160, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/variables-table/cam-widget-variables-table.less */
+[cam-widget-variables-table] [cam-widget-clipboard] > .glyphicon-copy {
+  top: 0;
+  width: auto;
+  margin-left: 0.25em;
+}
+/* line 1, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/clipboard/cam-widget-clipboard.less */
+[cam-widget-clipboard] {
+  overflow: hidden;
+  display: inline-block;
+}
+/* line 5, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/clipboard/cam-widget-clipboard.less */
+[cam-widget-clipboard] > [ng-transclude],
+[cam-widget-clipboard] > .glyphicon-copy {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 11, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/clipboard/cam-widget-clipboard.less */
+[cam-widget-clipboard] > [ng-transclude]:empty {
+  display: none;
+}
+/* line 15, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/clipboard/cam-widget-clipboard.less */
+[cam-widget-clipboard] > .glyphicon-copy {
+  cursor: pointer;
+  top: 0;
+  opacity: 0;
+  line-height: inherit;
+  transition: opacity 0.218s linear,
+                color 0.218s linear;
+}
+/* line 22, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/clipboard/cam-widget-clipboard.less */
+[cam-widget-clipboard] > .glyphicon-copy.copy-ok:before {
+  content: "\e013";
+  color: #5cb85c;
+}
+/* line 26, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/clipboard/cam-widget-clipboard.less */
+[cam-widget-clipboard] > .glyphicon-copy.copy-error:before {
+  content: "\e107";
+  color: #f0ad4e;
+}
+/* line 35, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/clipboard/cam-widget-clipboard.less */
+[cam-widget-clipboard]:hover > .glyphicon-copy,
+[cam-widget-clipboard].hovered > .glyphicon-copy,
+[cam-widget-clipboard].no-transclusion > .glyphicon-copy {
+  opacity: 1;
+}
+/* line 40, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/clipboard/cam-widget-clipboard.less */
+[cam-widget-clipboard].form-control-static {
+  display: inline;
+}
+/* line 42, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/clipboard/cam-widget-clipboard.less */
+[cam-widget-clipboard].form-control-static > [ng-transclude],
+[cam-widget-clipboard].form-control-static > .glyphicon-copy {
+  display: inline;
+}
+/* line 48, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/clipboard/cam-widget-clipboard.less */
+.cam-table [cam-widget-clipboard] {
+  white-space: nowrap;
+  max-width: 100%;
+}
+/* line 52, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/clipboard/cam-widget-clipboard.less */
+.cam-table [cam-widget-clipboard] > [ng-transclude] {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: max-width 0.218s linear;
+}
+/* line 59, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/clipboard/cam-widget-clipboard.less */
+.cam-table [cam-widget-clipboard]:hover > [ng-transclude] {
+  max-width: calc(100% - 2em);
+}
+/* line 64, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/clipboard/cam-widget-clipboard.less */
+.cam-table td[cam-widget-clipboard] {
+  display: table-cell;
+  max-width: none;
+  width: auto;
+}
+/* line 68, /home/camunda/workspace/7.6-commons-ui-ghpages/lib/widgets/clipboard/cam-widget-clipboard.less */
+.cam-table td[cam-widget-clipboard] > [ng-transclude] {
+  white-space: nowrap;
+}
+/* line 32, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 .cam-brand-header {
   width: 100%;
   position: fixed;
@@ -12733,7 +12839,7 @@ fieldset[disabled] [cam-widget-variables-table] .value-wrapper .null-value.focus
   margin: 0;
   padding: 0;
 }
-/* line 34, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 35, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 .cam-brand-header a {
   color: #545454;
   text-decoration: none;
@@ -12744,7 +12850,7 @@ fieldset[disabled] [cam-widget-variables-table] .value-wrapper .null-value.focus
   color: #222222;
   text-decoration: none;
 }
-/* line 38, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 39, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 .cam-brand-header .navbar-brand {
   font-size: 20px;
   line-height: 40px;
@@ -12755,11 +12861,11 @@ fieldset[disabled] [cam-widget-variables-table] .value-wrapper .null-value.focus
   padding-right: 15px;
   color: #000000;
 }
-/* line 42, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 43, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 .cam-brand-header .container .navbar-brand {
   padding-left: 0;
 }
-/* line 46, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 47, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 .cam-brand-header .brand-logo:before {
   color: #b5152b;
   display: inline-block;
@@ -12768,7 +12874,7 @@ fieldset[disabled] [cam-widget-variables-table] .value-wrapper .null-value.focus
   font-weight: normal;
   content: '\e831';
 }
-/* line 57, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 58, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 .cam-brand-footer {
   position: fixed;
   z-index: 99;
@@ -12782,12 +12888,12 @@ fieldset[disabled] [cam-widget-variables-table] .value-wrapper .null-value.focus
   border-top: 1px solid #eeeeee;
   color: #777777;
 }
-/* line 62, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 63, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 body {
   padding-top: 0;
   margin-top: 45px;
 }
-/* line 66, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 67, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 body > .page-wrapper {
   margin-right: auto;
   margin-left: auto;
@@ -12809,43 +12915,43 @@ body > .page-wrapper > .navbar-collapse {
   }
 }
 @media (min-width: 768px) {
-  /* line 71, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+  /* line 72, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
   body > .page-wrapper {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  /* line 74, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+  /* line 75, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
   body > .page-wrapper {
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  /* line 77, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+  /* line 78, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
   body > .page-wrapper {
     width: 1170px;
   }
 }
-/* line 83, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 84, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages h1,
 body.gh-pages h2,
 body.gh-pages h3,
 body.gh-pages h4 {
   font-weight: 100;
 }
-/* line 90, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 91, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages h1 {
   text-transform: uppercase;
 }
-/* line 94, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 95, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages.readme .content {
   margin-top: 10px;
 }
-/* line 98, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 99, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages > .page-wrapper {
   padding-left: 160px;
 }
-/* line 100, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 101, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages > .page-wrapper > nav {
   width: 130px;
   position: fixed;
@@ -12855,71 +12961,71 @@ body.gh-pages > .page-wrapper > nav {
   top: 60px;
   bottom: 45px;
 }
-/* line 109, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 110, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages > .page-wrapper > nav li {
   display: block;
 }
-/* line 113, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 114, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages > .page-wrapper > nav a {
   display: inline-block;
   font-size: 1.2em;
 }
-/* line 118, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 119, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 body.gh-pages > .page-wrapper > nav .active a {
   text-decoration: underline;
 }
-/* line 125, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 126, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 body > footer,
 body > footer > nav {
   text-align: right;
   overflow: hidden;
 }
-/* line 132, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 133, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 dd {
   padding-left: 30px;
   max-width: 550px;
 }
-/* line 136, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 137, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 dt + dd {
   margin-bottom: 15px;
 }
-/* line 139, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 140, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 dd li {
   margin-top: 15px;
 }
-/* line 143, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 144, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 .widget-description,
 .widget-reference {
   font-size: 16px;
   line-height: 22px;
 }
-/* line 150, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 151, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 .widget-reference dt {
   font-family: monospace;
 }
-/* line 153, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 154, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 .widget-reference dt > .function-definition {
   color: #777777;
   font-weight: lighter;
 }
-/* line 157, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 158, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 .widget-reference dt > .function-definition > .params {
   font-style: italic;
 }
-/* line 161, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 162, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 .widget-reference dt > .function-definition > .returns {
   font-weight: bolder;
 }
-/* line 168, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 169, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 .widget-example {
   margin: 15px 0;
   padding: 15px 0;
 }
-/* line 171, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 172, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 .widget-example [ng-non-bindable] {
   margin-bottom: 30px;
 }
-/* line 176, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 177, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 .test-container {
   margin-right: auto;
   margin-left: auto;
@@ -12964,16 +13070,16 @@ dd li {
     margin-left: 0;
   }
 }
-/* line 190, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 191, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 .cam-widget-header-test-page .test-container {
   padding-top: 45px;
 }
-/* line 193, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 194, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 .cam-widget-header-test-page .test-container .test-container {
   overflow: hidden;
   min-height: 200px;
 }
-/* line 199, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
+/* line 200, /home/camunda/workspace/7.6-commons-ui-ghpages/resources/less/test-styles.less */
 .test-container > [cam-widget-header],
 .test-container > [cam-widget-footer] {
   position: absolute;
