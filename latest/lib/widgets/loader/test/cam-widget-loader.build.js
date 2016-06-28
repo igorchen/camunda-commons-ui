@@ -6,30 +6,30 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
     template = "<div class=\"loader-state loaded\"\n     ng-show=\"loadingState === 'LOADED'\"\n     ng-transclude></div>\n\n<div class=\"loader-state loading\"\n     ng-if=\"loadingState === 'LOADING'\">\n  <span class=\"glyphicon glyphicon-refresh animate-spin\"></span>\n  {{ textLoading }}\n</div>\n\n<div class=\"loader-state empty\"\n     ng-if=\"loadingState === 'EMPTY'\">\n  {{ textEmpty }}\n</div>\n\n<div class=\"loader-state alert alert-danger\"\n     ng-if=\"loadingState === 'ERROR'\">\n  {{ textError }}\n</div>\n";
 
-  module.exports = [function() {
-    return {
-      transclude: true,
+module.exports = [function() {
+  return {
+    transclude: true,
 
-      template: template,
+    template: template,
 
-      scope: {
-        loadingState: '@',
-        textEmpty:    '@',
-        textError:    '@',
-        textLoading:  '@'
-      },
+    scope: {
+      loadingState: '@',
+      textEmpty:    '@',
+      textError:    '@',
+      textLoading:  '@'
+    },
 
-      compile: function (element, attrs) {
-        if (!angular.isDefined(attrs.textLoading)) {
-          attrs.textLoading = 'Loading…';
-        }
-
-        if (!angular.isDefined(attrs.loadingState)) {
-          attrs.loadingState = 'INITIAL';
-        }
+    compile: function(element, attrs) {
+      if (!angular.isDefined(attrs.textLoading)) {
+        attrs.textLoading = 'Loading…';
       }
-    };
-  }];
+
+      if (!angular.isDefined(attrs.loadingState)) {
+        attrs.loadingState = 'INITIAL';
+      }
+    }
+  };
+}];
 
 },{"camunda-bpm-sdk-js/vendor/angular":5}],2:[function(require,module,exports){
 'use strict';
@@ -46,31 +46,31 @@ var testModule = angular.module('testModule', [loaderModule.name]);
 testModule.controller('testInteractiveController', [
   '$scope',
   '$timeout',
-function(
+  function(
   $scope,
   $timeout
 ) {
-  $scope.ctrlState = 'INITIAL';
-  $scope.timeoutPromise = null;
+    $scope.ctrlState = 'INITIAL';
+    $scope.timeoutPromise = null;
 
-  $scope.reload = function (simulateEmpty) {
-    $scope.ctrlState = 'LOADING';
+    $scope.reload = function(simulateEmpty) {
+      $scope.ctrlState = 'LOADING';
 
-    $scope.timeoutPromise = $timeout(function () {
-      $scope.ctrlVar1 = 'Control variable';
-      $scope.ctrlState = !!simulateEmpty ? 'EMPTY' : 'LOADED';
-    }, 1000);
-  };
+      $scope.timeoutPromise = $timeout(function() {
+        $scope.ctrlVar1 = 'Control variable';
+        $scope.ctrlState = simulateEmpty ? 'EMPTY' : 'LOADED';
+      }, 1000);
+    };
 
-  $scope.fail = function () {
-    $scope.ctrlState = 'ERROR';
-    $scope.ctrlError = 'Something wen really wrong';
+    $scope.fail = function() {
+      $scope.ctrlState = 'ERROR';
+      $scope.ctrlError = 'Something wen really wrong';
 
-    if ($scope.timeoutPromise) {
-      $timeout.cancel($scope.timeoutPromise);
-    }
-  };
-}]);
+      if ($scope.timeoutPromise) {
+        $timeout.cancel($scope.timeoutPromise);
+      }
+    };
+  }]);
 
 angular.element(document).ready(function() {
   angular.bootstrap(document.body, [testModule.name]);

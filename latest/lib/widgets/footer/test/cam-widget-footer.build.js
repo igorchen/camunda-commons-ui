@@ -4,14 +4,14 @@
 
 var template = "<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-xs-12\">\n      Powered by <a href=\"http://camunda.org\">camunda BPM</a> /\n      <span class=\"version\">{{version}}</span>\n    </div>\n  </div>\n</div>\n";
 
-  module.exports = [function() {
-    return {
-      template: template,
-      scope: {
-        version: '@'
-      }
-    };
-  }];
+module.exports = [function() {
+  return {
+    template: template,
+    scope: {
+      version: '@'
+    }
+  };
+}];
 
 },{}],2:[function(require,module,exports){
 'use strict';

@@ -1,5 +1,4 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-/* global define: false */
 'use strict';
 
   /**
@@ -10,8 +9,8 @@
    *
    * <input ng-model="password" auto-fill />
    */
-  module.exports = [
-    '$interval',
+module.exports = [
+  '$interval',
   function(
     $interval
   ) {
@@ -20,7 +19,7 @@
 
       require: 'ngModel',
 
-      link: function (scope, element, attrs, model) {
+      link: function(scope, element, attrs, model) {
         // console.info('start watching for auto-filled field', attrs.name);
 
         var interval = $interval(function() {
@@ -43,13 +42,12 @@
   }];
 
 },{}],2:[function(require,module,exports){
-/* global define: false */
 'use strict';
-  module.exports = ['$compile', '$parse',
+module.exports = ['$compile', '$parse',
   function($compile,   $parse) {
     return {
       restrict: 'A',
-      link: function (scope, element, attr) {
+      link: function(scope, element, attr) {
         var parsed = $parse(attr.ngBindHtml);
         function getStringValue() { return (parsed(scope) || '').toString(); }
 
@@ -63,14 +61,13 @@
   }];
 
 },{}],3:[function(require,module,exports){
-/* global define: false */
   'use strict';
 
   module.exports = function() {
     return {
       restrict: 'A',
       require: 'ngModel',
-      link: function (scope, element, attrs, model) {
+      link: function(scope, element, attrs, model) {
 
         var EMAIL_REGEX = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -95,10 +92,10 @@
 var angular = require('camunda-bpm-sdk-js/vendor/angular');
 var template = "<li class=\"dropdown engine-select\"\n    ng-show=\"engines.length > 1 && currentEngine\">\n<!-- # CE - camunda-commons-ui/lib/directives/engineSelect.html -->\n  <a href\n     class=\"dropdown-toggle\"\n     data-toggle=\"dropdown\">\n    <span class=\"glyphicon glyphicon-info-sign glyphicon glyphicon-info-sign \"\n          tooltip=\"If you have multiple engines running you can select the process engine here. The data displayed in this application is based on the selected engine only.\"\n          tooltip-placement=\"bottom\"></span>\n    {{ currentEngine.name }}\n  </a>\n  <ul class=\"dropdown-menu dropdown-menu-right\">\n    <li ng-repeat=\"(id, engine) in engines\"\n        ng-class=\"{ active: currentEngine.name === engine.name }\">\n      <a ng-href=\"{{ 'app://../' + engine.name + '/' | uri }}\">\n        {{ engine.name }}\n      </a>\n    </li>\n  </ul>\n<!-- / CE - camunda-commons-ui/lib/directives/engineSelect.html -->\n</li>\n";
 
-  var $ = require('jquery');
+var $ = require('jquery');
 
-  var ProcessEngineSelectionController = [
-          '$scope', '$http', '$location', '$window', 'Uri', 'Notifications',
+var ProcessEngineSelectionController = [
+  '$scope', '$http', '$location', '$window', 'Uri', 'Notifications',
   function($scope,   $http,   $location,   $window,   Uri,   Notifications) {
 
     var current = Uri.appUri(':engine');
@@ -120,37 +117,36 @@ var template = "<li class=\"dropdown engine-select\"\n    ng-show=\"engines.leng
     });
   }];
 
-  module.exports = function() {
-    return {
-      template: template,
-      replace: true,
-      controller: ProcessEngineSelectionController,
-      link: function(scope, element, attrs) {
+module.exports = function() {
+  return {
+    template: template,
+    replace: true,
+    controller: ProcessEngineSelectionController,
+    link: function(scope, element, attrs) {
 
-        var divider;
+      var divider;
 
-        scope.$watch(attrs.ngShow, function(newValue) {
-          if (newValue && !divider) {
-            divider = $('<li class="divider-vertical"></li>').insertAfter(element);
-          }
+      scope.$watch(attrs.ngShow, function(newValue) {
+        if (newValue && !divider) {
+          divider = $('<li class="divider-vertical"></li>').insertAfter(element);
+        }
 
-          if (!newValue && divider) {
-            divider.remove();
-            divider = null;
-          }
-        });
+        if (!newValue && divider) {
+          divider.remove();
+          divider = null;
+        }
+      });
 
-        scope.$on('$destroy', function() {
-          if (divider) {
-            divider.remove();
-          }
-        });
-      }
-    };
+      scope.$on('$destroy', function() {
+        if (divider) {
+          divider.remove();
+        }
+      });
+    }
   };
+};
 
-},{"camunda-bpm-sdk-js/vendor/angular":278,"jquery":573}],5:[function(require,module,exports){
-/* global define: false */
+},{"camunda-bpm-sdk-js/vendor/angular":277,"jquery":572}],5:[function(require,module,exports){
 'use strict';
 
 
@@ -167,7 +163,7 @@ var template = "<!-- # CE - camunda-commons-ui/lib/directives/inPlaceTextField.h
    * @example
    * <div cam-in-place-text-field context="someObject" property="keyOfTheObject" />
    */
-  module.exports = [
+module.exports = [
   function() {
     /**
      * Callback used when initialization of the directive completes.
@@ -250,7 +246,7 @@ var template = "<!-- # CE - camunda-commons-ui/lib/directives/inPlaceTextField.h
     };
   }];
 
-},{"camunda-bpm-sdk-js/vendor/angular":278}],6:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":277}],6:[function(require,module,exports){
 'use strict';
 
 var angular = require('camunda-bpm-sdk-js/vendor/angular'),
@@ -261,7 +257,6 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     notificationsPanel = require('./notificationsPanel'),
     password = require('./password'),
     passwordRepeat = require('./passwordRepeat'),
-    requestAware = require('./requestAware'),
     showIfAuthorized = require('./showIfAuthorized'),
     compileTemplate = require('./compileTemplate'),
     nl2br = require('./nl2br'),
@@ -291,26 +286,26 @@ directivesModule.directive('instantTypeahead',    instantTypeahead);
 directivesModule.config([
   '$modalProvider',
   '$tooltipProvider',
-function(
+  function(
   $modalProvider,
   $tooltipProvider
 ) {
-  $modalProvider.options = {
-    backdrop:     true, //can be also false or 'static'
-    keyboard:     true
-  };
+    $modalProvider.options = {
+      backdrop:     true, //can be also false or 'static'
+      keyboard:     true
+    };
 
-  $tooltipProvider.options({
-    animation:    true,
-    popupDelay:   100,
-    appendToBody: true
-  });
-}]);
+    $tooltipProvider.options({
+      animation:    true,
+      popupDelay:   100,
+      appendToBody: true
+    });
+  }]);
 
 
 module.exports = directivesModule;
 
-},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":575,"../util/index":16,"./autoFill":1,"./compileTemplate":2,"./email":3,"./engineSelect":4,"./inPlaceTextField":5,"./instantTypeahead":7,"./nl2br":8,"./notificationsPanel":9,"./password":10,"./passwordRepeat":11,"./requestAware":12,"./showIfAuthorized":13,"camunda-bpm-sdk-js/vendor/angular":278}],7:[function(require,module,exports){
+},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":574,"../util/index":15,"./autoFill":1,"./compileTemplate":2,"./email":3,"./engineSelect":4,"./inPlaceTextField":5,"./instantTypeahead":7,"./nl2br":8,"./notificationsPanel":9,"./password":10,"./passwordRepeat":11,"./showIfAuthorized":12,"camunda-bpm-sdk-js/vendor/angular":277}],7:[function(require,module,exports){
   'use strict';
 
   var secretEmptyKey = '[$empty$]';
@@ -322,7 +317,7 @@ module.exports = directivesModule;
     return {
       restrict: 'A',
       require: 'ngModel',
-      link: function (scope, element, attrs, model) {
+      link: function(scope, element, attrs, model) {
 
         // IE HAX: We have to delay the setup of the instant typeahead feature, as the internet explorer triggers an input event when it sets
         // the placeholder for the input field. If we do not delay the setup, this input event would trigger the typeahead. This would open
@@ -330,18 +325,18 @@ module.exports = directivesModule;
 
         $timeout(function() {
           // this parser run before typeahead's parser
-          model.$parsers.unshift(function (inputValue) {
+          model.$parsers.unshift(function(inputValue) {
             var value = (inputValue ? inputValue : secretEmptyKey); // replace empty string with secretEmptyKey to bypass typeahead-min-length check
             model.$viewValue = value; // this $viewValue must match the inputValue pass to typehead directive
             return value;
           });
 
           // this parser run after typeahead's parser
-          model.$parsers.push(function (inputValue) {
+          model.$parsers.push(function(inputValue) {
             return inputValue === secretEmptyKey ? '' : inputValue; // set the secretEmptyKey back to empty string
           });
 
-          scope.instantTypeahead = function (element, viewValue) {
+          scope.instantTypeahead = function(element, viewValue) {
             return viewValue === secretEmptyKey || (''+element).toLowerCase().indexOf((''+viewValue).toLowerCase()) > -1;
           };
 
@@ -360,8 +355,6 @@ module.exports = directivesModule;
   }];
 
 },{}],8:[function(require,module,exports){
-/* global define: false */
-
 /**
  * Defines a directive who replaces plain text new lines with `<br />` HTML tags.
  *
@@ -392,29 +385,28 @@ module.exports = directivesModule;
 
   // AngularJS DI
   module.exports = [
-  function(
+    function(
   ) {
 
-    return {
-      scope: {
-        original: '=nl2br'
-      },
+      return {
+        scope: {
+          original: '=nl2br'
+        },
 
-      link: function(scope, element, attributes) {
+        link: function(scope, element) {
         // set the content as text (will eliminate malicious html characters)
-        element.text(scope.original || '');
+          element.text(scope.original || '');
 
         // replace the line breaks
-        var replaced = element.html().replace(/\n/g, '<br/>');
+          var replaced = element.html().replace(/\n/g, '<br/>');
 
         // set the replaced content as html
-        element.html(replaced);
-      }
-    };
-  }];
+          element.html(replaced);
+        }
+      };
+    }];
 
 },{}],9:[function(require,module,exports){
-/* global define: false */
 'use strict';
 
 require('angular-sanitize');
@@ -427,7 +419,7 @@ require('angular-sanitize');
    * @example
       TODO
    */
-  var notificationsTemplate =
+var notificationsTemplate =
 '<div class="notifications">' +
 '  <div ng-repeat="notification in notifications" class="alert" ng-class="notificationClass(notification)">' +
 '    <button type="button" class="close" ng-click="removeNotification(notification)">&times;</button>' +
@@ -437,7 +429,7 @@ require('angular-sanitize');
 '  </div>' +
 '</div>';
 
-  module.exports = ['Notifications', '$filter', '$sce',
+module.exports = ['Notifications', '$filter', '$sce',
   function(Notifications,   $filter,   $sce) {
     return {
       restrict: 'EA',
@@ -505,8 +497,7 @@ require('angular-sanitize');
     };
   }];
 
-},{"angular-sanitize":39}],10:[function(require,module,exports){
-/* global define: false */
+},{"angular-sanitize":38}],10:[function(require,module,exports){
   'use strict';
 
   /**
@@ -517,7 +508,7 @@ require('angular-sanitize');
     return {
       restrict: 'A',
       require: 'ngModel',
-      link: function (scope, element, attrs, model) {
+      link: function(scope, element, attrs, model) {
 
         model.$parsers.unshift(function(viewValue) {
 
@@ -533,7 +524,6 @@ require('angular-sanitize');
   };
 
 },{}],11:[function(require,module,exports){
-/* global define: false */
   'use strict';
 
   /**
@@ -544,7 +534,7 @@ require('angular-sanitize');
     return {
       restrict: 'A',
       require: 'ngModel',
-      link: function (scope, element, attrs, model) {
+      link: function(scope, element, attrs, model) {
 
         // this is the name of the scope property
         // holding the value of the password we are trying to match.
@@ -576,70 +566,6 @@ require('angular-sanitize');
   };
 
 },{}],12:[function(require,module,exports){
-/* global define: false */
-'use strict';
-
-var angular = require('camunda-bpm-sdk-js/vendor/angular');
-var $ = require('jquery');
-
-  module.exports = [function() {
-    return {
-      require: 'form',
-
-      link: function(scope, element, attrs, ngForm) {
-
-        function setFormValidity(valid) {
-          ngForm.$setValidity('request', valid);
-        }
-
-        function setFormFieldsEnabled(enabled) {
-          var inputs = $(':input', element);
-
-          if (!enabled) {
-            inputs.attr('disabled', 'disabled');
-          } else {
-            inputs.removeAttr('disabled');
-          }
-        }
-
-        function setFormEnabled(enabled) {
-          setFormFieldsEnabled(enabled);
-          setFormValidity(enabled);
-        }
-
-        ngForm.$load = {
-          start: function() {
-            scope.$broadcast('formLoadStarted');
-          },
-
-          finish: function() {
-            scope.$broadcast('formLoadFinished');
-          }
-        };
-
-        scope.$on('formLoadStarted', function() {
-          setFormEnabled(false);
-        });
-
-        scope.$on('formLoadFinished', function() {
-          setFormEnabled(true);
-        });
-
-        if (attrs.requestAware != 'manual') {
-          scope.$on('requestStarted', function() {
-            ngForm.$load.start();
-          });
-
-          scope.$on('requestFinished', function() {
-            ngForm.$load.finish();
-          });
-        }
-      }
-    };
-  }];
-
-},{"camunda-bpm-sdk-js/vendor/angular":278,"jquery":573}],13:[function(require,module,exports){
-/* global define: false */
   'use strict';
 
   var builtInResources = {
@@ -647,7 +573,7 @@ var $ = require('jquery');
     'user': 1,
     'group': 2,
     'group membership': 3,
-    'authorization': 4,
+    'authorization': 4
   };
 
   var mapParameters = function(permissionName, resource, resourceId) {
@@ -658,7 +584,7 @@ var $ = require('jquery');
     request.resourceName = resource;
     request.resourceType = builtInResources[resource];
 
-    if(!!resourceId) {
+    if(resourceId) {
       request.resourceId = resourceId;
     }
 
@@ -672,10 +598,9 @@ var $ = require('jquery');
       priority: 1000,
       terminal: true,
       restrict: 'A',
-      compile: function (element, attr, transclude) {
-        return function ($scope, $element) {
+      compile: function(element, attr, transclude) {
+        return function($scope, $element) {
 
-          // var animate = $animate($scope, $attr);
           var childElement, childScope;
 
           var permission = attr.authPermission;
@@ -686,7 +611,6 @@ var $ = require('jquery');
           AuthorizationResource.check(mapParameters(permission, resourceName, resourceId)).$promise.then(function(response) {
 
             if (childElement) {
-              // animate.leave(childElement);
               $animate.leave(childElement);
               childElement = undefined;
             }
@@ -696,12 +620,10 @@ var $ = require('jquery');
               childScope = undefined;
             }
 
-            // if (!!response.data.authorized) {
             if ( (!!response.authorized && !invertCheck) || (!response.authorized && invertCheck )) {
               childScope = $scope.$new();
-              transclude(childScope, function (clone) {
+              transclude(childScope, function(clone) {
                 childElement = clone;
-                // animate.enter(clone, $element.parent(), $element);
                 $animate.enter(clone, $element.parent(), $element);
               });
             }
@@ -713,7 +635,7 @@ var $ = require('jquery');
     };
   }];
 
-},{}],14:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 'use strict';
 
 var angular = require('camunda-bpm-sdk-js/vendor/angular');
@@ -721,36 +643,36 @@ var moment = require('moment');
 require('angular-translate');
 
 
-  var filtersModule = angular.module('cam.commons.filter.date', [
-    'pascalprecht.translate'
-  ]);
+var filtersModule = angular.module('cam.commons.filter.date', [
+  'pascalprecht.translate'
+]);
 
 
 
-  filtersModule.provider('camDateFormat', function() {
-    var variants = {
-      normal: 'LLL',
-      short: 'LL',
-      long: 'LLLL'
-    };
+filtersModule.provider('camDateFormat', function() {
+  var variants = {
+    normal: 'LLL',
+    short: 'LL',
+    long: 'LLLL'
+  };
 
-    this.setDateFormat = function(newFormat, variant) {
+  this.setDateFormat = function(newFormat, variant) {
+    variant = variant || 'normal';
+    variants[variant] = newFormat;
+  };
+
+  this.$get = function() {
+    return function(variant) {
       variant = variant || 'normal';
-      variants[variant] = newFormat;
+      return variants[variant];
     };
-
-    this.$get = function() {
-      return function(variant) {
-        variant = variant || 'normal';
-        return variants[variant];
-      };
-    };
-  });
+  };
+});
 
 
 
-  filtersModule.config([
-    '$filterProvider',
+filtersModule.config([
+  '$filterProvider',
   function(
     $filterProvider
   ) {
@@ -758,78 +680,76 @@ require('angular-translate');
     $filterProvider.register('camDate', [
       '$translate',
       'camDateFormat',
-    function(
+      function(
       $translate,
       camDateFormat
     ) {
 
-      return function(date, variant) {
-        if (!date) {
-          return '';
-        }
-        return moment(date).format(camDateFormat(variant));
-      };
+        return function(date, variant) {
+          if (!date) {
+            return '';
+          }
+          return moment(date).format(camDateFormat(variant));
+        };
 
-    }]);
+      }]);
   }]);
 
-  module.exports = filtersModule;
+module.exports = filtersModule;
 
-},{"angular-translate":40,"camunda-bpm-sdk-js/vendor/angular":278,"moment":574}],15:[function(require,module,exports){
+},{"angular-translate":39,"camunda-bpm-sdk-js/vendor/angular":277,"moment":573}],14:[function(require,module,exports){
 'use strict';
 
 var angular = require('camunda-bpm-sdk-js/vendor/angular');
 
-  var SearchFactory = [ '$location', '$rootScope', function($location, $rootScope) {
+var SearchFactory = [ '$location', '$rootScope', function($location, $rootScope) {
 
-    var silent = false;
+  var silent = false;
 
-    $rootScope.$on('$routeUpdate', function(e, lastRoute) {
-      if (silent) {
-        silent = false;
-      } else {
-        $rootScope.$broadcast('$routeChanged', lastRoute);
-      }
-    });
-
-    $rootScope.$on('$routeChangeSuccess', function(e, lastRoute) {
+  $rootScope.$on('$routeUpdate', function(e, lastRoute) {
+    if (silent) {
       silent = false;
+    } else {
+      $rootScope.$broadcast('$routeChanged', lastRoute);
+    }
+  });
+
+  $rootScope.$on('$routeChangeSuccess', function() {
+    silent = false;
+  });
+
+  var search = function() {
+    return $location.search.apply($location, arguments);
+  };
+
+  search.updateSilently = function(params, replaceFlag) {
+    var oldPath = $location.absUrl();
+
+    angular.forEach(params, function(value, key) {
+      $location.search(key, value);
     });
 
-    var search = function() {
-      var args = Array.prototype.slice(arguments);
+    var newPath = $location.absUrl();
 
-      return $location.search.apply($location, arguments);
+    if (newPath != oldPath) {
+      silent = true;
     }
 
-    search.updateSilently = function(params, replaceFlag) {
-      var oldPath = $location.absUrl();
+    if(replaceFlag) {
+      $location.replace();
+    }
+  };
 
-      angular.forEach(params, function(value, key) {
-        $location.search(key, value);
-      });
+  return search;
+}];
 
-      var newPath = $location.absUrl();
+var searchModule = angular.module('camunda.common.search', []);
 
-      if (newPath != oldPath) {
-        silent = true;
-      }
+searchModule.factory('search', SearchFactory);
 
-      if(replaceFlag) {
-        $location.replace();
-      }
-    };
+module.exports = searchModule;
 
-    return search;
-  }];
-
-  var searchModule = angular.module('camunda.common.search', []);
-
-  searchModule.factory('search', SearchFactory);
-
-  module.exports = searchModule;
-
-},{"camunda-bpm-sdk-js/vendor/angular":278}],16:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":277}],15:[function(require,module,exports){
 'use strict';
 
 var angular = require('camunda-bpm-sdk-js/vendor/angular'),
@@ -851,14 +771,14 @@ module.exports = angular.module('cam.commons.util', [])
   .provider('Uri', uriProvider)
   .service('Notifications', notifications);
 
-},{"./notifications":17,"./uriFilter":18,"./uriProvider":19,"camunda-bpm-sdk-js/vendor/angular":278}],17:[function(require,module,exports){
+},{"./notifications":16,"./uriFilter":17,"./uriProvider":18,"camunda-bpm-sdk-js/vendor/angular":277}],16:[function(require,module,exports){
 'use strict';
 
 var angular = require('camunda-bpm-sdk-js/vendor/angular');
 
-  module.exports = [
-            '$filter', '$timeout',
-    function($filter,   $timeout) {
+module.exports = [
+  '$filter', '$timeout',
+  function($filter,   $timeout) {
     return {
       notifications : [],
       consumers : [],
@@ -914,7 +834,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular');
 
         notifications.push(notification);
 
-        for (var i = consumers.length - 1, c; !!(c = consumers[i]); i--) {
+        for (var i = consumers.length - 1, c; (c = consumers[i]); i--) {
 
           // add to first interested consumer only
           if (c.add(notification)) {
@@ -989,7 +909,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular');
     };
   }];
 
-},{"camunda-bpm-sdk-js/vendor/angular":278}],18:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":277}],17:[function(require,module,exports){
 'use strict';
 
 var UriFilter = [ 'Uri', function(Uri) {
@@ -1000,16 +920,16 @@ var UriFilter = [ 'Uri', function(Uri) {
 
 module.exports = UriFilter;
 
-},{}],19:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 'use strict';
 var angular = require('camunda-bpm-sdk-js/vendor/angular');
 
 
-  module.exports = function() {
+module.exports = function() {
 
-    var TEMPLATES_PATTERN = /[\w]+:\/\/|:[\w]+/g;
+  var TEMPLATES_PATTERN = /[\w]+:\/\/|:[\w]+/g;
 
-    var replacements = {};
+  var replacements = {};
 
     /**
      * Specifies a pattern and its replacement on the UriProvider
@@ -1034,12 +954,12 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular');
      * @param {string} pattern
      * @param {string|Function} replacement string or function
      */
-    this.replace = function(pattern, replacement) {
-      replacements[pattern] = replacement;
-    };
+  this.replace = function(pattern, replacement) {
+    replacements[pattern] = replacement;
+  };
 
-    this.$get = [ '$injector', function($injector) {
-      return {
+  this.$get = [ '$injector', function($injector) {
+    return {
         /**
          * @function
          *
@@ -1048,38 +968,37 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular');
          * @param {string} str the uri to transform
          * @returns {string} the replaced string
          */
-        appUri: function appUri(str) {
-          var replaced = str.replace(TEMPLATES_PATTERN, function(template) {
+      appUri: function appUri(str) {
+        var replaced = str.replace(TEMPLATES_PATTERN, function(template) {
 
-            var replacement = replacements[template];
-            if (replacement === undefined) {
-              return template;
-            }
+          var replacement = replacements[template];
+          if (replacement === undefined) {
+            return template;
+          }
 
             // allow replace support for functions
-            if (angular.isFunction(replacement) || angular.isArray(replacement)) {
-              replacement = $injector.invoke(replacement);
-            }
+          if (angular.isFunction(replacement) || angular.isArray(replacement)) {
+            replacement = $injector.invoke(replacement);
+          }
 
-            return replacement;
-          });
+          return replacement;
+        });
 
-          return replaced;
-        }
-      };
-    }];
-  };
+        return replaced;
+      }
+    };
+  }];
+};
 
-},{"camunda-bpm-sdk-js/vendor/angular":278}],20:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":277}],19:[function(require,module,exports){
 'use strict';
 
 
-var angular = require('camunda-bpm-sdk-js/vendor/angular'),
-    Viewer = require('bpmn-js/lib/NavigatedViewer'),
+var Viewer = require('bpmn-js/lib/NavigatedViewer'),
 
     template = "<div class=\"alert alert-danger\"\n     ng-if=\"error\">\n  <span>\n    <strong>Could not render diagram:</strong>\n  </span>\n  <span>\n   {{ error.message }}\n  </span>\n</div>\n\n<div ng-show=\"!error\">\n\n  <div ng-if=\"!loaded\" class=\"placeholder-container\">\n    <div class=\"placeholder-content\">\n      Loading diagram<br />\n      <span class=\"glyphicon glyphicon-refresh animate-spin\"></span>\n    </div>\n  </div>\n\n  <div class=\"diagram-holder\" ng-class='{\"diagram-holder\": true, \"grab-cursor\": !disableNavigation && !grabbing, \"djs-cursor-move\": !disableNavigation && grabbing}'></div>\n\n  <div class=\"actions\"></div>\n\n  <div ng-if=\"!disableNavigation\"\n       class=\"navigation zoom\">\n    <button class=\"btn btn-default in\"\n            title=\"zoom in\"\n            ng-click=\"zoomIn()\">\n      <span class=\"glyphicon glyphicon-plus\"></span>\n    </button>\n    <button class=\"btn btn-default out\"\n            title=\"zoom out\"\n            ng-click=\"zoomOut()\">\n      <span class=\"glyphicon glyphicon-minus\"></span>\n    </button>\n  </div>\n\n  <div ng-if=\"!disableNavigation\"\n       class=\"navigation reset\">\n    <button class=\"btn btn-default\"\n            title=\"reset zoom\"\n            ng-click=\"resetZoom()\">\n      <span class=\"glyphicon glyphicon-screenshot\"></span>\n    </button>\n  </div>\n</div>\n";
 
-  module.exports = ['$compile', '$location', '$rootScope', 'search', 'debounce',
+module.exports = ['$compile', '$location', '$rootScope', 'search', 'debounce',
   function($compile,   $location,   $rootScope,   search, debounce) {
 
     return {
@@ -1249,13 +1168,13 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
         viewer.get('overlays').show = function() {
           viewer.get('eventBus').fire('overlays.show');
           originalShow();
-        }
+        };
 
         var originalHide = viewer.get('overlays').hide.bind(viewer.get('overlays'));
         viewer.get('overlays').hide = function() {
           viewer.get('eventBus').fire('overlays.hide');
           originalHide();
-        }
+        };
 
         var showAgain = debounce(function() {
           viewer.get('overlays').show();
@@ -1269,7 +1188,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
         }, 0);
         viewer.get('canvas')._viewboxChanged = function() {
           debouncedOriginal();
-        }
+        };
 
 
         var diagramData = null;
@@ -1293,7 +1212,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
             importFunction(diagramData, function(err, warn) {
 
-              var applyFunction = useDefinitions ? function(fn){fn();} : $scope.$apply.bind($scope);
+              var applyFunction = useDefinitions ? function(fn) {fn();} : $scope.$apply.bind($scope);
 
               applyFunction(function() {
                 if (err) {
@@ -1367,7 +1286,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
             var phase = $rootScope.$$phase;
             if (phase !== '$apply' && phase !== '$digest') {
-              $scope.$apply(function () {
+              $scope.$apply(function() {
                 $location.replace();
               });
             } else {
@@ -1399,7 +1318,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     };
   }];
 
-},{"bpmn-js/lib/NavigatedViewer":41,"camunda-bpm-sdk-js/vendor/angular":278}],21:[function(require,module,exports){
+},{"bpmn-js/lib/NavigatedViewer":40}],20:[function(require,module,exports){
 'use strict';
 
 var Clipboard = require('clipboard');
@@ -1416,13 +1335,13 @@ module.exports = ['$timeout', function($timeout) {
       value: '=camWidgetClipboard'
     },
 
-    link: function ($scope, element, attrs) {
+    link: function($scope, element, attrs) {
       var cb;
 
       $scope.noTooltip = typeof attrs.noTooltip !== 'undefined';
       $scope.copyStatus = null;
 
-      $scope.$watch('value', function () {
+      $scope.$watch('value', function() {
         $scope.tooltipText = 'Click to copy \'' + $scope.value + '\'';
       });
 
@@ -1430,37 +1349,37 @@ module.exports = ['$timeout', function($timeout) {
       var _top;
       function restore() {
         $scope.$apply();
-        _top = $timeout(function () {
+        _top = $timeout(function() {
           $scope.copyStatus = null;
         }, 1200, true);
       }
 
       // needed because otherwise the content of `element` is not rendered yet
       // and `querySelector` is then not available
-      $timeout(function () {
+      $timeout(function() {
         var link = element[0].querySelector('a.glyphicon-copy');
         if (!link) { return; }
 
         cb = new Clipboard(link, {
-          text: function () {
+          text: function() {
             return $scope.value;
           }
         });
 
-        cb.on('success', function () {
+        cb.on('success', function() {
           $scope.copyStatus = true;
           restore();
         });
 
 
-        cb.on('error', function () {
+        cb.on('error', function() {
           $scope.copyStatus = false;
           restore();
         });
       });
 
 
-      $scope.$on('$destroy', function () {
+      $scope.$on('$destroy', function() {
         cb.destroy();
         if (_top) {
           $timeout.cancel(top);
@@ -1470,36 +1389,34 @@ module.exports = ['$timeout', function($timeout) {
   };
 }];
 
-},{"clipboard":280}],22:[function(require,module,exports){
+},{"clipboard":279}],21:[function(require,module,exports){
 'use strict';
 
 
-var angular = require('camunda-bpm-sdk-js/vendor/angular'),
+var template = "<div class=\"debug\">\n  <div class=\"col-xs-2\">\n    <button class=\"btn btn-default btn-round\"\n            ng-click=\"toggleOpen()\"\n            tooltip=\"{{tooltip}}\">\n      <span class=\"glyphicon\"\n            ng-class=\"{'glyphicon-eye-open': !open, 'glyphicon-eye-close': open}\"></span>\n    </button>\n  </div>\n  <div class=\"col-xs-10\"\n       ng-show=\"open\">\n    <span cam-widget-clipboard=\"debugged | json \"\n          no-tooltip>\n      <code>{{ varName }}</code>\n    </span>\n    <pre>{{ debugged | json }}</pre>\n  </div>\n</div>\n";
 
-    template = "<div class=\"debug\">\n  <div class=\"col-xs-2\">\n    <button class=\"btn btn-default btn-round\"\n            ng-click=\"toggleOpen()\"\n            tooltip=\"{{tooltip}}\">\n      <span class=\"glyphicon\"\n            ng-class=\"{'glyphicon-eye-open': !open, 'glyphicon-eye-close': open}\"></span>\n    </button>\n  </div>\n  <div class=\"col-xs-10\"\n       ng-show=\"open\">\n    <span cam-widget-clipboard=\"debugged | json \"\n          no-tooltip>\n      <code>{{ varName }}</code>\n    </span>\n    <pre>{{ debugged | json }}</pre>\n  </div>\n</div>\n";
+module.exports = [function() {
+  return {
+    template: template,
 
-  module.exports = [function() {
-    return {
-      template: template,
+    scope: {
+      debugged:    '=',
+      displayName: '=?',
+      open:        '@',
+      tooltip:     '@camWidgetDebugTooltip'
+    },
 
-      scope: {
-        debugged:    '=',
-        displayName: '=?',
-        open:        '@',
-        tooltip:     '@camWidgetDebugTooltip'
-      },
+    link: function(scope, element, attrs) {
+      scope.varName = attrs.displayName || attrs.debugged;
 
-      link: function (scope, element, attrs) {
-        scope.varName = attrs.displayName || attrs.debugged;
+      scope.toggleOpen = function() {
+        scope.open = !scope.open;
+      };
+    }
+  };
+}];
 
-        scope.toggleOpen = function() {
-          scope.open = !scope.open;
-        };
-      }
-    };
-  }];
-
-},{"camunda-bpm-sdk-js/vendor/angular":278}],23:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 'use strict';
 
 
@@ -1508,113 +1425,113 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
     template = "<div class=\"alert alert-danger\"\n     ng-if=\"error\">\n  <strong>Could not render table:</strong><br/>\n  {{ error.message }}\n</div>\n\n<div ng-show=\"!error\"\n     ng-if=\"!loaded\"\n     class=\"placeholder-container\">\n  <div class=\"placeholder-content\">\n    Loading table<br />\n    <span class=\"glyphicon glyphicon-refresh animate-spin\"></span>\n  </div>\n</div>\n\n<div ng-show=\"!error\"\n     class=\"table-holder\"></div>\n";
 
-  module.exports = [function() {
+module.exports = [function() {
 
-    return {
-      scope: {
-        tableXml: '=',
-        width: '=',
-        height: '=',
-        control: '=?',
-        editMode: '&',
-        showDetails: '&',
-        onLoad: '&'
-      },
+  return {
+    scope: {
+      tableXml: '=',
+      width: '=',
+      height: '=',
+      control: '=?',
+      editMode: '&',
+      showDetails: '&',
+      onLoad: '&'
+    },
 
-      template: template,
+    template: template,
 
-      link: function($scope, $element) {
+    link: function($scope, $element) {
 
         // parse boolean
-        $scope.editMode = $scope.$eval($scope.editMode);
-        $scope.showDetails = $scope.$eval($scope.showDetails);
+      $scope.editMode = $scope.$eval($scope.editMode);
+      $scope.showDetails = $scope.$eval($scope.showDetails);
 
         // --- CONTROL FUNCTIONS ---
-        $scope.control = $scope.control || {};
+      $scope.control = $scope.control || {};
 
-        $scope.control.getViewer = function() {
-          return viewer;
-        };
+      $scope.control.getViewer = function() {
+        return viewer;
+      };
 
-        $scope.control.getElement = function(elementId) {
-          return viewer.get('elementRegistry').get(elementId);
-        };
+      $scope.control.getElement = function(elementId) {
+        return viewer.get('elementRegistry').get(elementId);
+      };
 
-        $scope.loaded = false;
-        $scope.control.isLoaded = function() {
-          return $scope.loaded;
-        };
+      $scope.loaded = false;
+      $scope.control.isLoaded = function() {
+        return $scope.loaded;
+      };
 
-        $scope.control.highlightRow = function(elementId, className) {
-          var elementRegistry = viewer.get('elementRegistry');
-          viewer.get('eventBus').on('row.render', function(event) {
-            if (event.data.id === elementId) {
-              angular.element(event.gfx).addClass(className);
-            }
-          });
+      $scope.control.highlightRow = function(elementId, className) {
+        var elementRegistry = viewer.get('elementRegistry');
+        viewer.get('eventBus').on('row.render', function(event) {
+          if (event.data.id === elementId) {
+            angular.element(event.gfx).addClass(className);
+          }
+        });
 
-          viewer.get('graphicsFactory').update('row', elementRegistry.get(elementId), elementRegistry.getGraphics(elementId));
-        };
+        viewer.get('graphicsFactory').update('row', elementRegistry.get(elementId), elementRegistry.getGraphics(elementId));
+      };
 
-        var DmnViewer = Viewer;
-        if(!$scope.editMode) {
-          DmnViewer = Object.getPrototypeOf(Viewer.prototype).constructor;
+      var DmnViewer = Viewer;
+      if(!$scope.editMode) {
+        DmnViewer = Object.getPrototypeOf(Viewer.prototype).constructor;
+      }
+
+      var container = $element[0].querySelector('.table-holder');
+      var viewer = new DmnViewer({
+        container: container,
+        width: $scope.width,
+        height: $scope.height,
+        hideDetails: !$scope.showDetails
+      });
+
+      var tableXml = null;
+
+      $scope.$watch('tableXml', function(newValue) {
+        if (newValue) {
+          tableXml = newValue;
+          renderTable();
         }
+      });
 
-        var container = $element[0].querySelector('.table-holder');
-        var viewer = new DmnViewer({
-          container: container,
-          width: $scope.width,
-          height: $scope.height,
-          hideDetails: !$scope.showDetails
-        });
+      function renderTable() {
+        if (tableXml) {
+          $scope.loaded = false;
 
-        var tableXml = null;
+          viewer.importXML(tableXml, function(err) {
 
-        $scope.$watch('tableXml', function(newValue) {
-          if (newValue) {
-            tableXml = newValue;
-            renderTable();
-          }
-        });
-
-        function renderTable() {
-          if (tableXml) {
-            $scope.loaded = false;
-
-            viewer.importXML(tableXml, function(err, warn) {
-
-              $scope.$apply(function() {
-                if(err) {
-                  $scope.error = err;
-                  return;
-                }
-                $scope.loaded = true;
-                $scope.onLoad();
-              });
+            $scope.$apply(function() {
+              if(err) {
+                $scope.error = err;
+                return;
+              }
+              $scope.loaded = true;
+              $scope.onLoad();
             });
-          }
+          });
         }
       }
-    };
-  }];
+    }
+  };
+}];
 
-},{"camunda-bpm-sdk-js/vendor/angular":278,"dmn-js/lib/Modeler":288}],24:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":277,"dmn-js/lib/Modeler":287}],23:[function(require,module,exports){
 'use strict';
 
 
 var template = "<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-xs-12\">\n      Powered by <a href=\"http://camunda.org\">camunda BPM</a> /\n      <span class=\"version\">{{version}}</span>\n    </div>\n  </div>\n</div>\n";
 
-  module.exports = [function() {
-    return {
-      template: template,
-      scope: {
-        version: '@'
-      }
-    };
-  }];
+module.exports = [function() {
+  return {
+    template: template,
+    scope: {
+      version: '@'
+    }
+  };
+}];
 
-},{}],25:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 'use strict';
 
 
@@ -1622,71 +1539,71 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
     template = "<div class=\"navbar-header\">\n  <button type=\"button\"\n          class=\"navbar-toggle\"\n          ng-class=\"{open: !!navbarOpen}\"\n          ng-click=\"navbarOpen = !navbarOpen\">\n    <em class=\"sr-only\">{{ toggleNavigation }}</em>\n    <span></span>\n    <span></span>\n    <span></span>\n  </button>\n\n  <a class=\"navbar-brand\"\n     href=\"#/\"\n     title=\"{{ brandName }} {{ appName }}\">\n    <span class=\"brand-logo\"></span>\n    <span class=\"brand-name\" ng-cloak>{{ brandName }}</span>\n  </a>\n\n  <div class=\"small-screen-warning\">\n    <span class=\"glyphicon glyphicon-exclamation-sign\"\n          tooltip=\"{{ smallScreenWarning }}\"\n          tooltip-placement=\"bottom\"></span>\n  </div>\n</div>\n\n<nav class=\"cam-nav app-menu\">\n  <ul ng-class=\"{collapse: !navbarOpen}\">\n\n    <li engine-select></li>\n\n    <li class=\"account dropdown\"\n        ng-if=\"authentication.name\"\n        ng-cloak>\n      <a href\n         class=\"dropdown-toggle\">\n        <span class=\"glyphicon glyphicon-user \"></span>\n        {{ (userName || authentication.name) }}\n      </a>\n\n      <ul class=\"dropdown-menu dropdown-menu-right\">\n        <li class=\"profile\">\n          <a ng-href=\"{{ '../../admin/:engine/#/users/' + authentication.name + '?tab=profile' | uri }}\">\n            {{ myProfile }}\n          </a>\n        </li>\n\n        <li class=\"divider\"></li>\n\n        <li class=\"logout\">\n          <a href\n             ng-click=\"logout()\">\n            {{ signOut }}\n          </a>\n        </li>\n      </ul>\n    </li>\n\n    <li class=\"divider-vertical\"\n        ng-if=\"authentication.name\"\n        ng-cloak></li>\n\n    <li class=\"app-switch dropdown\">\n      <a href\n         class=\"dropdown-toggle\">\n        <span class=\"glyphicon glyphicon-home\"></span>\n        <span class=\"caret\"></span>\n      </a>\n\n      <ul class=\"dropdown-menu dropdown-menu-right\">\n        <li ng-repeat=\"(appName, app) in apps\"\n            ng-if=\"appName !== currentApp && (!authentication || authentication.canAccess(appName))\"\n            ng-class=\"appName\">\n          <a ng-href=\"{{ '../../' + appName + '/:engine/' | uri }}\">\n            {{ app.label }}\n          </a>\n        </li>\n      </ul>\n    </li>\n  </ul>\n</nav>\n\n<div ng-transclude\n     class=\"sections-menu\"\n     ng-class=\"{collapse: !navbarOpen}\"></div>\n";
 
-  var apps = {
-    admin: {
-      label: 'Admin'
-    },
-    cockpit: {
-      label: 'Cockpit'
-    },
-    tasklist: {
-      label: 'Tasklist'
-    }
-  };
-
-  function setApps(currentApp) {
-    var copied = angular.copy(apps);
-    if (currentApp) {
-      delete copied[currentApp];
-    }
-    return copied;
+var apps = {
+  admin: {
+    label: 'Admin'
+  },
+  cockpit: {
+    label: 'Cockpit'
+  },
+  tasklist: {
+    label: 'Tasklist'
   }
+};
 
-  module.exports = [function() {
-    return {
-      transclude: true,
+function setApps(currentApp) {
+  var copied = angular.copy(apps);
+  if (currentApp) {
+    delete copied[currentApp];
+  }
+  return copied;
+}
 
-      template: template,
+module.exports = [function() {
+  return {
+    transclude: true,
 
-      scope: {
-        authentication: '=',
-        userName: '=?',
-        currentApp: '@',
-        signOut: '@?',
-        toggleNavigation: '@?',
-        myProfile: '@?',
-        smallScreenWarning: '@?',
-        brandName: '@'
-      },
+    template: template,
 
-      compile: function (el, attrs) {
-        if (!attrs.toggleNavigation) { attrs.toggleNavigation = 'Toggle navigation'; }
-        if (!attrs.myProfile) { attrs.myProfile = 'My profile'; }
-        if (!attrs.signOut) { attrs.signOut = 'Sign out'; }
-        if (!attrs.brandName) { attrs.brandName = 'Camunda'; }
-        if (!attrs.smallScreenWarning) {
-          attrs.smallScreenWarning = 'This application is conceived for larger screens.';
-        }
-      },
+    scope: {
+      authentication: '=',
+      userName: '=?',
+      currentApp: '@',
+      signOut: '@?',
+      toggleNavigation: '@?',
+      myProfile: '@?',
+      smallScreenWarning: '@?',
+      brandName: '@'
+    },
 
-      controller: [
-        '$scope',
-        'AuthenticationService',
-      function (
+    compile: function(el, attrs) {
+      if (!attrs.toggleNavigation) { attrs.toggleNavigation = 'Toggle navigation'; }
+      if (!attrs.myProfile) { attrs.myProfile = 'My profile'; }
+      if (!attrs.signOut) { attrs.signOut = 'Sign out'; }
+      if (!attrs.brandName) { attrs.brandName = 'Camunda'; }
+      if (!attrs.smallScreenWarning) {
+        attrs.smallScreenWarning = 'This application is conceived for larger screens.';
+      }
+    },
+
+    controller: [
+      '$scope',
+      'AuthenticationService',
+      function(
         $scope,
         AuthenticationService
       ) {
         $scope.apps = setApps($scope.currentApp);
         $scope.logout = AuthenticationService.logout;
 
-        $scope.$watch('currentApp', function () {
+        $scope.$watch('currentApp', function() {
           $scope.apps = setApps($scope.currentApp);
         });
       }]
-    };
-  }];
+  };
+}];
 
-},{"camunda-bpm-sdk-js/vendor/angular":278}],26:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":277}],25:[function(require,module,exports){
 'use strict';
 
 var angular = require('camunda-bpm-sdk-js/vendor/angular'),
@@ -1711,29 +1628,29 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
 require('../../vendor/ui-bootstrap-tpls-0.11.2-camunda');
 
-  var widgetModule = angular.module('camunda.common.widgets', [filtersModule.name, directivesModule.name, searchModule.name, 'ui.bootstrap']);
+var widgetModule = angular.module('camunda.common.widgets', [filtersModule.name, directivesModule.name, searchModule.name, 'ui.bootstrap']);
 
-  widgetModule.directive('camWidgetInlineField', inlineField);
-  widgetModule.directive('camWidgetSearchPill', searchPill);
-  widgetModule.directive('camWidgetHeader', header);
-  widgetModule.directive('camWidgetFooter', footer);
-  widgetModule.directive('camWidgetLoader', loader);
-  widgetModule.directive('camWidgetDebug', debug);
-  widgetModule.directive('camWidgetClipboard', clipboard);
-  widgetModule.directive('camWidgetVariable', variable);
-  widgetModule.directive('camWidgetVariablesTable', variablesTable);
-  widgetModule.directive('camRenderVarTemplate', camRenderVarTemplate);
-  widgetModule.directive('camWidgetSearch', search);
-  widgetModule.directive('camWidgetBpmnViewer', bpmnViewer);
-  widgetModule.directive('camWidgetDmnViewer', dmnViewer);
+widgetModule.directive('camWidgetInlineField', inlineField);
+widgetModule.directive('camWidgetSearchPill', searchPill);
+widgetModule.directive('camWidgetHeader', header);
+widgetModule.directive('camWidgetFooter', footer);
+widgetModule.directive('camWidgetLoader', loader);
+widgetModule.directive('camWidgetDebug', debug);
+widgetModule.directive('camWidgetClipboard', clipboard);
+widgetModule.directive('camWidgetVariable', variable);
+widgetModule.directive('camWidgetVariablesTable', variablesTable);
+widgetModule.directive('camRenderVarTemplate', camRenderVarTemplate);
+widgetModule.directive('camWidgetSearch', search);
+widgetModule.directive('camWidgetBpmnViewer', bpmnViewer);
+widgetModule.directive('camWidgetDmnViewer', dmnViewer);
 
-  widgetModule.directive('camVariableValidator', variableValidator);
+widgetModule.directive('camVariableValidator', variableValidator);
 
-  widgetModule.filter('camQueryComponent', camQueryComponent);
+widgetModule.filter('camQueryComponent', camQueryComponent);
 
-  module.exports = widgetModule;
+module.exports = widgetModule;
 
-},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":575,"../directives/index":6,"../filter/date/index":14,"../search/index":15,"./bpmn-viewer/cam-widget-bpmn-viewer":20,"./clipboard/cam-widget-clipboard":21,"./debug/cam-widget-debug":22,"./dmn-viewer/cam-widget-dmn-viewer":23,"./footer/cam-widget-footer":24,"./header/cam-widget-header":25,"./inline-field/cam-widget-inline-field":27,"./loader/cam-widget-loader":28,"./search-pill/cam-query-component":29,"./search-pill/cam-widget-search-pill":30,"./search/cam-widget-search":31,"./variable/cam-variable-validator":34,"./variable/cam-widget-variable":35,"./variables-table/cam-render-var-template":36,"./variables-table/cam-widget-variables-table":37,"camunda-bpm-sdk-js/vendor/angular":278}],27:[function(require,module,exports){
+},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":574,"../directives/index":6,"../filter/date/index":13,"../search/index":14,"./bpmn-viewer/cam-widget-bpmn-viewer":19,"./clipboard/cam-widget-clipboard":20,"./debug/cam-widget-debug":21,"./dmn-viewer/cam-widget-dmn-viewer":22,"./footer/cam-widget-footer":23,"./header/cam-widget-header":24,"./inline-field/cam-widget-inline-field":26,"./loader/cam-widget-loader":27,"./search-pill/cam-query-component":28,"./search-pill/cam-widget-search-pill":29,"./search/cam-widget-search":30,"./variable/cam-variable-validator":33,"./variable/cam-widget-variable":34,"./variables-table/cam-render-var-template":35,"./variables-table/cam-widget-variables-table":36,"camunda-bpm-sdk-js/vendor/angular":277}],26:[function(require,module,exports){
 'use strict';
 
 
@@ -1742,10 +1659,10 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
     template = "<span ng-show=\"!editing\"\n      ng-click=\"startEditing()\"\n      ng-transclude\n      class=\"view-value\">\n</span>\n\n<span ng-if=\"editing && (varType === 'datetime' || varType === 'date' || varType === 'time')\"\n      class=\"preview\">\n  {{ dateValue | camDate }}\n</span>\n\n<span ng-if=\"editing\"\n      class=\"edit\">\n\n  <input ng-if=\"simpleField\"\n         class=\"form-control\"\n         type=\"{{ varType }}\"\n         ng-model=\"editValue\"\n         ng-keydown=\"handleKeydown($event)\"\n         placeholder=\"{{ placeholder }}\" />\n\n  <span ng-show=\"varType === 'datetime' || varType === 'date' || varType === 'time'\"\n        class=\"cam-widget-inline-field field-control\">\n\n    <datepicker class=\"datepicker\"\n                ng-if=\"varType === 'datetime' || varType === 'date'\"\n                type=\"text\"\n                ng-required=\"true\"\n                is-open=\"datePickerOptions.isOpen\"\n                show-button-bar=\"false\"\n\n                ng-model=\"dateValue\"\n                ng-change=\"changeDate(this)\"></datepicker>\n\n    <timepicker class=\"timepicker\"\n                ng-if=\"varType === 'datetime' || varType === 'time'\"\n                show-meridian=\"false\"\n\n                ng-model=\"dateValue\"\n                ng-change=\"changeDate(this)\"></timepicker>\n  </span>\n\n  <input ng-if=\"varType === 'option' && options[0].value\"\n         class=\"form-control\"\n         type=\"text\"\n         ng-model=\"editValue\"\n         ng-keydown=\"handleKeydown($event)\"\n         typeahead=\"option as option.value for option in options | filter:$viewValue:instantTypeahead\"\n         typeahead-on-select=\"saveSelection($item)\"\n         instant-typeahead />\n  <input ng-if=\"varType === 'option' && !options[0].value\"\n         class=\"form-control\"\n         type=\"text\"\n         ng-model=\"editValue\"\n         ng-keydown=\"handleKeydown($event)\"\n         typeahead=\"option for option in options | filter:$viewValue:instantTypeahead\"\n         typeahead-on-select=\"saveSelection($item)\"\n         instant-typeahead />\n\n  <span ng-show=\"varType !== 'option'\"\n        class=\"cam-widget-inline-field btn-group\">\n    <button type=\"button\"\n            class=\"btn btn-xs btn-default\"\n            ng-click=\"changeType()\"\n            ng-if=\"flexible\">\n      <span class=\"glyphicon\"\n            ng-class=\"'glyphicon-' + (varType === 'text' ? 'calendar' : 'pencil')\"></span>\n    </button>\n\n    <button type=\"button\"\n            class=\"btn btn-xs btn-default\"\n            ng-click=\"applyChange($event)\">\n      <span class=\"glyphicon glyphicon-ok\"></span>\n    </button>\n\n    <button type=\"button\"\n            class=\"btn btn-xs btn-default\"\n            ng-click=\"cancelChange($event)\">\n      <span class=\"glyphicon glyphicon-remove\"></span>\n    </button>\n  </span>\n</span>\n";
 
-  module.exports = [
-    '$timeout',
-    '$filter',
-    '$document',
+module.exports = [
+  '$timeout',
+  '$filter',
+  '$document',
   function(
     $timeout,
     $filter,
@@ -1828,7 +1745,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
           scope.allowNonOptions=scope.allowNonOptions || false;
           scope.flexible =      scope.flexible ||      false;
 
-          scope.varType =       !!scope.varType ? scope.varType : 'text';
+          scope.varType =       scope.varType ? scope.varType : 'text';
 
           scope.simpleField = isSimpleField();
 
@@ -1875,7 +1792,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
               left: offset.left,
               top: offset.top + $(element).outerHeight()
             });
-          }
+        }
 
         function appendToBody() {
           $btnsEl = (($btnsEl && $btnsEl.length) ? $btnsEl : $(element[0].querySelector('.btn-group')))
@@ -1921,7 +1838,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
 
 
-        scope.$watch('editing', function (after, before) {
+        scope.$watch('editing', function(after, before) {
           if (after === before) { return; }
 
           if (scope.editing) {
@@ -1987,8 +1904,8 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
             // input field is rendered and we can open the typeahead dropdown (first timeout). However, the instantTypeahead directive does
             // not immediately register its functions to prevent IE from going crazy. Therefore, we have to wait for another cycle
             // (second timeout), before triggering an input event on the input field can open the instant typeahead dropdown.
-            $timeout(function(){
-              $timeout(function(){
+            $timeout(function() {
+              $timeout(function() {
                 // trigger the typeahead (which shows all options)
                 angular.element(element[0].querySelector('[ng-model="editValue"]')).triggerHandler('input');
                 // and reset the edit value, so that the user can type
@@ -2012,7 +1929,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
               });
             });
 
-            $timeout(function(){
+            $timeout(function() {
               $('[ng-model="editValue"]').focus();
               $('[ng-model="editValue"]').select();
               $document.bind('click', stopEditing);
@@ -2064,24 +1981,24 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
         };
 
         scope.selectNextInlineField = function(reversed) {
-          var allFields = $("[cam-widget-inline-field][type='text'], [cam-widget-inline-field][type='option']");
+          var allFields = $('[cam-widget-inline-field][type=\'text\'], [cam-widget-inline-field][type=\'option\']');
           for(var i = reversed*(allFields.length - 1); i !== !reversed*(allFields.length-1); i += !reversed*2-1) {
 
             if(allFields[i] === element[0]) {
-              $timeout(function(){
+              $timeout(function() {
                 var element = $(allFields[i+!reversed*2-1]);
-                element.find(".view-value").click();
+                element.find('.view-value').click();
                 // after clicking the next inline field, wait for the input to appear, then select all
-                $timeout(function(){
-                  element.find("input").select();
+                $timeout(function() {
+                  element.find('input').select();
                 });
               });
               return;
             }
           }
           // take the first/last one
-          $timeout(function(){
-            $(allFields[reversed*allFields.length - 1]).find(".view-value").click();
+          $timeout(function() {
+            $(allFields[reversed*allFields.length - 1]).find('.view-value').click();
           });
         };
 
@@ -2103,7 +2020,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
         scope.selection = null;
         scope.saveSelection = function(selection) {
           scope.selection = selection;
-          $timeout(function(){
+          $timeout(function() {
             // check if the selection has been applied
             if(scope.selection === selection) {
               scope.applyChange(selection);
@@ -2117,7 +2034,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     };
   }];
 
-},{"camunda-bpm-sdk-js/vendor/angular":278,"jquery":573}],28:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":277,"jquery":572}],27:[function(require,module,exports){
 'use strict';
 
 
@@ -2125,43 +2042,41 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
     template = "<div class=\"loader-state loaded\"\n     ng-show=\"loadingState === 'LOADED'\"\n     ng-transclude></div>\n\n<div class=\"loader-state loading\"\n     ng-if=\"loadingState === 'LOADING'\">\n  <span class=\"glyphicon glyphicon-refresh animate-spin\"></span>\n  {{ textLoading }}\n</div>\n\n<div class=\"loader-state empty\"\n     ng-if=\"loadingState === 'EMPTY'\">\n  {{ textEmpty }}\n</div>\n\n<div class=\"loader-state alert alert-danger\"\n     ng-if=\"loadingState === 'ERROR'\">\n  {{ textError }}\n</div>\n";
 
-  module.exports = [function() {
-    return {
-      transclude: true,
+module.exports = [function() {
+  return {
+    transclude: true,
 
-      template: template,
+    template: template,
 
-      scope: {
-        loadingState: '@',
-        textEmpty:    '@',
-        textError:    '@',
-        textLoading:  '@'
-      },
+    scope: {
+      loadingState: '@',
+      textEmpty:    '@',
+      textError:    '@',
+      textLoading:  '@'
+    },
 
-      compile: function (element, attrs) {
-        if (!angular.isDefined(attrs.textLoading)) {
-          attrs.textLoading = 'Loading…';
-        }
-
-        if (!angular.isDefined(attrs.loadingState)) {
-          attrs.loadingState = 'INITIAL';
-        }
+    compile: function(element, attrs) {
+      if (!angular.isDefined(attrs.textLoading)) {
+        attrs.textLoading = 'Loading…';
       }
-    };
-  }];
 
-},{"camunda-bpm-sdk-js/vendor/angular":278}],29:[function(require,module,exports){
+      if (!angular.isDefined(attrs.loadingState)) {
+        attrs.loadingState = 'INITIAL';
+      }
+    }
+  };
+}];
+
+},{"camunda-bpm-sdk-js/vendor/angular":277}],28:[function(require,module,exports){
 'use strict';
 
-var angular = require('camunda-bpm-sdk-js/vendor/angular');
-
-  module.exports = [
-    '$filter',
+module.exports = [
+  '$filter',
   function($filter) {
     var dateRegex = /(\d\d\d\d)-(\d\d)-(\d\d)T(\d\d):(\d\d):(\d\d)(?:.(\d\d\d)| )?$/;
 
     function isDateValue(value) {
-       return value.match(dateRegex);
+      return value.match(dateRegex);
     }
 
     var camDate = $filter('camDate');
@@ -2175,16 +2090,15 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular');
 
   }];
 
-},{"camunda-bpm-sdk-js/vendor/angular":278}],30:[function(require,module,exports){
+},{}],29:[function(require,module,exports){
 'use strict';
 
 
-var angular = require('camunda-bpm-sdk-js/vendor/angular'),
-    $ = require('jquery'),
+var $ = require('jquery'),
 
     template = "<!-- CE # camunda-commons-ui/lib/widgets/search-pill/search-pill.html -->\n<span class=\"search-label\"\n      ng-class=\"{'invalid': !valid}\">\n  <a href\n     ng-click=\"onDelete()\"\n     tooltip-placement=\"top\"\n     tooltip=\"{{ deleteText }}\"\n     class=\"remove-search glyphicon glyphicon-remove\">\n  </a>\n\n  <span cam-widget-inline-field\n        class=\"set-value type-field\"\n        tabindex=\"0\"\n        ng-keydown=\"onKeydown($event, 'type')\"\n        type=\"option\"\n        options=\"type.values\"\n        change=\"changeSearch('type', varValue, $event)\"\n        on-start-editing=\"clearEditTrigger('type')\"\n        value=\"type.value\">\n    <span ng-if=\"type.tooltip\"\n          tooltip-placement=\"top\"\n          tooltip=\"{{type.tooltip}}\">\n      {{ type.value.value | camQueryComponent }}\n    </span>\n    <span ng-if=\"!type.tooltip\">\n      {{ type.value.value | camQueryComponent }}\n    </span>\n  </span>\n\n  <span ng-if=\"extended\">:</span>\n\n  <span ng-if=\"extended && potentialNames.length <= 0 && !!name.value.value\"\n        cam-widget-inline-field\n        class=\"set-value name-field\"\n        type=\"text\"\n        tabindex=\"0\"\n        ng-keydown=\"onKeydown($event,'name')\"\n        change=\"changeSearch('name', varValue, $event)\"\n        on-start-editing=\"clearEditTrigger('name')\"\n        value=\"name.value.value\">\n    <span ng-if=\"name.tooltip\"\n          tooltip-placement=\"top\"\n          tooltip=\"{{name.tooltip}}\">\n        {{ name.value.value | camQueryComponent }}\n    </span>\n    <span ng-if=\"!name.tooltip\">\n        {{ name.value.value | camQueryComponent }}\n    </span>\n  </span>\n\n  <span ng-if=\"extended && potentialNames.length <= 0 && !name.value.value\"\n        cam-widget-inline-field\n        class=\"set-value name-field\"\n        tabindex=\"0\"\n        ng-keydown=\"onKeydown($event, 'name')\"\n        type=\"text\"\n        change=\"changeSearch('name', varValue, $event)\"\n        on-start-editing=\"clearEditTrigger('name')\"\n        value=\"name.value\">\n    <span ng-if=\"name.tooltip\"\n          tooltip-placement=\"top\"\n          tooltip=\"{{name.tooltip}}\">\n        {{ name.value | camQueryComponent }}\n    </span>\n    <span ng-if=\"!name.tooltip\">\n        {{ name.value | camQueryComponent }}\n    </span>\n  </span>\n\n  <span ng-if=\"extended && potentialNames.length > 0\"\n        cam-widget-inline-field\n        class=\"set-value name-field\"\n        tabindex=\"0\"\n        ng-keydown=\"onKeydown($event, 'name')\"\n        type=\"option\"\n        options=\"potentialNames\"\n        allow-non-options=\"true\"\n        change=\"changeSearch('name', varValue, $event)\"\n        on-start-editing=\"clearEditTrigger('name')\"\n        value=\"name.value\">\n    <span ng-if=\"extended && name.tooltip && name.value.key\">\n      {{ name.value.value | camQueryComponent }}\n    </span>\n    <span ng-if=\"extended && name.tooltip && !name.value.key\">\n      {{ name.value | camQueryComponent }}\n    </span>\n    <span ng-if=\"extended && !name.tooltip && name.value.key\">\n      {{ name.value.value | camQueryComponent }}\n    </span>\n    <span ng-if=\"extended && !name.tooltip && !name.value.key\">\n      {{ name.value | camQueryComponent }}\n    </span>\n  </span>\n\n  <span ng-if=\"!basic && operator.values.length > 1\"\n        cam-widget-inline-field\n        class=\"set-value operator-field\"\n        tabindex=\"0\"\n        ng-keydown=\"onKeydown($event, 'operator')\"\n        type=\"option\"\n        options=\"operator.values\"\n        change=\"changeSearch('operator', varValue, $event)\"\n        on-start-editing=\"clearEditTrigger('operator')\"\n        value=\"operator.value\">\n    <span ng-if=\"operator.tooltip\"\n          tooltip-placement=\"top\"\n          tooltip=\"{{operator.tooltip}}\">\n      {{ operator.value.value | camQueryComponent }}\n    </span>\n    <span ng-if=\"!operator.tooltip\">\n      {{ operator.value.value | camQueryComponent }}\n    </span>\n  </span>\n\n  <span ng-if=\"operator.values.length < 2 && operator.tooltip\"\n        tooltip-placement=\"top\"\n        tooltip=\"{{operator.tooltip}}\"\n        class=\"operator-field\">\n    {{ operator.value.value | camQueryComponent }}\n  </span>\n  <span ng-if=\"operator.values.length < 2 && !operator.tooltip\"\n        class=\"operator-field\">\n    {{ operator.value.value | camQueryComponent }}\n  </span>\n\n  <span cam-widget-inline-field\n        class=\"set-value value-field\"\n        tabindex=\"0\"\n        ng-keydown=\"onKeydown($event, 'value')\"\n        type=\"{{ valueType }}\"\n        change=\"changeSearch('value', varValue, $event)\"\n        on-start-editing=\"clearEditTrigger('value')\"\n        ng-if=\"!basic\"\n        value=\"value.value\"\n        flexible=\"{{ allowDates }}\">\n    <span class=\"visible-whitespace\"\n          ng-if=\"value.tooltip\"\n          tooltip-placement=\"top\"\n          tooltip=\"{{value.tooltip}}\">{{ value.value | camQueryComponent }}</span>\n    <span class=\"visible-whitespace\"\n          ng-if=\"!value.tooltip\">{{ value.value | camQueryComponent }}</span>\n  </span>\n</span>\n<!-- CE / camunda-commons-ui/lib/widgets/search-pill/search-pill.html -->\n";
 
-  module.exports = ['$timeout',
+module.exports = ['$timeout',
   function($timeout) {
 
     return {
@@ -2210,7 +2124,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
         onDelete: '&'
       },
 
-      link: function($scope, element, attrs) {
+      link: function($scope, element) {
         $scope.valueType = $scope.enforceDates ? 'datetime' : 'text';
         $scope.potentialNames = $scope.potentialNames || [];
 
@@ -2233,27 +2147,27 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
           }
         };
 
-        $scope.$watch('allowDates', function(newValue){
+        $scope.$watch('allowDates', function(newValue) {
           if(!newValue) {
             $scope.valueType = 'text';
           }
         });
 
-        $scope.$watch('enforceDates', function(newValue){
+        $scope.$watch('enforceDates', function(newValue) {
           if(newValue) {
             $scope.valueType = 'datetime';
           }
         });
-        
+
         $scope.$watch('enforceString', function(newValue) {
           if(newValue) {
-            $scope.valueType = "text";
+            $scope.valueType = 'text';
           }
         });
 
         var focusField = function(fieldName) {
-          $timeout(function(){
-            $(element[0].querySelectorAll("[cam-widget-inline-field][value='"+fieldName+".value']")).find(".view-value").click();
+          $timeout(function() {
+            $(element[0].querySelectorAll('[cam-widget-inline-field][value=\''+fieldName+'.value\']')).find('.view-value').click();
           });
         };
         $scope.$watch('value', function(newValue) {
@@ -2278,7 +2192,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     };
   }];
 
-},{"camunda-bpm-sdk-js/vendor/angular":278,"jquery":573}],31:[function(require,module,exports){
+},{"jquery":572}],30:[function(require,module,exports){
 'use strict';
 
 
@@ -2288,57 +2202,57 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     template = "<form class=\"search-field\"\n      ng-submit=\"createSearch()\"\n      ng-class=\"{'has-search': searches.length}\">\n\n  <div class=\"form-container search-container\"\n       ng-class=\"{'has-icon': !!mode}\">\n    <span ng-if=\"mode\"\n          class=\"search-type glyphicon\"\n          ng-class=\"'glyphicon-' + mode\"></span>\n    <span cam-widget-search-pill\n          ng-repeat=\"search in searches\"\n          extended=\"search.extended\"\n          basic=\"search.basic\"\n          allow-dates=\"search.allowDates\"\n          enforce-dates=\"search.enforceDates\"\n          valid=\"search.valid\"\n          name=\"search.name\"\n          potential-names=\"search.potentialNames\"\n          type=\"search.type\"\n          operator=\"search.operator\"\n          value=\"search.value\"\n          invalid-text=\"{{ translations.invalid }}\"\n          delete-text=\"{{ translations.deleteSearch }}\"\n          on-change=\"handleChange($index, field, before, value, $event)\"\n          on-delete=\"deleteSearch($index)\"></span>\n    <input class=\"form-control main-field\"\n           type=\"text\"\n           ng-model=\"inputQuery\"\n           ng-keydown=\"onKeydown($event)\"\n           typeahead=\"type as type.value for type in dropdownTypes | filter:$viewValue:instantTypeahead\"\n           typeahead-on-select=\"createSearch($item)\"\n           instant-typeahead />\n  </div>\n</form>\n";
 
 
-  var dateRegex = /(\d\d\d\d)-(\d\d)-(\d\d)T(\d\d):(\d\d):(\d\d)(?:.(\d\d\d)| )?$/;
-  function getType(value) {
-    if(value && typeof value === 'string' && value.match(dateRegex)) {
-      return 'date';
-    }
-    return typeof value;
+var dateRegex = /(\d\d\d\d)-(\d\d)-(\d\d)T(\d\d):(\d\d):(\d\d)(?:.(\d\d\d)| )?$/;
+function getType(value) {
+  if(value && typeof value === 'string' && value.match(dateRegex)) {
+    return 'date';
   }
+  return typeof value;
+}
 
-  var isValid = function(search) {
-    return search.type.value &&
+var isValid = function(search) {
+  return search.type.value &&
       (!search.extended || search.name.value) &&
       (search.basic || search.operator.value) &&
       (search.basic || search.value.value) &&
       (getType(search.value.value) === 'date' || !search.enforceDates);
-  };
+};
 
-  var validateOperator = function(operator) {
-    if(!operator.value) {
-      operator.value = operator.values[0];
-      return;
-    }
-    var idx = operator.values.map(function(el) {
-      return el.key;
-    }).indexOf(operator.value.key);
-    operator.value = operator.values[idx === -1 ? 0 : idx];
-  };
+var validateOperator = function(operator) {
+  if(!operator.value) {
+    operator.value = operator.values[0];
+    return;
+  }
+  var idx = operator.values.map(function(el) {
+    return el.key;
+  }).indexOf(operator.value.key);
+  operator.value = operator.values[idx === -1 ? 0 : idx];
+};
 
-  var parseValue = function(value, enforceString) {
-    if(enforceString) {
-      return '' + value;
-    }
-    if(!isNaN(value) && value.trim() !== '') {
+var parseValue = function(value, enforceString) {
+  if(enforceString) {
+    return '' + value;
+  }
+  if(!isNaN(value) && value.trim() !== '') {
       // value must be transformed to number
-      return +value;
-    }
-    if(value === 'true') {
-      return true;
-    }
-    if(value === 'false') {
-      return false;
-    }
-    if(value === 'NULL') {
-      return null;
-    }
-    return value;
-  };
+    return +value;
+  }
+  if(value === 'true') {
+    return true;
+  }
+  if(value === 'false') {
+    return false;
+  }
+  if(value === 'NULL') {
+    return null;
+  }
+  return value;
+};
 
   // global flag for all instances to ignore URL updates to update searches
-  var IGNORE_URL_UPDATE = false;
+var IGNORE_URL_UPDATE = false;
 
-  module.exports = ['$timeout', '$location', 'search',
+module.exports = ['$timeout', '$location', 'search',
   function($timeout,   $location,   searchService) {
 
     // check if browser is affected by IE focus bug:
@@ -2372,7 +2286,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
           cb(weAreScrewed);
         });
       },0,false);
-    }
+    };
 
     return {
       restrict: 'A',
@@ -2392,7 +2306,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
       link: function($scope, element) {
         // test for IE focus bug
-        checkIEfocusBug(function (hasBug) {
+        checkIEfocusBug(function(hasBug) {
           if(hasBug) {
             // if we are afftected by the focus bug, we cannot set a placeholder on the input field
             // add another indication for the search field
@@ -2421,7 +2335,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
           // check which classes are allowed
           var aggregatedTypeKeys = $scope.searches.map(function(el) {
             return el.type.value.key;
-          }).reduce(function(aggregatedList, type){
+          }).reduce(function(aggregatedList, type) {
             if(aggregatedList.indexOf(type) === -1) {
               aggregatedList.push(type);
             }
@@ -2432,8 +2346,8 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
             return getConfigByTypeKey(el).groups;
           }).filter(function(el) {
             return !!el;
-          }).reduce(function(groupsArray, groups){
-            if(groupsArray){
+          }).reduce(function(groupsArray, groups) {
+            if(groupsArray) {
               if(groupsArray.length === 0) {
                 return angular.copy(groups);
               }
@@ -2611,7 +2525,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
           // We do not want this. Since they are registering their focus event per timeout AFTER we register our
           // blur event per timeout, the field is focussed in the end. How to prevent this? More timeouts x_x
           if(!value) {
-            $timeout(function(){$timeout(function(){
+            $timeout(function() {$timeout(function() {
               $scope.inputQuery = '';
               $(element[0].querySelector('.search-container > input')).blur();
             });});
@@ -2622,7 +2536,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
         $scope.deleteSearch = function(idx) {
           $scope.searches.splice(idx,1);
-          $timeout(function(){
+          $timeout(function() {
             $(element[0].querySelector('.search-container > input')).focus();
           });
         };
@@ -2645,7 +2559,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
             validateOperator(search.operator);
           } else if(field === 'value') {
             if(idx === $scope.searches.length-1) {
-              $timeout(function(){
+              $timeout(function() {
                 $(element[0].querySelector('.search-container > input')).focus();
               });
             }
@@ -2666,7 +2580,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
         $scope.onKeydown = function(evt) {
           if([38,40,13].indexOf(evt.keyCode) !== -1) {
             if($(element[0].querySelectorAll('.dropdown-menu')).length === 0) {
-              $timeout(function(){
+              $timeout(function() {
                 angular.element(evt.target).triggerHandler('input');
               });
             }
@@ -2711,7 +2625,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
           searchService.updateSilently(queryObj, !$location.search()[searchId+'Query']);
 
           // listen to URL changes again AFTER the locationchange event has fired
-          $timeout(function(){IGNORE_URL_UPDATE = false;});
+          $timeout(function() {IGNORE_URL_UPDATE = false;});
 
           updateSearchTypes();
 
@@ -2773,7 +2687,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     };
   }];
 
-},{"camunda-bpm-sdk-js/vendor/angular":278,"jquery":573}],32:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":277,"jquery":572}],31:[function(require,module,exports){
 'use strict';
 
 var angular = require('camunda-bpm-sdk-js/vendor/angular'),
@@ -2858,7 +2772,7 @@ testModule.controller('testController', ['$scope', function($scope) {
       'id': {
         'key': 'C',
         'value': 'C'
-      },
+      }
     }
   ];
   $scope.operators =  {
@@ -2893,7 +2807,7 @@ angular.element(document).ready(function() {
   angular.bootstrap(document.body, [testModule.name]);
 });
 
-},{"../../index":26,"camunda-bpm-sdk-js/vendor/angular":278}],33:[function(require,module,exports){
+},{"../../index":25,"camunda-bpm-sdk-js/vendor/angular":277}],32:[function(require,module,exports){
 'use strict';
 
 
@@ -2903,28 +2817,28 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     templateDialog = "<!-- # CE - camunda-commons-ui/lib/widgets/variable/cam-widget-variable-dialog.html -->\n<div class=\"modal-header\">\n  <h3>Inspect \"{{ variable.name }}\" variable</h3>\n</div>\n\n<div class=\"modal-body\">\n  <div ng-if=\"readonly\"\n       class=\"form-group\">\n    <label>Object type name:</label>\n    <code class=\"form-control-static\"\n          cam-widget-clipboard=\"variable.valueInfo.objectTypeName\">{{ variable.valueInfo.objectTypeName }}</code>\n  </div>\n\n  <div ng-if=\"readonly\"\n       class=\"form-group\">\n    <label>Serialization Data Format:</label>\n    <code class=\"form-control-static\"\n          cam-widget-clipboard=\"variable.valueInfo.serializationDataFormat\">{{ variable.valueInfo.serializationDataFormat }}</code>\n  </div>\n\n  <div ng-if=\"!readonly\"\n       class=\"form-group\">\n    <label for=\"object-type-name\"\n           cam-widget-clipboard=\"variable.valueInfo.objectTypeName\">Object type name</label>\n    <input type=\"text\"\n           id=\"object-type-name\"\n           class=\"form-control\"\n           ng-model=\"variable.valueInfo.objectTypeName\" />\n  </div>\n\n  <div ng-if=\"!readonly\"\n       class=\"form-group\">\n    <label for=\"serialization-data-format\"\n           cam-widget-clipboard=\"variable.valueInfo.serializationDataFormat\">Serialization data format</label>\n    <input type=\"text\"\n           id=\"serialization-data-format\"\n           class=\"form-control\"\n           ng-model=\"variable.valueInfo.serializationDataFormat\" />\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"serialized-value\"\n           cam-widget-clipboard=\"variable.value\"\n           no-tooltip\n           ng-class=\"{hovered: hovered === 'var-value'}\">Serialized value</label>\n    <textarea ng-model=\"variable.value\"\n              id=\"serialized-value\"\n              rows=\"10\"\n              class=\"form-control\"\n              ng-readonly=\"readonly\"\n              ng-mouseenter=\"toggleHover('var-value')\"\n              ng-mouseleave=\"toggleHover()\"></textarea>\n  </div>\n</div>\n\n<div class=\"modal-footer\">\n  <button class=\"btn btn-default\"\n          ng-click=\"$dismiss('close')\">\n    Close\n  </button>\n\n  <button class=\"btn btn-primary\"\n          ng-if=\"!readonly\"\n          ng-readonly=\"!hasChanged('serialized')\"\n          ng-click=\"$close(variable)\">\n    Change\n  </button>\n</div>\n<!-- / CE - camunda-commons-ui/lib/widgets/variable/cam-widget-variable-dialog.html -->\n",
     templateStringDialog = "<!-- # CE - camunda-commons-ui/lib/widgets/variable/cam-widget-variable-dialog.html -->\n<div class=\"modal-header\">\n  <h3>Inspect \"{{ variable.name }}\" variable</h3>\n</div>\n\n<div class=\"modal-body\">\n  <div class=\"form-group\">\n    <label for=\"value\"\n           cam-widget-clipboard=\"variable.value\"\n           no-tooltip\n           ng-class=\"{hovered: hovered === 'var-value'}\">\n      Value\n    </label>\n    <textarea ng-model=\"variable.value\"\n              id=\"value\"\n              rows=\"10\"\n              class=\"form-control cam-string-variable\"\n              ng-readonly=\"readonly\"\n              ng-mouseenter=\"toggleHover('var-value')\"\n              ng-mouseleave=\"toggleHover()\"></textarea>\n  </div>\n</div>\n\n<div class=\"modal-footer\">\n  <button class=\"btn btn-default\"\n          ng-click=\"$dismiss('close')\">\n    Close\n  </button>\n</div>\n<!-- / CE - camunda-commons-ui/lib/widgets/variable/cam-widget-variable-dialog.html -->\n";
 
-  var varUtils = {};
+var varUtils = {};
 
-  function camundaFormattedDate(date) {
-    date = date || new Date();
-    return date.toISOString().slice(0, -5);
-  }
-  varUtils.camundaFormattedDate = camundaFormattedDate;
+function camundaFormattedDate(date) {
+  date = date || new Date();
+  return date.toISOString().slice(0, -5);
+}
+varUtils.camundaFormattedDate = camundaFormattedDate;
 
-  varUtils.templateDialog = templateDialog;
-  varUtils.templateStringDialog = templateStringDialog;
+varUtils.templateDialog = templateDialog;
+varUtils.templateStringDialog = templateStringDialog;
 
-  varUtils.modalCtrl = [
-    '$scope',
-    'variable',
-    'readonly',
-  function (
+varUtils.modalCtrl = [
+  '$scope',
+  'variable',
+  'readonly',
+  function(
     $dialogScope,
     variable,
     readonly
   ) {
     $dialogScope.hovered = false;
-    $dialogScope.toggleHover = function (which) {
+    $dialogScope.toggleHover = function(which) {
       $dialogScope.hovered = which;
     };
 
@@ -2932,7 +2846,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     $dialogScope.readonly = readonly;
     var original = angular.copy(variable);
 
-    $dialogScope.hasChanged = function () {
+    $dialogScope.hasChanged = function() {
       original.valueInfo = original.valueInfo || {};
       variable.valueInfo = variable.valueInfo || {};
 
@@ -2943,158 +2857,158 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
   }];
 
 
-  varUtils.typeUtils = typeUtils;
+varUtils.typeUtils = typeUtils;
 
 
-  varUtils.types = [
-    'Boolean',
-    'Bytes',
-    'File',
-    'Date',
-    'Double',
-    'Integer',
-    'Long',
-    'Null',
-    'Object',
-    'Short',
-    'String'
-  ];
+varUtils.types = [
+  'Boolean',
+  'Bytes',
+  'File',
+  'Date',
+  'Double',
+  'Integer',
+  'Long',
+  'Null',
+  'Object',
+  'Short',
+  'String'
+];
 
 
-  varUtils.defaultValues = {
-    'Boolean':    false,
-    'Bytes':      null,
-    'File':       null,
-    'Date':       camundaFormattedDate(),
-    'Double':     0,
-    'Integer':    0,
-    'Long':       0,
-    'Null':       '',
-    'Short':      0,
-    'String':     '',
-    'Object':     {}
+varUtils.defaultValues = {
+  'Boolean':    false,
+  'Bytes':      null,
+  'File':       null,
+  'Date':       camundaFormattedDate(),
+  'Double':     0,
+  'Integer':    0,
+  'Long':       0,
+  'Null':       '',
+  'Short':      0,
+  'String':     '',
+  'Object':     {}
+};
+
+
+varUtils.isPrimitive = function($scope) {
+  return function(type) {
+    if (!type && !$scope.variable) { return true; }
+    type = type || $scope.variable.type;
+    if (!type) { return true; }
+
+    return [
+      'Boolean',
+      'Date',
+      'Double',
+      'Integer',
+      'Long',
+      'Short',
+      'String'
+    ].indexOf(type) >= 0;
   };
+};
 
 
-  varUtils.isPrimitive = function ($scope) {
-    return function (type) {
-      if (!type && !$scope.variable) { return true; }
-      type = type || $scope.variable.type;
-      if (!type) { return true; }
+varUtils.isBinary = function($scope) {
+  return function(type) {
+    if (!type && !$scope.variable) { return false; }
+    type = type || $scope.variable.type;
+    if (!type) { return false; }
 
-      return [
-        'Boolean',
-        'Date',
-        'Double',
-        'Integer',
-        'Long',
-        'Short',
-        'String'
-      ].indexOf(type) >= 0;
-    };
+    return [
+      'Bytes',
+      'File'
+    ].indexOf(type) >= 0;
   };
+};
 
 
-  varUtils.isBinary = function ($scope) {
-    return function (type) {
-      if (!type && !$scope.variable) { return false; }
-      type = type || $scope.variable.type;
-      if (!type) { return false; }
-
-      return [
-        'Bytes',
-        'File'
-      ].indexOf(type) >= 0;
-    };
+varUtils.useCheckbox = function($scope) {
+  return function(type) {
+    if (!type && !$scope.variable) { return false; }
+    type = type || $scope.variable.type;
+    return type === 'Boolean';
   };
+};
 
+varUtils.validate = function($scope) {
+  return function() {
+    if (!$scope.variable.name || !$scope.variable.type) {
+      $scope.valid = false;
+    }
 
-  varUtils.useCheckbox = function ($scope) {
-    return function (type) {
-      if (!type && !$scope.variable) { return false; }
-      type = type || $scope.variable.type;
-      return type === 'Boolean';
-    };
-  };
-
-  varUtils.validate = function ($scope) {
-    return function () {
-      if (!$scope.variable.name || !$scope.variable.type) {
-        $scope.valid = false;
-      }
-
-      else if ($scope.variable.value === null ||
+    else if ($scope.variable.value === null ||
                ['String', 'Object', 'Null'].indexOf($scope.variable.type) > -1) {
-        $scope.valid = true;
-      }
+      $scope.valid = true;
+    }
 
       else {
-        $scope.valid = typeUtils.isType($scope.variable.value, $scope.variable.type);
-      }
+      $scope.valid = typeUtils.isType($scope.variable.value, $scope.variable.type);
+    }
 
-      if($scope.valid) {
+    if($scope.valid) {
         // save the variable in the appropriate type
-        if ($scope.variable.type &&
+      if ($scope.variable.type &&
             $scope.variable.value !== null &&
             $scope.isPrimitive($scope.variable.type)) {
-          var newTyped;
+        var newTyped;
 
-          if ($scope.variable.type !== 'Boolean') {
-            newTyped = typeUtils.convertToType($scope.variable.value, $scope.variable.type);
-          }
-          else {
-            newTyped = $scope.variable.value ?
+        if ($scope.variable.type !== 'Boolean') {
+          newTyped = typeUtils.convertToType($scope.variable.value, $scope.variable.type);
+        }
+        else {
+          newTyped = $scope.variable.value ?
                         $scope.variable.value !== 'false' :
                         false;
-          }
+        }
 
           // only change value if newType has different type, to avoid infinite recursion
-          if(typeof $scope.variable.value !== typeof newTyped) {
-            $scope.variable.value = newTyped;
-          }
+        if(typeof $scope.variable.value !== typeof newTyped) {
+          $scope.variable.value = newTyped;
         }
       }
-    };
+    }
   };
+};
 
-  module.exports = varUtils;
+module.exports = varUtils;
 
-},{"camunda-bpm-sdk-js/lib/forms/type-util":275,"camunda-bpm-sdk-js/vendor/angular":278}],34:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/lib/forms/type-util":274,"camunda-bpm-sdk-js/vendor/angular":277}],33:[function(require,module,exports){
 'use strict';
 
 var typeUtils = require('camunda-bpm-sdk-js/lib/forms/type-util');
 
-  module.exports = [function() {
+module.exports = [function() {
 
-    return {
+  return {
 
-      require: 'ngModel',
+    require: 'ngModel',
 
-      link: function($scope, $element, $attrs, ctrl) {
+    link: function($scope, $element, $attrs, ctrl) {
 
-        var validate = function(viewValue) {
+      var validate = function(viewValue) {
 
-          var type = $attrs.camVariableValidator;
-          if (['String', 'Object', 'Null'].indexOf(type) !== -1) {
-            ctrl.$setValidity('camVariableValidator', true);
-          } else {
-            ctrl.$setValidity('camVariableValidator', typeUtils.isType(viewValue, type));
-          }
+        var type = $attrs.camVariableValidator;
+        if (['String', 'Object', 'Null'].indexOf(type) !== -1) {
+          ctrl.$setValidity('camVariableValidator', true);
+        } else {
+          ctrl.$setValidity('camVariableValidator', typeUtils.isType(viewValue, type));
+        }
 
-          return viewValue;
-        };
+        return viewValue;
+      };
 
-        ctrl.$parsers.unshift(validate);
-        ctrl.$formatters.push(validate);
+      ctrl.$parsers.unshift(validate);
+      ctrl.$formatters.push(validate);
 
-        $attrs.$observe('camVariableValidator', function(){
-          return validate(ctrl.$viewValue);
-        });
-      }
-    };
-  }];
+      $attrs.$observe('camVariableValidator', function() {
+        return validate(ctrl.$viewValue);
+      });
+    }
+  };
+}];
 
-},{"camunda-bpm-sdk-js/lib/forms/type-util":275}],35:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/lib/forms/type-util":274}],34:[function(require,module,exports){
 'use strict';
 
 
@@ -3104,12 +3018,12 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     template = "<div ng-if=\"display && isShown('type')\"\n     class=\"type\">{{ variable.type }}</div>\n<div ng-if=\"display && isShown('name')\"\n     class=\"name\">{{ variable.name }}</div>\n<div ng-if=\"display && isShown('value') && isPrimitive()\"\n     ng-class=\"{null: isNull()}\"\n     class=\"value\">\n  <span ng-if=\"isNull()\"\n        class=\"null-symbol\">&lt;null&gt;</span>\n  {{ (variable.value === null ? '' : variable.value.toString()) }}\n</div>\n<div ng-if=\"display && isShown('value') && variable.type === 'Object'\"\n     ng-class=\"{null: isNull()}\"\n     class=\"value\">\n  <a ng-click=\"editVariableValue()\">\n    {{ variable.valueInfo.objectTypeName }}\n  </a>\n</div>\n\n\n<div ng-if=\"!display\"\n     class=\"input-group editing\">\n  <div ng-if=\"isShown('type')\"\n       class=\"input-group-btn type\">\n    <select class=\"form-control\"\n            ng-model=\"variable.type\"\n            ng-options=\"variableType for variableType in variableTypes track by variableType\"\n            ng-disabled=\"isDisabled('type')\"\n            required>\n    </select>\n  </div><!-- /btn-group -->\n\n  <input ng-if=\"isShown('name')\"\n         type=\"text\"\n         class=\"form-control name\"\n         ng-model=\"variable.name\"\n         placeholder=\"varName\"\n         ng-disabled=\"isDisabled('name')\"\n         required />\n\n  <div ng-if=\"isShown('value') && !isNull()\"\n       class=\"value-wrapper input-group\"\n       ng-class=\"{checkbox: useCheckbox()}\">\n    <div ng-if=\"variable.type !== 'Null'\"\n         class=\"input-group-btn\">\n      <a ng-click=\"setNull()\"\n         class=\"btn btn-default set-null\"\n         ng-disabled=\"isDisabled('value')\"\n         tooltip=\"Set value to &quot;null&quot;\">\n        <span class=\"glyphicon glyphicon-remove\"></span>\n      </a>\n    </div>\n\n    <input ng-if=\"isPrimitive() && !useCheckbox()\"\n           type=\"text\"\n           class=\"form-control value\"\n           ng-model=\"variable.value\"\n           ng-disabled=\"isDisabled('value')\"\n           placeholder=\"Value of the variable\"\n           cam-variable-validator=\"{{variable.type}}\" />\n\n    <input ng-if=\"useCheckbox()\"\n           type=\"checkbox\"\n           class=\"value\"\n           ng-model=\"variable.value\"\n           ng-disabled=\"isDisabled('value')\"\n           placeholder=\"Value of the variable\"\n           cam-variable-validator=\"{{variable.type}}\" />\n\n    <div ng-if=\"variable.type === 'Object'\"\n         class=\"value form-control-static\">\n      <a ng-click=\"editVariableValue()\" ng-disabled=\"isDisabled('value')\">\n        {{ variable.valueInfo.objectTypeName || '&lt;undefined&gt;' }}\n      </a>\n    </div>\n  </div>\n\n  <div ng-if=\"variable.type !== 'Null' && isShown('value') && isNull()\"\n       ng-click=\"setNonNull()\"\n       class=\"value-wrapper value null-value btn btn-default\"\n       ng-disabled=\"isDisabled('value')\"\n       tooltip=\"Re-set to previous or default value\">\n    <span class=\"null-symbol\">&lt;null&gt;</span>\n  </div>\n\n  <div ng-if=\"variable.type === 'Null'\"\n       ng-disabled=\"isDisabled('value')\"\n       class=\"value-wrapper value btn no-click null-value\">\n    <span class=\"null-symbol\">&lt;null&gt;</span>\n  </div>\n</div>\n";
 
 
-  var variableTypes = varUtils.types;
+var variableTypes = varUtils.types;
 
-  var modalCtrl = varUtils.modalCtrl;
+var modalCtrl = varUtils.modalCtrl;
 
-  module.exports = [
-    '$modal',
+module.exports = [
+  '$modal',
   function(
     $modal
   ) {
@@ -3144,7 +3058,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
       },
 
 
-      link: function ($scope, element) {
+      link: function($scope, element) {
         $scope.variableTypes = angular.copy(variableTypes);
 
         var defaultValues = varUtils.defaultValues;
@@ -3157,23 +3071,23 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
 
 
-        $scope.isShown = function (what) {
+        $scope.isShown = function(what) {
           if (!Array.isArray($scope.shown) || !$scope.shown.length) { return true; }
           return $scope.shown.indexOf(what) > -1;
         };
 
-        $scope.isDisabled = function (what) {
+        $scope.isDisabled = function(what) {
           if (!Array.isArray($scope.disabled) || !$scope.disabled.length) { return false; }
           return $scope.disabled.indexOf(what) > -1;
         };
 
-        $scope.shownClasses = function () {
+        $scope.shownClasses = function() {
           if (!Array.isArray($scope.shown) || !$scope.shown.length) { return ''; }
-          return $scope.shown.map(function (part) {
+          return $scope.shown.map(function(part) {
             return 'show-' + part;
           }).join(' ');
         };
-        $scope.$watch('shown', function () {
+        $scope.$watch('shown', function() {
           element
             .removeClass('show-type show-name show-value')
             .addClass($scope.shownClasses());
@@ -3190,7 +3104,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
         // from either type or null switch
         var backup = $scope.variable.value;
 
-        $scope.$watch('variable.type', function (current, previous) {
+        $scope.$watch('variable.type', function(current, previous) {
           // convert the value to boolean when the type becomes Boolean
           if (current === 'Boolean') {
             // we don't do anything if the value is null
@@ -3215,18 +3129,18 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
           }
         });
 
-        $scope.isNull = function () {
+        $scope.isNull = function() {
           return $scope.variable.value === null;
         };
-        $scope.setNonNull = function () {
+        $scope.setNonNull = function() {
           $scope.variable.value = backup || defaultValues[$scope.variable.type];
         };
-        $scope.setNull = function () {
+        $scope.setNull = function() {
           backup = $scope.variable.value;
           $scope.variable.value = null;
         };
 
-        $scope.editVariableValue = function () {
+        $scope.editVariableValue = function() {
           $modal.open({
             template: varUtils.templateDialog,//templateDialog,
 
@@ -3235,11 +3149,11 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
             windowClass: 'cam-widget-variable-dialog',
 
             resolve: {
-              variable: function () { return angular.copy($scope.variable); },
-              readonly: function () { return $scope.display; }
+              variable: function() { return angular.copy($scope.variable); },
+              readonly: function() { return $scope.display; }
             }
           })
-          .result.then(function (result) {
+          .result.then(function(result) {
             $scope.variable.value = result.value;
             $scope.variable.valueInfo = result.valueInfo;
           })
@@ -3249,14 +3163,13 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     };
   }];
 
-},{"./cam-variable-utils":33,"camunda-bpm-sdk-js/vendor/angular":278}],36:[function(require,module,exports){
+},{"./cam-variable-utils":32,"camunda-bpm-sdk-js/vendor/angular":277}],35:[function(require,module,exports){
 'use strict';
 
-var angular = require('camunda-bpm-sdk-js/vendor/angular');
 var $ = require('jquery');
 
-  module.exports = [
-    '$compile',
+module.exports = [
+  '$compile',
   function(
     $compile
   ) {
@@ -3268,7 +3181,7 @@ var $ = require('jquery');
         headerName: '='
       },
 
-      link: function ($scope, element) {
+      link: function($scope, element) {
         var obj = $scope.info.additions[$scope.headerName] || {};
         obj.scopeVariables = obj.scopeVariables || {};
 
@@ -3286,7 +3199,7 @@ var $ = require('jquery');
     };
   }];
 
-},{"camunda-bpm-sdk-js/vendor/angular":278,"jquery":573}],37:[function(require,module,exports){
+},{"jquery":572}],36:[function(require,module,exports){
 'use strict';
 
 
@@ -3295,33 +3208,33 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
     template = "<table class=\"cam-table\">\n  <thead>\n    <tr>\n      <td ng-repeat=\"headerName in headerNames\" ng-class=\"'col-' + headerName\">\n        {{ headers[headerName] }}\n      </td>\n\n      <td class=\"actions\"\n          ng-if=\"editable.length\">\n        Actions\n      </td>\n    </tr>\n  </thead>\n\n  <tbody>\n    <tr ng-repeat=\"(v, info) in variables\"\n        ng-class=\"rowClasses(info, v)\">\n      <td ng-repeat=\"headerName in headerNames\"\n          ng-init=\"variable=info.variable\"\n          ng-class=\"colClasses(info, headerName, v)\"\n          ng-switch on=\"headerName\">\n        <!-- ................................................................................... -->\n        <div ng-switch-when=\"type\"\n             ng-if=\"!isEditable('type', info)\">\n          {{ variable.type }}\n        </div>\n        <select class=\"form-control\"\n                ng-switch-when=\"type\"\n                ng-if=\"isEditable('type', info)\"\n                ng-model=\"variable.type\"\n                ng-options=\"variableType for variableType in variableTypes track by variableType\"\n                required>\n        </select>\n        <!-- ................................................................................... -->\n\n\n        <!-- ................................................................................... -->\n        <div ng-switch-when=\"name\"\n             ng-if=\"!isEditable('name', info)\">\n          <span cam-widget-clipboard=\"variable.name\">{{ variable.name }}</span>\n        </div>\n\n        <input class=\"form-control\"\n               ng-switch-when=\"name\"\n               ng-model=\"variable.name\"\n               ng-if=\"isEditable('name', info)\" />\n        <!-- ................................................................................... -->\n\n\n        <!-- ................................................................................... -->\n        <a ng-switch-when=\"value\"\n           ng-if=\"!isEditable('value', info) && isBinary(variable.type)\"\n           ng-href=\"{{ downloadLink(info) }}\"\n           download=\"{{ variable.name }}-data\">\n          Download\n        </a>\n\n        <div ng-switch-when=\"value\"\n             ng-if=\"!isEditable('value', info) && variable.type === 'Object'\"\n             class=\"read-only value-wrapper\">\n          <span ng-if=\"variable.valueInfo.objectTypeName\"\n                cam-widget-clipboard=\"variable.valueInfo.objectTypeName\">\n            <a ng-click=\"editVariableValue(v)\"\n               href>{{ variable.valueInfo.objectTypeName }}</a>\n          </span>\n          <a ng-if=\"!variable.valueInfo.objectTypeName\"\n             ng-click=\"editVariableValue(v)\"\n             href>&lt;undefined&gt;</a>\n        </div>\n\n        <div ng-switch-when=\"value\"\n             ng-if=\"!isEditable('value', info) && variable.type === 'String'\"\n             class=\"read-only value-wrapper\">\n          <span cam-widget-clipboard=\"variable.value\">\n            <span ng-click=\"readStringVar(v)\">{{ variable.value }}</span>\n          </span>\n        </div>\n\n        <div ng-switch-when=\"value\"\n             ng-if=\"!isEditable('value', info) && variable.type !== 'Object' && variable.type !== 'String'\"\n             class=\"read-only value-wrapper\">\n          <span ng-if=\"variable.type !== 'Bytes'\"\n                cam-widget-clipboard=\"variable.value\">{{ variable.value }}</span>\n          <span ng-if=\"variable.type === 'Bytes'\">{{ variable.value }}</span>\n        </div>\n\n        <div class=\"value-wrapper\"\n             ng-switch-when=\"value\"\n             ng-if=\"isEditable('value', info)\">\n          <a ng-click=\"setNull(v)\"\n             ng-if=\"!isNull(v)\"\n             class=\"set-null\"\n             tooltip-append-to-body=\"true\"\n             tooltip=\"Set value to &quot;null&quot;\">\n            <span class=\"glyphicon glyphicon-remove\"></span>\n          </a>\n\n          <input ng-if=\"isPrimitive(variable.type) && !useCheckbox(variable.type) && !isNull(v)\"\n                 type=\"text\"\n                 class=\"form-control\"\n                 ng-model=\"variable.value\"\n                 placeholder=\"Value of the variable\" />\n\n          <input ng-if=\"useCheckbox(variable.type)\"\n                 type=\"checkbox\"\n                 ng-model=\"variable.value\"\n                 placeholder=\"Value of the variable\" />\n\n          <a ng-if=\"variable.type === 'Object' && !isNull(v)\"\n             ng-click=\"editVariableValue(v)\">\n            {{ variable.valueInfo.objectTypeName || '&lt;undefined&gt;' }}\n          </a>\n\n          <a ng-if=\"variable.type !== 'Null' && !isBinary(variable.type) && isNull(v)\"\n             ng-click=\"setNonNull(v)\"\n             class=\"null-value\"\n             tooltip-append-to-body=\"true\"\n             tooltip=\"Re-set to previous or default value\">\n            <span class=\"null-symbol\">&lt;null&gt;</span>\n          </a>\n\n          <a ng-if=\"isBinary(variable.type)\"\n             ng-click=\"uploadVariable(v)\"\n             tooltip-append-to-body=\"true\"\n             tooltip=\"Upload a new file\">\n            Upload\n          </a>\n\n          <span ng-if=\"variable.type === 'Null'\"\n                class=\"null-value\">\n            <span class=\"null-symbol\">&lt;null&gt;</span>\n          </span>\n        </div><!-- / value-wrapper -->\n        <!-- ................................................................................... -->\n\n\n        <div ng-switch-default\n             cam-render-var-template\n             info=\"info\"\n             header-name=\"headerName\">\n        </div>\n      </td>\n\n      <td class=\"actions\"\n          ng-if=\"editable.length\">\n        <div ng-if=\"!info.editMode\"\n             class=\"btn-group\">\n          <button class=\"btn btn-xs btn-primary\"\n                  ng-click=\"info.editMode = true\"\n                  tooltip-append-to-body=\"true\"\n                  tooltip=\"Edit the variable\">\n            <span class=\"glyphicon glyphicon-pencil\"></span>\n          </button>\n          <button class=\"btn btn-xs btn-default\"\n                  ng-click=\"deleteVariable(v)\"\n                  tooltip-append-to-body=\"true\"\n                  tooltip=\"Delete the variable\">\n            <span class=\"glyphicon glyphicon glyphicon-trash\"></span>\n          </button>\n        </div>\n\n        <div ng-if=\"info.editMode\"\n             class=\"btn-group\">\n          <button class=\"btn btn-xs btn-primary\"\n                  ng-disabled=\"!info.valid || !info.changed\"\n                  ng-click=\"saveVariable(v)\"\n                  tooltip-append-to-body=\"true\"\n                  tooltip=\"Save the variable\">\n            <span class=\"glyphicon glyphicon-ok\"></span>\n          </button>\n          <button class=\"btn btn-xs btn-default\"\n                  ng-click=\"info.editMode = false\"\n                  tooltip-append-to-body=\"true\"\n                  tooltip=\"Revert the variable\">\n            <span class=\"glyphicon glyphicon-remove\"></span>\n          </button>\n        </div>\n      </td>\n    </tr>\n  </tbody>\n</table>\n";
 
-  var typeUtils = varUtils.typeUtils;
+var typeUtils = varUtils.typeUtils;
 
-  var emptyVariable = {
-    variable: {
-      name: null,
-      type: null,
-      value: null,
-      valueInfo: {}
-    },
-    additions: {}
-  };
+var emptyVariable = {
+  variable: {
+    name: null,
+    type: null,
+    value: null,
+    valueInfo: {}
+  },
+  additions: {}
+};
 
-  function deepCopy(original) {
-    return JSON.parse(JSON.stringify(original));
-  }
+function deepCopy(original) {
+  return JSON.parse(JSON.stringify(original));
+}
 
-  function noopPromise(info/*, i*/) {
-    return {
-      then: function (success/*, error*/) {
-        success(angular.copy(info.variable));
+function noopPromise(info/*, i*/) {
+  return {
+    then: function(success/*, error*/) {
+      success(angular.copy(info.variable));
         // error('Not implemented');
-      }
-    };
-  }
+    }
+  };
+}
 
-  module.exports = [
-    '$modal',
+module.exports = [
+  '$modal',
   function(
     $modal
   ) {
@@ -3341,7 +3254,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
       },
 
 
-      link: function ($scope) {
+      link: function($scope) {
         var backups = [];
 
         function _getVar(v) {
@@ -3394,7 +3307,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
           'uploadVar',
           'deleteVar',
           'saveVar'
-        ].forEach(function (name) {
+        ].forEach(function(name) {
           $scope[name] = (angular.isFunction($scope[name]) ? $scope[name] : noopPromise);
         });
 
@@ -3413,19 +3326,19 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
           };
         };
 
-        $scope.editVar = angular.isFunction($scope.editVar) ? $scope.editVar : (function (info, v) {
-          var readonly = function () { return !$scope.isEditable('value', $scope.variables[v]); };
+        $scope.editVar = angular.isFunction($scope.editVar) ? $scope.editVar : (function(info, v) {
+          var readonly = function() { return !$scope.isEditable('value', $scope.variables[v]); };
 
           return $modal.open( variableModalConfig( v, varUtils.templateDialog, readonly ) ).result;
         });
 
-        $scope.readStringVar = angular.isFunction($scope.readStringVar) ? $scope.readStringVar : (function (v) {
+        $scope.readStringVar = angular.isFunction($scope.readStringVar) ? $scope.readStringVar : (function(v) {
           var readonly = function() { return true; };
 
           return $modal.open( variableModalConfig( v, varUtils.templateStringDialog, readonly ) ).result;
         });
 
-        $scope.downloadLink = angular.isFunction($scope.downloadVar) ? $scope.downloadVar : (function (info) {
+        $scope.downloadLink = angular.isFunction($scope.downloadVar) ? $scope.downloadVar : (function(info) {
           return '/camunda/api/engine/engine/default/variable-instance/' + info.variable.id +'/data';
         });
 
@@ -3470,7 +3383,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
         }
 
         function initVariables() {
-          ($scope.variables || []).forEach(function (info, i) {
+          ($scope.variables || []).forEach(function(info, i) {
             info.valid = true;
 
             var varPath = 'variables[' + i + '].variable';
@@ -3481,7 +3394,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
             $scope.$watch(varPath + '.name', wrapedValidate);
             $scope.$watch(varPath + '.type', wrapedValidate);
 
-            $scope.$watch('variables[' + i + '].editMode', function (now, before) {
+            $scope.$watch('variables[' + i + '].editMode', function(now, before) {
               if (angular.isUndefined(now)) { return; }
 
               if (now === true) {
@@ -3510,11 +3423,11 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
 
 
-        $scope.isEditable = function (what, info) {
+        $scope.isEditable = function(what, info) {
           return info.editMode && $scope.editable.indexOf(what) > -1;
         };
 
-        $scope.rowClasses = function (info/*, v*/) {
+        $scope.rowClasses = function(info/*, v*/) {
           return [
             info.editMode ? 'editing' : null,
             info.valid ? null : 'ng-invalid',
@@ -3522,7 +3435,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
           ];
         };
 
-        $scope.colClasses = function (info, headerName/*, v*/) {
+        $scope.colClasses = function(info, headerName/*, v*/) {
           return [
             $scope.isEditable(headerName, info) ? 'editable' : null,
             'type-' + (info.variable.type || '').toLowerCase(),
@@ -3534,46 +3447,46 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
 
 
-        $scope.isNull = function (v) {
+        $scope.isNull = function(v) {
           return $scope.variables[v].variable.value === null;
         };
 
-        $scope.setNull = function (v) {
+        $scope.setNull = function(v) {
           var variable = _getVar(v);
           backups[v] = variable.value;
           variable.value = null;
         };
 
-        $scope.setNonNull = function (v) {
+        $scope.setNonNull = function(v) {
           var variable = _getVar(v);
           variable.value = backups[v] || $scope.defaultValues[variable.type];
         };
 
 
 
-        $scope.editVariableValue = function (v) {
+        $scope.editVariableValue = function(v) {
           var info = $scope.variables[v];
-          $scope.editVar(info, v).then(function (result) {
+          $scope.editVar(info, v).then(function(result) {
             _getVar(v).value = result.value;
             _getVar(v).valueInfo = result.valueInfo;
           });
         };
 
-        $scope.addVariable = function () {
+        $scope.addVariable = function() {
           $scope.variables.push(angular.copy(emptyVariable));
         };
 
-        $scope.deleteVariable = function (v) {
+        $scope.deleteVariable = function(v) {
           var info = $scope.variables[v];
 
-          $scope.deleteVar(info, v).then(function () {
+          $scope.deleteVar(info, v).then(function() {
             $scope.variables.splice($scope.variables.indexOf(info), 1);
-          }, function (err) {
-            console.error(err);
+          }, function(/*err*/) {
+            // console.error(err);
           });
         };
 
-        $scope.saveVariable = function (v) {
+        $scope.saveVariable = function(v) {
           var info = $scope.variables[v];
           info.editMode = false;
 
@@ -3590,7 +3503,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
         };
 
 
-        $scope.uploadVariable = function (v) {
+        $scope.uploadVariable = function(v) {
           var info = $scope.variables[v];
 
           $scope.uploadVar(info, v).then(function(/*saved*/) {
@@ -3608,7 +3521,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     };
   }];
 
-},{"../variable/cam-variable-utils":33,"camunda-bpm-sdk-js/vendor/angular":278}],38:[function(require,module,exports){
+},{"../variable/cam-variable-utils":32,"camunda-bpm-sdk-js/vendor/angular":277}],37:[function(require,module,exports){
 /**
  * @license AngularJS v1.2.29
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -4257,11 +4170,11 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
 
 })(window, window.angular);
 
-},{}],39:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 require('./angular-sanitize');
 module.exports = 'ngSanitize';
 
-},{"./angular-sanitize":38}],40:[function(require,module,exports){
+},{"./angular-sanitize":37}],39:[function(require,module,exports){
 /*!
  * angular-translate - v2.4.2 - 2014-10-21
  * http://github.com/angular-translate/angular-translate
@@ -5222,7 +5135,7 @@ angular.module('pascalprecht.translate').filter('translate', [
     return translateFilter;
   }
 ]);
-},{}],41:[function(require,module,exports){
+},{}],40:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -5251,7 +5164,7 @@ NavigatedViewer.prototype._navigationModules = [
 NavigatedViewer.prototype._modules = [].concat(
   NavigatedViewer.prototype._modules,
   NavigatedViewer.prototype._navigationModules);
-},{"./Viewer":42,"diagram-js/lib/navigation/movecanvas":103,"diagram-js/lib/navigation/zoomscroll":106,"inherits":126}],42:[function(require,module,exports){
+},{"./Viewer":41,"diagram-js/lib/navigation/movecanvas":102,"diagram-js/lib/navigation/zoomscroll":105,"inherits":125}],41:[function(require,module,exports){
 /**
  * The code in the <project-logo></project-logo> area
  * must not be changed.
@@ -5727,14 +5640,14 @@ function addProjectLogo(container) {
 }
 
 /* </project-logo> */
-},{"./core":43,"./import/Importer":49,"./util/PoweredByUtil":55,"bpmn-moddle":56,"diagram-js":77,"diagram-js/lib/features/overlays":94,"diagram-js/lib/features/selection":98,"diagram-js/lib/i18n/translate":99,"inherits":126,"lodash/lang/isNumber":240,"lodash/lang/isString":243,"lodash/object/assign":246,"lodash/object/omit":250,"min-dom/lib/domify":260,"min-dom/lib/event":261,"min-dom/lib/query":262,"min-dom/lib/remove":263}],43:[function(require,module,exports){
+},{"./core":42,"./import/Importer":48,"./util/PoweredByUtil":54,"bpmn-moddle":55,"diagram-js":76,"diagram-js/lib/features/overlays":93,"diagram-js/lib/features/selection":97,"diagram-js/lib/i18n/translate":98,"inherits":125,"lodash/lang/isNumber":239,"lodash/lang/isString":242,"lodash/object/assign":245,"lodash/object/omit":249,"min-dom/lib/domify":259,"min-dom/lib/event":260,"min-dom/lib/query":261,"min-dom/lib/remove":262}],42:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../draw'),
     require('../import')
   ]
 };
-},{"../draw":46,"../import":51}],44:[function(require,module,exports){
+},{"../draw":45,"../import":50}],43:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits'),
@@ -7389,7 +7302,7 @@ function getRectPath(shape) {
   return componentsToPath(rectPath);
 }
 
-},{"../util/DiUtil":52,"../util/ModelUtil":54,"diagram-js/lib/draw/BaseRenderer":85,"diagram-js/lib/util/RenderUtil":117,"diagram-js/lib/util/Text":118,"inherits":126,"lodash/collection/every":129,"lodash/collection/forEach":132,"lodash/collection/includes":134,"lodash/collection/some":137,"lodash/lang/isObject":241,"lodash/object/assign":246}],45:[function(require,module,exports){
+},{"../util/DiUtil":51,"../util/ModelUtil":53,"diagram-js/lib/draw/BaseRenderer":84,"diagram-js/lib/util/RenderUtil":116,"diagram-js/lib/util/Text":117,"inherits":125,"lodash/collection/every":128,"lodash/collection/forEach":131,"lodash/collection/includes":133,"lodash/collection/some":136,"lodash/lang/isObject":240,"lodash/object/assign":245}],44:[function(require,module,exports){
 'use strict';
 
 var Snap = require('diagram-js/vendor/snapsvg');
@@ -7844,14 +7757,14 @@ function PathMap() {
 
 module.exports = PathMap;
 
-},{"diagram-js/vendor/snapsvg":125}],46:[function(require,module,exports){
+},{"diagram-js/vendor/snapsvg":124}],45:[function(require,module,exports){
 module.exports = {
   __init__: [ 'bpmnRenderer' ],
   bpmnRenderer: [ 'type', require('./BpmnRenderer') ],
   pathMap: [ 'type', require('./PathMap') ]
 };
 
-},{"./BpmnRenderer":44,"./PathMap":45}],47:[function(require,module,exports){
+},{"./BpmnRenderer":43,"./PathMap":44}],46:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -8097,7 +8010,7 @@ BpmnImporter.prototype._getTarget = function(semantic) {
 BpmnImporter.prototype._getElement = function(semantic) {
   return this._elementRegistry.get(semantic.id);
 };
-},{"../util/DiUtil":52,"../util/LabelUtil":53,"../util/ModelUtil":54,"./Util":50,"lodash/collection/map":135,"lodash/object/assign":246}],48:[function(require,module,exports){
+},{"../util/DiUtil":51,"../util/LabelUtil":52,"../util/ModelUtil":53,"./Util":49,"lodash/collection/map":134,"lodash/object/assign":245}],47:[function(require,module,exports){
 'use strict';
 
 var filter = require('lodash/collection/filter'),
@@ -8544,7 +8457,7 @@ function BpmnTreeWalker(handler, translate) {
 }
 
 module.exports = BpmnTreeWalker;
-},{"./Util":50,"lodash/collection/filter":130,"lodash/collection/find":131,"lodash/collection/forEach":132,"object-refs":272}],49:[function(require,module,exports){
+},{"./Util":49,"lodash/collection/filter":129,"lodash/collection/find":130,"lodash/collection/forEach":131,"object-refs":271}],48:[function(require,module,exports){
 'use strict';
 
 var BpmnTreeWalker = require('./BpmnTreeWalker');
@@ -8615,7 +8528,7 @@ function importBpmnDiagram(diagram, definitions, done) {
 }
 
 module.exports.importBpmnDiagram = importBpmnDiagram;
-},{"./BpmnTreeWalker":48}],50:[function(require,module,exports){
+},{"./BpmnTreeWalker":47}],49:[function(require,module,exports){
 'use strict';
 
 module.exports.elementToString = function(e) {
@@ -8625,14 +8538,14 @@ module.exports.elementToString = function(e) {
 
   return '<' + e.$type + (e.id ? ' id="' + e.id : '') + '" />';
 };
-},{}],51:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('diagram-js/lib/i18n/translate')
   ],
   bpmnImporter: [ 'type', require('./BpmnImporter') ]
 };
-},{"./BpmnImporter":47,"diagram-js/lib/i18n/translate":99}],52:[function(require,module,exports){
+},{"./BpmnImporter":46,"diagram-js/lib/i18n/translate":98}],51:[function(require,module,exports){
 'use strict';
 
 var is = require('./ModelUtil').is,
@@ -8663,7 +8576,7 @@ module.exports.isEventSubProcess = function(element) {
   return element && !!getBusinessObject(element).triggeredByEvent;
 };
 
-},{"./ModelUtil":54}],53:[function(require,module,exports){
+},{"./ModelUtil":53}],52:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign');
@@ -8769,7 +8682,7 @@ module.exports.getExternalLabelBounds = function(semantic, element) {
   }, size);
 };
 
-},{"./ModelUtil":54,"lodash/object/assign":246}],54:[function(require,module,exports){
+},{"./ModelUtil":53,"lodash/object/assign":245}],53:[function(require,module,exports){
 'use strict';
 
 /**
@@ -8802,7 +8715,7 @@ function getBusinessObject(element) {
 
 module.exports.getBusinessObject = getBusinessObject;
 
-},{}],55:[function(require,module,exports){
+},{}],54:[function(require,module,exports){
 /**
  * This file must not be changed or exchanged.
  *
@@ -8886,9 +8799,9 @@ function open() {
 }
 
 module.exports.open = open;
-},{"min-dom/lib/delegate":259,"min-dom/lib/domify":260}],56:[function(require,module,exports){
+},{"min-dom/lib/delegate":258,"min-dom/lib/domify":259}],55:[function(require,module,exports){
 module.exports = require('./lib/simple');
-},{"./lib/simple":58}],57:[function(require,module,exports){
+},{"./lib/simple":57}],56:[function(require,module,exports){
 'use strict';
 
 var isString = require('lodash/lang/isString'),
@@ -8969,7 +8882,7 @@ BpmnModdle.prototype.toXML = function(element, options, done) {
   }
 };
 
-},{"lodash/lang/isFunction":238,"lodash/lang/isString":243,"lodash/object/assign":246,"moddle":64,"moddle-xml/lib/reader":60,"moddle-xml/lib/writer":61}],58:[function(require,module,exports){
+},{"lodash/lang/isFunction":237,"lodash/lang/isString":242,"lodash/object/assign":245,"moddle":63,"moddle-xml/lib/reader":59,"moddle-xml/lib/writer":60}],57:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign');
@@ -8986,7 +8899,7 @@ var packages = {
 module.exports = function(additionalPackages, options) {
   return new BpmnModdle(assign({}, packages, additionalPackages), options);
 };
-},{"../resources/bpmn/json/bpmn.json":73,"../resources/bpmn/json/bpmndi.json":74,"../resources/bpmn/json/dc.json":75,"../resources/bpmn/json/di.json":76,"./bpmn-moddle":57,"lodash/object/assign":246}],59:[function(require,module,exports){
+},{"../resources/bpmn/json/bpmn.json":72,"../resources/bpmn/json/bpmndi.json":73,"../resources/bpmn/json/dc.json":74,"../resources/bpmn/json/di.json":75,"./bpmn-moddle":56,"lodash/object/assign":245}],58:[function(require,module,exports){
 'use strict';
 
 function capitalize(string) {
@@ -9035,7 +8948,7 @@ module.exports.serializeAsType = function(element) {
 module.exports.serializeAsProperty = function(element) {
   return serializeFormat(element) === 'property';
 };
-},{}],60:[function(require,module,exports){
+},{}],59:[function(require,module,exports){
 'use strict';
 
 var reduce = require('lodash/collection/reduce'),
@@ -9758,7 +9671,7 @@ XMLReader.prototype.handler = function(name) {
 
 module.exports = XMLReader;
 module.exports.ElementHandler = ElementHandler;
-},{"./common":59,"lodash/collection/find":131,"lodash/collection/forEach":132,"lodash/collection/reduce":136,"lodash/function/defer":141,"lodash/object/assign":246,"moddle":64,"moddle/lib/ns":69,"moddle/lib/types":72,"sax":62,"tiny-stack":63}],61:[function(require,module,exports){
+},{"./common":58,"lodash/collection/find":130,"lodash/collection/forEach":131,"lodash/collection/reduce":135,"lodash/function/defer":140,"lodash/object/assign":245,"moddle":63,"moddle/lib/ns":68,"moddle/lib/types":71,"sax":61,"tiny-stack":62}],60:[function(require,module,exports){
 'use strict';
 
 var map = require('lodash/collection/map'),
@@ -10437,7 +10350,7 @@ function XMLWriter(options) {
 
 module.exports = XMLWriter;
 
-},{"./common":59,"lodash/collection/filter":130,"lodash/collection/forEach":132,"lodash/collection/map":135,"lodash/lang/isString":243,"lodash/object/assign":246,"moddle/lib/ns":69,"moddle/lib/types":72}],62:[function(require,module,exports){
+},{"./common":58,"lodash/collection/filter":129,"lodash/collection/forEach":131,"lodash/collection/map":134,"lodash/lang/isString":242,"lodash/object/assign":245,"moddle/lib/ns":68,"moddle/lib/types":71}],61:[function(require,module,exports){
 (function (Buffer){
 // wrapper for non-node envs
 ;(function (sax) {
@@ -11851,7 +11764,7 @@ if (!String.fromCodePoint) {
 })(typeof exports === "undefined" ? sax = {} : exports);
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":548,"stream":571,"string_decoder":572}],63:[function(require,module,exports){
+},{"buffer":547,"stream":570,"string_decoder":571}],62:[function(require,module,exports){
 /**
  * Tiny stack for browser or server
  *
@@ -11968,9 +11881,9 @@ else {
 }
 } )( this );
 
-},{}],64:[function(require,module,exports){
+},{}],63:[function(require,module,exports){
 module.exports = require('./lib/moddle');
-},{"./lib/moddle":68}],65:[function(require,module,exports){
+},{"./lib/moddle":67}],64:[function(require,module,exports){
 'use strict';
 
 function Base() { }
@@ -11985,7 +11898,7 @@ Base.prototype.set = function(name, value) {
 
 
 module.exports = Base;
-},{}],66:[function(require,module,exports){
+},{}],65:[function(require,module,exports){
 'use strict';
 
 var pick = require('lodash/object/pick'),
@@ -12210,7 +12123,7 @@ DescriptorBuilder.prototype.addTrait = function(t, inherited) {
   allTypes.push(t);
 };
 
-},{"./ns":69,"lodash/collection/forEach":132,"lodash/object/assign":246,"lodash/object/pick":252}],67:[function(require,module,exports){
+},{"./ns":68,"lodash/collection/forEach":131,"lodash/object/assign":245,"lodash/object/pick":251}],66:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -12268,7 +12181,7 @@ Factory.prototype.createType = function(descriptor) {
 
   return ModdleElement;
 };
-},{"./base":65,"lodash/collection/forEach":132}],68:[function(require,module,exports){
+},{"./base":64,"lodash/collection/forEach":131}],67:[function(require,module,exports){
 'use strict';
 
 var isString = require('lodash/lang/isString'),
@@ -12487,7 +12400,7 @@ Moddle.prototype.getPropertyDescriptor = function(element, property) {
   return this.getElementDescriptor(element).propertiesByName[property];
 };
 
-},{"./factory":67,"./ns":69,"./properties":70,"./registry":71,"lodash/collection/find":131,"lodash/collection/forEach":132,"lodash/lang/isObject":241,"lodash/lang/isString":243}],69:[function(require,module,exports){
+},{"./factory":66,"./ns":68,"./properties":69,"./registry":70,"lodash/collection/find":130,"lodash/collection/forEach":131,"lodash/lang/isObject":240,"lodash/lang/isString":242}],68:[function(require,module,exports){
 'use strict';
 
 /**
@@ -12524,7 +12437,7 @@ module.exports.parseName = function(name, defaultPrefix) {
     localName: localName
   };
 };
-},{}],70:[function(require,module,exports){
+},{}],69:[function(require,module,exports){
 'use strict';
 
 
@@ -12643,7 +12556,7 @@ function defineProperty(target, property, value) {
     configurable: true
   });
 }
-},{}],71:[function(require,module,exports){
+},{}],70:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -12828,7 +12741,7 @@ Registry.prototype.getEffectiveDescriptor = function(name) {
 Registry.prototype.definePackage = function(target, pkg) {
   this.properties.define(target, '$pkg', { value: pkg });
 };
-},{"./descriptor-builder":66,"./ns":69,"./types":72,"lodash/collection/forEach":132,"lodash/object/assign":246}],72:[function(require,module,exports){
+},{"./descriptor-builder":65,"./ns":68,"./types":71,"lodash/collection/forEach":131,"lodash/object/assign":245}],71:[function(require,module,exports){
 'use strict';
 
 /**
@@ -12879,7 +12792,7 @@ module.exports.isBuiltIn = function(type) {
 module.exports.isSimple = function(type) {
   return !!TYPE_CONVERTERS[type];
 };
-},{}],73:[function(require,module,exports){
+},{}],72:[function(require,module,exports){
 module.exports={
   "name": "BPMN20",
   "uri": "http://www.omg.org/spec/BPMN/20100524/MODEL",
@@ -15829,7 +15742,7 @@ module.exports={
     "typePrefix": "t"
   }
 }
-},{}],74:[function(require,module,exports){
+},{}],73:[function(require,module,exports){
 module.exports={
   "name": "BPMNDI",
   "uri": "http://www.omg.org/spec/BPMN/20100524/DI",
@@ -16023,7 +15936,7 @@ module.exports={
   "associations": [],
   "prefix": "bpmndi"
 }
-},{}],75:[function(require,module,exports){
+},{}],74:[function(require,module,exports){
 module.exports={
   "name": "DC",
   "uri": "http://www.omg.org/spec/DD/20100524/DC",
@@ -16123,7 +16036,7 @@ module.exports={
   "prefix": "dc",
   "associations": []
 }
-},{}],76:[function(require,module,exports){
+},{}],75:[function(require,module,exports){
 module.exports={
   "name": "DI",
   "uri": "http://www.omg.org/spec/DD/20100524/DI",
@@ -16362,9 +16275,9 @@ module.exports={
     "tagAlias": "lowerCase"
   }
 }
-},{}],77:[function(require,module,exports){
+},{}],76:[function(require,module,exports){
 module.exports = require('./lib/Diagram');
-},{"./lib/Diagram":78}],78:[function(require,module,exports){
+},{"./lib/Diagram":77}],77:[function(require,module,exports){
 'use strict';
 
 var di = require('didi');
@@ -16565,7 +16478,7 @@ Diagram.prototype.destroy = function() {
 Diagram.prototype.clear = function() {
   this.get('eventBus').fire('diagram.clear');
 };
-},{"./core":84,"didi":120}],79:[function(require,module,exports){
+},{"./core":83,"didi":119}],78:[function(require,module,exports){
 'use strict';
 
 var isNumber = require('lodash/lang/isNumber'),
@@ -17495,7 +17408,7 @@ Canvas.prototype.getAbsoluteBBox = function(element) {
     height: height
   };
 };
-},{"../../vendor/snapsvg":125,"../util/Collections":108,"../util/Elements":110,"lodash/collection/every":129,"lodash/collection/forEach":132,"lodash/function/debounce":140,"lodash/lang/isNumber":240,"lodash/object/assign":246}],80:[function(require,module,exports){
+},{"../../vendor/snapsvg":124,"../util/Collections":107,"../util/Elements":109,"lodash/collection/every":128,"lodash/collection/forEach":131,"lodash/function/debounce":139,"lodash/lang/isNumber":239,"lodash/object/assign":245}],79:[function(require,module,exports){
 'use strict';
 
 var Model = require('../model');
@@ -17545,7 +17458,7 @@ ElementFactory.prototype.create = function(type, attrs) {
 
   return Model.create(type, attrs);
 };
-},{"../model":101}],81:[function(require,module,exports){
+},{"../model":100}],80:[function(require,module,exports){
 'use strict';
 
 var ELEMENT_ID = 'data-element-id';
@@ -17744,7 +17657,7 @@ ElementRegistry.prototype._validateId = function(id) {
     throw new Error('element with id ' + id + ' already added');
   }
 };
-},{}],82:[function(require,module,exports){
+},{}],81:[function(require,module,exports){
 'use strict';
 
 var isFunction = require('lodash/lang/isFunction'),
@@ -18202,7 +18115,7 @@ function invokeFunction(fn, args) {
   return fn.apply(null, args);
 }
 
-},{"lodash/function/bind":139,"lodash/lang/isArray":237,"lodash/lang/isFunction":238,"lodash/lang/isNumber":240,"lodash/object/assign":246}],83:[function(require,module,exports){
+},{"lodash/function/bind":138,"lodash/lang/isArray":236,"lodash/lang/isFunction":237,"lodash/lang/isNumber":239,"lodash/object/assign":245}],82:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -18386,7 +18299,7 @@ GraphicsFactory.prototype.remove = function(element) {
   gfx.parent().remove();
 };
 
-},{"../util/GraphicsUtil":112,"lodash/collection/forEach":132,"lodash/collection/reduce":136,"min-dom/lib/clear":258}],84:[function(require,module,exports){
+},{"../util/GraphicsUtil":111,"lodash/collection/forEach":131,"lodash/collection/reduce":135,"min-dom/lib/clear":257}],83:[function(require,module,exports){
 module.exports = {
   __depends__: [ require('../draw') ],
   __init__: [ 'canvas' ],
@@ -18396,7 +18309,7 @@ module.exports = {
   eventBus: [ 'type', require('./EventBus') ],
   graphicsFactory: [ 'type', require('./GraphicsFactory') ]
 };
-},{"../draw":88,"./Canvas":79,"./ElementFactory":80,"./ElementRegistry":81,"./EventBus":82,"./GraphicsFactory":83}],85:[function(require,module,exports){
+},{"../draw":87,"./Canvas":78,"./ElementFactory":79,"./ElementRegistry":80,"./EventBus":81,"./GraphicsFactory":82}],84:[function(require,module,exports){
 'use strict';
 
 var DEFAULT_RENDER_PRIORITY = 1000;
@@ -18487,7 +18400,7 @@ BaseRenderer.prototype.getConnectionPath = function() {};
 
 module.exports = BaseRenderer;
 
-},{}],86:[function(require,module,exports){
+},{}],85:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -18572,7 +18485,7 @@ DefaultRenderer.$inject = [ 'eventBus', 'styles' ];
 
 module.exports = DefaultRenderer;
 
-},{"../util/RenderUtil":117,"./BaseRenderer":85,"inherits":126}],87:[function(require,module,exports){
+},{"../util/RenderUtil":116,"./BaseRenderer":84,"inherits":125}],86:[function(require,module,exports){
 'use strict';
 
 var isArray = require('lodash/lang/isArray'),
@@ -18649,14 +18562,14 @@ function Styles() {
 
 module.exports = Styles;
 
-},{"lodash/collection/reduce":136,"lodash/lang/isArray":237,"lodash/object/assign":246}],88:[function(require,module,exports){
+},{"lodash/collection/reduce":135,"lodash/lang/isArray":236,"lodash/object/assign":245}],87:[function(require,module,exports){
 module.exports = {
   __init__: [ 'defaultRenderer' ],
   defaultRenderer: [ 'type', require('./DefaultRenderer') ],
   styles: [ 'type', require('./Styles') ]
 };
 
-},{"./DefaultRenderer":86,"./Styles":87}],89:[function(require,module,exports){
+},{"./DefaultRenderer":85,"./Styles":86}],88:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -18945,12 +18858,12 @@ module.exports = InteractionEvents;
  * @property {Event} originalEvent
  */
 
-},{"../../../vendor/snapsvg":125,"../../util/Mouse":115,"../../util/RenderUtil":117,"lodash/collection/forEach":132,"min-dom/lib/delegate":259}],90:[function(require,module,exports){
+},{"../../../vendor/snapsvg":124,"../../util/Mouse":114,"../../util/RenderUtil":116,"lodash/collection/forEach":131,"min-dom/lib/delegate":258}],89:[function(require,module,exports){
 module.exports = {
   __init__: [ 'interactionEvents' ],
   interactionEvents: [ 'type', require('./InteractionEvents') ]
 };
-},{"./InteractionEvents":89}],91:[function(require,module,exports){
+},{"./InteractionEvents":88}],90:[function(require,module,exports){
 'use strict';
 
 var getBBox = require('../../util/Elements').getBBox;
@@ -19030,14 +18943,14 @@ Outline.$inject = ['eventBus', 'styles', 'elementRegistry'];
 
 module.exports = Outline;
 
-},{"../../util/Elements":110}],92:[function(require,module,exports){
+},{"../../util/Elements":109}],91:[function(require,module,exports){
 'use strict';
 
 module.exports = {
   __init__: [ 'outline' ],
   outline: [ 'type', require('./Outline') ]
 };
-},{"./Outline":91}],93:[function(require,module,exports){
+},{"./Outline":90}],92:[function(require,module,exports){
 'use strict';
 
 var isArray = require('lodash/lang/isArray'),
@@ -19549,12 +19462,12 @@ Overlays.prototype._init = function() {
   });
 };
 
-},{"../../util/Elements":110,"../../util/IdGenerator":113,"lodash/collection/filter":130,"lodash/collection/forEach":132,"lodash/lang/isArray":237,"lodash/lang/isObject":241,"lodash/lang/isString":243,"lodash/object/assign":246,"min-dom/lib/classes":257,"min-dom/lib/domify":260,"min-dom/lib/remove":263}],94:[function(require,module,exports){
+},{"../../util/Elements":109,"../../util/IdGenerator":112,"lodash/collection/filter":129,"lodash/collection/forEach":131,"lodash/lang/isArray":236,"lodash/lang/isObject":240,"lodash/lang/isString":242,"lodash/object/assign":245,"min-dom/lib/classes":256,"min-dom/lib/domify":259,"min-dom/lib/remove":262}],93:[function(require,module,exports){
 module.exports = {
   __init__: [ 'overlays' ],
   overlays: [ 'type', require('./Overlays') ]
 };
-},{"./Overlays":93}],95:[function(require,module,exports){
+},{"./Overlays":92}],94:[function(require,module,exports){
 'use strict';
 
 var isArray = require('lodash/lang/isArray'),
@@ -19653,7 +19566,7 @@ Selection.prototype.select = function(elements, add) {
   this._eventBus.fire('selection.changed', { oldSelection: oldSelection, newSelection: selectedElements });
 };
 
-},{"lodash/collection/forEach":132,"lodash/lang/isArray":237}],96:[function(require,module,exports){
+},{"lodash/collection/forEach":131,"lodash/lang/isArray":236}],95:[function(require,module,exports){
 'use strict';
 
 var hasPrimaryModifier = require('../../util/Mouse').hasPrimaryModifier;
@@ -19728,7 +19641,7 @@ function SelectionBehavior(eventBus, selection, canvas, elementRegistry) {
 SelectionBehavior.$inject = [ 'eventBus', 'selection', 'canvas', 'elementRegistry' ];
 module.exports = SelectionBehavior;
 
-},{"../../util/Mouse":115}],97:[function(require,module,exports){
+},{"../../util/Mouse":114}],96:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -19806,7 +19719,7 @@ SelectionVisuals.$inject = [
 
 module.exports = SelectionVisuals;
 
-},{"lodash/collection/forEach":132}],98:[function(require,module,exports){
+},{"lodash/collection/forEach":131}],97:[function(require,module,exports){
 module.exports = {
   __init__: [ 'selectionVisuals', 'selectionBehavior' ],
   __depends__: [
@@ -19818,11 +19731,11 @@ module.exports = {
   selectionBehavior: [ 'type', require('./SelectionBehavior') ]
 };
 
-},{"../interaction-events":90,"../outline":92,"./Selection":95,"./SelectionBehavior":96,"./SelectionVisuals":97}],99:[function(require,module,exports){
+},{"../interaction-events":89,"../outline":91,"./Selection":94,"./SelectionBehavior":95,"./SelectionVisuals":96}],98:[function(require,module,exports){
 module.exports = {
   translate: [ 'value', require('./translate') ]
 };
-},{"./translate":100}],100:[function(require,module,exports){
+},{"./translate":99}],99:[function(require,module,exports){
 'use strict';
 
 /**
@@ -19851,7 +19764,7 @@ module.exports = function translate(template, replacements) {
     return replacements[key] || '{' + key + '}';
   });
 };
-},{}],101:[function(require,module,exports){
+},{}],100:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -20067,7 +19980,7 @@ module.exports.Shape = Shape;
 module.exports.Connection = Connection;
 module.exports.Label = Label;
 
-},{"inherits":126,"lodash/object/assign":246,"object-refs":272}],102:[function(require,module,exports){
+},{"inherits":125,"lodash/object/assign":245,"object-refs":271}],101:[function(require,module,exports){
 'use strict';
 
 var Cursor = require('../../util/Cursor'),
@@ -20165,12 +20078,12 @@ MoveCanvas.$inject = [ 'eventBus', 'canvas' ];
 
 module.exports = MoveCanvas;
 
-},{"../../util/ClickTrap":107,"../../util/Cursor":109,"../../util/Event":111,"../../util/Math":114,"min-dom/lib/event":261}],103:[function(require,module,exports){
+},{"../../util/ClickTrap":106,"../../util/Cursor":108,"../../util/Event":110,"../../util/Math":113,"min-dom/lib/event":260}],102:[function(require,module,exports){
 module.exports = {
   __init__: [ 'moveCanvas' ],
   moveCanvas: [ 'type', require('./MoveCanvas') ]
 };
-},{"./MoveCanvas":102}],104:[function(require,module,exports){
+},{"./MoveCanvas":101}],103:[function(require,module,exports){
 'use strict';
 
 var domEvent = require('min-dom/lib/event');
@@ -20353,7 +20266,7 @@ ZoomScroll.prototype.toggle = function toggle(newEnabled) {
 ZoomScroll.prototype._init = function(newEnabled) {
   this.toggle(newEnabled);
 };
-},{"../../util/Math":114,"../../util/Mouse":115,"../../util/Platform":116,"./ZoomUtil":105,"lodash/function/bind":139,"min-dom/lib/event":261}],105:[function(require,module,exports){
+},{"../../util/Math":113,"../../util/Mouse":114,"../../util/Platform":115,"./ZoomUtil":104,"lodash/function/bind":138,"min-dom/lib/event":260}],104:[function(require,module,exports){
 'use strict';
 
 
@@ -20377,12 +20290,12 @@ module.exports.cap = function(range, scale) {
   return Math.max(range.min, Math.min(range.max, scale));
 };
 
-},{"../../util/Math":114}],106:[function(require,module,exports){
+},{"../../util/Math":113}],105:[function(require,module,exports){
 module.exports = {
   __init__: [ 'zoomScroll' ],
   zoomScroll: [ 'type', require('./ZoomScroll') ]
 };
-},{"./ZoomScroll":104}],107:[function(require,module,exports){
+},{"./ZoomScroll":103}],106:[function(require,module,exports){
 'use strict';
 
 var domEvent = require('min-dom/lib/event'),
@@ -20413,7 +20326,7 @@ function install() {
 }
 
 module.exports.install = install;
-},{"./Event":111,"min-dom/lib/event":261}],108:[function(require,module,exports){
+},{"./Event":110,"min-dom/lib/event":260}],107:[function(require,module,exports){
 'use strict';
 
 /**
@@ -20504,7 +20417,7 @@ module.exports.indexOf = function(collection, element) {
   return collection.indexOf(element);
 };
 
-},{}],109:[function(require,module,exports){
+},{}],108:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -20532,7 +20445,7 @@ module.exports.has = function(mode) {
   return classes.has('djs-cursor-' + mode);
 };
 
-},{"min-dom/lib/classes":257}],110:[function(require,module,exports){
+},{"min-dom/lib/classes":256}],109:[function(require,module,exports){
 'use strict';
 
 var isArray = require('lodash/lang/isArray'),
@@ -20827,7 +20740,7 @@ function getElementType(element) {
 }
 
 module.exports.getType = getElementType;
-},{"lodash/collection/forEach":132,"lodash/collection/groupBy":133,"lodash/lang/isArray":237,"lodash/lang/isNumber":240}],111:[function(require,module,exports){
+},{"lodash/collection/forEach":131,"lodash/collection/groupBy":132,"lodash/lang/isArray":236,"lodash/lang/isNumber":239}],110:[function(require,module,exports){
 'use strict';
 
 function __preventDefault(event) {
@@ -20898,7 +20811,7 @@ function toPoint(event) {
 
 module.exports.toPoint = toPoint;
 
-},{}],112:[function(require,module,exports){
+},{}],111:[function(require,module,exports){
 'use strict';
 
 /**
@@ -20944,7 +20857,7 @@ function getBBox(gfx) {
 module.exports.getVisual = getVisual;
 module.exports.getChildren = getChildren;
 module.exports.getBBox = getBBox;
-},{}],113:[function(require,module,exports){
+},{}],112:[function(require,module,exports){
 'use strict';
 
 /**
@@ -20977,7 +20890,7 @@ IdGenerator.prototype.next = function() {
   return this._prefix + (++this._counter);
 };
 
-},{}],114:[function(require,module,exports){
+},{}],113:[function(require,module,exports){
 'use strict';
 
 /**
@@ -21000,7 +20913,7 @@ function substract(p1, p2) {
 
 module.exports.substract = substract;
 
-},{}],115:[function(require,module,exports){
+},{}],114:[function(require,module,exports){
 'use strict';
 
 var getOriginalEvent = require('./Event').getOriginal;
@@ -21039,13 +20952,13 @@ module.exports.hasSecondaryModifier = function(event) {
   return isPrimaryButton(event) && originalEvent.shiftKey;
 };
 
-},{"./Event":111,"./Platform":116}],116:[function(require,module,exports){
+},{"./Event":110,"./Platform":115}],115:[function(require,module,exports){
 'use strict';
 
 module.exports.isMac = function isMac() {
   return (/mac/i).test(navigator.platform);
 };
-},{}],117:[function(require,module,exports){
+},{}],116:[function(require,module,exports){
 'use strict';
 
 var Snap = require('../../vendor/snapsvg');
@@ -21075,7 +20988,7 @@ module.exports.updateLine = function(gfx, points) {
   return gfx.attr({ points: toSVGPoints(points) });
 };
 
-},{"../../vendor/snapsvg":125}],118:[function(require,module,exports){
+},{"../../vendor/snapsvg":124}],117:[function(require,module,exports){
 'use strict';
 
 var isObject = require('lodash/lang/isObject'),
@@ -21327,7 +21240,7 @@ Text.prototype.createText = function(parent, text, options) {
 
 module.exports = Text;
 
-},{"../../vendor/snapsvg":125,"lodash/collection/forEach":132,"lodash/collection/reduce":136,"lodash/lang/isObject":241,"lodash/object/assign":246,"lodash/object/merge":249,"lodash/object/pick":252}],119:[function(require,module,exports){
+},{"../../vendor/snapsvg":124,"lodash/collection/forEach":131,"lodash/collection/reduce":135,"lodash/lang/isObject":240,"lodash/object/assign":245,"lodash/object/merge":248,"lodash/object/pick":251}],118:[function(require,module,exports){
 
 var isArray = function(obj) {
   return Object.prototype.toString.call(obj) === '[object Array]';
@@ -21377,14 +21290,14 @@ exports.annotate = annotate;
 exports.parse = parse;
 exports.isArray = isArray;
 
-},{}],120:[function(require,module,exports){
+},{}],119:[function(require,module,exports){
 module.exports = {
   annotate: require('./annotation').annotate,
   Module: require('./module'),
   Injector: require('./injector')
 };
 
-},{"./annotation":119,"./injector":121,"./module":122}],121:[function(require,module,exports){
+},{"./annotation":118,"./injector":120,"./module":121}],120:[function(require,module,exports){
 var Module = require('./module');
 var autoAnnotate = require('./annotation').parse;
 var annotate = require('./annotation').annotate;
@@ -21613,7 +21526,7 @@ var Injector = function(modules, parent) {
 
 module.exports = Injector;
 
-},{"./annotation":119,"./module":122}],122:[function(require,module,exports){
+},{"./annotation":118,"./module":121}],121:[function(require,module,exports){
 var Module = function() {
   var providers = [];
 
@@ -21639,7 +21552,7 @@ var Module = function() {
 
 module.exports = Module;
 
-},{}],123:[function(require,module,exports){
+},{}],122:[function(require,module,exports){
 // Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -22044,7 +21957,7 @@ module.exports = Module;
     (typeof module != "undefined" && module.exports) ? (module.exports = eve) : (typeof define === "function" && define.amd ? (define("eve", [], function() { return eve; })) : (glob.eve = eve));
 })(this);
 
-},{}],124:[function(require,module,exports){
+},{}],123:[function(require,module,exports){
 // Snap.svg 0.3.0
 // 
 // Copyright (c) 2013 – 2014 Adobe Systems Incorporated. All rights reserved.
@@ -28697,7 +28610,7 @@ Snap.plugin(function (Snap, Element, Paper, glob) {
 
 return Snap;
 }));
-},{"eve":123}],125:[function(require,module,exports){
+},{"eve":122}],124:[function(require,module,exports){
 'use strict';
 
 var snapsvg = module.exports = require('snapsvg');
@@ -28906,7 +28819,7 @@ snapsvg.plugin(function(Snap, Element, Paper, global) {
     return new Snap(svg);
   };
 });
-},{"snapsvg":124}],126:[function(require,module,exports){
+},{"snapsvg":123}],125:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -28931,7 +28844,7 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],127:[function(require,module,exports){
+},{}],126:[function(require,module,exports){
 /**
  * Gets the last element of `array`.
  *
@@ -28952,7 +28865,7 @@ function last(array) {
 
 module.exports = last;
 
-},{}],128:[function(require,module,exports){
+},{}],127:[function(require,module,exports){
 var LazyWrapper = require('../internal/LazyWrapper'),
     LodashWrapper = require('../internal/LodashWrapper'),
     baseLodash = require('../internal/baseLodash'),
@@ -29079,7 +28992,7 @@ lodash.prototype = baseLodash.prototype;
 
 module.exports = lodash;
 
-},{"../internal/LazyWrapper":143,"../internal/LodashWrapper":144,"../internal/baseLodash":175,"../internal/isObjectLike":222,"../internal/wrapperClone":235,"../lang/isArray":237}],129:[function(require,module,exports){
+},{"../internal/LazyWrapper":142,"../internal/LodashWrapper":143,"../internal/baseLodash":174,"../internal/isObjectLike":221,"../internal/wrapperClone":234,"../lang/isArray":236}],128:[function(require,module,exports){
 var arrayEvery = require('../internal/arrayEvery'),
     baseCallback = require('../internal/baseCallback'),
     baseEvery = require('../internal/baseEvery'),
@@ -29147,7 +29060,7 @@ function every(collection, predicate, thisArg) {
 
 module.exports = every;
 
-},{"../internal/arrayEvery":148,"../internal/baseCallback":156,"../internal/baseEvery":162,"../internal/isIterateeCall":218,"../lang/isArray":237}],130:[function(require,module,exports){
+},{"../internal/arrayEvery":147,"../internal/baseCallback":155,"../internal/baseEvery":161,"../internal/isIterateeCall":217,"../lang/isArray":236}],129:[function(require,module,exports){
 var arrayFilter = require('../internal/arrayFilter'),
     baseCallback = require('../internal/baseCallback'),
     baseFilter = require('../internal/baseFilter'),
@@ -29210,7 +29123,7 @@ function filter(collection, predicate, thisArg) {
 
 module.exports = filter;
 
-},{"../internal/arrayFilter":149,"../internal/baseCallback":156,"../internal/baseFilter":163,"../lang/isArray":237}],131:[function(require,module,exports){
+},{"../internal/arrayFilter":148,"../internal/baseCallback":155,"../internal/baseFilter":162,"../lang/isArray":236}],130:[function(require,module,exports){
 var baseEach = require('../internal/baseEach'),
     createFind = require('../internal/createFind');
 
@@ -29268,7 +29181,7 @@ var find = createFind(baseEach);
 
 module.exports = find;
 
-},{"../internal/baseEach":161,"../internal/createFind":201}],132:[function(require,module,exports){
+},{"../internal/baseEach":160,"../internal/createFind":200}],131:[function(require,module,exports){
 var arrayEach = require('../internal/arrayEach'),
     baseEach = require('../internal/baseEach'),
     createForEach = require('../internal/createForEach');
@@ -29307,7 +29220,7 @@ var forEach = createForEach(arrayEach, baseEach);
 
 module.exports = forEach;
 
-},{"../internal/arrayEach":147,"../internal/baseEach":161,"../internal/createForEach":202}],133:[function(require,module,exports){
+},{"../internal/arrayEach":146,"../internal/baseEach":160,"../internal/createForEach":201}],132:[function(require,module,exports){
 var createAggregator = require('../internal/createAggregator');
 
 /** Used for native method references. */
@@ -29368,7 +29281,7 @@ var groupBy = createAggregator(function(result, value, key) {
 
 module.exports = groupBy;
 
-},{"../internal/createAggregator":194}],134:[function(require,module,exports){
+},{"../internal/createAggregator":193}],133:[function(require,module,exports){
 var baseIndexOf = require('../internal/baseIndexOf'),
     getLength = require('../internal/getLength'),
     isArray = require('../lang/isArray'),
@@ -29427,7 +29340,7 @@ function includes(collection, target, fromIndex, guard) {
 
 module.exports = includes;
 
-},{"../internal/baseIndexOf":171,"../internal/getLength":212,"../internal/isIterateeCall":218,"../internal/isLength":221,"../lang/isArray":237,"../lang/isString":243,"../object/values":253}],135:[function(require,module,exports){
+},{"../internal/baseIndexOf":170,"../internal/getLength":211,"../internal/isIterateeCall":217,"../internal/isLength":220,"../lang/isArray":236,"../lang/isString":242,"../object/values":252}],134:[function(require,module,exports){
 var arrayMap = require('../internal/arrayMap'),
     baseCallback = require('../internal/baseCallback'),
     baseMap = require('../internal/baseMap'),
@@ -29497,7 +29410,7 @@ function map(collection, iteratee, thisArg) {
 
 module.exports = map;
 
-},{"../internal/arrayMap":150,"../internal/baseCallback":156,"../internal/baseMap":176,"../lang/isArray":237}],136:[function(require,module,exports){
+},{"../internal/arrayMap":149,"../internal/baseCallback":155,"../internal/baseMap":175,"../lang/isArray":236}],135:[function(require,module,exports){
 var arrayReduce = require('../internal/arrayReduce'),
     baseEach = require('../internal/baseEach'),
     createReduce = require('../internal/createReduce');
@@ -29543,7 +29456,7 @@ var reduce = createReduce(arrayReduce, baseEach);
 
 module.exports = reduce;
 
-},{"../internal/arrayReduce":152,"../internal/baseEach":161,"../internal/createReduce":205}],137:[function(require,module,exports){
+},{"../internal/arrayReduce":151,"../internal/baseEach":160,"../internal/createReduce":204}],136:[function(require,module,exports){
 var arraySome = require('../internal/arraySome'),
     baseCallback = require('../internal/baseCallback'),
     baseSome = require('../internal/baseSome'),
@@ -29612,7 +29525,7 @@ function some(collection, predicate, thisArg) {
 
 module.exports = some;
 
-},{"../internal/arraySome":153,"../internal/baseCallback":156,"../internal/baseSome":186,"../internal/isIterateeCall":218,"../lang/isArray":237}],138:[function(require,module,exports){
+},{"../internal/arraySome":152,"../internal/baseCallback":155,"../internal/baseSome":185,"../internal/isIterateeCall":217,"../lang/isArray":236}],137:[function(require,module,exports){
 var getNative = require('../internal/getNative');
 
 /* Native method references for those with the same name as other `lodash` methods. */
@@ -29638,7 +29551,7 @@ var now = nativeNow || function() {
 
 module.exports = now;
 
-},{"../internal/getNative":214}],139:[function(require,module,exports){
+},{"../internal/getNative":213}],138:[function(require,module,exports){
 var createWrapper = require('../internal/createWrapper'),
     replaceHolders = require('../internal/replaceHolders'),
     restParam = require('./restParam');
@@ -29696,7 +29609,7 @@ bind.placeholder = {};
 
 module.exports = bind;
 
-},{"../internal/createWrapper":206,"../internal/replaceHolders":230,"./restParam":142}],140:[function(require,module,exports){
+},{"../internal/createWrapper":205,"../internal/replaceHolders":229,"./restParam":141}],139:[function(require,module,exports){
 var isObject = require('../lang/isObject'),
     now = require('../date/now');
 
@@ -29879,7 +29792,7 @@ function debounce(func, wait, options) {
 
 module.exports = debounce;
 
-},{"../date/now":138,"../lang/isObject":241}],141:[function(require,module,exports){
+},{"../date/now":137,"../lang/isObject":240}],140:[function(require,module,exports){
 var baseDelay = require('../internal/baseDelay'),
     restParam = require('./restParam');
 
@@ -29906,7 +29819,7 @@ var defer = restParam(function(func, args) {
 
 module.exports = defer;
 
-},{"../internal/baseDelay":159,"./restParam":142}],142:[function(require,module,exports){
+},{"../internal/baseDelay":158,"./restParam":141}],141:[function(require,module,exports){
 /** Used as the `TypeError` message for "Functions" methods. */
 var FUNC_ERROR_TEXT = 'Expected a function';
 
@@ -29966,7 +29879,7 @@ function restParam(func, start) {
 
 module.exports = restParam;
 
-},{}],143:[function(require,module,exports){
+},{}],142:[function(require,module,exports){
 var baseCreate = require('./baseCreate'),
     baseLodash = require('./baseLodash');
 
@@ -29994,7 +29907,7 @@ LazyWrapper.prototype.constructor = LazyWrapper;
 
 module.exports = LazyWrapper;
 
-},{"./baseCreate":158,"./baseLodash":175}],144:[function(require,module,exports){
+},{"./baseCreate":157,"./baseLodash":174}],143:[function(require,module,exports){
 var baseCreate = require('./baseCreate'),
     baseLodash = require('./baseLodash');
 
@@ -30017,7 +29930,7 @@ LodashWrapper.prototype.constructor = LodashWrapper;
 
 module.exports = LodashWrapper;
 
-},{"./baseCreate":158,"./baseLodash":175}],145:[function(require,module,exports){
+},{"./baseCreate":157,"./baseLodash":174}],144:[function(require,module,exports){
 (function (global){
 var cachePush = require('./cachePush'),
     getNative = require('./getNative');
@@ -30050,7 +29963,7 @@ SetCache.prototype.push = cachePush;
 module.exports = SetCache;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./cachePush":191,"./getNative":214}],146:[function(require,module,exports){
+},{"./cachePush":190,"./getNative":213}],145:[function(require,module,exports){
 /**
  * Copies the values of `source` to `array`.
  *
@@ -30072,7 +29985,7 @@ function arrayCopy(source, array) {
 
 module.exports = arrayCopy;
 
-},{}],147:[function(require,module,exports){
+},{}],146:[function(require,module,exports){
 /**
  * A specialized version of `_.forEach` for arrays without support for callback
  * shorthands and `this` binding.
@@ -30096,7 +30009,7 @@ function arrayEach(array, iteratee) {
 
 module.exports = arrayEach;
 
-},{}],148:[function(require,module,exports){
+},{}],147:[function(require,module,exports){
 /**
  * A specialized version of `_.every` for arrays without support for callback
  * shorthands and `this` binding.
@@ -30121,7 +30034,7 @@ function arrayEvery(array, predicate) {
 
 module.exports = arrayEvery;
 
-},{}],149:[function(require,module,exports){
+},{}],148:[function(require,module,exports){
 /**
  * A specialized version of `_.filter` for arrays without support for callback
  * shorthands and `this` binding.
@@ -30148,7 +30061,7 @@ function arrayFilter(array, predicate) {
 
 module.exports = arrayFilter;
 
-},{}],150:[function(require,module,exports){
+},{}],149:[function(require,module,exports){
 /**
  * A specialized version of `_.map` for arrays without support for callback
  * shorthands and `this` binding.
@@ -30171,7 +30084,7 @@ function arrayMap(array, iteratee) {
 
 module.exports = arrayMap;
 
-},{}],151:[function(require,module,exports){
+},{}],150:[function(require,module,exports){
 /**
  * Appends the elements of `values` to `array`.
  *
@@ -30193,7 +30106,7 @@ function arrayPush(array, values) {
 
 module.exports = arrayPush;
 
-},{}],152:[function(require,module,exports){
+},{}],151:[function(require,module,exports){
 /**
  * A specialized version of `_.reduce` for arrays without support for callback
  * shorthands and `this` binding.
@@ -30221,7 +30134,7 @@ function arrayReduce(array, iteratee, accumulator, initFromArray) {
 
 module.exports = arrayReduce;
 
-},{}],153:[function(require,module,exports){
+},{}],152:[function(require,module,exports){
 /**
  * A specialized version of `_.some` for arrays without support for callback
  * shorthands and `this` binding.
@@ -30246,7 +30159,7 @@ function arraySome(array, predicate) {
 
 module.exports = arraySome;
 
-},{}],154:[function(require,module,exports){
+},{}],153:[function(require,module,exports){
 var keys = require('../object/keys');
 
 /**
@@ -30280,7 +30193,7 @@ function assignWith(object, source, customizer) {
 
 module.exports = assignWith;
 
-},{"../object/keys":247}],155:[function(require,module,exports){
+},{"../object/keys":246}],154:[function(require,module,exports){
 var baseCopy = require('./baseCopy'),
     keys = require('../object/keys');
 
@@ -30301,7 +30214,7 @@ function baseAssign(object, source) {
 
 module.exports = baseAssign;
 
-},{"../object/keys":247,"./baseCopy":157}],156:[function(require,module,exports){
+},{"../object/keys":246,"./baseCopy":156}],155:[function(require,module,exports){
 var baseMatches = require('./baseMatches'),
     baseMatchesProperty = require('./baseMatchesProperty'),
     bindCallback = require('./bindCallback'),
@@ -30338,7 +30251,7 @@ function baseCallback(func, thisArg, argCount) {
 
 module.exports = baseCallback;
 
-},{"../utility/identity":254,"../utility/property":256,"./baseMatches":177,"./baseMatchesProperty":178,"./bindCallback":189}],157:[function(require,module,exports){
+},{"../utility/identity":253,"../utility/property":255,"./baseMatches":176,"./baseMatchesProperty":177,"./bindCallback":188}],156:[function(require,module,exports){
 /**
  * Copies properties of `source` to `object`.
  *
@@ -30363,7 +30276,7 @@ function baseCopy(source, props, object) {
 
 module.exports = baseCopy;
 
-},{}],158:[function(require,module,exports){
+},{}],157:[function(require,module,exports){
 var isObject = require('../lang/isObject');
 
 /**
@@ -30388,7 +30301,7 @@ var baseCreate = (function() {
 
 module.exports = baseCreate;
 
-},{"../lang/isObject":241}],159:[function(require,module,exports){
+},{"../lang/isObject":240}],158:[function(require,module,exports){
 /** Used as the `TypeError` message for "Functions" methods. */
 var FUNC_ERROR_TEXT = 'Expected a function';
 
@@ -30411,7 +30324,7 @@ function baseDelay(func, wait, args) {
 
 module.exports = baseDelay;
 
-},{}],160:[function(require,module,exports){
+},{}],159:[function(require,module,exports){
 var baseIndexOf = require('./baseIndexOf'),
     cacheIndexOf = require('./cacheIndexOf'),
     createCache = require('./createCache');
@@ -30468,7 +30381,7 @@ function baseDifference(array, values) {
 
 module.exports = baseDifference;
 
-},{"./baseIndexOf":171,"./cacheIndexOf":190,"./createCache":199}],161:[function(require,module,exports){
+},{"./baseIndexOf":170,"./cacheIndexOf":189,"./createCache":198}],160:[function(require,module,exports){
 var baseForOwn = require('./baseForOwn'),
     createBaseEach = require('./createBaseEach');
 
@@ -30485,7 +30398,7 @@ var baseEach = createBaseEach(baseForOwn);
 
 module.exports = baseEach;
 
-},{"./baseForOwn":169,"./createBaseEach":196}],162:[function(require,module,exports){
+},{"./baseForOwn":168,"./createBaseEach":195}],161:[function(require,module,exports){
 var baseEach = require('./baseEach');
 
 /**
@@ -30509,7 +30422,7 @@ function baseEvery(collection, predicate) {
 
 module.exports = baseEvery;
 
-},{"./baseEach":161}],163:[function(require,module,exports){
+},{"./baseEach":160}],162:[function(require,module,exports){
 var baseEach = require('./baseEach');
 
 /**
@@ -30533,7 +30446,7 @@ function baseFilter(collection, predicate) {
 
 module.exports = baseFilter;
 
-},{"./baseEach":161}],164:[function(require,module,exports){
+},{"./baseEach":160}],163:[function(require,module,exports){
 /**
  * The base implementation of `_.find`, `_.findLast`, `_.findKey`, and `_.findLastKey`,
  * without support for callback shorthands and `this` binding, which iterates
@@ -30560,7 +30473,7 @@ function baseFind(collection, predicate, eachFunc, retKey) {
 
 module.exports = baseFind;
 
-},{}],165:[function(require,module,exports){
+},{}],164:[function(require,module,exports){
 /**
  * The base implementation of `_.findIndex` and `_.findLastIndex` without
  * support for callback shorthands and `this` binding.
@@ -30585,7 +30498,7 @@ function baseFindIndex(array, predicate, fromRight) {
 
 module.exports = baseFindIndex;
 
-},{}],166:[function(require,module,exports){
+},{}],165:[function(require,module,exports){
 var arrayPush = require('./arrayPush'),
     isArguments = require('../lang/isArguments'),
     isArray = require('../lang/isArray'),
@@ -30628,7 +30541,7 @@ function baseFlatten(array, isDeep, isStrict, result) {
 
 module.exports = baseFlatten;
 
-},{"../lang/isArguments":236,"../lang/isArray":237,"./arrayPush":151,"./isArrayLike":216,"./isObjectLike":222}],167:[function(require,module,exports){
+},{"../lang/isArguments":235,"../lang/isArray":236,"./arrayPush":150,"./isArrayLike":215,"./isObjectLike":221}],166:[function(require,module,exports){
 var createBaseFor = require('./createBaseFor');
 
 /**
@@ -30647,7 +30560,7 @@ var baseFor = createBaseFor();
 
 module.exports = baseFor;
 
-},{"./createBaseFor":197}],168:[function(require,module,exports){
+},{"./createBaseFor":196}],167:[function(require,module,exports){
 var baseFor = require('./baseFor'),
     keysIn = require('../object/keysIn');
 
@@ -30666,7 +30579,7 @@ function baseForIn(object, iteratee) {
 
 module.exports = baseForIn;
 
-},{"../object/keysIn":248,"./baseFor":167}],169:[function(require,module,exports){
+},{"../object/keysIn":247,"./baseFor":166}],168:[function(require,module,exports){
 var baseFor = require('./baseFor'),
     keys = require('../object/keys');
 
@@ -30685,7 +30598,7 @@ function baseForOwn(object, iteratee) {
 
 module.exports = baseForOwn;
 
-},{"../object/keys":247,"./baseFor":167}],170:[function(require,module,exports){
+},{"../object/keys":246,"./baseFor":166}],169:[function(require,module,exports){
 var toObject = require('./toObject');
 
 /**
@@ -30716,7 +30629,7 @@ function baseGet(object, path, pathKey) {
 
 module.exports = baseGet;
 
-},{"./toObject":233}],171:[function(require,module,exports){
+},{"./toObject":232}],170:[function(require,module,exports){
 var indexOfNaN = require('./indexOfNaN');
 
 /**
@@ -30745,7 +30658,7 @@ function baseIndexOf(array, value, fromIndex) {
 
 module.exports = baseIndexOf;
 
-},{"./indexOfNaN":215}],172:[function(require,module,exports){
+},{"./indexOfNaN":214}],171:[function(require,module,exports){
 var baseIsEqualDeep = require('./baseIsEqualDeep'),
     isObject = require('../lang/isObject'),
     isObjectLike = require('./isObjectLike');
@@ -30775,7 +30688,7 @@ function baseIsEqual(value, other, customizer, isLoose, stackA, stackB) {
 
 module.exports = baseIsEqual;
 
-},{"../lang/isObject":241,"./baseIsEqualDeep":173,"./isObjectLike":222}],173:[function(require,module,exports){
+},{"../lang/isObject":240,"./baseIsEqualDeep":172,"./isObjectLike":221}],172:[function(require,module,exports){
 var equalArrays = require('./equalArrays'),
     equalByTag = require('./equalByTag'),
     equalObjects = require('./equalObjects'),
@@ -30879,7 +30792,7 @@ function baseIsEqualDeep(object, other, equalFunc, customizer, isLoose, stackA, 
 
 module.exports = baseIsEqualDeep;
 
-},{"../lang/isArray":237,"../lang/isTypedArray":244,"./equalArrays":207,"./equalByTag":208,"./equalObjects":209}],174:[function(require,module,exports){
+},{"../lang/isArray":236,"../lang/isTypedArray":243,"./equalArrays":206,"./equalByTag":207,"./equalObjects":208}],173:[function(require,module,exports){
 var baseIsEqual = require('./baseIsEqual'),
     toObject = require('./toObject');
 
@@ -30933,7 +30846,7 @@ function baseIsMatch(object, matchData, customizer) {
 
 module.exports = baseIsMatch;
 
-},{"./baseIsEqual":172,"./toObject":233}],175:[function(require,module,exports){
+},{"./baseIsEqual":171,"./toObject":232}],174:[function(require,module,exports){
 /**
  * The function whose prototype all chaining wrappers inherit from.
  *
@@ -30945,7 +30858,7 @@ function baseLodash() {
 
 module.exports = baseLodash;
 
-},{}],176:[function(require,module,exports){
+},{}],175:[function(require,module,exports){
 var baseEach = require('./baseEach'),
     isArrayLike = require('./isArrayLike');
 
@@ -30970,7 +30883,7 @@ function baseMap(collection, iteratee) {
 
 module.exports = baseMap;
 
-},{"./baseEach":161,"./isArrayLike":216}],177:[function(require,module,exports){
+},{"./baseEach":160,"./isArrayLike":215}],176:[function(require,module,exports){
 var baseIsMatch = require('./baseIsMatch'),
     getMatchData = require('./getMatchData'),
     toObject = require('./toObject');
@@ -31002,7 +30915,7 @@ function baseMatches(source) {
 
 module.exports = baseMatches;
 
-},{"./baseIsMatch":174,"./getMatchData":213,"./toObject":233}],178:[function(require,module,exports){
+},{"./baseIsMatch":173,"./getMatchData":212,"./toObject":232}],177:[function(require,module,exports){
 var baseGet = require('./baseGet'),
     baseIsEqual = require('./baseIsEqual'),
     baseSlice = require('./baseSlice'),
@@ -31049,7 +30962,7 @@ function baseMatchesProperty(path, srcValue) {
 
 module.exports = baseMatchesProperty;
 
-},{"../array/last":127,"../lang/isArray":237,"./baseGet":170,"./baseIsEqual":172,"./baseSlice":185,"./isKey":219,"./isStrictComparable":223,"./toObject":233,"./toPath":234}],179:[function(require,module,exports){
+},{"../array/last":126,"../lang/isArray":236,"./baseGet":169,"./baseIsEqual":171,"./baseSlice":184,"./isKey":218,"./isStrictComparable":222,"./toObject":232,"./toPath":233}],178:[function(require,module,exports){
 var arrayEach = require('./arrayEach'),
     baseMergeDeep = require('./baseMergeDeep'),
     isArray = require('../lang/isArray'),
@@ -31107,7 +31020,7 @@ function baseMerge(object, source, customizer, stackA, stackB) {
 
 module.exports = baseMerge;
 
-},{"../lang/isArray":237,"../lang/isObject":241,"../lang/isTypedArray":244,"../object/keys":247,"./arrayEach":147,"./baseMergeDeep":180,"./isArrayLike":216,"./isObjectLike":222}],180:[function(require,module,exports){
+},{"../lang/isArray":236,"../lang/isObject":240,"../lang/isTypedArray":243,"../object/keys":246,"./arrayEach":146,"./baseMergeDeep":179,"./isArrayLike":215,"./isObjectLike":221}],179:[function(require,module,exports){
 var arrayCopy = require('./arrayCopy'),
     isArguments = require('../lang/isArguments'),
     isArray = require('../lang/isArray'),
@@ -31176,7 +31089,7 @@ function baseMergeDeep(object, source, key, mergeFunc, customizer, stackA, stack
 
 module.exports = baseMergeDeep;
 
-},{"../lang/isArguments":236,"../lang/isArray":237,"../lang/isPlainObject":242,"../lang/isTypedArray":244,"../lang/toPlainObject":245,"./arrayCopy":146,"./isArrayLike":216}],181:[function(require,module,exports){
+},{"../lang/isArguments":235,"../lang/isArray":236,"../lang/isPlainObject":241,"../lang/isTypedArray":243,"../lang/toPlainObject":244,"./arrayCopy":145,"./isArrayLike":215}],180:[function(require,module,exports){
 /**
  * The base implementation of `_.property` without support for deep paths.
  *
@@ -31192,7 +31105,7 @@ function baseProperty(key) {
 
 module.exports = baseProperty;
 
-},{}],182:[function(require,module,exports){
+},{}],181:[function(require,module,exports){
 var baseGet = require('./baseGet'),
     toPath = require('./toPath');
 
@@ -31213,7 +31126,7 @@ function basePropertyDeep(path) {
 
 module.exports = basePropertyDeep;
 
-},{"./baseGet":170,"./toPath":234}],183:[function(require,module,exports){
+},{"./baseGet":169,"./toPath":233}],182:[function(require,module,exports){
 /**
  * The base implementation of `_.reduce` and `_.reduceRight` without support
  * for callback shorthands and `this` binding, which iterates over `collection`
@@ -31239,7 +31152,7 @@ function baseReduce(collection, iteratee, accumulator, initFromCollection, eachF
 
 module.exports = baseReduce;
 
-},{}],184:[function(require,module,exports){
+},{}],183:[function(require,module,exports){
 var identity = require('../utility/identity'),
     metaMap = require('./metaMap');
 
@@ -31258,7 +31171,7 @@ var baseSetData = !metaMap ? identity : function(func, data) {
 
 module.exports = baseSetData;
 
-},{"../utility/identity":254,"./metaMap":225}],185:[function(require,module,exports){
+},{"../utility/identity":253,"./metaMap":224}],184:[function(require,module,exports){
 /**
  * The base implementation of `_.slice` without an iteratee call guard.
  *
@@ -31292,7 +31205,7 @@ function baseSlice(array, start, end) {
 
 module.exports = baseSlice;
 
-},{}],186:[function(require,module,exports){
+},{}],185:[function(require,module,exports){
 var baseEach = require('./baseEach');
 
 /**
@@ -31317,7 +31230,7 @@ function baseSome(collection, predicate) {
 
 module.exports = baseSome;
 
-},{"./baseEach":161}],187:[function(require,module,exports){
+},{"./baseEach":160}],186:[function(require,module,exports){
 /**
  * Converts `value` to a string if it's not one. An empty string is returned
  * for `null` or `undefined` values.
@@ -31332,7 +31245,7 @@ function baseToString(value) {
 
 module.exports = baseToString;
 
-},{}],188:[function(require,module,exports){
+},{}],187:[function(require,module,exports){
 /**
  * The base implementation of `_.values` and `_.valuesIn` which creates an
  * array of `object` property values corresponding to the property names
@@ -31356,7 +31269,7 @@ function baseValues(object, props) {
 
 module.exports = baseValues;
 
-},{}],189:[function(require,module,exports){
+},{}],188:[function(require,module,exports){
 var identity = require('../utility/identity');
 
 /**
@@ -31397,7 +31310,7 @@ function bindCallback(func, thisArg, argCount) {
 
 module.exports = bindCallback;
 
-},{"../utility/identity":254}],190:[function(require,module,exports){
+},{"../utility/identity":253}],189:[function(require,module,exports){
 var isObject = require('../lang/isObject');
 
 /**
@@ -31418,7 +31331,7 @@ function cacheIndexOf(cache, value) {
 
 module.exports = cacheIndexOf;
 
-},{"../lang/isObject":241}],191:[function(require,module,exports){
+},{"../lang/isObject":240}],190:[function(require,module,exports){
 var isObject = require('../lang/isObject');
 
 /**
@@ -31440,7 +31353,7 @@ function cachePush(value) {
 
 module.exports = cachePush;
 
-},{"../lang/isObject":241}],192:[function(require,module,exports){
+},{"../lang/isObject":240}],191:[function(require,module,exports){
 /* Native method references for those with the same name as other `lodash` methods. */
 var nativeMax = Math.max;
 
@@ -31476,7 +31389,7 @@ function composeArgs(args, partials, holders) {
 
 module.exports = composeArgs;
 
-},{}],193:[function(require,module,exports){
+},{}],192:[function(require,module,exports){
 /* Native method references for those with the same name as other `lodash` methods. */
 var nativeMax = Math.max;
 
@@ -31514,7 +31427,7 @@ function composeArgsRight(args, partials, holders) {
 
 module.exports = composeArgsRight;
 
-},{}],194:[function(require,module,exports){
+},{}],193:[function(require,module,exports){
 var baseCallback = require('./baseCallback'),
     baseEach = require('./baseEach'),
     isArray = require('../lang/isArray');
@@ -31551,7 +31464,7 @@ function createAggregator(setter, initializer) {
 
 module.exports = createAggregator;
 
-},{"../lang/isArray":237,"./baseCallback":156,"./baseEach":161}],195:[function(require,module,exports){
+},{"../lang/isArray":236,"./baseCallback":155,"./baseEach":160}],194:[function(require,module,exports){
 var bindCallback = require('./bindCallback'),
     isIterateeCall = require('./isIterateeCall'),
     restParam = require('../function/restParam');
@@ -31594,7 +31507,7 @@ function createAssigner(assigner) {
 
 module.exports = createAssigner;
 
-},{"../function/restParam":142,"./bindCallback":189,"./isIterateeCall":218}],196:[function(require,module,exports){
+},{"../function/restParam":141,"./bindCallback":188,"./isIterateeCall":217}],195:[function(require,module,exports){
 var getLength = require('./getLength'),
     isLength = require('./isLength'),
     toObject = require('./toObject');
@@ -31627,7 +31540,7 @@ function createBaseEach(eachFunc, fromRight) {
 
 module.exports = createBaseEach;
 
-},{"./getLength":212,"./isLength":221,"./toObject":233}],197:[function(require,module,exports){
+},{"./getLength":211,"./isLength":220,"./toObject":232}],196:[function(require,module,exports){
 var toObject = require('./toObject');
 
 /**
@@ -31656,7 +31569,7 @@ function createBaseFor(fromRight) {
 
 module.exports = createBaseFor;
 
-},{"./toObject":233}],198:[function(require,module,exports){
+},{"./toObject":232}],197:[function(require,module,exports){
 (function (global){
 var createCtorWrapper = require('./createCtorWrapper');
 
@@ -31682,7 +31595,7 @@ function createBindWrapper(func, thisArg) {
 module.exports = createBindWrapper;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./createCtorWrapper":200}],199:[function(require,module,exports){
+},{"./createCtorWrapper":199}],198:[function(require,module,exports){
 (function (global){
 var SetCache = require('./SetCache'),
     getNative = require('./getNative');
@@ -31707,7 +31620,7 @@ function createCache(values) {
 module.exports = createCache;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./SetCache":145,"./getNative":214}],200:[function(require,module,exports){
+},{"./SetCache":144,"./getNative":213}],199:[function(require,module,exports){
 var baseCreate = require('./baseCreate'),
     isObject = require('../lang/isObject');
 
@@ -31746,7 +31659,7 @@ function createCtorWrapper(Ctor) {
 
 module.exports = createCtorWrapper;
 
-},{"../lang/isObject":241,"./baseCreate":158}],201:[function(require,module,exports){
+},{"../lang/isObject":240,"./baseCreate":157}],200:[function(require,module,exports){
 var baseCallback = require('./baseCallback'),
     baseFind = require('./baseFind'),
     baseFindIndex = require('./baseFindIndex'),
@@ -31773,7 +31686,7 @@ function createFind(eachFunc, fromRight) {
 
 module.exports = createFind;
 
-},{"../lang/isArray":237,"./baseCallback":156,"./baseFind":164,"./baseFindIndex":165}],202:[function(require,module,exports){
+},{"../lang/isArray":236,"./baseCallback":155,"./baseFind":163,"./baseFindIndex":164}],201:[function(require,module,exports){
 var bindCallback = require('./bindCallback'),
     isArray = require('../lang/isArray');
 
@@ -31795,7 +31708,7 @@ function createForEach(arrayFunc, eachFunc) {
 
 module.exports = createForEach;
 
-},{"../lang/isArray":237,"./bindCallback":189}],203:[function(require,module,exports){
+},{"../lang/isArray":236,"./bindCallback":188}],202:[function(require,module,exports){
 (function (global){
 var arrayCopy = require('./arrayCopy'),
     composeArgs = require('./composeArgs'),
@@ -31910,7 +31823,7 @@ function createHybridWrapper(func, bitmask, thisArg, partials, holders, partials
 module.exports = createHybridWrapper;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./arrayCopy":146,"./composeArgs":192,"./composeArgsRight":193,"./createCtorWrapper":200,"./isLaziable":220,"./reorder":229,"./replaceHolders":230,"./setData":231}],204:[function(require,module,exports){
+},{"./arrayCopy":145,"./composeArgs":191,"./composeArgsRight":192,"./createCtorWrapper":199,"./isLaziable":219,"./reorder":228,"./replaceHolders":229,"./setData":230}],203:[function(require,module,exports){
 (function (global){
 var createCtorWrapper = require('./createCtorWrapper');
 
@@ -31957,7 +31870,7 @@ function createPartialWrapper(func, bitmask, thisArg, partials) {
 module.exports = createPartialWrapper;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./createCtorWrapper":200}],205:[function(require,module,exports){
+},{"./createCtorWrapper":199}],204:[function(require,module,exports){
 var baseCallback = require('./baseCallback'),
     baseReduce = require('./baseReduce'),
     isArray = require('../lang/isArray');
@@ -31981,7 +31894,7 @@ function createReduce(arrayFunc, eachFunc) {
 
 module.exports = createReduce;
 
-},{"../lang/isArray":237,"./baseCallback":156,"./baseReduce":183}],206:[function(require,module,exports){
+},{"../lang/isArray":236,"./baseCallback":155,"./baseReduce":182}],205:[function(require,module,exports){
 var baseSetData = require('./baseSetData'),
     createBindWrapper = require('./createBindWrapper'),
     createHybridWrapper = require('./createHybridWrapper'),
@@ -32069,7 +31982,7 @@ function createWrapper(func, bitmask, thisArg, partials, holders, argPos, ary, a
 
 module.exports = createWrapper;
 
-},{"./baseSetData":184,"./createBindWrapper":198,"./createHybridWrapper":203,"./createPartialWrapper":204,"./getData":210,"./mergeData":224,"./setData":231}],207:[function(require,module,exports){
+},{"./baseSetData":183,"./createBindWrapper":197,"./createHybridWrapper":202,"./createPartialWrapper":203,"./getData":209,"./mergeData":223,"./setData":230}],206:[function(require,module,exports){
 var arraySome = require('./arraySome');
 
 /**
@@ -32122,7 +32035,7 @@ function equalArrays(array, other, equalFunc, customizer, isLoose, stackA, stack
 
 module.exports = equalArrays;
 
-},{"./arraySome":153}],208:[function(require,module,exports){
+},{"./arraySome":152}],207:[function(require,module,exports){
 /** `Object#toString` result references. */
 var boolTag = '[object Boolean]',
     dateTag = '[object Date]',
@@ -32172,7 +32085,7 @@ function equalByTag(object, other, tag) {
 
 module.exports = equalByTag;
 
-},{}],209:[function(require,module,exports){
+},{}],208:[function(require,module,exports){
 var keys = require('../object/keys');
 
 /** Used for native method references. */
@@ -32241,7 +32154,7 @@ function equalObjects(object, other, equalFunc, customizer, isLoose, stackA, sta
 
 module.exports = equalObjects;
 
-},{"../object/keys":247}],210:[function(require,module,exports){
+},{"../object/keys":246}],209:[function(require,module,exports){
 var metaMap = require('./metaMap'),
     noop = require('../utility/noop');
 
@@ -32258,7 +32171,7 @@ var getData = !metaMap ? noop : function(func) {
 
 module.exports = getData;
 
-},{"../utility/noop":255,"./metaMap":225}],211:[function(require,module,exports){
+},{"../utility/noop":254,"./metaMap":224}],210:[function(require,module,exports){
 var realNames = require('./realNames');
 
 /**
@@ -32285,7 +32198,7 @@ function getFuncName(func) {
 
 module.exports = getFuncName;
 
-},{"./realNames":228}],212:[function(require,module,exports){
+},{"./realNames":227}],211:[function(require,module,exports){
 var baseProperty = require('./baseProperty');
 
 /**
@@ -32302,7 +32215,7 @@ var getLength = baseProperty('length');
 
 module.exports = getLength;
 
-},{"./baseProperty":181}],213:[function(require,module,exports){
+},{"./baseProperty":180}],212:[function(require,module,exports){
 var isStrictComparable = require('./isStrictComparable'),
     pairs = require('../object/pairs');
 
@@ -32325,7 +32238,7 @@ function getMatchData(object) {
 
 module.exports = getMatchData;
 
-},{"../object/pairs":251,"./isStrictComparable":223}],214:[function(require,module,exports){
+},{"../object/pairs":250,"./isStrictComparable":222}],213:[function(require,module,exports){
 var isNative = require('../lang/isNative');
 
 /**
@@ -32343,7 +32256,7 @@ function getNative(object, key) {
 
 module.exports = getNative;
 
-},{"../lang/isNative":239}],215:[function(require,module,exports){
+},{"../lang/isNative":238}],214:[function(require,module,exports){
 /**
  * Gets the index at which the first occurrence of `NaN` is found in `array`.
  *
@@ -32368,7 +32281,7 @@ function indexOfNaN(array, fromIndex, fromRight) {
 
 module.exports = indexOfNaN;
 
-},{}],216:[function(require,module,exports){
+},{}],215:[function(require,module,exports){
 var getLength = require('./getLength'),
     isLength = require('./isLength');
 
@@ -32385,7 +32298,7 @@ function isArrayLike(value) {
 
 module.exports = isArrayLike;
 
-},{"./getLength":212,"./isLength":221}],217:[function(require,module,exports){
+},{"./getLength":211,"./isLength":220}],216:[function(require,module,exports){
 /** Used to detect unsigned integer values. */
 var reIsUint = /^\d+$/;
 
@@ -32411,7 +32324,7 @@ function isIndex(value, length) {
 
 module.exports = isIndex;
 
-},{}],218:[function(require,module,exports){
+},{}],217:[function(require,module,exports){
 var isArrayLike = require('./isArrayLike'),
     isIndex = require('./isIndex'),
     isObject = require('../lang/isObject');
@@ -32441,7 +32354,7 @@ function isIterateeCall(value, index, object) {
 
 module.exports = isIterateeCall;
 
-},{"../lang/isObject":241,"./isArrayLike":216,"./isIndex":217}],219:[function(require,module,exports){
+},{"../lang/isObject":240,"./isArrayLike":215,"./isIndex":216}],218:[function(require,module,exports){
 var isArray = require('../lang/isArray'),
     toObject = require('./toObject');
 
@@ -32471,7 +32384,7 @@ function isKey(value, object) {
 
 module.exports = isKey;
 
-},{"../lang/isArray":237,"./toObject":233}],220:[function(require,module,exports){
+},{"../lang/isArray":236,"./toObject":232}],219:[function(require,module,exports){
 var LazyWrapper = require('./LazyWrapper'),
     getData = require('./getData'),
     getFuncName = require('./getFuncName'),
@@ -32500,7 +32413,7 @@ function isLaziable(func) {
 
 module.exports = isLaziable;
 
-},{"../chain/lodash":128,"./LazyWrapper":143,"./getData":210,"./getFuncName":211}],221:[function(require,module,exports){
+},{"../chain/lodash":127,"./LazyWrapper":142,"./getData":209,"./getFuncName":210}],220:[function(require,module,exports){
 /**
  * Used as the [maximum length](http://ecma-international.org/ecma-262/6.0/#sec-number.max_safe_integer)
  * of an array-like value.
@@ -32522,7 +32435,7 @@ function isLength(value) {
 
 module.exports = isLength;
 
-},{}],222:[function(require,module,exports){
+},{}],221:[function(require,module,exports){
 /**
  * Checks if `value` is object-like.
  *
@@ -32536,7 +32449,7 @@ function isObjectLike(value) {
 
 module.exports = isObjectLike;
 
-},{}],223:[function(require,module,exports){
+},{}],222:[function(require,module,exports){
 var isObject = require('../lang/isObject');
 
 /**
@@ -32553,7 +32466,7 @@ function isStrictComparable(value) {
 
 module.exports = isStrictComparable;
 
-},{"../lang/isObject":241}],224:[function(require,module,exports){
+},{"../lang/isObject":240}],223:[function(require,module,exports){
 var arrayCopy = require('./arrayCopy'),
     composeArgs = require('./composeArgs'),
     composeArgsRight = require('./composeArgsRight'),
@@ -32644,7 +32557,7 @@ function mergeData(data, source) {
 
 module.exports = mergeData;
 
-},{"./arrayCopy":146,"./composeArgs":192,"./composeArgsRight":193,"./replaceHolders":230}],225:[function(require,module,exports){
+},{"./arrayCopy":145,"./composeArgs":191,"./composeArgsRight":192,"./replaceHolders":229}],224:[function(require,module,exports){
 (function (global){
 var getNative = require('./getNative');
 
@@ -32657,7 +32570,7 @@ var metaMap = WeakMap && new WeakMap;
 module.exports = metaMap;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./getNative":214}],226:[function(require,module,exports){
+},{"./getNative":213}],225:[function(require,module,exports){
 var toObject = require('./toObject');
 
 /**
@@ -32687,7 +32600,7 @@ function pickByArray(object, props) {
 
 module.exports = pickByArray;
 
-},{"./toObject":233}],227:[function(require,module,exports){
+},{"./toObject":232}],226:[function(require,module,exports){
 var baseForIn = require('./baseForIn');
 
 /**
@@ -32711,13 +32624,13 @@ function pickByCallback(object, predicate) {
 
 module.exports = pickByCallback;
 
-},{"./baseForIn":168}],228:[function(require,module,exports){
+},{"./baseForIn":167}],227:[function(require,module,exports){
 /** Used to lookup unminified function names. */
 var realNames = {};
 
 module.exports = realNames;
 
-},{}],229:[function(require,module,exports){
+},{}],228:[function(require,module,exports){
 var arrayCopy = require('./arrayCopy'),
     isIndex = require('./isIndex');
 
@@ -32748,7 +32661,7 @@ function reorder(array, indexes) {
 
 module.exports = reorder;
 
-},{"./arrayCopy":146,"./isIndex":217}],230:[function(require,module,exports){
+},{"./arrayCopy":145,"./isIndex":216}],229:[function(require,module,exports){
 /** Used as the internal argument placeholder. */
 var PLACEHOLDER = '__lodash_placeholder__';
 
@@ -32778,7 +32691,7 @@ function replaceHolders(array, placeholder) {
 
 module.exports = replaceHolders;
 
-},{}],231:[function(require,module,exports){
+},{}],230:[function(require,module,exports){
 var baseSetData = require('./baseSetData'),
     now = require('../date/now');
 
@@ -32821,7 +32734,7 @@ var setData = (function() {
 
 module.exports = setData;
 
-},{"../date/now":138,"./baseSetData":184}],232:[function(require,module,exports){
+},{"../date/now":137,"./baseSetData":183}],231:[function(require,module,exports){
 var isArguments = require('../lang/isArguments'),
     isArray = require('../lang/isArray'),
     isIndex = require('./isIndex'),
@@ -32864,7 +32777,7 @@ function shimKeys(object) {
 
 module.exports = shimKeys;
 
-},{"../lang/isArguments":236,"../lang/isArray":237,"../object/keysIn":248,"./isIndex":217,"./isLength":221}],233:[function(require,module,exports){
+},{"../lang/isArguments":235,"../lang/isArray":236,"../object/keysIn":247,"./isIndex":216,"./isLength":220}],232:[function(require,module,exports){
 var isObject = require('../lang/isObject');
 
 /**
@@ -32880,7 +32793,7 @@ function toObject(value) {
 
 module.exports = toObject;
 
-},{"../lang/isObject":241}],234:[function(require,module,exports){
+},{"../lang/isObject":240}],233:[function(require,module,exports){
 var baseToString = require('./baseToString'),
     isArray = require('../lang/isArray');
 
@@ -32910,7 +32823,7 @@ function toPath(value) {
 
 module.exports = toPath;
 
-},{"../lang/isArray":237,"./baseToString":187}],235:[function(require,module,exports){
+},{"../lang/isArray":236,"./baseToString":186}],234:[function(require,module,exports){
 var LazyWrapper = require('./LazyWrapper'),
     LodashWrapper = require('./LodashWrapper'),
     arrayCopy = require('./arrayCopy');
@@ -32930,7 +32843,7 @@ function wrapperClone(wrapper) {
 
 module.exports = wrapperClone;
 
-},{"./LazyWrapper":143,"./LodashWrapper":144,"./arrayCopy":146}],236:[function(require,module,exports){
+},{"./LazyWrapper":142,"./LodashWrapper":143,"./arrayCopy":145}],235:[function(require,module,exports){
 var isArrayLike = require('../internal/isArrayLike'),
     isObjectLike = require('../internal/isObjectLike');
 
@@ -32966,7 +32879,7 @@ function isArguments(value) {
 
 module.exports = isArguments;
 
-},{"../internal/isArrayLike":216,"../internal/isObjectLike":222}],237:[function(require,module,exports){
+},{"../internal/isArrayLike":215,"../internal/isObjectLike":221}],236:[function(require,module,exports){
 var getNative = require('../internal/getNative'),
     isLength = require('../internal/isLength'),
     isObjectLike = require('../internal/isObjectLike');
@@ -33008,7 +32921,7 @@ var isArray = nativeIsArray || function(value) {
 
 module.exports = isArray;
 
-},{"../internal/getNative":214,"../internal/isLength":221,"../internal/isObjectLike":222}],238:[function(require,module,exports){
+},{"../internal/getNative":213,"../internal/isLength":220,"../internal/isObjectLike":221}],237:[function(require,module,exports){
 var isObject = require('./isObject');
 
 /** `Object#toString` result references. */
@@ -33048,7 +32961,7 @@ function isFunction(value) {
 
 module.exports = isFunction;
 
-},{"./isObject":241}],239:[function(require,module,exports){
+},{"./isObject":240}],238:[function(require,module,exports){
 var isFunction = require('./isFunction'),
     isObjectLike = require('../internal/isObjectLike');
 
@@ -33098,7 +33011,7 @@ function isNative(value) {
 
 module.exports = isNative;
 
-},{"../internal/isObjectLike":222,"./isFunction":238}],240:[function(require,module,exports){
+},{"../internal/isObjectLike":221,"./isFunction":237}],239:[function(require,module,exports){
 var isObjectLike = require('../internal/isObjectLike');
 
 /** `Object#toString` result references. */
@@ -33141,7 +33054,7 @@ function isNumber(value) {
 
 module.exports = isNumber;
 
-},{"../internal/isObjectLike":222}],241:[function(require,module,exports){
+},{"../internal/isObjectLike":221}],240:[function(require,module,exports){
 /**
  * Checks if `value` is the [language type](https://es5.github.io/#x8) of `Object`.
  * (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
@@ -33171,7 +33084,7 @@ function isObject(value) {
 
 module.exports = isObject;
 
-},{}],242:[function(require,module,exports){
+},{}],241:[function(require,module,exports){
 var baseForIn = require('../internal/baseForIn'),
     isArguments = require('./isArguments'),
     isObjectLike = require('../internal/isObjectLike');
@@ -33244,7 +33157,7 @@ function isPlainObject(value) {
 
 module.exports = isPlainObject;
 
-},{"../internal/baseForIn":168,"../internal/isObjectLike":222,"./isArguments":236}],243:[function(require,module,exports){
+},{"../internal/baseForIn":167,"../internal/isObjectLike":221,"./isArguments":235}],242:[function(require,module,exports){
 var isObjectLike = require('../internal/isObjectLike');
 
 /** `Object#toString` result references. */
@@ -33281,7 +33194,7 @@ function isString(value) {
 
 module.exports = isString;
 
-},{"../internal/isObjectLike":222}],244:[function(require,module,exports){
+},{"../internal/isObjectLike":221}],243:[function(require,module,exports){
 var isLength = require('../internal/isLength'),
     isObjectLike = require('../internal/isObjectLike');
 
@@ -33357,7 +33270,7 @@ function isTypedArray(value) {
 
 module.exports = isTypedArray;
 
-},{"../internal/isLength":221,"../internal/isObjectLike":222}],245:[function(require,module,exports){
+},{"../internal/isLength":220,"../internal/isObjectLike":221}],244:[function(require,module,exports){
 var baseCopy = require('../internal/baseCopy'),
     keysIn = require('../object/keysIn');
 
@@ -33390,7 +33303,7 @@ function toPlainObject(value) {
 
 module.exports = toPlainObject;
 
-},{"../internal/baseCopy":157,"../object/keysIn":248}],246:[function(require,module,exports){
+},{"../internal/baseCopy":156,"../object/keysIn":247}],245:[function(require,module,exports){
 var assignWith = require('../internal/assignWith'),
     baseAssign = require('../internal/baseAssign'),
     createAssigner = require('../internal/createAssigner');
@@ -33435,7 +33348,7 @@ var assign = createAssigner(function(object, source, customizer) {
 
 module.exports = assign;
 
-},{"../internal/assignWith":154,"../internal/baseAssign":155,"../internal/createAssigner":195}],247:[function(require,module,exports){
+},{"../internal/assignWith":153,"../internal/baseAssign":154,"../internal/createAssigner":194}],246:[function(require,module,exports){
 var getNative = require('../internal/getNative'),
     isArrayLike = require('../internal/isArrayLike'),
     isObject = require('../lang/isObject'),
@@ -33482,7 +33395,7 @@ var keys = !nativeKeys ? shimKeys : function(object) {
 
 module.exports = keys;
 
-},{"../internal/getNative":214,"../internal/isArrayLike":216,"../internal/shimKeys":232,"../lang/isObject":241}],248:[function(require,module,exports){
+},{"../internal/getNative":213,"../internal/isArrayLike":215,"../internal/shimKeys":231,"../lang/isObject":240}],247:[function(require,module,exports){
 var isArguments = require('../lang/isArguments'),
     isArray = require('../lang/isArray'),
     isIndex = require('../internal/isIndex'),
@@ -33548,7 +33461,7 @@ function keysIn(object) {
 
 module.exports = keysIn;
 
-},{"../internal/isIndex":217,"../internal/isLength":221,"../lang/isArguments":236,"../lang/isArray":237,"../lang/isObject":241}],249:[function(require,module,exports){
+},{"../internal/isIndex":216,"../internal/isLength":220,"../lang/isArguments":235,"../lang/isArray":236,"../lang/isObject":240}],248:[function(require,module,exports){
 var baseMerge = require('../internal/baseMerge'),
     createAssigner = require('../internal/createAssigner');
 
@@ -33604,7 +33517,7 @@ var merge = createAssigner(baseMerge);
 
 module.exports = merge;
 
-},{"../internal/baseMerge":179,"../internal/createAssigner":195}],250:[function(require,module,exports){
+},{"../internal/baseMerge":178,"../internal/createAssigner":194}],249:[function(require,module,exports){
 var arrayMap = require('../internal/arrayMap'),
     baseDifference = require('../internal/baseDifference'),
     baseFlatten = require('../internal/baseFlatten'),
@@ -33653,7 +33566,7 @@ var omit = restParam(function(object, props) {
 
 module.exports = omit;
 
-},{"../function/restParam":142,"../internal/arrayMap":150,"../internal/baseDifference":160,"../internal/baseFlatten":166,"../internal/bindCallback":189,"../internal/pickByArray":226,"../internal/pickByCallback":227,"./keysIn":248}],251:[function(require,module,exports){
+},{"../function/restParam":141,"../internal/arrayMap":149,"../internal/baseDifference":159,"../internal/baseFlatten":165,"../internal/bindCallback":188,"../internal/pickByArray":225,"../internal/pickByCallback":226,"./keysIn":247}],250:[function(require,module,exports){
 var keys = require('./keys'),
     toObject = require('../internal/toObject');
 
@@ -33688,7 +33601,7 @@ function pairs(object) {
 
 module.exports = pairs;
 
-},{"../internal/toObject":233,"./keys":247}],252:[function(require,module,exports){
+},{"../internal/toObject":232,"./keys":246}],251:[function(require,module,exports){
 var baseFlatten = require('../internal/baseFlatten'),
     bindCallback = require('../internal/bindCallback'),
     pickByArray = require('../internal/pickByArray'),
@@ -33732,7 +33645,7 @@ var pick = restParam(function(object, props) {
 
 module.exports = pick;
 
-},{"../function/restParam":142,"../internal/baseFlatten":166,"../internal/bindCallback":189,"../internal/pickByArray":226,"../internal/pickByCallback":227}],253:[function(require,module,exports){
+},{"../function/restParam":141,"../internal/baseFlatten":165,"../internal/bindCallback":188,"../internal/pickByArray":225,"../internal/pickByCallback":226}],252:[function(require,module,exports){
 var baseValues = require('../internal/baseValues'),
     keys = require('./keys');
 
@@ -33767,7 +33680,7 @@ function values(object) {
 
 module.exports = values;
 
-},{"../internal/baseValues":188,"./keys":247}],254:[function(require,module,exports){
+},{"../internal/baseValues":187,"./keys":246}],253:[function(require,module,exports){
 /**
  * This method returns the first argument provided to it.
  *
@@ -33789,7 +33702,7 @@ function identity(value) {
 
 module.exports = identity;
 
-},{}],255:[function(require,module,exports){
+},{}],254:[function(require,module,exports){
 /**
  * A no-operation function that returns `undefined` regardless of the
  * arguments it receives.
@@ -33810,7 +33723,7 @@ function noop() {
 
 module.exports = noop;
 
-},{}],256:[function(require,module,exports){
+},{}],255:[function(require,module,exports){
 var baseProperty = require('../internal/baseProperty'),
     basePropertyDeep = require('../internal/basePropertyDeep'),
     isKey = require('../internal/isKey');
@@ -33843,9 +33756,9 @@ function property(path) {
 
 module.exports = property;
 
-},{"../internal/baseProperty":181,"../internal/basePropertyDeep":182,"../internal/isKey":219}],257:[function(require,module,exports){
+},{"../internal/baseProperty":180,"../internal/basePropertyDeep":181,"../internal/isKey":218}],256:[function(require,module,exports){
 module.exports = require('component-classes');
-},{"component-classes":264}],258:[function(require,module,exports){
+},{"component-classes":263}],257:[function(require,module,exports){
 module.exports = function(el) {
 
   var c;
@@ -33857,19 +33770,19 @@ module.exports = function(el) {
 
   return el;
 };
-},{}],259:[function(require,module,exports){
+},{}],258:[function(require,module,exports){
 module.exports = require('component-delegate');
-},{"component-delegate":267}],260:[function(require,module,exports){
+},{"component-delegate":266}],259:[function(require,module,exports){
 module.exports = require('domify');
-},{"domify":271}],261:[function(require,module,exports){
+},{"domify":270}],260:[function(require,module,exports){
 module.exports = require('component-event');
-},{"component-event":268}],262:[function(require,module,exports){
+},{"component-event":267}],261:[function(require,module,exports){
 module.exports = require('component-query');
-},{"component-query":270}],263:[function(require,module,exports){
+},{"component-query":269}],262:[function(require,module,exports){
 module.exports = function(el) {
   el.parentNode && el.parentNode.removeChild(el);
 };
-},{}],264:[function(require,module,exports){
+},{}],263:[function(require,module,exports){
 /**
  * Module dependencies.
  */
@@ -34062,7 +33975,7 @@ ClassList.prototype.contains = function(name){
     : !! ~index(this.array(), name);
 };
 
-},{"component-indexof":265,"indexof":265}],265:[function(require,module,exports){
+},{"component-indexof":264,"indexof":264}],264:[function(require,module,exports){
 module.exports = function(arr, obj){
   if (arr.indexOf) return arr.indexOf(obj);
   for (var i = 0; i < arr.length; ++i) {
@@ -34070,7 +33983,7 @@ module.exports = function(arr, obj){
   }
   return -1;
 };
-},{}],266:[function(require,module,exports){
+},{}],265:[function(require,module,exports){
 var matches = require('matches-selector')
 
 module.exports = function (element, selector, checkYoSelf, root) {
@@ -34091,7 +34004,7 @@ module.exports = function (element, selector, checkYoSelf, root) {
   }
 }
 
-},{"matches-selector":269}],267:[function(require,module,exports){
+},{"matches-selector":268}],266:[function(require,module,exports){
 /**
  * Module dependencies.
  */
@@ -34144,7 +34057,7 @@ exports.unbind = function(el, type, fn, capture){
   event.unbind(el, type, fn, capture);
 };
 
-},{"closest":266,"component-closest":266,"component-event":268,"event":268}],268:[function(require,module,exports){
+},{"closest":265,"component-closest":265,"component-event":267,"event":267}],267:[function(require,module,exports){
 var bind = window.addEventListener ? 'addEventListener' : 'attachEvent',
     unbind = window.removeEventListener ? 'removeEventListener' : 'detachEvent',
     prefix = bind !== 'addEventListener' ? 'on' : '';
@@ -34180,7 +34093,7 @@ exports.unbind = function(el, type, fn, capture){
   el[unbind](prefix + type, fn, capture || false);
   return fn;
 };
-},{}],269:[function(require,module,exports){
+},{}],268:[function(require,module,exports){
 /**
  * Module dependencies.
  */
@@ -34232,7 +34145,7 @@ function match(el, selector) {
   return false;
 }
 
-},{"component-query":270,"query":270}],270:[function(require,module,exports){
+},{"component-query":269,"query":269}],269:[function(require,module,exports){
 function one(selector, el) {
   return el.querySelector(selector);
 }
@@ -34255,7 +34168,7 @@ exports.engine = function(obj){
   return exports;
 };
 
-},{}],271:[function(require,module,exports){
+},{}],270:[function(require,module,exports){
 
 /**
  * Expose `parse`.
@@ -34369,11 +34282,11 @@ function parse(html, doc) {
   return fragment;
 }
 
-},{}],272:[function(require,module,exports){
+},{}],271:[function(require,module,exports){
 module.exports = require('./lib/refs');
 
 module.exports.Collection = require('./lib/collection');
-},{"./lib/collection":273,"./lib/refs":274}],273:[function(require,module,exports){
+},{"./lib/collection":272,"./lib/refs":273}],272:[function(require,module,exports){
 'use strict';
 
 /**
@@ -34470,7 +34383,7 @@ function isExtended(collection) {
 module.exports.extend = extend;
 
 module.exports.isExtended = isExtended;
-},{}],274:[function(require,module,exports){
+},{}],273:[function(require,module,exports){
 'use strict';
 
 var Collection = require('./collection');
@@ -34662,7 +34575,7 @@ module.exports = Refs;
  * @property {boolean} [collection=false]
  * @property {boolean} [enumerable=false]
  */
-},{"./collection":273}],275:[function(require,module,exports){
+},{"./collection":272}],274:[function(require,module,exports){
 'use strict';
 
 var INTEGER_PATTERN = /^-?[\d]+$/;
@@ -34750,7 +34663,7 @@ module.exports = {
   dateToString : dateToString
 };
 
-},{}],276:[function(require,module,exports){
+},{}],275:[function(require,module,exports){
 /**
  * @license AngularJS v1.2.29
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -56920,16 +56833,16 @@ var styleDirective = valueFn({
 })(window, document);
 
 !window.angular.$$csp() && window.angular.element(document).find('head').prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>');
-},{}],277:[function(require,module,exports){
+},{}],276:[function(require,module,exports){
 require('./angular');
 module.exports = angular;
 
-},{"./angular":276}],278:[function(require,module,exports){
+},{"./angular":275}],277:[function(require,module,exports){
 'use strict';
 
 module.exports = require('angular');
 
-},{"angular":277}],279:[function(require,module,exports){
+},{"angular":276}],278:[function(require,module,exports){
 (function (global, factory) {
     if (typeof define === "function" && define.amd) {
         define(['module', 'select'], factory);
@@ -57154,7 +57067,7 @@ module.exports = require('angular');
 
     module.exports = ClipboardAction;
 });
-},{"select":286}],280:[function(require,module,exports){
+},{"select":285}],279:[function(require,module,exports){
 (function (global, factory) {
     if (typeof define === "function" && define.amd) {
         define(['module', './clipboard-action', 'tiny-emitter', 'good-listener'], factory);
@@ -57314,7 +57227,7 @@ module.exports = require('angular');
 
     module.exports = Clipboard;
 });
-},{"./clipboard-action":279,"good-listener":285,"tiny-emitter":287}],281:[function(require,module,exports){
+},{"./clipboard-action":278,"good-listener":284,"tiny-emitter":286}],280:[function(require,module,exports){
 var matches = require('matches-selector')
 
 module.exports = function (element, selector, checkYoSelf) {
@@ -57326,7 +57239,7 @@ module.exports = function (element, selector, checkYoSelf) {
   }
 }
 
-},{"matches-selector":282}],282:[function(require,module,exports){
+},{"matches-selector":281}],281:[function(require,module,exports){
 
 /**
  * Element prototype.
@@ -57367,7 +57280,7 @@ function match(el, selector) {
   }
   return false;
 }
-},{}],283:[function(require,module,exports){
+},{}],282:[function(require,module,exports){
 var closest = require('closest');
 
 /**
@@ -57413,7 +57326,7 @@ function listener(element, selector, type, callback) {
 
 module.exports = delegate;
 
-},{"closest":281}],284:[function(require,module,exports){
+},{"closest":280}],283:[function(require,module,exports){
 /**
  * Check if argument is a HTML element.
  *
@@ -57464,7 +57377,7 @@ exports.fn = function(value) {
     return type === '[object Function]';
 };
 
-},{}],285:[function(require,module,exports){
+},{}],284:[function(require,module,exports){
 var is = require('./is');
 var delegate = require('delegate');
 
@@ -57561,7 +57474,7 @@ function listenSelector(selector, type, callback) {
 
 module.exports = listen;
 
-},{"./is":284,"delegate":283}],286:[function(require,module,exports){
+},{"./is":283,"delegate":282}],285:[function(require,module,exports){
 function select(element) {
     var selectedText;
 
@@ -57591,7 +57504,7 @@ function select(element) {
 
 module.exports = select;
 
-},{}],287:[function(require,module,exports){
+},{}],286:[function(require,module,exports){
 function E () {
 	// Keep this empty so it's easier to inherit from
   // (via https://github.com/lipsmack from https://github.com/scottcorgan/tiny-emitter/issues/3)
@@ -57659,7 +57572,7 @@ E.prototype = {
 
 module.exports = E;
 
-},{}],288:[function(require,module,exports){
+},{}],287:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -57793,7 +57706,7 @@ Modeler.prototype._modules = [].concat(
 
 module.exports = Modeler;
 
-},{"./Viewer":289,"./features/column-drag":298,"./features/context-menu":300,"./features/editor-actions":302,"./features/modeling":326,"inherits":374,"table-js/lib/features/editing":516,"table-js/lib/features/keyboard":522,"table-js/lib/features/row-drag":540}],289:[function(require,module,exports){
+},{"./Viewer":288,"./features/column-drag":297,"./features/context-menu":299,"./features/editor-actions":301,"./features/modeling":325,"inherits":373,"table-js/lib/features/editing":515,"table-js/lib/features/keyboard":521,"table-js/lib/features/row-drag":539}],288:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -58111,7 +58024,7 @@ Viewer.prototype._modules = [
 
 module.exports = Viewer;
 
-},{"./core":290,"./features/annotations":295,"./features/hide-tech-control":307,"./features/hit-policy":310,"./features/io-label":314,"./features/mappings-row":317,"./features/table-name":328,"./features/type-row":331,"./import/Importer":334,"dmn-moddle":353,"dmn-moddle/lib/id-support":355,"ids":372,"lodash/lang/isString":467,"lodash/object/assign":469,"lodash/object/omit":472,"min-dom/lib/domify":480,"min-dom/lib/query":483,"min-dom/lib/remove":484,"table-js":494,"table-js/lib/features/combo-box":508,"table-js/lib/features/complex-cell":510,"table-js/lib/features/controls":512,"table-js/lib/features/interaction-events":520,"table-js/lib/features/line-numbers":524}],290:[function(require,module,exports){
+},{"./core":289,"./features/annotations":294,"./features/hide-tech-control":306,"./features/hit-policy":309,"./features/io-label":313,"./features/mappings-row":316,"./features/table-name":327,"./features/type-row":330,"./import/Importer":333,"dmn-moddle":352,"dmn-moddle/lib/id-support":354,"ids":371,"lodash/lang/isString":466,"lodash/object/assign":468,"lodash/object/omit":471,"min-dom/lib/domify":479,"min-dom/lib/query":482,"min-dom/lib/remove":483,"table-js":493,"table-js/lib/features/combo-box":507,"table-js/lib/features/complex-cell":509,"table-js/lib/features/controls":511,"table-js/lib/features/interaction-events":519,"table-js/lib/features/line-numbers":523}],289:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../import'),
@@ -58119,7 +58032,7 @@ module.exports = {
   ]
 };
 
-},{"../draw":292,"../import":336}],291:[function(require,module,exports){
+},{"../draw":291,"../import":335}],290:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -58163,13 +58076,13 @@ DmnRenderer.$inject = [ 'eventBus' ];
 
 module.exports = DmnRenderer;
 
-},{"min-dom/lib/classes":478}],292:[function(require,module,exports){
+},{"min-dom/lib/classes":477}],291:[function(require,module,exports){
 module.exports = {
   __init__: [ 'dmnRenderer' ],
   dmnRenderer: [ 'type', require('./DmnRenderer') ]
 };
 
-},{"./DmnRenderer":291}],293:[function(require,module,exports){
+},{"./DmnRenderer":290}],292:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -58241,7 +58154,7 @@ Annotations.prototype.getColumn = function() {
   return this.column;
 };
 
-},{"min-dom/lib/domify":480}],294:[function(require,module,exports){
+},{"min-dom/lib/domify":479}],293:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -58268,7 +58181,7 @@ AnnotationsRenderer.$inject = [
 
 module.exports = AnnotationsRenderer;
 
-},{"min-dom/lib/classes":478}],295:[function(require,module,exports){
+},{"min-dom/lib/classes":477}],294:[function(require,module,exports){
 module.exports = {
   __init__: [ 'annotations', 'annotationsRenderer'],
   __depends__: [
@@ -58277,7 +58190,7 @@ module.exports = {
   annotationsRenderer: [ 'type', require('./AnnotationsRenderer') ]
 };
 
-},{"./Annotations":293,"./AnnotationsRenderer":294}],296:[function(require,module,exports){
+},{"./Annotations":292,"./AnnotationsRenderer":293}],295:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -58529,7 +58442,7 @@ ColumnDrag.prototype.isDragging = function() {
   return !!this.draggedElement;
 };
 
-},{"lodash/collection/forEach":382,"min-dom/lib/classes":478,"min-dom/lib/domify":480}],297:[function(require,module,exports){
+},{"lodash/collection/forEach":381,"min-dom/lib/classes":477,"min-dom/lib/domify":479}],296:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -58564,7 +58477,7 @@ DragRenderer.$inject = [
 
 module.exports = DragRenderer;
 
-},{"min-dom/lib/classes":478,"min-dom/lib/domify":480}],298:[function(require,module,exports){
+},{"min-dom/lib/classes":477,"min-dom/lib/domify":479}],297:[function(require,module,exports){
 module.exports = {
   __init__: [ 'columnDrag', 'columnDragRenderer' ],
   __depends__: [],
@@ -58572,7 +58485,7 @@ module.exports = {
   columnDragRenderer: [ 'type', require('./DragRenderer') ]
 };
 
-},{"./ColumnDrag":296,"./DragRenderer":297}],299:[function(require,module,exports){
+},{"./ColumnDrag":295,"./DragRenderer":296}],298:[function(require,module,exports){
 'use strict';
 
 var getEntriesType = require('../../util/SelectionUtil').getEntriesType;
@@ -58765,7 +58678,7 @@ ContextMenu.prototype.ruleClearAction = function() {
   this.close();
 };
 
-},{"../../util/SelectionUtil":337}],300:[function(require,module,exports){
+},{"../../util/SelectionUtil":336}],299:[function(require,module,exports){
 module.exports = {
   __init__: [ 'contextMenu' ],
   __depends__: [
@@ -58774,7 +58687,7 @@ module.exports = {
   contextMenu: [ 'type', require('./ContextMenu') ]
 };
 
-},{"./ContextMenu":299,"table-js/lib/features/popup-menu":537}],301:[function(require,module,exports){
+},{"./ContextMenu":298,"table-js/lib/features/popup-menu":536}],300:[function(require,module,exports){
 'use strict';
 
 var ids = new (require('diagram-js/lib/util/IdGenerator'))('table');
@@ -58913,13 +58826,13 @@ DmnEditorActions.$inject = [ 'modeling', 'elementRegistry', 'selection', 'editor
 
 module.exports = DmnEditorActions;
 
-},{"diagram-js/lib/util/IdGenerator":346}],302:[function(require,module,exports){
+},{"diagram-js/lib/util/IdGenerator":345}],301:[function(require,module,exports){
 module.exports = {
   __init__: [ 'dmnEditorActions' ],
   dmnEditorActions: [ 'type', require('./DmnEditorActions') ]
 };
 
-},{"./DmnEditorActions":301}],303:[function(require,module,exports){
+},{"./DmnEditorActions":300}],302:[function(require,module,exports){
 'use strict';
 
 function DmnFactory(moddle) {
@@ -59012,7 +58925,7 @@ DmnFactory.prototype.createOutputEntry = function(text, clause, rule) {
 
 module.exports = DmnFactory;
 
-},{}],304:[function(require,module,exports){
+},{}],303:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -59073,7 +58986,7 @@ ElementFactory.prototype.create = function(elementType, attrs) {
 
 };
 
-},{"inherits":374,"table-js/lib/core/ElementFactory":496}],305:[function(require,module,exports){
+},{"inherits":373,"table-js/lib/core/ElementFactory":495}],304:[function(require,module,exports){
 module.exports = {
   __init__: [ ],
   __depends__: [ ],
@@ -59081,7 +58994,7 @@ module.exports = {
   elementFactory: [ 'type', require('./ElementFactory') ]
 };
 
-},{"./DmnFactory":303,"./ElementFactory":304}],306:[function(require,module,exports){
+},{"./DmnFactory":302,"./ElementFactory":303}],305:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -59142,14 +59055,14 @@ HideTechControl.prototype.isHidden = function() {
   return this.hidden;
 };
 
-},{"min-dom/lib/classes":478}],307:[function(require,module,exports){
+},{"min-dom/lib/classes":477}],306:[function(require,module,exports){
 module.exports = {
   __init__: [ 'hideTechControl' ],
   __depends__: [],
   hideTechControl: [ 'type', require('./HideTechControl') ]
 };
 
-},{"./HideTechControl":306}],308:[function(require,module,exports){
+},{"./HideTechControl":305}],307:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify'),
@@ -59308,7 +59221,7 @@ HitPolicy.prototype.getAggregation = function() {
 module.exports = HitPolicy;
 
 
-},{"min-dom/lib/classes":478,"min-dom/lib/domify":480,"table-js/lib/features/combo-box":508}],309:[function(require,module,exports){
+},{"min-dom/lib/classes":477,"min-dom/lib/domify":479,"table-js/lib/features/combo-box":507}],308:[function(require,module,exports){
 'use strict';
 
 function convertOperators(operator) {
@@ -59343,7 +59256,7 @@ HitPolicyRenderer.$inject = [
 
 module.exports = HitPolicyRenderer;
 
-},{}],310:[function(require,module,exports){
+},{}],309:[function(require,module,exports){
 module.exports = {
   __init__: [ 'hitPolicy', 'hitPolicyRenderer' ],
   __depends__: [
@@ -59354,7 +59267,7 @@ module.exports = {
   hitPolicyRenderer: [ 'type', require('./HitPolicyRenderer') ],
 };
 
-},{"../io-label":314,"./HitPolicy":308,"./HitPolicyRenderer":309,"table-js/lib/features/utility-column":545}],311:[function(require,module,exports){
+},{"../io-label":313,"./HitPolicy":307,"./HitPolicyRenderer":308,"table-js/lib/features/utility-column":544}],310:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify'),
@@ -59501,7 +59414,7 @@ IoLabel.prototype.getRow = function() {
   return this.row;
 };
 
-},{"diagram-js/lib/util/IdGenerator":346,"lodash/collection/forEach":382,"min-dom/lib/domify":480}],312:[function(require,module,exports){
+},{"diagram-js/lib/util/IdGenerator":345,"lodash/collection/forEach":381,"min-dom/lib/domify":479}],311:[function(require,module,exports){
 'use strict';
 
 function IoLabelRenderer(
@@ -59525,7 +59438,7 @@ IoLabelRenderer.$inject = [
 
 module.exports = IoLabelRenderer;
 
-},{}],313:[function(require,module,exports){
+},{}],312:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -59557,7 +59470,7 @@ IoLabelRules.prototype.init = function() {
 
 };
 
-},{"diagram-js/lib/features/rules/RuleProvider":342,"inherits":374}],314:[function(require,module,exports){
+},{"diagram-js/lib/features/rules/RuleProvider":341,"inherits":373}],313:[function(require,module,exports){
 module.exports = {
   __init__: [ 'ioLabel', 'ioLabelRules', 'ioLabelRenderer' ],
   __depends__: [],
@@ -59566,7 +59479,7 @@ module.exports = {
   ioLabelRenderer: [ 'type', require('./IoLabelRenderer') ]
 };
 
-},{"./IoLabel":311,"./IoLabelRenderer":312,"./IoLabelRules":313}],315:[function(require,module,exports){
+},{"./IoLabel":310,"./IoLabelRenderer":311,"./IoLabelRules":312}],314:[function(require,module,exports){
 'use strict';
 
 
@@ -59833,7 +59746,7 @@ MappingsRow.prototype.getRow = function() {
   return this.row;
 };
 
-},{"lodash/object/assign":469,"min-dom/lib/classes":478,"min-dom/lib/domify":480,"table-js/lib/features/combo-box":508}],316:[function(require,module,exports){
+},{"lodash/object/assign":468,"min-dom/lib/classes":477,"min-dom/lib/domify":479,"table-js/lib/features/combo-box":507}],315:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -59873,7 +59786,7 @@ MappingsRowRenderer.$inject = [
 
 module.exports = MappingsRowRenderer;
 
-},{"min-dom/lib/classes":478}],317:[function(require,module,exports){
+},{"min-dom/lib/classes":477}],316:[function(require,module,exports){
 module.exports = {
   __init__: [ 'mappingsRow', 'mappingsRowRenderer' ],
   __depends__: [ require('table-js/lib/features/complex-cell') ],
@@ -59881,7 +59794,7 @@ module.exports = {
   mappingsRowRenderer: [ 'type', require('./MappingsRowRenderer') ]
 };
 
-},{"./MappingsRow":315,"./MappingsRowRenderer":316,"table-js/lib/features/complex-cell":510}],318:[function(require,module,exports){
+},{"./MappingsRow":314,"./MappingsRowRenderer":315,"table-js/lib/features/complex-cell":509}],317:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits'),
@@ -60121,7 +60034,7 @@ module.exports = DmnUpdater;
 
 DmnUpdater.$inject = [ 'eventBus', 'moddle', 'elementRegistry', 'dmnFactory', 'tableName' ];
 
-},{"diagram-js/lib/command/CommandInterceptor":338,"inherits":374,"lodash/collection/forEachRight":383}],319:[function(require,module,exports){
+},{"diagram-js/lib/command/CommandInterceptor":337,"inherits":373,"lodash/collection/forEachRight":382}],318:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -60326,7 +60239,7 @@ Modeling.prototype.editDataType = function(cell, newType, allowedValues) {
   return context;
 };
 
-},{"./cmd/ClearRowHandler":320,"./cmd/EditCellHandler":321,"./cmd/EditHitPolicyHandler":322,"./cmd/EditIdHandler":323,"./cmd/EditInputMappingHandler":324,"./cmd/EditTypeHandler":325,"inherits":374,"table-js/lib/features/modeling/Modeling":525}],320:[function(require,module,exports){
+},{"./cmd/ClearRowHandler":319,"./cmd/EditCellHandler":320,"./cmd/EditHitPolicyHandler":321,"./cmd/EditIdHandler":322,"./cmd/EditInputMappingHandler":323,"./cmd/EditTypeHandler":324,"inherits":373,"table-js/lib/features/modeling/Modeling":524}],319:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -60399,7 +60312,7 @@ ClearRowHandler.prototype.revert = function(context) {
   });
 };
 
-},{"lodash/collection/forEach":382}],321:[function(require,module,exports){
+},{"lodash/collection/forEach":381}],320:[function(require,module,exports){
 'use strict';
 
 var calculateSelectionUpdate = require('selection-update');
@@ -60546,7 +60459,7 @@ EditCellHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{"selection-update":493}],322:[function(require,module,exports){
+},{"selection-update":492}],321:[function(require,module,exports){
 'use strict';
 
 /**
@@ -60605,7 +60518,7 @@ EditHitPolicyHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],323:[function(require,module,exports){
+},{}],322:[function(require,module,exports){
 'use strict';
 
 /**
@@ -60646,7 +60559,7 @@ EditIdHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],324:[function(require,module,exports){
+},{}],323:[function(require,module,exports){
 'use strict';
 
 /**
@@ -60712,7 +60625,7 @@ EditInputMappingHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],325:[function(require,module,exports){
+},{}],324:[function(require,module,exports){
 'use strict';
 
 /**
@@ -60775,7 +60688,7 @@ EditTypeHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],326:[function(require,module,exports){
+},{}],325:[function(require,module,exports){
 module.exports = {
   __init__: [ 'modeling', 'dmnUpdater' ],
   __depends__: [
@@ -60787,7 +60700,7 @@ module.exports = {
   dmnUpdater: [ 'type', require('./DmnUpdater') ],
 };
 
-},{"../factory":305,"./DmnUpdater":318,"./Modeling":319,"table-js/lib/features/add-row":505,"table-js/lib/features/modeling":535}],327:[function(require,module,exports){
+},{"../factory":304,"./DmnUpdater":317,"./Modeling":318,"table-js/lib/features/add-row":504,"table-js/lib/features/modeling":534}],326:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -60858,14 +60771,14 @@ TableName.prototype.getId = function() {
   return this.semantic.id;
 };
 
-},{"inherits":374,"min-dom/lib/domify":480,"table-js/lib/features/table-name/TableName":541}],328:[function(require,module,exports){
+},{"inherits":373,"min-dom/lib/domify":479,"table-js/lib/features/table-name/TableName":540}],327:[function(require,module,exports){
 module.exports = {
   __init__: [ 'tableName' ],
   __depends__: [],
   tableName: [ 'type', require('./TableName') ]
 };
 
-},{"./TableName":327}],329:[function(require,module,exports){
+},{"./TableName":326}],328:[function(require,module,exports){
 'use strict';
 
 
@@ -61010,7 +60923,7 @@ TypeRow.prototype.getRow = function() {
   return this.row;
 };
 
-},{"min-dom/lib/classes":478,"min-dom/lib/domify":480,"table-js/lib/features/combo-box":508}],330:[function(require,module,exports){
+},{"min-dom/lib/classes":477,"min-dom/lib/domify":479,"table-js/lib/features/combo-box":507}],329:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -61047,7 +60960,7 @@ TypeRowRenderer.$inject = [
 
 module.exports = TypeRowRenderer;
 
-},{"min-dom/lib/classes":478}],331:[function(require,module,exports){
+},{"min-dom/lib/classes":477}],330:[function(require,module,exports){
 module.exports = {
   __init__: [ 'typeRow', 'typeRowRenderer' ],
   __depends__: [ require('table-js/lib/features/complex-cell') ],
@@ -61055,7 +60968,7 @@ module.exports = {
   typeRowRenderer: [ 'type', require('./TypeRowRenderer') ]
 };
 
-},{"./TypeRow":329,"./TypeRowRenderer":330,"table-js/lib/features/complex-cell":510}],332:[function(require,module,exports){
+},{"./TypeRow":328,"./TypeRowRenderer":329,"table-js/lib/features/complex-cell":509}],331:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -61205,7 +61118,7 @@ DmnImporter.prototype.add = function(semantic, parentElement, definitions) {
   return element;
 };
 
-},{"./Util":335,"lodash/array/union":376,"lodash/object/assign":469}],333:[function(require,module,exports){
+},{"./Util":334,"lodash/array/union":375,"lodash/object/assign":468}],332:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -61300,7 +61213,7 @@ function DmnTreeWalker(handler) {
 
 module.exports = DmnTreeWalker;
 
-},{"./Util":335,"lodash/collection/forEach":382}],334:[function(require,module,exports){
+},{"./Util":334,"lodash/collection/forEach":381}],333:[function(require,module,exports){
 'use strict';
 
 var DmnTreeWalker = require('./DmnTreeWalker');
@@ -61360,7 +61273,7 @@ function importDmnTable(sheet, definitions, done) {
 
 module.exports.importDmnTable = importDmnTable;
 
-},{"./DmnTreeWalker":333}],335:[function(require,module,exports){
+},{"./DmnTreeWalker":332}],334:[function(require,module,exports){
 'use strict';
 
 module.exports.elementToString = function(e) {
@@ -61370,7 +61283,7 @@ module.exports.elementToString = function(e) {
 
   return '<' + e.$type + (e.id ? ' id="' + e.id : '') + '" />';
 };
-},{}],336:[function(require,module,exports){
+},{}],335:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../features/factory')
@@ -61378,7 +61291,7 @@ module.exports = {
   dmnImporter: [ 'type', require('./DmnImporter') ]
 };
 
-},{"../features/factory":305,"./DmnImporter":332}],337:[function(require,module,exports){
+},{"../features/factory":304,"./DmnImporter":331}],336:[function(require,module,exports){
 'use strict';
 
 
@@ -61421,7 +61334,7 @@ function getEntriesType(context) {
 
 module.exports.getEntriesType = getEntriesType;
 
-},{}],338:[function(require,module,exports){
+},{}],337:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -61557,7 +61470,7 @@ forEach(hooks, function(hook) {
     this.on(events, hook, priority, handlerFn, unwrap);
   };
 });
-},{"lodash/collection/forEach":382,"lodash/lang/isArray":462,"lodash/lang/isFunction":463,"lodash/lang/isNumber":465}],339:[function(require,module,exports){
+},{"lodash/collection/forEach":381,"lodash/lang/isArray":461,"lodash/lang/isFunction":462,"lodash/lang/isNumber":464}],338:[function(require,module,exports){
 'use strict';
 
 var unique = require('lodash/array/unique'),
@@ -62022,12 +61935,12 @@ CommandStack.prototype._setHandler = function(command, handler) {
   this._handlerMap[command] = handler;
 };
 
-},{"../core/EventBus":341,"lodash/array/unique":378,"lodash/lang/isArray":462,"lodash/object/assign":469}],340:[function(require,module,exports){
+},{"../core/EventBus":340,"lodash/array/unique":377,"lodash/lang/isArray":461,"lodash/object/assign":468}],339:[function(require,module,exports){
 module.exports = {
   commandStack: [ 'type', require('./CommandStack') ]
 };
 
-},{"./CommandStack":339}],341:[function(require,module,exports){
+},{"./CommandStack":338}],340:[function(require,module,exports){
 'use strict';
 
 var isFunction = require('lodash/lang/isFunction'),
@@ -62413,7 +62326,7 @@ Event.prototype.init = function(data) {
   assign(this, data || {});
 };
 
-},{"lodash/lang/isArray":462,"lodash/lang/isFunction":463,"lodash/lang/isNumber":465,"lodash/object/assign":469}],342:[function(require,module,exports){
+},{"lodash/lang/isArray":461,"lodash/lang/isFunction":462,"lodash/lang/isNumber":464,"lodash/object/assign":468}],341:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -62488,7 +62401,7 @@ RuleProvider.prototype.addRule = function(actions, priority, fn) {
     }, true);
   });
 };
-},{"../../command/CommandInterceptor":338,"inherits":374}],343:[function(require,module,exports){
+},{"../../command/CommandInterceptor":337,"inherits":373}],342:[function(require,module,exports){
 'use strict';
 
 /**
@@ -62521,22 +62434,22 @@ Rules.prototype.allowed = function(action, context) {
   // map undefined to true, i.e. no rules
   return allowed === undefined ? true : allowed;
 };
-},{}],344:[function(require,module,exports){
+},{}],343:[function(require,module,exports){
 module.exports = {
   __depends__: [ require('../../command' ) ],
   __init__: [ 'rules' ],
   rules: [ 'type', require('./Rules') ]
 };
 
-},{"../../command":340,"./Rules":343}],345:[function(require,module,exports){
-arguments[4][111][0].apply(exports,arguments)
-},{"dup":111}],346:[function(require,module,exports){
-arguments[4][113][0].apply(exports,arguments)
-},{"dup":113}],347:[function(require,module,exports){
+},{"../../command":339,"./Rules":342}],344:[function(require,module,exports){
+arguments[4][110][0].apply(exports,arguments)
+},{"dup":110}],345:[function(require,module,exports){
+arguments[4][112][0].apply(exports,arguments)
+},{"dup":112}],346:[function(require,module,exports){
+arguments[4][114][0].apply(exports,arguments)
+},{"./Event":344,"./Platform":347,"dup":114}],347:[function(require,module,exports){
 arguments[4][115][0].apply(exports,arguments)
-},{"./Event":345,"./Platform":348,"dup":115}],348:[function(require,module,exports){
-arguments[4][116][0].apply(exports,arguments)
-},{"dup":116}],349:[function(require,module,exports){
+},{"dup":115}],348:[function(require,module,exports){
 
 var isArray = function(obj) {
   return Object.prototype.toString.call(obj) === '[object Array]';
@@ -62586,14 +62499,14 @@ exports.annotate = annotate;
 exports.parse = parse;
 exports.isArray = isArray;
 
-},{}],350:[function(require,module,exports){
+},{}],349:[function(require,module,exports){
 module.exports = {
   annotate: require('./annotation').annotate,
   Module: require('./module'),
   Injector: require('./injector')
 };
 
-},{"./annotation":349,"./injector":351,"./module":352}],351:[function(require,module,exports){
+},{"./annotation":348,"./injector":350,"./module":351}],350:[function(require,module,exports){
 var Module = require('./module');
 var autoAnnotate = require('./annotation').parse;
 var annotate = require('./annotation').annotate;
@@ -62809,7 +62722,7 @@ var Injector = function(modules, parent) {
 
 module.exports = Injector;
 
-},{"./annotation":349,"./module":352}],352:[function(require,module,exports){
+},{"./annotation":348,"./module":351}],351:[function(require,module,exports){
 var Module = function() {
   var providers = [];
 
@@ -62835,9 +62748,9 @@ var Module = function() {
 
 module.exports = Module;
 
-},{}],353:[function(require,module,exports){
-arguments[4][56][0].apply(exports,arguments)
-},{"./lib/simple":356,"dup":56}],354:[function(require,module,exports){
+},{}],352:[function(require,module,exports){
+arguments[4][55][0].apply(exports,arguments)
+},{"./lib/simple":355,"dup":55}],353:[function(require,module,exports){
 'use strict';
 
 var isString = require('lodash/lang/isString'),
@@ -62918,7 +62831,7 @@ DmnModdle.prototype.toXML = function(element, options, done) {
   }
 };
 
-},{"lodash/lang/isFunction":463,"lodash/lang/isString":467,"lodash/object/assign":469,"moddle":362,"moddle-xml/lib/reader":358,"moddle-xml/lib/writer":359}],355:[function(require,module,exports){
+},{"lodash/lang/isFunction":462,"lodash/lang/isString":466,"lodash/object/assign":468,"moddle":361,"moddle-xml/lib/reader":357,"moddle-xml/lib/writer":358}],354:[function(require,module,exports){
 'use strict';
 
 var ID_PATTERN = /^(.*:)?id$/;
@@ -62975,7 +62888,7 @@ module.exports.extend = function(model, ids) {
   return model;
 };
 
-},{}],356:[function(require,module,exports){
+},{}],355:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign');
@@ -62990,9 +62903,9 @@ module.exports = function(additionalPackages, options) {
   return new DmnModdle(assign({}, packages, additionalPackages), options);
 };
 
-},{"../resources/dmn/json/dmn.json":371,"./dmn-moddle":354,"lodash/object/assign":469}],357:[function(require,module,exports){
-arguments[4][59][0].apply(exports,arguments)
-},{"dup":59}],358:[function(require,module,exports){
+},{"../resources/dmn/json/dmn.json":370,"./dmn-moddle":353,"lodash/object/assign":468}],356:[function(require,module,exports){
+arguments[4][58][0].apply(exports,arguments)
+},{"dup":58}],357:[function(require,module,exports){
 'use strict';
 
 var reduce = require('lodash/collection/reduce'),
@@ -63632,7 +63545,7 @@ XMLReader.prototype.handler = function(name) {
 
 module.exports = XMLReader;
 module.exports.ElementHandler = ElementHandler;
-},{"./common":357,"lodash/collection/find":381,"lodash/collection/forEach":382,"lodash/collection/reduce":385,"lodash/function/defer":388,"lodash/object/assign":469,"moddle":362,"moddle/lib/ns":367,"moddle/lib/types":370,"sax":360,"tiny-stack":361}],359:[function(require,module,exports){
+},{"./common":356,"lodash/collection/find":380,"lodash/collection/forEach":381,"lodash/collection/reduce":384,"lodash/function/defer":387,"lodash/object/assign":468,"moddle":361,"moddle/lib/ns":366,"moddle/lib/types":369,"sax":359,"tiny-stack":360}],358:[function(require,module,exports){
 'use strict';
 
 var map = require('lodash/collection/map'),
@@ -64243,15 +64156,15 @@ function XMLWriter(options) {
 
 module.exports = XMLWriter;
 
-},{"./common":357,"lodash/collection/filter":380,"lodash/collection/forEach":382,"lodash/collection/map":384,"lodash/lang/isString":467,"lodash/object/assign":469,"moddle/lib/ns":367,"moddle/lib/types":370}],360:[function(require,module,exports){
+},{"./common":356,"lodash/collection/filter":379,"lodash/collection/forEach":381,"lodash/collection/map":383,"lodash/lang/isString":466,"lodash/object/assign":468,"moddle/lib/ns":366,"moddle/lib/types":369}],359:[function(require,module,exports){
+arguments[4][61][0].apply(exports,arguments)
+},{"buffer":547,"dup":61,"stream":570,"string_decoder":571}],360:[function(require,module,exports){
 arguments[4][62][0].apply(exports,arguments)
-},{"buffer":548,"dup":62,"stream":571,"string_decoder":572}],361:[function(require,module,exports){
+},{"dup":62}],361:[function(require,module,exports){
 arguments[4][63][0].apply(exports,arguments)
-},{"dup":63}],362:[function(require,module,exports){
+},{"./lib/moddle":365,"dup":63}],362:[function(require,module,exports){
 arguments[4][64][0].apply(exports,arguments)
-},{"./lib/moddle":366,"dup":64}],363:[function(require,module,exports){
-arguments[4][65][0].apply(exports,arguments)
-},{"dup":65}],364:[function(require,module,exports){
+},{"dup":64}],363:[function(require,module,exports){
 'use strict';
 
 var pick = require('lodash/object/pick'),
@@ -64458,9 +64371,9 @@ DescriptorBuilder.prototype.addTrait = function(t, inherited) {
   allTypes.push(t);
 };
 
-},{"./ns":367,"lodash/collection/forEach":382,"lodash/object/assign":469,"lodash/object/pick":474}],365:[function(require,module,exports){
-arguments[4][67][0].apply(exports,arguments)
-},{"./base":363,"dup":67,"lodash/collection/forEach":382}],366:[function(require,module,exports){
+},{"./ns":366,"lodash/collection/forEach":381,"lodash/object/assign":468,"lodash/object/pick":473}],364:[function(require,module,exports){
+arguments[4][66][0].apply(exports,arguments)
+},{"./base":362,"dup":66,"lodash/collection/forEach":381}],365:[function(require,module,exports){
 'use strict';
 
 var isString = require('lodash/lang/isString'),
@@ -64682,11 +64595,11 @@ Moddle.prototype.getPropertyDescriptor = function(element, property) {
   return this.getElementDescriptor(element).propertiesByName[property];
 };
 
-},{"./factory":365,"./ns":367,"./properties":368,"./registry":369,"lodash/collection/find":381,"lodash/collection/forEach":382,"lodash/lang/isObject":466,"lodash/lang/isString":467}],367:[function(require,module,exports){
+},{"./factory":364,"./ns":366,"./properties":367,"./registry":368,"lodash/collection/find":380,"lodash/collection/forEach":381,"lodash/lang/isObject":465,"lodash/lang/isString":466}],366:[function(require,module,exports){
+arguments[4][68][0].apply(exports,arguments)
+},{"dup":68}],367:[function(require,module,exports){
 arguments[4][69][0].apply(exports,arguments)
 },{"dup":69}],368:[function(require,module,exports){
-arguments[4][70][0].apply(exports,arguments)
-},{"dup":70}],369:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -64879,9 +64792,9 @@ Registry.prototype.getEffectiveDescriptor = function(name) {
 Registry.prototype.definePackage = function(target, pkg) {
   this.properties.define(target, '$pkg', { value: pkg });
 };
-},{"./descriptor-builder":364,"./ns":367,"./types":370,"lodash/collection/forEach":382,"lodash/object/assign":469}],370:[function(require,module,exports){
-arguments[4][72][0].apply(exports,arguments)
-},{"dup":72}],371:[function(require,module,exports){
+},{"./descriptor-builder":363,"./ns":366,"./types":369,"lodash/collection/forEach":381,"lodash/object/assign":468}],369:[function(require,module,exports){
+arguments[4][71][0].apply(exports,arguments)
+},{"dup":71}],370:[function(require,module,exports){
 module.exports={
   "name": "DMN",
 
@@ -65071,7 +64984,7 @@ module.exports={
   ]
 }
 
-},{}],372:[function(require,module,exports){
+},{}],371:[function(require,module,exports){
 'use strict';
 
 var hat = require('hat');
@@ -65157,7 +65070,7 @@ Ids.prototype.unclaim = function(id) {
   delete this._seed.hats[id];
 };
 
-},{"hat":373}],373:[function(require,module,exports){
+},{"hat":372}],372:[function(require,module,exports){
 var hat = module.exports = function (bits, base) {
     if (!base) base = 16;
     if (bits === undefined) bits = 128;
@@ -65221,11 +65134,11 @@ hat.rack = function (bits, base, expandBy) {
     return fn;
 };
 
-},{}],374:[function(require,module,exports){
+},{}],373:[function(require,module,exports){
+arguments[4][125][0].apply(exports,arguments)
+},{"dup":125}],374:[function(require,module,exports){
 arguments[4][126][0].apply(exports,arguments)
 },{"dup":126}],375:[function(require,module,exports){
-arguments[4][127][0].apply(exports,arguments)
-},{"dup":127}],376:[function(require,module,exports){
 var baseFlatten = require('../internal/baseFlatten'),
     baseUniq = require('../internal/baseUniq'),
     restParam = require('../function/restParam');
@@ -65251,7 +65164,7 @@ var union = restParam(function(arrays) {
 
 module.exports = union;
 
-},{"../function/restParam":389,"../internal/baseFlatten":411,"../internal/baseUniq":430}],377:[function(require,module,exports){
+},{"../function/restParam":388,"../internal/baseFlatten":410,"../internal/baseUniq":429}],376:[function(require,module,exports){
 var baseCallback = require('../internal/baseCallback'),
     baseUniq = require('../internal/baseUniq'),
     isIterateeCall = require('../internal/isIterateeCall'),
@@ -65324,18 +65237,18 @@ function uniq(array, isSorted, iteratee, thisArg) {
 
 module.exports = uniq;
 
-},{"../internal/baseCallback":401,"../internal/baseUniq":430,"../internal/isIterateeCall":450,"../internal/sortedUniq":458}],378:[function(require,module,exports){
+},{"../internal/baseCallback":400,"../internal/baseUniq":429,"../internal/isIterateeCall":449,"../internal/sortedUniq":457}],377:[function(require,module,exports){
 module.exports = require('./uniq');
 
-},{"./uniq":377}],379:[function(require,module,exports){
+},{"./uniq":376}],378:[function(require,module,exports){
+arguments[4][128][0].apply(exports,arguments)
+},{"../internal/arrayEvery":392,"../internal/baseCallback":400,"../internal/baseEvery":406,"../internal/isIterateeCall":449,"../lang/isArray":461,"dup":128}],379:[function(require,module,exports){
 arguments[4][129][0].apply(exports,arguments)
-},{"../internal/arrayEvery":393,"../internal/baseCallback":401,"../internal/baseEvery":407,"../internal/isIterateeCall":450,"../lang/isArray":462,"dup":129}],380:[function(require,module,exports){
+},{"../internal/arrayFilter":393,"../internal/baseCallback":400,"../internal/baseFilter":407,"../lang/isArray":461,"dup":129}],380:[function(require,module,exports){
 arguments[4][130][0].apply(exports,arguments)
-},{"../internal/arrayFilter":394,"../internal/baseCallback":401,"../internal/baseFilter":408,"../lang/isArray":462,"dup":130}],381:[function(require,module,exports){
+},{"../internal/baseEach":404,"../internal/createFind":437,"dup":130}],381:[function(require,module,exports){
 arguments[4][131][0].apply(exports,arguments)
-},{"../internal/baseEach":405,"../internal/createFind":438,"dup":131}],382:[function(require,module,exports){
-arguments[4][132][0].apply(exports,arguments)
-},{"../internal/arrayEach":391,"../internal/baseEach":405,"../internal/createForEach":439,"dup":132}],383:[function(require,module,exports){
+},{"../internal/arrayEach":390,"../internal/baseEach":404,"../internal/createForEach":438,"dup":131}],382:[function(require,module,exports){
 var arrayEachRight = require('../internal/arrayEachRight'),
     baseEachRight = require('../internal/baseEachRight'),
     createForEach = require('../internal/createForEach');
@@ -65363,23 +65276,23 @@ var forEachRight = createForEach(arrayEachRight, baseEachRight);
 
 module.exports = forEachRight;
 
-},{"../internal/arrayEachRight":392,"../internal/baseEachRight":406,"../internal/createForEach":439}],384:[function(require,module,exports){
+},{"../internal/arrayEachRight":391,"../internal/baseEachRight":405,"../internal/createForEach":438}],383:[function(require,module,exports){
+arguments[4][134][0].apply(exports,arguments)
+},{"../internal/arrayMap":394,"../internal/baseCallback":400,"../internal/baseMap":421,"../lang/isArray":461,"dup":134}],384:[function(require,module,exports){
 arguments[4][135][0].apply(exports,arguments)
-},{"../internal/arrayMap":395,"../internal/baseCallback":401,"../internal/baseMap":422,"../lang/isArray":462,"dup":135}],385:[function(require,module,exports){
-arguments[4][136][0].apply(exports,arguments)
-},{"../internal/arrayReduce":397,"../internal/baseEach":405,"../internal/createReduce":440,"dup":136}],386:[function(require,module,exports){
-arguments[4][138][0].apply(exports,arguments)
-},{"../internal/getNative":446,"dup":138}],387:[function(require,module,exports){
+},{"../internal/arrayReduce":396,"../internal/baseEach":404,"../internal/createReduce":439,"dup":135}],385:[function(require,module,exports){
+arguments[4][137][0].apply(exports,arguments)
+},{"../internal/getNative":445,"dup":137}],386:[function(require,module,exports){
+arguments[4][139][0].apply(exports,arguments)
+},{"../date/now":385,"../lang/isObject":465,"dup":139}],387:[function(require,module,exports){
 arguments[4][140][0].apply(exports,arguments)
-},{"../date/now":386,"../lang/isObject":466,"dup":140}],388:[function(require,module,exports){
+},{"../internal/baseDelay":402,"./restParam":388,"dup":140}],388:[function(require,module,exports){
 arguments[4][141][0].apply(exports,arguments)
-},{"../internal/baseDelay":403,"./restParam":389,"dup":141}],389:[function(require,module,exports){
-arguments[4][142][0].apply(exports,arguments)
-},{"dup":142}],390:[function(require,module,exports){
-arguments[4][145][0].apply(exports,arguments)
-},{"./cachePush":433,"./getNative":446,"dup":145}],391:[function(require,module,exports){
-arguments[4][147][0].apply(exports,arguments)
-},{"dup":147}],392:[function(require,module,exports){
+},{"dup":141}],389:[function(require,module,exports){
+arguments[4][144][0].apply(exports,arguments)
+},{"./cachePush":432,"./getNative":445,"dup":144}],390:[function(require,module,exports){
+arguments[4][146][0].apply(exports,arguments)
+},{"dup":146}],391:[function(require,module,exports){
 /**
  * A specialized version of `_.forEachRight` for arrays without support for
  * callback shorthands and `this` binding.
@@ -65402,7 +65315,9 @@ function arrayEachRight(array, iteratee) {
 
 module.exports = arrayEachRight;
 
-},{}],393:[function(require,module,exports){
+},{}],392:[function(require,module,exports){
+arguments[4][147][0].apply(exports,arguments)
+},{"dup":147}],393:[function(require,module,exports){
 arguments[4][148][0].apply(exports,arguments)
 },{"dup":148}],394:[function(require,module,exports){
 arguments[4][149][0].apply(exports,arguments)
@@ -65414,21 +65329,19 @@ arguments[4][151][0].apply(exports,arguments)
 arguments[4][152][0].apply(exports,arguments)
 },{"dup":152}],398:[function(require,module,exports){
 arguments[4][153][0].apply(exports,arguments)
-},{"dup":153}],399:[function(require,module,exports){
+},{"../object/keys":469,"dup":153}],399:[function(require,module,exports){
 arguments[4][154][0].apply(exports,arguments)
-},{"../object/keys":470,"dup":154}],400:[function(require,module,exports){
+},{"../object/keys":469,"./baseCopy":401,"dup":154}],400:[function(require,module,exports){
 arguments[4][155][0].apply(exports,arguments)
-},{"../object/keys":470,"./baseCopy":402,"dup":155}],401:[function(require,module,exports){
+},{"../utility/identity":474,"../utility/property":475,"./baseMatches":422,"./baseMatchesProperty":423,"./bindCallback":430,"dup":155}],401:[function(require,module,exports){
 arguments[4][156][0].apply(exports,arguments)
-},{"../utility/identity":475,"../utility/property":476,"./baseMatches":423,"./baseMatchesProperty":424,"./bindCallback":431,"dup":156}],402:[function(require,module,exports){
-arguments[4][157][0].apply(exports,arguments)
-},{"dup":157}],403:[function(require,module,exports){
+},{"dup":156}],402:[function(require,module,exports){
+arguments[4][158][0].apply(exports,arguments)
+},{"dup":158}],403:[function(require,module,exports){
 arguments[4][159][0].apply(exports,arguments)
-},{"dup":159}],404:[function(require,module,exports){
+},{"./baseIndexOf":417,"./cacheIndexOf":431,"./createCache":436,"dup":159}],404:[function(require,module,exports){
 arguments[4][160][0].apply(exports,arguments)
-},{"./baseIndexOf":418,"./cacheIndexOf":432,"./createCache":437,"dup":160}],405:[function(require,module,exports){
-arguments[4][161][0].apply(exports,arguments)
-},{"./baseForOwn":414,"./createBaseEach":435,"dup":161}],406:[function(require,module,exports){
+},{"./baseForOwn":413,"./createBaseEach":434,"dup":160}],405:[function(require,module,exports){
 var baseForOwnRight = require('./baseForOwnRight'),
     createBaseEach = require('./createBaseEach');
 
@@ -65445,23 +65358,23 @@ var baseEachRight = createBaseEach(baseForOwnRight, true);
 
 module.exports = baseEachRight;
 
-},{"./baseForOwnRight":415,"./createBaseEach":435}],407:[function(require,module,exports){
+},{"./baseForOwnRight":414,"./createBaseEach":434}],406:[function(require,module,exports){
+arguments[4][161][0].apply(exports,arguments)
+},{"./baseEach":404,"dup":161}],407:[function(require,module,exports){
 arguments[4][162][0].apply(exports,arguments)
-},{"./baseEach":405,"dup":162}],408:[function(require,module,exports){
+},{"./baseEach":404,"dup":162}],408:[function(require,module,exports){
 arguments[4][163][0].apply(exports,arguments)
-},{"./baseEach":405,"dup":163}],409:[function(require,module,exports){
+},{"dup":163}],409:[function(require,module,exports){
 arguments[4][164][0].apply(exports,arguments)
 },{"dup":164}],410:[function(require,module,exports){
 arguments[4][165][0].apply(exports,arguments)
-},{"dup":165}],411:[function(require,module,exports){
+},{"../lang/isArguments":460,"../lang/isArray":461,"./arrayPush":395,"./isArrayLike":447,"./isObjectLike":452,"dup":165}],411:[function(require,module,exports){
 arguments[4][166][0].apply(exports,arguments)
-},{"../lang/isArguments":461,"../lang/isArray":462,"./arrayPush":396,"./isArrayLike":448,"./isObjectLike":453,"dup":166}],412:[function(require,module,exports){
+},{"./createBaseFor":435,"dup":166}],412:[function(require,module,exports){
 arguments[4][167][0].apply(exports,arguments)
-},{"./createBaseFor":436,"dup":167}],413:[function(require,module,exports){
+},{"../object/keysIn":470,"./baseFor":411,"dup":167}],413:[function(require,module,exports){
 arguments[4][168][0].apply(exports,arguments)
-},{"../object/keysIn":471,"./baseFor":412,"dup":168}],414:[function(require,module,exports){
-arguments[4][169][0].apply(exports,arguments)
-},{"../object/keys":470,"./baseFor":412,"dup":169}],415:[function(require,module,exports){
+},{"../object/keys":469,"./baseFor":411,"dup":168}],414:[function(require,module,exports){
 var baseForRight = require('./baseForRight'),
     keys = require('../object/keys');
 
@@ -65480,7 +65393,7 @@ function baseForOwnRight(object, iteratee) {
 
 module.exports = baseForOwnRight;
 
-},{"../object/keys":470,"./baseForRight":416}],416:[function(require,module,exports){
+},{"../object/keys":469,"./baseForRight":415}],415:[function(require,module,exports){
 var createBaseFor = require('./createBaseFor');
 
 /**
@@ -65497,33 +65410,33 @@ var baseForRight = createBaseFor(true);
 
 module.exports = baseForRight;
 
-},{"./createBaseFor":436}],417:[function(require,module,exports){
+},{"./createBaseFor":435}],416:[function(require,module,exports){
+arguments[4][169][0].apply(exports,arguments)
+},{"./toObject":458,"dup":169}],417:[function(require,module,exports){
 arguments[4][170][0].apply(exports,arguments)
-},{"./toObject":459,"dup":170}],418:[function(require,module,exports){
+},{"./indexOfNaN":446,"dup":170}],418:[function(require,module,exports){
 arguments[4][171][0].apply(exports,arguments)
-},{"./indexOfNaN":447,"dup":171}],419:[function(require,module,exports){
+},{"../lang/isObject":465,"./baseIsEqualDeep":419,"./isObjectLike":452,"dup":171}],419:[function(require,module,exports){
 arguments[4][172][0].apply(exports,arguments)
-},{"../lang/isObject":466,"./baseIsEqualDeep":420,"./isObjectLike":453,"dup":172}],420:[function(require,module,exports){
+},{"../lang/isArray":461,"../lang/isTypedArray":467,"./equalArrays":440,"./equalByTag":441,"./equalObjects":442,"dup":172}],420:[function(require,module,exports){
 arguments[4][173][0].apply(exports,arguments)
-},{"../lang/isArray":462,"../lang/isTypedArray":468,"./equalArrays":441,"./equalByTag":442,"./equalObjects":443,"dup":173}],421:[function(require,module,exports){
-arguments[4][174][0].apply(exports,arguments)
-},{"./baseIsEqual":419,"./toObject":459,"dup":174}],422:[function(require,module,exports){
+},{"./baseIsEqual":418,"./toObject":458,"dup":173}],421:[function(require,module,exports){
+arguments[4][175][0].apply(exports,arguments)
+},{"./baseEach":404,"./isArrayLike":447,"dup":175}],422:[function(require,module,exports){
 arguments[4][176][0].apply(exports,arguments)
-},{"./baseEach":405,"./isArrayLike":448,"dup":176}],423:[function(require,module,exports){
+},{"./baseIsMatch":420,"./getMatchData":444,"./toObject":458,"dup":176}],423:[function(require,module,exports){
 arguments[4][177][0].apply(exports,arguments)
-},{"./baseIsMatch":421,"./getMatchData":445,"./toObject":459,"dup":177}],424:[function(require,module,exports){
-arguments[4][178][0].apply(exports,arguments)
-},{"../array/last":375,"../lang/isArray":462,"./baseGet":417,"./baseIsEqual":419,"./baseSlice":428,"./isKey":451,"./isStrictComparable":454,"./toObject":459,"./toPath":460,"dup":178}],425:[function(require,module,exports){
+},{"../array/last":374,"../lang/isArray":461,"./baseGet":416,"./baseIsEqual":418,"./baseSlice":427,"./isKey":450,"./isStrictComparable":453,"./toObject":458,"./toPath":459,"dup":177}],424:[function(require,module,exports){
+arguments[4][180][0].apply(exports,arguments)
+},{"dup":180}],425:[function(require,module,exports){
 arguments[4][181][0].apply(exports,arguments)
-},{"dup":181}],426:[function(require,module,exports){
+},{"./baseGet":416,"./toPath":459,"dup":181}],426:[function(require,module,exports){
 arguments[4][182][0].apply(exports,arguments)
-},{"./baseGet":417,"./toPath":460,"dup":182}],427:[function(require,module,exports){
-arguments[4][183][0].apply(exports,arguments)
-},{"dup":183}],428:[function(require,module,exports){
-arguments[4][185][0].apply(exports,arguments)
-},{"dup":185}],429:[function(require,module,exports){
-arguments[4][187][0].apply(exports,arguments)
-},{"dup":187}],430:[function(require,module,exports){
+},{"dup":182}],427:[function(require,module,exports){
+arguments[4][184][0].apply(exports,arguments)
+},{"dup":184}],428:[function(require,module,exports){
+arguments[4][186][0].apply(exports,arguments)
+},{"dup":186}],429:[function(require,module,exports){
 var baseIndexOf = require('./baseIndexOf'),
     cacheIndexOf = require('./cacheIndexOf'),
     createCache = require('./createCache');
@@ -65585,61 +65498,61 @@ function baseUniq(array, iteratee) {
 
 module.exports = baseUniq;
 
-},{"./baseIndexOf":418,"./cacheIndexOf":432,"./createCache":437}],431:[function(require,module,exports){
+},{"./baseIndexOf":417,"./cacheIndexOf":431,"./createCache":436}],430:[function(require,module,exports){
+arguments[4][188][0].apply(exports,arguments)
+},{"../utility/identity":474,"dup":188}],431:[function(require,module,exports){
 arguments[4][189][0].apply(exports,arguments)
-},{"../utility/identity":475,"dup":189}],432:[function(require,module,exports){
+},{"../lang/isObject":465,"dup":189}],432:[function(require,module,exports){
 arguments[4][190][0].apply(exports,arguments)
-},{"../lang/isObject":466,"dup":190}],433:[function(require,module,exports){
-arguments[4][191][0].apply(exports,arguments)
-},{"../lang/isObject":466,"dup":191}],434:[function(require,module,exports){
+},{"../lang/isObject":465,"dup":190}],433:[function(require,module,exports){
+arguments[4][194][0].apply(exports,arguments)
+},{"../function/restParam":388,"./bindCallback":430,"./isIterateeCall":449,"dup":194}],434:[function(require,module,exports){
 arguments[4][195][0].apply(exports,arguments)
-},{"../function/restParam":389,"./bindCallback":431,"./isIterateeCall":450,"dup":195}],435:[function(require,module,exports){
+},{"./getLength":443,"./isLength":451,"./toObject":458,"dup":195}],435:[function(require,module,exports){
 arguments[4][196][0].apply(exports,arguments)
-},{"./getLength":444,"./isLength":452,"./toObject":459,"dup":196}],436:[function(require,module,exports){
-arguments[4][197][0].apply(exports,arguments)
-},{"./toObject":459,"dup":197}],437:[function(require,module,exports){
-arguments[4][199][0].apply(exports,arguments)
-},{"./SetCache":390,"./getNative":446,"dup":199}],438:[function(require,module,exports){
+},{"./toObject":458,"dup":196}],436:[function(require,module,exports){
+arguments[4][198][0].apply(exports,arguments)
+},{"./SetCache":389,"./getNative":445,"dup":198}],437:[function(require,module,exports){
+arguments[4][200][0].apply(exports,arguments)
+},{"../lang/isArray":461,"./baseCallback":400,"./baseFind":408,"./baseFindIndex":409,"dup":200}],438:[function(require,module,exports){
 arguments[4][201][0].apply(exports,arguments)
-},{"../lang/isArray":462,"./baseCallback":401,"./baseFind":409,"./baseFindIndex":410,"dup":201}],439:[function(require,module,exports){
-arguments[4][202][0].apply(exports,arguments)
-},{"../lang/isArray":462,"./bindCallback":431,"dup":202}],440:[function(require,module,exports){
-arguments[4][205][0].apply(exports,arguments)
-},{"../lang/isArray":462,"./baseCallback":401,"./baseReduce":427,"dup":205}],441:[function(require,module,exports){
+},{"../lang/isArray":461,"./bindCallback":430,"dup":201}],439:[function(require,module,exports){
+arguments[4][204][0].apply(exports,arguments)
+},{"../lang/isArray":461,"./baseCallback":400,"./baseReduce":426,"dup":204}],440:[function(require,module,exports){
+arguments[4][206][0].apply(exports,arguments)
+},{"./arraySome":397,"dup":206}],441:[function(require,module,exports){
 arguments[4][207][0].apply(exports,arguments)
-},{"./arraySome":398,"dup":207}],442:[function(require,module,exports){
+},{"dup":207}],442:[function(require,module,exports){
 arguments[4][208][0].apply(exports,arguments)
-},{"dup":208}],443:[function(require,module,exports){
-arguments[4][209][0].apply(exports,arguments)
-},{"../object/keys":470,"dup":209}],444:[function(require,module,exports){
+},{"../object/keys":469,"dup":208}],443:[function(require,module,exports){
+arguments[4][211][0].apply(exports,arguments)
+},{"./baseProperty":424,"dup":211}],444:[function(require,module,exports){
 arguments[4][212][0].apply(exports,arguments)
-},{"./baseProperty":425,"dup":212}],445:[function(require,module,exports){
+},{"../object/pairs":472,"./isStrictComparable":453,"dup":212}],445:[function(require,module,exports){
 arguments[4][213][0].apply(exports,arguments)
-},{"../object/pairs":473,"./isStrictComparable":454,"dup":213}],446:[function(require,module,exports){
+},{"../lang/isNative":463,"dup":213}],446:[function(require,module,exports){
 arguments[4][214][0].apply(exports,arguments)
-},{"../lang/isNative":464,"dup":214}],447:[function(require,module,exports){
+},{"dup":214}],447:[function(require,module,exports){
 arguments[4][215][0].apply(exports,arguments)
-},{"dup":215}],448:[function(require,module,exports){
+},{"./getLength":443,"./isLength":451,"dup":215}],448:[function(require,module,exports){
 arguments[4][216][0].apply(exports,arguments)
-},{"./getLength":444,"./isLength":452,"dup":216}],449:[function(require,module,exports){
+},{"dup":216}],449:[function(require,module,exports){
 arguments[4][217][0].apply(exports,arguments)
-},{"dup":217}],450:[function(require,module,exports){
+},{"../lang/isObject":465,"./isArrayLike":447,"./isIndex":448,"dup":217}],450:[function(require,module,exports){
 arguments[4][218][0].apply(exports,arguments)
-},{"../lang/isObject":466,"./isArrayLike":448,"./isIndex":449,"dup":218}],451:[function(require,module,exports){
-arguments[4][219][0].apply(exports,arguments)
-},{"../lang/isArray":462,"./toObject":459,"dup":219}],452:[function(require,module,exports){
+},{"../lang/isArray":461,"./toObject":458,"dup":218}],451:[function(require,module,exports){
+arguments[4][220][0].apply(exports,arguments)
+},{"dup":220}],452:[function(require,module,exports){
 arguments[4][221][0].apply(exports,arguments)
 },{"dup":221}],453:[function(require,module,exports){
 arguments[4][222][0].apply(exports,arguments)
-},{"dup":222}],454:[function(require,module,exports){
-arguments[4][223][0].apply(exports,arguments)
-},{"../lang/isObject":466,"dup":223}],455:[function(require,module,exports){
+},{"../lang/isObject":465,"dup":222}],454:[function(require,module,exports){
+arguments[4][225][0].apply(exports,arguments)
+},{"./toObject":458,"dup":225}],455:[function(require,module,exports){
 arguments[4][226][0].apply(exports,arguments)
-},{"./toObject":459,"dup":226}],456:[function(require,module,exports){
-arguments[4][227][0].apply(exports,arguments)
-},{"./baseForIn":413,"dup":227}],457:[function(require,module,exports){
-arguments[4][232][0].apply(exports,arguments)
-},{"../lang/isArguments":461,"../lang/isArray":462,"../object/keysIn":471,"./isIndex":449,"./isLength":452,"dup":232}],458:[function(require,module,exports){
+},{"./baseForIn":412,"dup":226}],456:[function(require,module,exports){
+arguments[4][231][0].apply(exports,arguments)
+},{"../lang/isArguments":460,"../lang/isArray":461,"../object/keysIn":470,"./isIndex":448,"./isLength":451,"dup":231}],457:[function(require,module,exports){
 /**
  * An implementation of `_.uniq` optimized for sorted arrays without support
  * for callback shorthands and `this` binding.
@@ -65670,43 +65583,43 @@ function sortedUniq(array, iteratee) {
 
 module.exports = sortedUniq;
 
-},{}],459:[function(require,module,exports){
+},{}],458:[function(require,module,exports){
+arguments[4][232][0].apply(exports,arguments)
+},{"../lang/isObject":465,"dup":232}],459:[function(require,module,exports){
 arguments[4][233][0].apply(exports,arguments)
-},{"../lang/isObject":466,"dup":233}],460:[function(require,module,exports){
-arguments[4][234][0].apply(exports,arguments)
-},{"../lang/isArray":462,"./baseToString":429,"dup":234}],461:[function(require,module,exports){
+},{"../lang/isArray":461,"./baseToString":428,"dup":233}],460:[function(require,module,exports){
+arguments[4][235][0].apply(exports,arguments)
+},{"../internal/isArrayLike":447,"../internal/isObjectLike":452,"dup":235}],461:[function(require,module,exports){
 arguments[4][236][0].apply(exports,arguments)
-},{"../internal/isArrayLike":448,"../internal/isObjectLike":453,"dup":236}],462:[function(require,module,exports){
+},{"../internal/getNative":445,"../internal/isLength":451,"../internal/isObjectLike":452,"dup":236}],462:[function(require,module,exports){
 arguments[4][237][0].apply(exports,arguments)
-},{"../internal/getNative":446,"../internal/isLength":452,"../internal/isObjectLike":453,"dup":237}],463:[function(require,module,exports){
+},{"./isObject":465,"dup":237}],463:[function(require,module,exports){
 arguments[4][238][0].apply(exports,arguments)
-},{"./isObject":466,"dup":238}],464:[function(require,module,exports){
+},{"../internal/isObjectLike":452,"./isFunction":462,"dup":238}],464:[function(require,module,exports){
 arguments[4][239][0].apply(exports,arguments)
-},{"../internal/isObjectLike":453,"./isFunction":463,"dup":239}],465:[function(require,module,exports){
+},{"../internal/isObjectLike":452,"dup":239}],465:[function(require,module,exports){
 arguments[4][240][0].apply(exports,arguments)
-},{"../internal/isObjectLike":453,"dup":240}],466:[function(require,module,exports){
-arguments[4][241][0].apply(exports,arguments)
-},{"dup":241}],467:[function(require,module,exports){
+},{"dup":240}],466:[function(require,module,exports){
+arguments[4][242][0].apply(exports,arguments)
+},{"../internal/isObjectLike":452,"dup":242}],467:[function(require,module,exports){
 arguments[4][243][0].apply(exports,arguments)
-},{"../internal/isObjectLike":453,"dup":243}],468:[function(require,module,exports){
-arguments[4][244][0].apply(exports,arguments)
-},{"../internal/isLength":452,"../internal/isObjectLike":453,"dup":244}],469:[function(require,module,exports){
+},{"../internal/isLength":451,"../internal/isObjectLike":452,"dup":243}],468:[function(require,module,exports){
+arguments[4][245][0].apply(exports,arguments)
+},{"../internal/assignWith":398,"../internal/baseAssign":399,"../internal/createAssigner":433,"dup":245}],469:[function(require,module,exports){
 arguments[4][246][0].apply(exports,arguments)
-},{"../internal/assignWith":399,"../internal/baseAssign":400,"../internal/createAssigner":434,"dup":246}],470:[function(require,module,exports){
+},{"../internal/getNative":445,"../internal/isArrayLike":447,"../internal/shimKeys":456,"../lang/isObject":465,"dup":246}],470:[function(require,module,exports){
 arguments[4][247][0].apply(exports,arguments)
-},{"../internal/getNative":446,"../internal/isArrayLike":448,"../internal/shimKeys":457,"../lang/isObject":466,"dup":247}],471:[function(require,module,exports){
-arguments[4][248][0].apply(exports,arguments)
-},{"../internal/isIndex":449,"../internal/isLength":452,"../lang/isArguments":461,"../lang/isArray":462,"../lang/isObject":466,"dup":248}],472:[function(require,module,exports){
+},{"../internal/isIndex":448,"../internal/isLength":451,"../lang/isArguments":460,"../lang/isArray":461,"../lang/isObject":465,"dup":247}],471:[function(require,module,exports){
+arguments[4][249][0].apply(exports,arguments)
+},{"../function/restParam":388,"../internal/arrayMap":394,"../internal/baseDifference":403,"../internal/baseFlatten":410,"../internal/bindCallback":430,"../internal/pickByArray":454,"../internal/pickByCallback":455,"./keysIn":470,"dup":249}],472:[function(require,module,exports){
 arguments[4][250][0].apply(exports,arguments)
-},{"../function/restParam":389,"../internal/arrayMap":395,"../internal/baseDifference":404,"../internal/baseFlatten":411,"../internal/bindCallback":431,"../internal/pickByArray":455,"../internal/pickByCallback":456,"./keysIn":471,"dup":250}],473:[function(require,module,exports){
+},{"../internal/toObject":458,"./keys":469,"dup":250}],473:[function(require,module,exports){
 arguments[4][251][0].apply(exports,arguments)
-},{"../internal/toObject":459,"./keys":470,"dup":251}],474:[function(require,module,exports){
-arguments[4][252][0].apply(exports,arguments)
-},{"../function/restParam":389,"../internal/baseFlatten":411,"../internal/bindCallback":431,"../internal/pickByArray":455,"../internal/pickByCallback":456,"dup":252}],475:[function(require,module,exports){
-arguments[4][254][0].apply(exports,arguments)
-},{"dup":254}],476:[function(require,module,exports){
-arguments[4][256][0].apply(exports,arguments)
-},{"../internal/baseProperty":425,"../internal/basePropertyDeep":426,"../internal/isKey":451,"dup":256}],477:[function(require,module,exports){
+},{"../function/restParam":388,"../internal/baseFlatten":410,"../internal/bindCallback":430,"../internal/pickByArray":454,"../internal/pickByCallback":455,"dup":251}],474:[function(require,module,exports){
+arguments[4][253][0].apply(exports,arguments)
+},{"dup":253}],475:[function(require,module,exports){
+arguments[4][255][0].apply(exports,arguments)
+},{"../internal/baseProperty":424,"../internal/basePropertyDeep":425,"../internal/isKey":450,"dup":255}],476:[function(require,module,exports){
 /**
  * Set attribute `name` to `val`, or get attr `name`.
  *
@@ -65732,37 +65645,37 @@ module.exports = function(el, name, val) {
 
   return el;
 };
-},{}],478:[function(require,module,exports){
-arguments[4][257][0].apply(exports,arguments)
-},{"component-classes":485,"dup":257}],479:[function(require,module,exports){
+},{}],477:[function(require,module,exports){
+arguments[4][256][0].apply(exports,arguments)
+},{"component-classes":484,"dup":256}],478:[function(require,module,exports){
+arguments[4][258][0].apply(exports,arguments)
+},{"component-delegate":487,"dup":258}],479:[function(require,module,exports){
 arguments[4][259][0].apply(exports,arguments)
-},{"component-delegate":488,"dup":259}],480:[function(require,module,exports){
+},{"domify":491,"dup":259}],480:[function(require,module,exports){
 arguments[4][260][0].apply(exports,arguments)
-},{"domify":492,"dup":260}],481:[function(require,module,exports){
-arguments[4][261][0].apply(exports,arguments)
-},{"component-event":489,"dup":261}],482:[function(require,module,exports){
+},{"component-event":488,"dup":260}],481:[function(require,module,exports){
 module.exports = require('component-matches-selector');
-},{"component-matches-selector":490}],483:[function(require,module,exports){
+},{"component-matches-selector":489}],482:[function(require,module,exports){
+arguments[4][261][0].apply(exports,arguments)
+},{"component-query":490,"dup":261}],483:[function(require,module,exports){
 arguments[4][262][0].apply(exports,arguments)
-},{"component-query":491,"dup":262}],484:[function(require,module,exports){
+},{"dup":262}],484:[function(require,module,exports){
 arguments[4][263][0].apply(exports,arguments)
-},{"dup":263}],485:[function(require,module,exports){
+},{"component-indexof":485,"dup":263,"indexof":485}],485:[function(require,module,exports){
 arguments[4][264][0].apply(exports,arguments)
-},{"component-indexof":486,"dup":264,"indexof":486}],486:[function(require,module,exports){
+},{"dup":264}],486:[function(require,module,exports){
 arguments[4][265][0].apply(exports,arguments)
-},{"dup":265}],487:[function(require,module,exports){
+},{"dup":265,"matches-selector":489}],487:[function(require,module,exports){
 arguments[4][266][0].apply(exports,arguments)
-},{"dup":266,"matches-selector":490}],488:[function(require,module,exports){
+},{"closest":486,"component-closest":486,"component-event":488,"dup":266,"event":488}],488:[function(require,module,exports){
 arguments[4][267][0].apply(exports,arguments)
-},{"closest":487,"component-closest":487,"component-event":489,"dup":267,"event":489}],489:[function(require,module,exports){
+},{"dup":267}],489:[function(require,module,exports){
 arguments[4][268][0].apply(exports,arguments)
-},{"dup":268}],490:[function(require,module,exports){
+},{"component-query":490,"dup":268,"query":490}],490:[function(require,module,exports){
 arguments[4][269][0].apply(exports,arguments)
-},{"component-query":491,"dup":269,"query":491}],491:[function(require,module,exports){
+},{"dup":269}],491:[function(require,module,exports){
 arguments[4][270][0].apply(exports,arguments)
 },{"dup":270}],492:[function(require,module,exports){
-arguments[4][271][0].apply(exports,arguments)
-},{"dup":271}],493:[function(require,module,exports){
 'use strict';
 
 /**
@@ -65914,10 +65827,10 @@ function splitStr(str, position) {
     after: str.substring(position)
   };
 }
-},{}],494:[function(require,module,exports){
+},{}],493:[function(require,module,exports){
 module.exports = require('./lib/Table');
 
-},{"./lib/Table":495}],495:[function(require,module,exports){
+},{"./lib/Table":494}],494:[function(require,module,exports){
 'use strict';
 
 var di = require('didi');
@@ -66082,7 +65995,7 @@ Table.prototype.destroy = function() {
   this.get('eventBus').fire('table.destroy');
 };
 
-},{"./core":500,"didi":350}],496:[function(require,module,exports){
+},{"./core":499,"didi":349}],495:[function(require,module,exports){
 'use strict';
 
 var Model = require('../model');
@@ -66130,7 +66043,7 @@ ElementFactory.prototype.create = function(type, attrs) {
   return Model.create(type, attrs);
 };
 
-},{"../model":546}],497:[function(require,module,exports){
+},{"../model":545}],496:[function(require,module,exports){
 'use strict';
 
 var ELEMENT_ID = 'data-element-id';
@@ -66322,7 +66235,7 @@ ElementRegistry.prototype._validateId = function(id) {
   }
 };
 
-},{}],498:[function(require,module,exports){
+},{}],497:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -66455,7 +66368,7 @@ GraphicsFactory.prototype.remove = function(element) {
   gfx.parentNode && gfx.parentNode.removeChild(gfx);
 };
 
-},{"lodash/collection/forEach":382}],499:[function(require,module,exports){
+},{"lodash/collection/forEach":381}],498:[function(require,module,exports){
 'use strict';
 
 var isNumber = require('lodash/lang/isNumber'),
@@ -67068,7 +66981,7 @@ Sheet.prototype.setRootElement = function(root) {
   this._rootNode = root;
 };
 
-},{"lodash/collection/every":379,"lodash/collection/forEach":382,"lodash/lang/isNumber":465,"lodash/object/assign":469}],500:[function(require,module,exports){
+},{"lodash/collection/every":378,"lodash/collection/forEach":381,"lodash/lang/isNumber":464,"lodash/object/assign":468}],499:[function(require,module,exports){
 module.exports = {
   __depends__: [ require('../draw') ],
   __init__: [ 'sheet' ],
@@ -67079,7 +66992,7 @@ module.exports = {
   eventBus: [ 'type', require('diagram-js/lib/core/EventBus') ]
 };
 
-},{"../draw":502,"./ElementFactory":496,"./ElementRegistry":497,"./GraphicsFactory":498,"./Sheet":499,"diagram-js/lib/core/EventBus":341}],501:[function(require,module,exports){
+},{"../draw":501,"./ElementFactory":495,"./ElementRegistry":496,"./GraphicsFactory":497,"./Sheet":498,"diagram-js/lib/core/EventBus":340}],500:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -67184,12 +67097,12 @@ Renderer.prototype.drawCell = function drawCell(gfx, data) {
 };
 
 
-},{"lodash/collection/forEach":382}],502:[function(require,module,exports){
+},{"lodash/collection/forEach":381}],501:[function(require,module,exports){
 module.exports = {
   renderer: [ 'type', require('./Renderer') ]
 };
 
-},{"./Renderer":501}],503:[function(require,module,exports){
+},{"./Renderer":500}],502:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -67238,7 +67151,7 @@ AddRow.prototype.getRow = function() {
   return this.row;
 };
 
-},{"diagram-js/lib/util/IdGenerator":346,"min-dom/lib/domify":480}],504:[function(require,module,exports){
+},{"diagram-js/lib/util/IdGenerator":345,"min-dom/lib/domify":479}],503:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -67269,7 +67182,7 @@ AddRowRenderer.$inject = [
 
 module.exports = AddRowRenderer;
 
-},{"min-dom/lib/classes":478}],505:[function(require,module,exports){
+},{"min-dom/lib/classes":477}],504:[function(require,module,exports){
 module.exports = {
   __init__: [ 'addRow', 'addRowRenderer'],
   __depends__: [
@@ -67280,7 +67193,7 @@ module.exports = {
   addRowRenderer: [ 'type', require('./AddRowRenderer') ]
 };
 
-},{"../modeling":535,"../utility-column":545,"./AddRow":503,"./AddRowRenderer":504}],506:[function(require,module,exports){
+},{"../modeling":534,"../utility-column":544,"./AddRow":502,"./AddRowRenderer":503}],505:[function(require,module,exports){
 'use strict';
 
 /**
@@ -67345,13 +67258,13 @@ ChangeSupport.$inject = [ 'eventBus', 'elementRegistry', 'graphicsFactory' ];
 
 module.exports = ChangeSupport;
 
-},{}],507:[function(require,module,exports){
+},{}],506:[function(require,module,exports){
 module.exports = {
   __init__: [ 'changeSupport'],
   changeSupport: [ 'type', require('./ChangeSupport') ]
 };
 
-},{"./ChangeSupport":506}],508:[function(require,module,exports){
+},{"./ChangeSupport":505}],507:[function(require,module,exports){
 'use strict';
 
 
@@ -67648,7 +67561,7 @@ ComboBox.prototype.enable = function() {
 
 module.exports = ComboBox;
 
-},{"lodash/collection/forEach":382,"lodash/object/assign":469,"min-dom/lib/classes":478,"min-dom/lib/domify":480}],509:[function(require,module,exports){
+},{"lodash/collection/forEach":381,"lodash/object/assign":468,"min-dom/lib/classes":477,"min-dom/lib/domify":479}],508:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -67865,7 +67778,7 @@ ComplexCell.$inject = [ 'eventBus', 'elementRegistry' ];
 
 module.exports = ComplexCell;
 
-},{"lodash/object/assign":469,"min-dom/lib/classes":478,"min-dom/lib/remove":484}],510:[function(require,module,exports){
+},{"lodash/object/assign":468,"min-dom/lib/classes":477,"min-dom/lib/remove":483}],509:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -67873,7 +67786,7 @@ module.exports = {
   complexCell: [ 'type', require('./ComplexCell') ]
 };
 
-},{"./ComplexCell":509}],511:[function(require,module,exports){
+},{"./ComplexCell":508}],510:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -67928,7 +67841,7 @@ Controls.$inject = [ 'eventBus' ];
 
 module.exports = Controls;
 
-},{"min-dom/lib/classes":478}],512:[function(require,module,exports){
+},{"min-dom/lib/classes":477}],511:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -67936,7 +67849,7 @@ module.exports = {
   controls: [ 'type', require('./Controls') ]
 };
 
-},{"./Controls":511}],513:[function(require,module,exports){
+},{"./Controls":510}],512:[function(require,module,exports){
 'use strict';
 
 var debounce = require('lodash/function/debounce');
@@ -68147,7 +68060,7 @@ EditBehavior.$inject = [
 
 module.exports = EditBehavior;
 
-},{"lodash/function/debounce":387}],514:[function(require,module,exports){
+},{"lodash/function/debounce":386}],513:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -68209,7 +68122,7 @@ EditRenderer.$inject = [
 
 module.exports = EditRenderer;
 
-},{"min-dom/lib/classes":478}],515:[function(require,module,exports){
+},{"min-dom/lib/classes":477}],514:[function(require,module,exports){
 'use strict';
 
 /**
@@ -68318,7 +68231,7 @@ Selection.prototype.selectBelow = function() {
   }
 };
 
-},{}],516:[function(require,module,exports){
+},{}],515:[function(require,module,exports){
 module.exports = {
   __init__: [ 'editBehavior', 'editRenderer' ],
   __depends__: [
@@ -68332,7 +68245,7 @@ module.exports = {
   editRenderer: [ 'type', require('./EditRenderer') ]
 };
 
-},{"../interaction-events":520,"../keyboard":522,"../modeling":535,"./EditBehavior":513,"./EditRenderer":514,"./Selection":515,"diagram-js/lib/features/rules":344}],517:[function(require,module,exports){
+},{"../interaction-events":519,"../keyboard":521,"../modeling":534,"./EditBehavior":512,"./EditRenderer":513,"./Selection":514,"diagram-js/lib/features/rules":343}],516:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -68466,13 +68379,13 @@ function error(action, message) {
   return new Error(action + ' ' + message);
 }
 
-},{"lodash/collection/forEach":382}],518:[function(require,module,exports){
+},{"lodash/collection/forEach":381}],517:[function(require,module,exports){
 module.exports = {
   __init__: [ 'editorActions' ],
   editorActions: [ 'type', require('./EditorActions') ]
 };
 
-},{"./EditorActions":517}],519:[function(require,module,exports){
+},{"./EditorActions":516}],518:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -68719,13 +68632,13 @@ module.exports = InteractionEvents;
  * @property {Event} originalEvent
  */
 
-},{"diagram-js/lib/util/Mouse":347,"lodash/collection/forEach":382,"min-dom/lib/delegate":479}],520:[function(require,module,exports){
+},{"diagram-js/lib/util/Mouse":346,"lodash/collection/forEach":381,"min-dom/lib/delegate":478}],519:[function(require,module,exports){
 module.exports = {
   __init__: [ 'interactionEvents' ],
   interactionEvents: [ 'type', require('./InteractionEvents') ]
 };
 
-},{"./InteractionEvents":519}],521:[function(require,module,exports){
+},{"./InteractionEvents":518}],520:[function(require,module,exports){
 'use strict';
 
 var domEvent = require('min-dom/lib/event'),
@@ -68902,7 +68815,7 @@ function isShift(modifiers) {
   return modifiers.shiftKey;
 }
 
-},{"min-dom/lib/event":481,"min-dom/lib/matches":482}],522:[function(require,module,exports){
+},{"min-dom/lib/event":480,"min-dom/lib/matches":481}],521:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../editor-actions')
@@ -68911,7 +68824,7 @@ module.exports = {
   keyboard: [ 'type', require('./Keyboard') ]
 };
 
-},{"../editor-actions":518,"./Keyboard":521}],523:[function(require,module,exports){
+},{"../editor-actions":517,"./Keyboard":520}],522:[function(require,module,exports){
 'use strict';
 
 var debounce = require('lodash/function/debounce');
@@ -68964,7 +68877,7 @@ LineNumbers.prototype.updateLineNumbers = function() {
   }
 };
 
-},{"lodash/function/debounce":387}],524:[function(require,module,exports){
+},{"lodash/function/debounce":386}],523:[function(require,module,exports){
 module.exports = {
   __init__: [ 'lineNumbers' ],
   __depends__: [
@@ -68973,7 +68886,7 @@ module.exports = {
   lineNumbers: [ 'type', require('./LineNumbers') ]
 };
 
-},{"../utility-column":545,"./LineNumbers":523}],525:[function(require,module,exports){
+},{"../utility-column":544,"./LineNumbers":522}],524:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -69146,7 +69059,7 @@ Modeling.prototype.editName = function(newName) {
   return context;
 };
 
-},{"./cmd/ClearRowHandler":526,"./cmd/CreateColumnHandler":527,"./cmd/CreateRowHandler":528,"./cmd/DeleteColumnHandler":529,"./cmd/DeleteRowHandler":530,"./cmd/EditCellHandler":531,"./cmd/EditNameHandler":532,"./cmd/MoveColumnHandler":533,"./cmd/MoveRowHandler":534,"lodash/collection/forEach":382}],526:[function(require,module,exports){
+},{"./cmd/ClearRowHandler":525,"./cmd/CreateColumnHandler":526,"./cmd/CreateRowHandler":527,"./cmd/DeleteColumnHandler":528,"./cmd/DeleteRowHandler":529,"./cmd/EditCellHandler":530,"./cmd/EditNameHandler":531,"./cmd/MoveColumnHandler":532,"./cmd/MoveRowHandler":533,"lodash/collection/forEach":381}],525:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -69213,7 +69126,7 @@ DeleteRowHandler.prototype.revert = function(context) {
   });
 };
 
-},{"lodash/collection/forEach":382}],527:[function(require,module,exports){
+},{"lodash/collection/forEach":381}],526:[function(require,module,exports){
 'use strict';
 
 /**
@@ -69263,7 +69176,7 @@ CreateColumnHandler.prototype.revert = function(context) {
   this._sheet.removeColumn(context.column);
 };
 
-},{}],528:[function(require,module,exports){
+},{}],527:[function(require,module,exports){
 'use strict';
 
 /**
@@ -69313,7 +69226,7 @@ CreateRowHandler.prototype.revert = function(context) {
   this._sheet.removeRow(context.row);
 };
 
-},{}],529:[function(require,module,exports){
+},{}],528:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -69375,7 +69288,7 @@ DeleteColumnHandler.prototype.revert = function(context) {
   });
 };
 
-},{"lodash/collection/forEach":382}],530:[function(require,module,exports){
+},{"lodash/collection/forEach":381}],529:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -69437,7 +69350,7 @@ DeleteRowHandler.prototype.revert = function(context) {
   });
 };
 
-},{"lodash/collection/forEach":382}],531:[function(require,module,exports){
+},{"lodash/collection/forEach":381}],530:[function(require,module,exports){
 'use strict';
 
 /**
@@ -69478,7 +69391,7 @@ EditCellHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],532:[function(require,module,exports){
+},{}],531:[function(require,module,exports){
 'use strict';
 
 /**
@@ -69519,7 +69432,7 @@ EditNameHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],533:[function(require,module,exports){
+},{}],532:[function(require,module,exports){
 'use strict';
 
 /**
@@ -69568,7 +69481,7 @@ MoveColumnHandler.prototype.revert = function(context) {
   }
 };
 
-},{}],534:[function(require,module,exports){
+},{}],533:[function(require,module,exports){
 'use strict';
 
 /**
@@ -69617,7 +69530,7 @@ MoveRowHandler.prototype.revert = function(context) {
   }
 };
 
-},{}],535:[function(require,module,exports){
+},{}],534:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('diagram-js/lib/command'),
@@ -69629,7 +69542,7 @@ module.exports = {
   modeling: [ 'type', require('./Modeling') ]
 };
 
-},{"../change-support":507,"../utility-column":545,"./Modeling":525,"diagram-js/lib/command":340,"diagram-js/lib/features/rules":344}],536:[function(require,module,exports){
+},{"../change-support":506,"../utility-column":544,"./Modeling":524,"diagram-js/lib/command":339,"diagram-js/lib/features/rules":343}],535:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -70024,7 +69937,7 @@ PopupMenu.prototype._createEntry = function(entry, container) {
 
 module.exports = PopupMenu;
 
-},{"lodash/collection/forEach":382,"lodash/object/assign":469,"min-dom/lib/attr":477,"min-dom/lib/classes":478,"min-dom/lib/delegate":479,"min-dom/lib/domify":480,"min-dom/lib/remove":484}],537:[function(require,module,exports){
+},{"lodash/collection/forEach":381,"lodash/object/assign":468,"min-dom/lib/attr":476,"min-dom/lib/classes":477,"min-dom/lib/delegate":478,"min-dom/lib/domify":479,"min-dom/lib/remove":483}],536:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -70032,7 +69945,7 @@ module.exports = {
   popupMenu: [ 'type', require('./PopupMenu') ]
 };
 
-},{"./PopupMenu":536}],538:[function(require,module,exports){
+},{"./PopupMenu":535}],537:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -70055,7 +69968,7 @@ DragRenderer.$inject = [
 
 module.exports = DragRenderer;
 
-},{"min-dom/lib/classes":478}],539:[function(require,module,exports){
+},{"min-dom/lib/classes":477}],538:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -70232,7 +70145,7 @@ RowDrag.prototype.isDragging = function() {
   return !!this.draggedElement;
 };
 
-},{"min-dom/lib/classes":478,"min-dom/lib/domify":480}],540:[function(require,module,exports){
+},{"min-dom/lib/classes":477,"min-dom/lib/domify":479}],539:[function(require,module,exports){
 module.exports = {
   __init__: [ 'rowDrag', 'dragRenderer' ],
   __depends__: [
@@ -70242,7 +70155,7 @@ module.exports = {
   dragRenderer: [ 'type', require('./DragRenderer') ]
 };
 
-},{"../utility-column":545,"./DragRenderer":538,"./RowDrag":539}],541:[function(require,module,exports){
+},{"../utility-column":544,"./DragRenderer":537,"./RowDrag":538}],540:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -70286,7 +70199,7 @@ TableName.prototype.getNode = function() {
   return this.node.querySelector('h3');
 };
 
-},{"min-dom/lib/domify":480}],542:[function(require,module,exports){
+},{"min-dom/lib/domify":479}],541:[function(require,module,exports){
 'use strict';
 
 /**
@@ -70330,7 +70243,7 @@ UtilityColumn.prototype.getColumn = function() {
   return this.column;
 };
 
-},{}],543:[function(require,module,exports){
+},{}],542:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -70354,7 +70267,7 @@ UtilityColumnRenderer.$inject = [
 
 module.exports = UtilityColumnRenderer;
 
-},{"min-dom/lib/classes":478}],544:[function(require,module,exports){
+},{"min-dom/lib/classes":477}],543:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -70386,7 +70299,7 @@ UtilityColumnRules.prototype.init = function() {
 
 };
 
-},{"diagram-js/lib/features/rules/RuleProvider":342,"inherits":374}],545:[function(require,module,exports){
+},{"diagram-js/lib/features/rules/RuleProvider":341,"inherits":373}],544:[function(require,module,exports){
 module.exports = {
   __init__: [ 'utilityColumn', 'utilityColumnRules', 'utilityColumnRenderer' ],
   __depends__: [
@@ -70397,7 +70310,7 @@ module.exports = {
   utilityColumnRenderer: [ 'type', require('./UtilityColumnRenderer') ]
 };
 
-},{"./UtilityColumn":542,"./UtilityColumnRenderer":543,"./UtilityColumnRules":544,"diagram-js/lib/features/rules":344}],546:[function(require,module,exports){
+},{"./UtilityColumn":541,"./UtilityColumnRenderer":542,"./UtilityColumnRules":543,"diagram-js/lib/features/rules":343}],545:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -70464,9 +70377,9 @@ module.exports.Table = Table;
 module.exports.Row = Row;
 module.exports.Column = Column;
 
-},{"inherits":374,"lodash/object/assign":469}],547:[function(require,module,exports){
+},{"inherits":373,"lodash/object/assign":468}],546:[function(require,module,exports){
 
-},{}],548:[function(require,module,exports){
+},{}],547:[function(require,module,exports){
 (function (global){
 /*!
  * The buffer module from node.js, for the browser.
@@ -72018,7 +71931,7 @@ function blitBuffer (src, dst, offset, length) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"base64-js":549,"ieee754":550,"isarray":551}],549:[function(require,module,exports){
+},{"base64-js":548,"ieee754":549,"isarray":550}],548:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
 ;(function (exports) {
@@ -72144,7 +72057,7 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 	exports.fromByteArray = uint8ToBase64
 }(typeof exports === 'undefined' ? (this.base64js = {}) : exports))
 
-},{}],550:[function(require,module,exports){
+},{}],549:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = nBytes * 8 - mLen - 1
@@ -72230,14 +72143,14 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],551:[function(require,module,exports){
+},{}],550:[function(require,module,exports){
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
-},{}],552:[function(require,module,exports){
+},{}],551:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -72540,9 +72453,9 @@ function isUndefined(arg) {
   return arg === void 0;
 }
 
-},{}],553:[function(require,module,exports){
-arguments[4][126][0].apply(exports,arguments)
-},{"dup":126}],554:[function(require,module,exports){
+},{}],552:[function(require,module,exports){
+arguments[4][125][0].apply(exports,arguments)
+},{"dup":125}],553:[function(require,module,exports){
 /**
  * Determine if an object is Buffer
  *
@@ -72561,7 +72474,7 @@ module.exports = function (obj) {
     ))
 }
 
-},{}],555:[function(require,module,exports){
+},{}],554:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -72682,10 +72595,10 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],556:[function(require,module,exports){
+},{}],555:[function(require,module,exports){
 module.exports = require("./lib/_stream_duplex.js")
 
-},{"./lib/_stream_duplex.js":557}],557:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":556}],556:[function(require,module,exports){
 // a duplex stream is just a stream that is both readable and writable.
 // Since JS doesn't have multiple prototypal inheritance, this class
 // prototypally inherits from Readable, and then parasitically from
@@ -72761,7 +72674,7 @@ function forEach(xs, f) {
     f(xs[i], i);
   }
 }
-},{"./_stream_readable":559,"./_stream_writable":561,"core-util-is":563,"inherits":553,"process-nextick-args":565}],558:[function(require,module,exports){
+},{"./_stream_readable":558,"./_stream_writable":560,"core-util-is":562,"inherits":552,"process-nextick-args":564}],557:[function(require,module,exports){
 // a passthrough stream.
 // basically just the most minimal sort of Transform stream.
 // Every written chunk gets output as-is.
@@ -72788,7 +72701,7 @@ function PassThrough(options) {
 PassThrough.prototype._transform = function (chunk, encoding, cb) {
   cb(null, chunk);
 };
-},{"./_stream_transform":560,"core-util-is":563,"inherits":553}],559:[function(require,module,exports){
+},{"./_stream_transform":559,"core-util-is":562,"inherits":552}],558:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -73684,7 +73597,7 @@ function indexOf(xs, x) {
   return -1;
 }
 }).call(this,require('_process'))
-},{"./_stream_duplex":557,"_process":555,"buffer":548,"buffer-shims":562,"core-util-is":563,"events":552,"inherits":553,"isarray":564,"process-nextick-args":565,"string_decoder/":572,"util":547}],560:[function(require,module,exports){
+},{"./_stream_duplex":556,"_process":554,"buffer":547,"buffer-shims":561,"core-util-is":562,"events":551,"inherits":552,"isarray":563,"process-nextick-args":564,"string_decoder/":571,"util":546}],559:[function(require,module,exports){
 // a transform stream is a readable/writable stream where you do
 // something with the data.  Sometimes it's called a "filter",
 // but that's not a great name for it, since that implies a thing where
@@ -73865,7 +73778,7 @@ function done(stream, er) {
 
   return stream.push(null);
 }
-},{"./_stream_duplex":557,"core-util-is":563,"inherits":553}],561:[function(require,module,exports){
+},{"./_stream_duplex":556,"core-util-is":562,"inherits":552}],560:[function(require,module,exports){
 (function (process){
 // A bit simpler than readable streams.
 // Implement an async ._write(chunk, encoding, cb), and it'll handle all
@@ -74394,7 +74307,7 @@ function CorkedRequest(state) {
   };
 }
 }).call(this,require('_process'))
-},{"./_stream_duplex":557,"_process":555,"buffer":548,"buffer-shims":562,"core-util-is":563,"events":552,"inherits":553,"process-nextick-args":565,"util-deprecate":566}],562:[function(require,module,exports){
+},{"./_stream_duplex":556,"_process":554,"buffer":547,"buffer-shims":561,"core-util-is":562,"events":551,"inherits":552,"process-nextick-args":564,"util-deprecate":565}],561:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -74506,7 +74419,7 @@ exports.allocUnsafeSlow = function allocUnsafeSlow(size) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"buffer":548}],563:[function(require,module,exports){
+},{"buffer":547}],562:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -74617,9 +74530,9 @@ function objectToString(o) {
 }
 
 }).call(this,{"isBuffer":require("../../../../insert-module-globals/node_modules/is-buffer/index.js")})
-},{"../../../../insert-module-globals/node_modules/is-buffer/index.js":554}],564:[function(require,module,exports){
-arguments[4][551][0].apply(exports,arguments)
-},{"dup":551}],565:[function(require,module,exports){
+},{"../../../../insert-module-globals/node_modules/is-buffer/index.js":553}],563:[function(require,module,exports){
+arguments[4][550][0].apply(exports,arguments)
+},{"dup":550}],564:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -74666,7 +74579,7 @@ function nextTick(fn, arg1, arg2, arg3) {
 }
 
 }).call(this,require('_process'))
-},{"_process":555}],566:[function(require,module,exports){
+},{"_process":554}],565:[function(require,module,exports){
 (function (global){
 
 /**
@@ -74737,10 +74650,10 @@ function config (name) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],567:[function(require,module,exports){
+},{}],566:[function(require,module,exports){
 module.exports = require("./lib/_stream_passthrough.js")
 
-},{"./lib/_stream_passthrough.js":558}],568:[function(require,module,exports){
+},{"./lib/_stream_passthrough.js":557}],567:[function(require,module,exports){
 (function (process){
 var Stream = (function (){
   try {
@@ -74760,13 +74673,13 @@ if (!process.browser && process.env.READABLE_STREAM === 'disable' && Stream) {
 }
 
 }).call(this,require('_process'))
-},{"./lib/_stream_duplex.js":557,"./lib/_stream_passthrough.js":558,"./lib/_stream_readable.js":559,"./lib/_stream_transform.js":560,"./lib/_stream_writable.js":561,"_process":555}],569:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":556,"./lib/_stream_passthrough.js":557,"./lib/_stream_readable.js":558,"./lib/_stream_transform.js":559,"./lib/_stream_writable.js":560,"_process":554}],568:[function(require,module,exports){
 module.exports = require("./lib/_stream_transform.js")
 
-},{"./lib/_stream_transform.js":560}],570:[function(require,module,exports){
+},{"./lib/_stream_transform.js":559}],569:[function(require,module,exports){
 module.exports = require("./lib/_stream_writable.js")
 
-},{"./lib/_stream_writable.js":561}],571:[function(require,module,exports){
+},{"./lib/_stream_writable.js":560}],570:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -74895,7 +74808,7 @@ Stream.prototype.pipe = function(dest, options) {
   return dest;
 };
 
-},{"events":552,"inherits":553,"readable-stream/duplex.js":556,"readable-stream/passthrough.js":567,"readable-stream/readable.js":568,"readable-stream/transform.js":569,"readable-stream/writable.js":570}],572:[function(require,module,exports){
+},{"events":551,"inherits":552,"readable-stream/duplex.js":555,"readable-stream/passthrough.js":566,"readable-stream/readable.js":567,"readable-stream/transform.js":568,"readable-stream/writable.js":569}],571:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -75118,7 +75031,7 @@ function base64DetectIncompleteChar(buffer) {
   this.charLength = this.charReceived ? 3 : 0;
 }
 
-},{"buffer":548}],573:[function(require,module,exports){
+},{"buffer":547}],572:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.1
  * http://jquery.com/
@@ -84310,7 +84223,7 @@ return jQuery;
 
 }));
 
-},{}],574:[function(require,module,exports){
+},{}],573:[function(require,module,exports){
 (function (global){
 //! moment.js
 //! version : 2.9.0
@@ -87357,7 +87270,7 @@ return jQuery;
 }).call(this);
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],575:[function(require,module,exports){
+},{}],574:[function(require,module,exports){
 /*
  * angular-ui-bootstrap
  * http://angular-ui.github.io/bootstrap/
@@ -91555,4 +91468,4 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
     "");
 }]);
 
-},{}]},{},[32]);
+},{}]},{},[31]);

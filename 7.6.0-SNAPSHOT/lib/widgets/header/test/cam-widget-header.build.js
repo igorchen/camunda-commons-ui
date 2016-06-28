@@ -6,69 +6,69 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
     template = "<div class=\"navbar-header\">\n  <button type=\"button\"\n          class=\"navbar-toggle\"\n          ng-class=\"{open: !!navbarOpen}\"\n          ng-click=\"navbarOpen = !navbarOpen\">\n    <em class=\"sr-only\">{{ toggleNavigation }}</em>\n    <span></span>\n    <span></span>\n    <span></span>\n  </button>\n\n  <a class=\"navbar-brand\"\n     href=\"#/\"\n     title=\"{{ brandName }} {{ appName }}\">\n    <span class=\"brand-logo\"></span>\n    <span class=\"brand-name\" ng-cloak>{{ brandName }}</span>\n  </a>\n\n  <div class=\"small-screen-warning\">\n    <span class=\"glyphicon glyphicon-exclamation-sign\"\n          tooltip=\"{{ smallScreenWarning }}\"\n          tooltip-placement=\"bottom\"></span>\n  </div>\n</div>\n\n<nav class=\"cam-nav app-menu\">\n  <ul ng-class=\"{collapse: !navbarOpen}\">\n\n    <li engine-select></li>\n\n    <li class=\"account dropdown\"\n        ng-if=\"authentication.name\"\n        ng-cloak>\n      <a href\n         class=\"dropdown-toggle\">\n        <span class=\"glyphicon glyphicon-user \"></span>\n        {{ (userName || authentication.name) }}\n      </a>\n\n      <ul class=\"dropdown-menu dropdown-menu-right\">\n        <li class=\"profile\">\n          <a ng-href=\"{{ '../../admin/:engine/#/users/' + authentication.name + '?tab=profile' | uri }}\">\n            {{ myProfile }}\n          </a>\n        </li>\n\n        <li class=\"divider\"></li>\n\n        <li class=\"logout\">\n          <a href\n             ng-click=\"logout()\">\n            {{ signOut }}\n          </a>\n        </li>\n      </ul>\n    </li>\n\n    <li class=\"divider-vertical\"\n        ng-if=\"authentication.name\"\n        ng-cloak></li>\n\n    <li class=\"app-switch dropdown\">\n      <a href\n         class=\"dropdown-toggle\">\n        <span class=\"glyphicon glyphicon-home\"></span>\n        <span class=\"caret\"></span>\n      </a>\n\n      <ul class=\"dropdown-menu dropdown-menu-right\">\n        <li ng-repeat=\"(appName, app) in apps\"\n            ng-if=\"appName !== currentApp && (!authentication || authentication.canAccess(appName))\"\n            ng-class=\"appName\">\n          <a ng-href=\"{{ '../../' + appName + '/:engine/' | uri }}\">\n            {{ app.label }}\n          </a>\n        </li>\n      </ul>\n    </li>\n  </ul>\n</nav>\n\n<div ng-transclude\n     class=\"sections-menu\"\n     ng-class=\"{collapse: !navbarOpen}\"></div>\n";
 
-  var apps = {
-    admin: {
-      label: 'Admin'
-    },
-    cockpit: {
-      label: 'Cockpit'
-    },
-    tasklist: {
-      label: 'Tasklist'
-    }
-  };
-
-  function setApps(currentApp) {
-    var copied = angular.copy(apps);
-    if (currentApp) {
-      delete copied[currentApp];
-    }
-    return copied;
+var apps = {
+  admin: {
+    label: 'Admin'
+  },
+  cockpit: {
+    label: 'Cockpit'
+  },
+  tasklist: {
+    label: 'Tasklist'
   }
+};
 
-  module.exports = [function() {
-    return {
-      transclude: true,
+function setApps(currentApp) {
+  var copied = angular.copy(apps);
+  if (currentApp) {
+    delete copied[currentApp];
+  }
+  return copied;
+}
 
-      template: template,
+module.exports = [function() {
+  return {
+    transclude: true,
 
-      scope: {
-        authentication: '=',
-        userName: '=?',
-        currentApp: '@',
-        signOut: '@?',
-        toggleNavigation: '@?',
-        myProfile: '@?',
-        smallScreenWarning: '@?',
-        brandName: '@'
-      },
+    template: template,
 
-      compile: function (el, attrs) {
-        if (!attrs.toggleNavigation) { attrs.toggleNavigation = 'Toggle navigation'; }
-        if (!attrs.myProfile) { attrs.myProfile = 'My profile'; }
-        if (!attrs.signOut) { attrs.signOut = 'Sign out'; }
-        if (!attrs.brandName) { attrs.brandName = 'Camunda'; }
-        if (!attrs.smallScreenWarning) {
-          attrs.smallScreenWarning = 'This application is conceived for larger screens.';
-        }
-      },
+    scope: {
+      authentication: '=',
+      userName: '=?',
+      currentApp: '@',
+      signOut: '@?',
+      toggleNavigation: '@?',
+      myProfile: '@?',
+      smallScreenWarning: '@?',
+      brandName: '@'
+    },
 
-      controller: [
-        '$scope',
-        'AuthenticationService',
-      function (
+    compile: function(el, attrs) {
+      if (!attrs.toggleNavigation) { attrs.toggleNavigation = 'Toggle navigation'; }
+      if (!attrs.myProfile) { attrs.myProfile = 'My profile'; }
+      if (!attrs.signOut) { attrs.signOut = 'Sign out'; }
+      if (!attrs.brandName) { attrs.brandName = 'Camunda'; }
+      if (!attrs.smallScreenWarning) {
+        attrs.smallScreenWarning = 'This application is conceived for larger screens.';
+      }
+    },
+
+    controller: [
+      '$scope',
+      'AuthenticationService',
+      function(
         $scope,
         AuthenticationService
       ) {
         $scope.apps = setApps($scope.currentApp);
         $scope.logout = AuthenticationService.logout;
 
-        $scope.$watch('currentApp', function () {
+        $scope.$watch('currentApp', function() {
           $scope.apps = setApps($scope.currentApp);
         });
       }]
-    };
-  }];
+  };
+}];
 
 },{"camunda-bpm-sdk-js/vendor/angular":5}],2:[function(require,module,exports){
 'use strict';
@@ -83,25 +83,24 @@ function Authentication(username, accesses) {
   this.name = username || '';
   this._accesses = accesses || [];
 }
-Authentication.prototype.canAccess = function (appName) {
+Authentication.prototype.canAccess = function(appName) {
   return !this._accesses.length || this._accesses.indexOf(appName) > -1;
 };
 
 
 var mockedDependenciesModule = angular.module('mockedDependencies', []);
 
-mockedDependenciesModule.service('AuthenticationService', [function () {
-  console.info('AuthenticationService', arguments, this);
-  this.logout = function () {
-    console.info('loging out', arguments, this);
+mockedDependenciesModule.service('AuthenticationService', [function() {
+  this.logout = function() {
+    // logging out
   };
 }]);
 
-mockedDependenciesModule.provider('uriFilter', [function () {
-  return { $get: function () {} };
+mockedDependenciesModule.provider('uriFilter', [function() {
+  return { $get: function() {} };
 }]);
-mockedDependenciesModule.filter('uri', [function () {
-  return function () { return '#uri-filter-replaced'; };
+mockedDependenciesModule.filter('uri', [function() {
+  return function() { return '#uri-filter-replaced'; };
 }]);
 
 
@@ -128,7 +127,7 @@ testModule.controller('testAuthenticatedController', ['$scope', '$timeout', func
 
   // $scope.fullName = $scope.auth.name;
 
-  $timeout(function () {
+  $timeout(function() {
     $scope.fullName = 'Max Mustermann';
   }, 400);
 }]);

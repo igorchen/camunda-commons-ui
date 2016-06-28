@@ -15,13 +15,13 @@ module.exports = ['$timeout', function($timeout) {
       value: '=camWidgetClipboard'
     },
 
-    link: function ($scope, element, attrs) {
+    link: function($scope, element, attrs) {
       var cb;
 
       $scope.noTooltip = typeof attrs.noTooltip !== 'undefined';
       $scope.copyStatus = null;
 
-      $scope.$watch('value', function () {
+      $scope.$watch('value', function() {
         $scope.tooltipText = 'Click to copy \'' + $scope.value + '\'';
       });
 
@@ -29,37 +29,37 @@ module.exports = ['$timeout', function($timeout) {
       var _top;
       function restore() {
         $scope.$apply();
-        _top = $timeout(function () {
+        _top = $timeout(function() {
           $scope.copyStatus = null;
         }, 1200, true);
       }
 
       // needed because otherwise the content of `element` is not rendered yet
       // and `querySelector` is then not available
-      $timeout(function () {
+      $timeout(function() {
         var link = element[0].querySelector('a.glyphicon-copy');
         if (!link) { return; }
 
         cb = new Clipboard(link, {
-          text: function () {
+          text: function() {
             return $scope.value;
           }
         });
 
-        cb.on('success', function () {
+        cb.on('success', function() {
           $scope.copyStatus = true;
           restore();
         });
 
 
-        cb.on('error', function () {
+        cb.on('error', function() {
           $scope.copyStatus = false;
           restore();
         });
       });
 
 
-      $scope.$on('$destroy', function () {
+      $scope.$on('$destroy', function() {
         cb.destroy();
         if (_top) {
           $timeout.cancel(top);
@@ -79,28 +79,28 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     templateDialog = "<!-- # CE - camunda-commons-ui/lib/widgets/variable/cam-widget-variable-dialog.html -->\n<div class=\"modal-header\">\n  <h3>Inspect \"{{ variable.name }}\" variable</h3>\n</div>\n\n<div class=\"modal-body\">\n  <div ng-if=\"readonly\"\n       class=\"form-group\">\n    <label>Object type name:</label>\n    <code class=\"form-control-static\"\n          cam-widget-clipboard=\"variable.valueInfo.objectTypeName\">{{ variable.valueInfo.objectTypeName }}</code>\n  </div>\n\n  <div ng-if=\"readonly\"\n       class=\"form-group\">\n    <label>Serialization Data Format:</label>\n    <code class=\"form-control-static\"\n          cam-widget-clipboard=\"variable.valueInfo.serializationDataFormat\">{{ variable.valueInfo.serializationDataFormat }}</code>\n  </div>\n\n  <div ng-if=\"!readonly\"\n       class=\"form-group\">\n    <label for=\"object-type-name\"\n           cam-widget-clipboard=\"variable.valueInfo.objectTypeName\">Object type name</label>\n    <input type=\"text\"\n           id=\"object-type-name\"\n           class=\"form-control\"\n           ng-model=\"variable.valueInfo.objectTypeName\" />\n  </div>\n\n  <div ng-if=\"!readonly\"\n       class=\"form-group\">\n    <label for=\"serialization-data-format\"\n           cam-widget-clipboard=\"variable.valueInfo.serializationDataFormat\">Serialization data format</label>\n    <input type=\"text\"\n           id=\"serialization-data-format\"\n           class=\"form-control\"\n           ng-model=\"variable.valueInfo.serializationDataFormat\" />\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"serialized-value\"\n           cam-widget-clipboard=\"variable.value\"\n           no-tooltip\n           ng-class=\"{hovered: hovered === 'var-value'}\">Serialized value</label>\n    <textarea ng-model=\"variable.value\"\n              id=\"serialized-value\"\n              rows=\"10\"\n              class=\"form-control\"\n              ng-readonly=\"readonly\"\n              ng-mouseenter=\"toggleHover('var-value')\"\n              ng-mouseleave=\"toggleHover()\"></textarea>\n  </div>\n</div>\n\n<div class=\"modal-footer\">\n  <button class=\"btn btn-default\"\n          ng-click=\"$dismiss('close')\">\n    Close\n  </button>\n\n  <button class=\"btn btn-primary\"\n          ng-if=\"!readonly\"\n          ng-readonly=\"!hasChanged('serialized')\"\n          ng-click=\"$close(variable)\">\n    Change\n  </button>\n</div>\n<!-- / CE - camunda-commons-ui/lib/widgets/variable/cam-widget-variable-dialog.html -->\n",
     templateStringDialog = "<!-- # CE - camunda-commons-ui/lib/widgets/variable/cam-widget-variable-dialog.html -->\n<div class=\"modal-header\">\n  <h3>Inspect \"{{ variable.name }}\" variable</h3>\n</div>\n\n<div class=\"modal-body\">\n  <div class=\"form-group\">\n    <label for=\"value\"\n           cam-widget-clipboard=\"variable.value\"\n           no-tooltip\n           ng-class=\"{hovered: hovered === 'var-value'}\">\n      Value\n    </label>\n    <textarea ng-model=\"variable.value\"\n              id=\"value\"\n              rows=\"10\"\n              class=\"form-control cam-string-variable\"\n              ng-readonly=\"readonly\"\n              ng-mouseenter=\"toggleHover('var-value')\"\n              ng-mouseleave=\"toggleHover()\"></textarea>\n  </div>\n</div>\n\n<div class=\"modal-footer\">\n  <button class=\"btn btn-default\"\n          ng-click=\"$dismiss('close')\">\n    Close\n  </button>\n</div>\n<!-- / CE - camunda-commons-ui/lib/widgets/variable/cam-widget-variable-dialog.html -->\n";
 
-  var varUtils = {};
+var varUtils = {};
 
-  function camundaFormattedDate(date) {
-    date = date || new Date();
-    return date.toISOString().slice(0, -5);
-  }
-  varUtils.camundaFormattedDate = camundaFormattedDate;
+function camundaFormattedDate(date) {
+  date = date || new Date();
+  return date.toISOString().slice(0, -5);
+}
+varUtils.camundaFormattedDate = camundaFormattedDate;
 
-  varUtils.templateDialog = templateDialog;
-  varUtils.templateStringDialog = templateStringDialog;
+varUtils.templateDialog = templateDialog;
+varUtils.templateStringDialog = templateStringDialog;
 
-  varUtils.modalCtrl = [
-    '$scope',
-    'variable',
-    'readonly',
-  function (
+varUtils.modalCtrl = [
+  '$scope',
+  'variable',
+  'readonly',
+  function(
     $dialogScope,
     variable,
     readonly
   ) {
     $dialogScope.hovered = false;
-    $dialogScope.toggleHover = function (which) {
+    $dialogScope.toggleHover = function(which) {
       $dialogScope.hovered = which;
     };
 
@@ -108,7 +108,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     $dialogScope.readonly = readonly;
     var original = angular.copy(variable);
 
-    $dialogScope.hasChanged = function () {
+    $dialogScope.hasChanged = function() {
       original.valueInfo = original.valueInfo || {};
       variable.valueInfo = variable.valueInfo || {};
 
@@ -119,121 +119,121 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
   }];
 
 
-  varUtils.typeUtils = typeUtils;
+varUtils.typeUtils = typeUtils;
 
 
-  varUtils.types = [
-    'Boolean',
-    'Bytes',
-    'File',
-    'Date',
-    'Double',
-    'Integer',
-    'Long',
-    'Null',
-    'Object',
-    'Short',
-    'String'
-  ];
+varUtils.types = [
+  'Boolean',
+  'Bytes',
+  'File',
+  'Date',
+  'Double',
+  'Integer',
+  'Long',
+  'Null',
+  'Object',
+  'Short',
+  'String'
+];
 
 
-  varUtils.defaultValues = {
-    'Boolean':    false,
-    'Bytes':      null,
-    'File':       null,
-    'Date':       camundaFormattedDate(),
-    'Double':     0,
-    'Integer':    0,
-    'Long':       0,
-    'Null':       '',
-    'Short':      0,
-    'String':     '',
-    'Object':     {}
+varUtils.defaultValues = {
+  'Boolean':    false,
+  'Bytes':      null,
+  'File':       null,
+  'Date':       camundaFormattedDate(),
+  'Double':     0,
+  'Integer':    0,
+  'Long':       0,
+  'Null':       '',
+  'Short':      0,
+  'String':     '',
+  'Object':     {}
+};
+
+
+varUtils.isPrimitive = function($scope) {
+  return function(type) {
+    if (!type && !$scope.variable) { return true; }
+    type = type || $scope.variable.type;
+    if (!type) { return true; }
+
+    return [
+      'Boolean',
+      'Date',
+      'Double',
+      'Integer',
+      'Long',
+      'Short',
+      'String'
+    ].indexOf(type) >= 0;
   };
+};
 
 
-  varUtils.isPrimitive = function ($scope) {
-    return function (type) {
-      if (!type && !$scope.variable) { return true; }
-      type = type || $scope.variable.type;
-      if (!type) { return true; }
+varUtils.isBinary = function($scope) {
+  return function(type) {
+    if (!type && !$scope.variable) { return false; }
+    type = type || $scope.variable.type;
+    if (!type) { return false; }
 
-      return [
-        'Boolean',
-        'Date',
-        'Double',
-        'Integer',
-        'Long',
-        'Short',
-        'String'
-      ].indexOf(type) >= 0;
-    };
+    return [
+      'Bytes',
+      'File'
+    ].indexOf(type) >= 0;
   };
+};
 
 
-  varUtils.isBinary = function ($scope) {
-    return function (type) {
-      if (!type && !$scope.variable) { return false; }
-      type = type || $scope.variable.type;
-      if (!type) { return false; }
-
-      return [
-        'Bytes',
-        'File'
-      ].indexOf(type) >= 0;
-    };
+varUtils.useCheckbox = function($scope) {
+  return function(type) {
+    if (!type && !$scope.variable) { return false; }
+    type = type || $scope.variable.type;
+    return type === 'Boolean';
   };
+};
 
+varUtils.validate = function($scope) {
+  return function() {
+    if (!$scope.variable.name || !$scope.variable.type) {
+      $scope.valid = false;
+    }
 
-  varUtils.useCheckbox = function ($scope) {
-    return function (type) {
-      if (!type && !$scope.variable) { return false; }
-      type = type || $scope.variable.type;
-      return type === 'Boolean';
-    };
-  };
-
-  varUtils.validate = function ($scope) {
-    return function () {
-      if (!$scope.variable.name || !$scope.variable.type) {
-        $scope.valid = false;
-      }
-
-      else if ($scope.variable.value === null ||
+    else if ($scope.variable.value === null ||
                ['String', 'Object', 'Null'].indexOf($scope.variable.type) > -1) {
-        $scope.valid = true;
-      }
+      $scope.valid = true;
+    }
 
       else {
-        $scope.valid = typeUtils.isType($scope.variable.value, $scope.variable.type);
-      }
+      $scope.valid = typeUtils.isType($scope.variable.value, $scope.variable.type);
+    }
 
-      if($scope.valid) {
+    if($scope.valid) {
         // save the variable in the appropriate type
-        if ($scope.variable.type &&
+      if ($scope.variable.type &&
             $scope.variable.value !== null &&
             $scope.isPrimitive($scope.variable.type)) {
-          var newTyped;
+        var newTyped;
 
-          if ($scope.variable.type !== 'Boolean') {
-            newTyped = typeUtils.convertToType($scope.variable.value, $scope.variable.type);
-          }
-          else {
-            newTyped = $scope.variable.value ?
+        if ($scope.variable.type !== 'Boolean') {
+          newTyped = typeUtils.convertToType($scope.variable.value, $scope.variable.type);
+        }
+        else {
+          newTyped = $scope.variable.value ?
                         $scope.variable.value !== 'false' :
                         false;
-          }
+        }
 
           // only change value if newType has different type, to avoid infinite recursion
-          if(typeof $scope.variable.value !== typeof newTyped) {
-            $scope.variable.value = newTyped;
-          }
+        if(typeof $scope.variable.value !== typeof newTyped) {
+          $scope.variable.value = newTyped;
         }
       }
-    };
+    }
   };
+};
 
-  module.exports = varUtils;
+module.exports = varUtils;
 
 },{"camunda-bpm-sdk-js/lib/forms/type-util":7,"camunda-bpm-sdk-js/vendor/angular":10}],3:[function(require,module,exports){
 'use strict';
@@ -245,12 +245,12 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     template = "<div ng-if=\"display && isShown('type')\"\n     class=\"type\">{{ variable.type }}</div>\n<div ng-if=\"display && isShown('name')\"\n     class=\"name\">{{ variable.name }}</div>\n<div ng-if=\"display && isShown('value') && isPrimitive()\"\n     ng-class=\"{null: isNull()}\"\n     class=\"value\">\n  <span ng-if=\"isNull()\"\n        class=\"null-symbol\">&lt;null&gt;</span>\n  {{ (variable.value === null ? '' : variable.value.toString()) }}\n</div>\n<div ng-if=\"display && isShown('value') && variable.type === 'Object'\"\n     ng-class=\"{null: isNull()}\"\n     class=\"value\">\n  <a ng-click=\"editVariableValue()\">\n    {{ variable.valueInfo.objectTypeName }}\n  </a>\n</div>\n\n\n<div ng-if=\"!display\"\n     class=\"input-group editing\">\n  <div ng-if=\"isShown('type')\"\n       class=\"input-group-btn type\">\n    <select class=\"form-control\"\n            ng-model=\"variable.type\"\n            ng-options=\"variableType for variableType in variableTypes track by variableType\"\n            ng-disabled=\"isDisabled('type')\"\n            required>\n    </select>\n  </div><!-- /btn-group -->\n\n  <input ng-if=\"isShown('name')\"\n         type=\"text\"\n         class=\"form-control name\"\n         ng-model=\"variable.name\"\n         placeholder=\"varName\"\n         ng-disabled=\"isDisabled('name')\"\n         required />\n\n  <div ng-if=\"isShown('value') && !isNull()\"\n       class=\"value-wrapper input-group\"\n       ng-class=\"{checkbox: useCheckbox()}\">\n    <div ng-if=\"variable.type !== 'Null'\"\n         class=\"input-group-btn\">\n      <a ng-click=\"setNull()\"\n         class=\"btn btn-default set-null\"\n         ng-disabled=\"isDisabled('value')\"\n         tooltip=\"Set value to &quot;null&quot;\">\n        <span class=\"glyphicon glyphicon-remove\"></span>\n      </a>\n    </div>\n\n    <input ng-if=\"isPrimitive() && !useCheckbox()\"\n           type=\"text\"\n           class=\"form-control value\"\n           ng-model=\"variable.value\"\n           ng-disabled=\"isDisabled('value')\"\n           placeholder=\"Value of the variable\"\n           cam-variable-validator=\"{{variable.type}}\" />\n\n    <input ng-if=\"useCheckbox()\"\n           type=\"checkbox\"\n           class=\"value\"\n           ng-model=\"variable.value\"\n           ng-disabled=\"isDisabled('value')\"\n           placeholder=\"Value of the variable\"\n           cam-variable-validator=\"{{variable.type}}\" />\n\n    <div ng-if=\"variable.type === 'Object'\"\n         class=\"value form-control-static\">\n      <a ng-click=\"editVariableValue()\" ng-disabled=\"isDisabled('value')\">\n        {{ variable.valueInfo.objectTypeName || '&lt;undefined&gt;' }}\n      </a>\n    </div>\n  </div>\n\n  <div ng-if=\"variable.type !== 'Null' && isShown('value') && isNull()\"\n       ng-click=\"setNonNull()\"\n       class=\"value-wrapper value null-value btn btn-default\"\n       ng-disabled=\"isDisabled('value')\"\n       tooltip=\"Re-set to previous or default value\">\n    <span class=\"null-symbol\">&lt;null&gt;</span>\n  </div>\n\n  <div ng-if=\"variable.type === 'Null'\"\n       ng-disabled=\"isDisabled('value')\"\n       class=\"value-wrapper value btn no-click null-value\">\n    <span class=\"null-symbol\">&lt;null&gt;</span>\n  </div>\n</div>\n";
 
 
-  var variableTypes = varUtils.types;
+var variableTypes = varUtils.types;
 
-  var modalCtrl = varUtils.modalCtrl;
+var modalCtrl = varUtils.modalCtrl;
 
-  module.exports = [
-    '$modal',
+module.exports = [
+  '$modal',
   function(
     $modal
   ) {
@@ -285,7 +285,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
       },
 
 
-      link: function ($scope, element) {
+      link: function($scope, element) {
         $scope.variableTypes = angular.copy(variableTypes);
 
         var defaultValues = varUtils.defaultValues;
@@ -298,23 +298,23 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
 
 
-        $scope.isShown = function (what) {
+        $scope.isShown = function(what) {
           if (!Array.isArray($scope.shown) || !$scope.shown.length) { return true; }
           return $scope.shown.indexOf(what) > -1;
         };
 
-        $scope.isDisabled = function (what) {
+        $scope.isDisabled = function(what) {
           if (!Array.isArray($scope.disabled) || !$scope.disabled.length) { return false; }
           return $scope.disabled.indexOf(what) > -1;
         };
 
-        $scope.shownClasses = function () {
+        $scope.shownClasses = function() {
           if (!Array.isArray($scope.shown) || !$scope.shown.length) { return ''; }
-          return $scope.shown.map(function (part) {
+          return $scope.shown.map(function(part) {
             return 'show-' + part;
           }).join(' ');
         };
-        $scope.$watch('shown', function () {
+        $scope.$watch('shown', function() {
           element
             .removeClass('show-type show-name show-value')
             .addClass($scope.shownClasses());
@@ -331,7 +331,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
         // from either type or null switch
         var backup = $scope.variable.value;
 
-        $scope.$watch('variable.type', function (current, previous) {
+        $scope.$watch('variable.type', function(current, previous) {
           // convert the value to boolean when the type becomes Boolean
           if (current === 'Boolean') {
             // we don't do anything if the value is null
@@ -356,18 +356,18 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
           }
         });
 
-        $scope.isNull = function () {
+        $scope.isNull = function() {
           return $scope.variable.value === null;
         };
-        $scope.setNonNull = function () {
+        $scope.setNonNull = function() {
           $scope.variable.value = backup || defaultValues[$scope.variable.type];
         };
-        $scope.setNull = function () {
+        $scope.setNull = function() {
           backup = $scope.variable.value;
           $scope.variable.value = null;
         };
 
-        $scope.editVariableValue = function () {
+        $scope.editVariableValue = function() {
           $modal.open({
             template: varUtils.templateDialog,//templateDialog,
 
@@ -376,11 +376,11 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
             windowClass: 'cam-widget-variable-dialog',
 
             resolve: {
-              variable: function () { return angular.copy($scope.variable); },
-              readonly: function () { return $scope.display; }
+              variable: function() { return angular.copy($scope.variable); },
+              readonly: function() { return $scope.display; }
             }
           })
-          .result.then(function (result) {
+          .result.then(function(result) {
             $scope.variable.value = result.value;
             $scope.variable.valueInfo = result.valueInfo;
           })
@@ -393,11 +393,10 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 },{"./cam-variable-utils":2,"camunda-bpm-sdk-js/vendor/angular":10}],4:[function(require,module,exports){
 'use strict';
 
-var angular = require('camunda-bpm-sdk-js/vendor/angular');
 var $ = require('jquery');
 
-  module.exports = [
-    '$compile',
+module.exports = [
+  '$compile',
   function(
     $compile
   ) {
@@ -409,7 +408,7 @@ var $ = require('jquery');
         headerName: '='
       },
 
-      link: function ($scope, element) {
+      link: function($scope, element) {
         var obj = $scope.info.additions[$scope.headerName] || {};
         obj.scopeVariables = obj.scopeVariables || {};
 
@@ -427,7 +426,7 @@ var $ = require('jquery');
     };
   }];
 
-},{"camunda-bpm-sdk-js/vendor/angular":10,"jquery":20}],5:[function(require,module,exports){
+},{"jquery":20}],5:[function(require,module,exports){
 'use strict';
 
 
@@ -436,33 +435,33 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
     template = "<table class=\"cam-table\">\n  <thead>\n    <tr>\n      <td ng-repeat=\"headerName in headerNames\" ng-class=\"'col-' + headerName\">\n        {{ headers[headerName] }}\n      </td>\n\n      <td class=\"actions\"\n          ng-if=\"editable.length\">\n        Actions\n      </td>\n    </tr>\n  </thead>\n\n  <tbody>\n    <tr ng-repeat=\"(v, info) in variables\"\n        ng-class=\"rowClasses(info, v)\">\n      <td ng-repeat=\"headerName in headerNames\"\n          ng-init=\"variable=info.variable\"\n          ng-class=\"colClasses(info, headerName, v)\"\n          ng-switch on=\"headerName\">\n        <!-- ................................................................................... -->\n        <div ng-switch-when=\"type\"\n             ng-if=\"!isEditable('type', info)\">\n          {{ variable.type }}\n        </div>\n        <select class=\"form-control\"\n                ng-switch-when=\"type\"\n                ng-if=\"isEditable('type', info)\"\n                ng-model=\"variable.type\"\n                ng-options=\"variableType for variableType in variableTypes track by variableType\"\n                required>\n        </select>\n        <!-- ................................................................................... -->\n\n\n        <!-- ................................................................................... -->\n        <div ng-switch-when=\"name\"\n             ng-if=\"!isEditable('name', info)\">\n          <span cam-widget-clipboard=\"variable.name\">{{ variable.name }}</span>\n        </div>\n\n        <input class=\"form-control\"\n               ng-switch-when=\"name\"\n               ng-model=\"variable.name\"\n               ng-if=\"isEditable('name', info)\" />\n        <!-- ................................................................................... -->\n\n\n        <!-- ................................................................................... -->\n        <a ng-switch-when=\"value\"\n           ng-if=\"!isEditable('value', info) && isBinary(variable.type)\"\n           ng-href=\"{{ downloadLink(info) }}\"\n           download=\"{{ variable.name }}-data\">\n          Download\n        </a>\n\n        <div ng-switch-when=\"value\"\n             ng-if=\"!isEditable('value', info) && variable.type === 'Object'\"\n             class=\"read-only value-wrapper\">\n          <span ng-if=\"variable.valueInfo.objectTypeName\"\n                cam-widget-clipboard=\"variable.valueInfo.objectTypeName\">\n            <a ng-click=\"editVariableValue(v)\"\n               href>{{ variable.valueInfo.objectTypeName }}</a>\n          </span>\n          <a ng-if=\"!variable.valueInfo.objectTypeName\"\n             ng-click=\"editVariableValue(v)\"\n             href>&lt;undefined&gt;</a>\n        </div>\n\n        <div ng-switch-when=\"value\"\n             ng-if=\"!isEditable('value', info) && variable.type === 'String'\"\n             class=\"read-only value-wrapper\">\n          <span cam-widget-clipboard=\"variable.value\">\n            <span ng-click=\"readStringVar(v)\">{{ variable.value }}</span>\n          </span>\n        </div>\n\n        <div ng-switch-when=\"value\"\n             ng-if=\"!isEditable('value', info) && variable.type !== 'Object' && variable.type !== 'String'\"\n             class=\"read-only value-wrapper\">\n          <span ng-if=\"variable.type !== 'Bytes'\"\n                cam-widget-clipboard=\"variable.value\">{{ variable.value }}</span>\n          <span ng-if=\"variable.type === 'Bytes'\">{{ variable.value }}</span>\n        </div>\n\n        <div class=\"value-wrapper\"\n             ng-switch-when=\"value\"\n             ng-if=\"isEditable('value', info)\">\n          <a ng-click=\"setNull(v)\"\n             ng-if=\"!isNull(v)\"\n             class=\"set-null\"\n             tooltip-append-to-body=\"true\"\n             tooltip=\"Set value to &quot;null&quot;\">\n            <span class=\"glyphicon glyphicon-remove\"></span>\n          </a>\n\n          <input ng-if=\"isPrimitive(variable.type) && !useCheckbox(variable.type) && !isNull(v)\"\n                 type=\"text\"\n                 class=\"form-control\"\n                 ng-model=\"variable.value\"\n                 placeholder=\"Value of the variable\" />\n\n          <input ng-if=\"useCheckbox(variable.type)\"\n                 type=\"checkbox\"\n                 ng-model=\"variable.value\"\n                 placeholder=\"Value of the variable\" />\n\n          <a ng-if=\"variable.type === 'Object' && !isNull(v)\"\n             ng-click=\"editVariableValue(v)\">\n            {{ variable.valueInfo.objectTypeName || '&lt;undefined&gt;' }}\n          </a>\n\n          <a ng-if=\"variable.type !== 'Null' && !isBinary(variable.type) && isNull(v)\"\n             ng-click=\"setNonNull(v)\"\n             class=\"null-value\"\n             tooltip-append-to-body=\"true\"\n             tooltip=\"Re-set to previous or default value\">\n            <span class=\"null-symbol\">&lt;null&gt;</span>\n          </a>\n\n          <a ng-if=\"isBinary(variable.type)\"\n             ng-click=\"uploadVariable(v)\"\n             tooltip-append-to-body=\"true\"\n             tooltip=\"Upload a new file\">\n            Upload\n          </a>\n\n          <span ng-if=\"variable.type === 'Null'\"\n                class=\"null-value\">\n            <span class=\"null-symbol\">&lt;null&gt;</span>\n          </span>\n        </div><!-- / value-wrapper -->\n        <!-- ................................................................................... -->\n\n\n        <div ng-switch-default\n             cam-render-var-template\n             info=\"info\"\n             header-name=\"headerName\">\n        </div>\n      </td>\n\n      <td class=\"actions\"\n          ng-if=\"editable.length\">\n        <div ng-if=\"!info.editMode\"\n             class=\"btn-group\">\n          <button class=\"btn btn-xs btn-primary\"\n                  ng-click=\"info.editMode = true\"\n                  tooltip-append-to-body=\"true\"\n                  tooltip=\"Edit the variable\">\n            <span class=\"glyphicon glyphicon-pencil\"></span>\n          </button>\n          <button class=\"btn btn-xs btn-default\"\n                  ng-click=\"deleteVariable(v)\"\n                  tooltip-append-to-body=\"true\"\n                  tooltip=\"Delete the variable\">\n            <span class=\"glyphicon glyphicon glyphicon-trash\"></span>\n          </button>\n        </div>\n\n        <div ng-if=\"info.editMode\"\n             class=\"btn-group\">\n          <button class=\"btn btn-xs btn-primary\"\n                  ng-disabled=\"!info.valid || !info.changed\"\n                  ng-click=\"saveVariable(v)\"\n                  tooltip-append-to-body=\"true\"\n                  tooltip=\"Save the variable\">\n            <span class=\"glyphicon glyphicon-ok\"></span>\n          </button>\n          <button class=\"btn btn-xs btn-default\"\n                  ng-click=\"info.editMode = false\"\n                  tooltip-append-to-body=\"true\"\n                  tooltip=\"Revert the variable\">\n            <span class=\"glyphicon glyphicon-remove\"></span>\n          </button>\n        </div>\n      </td>\n    </tr>\n  </tbody>\n</table>\n";
 
-  var typeUtils = varUtils.typeUtils;
+var typeUtils = varUtils.typeUtils;
 
-  var emptyVariable = {
-    variable: {
-      name: null,
-      type: null,
-      value: null,
-      valueInfo: {}
-    },
-    additions: {}
-  };
+var emptyVariable = {
+  variable: {
+    name: null,
+    type: null,
+    value: null,
+    valueInfo: {}
+  },
+  additions: {}
+};
 
-  function deepCopy(original) {
-    return JSON.parse(JSON.stringify(original));
-  }
+function deepCopy(original) {
+  return JSON.parse(JSON.stringify(original));
+}
 
-  function noopPromise(info/*, i*/) {
-    return {
-      then: function (success/*, error*/) {
-        success(angular.copy(info.variable));
+function noopPromise(info/*, i*/) {
+  return {
+    then: function(success/*, error*/) {
+      success(angular.copy(info.variable));
         // error('Not implemented');
-      }
-    };
-  }
+    }
+  };
+}
 
-  module.exports = [
-    '$modal',
+module.exports = [
+  '$modal',
   function(
     $modal
   ) {
@@ -482,7 +481,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
       },
 
 
-      link: function ($scope) {
+      link: function($scope) {
         var backups = [];
 
         function _getVar(v) {
@@ -535,7 +534,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
           'uploadVar',
           'deleteVar',
           'saveVar'
-        ].forEach(function (name) {
+        ].forEach(function(name) {
           $scope[name] = (angular.isFunction($scope[name]) ? $scope[name] : noopPromise);
         });
 
@@ -554,19 +553,19 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
           };
         };
 
-        $scope.editVar = angular.isFunction($scope.editVar) ? $scope.editVar : (function (info, v) {
-          var readonly = function () { return !$scope.isEditable('value', $scope.variables[v]); };
+        $scope.editVar = angular.isFunction($scope.editVar) ? $scope.editVar : (function(info, v) {
+          var readonly = function() { return !$scope.isEditable('value', $scope.variables[v]); };
 
           return $modal.open( variableModalConfig( v, varUtils.templateDialog, readonly ) ).result;
         });
 
-        $scope.readStringVar = angular.isFunction($scope.readStringVar) ? $scope.readStringVar : (function (v) {
+        $scope.readStringVar = angular.isFunction($scope.readStringVar) ? $scope.readStringVar : (function(v) {
           var readonly = function() { return true; };
 
           return $modal.open( variableModalConfig( v, varUtils.templateStringDialog, readonly ) ).result;
         });
 
-        $scope.downloadLink = angular.isFunction($scope.downloadVar) ? $scope.downloadVar : (function (info) {
+        $scope.downloadLink = angular.isFunction($scope.downloadVar) ? $scope.downloadVar : (function(info) {
           return '/camunda/api/engine/engine/default/variable-instance/' + info.variable.id +'/data';
         });
 
@@ -611,7 +610,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
         }
 
         function initVariables() {
-          ($scope.variables || []).forEach(function (info, i) {
+          ($scope.variables || []).forEach(function(info, i) {
             info.valid = true;
 
             var varPath = 'variables[' + i + '].variable';
@@ -622,7 +621,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
             $scope.$watch(varPath + '.name', wrapedValidate);
             $scope.$watch(varPath + '.type', wrapedValidate);
 
-            $scope.$watch('variables[' + i + '].editMode', function (now, before) {
+            $scope.$watch('variables[' + i + '].editMode', function(now, before) {
               if (angular.isUndefined(now)) { return; }
 
               if (now === true) {
@@ -651,11 +650,11 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
 
 
-        $scope.isEditable = function (what, info) {
+        $scope.isEditable = function(what, info) {
           return info.editMode && $scope.editable.indexOf(what) > -1;
         };
 
-        $scope.rowClasses = function (info/*, v*/) {
+        $scope.rowClasses = function(info/*, v*/) {
           return [
             info.editMode ? 'editing' : null,
             info.valid ? null : 'ng-invalid',
@@ -663,7 +662,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
           ];
         };
 
-        $scope.colClasses = function (info, headerName/*, v*/) {
+        $scope.colClasses = function(info, headerName/*, v*/) {
           return [
             $scope.isEditable(headerName, info) ? 'editable' : null,
             'type-' + (info.variable.type || '').toLowerCase(),
@@ -675,46 +674,46 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
 
 
-        $scope.isNull = function (v) {
+        $scope.isNull = function(v) {
           return $scope.variables[v].variable.value === null;
         };
 
-        $scope.setNull = function (v) {
+        $scope.setNull = function(v) {
           var variable = _getVar(v);
           backups[v] = variable.value;
           variable.value = null;
         };
 
-        $scope.setNonNull = function (v) {
+        $scope.setNonNull = function(v) {
           var variable = _getVar(v);
           variable.value = backups[v] || $scope.defaultValues[variable.type];
         };
 
 
 
-        $scope.editVariableValue = function (v) {
+        $scope.editVariableValue = function(v) {
           var info = $scope.variables[v];
-          $scope.editVar(info, v).then(function (result) {
+          $scope.editVar(info, v).then(function(result) {
             _getVar(v).value = result.value;
             _getVar(v).valueInfo = result.valueInfo;
           });
         };
 
-        $scope.addVariable = function () {
+        $scope.addVariable = function() {
           $scope.variables.push(angular.copy(emptyVariable));
         };
 
-        $scope.deleteVariable = function (v) {
+        $scope.deleteVariable = function(v) {
           var info = $scope.variables[v];
 
-          $scope.deleteVar(info, v).then(function () {
+          $scope.deleteVar(info, v).then(function() {
             $scope.variables.splice($scope.variables.indexOf(info), 1);
-          }, function (err) {
-            console.error(err);
+          }, function(/*err*/) {
+            // console.error(err);
           });
         };
 
-        $scope.saveVariable = function (v) {
+        $scope.saveVariable = function(v) {
           var info = $scope.variables[v];
           info.editMode = false;
 
@@ -731,7 +730,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
         };
 
 
-        $scope.uploadVariable = function (v) {
+        $scope.uploadVariable = function(v) {
           var info = $scope.variables[v];
 
           $scope.uploadVar(info, v).then(function(/*saved*/) {
@@ -846,54 +845,54 @@ testModule.controller('example1Controller', [
   '$q',
   '$timeout',
   '$modal',
-function(
+  function(
   $scope,
   $q,
   $timeout,
   $modal
 ) {
-  $scope.editFunction = function (info/*, i*/) {
-    return $modal.open({
-      template: fancyDialogTemplate,
+    $scope.editFunction = function(info/*, i*/) {
+      return $modal.open({
+        template: fancyDialogTemplate,
 
-      windowClass: 'doopi-doo',
+        windowClass: 'doopi-doo',
 
-      resolve: {
-        variable: function () { return info.variable; },
-        readonly: function () { return !info.editMode; }
-      },
+        resolve: {
+          variable: function() { return info.variable; },
+          readonly: function() { return !info.editMode; }
+        },
 
-      controller: varUtils.modalCtrl
-    }).result;
-  };
-
-
-
-  $scope.changes = [];
-  $scope.saveFunction = function (info/*, i*/) {
-    // copy otherwise it keeps the reference
-    var copy = angular.copy(info.variable);
-    copy.saved = 'Not saved';
-    $scope.changes.push(copy);
-
-    var deferred = $q.defer();
-
-    $timeout(function() {
-      copy.saved = 'Saved';
-      deferred.resolve(copy);
-    }, 500);
-
-    return deferred.promise;
-  };
-
-
-
-  $scope.vars = angular.copy(vars).map(function (variable) {
-    return {
-      variable: variable
+        controller: varUtils.modalCtrl
+      }).result;
     };
-  });
-}]);
+
+
+
+    $scope.changes = [];
+    $scope.saveFunction = function(info/*, i*/) {
+    // copy otherwise it keeps the reference
+      var copy = angular.copy(info.variable);
+      copy.saved = 'Not saved';
+      $scope.changes.push(copy);
+
+      var deferred = $q.defer();
+
+      $timeout(function() {
+        copy.saved = 'Saved';
+        deferred.resolve(copy);
+      }, 500);
+
+      return deferred.promise;
+    };
+
+
+
+    $scope.vars = angular.copy(vars).map(function(variable) {
+      return {
+        variable: variable
+      };
+    });
+  }]);
 
 
 
@@ -901,8 +900,8 @@ function(
 
 
 
-testModule.controller('example2Controller', ['$scope', '$sce', function($scope, $sce) {
-  $scope.formatDownloadLink = function () {
+testModule.controller('example2Controller', ['$scope', function($scope) {
+  $scope.formatDownloadLink = function() {
     return 'http://i.ytimg.com/vi/2DzryjDrjCM/maxresdefault.jpg';
   };
 
@@ -915,7 +914,7 @@ testModule.controller('example2Controller', ['$scope', '$sce', function($scope, 
     formatted:  'Formatted'
   };
 
-  $scope.vars = angular.copy(vars).map(function (variable, v) {
+  $scope.vars = angular.copy(vars).map(function(variable, v) {
     return {
       variable: variable,
 
