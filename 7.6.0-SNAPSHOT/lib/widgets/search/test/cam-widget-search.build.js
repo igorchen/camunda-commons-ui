@@ -21437,6 +21437,7 @@ var Injector = function(modules, parent) {
         }
 
         if ((provider[2] === 'factory' || provider[2] === 'type') && provider[1].$scope) {
+          /*jshint -W083 */
           forceNewInstances.forEach(function(scope) {
             if (provider[1].$scope.indexOf(scope) !== -1) {
               fromParentModule[name] = [provider[2], provider[1]];
@@ -34588,17 +34589,17 @@ var DATE_PATTERN = /^(\d{2}|\d{4})(?:\-)([0]{1}\d{1}|[1]{1}[0-2]{1})(?:\-)([0-2]
 
 var isType = function(value, type) {
   switch(type) {
-    case 'Integer':
-    case 'Long':
-    case 'Short':
-      return INTEGER_PATTERN.test(value);
-    case 'Float':
-    case 'Double':
-      return FLOAT_PATTERN.test(value);
-    case 'Boolean':
-      return BOOLEAN_PATTERN.test(value);
-    case 'Date':
-      return DATE_PATTERN.test(dateToString(value));
+  case 'Integer':
+  case 'Long':
+  case 'Short':
+    return INTEGER_PATTERN.test(value);
+  case 'Float':
+  case 'Double':
+    return FLOAT_PATTERN.test(value);
+  case 'Boolean':
+    return BOOLEAN_PATTERN.test(value);
+  case 'Date':
+    return DATE_PATTERN.test(dateToString(value));
   }
 };
 
@@ -34608,24 +34609,24 @@ var convertToType = function(value, type) {
     value = value.trim();
   }
 
-  if(type === "String" || type === "Bytes" || type === "File") {
+  if(type === 'String' || type === 'Bytes' || type === 'File') {
     return value;
   } else if (isType(value, type)) {
     switch(type) {
-      case 'Integer':
-      case 'Long':
-      case 'Short':
-        return parseInt(value, 10);
-      case 'Float':
-      case 'Double':
-        return parseFloat(value);
-      case 'Boolean':
-        return "true" === value;
-      case 'Date':
-        return dateToString(value);
+    case 'Integer':
+    case 'Long':
+    case 'Short':
+      return parseInt(value, 10);
+    case 'Float':
+    case 'Double':
+      return parseFloat(value);
+    case 'Boolean':
+      return 'true' === value;
+    case 'Date':
+      return dateToString(value);
     }
   } else {
-    throw new Error("Value '"+value+"' is not of type "+type);
+    throw new Error('Value \''+value+'\' is not of type '+type);
   }
 };
 
@@ -57506,12 +57507,12 @@ module.exports = select;
 
 },{}],286:[function(require,module,exports){
 function E () {
-	// Keep this empty so it's easier to inherit from
+  // Keep this empty so it's easier to inherit from
   // (via https://github.com/lipsmack from https://github.com/scottcorgan/tiny-emitter/issues/3)
 }
 
 E.prototype = {
-	on: function (name, callback, ctx) {
+  on: function (name, callback, ctx) {
     var e = this.e || (this.e = {});
 
     (e[name] || (e[name] = [])).push({
@@ -89191,6 +89192,14 @@ angular.module('ui.bootstrap.modal', ['ui.bootstrap.transition'])
       var openedWindows = $$stackedMap.createNew();
       var $modalStack = {};
 
+      //Modal focus behavior
+      var focusableElementList;
+      var focusIndex = 0;
+      var tababbleSelector = 'a[href], area[href], input:not([disabled]), ' +
+        'button:not([disabled]),select:not([disabled]), textarea:not([disabled]), ' +
+        'iframe, object, embed, *[tabindex], *[contenteditable=true]';
+
+
       function backdropIndex() {
         var topBackdropIndex = -1;
         var opened = openedWindows.keys();
@@ -89270,15 +89279,35 @@ angular.module('ui.bootstrap.modal', ['ui.bootstrap.transition'])
       }
 
       $document.bind('keydown', function (evt) {
-        var modal;
+        var modal = openedWindows.top();
+        if (modal && modal.value.keyboard) {
+          switch (evt.which){
+            case 27: {
+              evt.preventDefault();
+              $rootScope.$apply(function () {
+                $modalStack.dismiss(modal.key, 'escape key press');
+              });
+              break;
+            }
+            case 9: {
+              $modalStack.loadFocusElementList(modal);
+              var focusChanged = false;
+              if (evt.shiftKey) {
+                if ($modalStack.isFocusInFirstItem(evt)) {
+                  focusChanged = $modalStack.focusLastFocusableElement();
+                }
+              } else {
+                if ($modalStack.isFocusInLastItem(evt)) {
+                  focusChanged = $modalStack.focusFirstFocusableElement();
+                }
+              }
 
-        if (evt.which === 27) {
-          modal = openedWindows.top();
-          if (modal && modal.value.keyboard) {
-            evt.preventDefault();
-            $rootScope.$apply(function () {
-              $modalStack.dismiss(modal.key, 'escape key press');
-            });
+              if (focusChanged) {
+                evt.preventDefault();
+                evt.stopPropagation();
+              }
+              break;
+            }
           }
         }
       });
@@ -89317,6 +89346,7 @@ angular.module('ui.bootstrap.modal', ['ui.bootstrap.transition'])
         openedWindows.top().value.modalDomEl = modalDomEl;
         body.append(modalDomEl);
         body.addClass(OPENED_MODAL_CLASS);
+        $modalStack.clearFocusListCache();
       };
 
       $modalStack.close = function (modalInstance, result) {
@@ -89345,6 +89375,51 @@ angular.module('ui.bootstrap.modal', ['ui.bootstrap.transition'])
 
       $modalStack.getTop = function () {
         return openedWindows.top();
+      };
+
+      $modalStack.focusFirstFocusableElement = function() {
+        if (focusableElementList.length > 0) {
+          focusableElementList[0].focus();
+          return true;
+        }
+        return false;
+      };
+      $modalStack.focusLastFocusableElement = function() {
+        if (focusableElementList.length > 0) {
+          focusableElementList[focusableElementList.length - 1].focus();
+          return true;
+        }
+        return false;
+      };
+
+      $modalStack.isFocusInFirstItem = function(evt) {
+        if (focusableElementList.length > 0) {
+          return (evt.target || evt.srcElement) == focusableElementList[0];
+        }
+        return false;
+      };
+
+      $modalStack.isFocusInLastItem = function(evt) {
+        if (focusableElementList.length > 0) {
+          return (evt.target || evt.srcElement) == focusableElementList[focusableElementList.length - 1];
+        }
+        return false;
+      };
+
+      $modalStack.clearFocusListCache = function() {
+        focusableElementList = [];
+        focusIndex = 0;
+      };
+
+      $modalStack.loadFocusElementList = function(modalWindow) {
+        if (focusableElementList === undefined || !focusableElementList.length0) {
+          if (modalWindow) {
+            var modalDomE1 = modalWindow.value.modalDomEl;
+            if (modalDomE1 && modalDomE1.length) {
+              focusableElementList = modalDomE1[0].querySelectorAll(tababbleSelector);
+            }
+          }
+        }
       };
 
       return $modalStack;
