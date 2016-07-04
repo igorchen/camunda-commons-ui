@@ -1679,7 +1679,7 @@ module.exports = widgetModule;
 var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     $ = require('jquery'),
 
-    template = "<span ng-show=\"!editing\"\n      ng-click=\"startEditing()\"\n      ng-transclude\n      class=\"view-value\">\n</span>\n\n<span ng-if=\"editing && (varType === 'datetime' || varType === 'date' || varType === 'time')\"\n      class=\"preview\">\n  {{ dateValue | camDate }}\n</span>\n\n<span ng-if=\"editing\"\n      class=\"edit\">\n\n  <input ng-if=\"simpleField\"\n         class=\"form-control\"\n         type=\"{{ varType }}\"\n         ng-model=\"editValue\"\n         ng-keydown=\"handleKeydown($event)\"\n         placeholder=\"{{ placeholder }}\" />\n\n  <span ng-show=\"varType === 'datetime' || varType === 'date' || varType === 'time'\"\n        class=\"cam-widget-inline-field field-control\">\n\n    <datepicker class=\"datepicker\"\n                ng-if=\"varType === 'datetime' || varType === 'date'\"\n                type=\"text\"\n                ng-required=\"true\"\n                is-open=\"datePickerOptions.isOpen\"\n                show-button-bar=\"false\"\n\n                ng-model=\"dateValue\"\n                ng-change=\"changeDate(this)\"></datepicker>\n\n    <timepicker class=\"timepicker\"\n                ng-if=\"varType === 'datetime' || varType === 'time'\"\n                show-meridian=\"false\"\n\n                ng-model=\"dateValue\"\n                ng-change=\"changeDate(this)\"></timepicker>\n  </span>\n\n  <input ng-if=\"varType === 'option' && options[0].value\"\n         class=\"form-control\"\n         type=\"text\"\n         ng-model=\"editValue\"\n         ng-keydown=\"handleKeydown($event)\"\n         typeahead=\"option as option.value for option in options | filter:$viewValue:instantTypeahead\"\n         typeahead-on-select=\"saveSelection($item)\"\n         instant-typeahead />\n  <input ng-if=\"varType === 'option' && !options[0].value\"\n         class=\"form-control\"\n         type=\"text\"\n         ng-model=\"editValue\"\n         ng-keydown=\"handleKeydown($event)\"\n         typeahead=\"option for option in options | filter:$viewValue:instantTypeahead\"\n         typeahead-on-select=\"saveSelection($item)\"\n         instant-typeahead />\n\n  <span ng-show=\"varType !== 'option'\"\n        class=\"cam-widget-inline-field btn-group\">\n    <button type=\"button\"\n            class=\"btn btn-xs btn-default\"\n            ng-click=\"changeType()\"\n            ng-if=\"flexible\">\n      <span class=\"glyphicon\"\n            ng-class=\"'glyphicon-' + (varType === 'text' ? 'calendar' : 'pencil')\"></span>\n    </button>\n\n    <button type=\"button\"\n            class=\"btn btn-xs btn-default\"\n            ng-click=\"applyChange($event)\">\n      <span class=\"glyphicon glyphicon-ok\"></span>\n    </button>\n\n    <button type=\"button\"\n            class=\"btn btn-xs btn-default\"\n            ng-click=\"cancelChange($event)\">\n      <span class=\"glyphicon glyphicon-remove\"></span>\n    </button>\n  </span>\n</span>\n";
+    template = "<span ng-show=\"!editing\"\n      ng-click=\"startEditing()\"\n      ng-transclude\n      class=\"view-value\">\n</span>\n\n<span ng-if=\"editing && (varType === 'datetime' || varType === 'date' || varType === 'time')\"\n      class=\"preview\">\n  {{ dateValue | camDate }}\n</span>\n\n<span ng-if=\"editing\"\n      class=\"edit\">\n\n  <input ng-if=\"simpleField\"\n         class=\"form-control\"\n         type=\"{{ varType }}\"\n         ng-model=\"editValue\"\n         ng-keydown=\"handleKeydown($event)\"\n         placeholder=\"{{ placeholder }}\" />\n\n  <span ng-show=\"varType === 'datetime' || varType === 'date' || varType === 'time'\"\n        class=\"cam-widget-inline-field field-control\">\n\n    <datepicker class=\"datepicker\"\n                ng-if=\"varType === 'datetime' || varType === 'date'\"\n                type=\"text\"\n                ng-required=\"true\"\n                is-open=\"datePickerOptions.isOpen\"\n                show-button-bar=\"false\"\n                ng-keydown=\"trapKeyboard($event, true); cancelOnEsc($event);\"\n\n                ng-model=\"dateValue\"\n                ng-change=\"changeDate(this)\"></datepicker>\n\n    <timepicker class=\"timepicker\"\n                ng-if=\"varType === 'datetime' || varType === 'time'\"\n                show-meridian=\"false\"\n\n                ng-model=\"dateValue\"\n                ng-keydown=\"cancelOnEsc($event);\"\n                ng-change=\"changeDate(this)\"></timepicker>\n  </span>\n\n  <input ng-if=\"varType === 'option' && options[0].value\"\n         class=\"form-control\"\n         type=\"text\"\n         ng-model=\"editValue\"\n         ng-keydown=\"handleKeydown($event)\"\n         typeahead=\"option as option.value for option in options | filter:$viewValue:instantTypeahead\"\n         typeahead-on-select=\"saveSelection($item)\"\n         instant-typeahead />\n  <input ng-if=\"varType === 'option' && !options[0].value\"\n         class=\"form-control\"\n         type=\"text\"\n         ng-model=\"editValue\"\n         ng-keydown=\"handleKeydown($event)\"\n         typeahead=\"option for option in options | filter:$viewValue:instantTypeahead\"\n         typeahead-on-select=\"saveSelection($item)\"\n         instant-typeahead />\n\n  <span ng-show=\"varType !== 'option'\"\n        class=\"cam-widget-inline-field btn-group\">\n    <button type=\"button\"\n            class=\"btn btn-xs btn-default\"\n            ng-click=\"changeType()\"\n            ng-if=\"flexible\">\n      <span class=\"glyphicon\"\n            ng-class=\"'glyphicon-' + (varType === 'text' ? 'calendar' : 'pencil')\"></span>\n    </button>\n\n    <button type=\"button\"\n            class=\"btn btn-xs btn-default\"\n            ng-click=\"applyChange($event);\"\n            ng-keydown=\"cancelOnEsc($event);\">\n      <span class=\"glyphicon glyphicon-ok\"></span>\n    </button>\n\n    <button type=\"button\"\n            class=\"btn btn-xs btn-default\"\n            ng-click=\"cancelChange($event)\"\n            ng-keydown=\"trapKeyboard($event); cancelOnEsc($event);\">\n      <span class=\"glyphicon glyphicon-remove\"></span>\n    </button>\n  </span>\n</span>\n";
 
 module.exports = [
   '$timeout',
@@ -1801,12 +1801,21 @@ module.exports = [
         function positionElements() {
           var offset = $(element).offset();
 
-          $btnsEl
-            .show()
-            .css({
-              left: offset.left + ($(element).outerWidth() - $btnsEl.outerWidth()),
-              top: offset.top - $btnsEl.outerHeight()
-            });
+          if(isDate()) {
+            $btnsEl
+              .show()
+              .css({
+                left: offset.left + ($ctrlsEl.outerWidth() - $btnsEl.outerWidth()),
+                top: offset.top + $ctrlsEl.outerHeight() + $(element).outerHeight()
+              });
+          } else {
+            $btnsEl
+              .show()
+              .css({
+                left: offset.left + ($(element).outerWidth() - $btnsEl.outerWidth()),
+                top: offset.top - $btnsEl.outerHeight()
+              });
+          }
 
           $ctrlsEl
             .show()
@@ -1817,18 +1826,18 @@ module.exports = [
         }
 
         function appendToBody() {
-          $btnsEl = (($btnsEl && $btnsEl.length) ? $btnsEl : $(element[0].querySelector('.btn-group')))
-                    .hide();
-          if (!bodyDirectChild($btnsEl)) {
-            $bdyEl
-              .append($btnsEl);
-          }
-
           $ctrlsEl = (($ctrlsEl && $ctrlsEl.length) ? $ctrlsEl : $(element[0].querySelector('.field-control')))
                     .hide();
           if (!bodyDirectChild($ctrlsEl)) {
             $bdyEl
               .append($ctrlsEl);
+          }
+
+          $btnsEl = (($btnsEl && $btnsEl.length) ? $btnsEl : $(element[0].querySelector('.btn-group')))
+                    .hide();
+          if (!bodyDirectChild($btnsEl)) {
+            $bdyEl
+              .append($btnsEl);
           }
 
           $timeout(positionElements, 50);
@@ -2022,6 +2031,27 @@ module.exports = [
           $timeout(function() {
             $(allFields[reversed*allFields.length - 1]).find('.view-value').click();
           });
+        };
+
+        scope.trapKeyboard = function(evt, reverse) {
+          if(isDate() && evt.keyCode === 9) {
+            // only trap tab key on date inputs
+            if(!reverse && !evt.shiftKey) {
+              // focus the date picker
+              $('.cam-widget-inline-field.field-control > .datepicker > table')[0].focus();
+              evt.preventDefault();
+            } else if(reverse && evt.shiftKey) {
+              // focus the cancel button
+              $('.cam-widget-inline-field.btn-group > button[ng-click="cancelChange($event)"]')[0].focus();
+              evt.preventDefault();
+            }
+          }
+        };
+
+        scope.cancelOnEsc = function(evt) {
+          if(isDate() && evt.keyCode === 27) {
+            scope.cancelChange();
+          }
         };
 
         scope.handleKeydown = function(evt) {
