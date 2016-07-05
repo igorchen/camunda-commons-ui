@@ -1803,6 +1803,7 @@ module.exports = [
 
           if(isDate()) {
             $btnsEl
+              .addClass('datepicker-control')
               .show()
               .css({
                 left: offset.left + ($ctrlsEl.outerWidth() - $btnsEl.outerWidth()),
@@ -1810,6 +1811,7 @@ module.exports = [
               });
           } else {
             $btnsEl
+              .removeClass('datepicker-control')
               .show()
               .css({
                 left: offset.left + ($(element).outerWidth() - $btnsEl.outerWidth()),
