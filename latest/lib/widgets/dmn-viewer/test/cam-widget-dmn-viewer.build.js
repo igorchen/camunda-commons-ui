@@ -1380,7 +1380,10 @@ module.exports = ['$timeout', function($timeout) {
 
 
       $scope.$on('$destroy', function() {
-        cb.destroy();
+        if (cb && cb.destroy) {
+          cb.destroy();
+        }
+
         if (_top) {
           $timeout.cancel(top);
         }
