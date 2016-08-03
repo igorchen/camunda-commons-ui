@@ -1806,6 +1806,15 @@ module.exports = [
               left: offset.left,
               top: offset.top + $(element).outerHeight()
             });
+
+          if (isDate()) {
+            var $datepickerEl = $ctrlsEl[0].querySelector('.cam-widget-inline-field.field-control > .datepicker > table');
+
+            if ($datepickerEl) {
+              $datepickerEl.focus();
+            }
+          }
+
         }
 
         function appendToBody() {
