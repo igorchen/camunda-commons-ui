@@ -146,7 +146,7 @@ module.exports = function() {
   };
 };
 
-},{"camunda-bpm-sdk-js/vendor/angular":279,"jquery":808}],5:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":279,"jquery":809}],5:[function(require,module,exports){
 'use strict';
 
 
@@ -305,7 +305,7 @@ directivesModule.config([
 
 module.exports = directivesModule;
 
-},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":810,"../util/index":16,"./autoFill":1,"./compileTemplate":2,"./email":3,"./engineSelect":4,"./inPlaceTextField":5,"./instantTypeahead":7,"./nl2br":8,"./notificationsPanel":9,"./password":10,"./passwordRepeat":11,"./showIfAuthorized":12,"camunda-bpm-sdk-js/vendor/angular":279}],7:[function(require,module,exports){
+},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":811,"../util/index":16,"./autoFill":1,"./compileTemplate":2,"./email":3,"./engineSelect":4,"./inPlaceTextField":5,"./instantTypeahead":7,"./nl2br":8,"./notificationsPanel":9,"./password":10,"./passwordRepeat":11,"./showIfAuthorized":12,"camunda-bpm-sdk-js/vendor/angular":279}],7:[function(require,module,exports){
   'use strict';
 
   var secretEmptyKey = '[$empty$]';
@@ -697,7 +697,7 @@ filtersModule.config([
 
 module.exports = filtersModule;
 
-},{"angular-translate":41,"camunda-bpm-sdk-js/vendor/angular":279,"moment":809}],14:[function(require,module,exports){
+},{"angular-translate":41,"camunda-bpm-sdk-js/vendor/angular":279,"moment":810}],14:[function(require,module,exports){
 'use strict';
 
 var angular = require('camunda-bpm-sdk-js/vendor/angular');
@@ -1975,7 +1975,7 @@ module.exports = [function() {
 
 var angular = require('camunda-bpm-sdk-js/vendor/angular'),
 
-    template = "<div class=\"navbar-header\">\n  <button type=\"button\"\n          class=\"navbar-toggle\"\n          ng-class=\"{open: !!navbarOpen}\"\n          ng-click=\"navbarOpen = !navbarOpen\">\n    <em class=\"sr-only\">{{ toggleNavigation }}</em>\n    <span></span>\n    <span></span>\n    <span></span>\n  </button>\n\n  <a class=\"navbar-brand\"\n     href=\"#/\"\n     title=\"{{ brandName }} {{ appName }}\">\n    <span class=\"brand-logo\"></span>\n    <span class=\"brand-name\" ng-cloak>{{ brandName }}</span>\n  </a>\n\n  <div class=\"small-screen-warning\">\n    <span class=\"glyphicon glyphicon-exclamation-sign\"\n          tooltip=\"{{ smallScreenWarning }}\"\n          tooltip-placement=\"bottom\"></span>\n  </div>\n</div>\n\n<nav class=\"cam-nav app-menu\">\n  <ul ng-class=\"{collapse: !navbarOpen}\">\n\n    <li engine-select></li>\n\n    <li class=\"account dropdown\"\n        ng-if=\"authentication.name\"\n        ng-cloak>\n      <a href\n         class=\"dropdown-toggle\">\n        <span class=\"glyphicon glyphicon-user \"></span>\n        {{ (userName || authentication.name) }}\n      </a>\n\n      <ul class=\"dropdown-menu dropdown-menu-right\">\n        <li class=\"profile\">\n          <a ng-href=\"{{ '../../admin/:engine/#/users/' + authentication.name + '?tab=profile' | uri }}\">\n            {{ myProfile }}\n          </a>\n        </li>\n\n        <li class=\"divider\"></li>\n\n        <li class=\"logout\">\n          <a href\n             ng-click=\"logout()\">\n            {{ signOut }}\n          </a>\n        </li>\n      </ul>\n    </li>\n\n    <li class=\"divider-vertical\"\n        ng-if=\"authentication.name\"\n        ng-cloak></li>\n\n    <li class=\"app-switch dropdown\">\n      <a href\n         class=\"dropdown-toggle\">\n        <span class=\"glyphicon glyphicon-home\"></span>\n        <span class=\"caret\"></span>\n      </a>\n\n      <ul class=\"dropdown-menu dropdown-menu-right\">\n        <li ng-repeat=\"(appName, app) in apps\"\n            ng-if=\"appName !== currentApp && (!authentication || authentication.canAccess(appName))\"\n            ng-class=\"appName\">\n          <a ng-href=\"{{ '../../' + appName + '/:engine/' | uri }}\">\n            {{ app.label }}\n          </a>\n        </li>\n      </ul>\n    </li>\n  </ul>\n</nav>\n\n<div ng-transclude\n     class=\"sections-menu\"\n     ng-class=\"{collapse: !navbarOpen}\"></div>\n";
+    template = "<div class=\"navbar-header\">\n  <button type=\"button\"\n          class=\"navbar-toggle\"\n          ng-class=\"{open: !!navbarOpen}\"\n          ng-click=\"navbarOpen = !navbarOpen\">\n    <em class=\"sr-only\">{{ toggleNavigation }}</em>\n    <span></span>\n    <span></span>\n    <span></span>\n  </button>\n\n  <a class=\"navbar-brand\"\n     href=\"#/\"\n     title=\"{{ brandName }} {{ appName }}\">\n    <span class=\"brand-logo\"></span>\n    <span class=\"brand-name\" ng-cloak>{{ brandName }}</span>\n  </a>\n\n  <div class=\"small-screen-warning\">\n    <span class=\"glyphicon glyphicon-exclamation-sign\"\n          tooltip=\"{{ smallScreenWarning }}\"\n          tooltip-placement=\"bottom\"></span>\n  </div>\n</div>\n\n<nav class=\"cam-nav app-menu\">\n  <ul ng-class=\"{collapse: !navbarOpen}\">\n\n    <li engine-select></li>\n\n    <li class=\"account dropdown\"\n        ng-if=\"authentication.name\"\n        ng-cloak>\n      <a href\n         class=\"dropdown-toggle\">\n        <span class=\"glyphicon glyphicon-user \"></span>\n        {{ (userName || authentication.name) }}\n      </a>\n\n      <ul class=\"dropdown-menu dropdown-menu-right\">\n        <li class=\"profile\">\n          <a ng-href=\"{{ '../../admin/:engine/#/users/' + authentication.name + '?tab=profile' | uri }}\">\n            {{ myProfile }}\n          </a>\n        </li>\n\n        <li class=\"divider\"></li>\n\n        <li class=\"logout\">\n          <a href\n             ng-click=\"logout()\">\n            {{ signOut }}\n          </a>\n        </li>\n      </ul>\n    </li>\n\n    <li class=\"divider-vertical\"\n        ng-if=\"authentication.name\"\n        ng-cloak></li>\n\n    <li class=\"app-switch dropdown\"\n        ng-if=\"!noAppSwitch\">\n      <a href\n         class=\"dropdown-toggle\">\n        <span class=\"glyphicon glyphicon-home\"></span>\n        <span class=\"caret\"></span>\n      </a>\n\n      <ul class=\"dropdown-menu dropdown-menu-right\">\n        <li ng-repeat=\"(appName, app) in apps\"\n            ng-if=\"appName !== currentApp && (!authentication || authentication.canAccess(appName))\"\n            ng-class=\"appName\">\n          <a ng-href=\"{{ '../../' + appName + '/:engine/' | uri }}\">\n            {{ app.label }}\n          </a>\n        </li>\n      </ul>\n    </li>\n  </ul>\n</nav>\n\n<div ng-transclude\n     class=\"sections-menu\"\n     ng-class=\"{collapse: !navbarOpen}\"></div>\n";
 
 var apps = {
   admin: {
@@ -2011,7 +2011,8 @@ module.exports = [function() {
       toggleNavigation: '@?',
       myProfile: '@?',
       smallScreenWarning: '@?',
-      brandName: '@'
+      brandName: '@',
+      noAppSwitch: '@?'
     },
 
     compile: function(el, attrs) {
@@ -2090,7 +2091,7 @@ widgetModule.filter('camQueryComponent', camQueryComponent);
 
 module.exports = widgetModule;
 
-},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":810,"../directives/index":6,"../filter/date/index":13,"../search/index":14,"./bpmn-viewer/cam-widget-bpmn-viewer":20,"./clipboard/cam-widget-clipboard":22,"./cmmn-viewer/cam-widget-cmmn-viewer":23,"./debug/cam-widget-debug":24,"./dmn-viewer/cam-widget-dmn-viewer":25,"./footer/cam-widget-footer":26,"./header/cam-widget-header":27,"./inline-field/cam-widget-inline-field":29,"./loader/cam-widget-loader":30,"./search-pill/cam-query-component":31,"./search-pill/cam-widget-search-pill":32,"./search/cam-widget-search":33,"./variable/cam-variable-validator":35,"./variable/cam-widget-variable":36,"./variables-table/cam-render-var-template":37,"./variables-table/cam-widget-variables-table":38,"camunda-bpm-sdk-js/vendor/angular":279}],29:[function(require,module,exports){
+},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":811,"../directives/index":6,"../filter/date/index":13,"../search/index":14,"./bpmn-viewer/cam-widget-bpmn-viewer":20,"./clipboard/cam-widget-clipboard":22,"./cmmn-viewer/cam-widget-cmmn-viewer":23,"./debug/cam-widget-debug":24,"./dmn-viewer/cam-widget-dmn-viewer":25,"./footer/cam-widget-footer":26,"./header/cam-widget-header":27,"./inline-field/cam-widget-inline-field":29,"./loader/cam-widget-loader":30,"./search-pill/cam-query-component":31,"./search-pill/cam-widget-search-pill":32,"./search/cam-widget-search":33,"./variable/cam-variable-validator":35,"./variable/cam-widget-variable":36,"./variables-table/cam-render-var-template":37,"./variables-table/cam-widget-variables-table":38,"camunda-bpm-sdk-js/vendor/angular":279}],29:[function(require,module,exports){
 'use strict';
 
 
@@ -2515,7 +2516,7 @@ module.exports = [
     };
   }];
 
-},{"camunda-bpm-sdk-js/vendor/angular":279,"jquery":808}],30:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":279,"jquery":809}],30:[function(require,module,exports){
 'use strict';
 
 
@@ -2673,7 +2674,7 @@ module.exports = ['$timeout',
     };
   }];
 
-},{"jquery":808}],33:[function(require,module,exports){
+},{"jquery":809}],33:[function(require,module,exports){
 'use strict';
 
 
@@ -3168,7 +3169,7 @@ module.exports = ['$timeout', '$location', 'search',
     };
   }];
 
-},{"camunda-bpm-sdk-js/vendor/angular":279,"jquery":808}],34:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":279,"jquery":809}],34:[function(require,module,exports){
 'use strict';
 
 
@@ -3560,7 +3561,7 @@ module.exports = [
     };
   }];
 
-},{"jquery":808}],38:[function(require,module,exports){
+},{"jquery":809}],38:[function(require,module,exports){
 'use strict';
 
 
@@ -12125,7 +12126,7 @@ if (!String.fromCodePoint) {
 })(typeof exports === "undefined" ? sax = {} : exports);
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":783,"stream":806,"string_decoder":807}],64:[function(require,module,exports){
+},{"buffer":783,"stream":807,"string_decoder":808}],64:[function(require,module,exports){
 /**
  * Tiny stack for browser or server
  *
@@ -62983,7 +62984,7 @@ module.exports = XMLWriter;
 
 },{"./common":309,"lodash/collection/filter":379,"lodash/collection/forEach":381,"lodash/collection/map":383,"lodash/lang/isString":490,"lodash/object/assign":493,"moddle/lib/ns":319,"moddle/lib/types":322}],312:[function(require,module,exports){
 arguments[4][63][0].apply(exports,arguments)
-},{"buffer":783,"dup":63,"stream":806,"string_decoder":807}],313:[function(require,module,exports){
+},{"buffer":783,"dup":63,"stream":807,"string_decoder":808}],313:[function(require,module,exports){
 arguments[4][64][0].apply(exports,arguments)
 },{"dup":64}],314:[function(require,module,exports){
 arguments[4][65][0].apply(exports,arguments)
@@ -75724,7 +75725,7 @@ module.exports = XMLWriter;
 
 },{"./common":592,"lodash/collection/filter":615,"lodash/collection/forEach":617,"lodash/collection/map":619,"lodash/lang/isString":702,"lodash/object/assign":704,"moddle/lib/ns":602,"moddle/lib/types":605}],595:[function(require,module,exports){
 arguments[4][63][0].apply(exports,arguments)
-},{"buffer":783,"dup":63,"stream":806,"string_decoder":807}],596:[function(require,module,exports){
+},{"buffer":783,"dup":63,"stream":807,"string_decoder":808}],596:[function(require,module,exports){
 arguments[4][64][0].apply(exports,arguments)
 },{"dup":64}],597:[function(require,module,exports){
 arguments[4][65][0].apply(exports,arguments)
@@ -84261,7 +84262,7 @@ function forEach(xs, f) {
     f(xs[i], i);
   }
 }
-},{"./_stream_readable":794,"./_stream_writable":796,"core-util-is":798,"inherits":788,"process-nextick-args":800}],793:[function(require,module,exports){
+},{"./_stream_readable":794,"./_stream_writable":796,"core-util-is":799,"inherits":788,"process-nextick-args":801}],793:[function(require,module,exports){
 // a passthrough stream.
 // basically just the most minimal sort of Transform stream.
 // Every written chunk gets output as-is.
@@ -84288,7 +84289,7 @@ function PassThrough(options) {
 PassThrough.prototype._transform = function (chunk, encoding, cb) {
   cb(null, chunk);
 };
-},{"./_stream_transform":795,"core-util-is":798,"inherits":788}],794:[function(require,module,exports){
+},{"./_stream_transform":795,"core-util-is":799,"inherits":788}],794:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -84343,21 +84344,21 @@ if (debugUtil && debugUtil.debuglog) {
 }
 /*</replacement>*/
 
+var BufferList = require('./internal/streams/BufferList');
 var StringDecoder;
 
 util.inherits(Readable, Stream);
 
-var hasPrependListener = typeof EE.prototype.prependListener === 'function';
-
 function prependListener(emitter, event, fn) {
-  if (hasPrependListener) return emitter.prependListener(event, fn);
-
-  // This is a brutally ugly hack to make sure that our error handler
-  // is attached before any userland ones.  NEVER DO THIS. This is here
-  // only because this code needs to continue to work with older versions
-  // of Node.js that do not include the prependListener() method. The goal
-  // is to eventually remove this hack.
-  if (!emitter._events || !emitter._events[event]) emitter.on(event, fn);else if (isArray(emitter._events[event])) emitter._events[event].unshift(fn);else emitter._events[event] = [fn, emitter._events[event]];
+  if (typeof emitter.prependListener === 'function') {
+    return emitter.prependListener(event, fn);
+  } else {
+    // This is a hack to make sure that our error handler is attached before any
+    // userland ones.  NEVER DO THIS. This is here only because this code needs
+    // to continue to work with older versions of Node.js that do not include
+    // the prependListener() method. The goal is to eventually remove this hack.
+    if (!emitter._events || !emitter._events[event]) emitter.on(event, fn);else if (isArray(emitter._events[event])) emitter._events[event].unshift(fn);else emitter._events[event] = [fn, emitter._events[event]];
+  }
 }
 
 var Duplex;
@@ -84381,7 +84382,10 @@ function ReadableState(options, stream) {
   // cast to ints.
   this.highWaterMark = ~ ~this.highWaterMark;
 
-  this.buffer = [];
+  // A linked list is used to store data chunks instead of an array because the
+  // linked list can remove elements from the beginning faster than
+  // array.shift()
+  this.buffer = new BufferList();
   this.length = 0;
   this.pipes = null;
   this.pipesCount = 0;
@@ -84544,7 +84548,8 @@ function computeNewHighWaterMark(n) {
   if (n >= MAX_HWM) {
     n = MAX_HWM;
   } else {
-    // Get the next highest power of 2
+    // Get the next highest power of 2 to prevent increasing hwm excessively in
+    // tiny amounts
     n--;
     n |= n >>> 1;
     n |= n >>> 2;
@@ -84556,44 +84561,34 @@ function computeNewHighWaterMark(n) {
   return n;
 }
 
+// This function is designed to be inlinable, so please take care when making
+// changes to the function body.
 function howMuchToRead(n, state) {
-  if (state.length === 0 && state.ended) return 0;
-
-  if (state.objectMode) return n === 0 ? 0 : 1;
-
-  if (n === null || isNaN(n)) {
-    // only flow one buffer at a time
-    if (state.flowing && state.buffer.length) return state.buffer[0].length;else return state.length;
+  if (n <= 0 || state.length === 0 && state.ended) return 0;
+  if (state.objectMode) return 1;
+  if (n !== n) {
+    // Only flow one buffer at a time
+    if (state.flowing && state.length) return state.buffer.head.data.length;else return state.length;
   }
-
-  if (n <= 0) return 0;
-
-  // If we're asking for more than the target buffer level,
-  // then raise the water mark.  Bump up to the next highest
-  // power of 2, to prevent increasing it excessively in tiny
-  // amounts.
+  // If we're asking for more than the current hwm, then raise the hwm.
   if (n > state.highWaterMark) state.highWaterMark = computeNewHighWaterMark(n);
-
-  // don't have that much.  return null, unless we've ended.
-  if (n > state.length) {
-    if (!state.ended) {
-      state.needReadable = true;
-      return 0;
-    } else {
-      return state.length;
-    }
+  if (n <= state.length) return n;
+  // Don't have enough
+  if (!state.ended) {
+    state.needReadable = true;
+    return 0;
   }
-
-  return n;
+  return state.length;
 }
 
 // you can override either this method, or the async _read(n) below.
 Readable.prototype.read = function (n) {
   debug('read', n);
+  n = parseInt(n, 10);
   var state = this._readableState;
   var nOrig = n;
 
-  if (typeof n !== 'number' || n > 0) state.emittedReadable = false;
+  if (n !== 0) state.emittedReadable = false;
 
   // if we're doing read(0) to trigger a readable event, but we
   // already have a bunch of data in the buffer, then just trigger
@@ -84649,9 +84644,7 @@ Readable.prototype.read = function (n) {
   if (state.ended || state.reading) {
     doRead = false;
     debug('reading or ended', doRead);
-  }
-
-  if (doRead) {
+  } else if (doRead) {
     debug('do read');
     state.reading = true;
     state.sync = true;
@@ -84660,11 +84653,10 @@ Readable.prototype.read = function (n) {
     // call internal read method
     this._read(state.highWaterMark);
     state.sync = false;
+    // If _read pushed data synchronously, then `reading` will be false,
+    // and we need to re-evaluate how much data we can return to the user.
+    if (!state.reading) n = howMuchToRead(nOrig, state);
   }
-
-  // If _read pushed data synchronously, then `reading` will be false,
-  // and we need to re-evaluate how much data we can return to the user.
-  if (doRead && !state.reading) n = howMuchToRead(nOrig, state);
 
   var ret;
   if (n > 0) ret = fromList(n, state);else ret = null;
@@ -84672,16 +84664,18 @@ Readable.prototype.read = function (n) {
   if (ret === null) {
     state.needReadable = true;
     n = 0;
+  } else {
+    state.length -= n;
   }
 
-  state.length -= n;
+  if (state.length === 0) {
+    // If we have nothing in the buffer, then we want to know
+    // as soon as we *do* get something into the buffer.
+    if (!state.ended) state.needReadable = true;
 
-  // If we have nothing in the buffer, then we want to know
-  // as soon as we *do* get something into the buffer.
-  if (state.length === 0 && !state.ended) state.needReadable = true;
-
-  // If we tried to read() past the EOF, then emit end on the next tick.
-  if (nOrig !== n && state.ended && state.length === 0) endReadable(this);
+    // If we tried to read() past the EOF, then emit end on the next tick.
+    if (nOrig !== n && state.ended) endReadable(this);
+  }
 
   if (ret !== null) this.emit('data', ret);
 
@@ -84829,11 +84823,17 @@ Readable.prototype.pipe = function (dest, pipeOpts) {
     if (state.awaitDrain && (!dest._writableState || dest._writableState.needDrain)) ondrain();
   }
 
+  // If the user pushes more data while we're writing to dest then we'll end up
+  // in ondata again. However, we only want to increase awaitDrain once because
+  // dest will only emit one 'drain' event for the multiple writes.
+  // => Introduce a guard on increasing awaitDrain.
+  var increasedAwaitDrain = false;
   src.on('data', ondata);
   function ondata(chunk) {
     debug('ondata');
+    increasedAwaitDrain = false;
     var ret = dest.write(chunk);
-    if (false === ret) {
+    if (false === ret && !increasedAwaitDrain) {
       // If the user unpiped during `dest.write()`, it is possible
       // to get stuck in a permanently paused state if that write
       // also returned false.
@@ -84841,6 +84841,7 @@ Readable.prototype.pipe = function (dest, pipeOpts) {
       if ((state.pipesCount === 1 && state.pipes === dest || state.pipesCount > 1 && indexOf(state.pipes, dest) !== -1) && !cleanedUp) {
         debug('false write response, pause', src._readableState.awaitDrain);
         src._readableState.awaitDrain++;
+        increasedAwaitDrain = true;
       }
       src.pause();
     }
@@ -84954,18 +84955,14 @@ Readable.prototype.unpipe = function (dest) {
 Readable.prototype.on = function (ev, fn) {
   var res = Stream.prototype.on.call(this, ev, fn);
 
-  // If listening to data, and it has not explicitly been paused,
-  // then call resume to start the flow of data on the next tick.
-  if (ev === 'data' && false !== this._readableState.flowing) {
-    this.resume();
-  }
-
-  if (ev === 'readable' && !this._readableState.endEmitted) {
+  if (ev === 'data') {
+    // Start flowing on next tick if stream isn't explicitly paused
+    if (this._readableState.flowing !== false) this.resume();
+  } else if (ev === 'readable') {
     var state = this._readableState;
-    if (!state.readableListening) {
-      state.readableListening = true;
+    if (!state.endEmitted && !state.readableListening) {
+      state.readableListening = state.needReadable = true;
       state.emittedReadable = false;
-      state.needReadable = true;
       if (!state.reading) {
         processNextTick(nReadingNextTick, this);
       } else if (state.length) {
@@ -85009,6 +85006,7 @@ function resume_(stream, state) {
   }
 
   state.resumeScheduled = false;
+  state.awaitDrain = 0;
   stream.emit('resume');
   flow(stream);
   if (state.flowing && !state.reading) stream.read(0);
@@ -85027,11 +85025,7 @@ Readable.prototype.pause = function () {
 function flow(stream) {
   var state = stream._readableState;
   debug('flow', state.flowing);
-  if (state.flowing) {
-    do {
-      var chunk = stream.read();
-    } while (null !== chunk && state.flowing);
-  }
+  while (state.flowing && stream.read() !== null) {}
 }
 
 // wrap an old-style stream as the async data source.
@@ -85102,50 +85096,101 @@ Readable._fromList = fromList;
 
 // Pluck off n bytes from an array of buffers.
 // Length is the combined lengths of all the buffers in the list.
+// This function is designed to be inlinable, so please take care when making
+// changes to the function body.
 function fromList(n, state) {
-  var list = state.buffer;
-  var length = state.length;
-  var stringMode = !!state.decoder;
-  var objectMode = !!state.objectMode;
+  // nothing buffered
+  if (state.length === 0) return null;
+
   var ret;
-
-  // nothing in the list, definitely empty.
-  if (list.length === 0) return null;
-
-  if (length === 0) ret = null;else if (objectMode) ret = list.shift();else if (!n || n >= length) {
-    // read it all, truncate the array.
-    if (stringMode) ret = list.join('');else if (list.length === 1) ret = list[0];else ret = Buffer.concat(list, length);
-    list.length = 0;
+  if (state.objectMode) ret = state.buffer.shift();else if (!n || n >= state.length) {
+    // read it all, truncate the list
+    if (state.decoder) ret = state.buffer.join('');else if (state.buffer.length === 1) ret = state.buffer.head.data;else ret = state.buffer.concat(state.length);
+    state.buffer.clear();
   } else {
-    // read just some of it.
-    if (n < list[0].length) {
-      // just take a part of the first list item.
-      // slice is the same for buffers and strings.
-      var buf = list[0];
-      ret = buf.slice(0, n);
-      list[0] = buf.slice(n);
-    } else if (n === list[0].length) {
-      // first list is a perfect match
-      ret = list.shift();
-    } else {
-      // complex case.
-      // we have enough to cover it, but it spans past the first buffer.
-      if (stringMode) ret = '';else ret = bufferShim.allocUnsafe(n);
-
-      var c = 0;
-      for (var i = 0, l = list.length; i < l && c < n; i++) {
-        var _buf = list[0];
-        var cpy = Math.min(n - c, _buf.length);
-
-        if (stringMode) ret += _buf.slice(0, cpy);else _buf.copy(ret, c, 0, cpy);
-
-        if (cpy < _buf.length) list[0] = _buf.slice(cpy);else list.shift();
-
-        c += cpy;
-      }
-    }
+    // read part of list
+    ret = fromListPartial(n, state.buffer, state.decoder);
   }
 
+  return ret;
+}
+
+// Extracts only enough buffered data to satisfy the amount requested.
+// This function is designed to be inlinable, so please take care when making
+// changes to the function body.
+function fromListPartial(n, list, hasStrings) {
+  var ret;
+  if (n < list.head.data.length) {
+    // slice is the same for buffers and strings
+    ret = list.head.data.slice(0, n);
+    list.head.data = list.head.data.slice(n);
+  } else if (n === list.head.data.length) {
+    // first chunk is a perfect match
+    ret = list.shift();
+  } else {
+    // result spans more than one buffer
+    ret = hasStrings ? copyFromBufferString(n, list) : copyFromBuffer(n, list);
+  }
+  return ret;
+}
+
+// Copies a specified amount of characters from the list of buffered data
+// chunks.
+// This function is designed to be inlinable, so please take care when making
+// changes to the function body.
+function copyFromBufferString(n, list) {
+  var p = list.head;
+  var c = 1;
+  var ret = p.data;
+  n -= ret.length;
+  while (p = p.next) {
+    var str = p.data;
+    var nb = n > str.length ? str.length : n;
+    if (nb === str.length) ret += str;else ret += str.slice(0, n);
+    n -= nb;
+    if (n === 0) {
+      if (nb === str.length) {
+        ++c;
+        if (p.next) list.head = p.next;else list.head = list.tail = null;
+      } else {
+        list.head = p;
+        p.data = str.slice(nb);
+      }
+      break;
+    }
+    ++c;
+  }
+  list.length -= c;
+  return ret;
+}
+
+// Copies a specified amount of bytes from the list of buffered data chunks.
+// This function is designed to be inlinable, so please take care when making
+// changes to the function body.
+function copyFromBuffer(n, list) {
+  var ret = bufferShim.allocUnsafe(n);
+  var p = list.head;
+  var c = 1;
+  p.data.copy(ret);
+  n -= p.data.length;
+  while (p = p.next) {
+    var buf = p.data;
+    var nb = n > buf.length ? buf.length : n;
+    buf.copy(ret, ret.length - n, 0, nb);
+    n -= nb;
+    if (n === 0) {
+      if (nb === buf.length) {
+        ++c;
+        if (p.next) list.head = p.next;else list.head = list.tail = null;
+      } else {
+        list.head = p;
+        p.data = buf.slice(nb);
+      }
+      break;
+    }
+    ++c;
+  }
+  list.length -= c;
   return ret;
 }
 
@@ -85184,7 +85229,7 @@ function indexOf(xs, x) {
   return -1;
 }
 }).call(this,require('_process'))
-},{"./_stream_duplex":792,"_process":790,"buffer":783,"buffer-shims":797,"core-util-is":798,"events":787,"inherits":788,"isarray":799,"process-nextick-args":800,"string_decoder/":807,"util":782}],795:[function(require,module,exports){
+},{"./_stream_duplex":792,"./internal/streams/BufferList":797,"_process":790,"buffer":783,"buffer-shims":798,"core-util-is":799,"events":787,"inherits":788,"isarray":800,"process-nextick-args":801,"string_decoder/":808,"util":782}],795:[function(require,module,exports){
 // a transform stream is a readable/writable stream where you do
 // something with the data.  Sometimes it's called a "filter",
 // but that's not a great name for it, since that implies a thing where
@@ -85365,7 +85410,7 @@ function done(stream, er) {
 
   return stream.push(null);
 }
-},{"./_stream_duplex":792,"core-util-is":798,"inherits":788}],796:[function(require,module,exports){
+},{"./_stream_duplex":792,"core-util-is":799,"inherits":788}],796:[function(require,module,exports){
 (function (process){
 // A bit simpler than readable streams.
 // Implement an async ._write(chunk, encoding, cb), and it'll handle all
@@ -85894,7 +85939,72 @@ function CorkedRequest(state) {
   };
 }
 }).call(this,require('_process'))
-},{"./_stream_duplex":792,"_process":790,"buffer":783,"buffer-shims":797,"core-util-is":798,"events":787,"inherits":788,"process-nextick-args":800,"util-deprecate":801}],797:[function(require,module,exports){
+},{"./_stream_duplex":792,"_process":790,"buffer":783,"buffer-shims":798,"core-util-is":799,"events":787,"inherits":788,"process-nextick-args":801,"util-deprecate":802}],797:[function(require,module,exports){
+'use strict';
+
+var Buffer = require('buffer').Buffer;
+/*<replacement>*/
+var bufferShim = require('buffer-shims');
+/*</replacement>*/
+
+module.exports = BufferList;
+
+function BufferList() {
+  this.head = null;
+  this.tail = null;
+  this.length = 0;
+}
+
+BufferList.prototype.push = function (v) {
+  var entry = { data: v, next: null };
+  if (this.length > 0) this.tail.next = entry;else this.head = entry;
+  this.tail = entry;
+  ++this.length;
+};
+
+BufferList.prototype.unshift = function (v) {
+  var entry = { data: v, next: this.head };
+  if (this.length === 0) this.tail = entry;
+  this.head = entry;
+  ++this.length;
+};
+
+BufferList.prototype.shift = function () {
+  if (this.length === 0) return;
+  var ret = this.head.data;
+  if (this.length === 1) this.head = this.tail = null;else this.head = this.head.next;
+  --this.length;
+  return ret;
+};
+
+BufferList.prototype.clear = function () {
+  this.head = this.tail = null;
+  this.length = 0;
+};
+
+BufferList.prototype.join = function (s) {
+  if (this.length === 0) return '';
+  var p = this.head;
+  var ret = '' + p.data;
+  while (p = p.next) {
+    ret += s + p.data;
+  }return ret;
+};
+
+BufferList.prototype.concat = function (n) {
+  if (this.length === 0) return bufferShim.alloc(0);
+  if (this.length === 1) return this.head.data;
+  var ret = bufferShim.allocUnsafe(n >>> 0);
+  var p = this.head;
+  var i = 0;
+  while (p) {
+    p.data.copy(ret, i);
+    i += p.data.length;
+    p = p.next;
+  }
+  return ret;
+};
+},{"buffer":783,"buffer-shims":798}],798:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -86006,7 +86116,7 @@ exports.allocUnsafeSlow = function allocUnsafeSlow(size) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"buffer":783}],798:[function(require,module,exports){
+},{"buffer":783}],799:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -86117,9 +86227,9 @@ function objectToString(o) {
 }
 
 }).call(this,{"isBuffer":require("../../../../insert-module-globals/node_modules/is-buffer/index.js")})
-},{"../../../../insert-module-globals/node_modules/is-buffer/index.js":789}],799:[function(require,module,exports){
+},{"../../../../insert-module-globals/node_modules/is-buffer/index.js":789}],800:[function(require,module,exports){
 arguments[4][786][0].apply(exports,arguments)
-},{"dup":786}],800:[function(require,module,exports){
+},{"dup":786}],801:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -86166,7 +86276,7 @@ function nextTick(fn, arg1, arg2, arg3) {
 }
 
 }).call(this,require('_process'))
-},{"_process":790}],801:[function(require,module,exports){
+},{"_process":790}],802:[function(require,module,exports){
 (function (global){
 
 /**
@@ -86237,10 +86347,10 @@ function config (name) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],802:[function(require,module,exports){
+},{}],803:[function(require,module,exports){
 module.exports = require("./lib/_stream_passthrough.js")
 
-},{"./lib/_stream_passthrough.js":793}],803:[function(require,module,exports){
+},{"./lib/_stream_passthrough.js":793}],804:[function(require,module,exports){
 (function (process){
 var Stream = (function (){
   try {
@@ -86260,13 +86370,13 @@ if (!process.browser && process.env.READABLE_STREAM === 'disable' && Stream) {
 }
 
 }).call(this,require('_process'))
-},{"./lib/_stream_duplex.js":792,"./lib/_stream_passthrough.js":793,"./lib/_stream_readable.js":794,"./lib/_stream_transform.js":795,"./lib/_stream_writable.js":796,"_process":790}],804:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":792,"./lib/_stream_passthrough.js":793,"./lib/_stream_readable.js":794,"./lib/_stream_transform.js":795,"./lib/_stream_writable.js":796,"_process":790}],805:[function(require,module,exports){
 module.exports = require("./lib/_stream_transform.js")
 
-},{"./lib/_stream_transform.js":795}],805:[function(require,module,exports){
+},{"./lib/_stream_transform.js":795}],806:[function(require,module,exports){
 module.exports = require("./lib/_stream_writable.js")
 
-},{"./lib/_stream_writable.js":796}],806:[function(require,module,exports){
+},{"./lib/_stream_writable.js":796}],807:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -86395,7 +86505,7 @@ Stream.prototype.pipe = function(dest, options) {
   return dest;
 };
 
-},{"events":787,"inherits":788,"readable-stream/duplex.js":791,"readable-stream/passthrough.js":802,"readable-stream/readable.js":803,"readable-stream/transform.js":804,"readable-stream/writable.js":805}],807:[function(require,module,exports){
+},{"events":787,"inherits":788,"readable-stream/duplex.js":791,"readable-stream/passthrough.js":803,"readable-stream/readable.js":804,"readable-stream/transform.js":805,"readable-stream/writable.js":806}],808:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -86618,7 +86728,7 @@ function base64DetectIncompleteChar(buffer) {
   this.charLength = this.charReceived ? 3 : 0;
 }
 
-},{"buffer":783}],808:[function(require,module,exports){
+},{"buffer":783}],809:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.1
  * http://jquery.com/
@@ -95810,7 +95920,7 @@ return jQuery;
 
 }));
 
-},{}],809:[function(require,module,exports){
+},{}],810:[function(require,module,exports){
 (function (global){
 //! moment.js
 //! version : 2.9.0
@@ -98857,7 +98967,7 @@ return jQuery;
 }).call(this);
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],810:[function(require,module,exports){
+},{}],811:[function(require,module,exports){
 /*
  * angular-ui-bootstrap
  * http://angular-ui.github.io/bootstrap/
