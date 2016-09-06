@@ -3495,7 +3495,7 @@ module.exports = [
 var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     varUtils = require('../variable/cam-variable-utils'),
 
-    template = "<table class=\"cam-table\">\n  <thead>\n    <tr>\n      <td ng-repeat=\"headerName in headerNames\" ng-class=\"'col-' + headerName\">\n        {{ headers[headerName] }}\n      </td>\n\n      <td class=\"actions\"\n          ng-if=\"editable.length\">\n        Actions\n      </td>\n    </tr>\n  </thead>\n\n  <tbody>\n    <tr ng-repeat=\"(v, info) in variables\"\n        ng-class=\"rowClasses(info, v)\">\n      <td ng-repeat=\"headerName in headerNames\"\n          ng-init=\"variable=info.variable\"\n          ng-class=\"colClasses(info, headerName, v)\"\n          ng-switch on=\"headerName\">\n        <!-- ................................................................................... -->\n        <div ng-switch-when=\"type\"\n             ng-if=\"!isEditable('type', info)\">\n          {{ variable.type }}\n        </div>\n        <select class=\"form-control\"\n                ng-switch-when=\"type\"\n                ng-if=\"isEditable('type', info)\"\n                ng-model=\"variable.type\"\n                ng-options=\"variableType for variableType in variableTypes track by variableType\"\n                required>\n        </select>\n        <!-- ................................................................................... -->\n\n\n        <!-- ................................................................................... -->\n        <div ng-switch-when=\"name\"\n             ng-if=\"!isEditable('name', info)\">\n          <span cam-widget-clipboard=\"variable.name\">{{ variable.name }}</span>\n        </div>\n\n        <input class=\"form-control\"\n               ng-switch-when=\"name\"\n               ng-model=\"variable.name\"\n               ng-if=\"isEditable('name', info)\" />\n        <!-- ................................................................................... -->\n\n\n        <!-- ................................................................................... -->\n        <a ng-switch-when=\"value\"\n           ng-if=\"!isEditable('value', info) && isBinary(variable.type)\"\n           ng-href=\"{{ downloadLink(info) }}\"\n           download=\"{{ variable.name }}-data\">\n          Download\n        </a>\n\n        <div ng-switch-when=\"value\"\n             ng-if=\"!isEditable('value', info) && variable.type === 'Object'\"\n             class=\"read-only value-wrapper\">\n          <span ng-if=\"variable.valueInfo.objectTypeName\"\n                cam-widget-clipboard=\"variable.valueInfo.objectTypeName\">\n            <a ng-click=\"editVariableValue(v)\"\n               href>{{ variable.valueInfo.objectTypeName }}</a>\n          </span>\n          <a ng-if=\"!variable.valueInfo.objectTypeName\"\n             ng-click=\"editVariableValue(v)\"\n             href>&lt;undefined&gt;</a>\n        </div>\n\n        <div ng-switch-when=\"value\"\n             ng-if=\"!isEditable('value', info) && variable.type === 'String'\"\n             class=\"read-only value-wrapper\">\n          <span cam-widget-clipboard=\"variable.value\">\n            <span ng-click=\"readStringVar(v)\">{{ variable.value }}</span>\n          </span>\n        </div>\n\n        <div ng-switch-when=\"value\"\n             ng-if=\"!isEditable('value', info) && variable.type !== 'Object' && variable.type !== 'String'\"\n             class=\"read-only value-wrapper\">\n          <span ng-if=\"variable.type !== 'Bytes'\"\n                cam-widget-clipboard=\"variable.value\">{{ variable.value }}</span>\n          <span ng-if=\"variable.type === 'Bytes'\">{{ variable.value }}</span>\n        </div>\n\n        <div class=\"value-wrapper\"\n             ng-switch-when=\"value\"\n             ng-if=\"isEditable('value', info)\">\n          <a ng-click=\"setNull(v)\"\n             ng-if=\"!isNull(v)\"\n             class=\"set-null\"\n             tooltip-append-to-body=\"true\"\n             tooltip=\"Set value to &quot;null&quot;\">\n            <span class=\"glyphicon glyphicon-remove\"></span>\n          </a>\n\n          <input ng-if=\"isPrimitive(variable.type) && !useCheckbox(variable.type) && !isNull(v)\"\n                 type=\"text\"\n                 class=\"form-control\"\n                 ng-model=\"variable.value\"\n                 placeholder=\"Value of the variable\" />\n\n          <input ng-if=\"useCheckbox(variable.type)\"\n                 type=\"checkbox\"\n                 ng-model=\"variable.value\"\n                 placeholder=\"Value of the variable\" />\n\n          <a ng-if=\"variable.type === 'Object' && !isNull(v)\"\n             ng-click=\"editVariableValue(v)\">\n            {{ variable.valueInfo.objectTypeName || '&lt;undefined&gt;' }}\n          </a>\n\n          <a ng-if=\"variable.type !== 'Null' && !isBinary(variable.type) && isNull(v)\"\n             ng-click=\"setNonNull(v)\"\n             class=\"null-value\"\n             tooltip-append-to-body=\"true\"\n             tooltip=\"Re-set to previous or default value\">\n            <span class=\"null-symbol\">&lt;null&gt;</span>\n          </a>\n\n          <a ng-if=\"isBinary(variable.type)\"\n             ng-click=\"uploadVariable(v)\"\n             tooltip-append-to-body=\"true\"\n             tooltip=\"Upload a new file\">\n            Upload\n          </a>\n\n          <span ng-if=\"variable.type === 'Null'\"\n                class=\"null-value\">\n            <span class=\"null-symbol\">&lt;null&gt;</span>\n          </span>\n        </div><!-- / value-wrapper -->\n        <!-- ................................................................................... -->\n\n\n        <div ng-switch-default\n             cam-render-var-template\n             info=\"info\"\n             header-name=\"headerName\">\n        </div>\n      </td>\n\n      <td class=\"actions\"\n          ng-if=\"editable.length\">\n        <div ng-if=\"!info.editMode\"\n             class=\"btn-group\">\n          <button class=\"btn btn-xs btn-primary\"\n                  ng-click=\"info.editMode = true\"\n                  tooltip-append-to-body=\"true\"\n                  tooltip=\"Edit the variable\">\n            <span class=\"glyphicon glyphicon-pencil\"></span>\n          </button>\n          <button class=\"btn btn-xs btn-default\"\n                  ng-click=\"deleteVariable(v)\"\n                  tooltip-append-to-body=\"true\"\n                  tooltip=\"Delete the variable\">\n            <span class=\"glyphicon glyphicon glyphicon-trash\"></span>\n          </button>\n        </div>\n\n        <div ng-if=\"info.editMode\"\n             class=\"btn-group\">\n          <button class=\"btn btn-xs btn-primary\"\n                  ng-disabled=\"!info.valid || !info.changed\"\n                  ng-click=\"saveVariable(v)\"\n                  tooltip-append-to-body=\"true\"\n                  tooltip=\"Save the variable\">\n            <span class=\"glyphicon glyphicon-ok\"></span>\n          </button>\n          <button class=\"btn btn-xs btn-default\"\n                  ng-click=\"info.editMode = false\"\n                  tooltip-append-to-body=\"true\"\n                  tooltip=\"Revert the variable\">\n            <span class=\"glyphicon glyphicon-remove\"></span>\n          </button>\n        </div>\n      </td>\n    </tr>\n  </tbody>\n</table>\n";
+    template = "<table class=\"cam-table\">\n  <thead>\n    <tr>\n      <td ng-repeat=\"headerName in headerNames\" ng-class=\"'col-' + headerName\">\n        {{ headers[headerName] }}\n      </td>\n\n      <td class=\"actions\"\n          ng-if=\"editable.length\">\n        Actions\n      </td>\n    </tr>\n  </thead>\n\n  <tbody>\n    <tr ng-repeat=\"(v, info) in variables\"\n        ng-class=\"rowClasses(info, v)\">\n      <td ng-repeat=\"headerName in headerNames\"\n          ng-init=\"variable=info.variable\"\n          ng-class=\"colClasses(info, headerName, v)\"\n          ng-switch on=\"headerName\">\n        <!-- ................................................................................... -->\n        <div ng-switch-when=\"type\"\n             ng-if=\"!isEditable('type', info)\">\n          {{ variable.type }}\n        </div>\n        <select class=\"form-control\"\n                ng-switch-when=\"type\"\n                ng-if=\"isEditable('type', info)\"\n                ng-model=\"variable.type\"\n                ng-options=\"variableType for variableType in variableTypes track by variableType\"\n                required>\n        </select>\n        <!-- ................................................................................... -->\n\n\n        <!-- ................................................................................... -->\n        <div ng-switch-when=\"name\"\n             ng-if=\"!isEditable('name', info)\">\n          <span cam-widget-clipboard=\"variable.name\">{{ variable.name }}</span>\n        </div>\n\n        <input class=\"form-control\"\n               ng-switch-when=\"name\"\n               ng-model=\"variable.name\"\n               ng-if=\"isEditable('name', info)\" />\n        <!-- ................................................................................... -->\n\n\n        <!-- ................................................................................... -->\n        <a ng-switch-when=\"value\"\n           ng-if=\"!isEditable('value', info) && isBinary(variable.type)\"\n           ng-href=\"{{ downloadLink(info) }}\"\n           download=\"{{ variable.name }}-data\">\n          Download\n        </a>\n\n        <div ng-switch-when=\"value\"\n             ng-if=\"!isEditable('value', info) && variable.type === 'Object'\"\n             class=\"read-only value-wrapper\">\n          <span ng-if=\"variable.valueInfo.objectTypeName\"\n                cam-widget-clipboard=\"variable.valueInfo.objectTypeName\">\n            <a ng-click=\"editVariableValue(v)\"\n               href>{{ variable.valueInfo.objectTypeName }}</a>\n          </span>\n          <a ng-if=\"!variable.valueInfo.objectTypeName\"\n             ng-click=\"editVariableValue(v)\"\n             href>&lt;undefined&gt;</a>\n        </div>\n\n        <div ng-switch-when=\"value\"\n             ng-if=\"!isEditable('value', info) && variable.type === 'String'\"\n             class=\"read-only value-wrapper\">\n          <span cam-widget-clipboard=\"variable.value\">\n            <span ng-click=\"readStringVar(v)\">{{ variable.value }}</span>\n          </span>\n        </div>\n\n        <div ng-switch-when=\"value\"\n             ng-if=\"!isEditable('value', info) && variable.type !== 'Object' && variable.type !== 'String'\"\n             class=\"read-only value-wrapper\">\n          <span ng-if=\"variable.type !== 'Bytes'\"\n                cam-widget-clipboard=\"variable.value\">{{ variable.value }}</span>\n          <span ng-if=\"variable.type === 'Bytes'\">{{ variable.value }}</span>\n        </div>\n\n        <div class=\"value-wrapper\"\n             ng-switch-when=\"value\"\n             ng-if=\"isEditable('value', info)\">\n          <a ng-click=\"setNull(v)\"\n             ng-if=\"!isNull(v)\"\n             class=\"set-null\"\n             tooltip-append-to-body=\"true\"\n             tooltip=\"Set value to &quot;null&quot;\">\n            <span class=\"glyphicon glyphicon-remove\"></span>\n          </a>\n\n          <input ng-if=\"isPrimitive(variable.type) && !useCheckbox(variable.type) && !isNull(v)\"\n                 type=\"text\"\n                 class=\"form-control\"\n                 ng-model=\"variable.value\"\n                 placeholder=\"Value of the variable\" />\n\n          <input ng-if=\"useCheckbox(variable.type)\"\n                 type=\"checkbox\"\n                 ng-model=\"variable.value\"\n                 placeholder=\"Value of the variable\" />\n\n          <a ng-if=\"variable.type === 'Object' && !isNull(v)\"\n             ng-click=\"editVariableValue(v)\">\n            {{ variable.valueInfo.objectTypeName || '&lt;undefined&gt;' }}\n          </a>\n\n          <a ng-if=\"variable.type !== 'Null' && !isBinary(variable.type) && isNull(v)\"\n             ng-click=\"setNonNull(v)\"\n             class=\"null-value\"\n             tooltip-append-to-body=\"true\"\n             tooltip=\"Re-set to previous or default value\">\n            <span class=\"null-symbol\">&lt;null&gt;</span>\n          </a>\n\n          <a ng-if=\"isBinary(variable.type)\"\n             ng-click=\"uploadVariable(v)\"\n             tooltip-append-to-body=\"true\"\n             tooltip=\"Upload a new file\">\n            Upload\n          </a>\n\n          <span ng-if=\"variable.type === 'Null'\"\n                class=\"null-value\">\n            <span class=\"null-symbol\">&lt;null&gt;</span>\n          </span>\n        </div><!-- / value-wrapper -->\n        <!-- ................................................................................... -->\n\n\n        <div ng-switch-default\n             cam-render-var-template\n             info=\"info\"\n             header-name=\"headerName\">\n        </div>\n      </td>\n\n      <td class=\"actions\"\n          ng-if=\"editable.length\">\n        <div ng-if=\"!info.editMode\"\n             class=\"btn-group\">\n          <button class=\"btn btn-xs btn-primary\"\n                  ng-disabled=\"!canEditVariable(info, v)\"\n                  ng-click=\"info.editMode = true\"\n                  tooltip-append-to-body=\"true\"\n                  tooltip=\"Edit the variable\">\n            <span class=\"glyphicon glyphicon-pencil\"></span>\n          </button>\n          <button class=\"btn btn-xs btn-default\"\n                  ng-disabled=\"!canEditVariable(info, v)\"\n                  ng-click=\"deleteVariable(v)\"\n                  tooltip-append-to-body=\"true\"\n                  tooltip=\"Delete the variable\">\n            <span class=\"glyphicon glyphicon glyphicon-trash\"></span>\n          </button>\n        </div>\n\n        <div ng-if=\"info.editMode\"\n             class=\"btn-group\">\n          <button class=\"btn btn-xs btn-primary\"\n                  ng-disabled=\"!info.valid || !info.changed\"\n                  ng-click=\"saveVariable(v)\"\n                  tooltip-append-to-body=\"true\"\n                  tooltip=\"Save the variable\">\n            <span class=\"glyphicon glyphicon-ok\"></span>\n          </button>\n          <button class=\"btn btn-xs btn-default\"\n                  ng-click=\"info.editMode = false\"\n                  tooltip-append-to-body=\"true\"\n                  tooltip=\"Revert the variable\">\n            <span class=\"glyphicon glyphicon-remove\"></span>\n          </button>\n        </div>\n      </td>\n    </tr>\n  </tbody>\n</table>\n";
 
 var typeUtils = varUtils.typeUtils;
 
@@ -3531,15 +3531,16 @@ module.exports = [
       template: template,
 
       scope: {
-        variables:    '=camVariables',
-        headers:      '=?camHeaders',
-        editable:     '=?camEditable',
+        variables:          '=camVariables',
+        headers:            '=?camHeaders',
+        editable:           '=?camEditable',
 
-        deleteVar:    '=?onDelete',
-        saveVar:      '=?onSave',
-        editVar:      '=?onEdit',
-        downloadVar:  '=?onDownload',
-        uploadVar:    '=?onUpload'
+        isVariableEditable: '=?',
+        deleteVar:          '=?onDelete',
+        saveVar:            '=?onSave',
+        editVar:            '=?onEdit',
+        downloadVar:        '=?onDownload',
+        uploadVar:          '=?onUpload'
       },
 
 
@@ -3708,9 +3709,9 @@ module.exports = [
 
 
 
-
-
-
+        $scope.canEditVariable = angular.isFunction($scope.isVariableEditable) ? $scope.isVariableEditable : (function() {
+          return true;
+        });
 
         $scope.isEditable = function(what, info) {
           return info.editMode && $scope.editable.indexOf(what) > -1;
@@ -83960,25 +83961,40 @@ var process = module.exports = {};
 var cachedSetTimeout;
 var cachedClearTimeout;
 
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
 (function () {
     try {
-        cachedSetTimeout = setTimeout;
-    } catch (e) {
-        cachedSetTimeout = function () {
-            throw new Error('setTimeout is not defined');
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
         }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
     }
     try {
-        cachedClearTimeout = clearTimeout;
-    } catch (e) {
-        cachedClearTimeout = function () {
-            throw new Error('clearTimeout is not defined');
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
         }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
     }
 } ())
 function runTimeout(fun) {
     if (cachedSetTimeout === setTimeout) {
         //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
         return setTimeout(fun, 0);
     }
     try {
@@ -83999,6 +84015,11 @@ function runTimeout(fun) {
 function runClearTimeout(marker) {
     if (cachedClearTimeout === clearTimeout) {
         //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
         return clearTimeout(marker);
     }
     try {
