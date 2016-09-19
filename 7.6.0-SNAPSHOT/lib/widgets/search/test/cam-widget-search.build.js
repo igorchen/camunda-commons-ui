@@ -146,7 +146,7 @@ module.exports = function() {
   };
 };
 
-},{"camunda-bpm-sdk-js/vendor/angular":278,"jquery":808}],5:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":278,"jquery":868}],5:[function(require,module,exports){
 'use strict';
 
 
@@ -305,7 +305,7 @@ directivesModule.config([
 
 module.exports = directivesModule;
 
-},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":810,"../util/index":15,"./autoFill":1,"./compileTemplate":2,"./email":3,"./engineSelect":4,"./inPlaceTextField":5,"./instantTypeahead":7,"./nl2br":8,"./notificationsPanel":9,"./password":10,"./passwordRepeat":11,"./showIfAuthorized":12,"camunda-bpm-sdk-js/vendor/angular":278}],7:[function(require,module,exports){
+},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":870,"../util/index":15,"./autoFill":1,"./compileTemplate":2,"./email":3,"./engineSelect":4,"./inPlaceTextField":5,"./instantTypeahead":7,"./nl2br":8,"./notificationsPanel":9,"./password":10,"./passwordRepeat":11,"./showIfAuthorized":12,"camunda-bpm-sdk-js/vendor/angular":278}],7:[function(require,module,exports){
   'use strict';
 
   var secretEmptyKey = '[$empty$]';
@@ -697,7 +697,7 @@ filtersModule.config([
 
 module.exports = filtersModule;
 
-},{"angular-translate":40,"camunda-bpm-sdk-js/vendor/angular":278,"moment":809}],14:[function(require,module,exports){
+},{"angular-translate":40,"camunda-bpm-sdk-js/vendor/angular":278,"moment":869}],14:[function(require,module,exports){
 'use strict';
 
 var angular = require('camunda-bpm-sdk-js/vendor/angular');
@@ -2017,7 +2017,7 @@ widgetModule.filter('camQueryComponent', camQueryComponent);
 
 module.exports = widgetModule;
 
-},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":810,"../directives/index":6,"../filter/date/index":13,"../search/index":14,"./bpmn-viewer/cam-widget-bpmn-viewer":19,"./clipboard/cam-widget-clipboard":20,"./cmmn-viewer/cam-widget-cmmn-viewer":21,"./debug/cam-widget-debug":22,"./dmn-viewer/cam-widget-dmn-viewer":23,"./footer/cam-widget-footer":24,"./header/cam-widget-header":25,"./inline-field/cam-widget-inline-field":27,"./loader/cam-widget-loader":28,"./search-pill/cam-query-component":29,"./search-pill/cam-widget-search-pill":30,"./search/cam-widget-search":31,"./variable/cam-variable-validator":34,"./variable/cam-widget-variable":35,"./variables-table/cam-render-var-template":36,"./variables-table/cam-widget-variables-table":37,"camunda-bpm-sdk-js/vendor/angular":278}],27:[function(require,module,exports){
+},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":870,"../directives/index":6,"../filter/date/index":13,"../search/index":14,"./bpmn-viewer/cam-widget-bpmn-viewer":19,"./clipboard/cam-widget-clipboard":20,"./cmmn-viewer/cam-widget-cmmn-viewer":21,"./debug/cam-widget-debug":22,"./dmn-viewer/cam-widget-dmn-viewer":23,"./footer/cam-widget-footer":24,"./header/cam-widget-header":25,"./inline-field/cam-widget-inline-field":27,"./loader/cam-widget-loader":28,"./search-pill/cam-query-component":29,"./search-pill/cam-widget-search-pill":30,"./search/cam-widget-search":31,"./variable/cam-variable-validator":34,"./variable/cam-widget-variable":35,"./variables-table/cam-render-var-template":36,"./variables-table/cam-widget-variables-table":37,"camunda-bpm-sdk-js/vendor/angular":278}],27:[function(require,module,exports){
 'use strict';
 
 
@@ -2442,7 +2442,7 @@ module.exports = [
     };
   }];
 
-},{"camunda-bpm-sdk-js/vendor/angular":278,"jquery":808}],28:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":278,"jquery":868}],28:[function(require,module,exports){
 'use strict';
 
 
@@ -2600,7 +2600,7 @@ module.exports = ['$timeout',
     };
   }];
 
-},{"jquery":808}],31:[function(require,module,exports){
+},{"jquery":868}],31:[function(require,module,exports){
 'use strict';
 
 
@@ -3097,7 +3097,7 @@ module.exports = ['$timeout', '$location', 'search',
     };
   }];
 
-},{"camunda-bpm-sdk-js/vendor/angular":278,"jquery":808}],32:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":278,"jquery":868}],32:[function(require,module,exports){
 'use strict';
 
 var angular = require('camunda-bpm-sdk-js/vendor/angular'),
@@ -3609,7 +3609,7 @@ module.exports = [
     };
   }];
 
-},{"jquery":808}],37:[function(require,module,exports){
+},{"jquery":868}],37:[function(require,module,exports){
 'use strict';
 
 
@@ -12175,7 +12175,7 @@ if (!String.fromCodePoint) {
 })(typeof exports === "undefined" ? sax = {} : exports);
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":782,"stream":806,"string_decoder":807}],63:[function(require,module,exports){
+},{"buffer":842,"stream":866,"string_decoder":867}],63:[function(require,module,exports){
 /**
  * Tiny stack for browser or server
  *
@@ -63033,7 +63033,7 @@ module.exports = XMLWriter;
 
 },{"./common":308,"lodash/collection/filter":378,"lodash/collection/forEach":380,"lodash/collection/map":382,"lodash/lang/isString":489,"lodash/object/assign":492,"moddle/lib/ns":318,"moddle/lib/types":321}],311:[function(require,module,exports){
 arguments[4][62][0].apply(exports,arguments)
-},{"buffer":782,"dup":62,"stream":806,"string_decoder":807}],312:[function(require,module,exports){
+},{"buffer":842,"dup":62,"stream":866,"string_decoder":867}],312:[function(require,module,exports){
 arguments[4][63][0].apply(exports,arguments)
 },{"dup":63}],313:[function(require,module,exports){
 arguments[4][64][0].apply(exports,arguments)
@@ -69193,25 +69193,29 @@ arguments[4][274][0].apply(exports,arguments)
 
 var inherits = require('inherits');
 
+var assign = require('lodash/object/assign');
+
+var Ids = require('ids');
+
 var Viewer = require('./Viewer');
 
 var initialTemplate = [
   '<?xml version="1.0" encoding="UTF-8"?>',
   '<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn11.xsd"',
-               'id="definitions"',
-               'name="definitions"',
-               'namespace="http://camunda.org/schema/1.0/dmn">',
-    '<decision id="decision" name="">',
-      '<decisionTable id="decisionTable">',
-        '<input id="input1" label="">',
-          '<inputExpression id="inputExpression1" typeRef="string">',
-            '<text></text>',
-          '</inputExpression>',
-        '</input>',
-        '<output id="output1" label="" name="" typeRef="string">',
-        '</output>',
-      '</decisionTable>',
-    '</decision>',
+  'id="definitions"',
+  'name="definitions"',
+  'namespace="http://camunda.org/schema/1.0/dmn">',
+  '<decision id="decision" name="">',
+  '<decisionTable id="decisionTable">',
+  '<input id="input1" label="">',
+  '<inputExpression id="inputExpression1" typeRef="string">',
+  '<text></text>',
+  '</inputExpression>',
+  '</input>',
+  '<output id="output1" label="" name="" typeRef="string">',
+  '</output>',
+  '</decisionTable>',
+  '</decision>',
   '</definitions>'
 ].join('\n');
 
@@ -69288,13 +69292,68 @@ var initialTemplate = [
  * @param {Array<didi.Module>} [options.additionalModules] a list of modules to use with the default modules
  */
 function Modeler(options) {
+
+  options = assign({ editingAllowed: true }, options);
+
   Viewer.call(this, options);
+
+  // hook ID collection into the modeler
+  this.on('import.parse.complete', function(event) {
+    if (!event.error) {
+      this._collectIds(event.definitions, event.context);
+    }
+  }, this);
+
+  this.on('table.destroy', function() {
+    this.moddle.ids.clear();
+  }, this);
 }
 
 inherits(Modeler, Viewer);
 
+module.exports = Modeler;
+
+
 Modeler.prototype.createTemplate = function(done) {
   this.importXML(initialTemplate, done);
+};
+
+
+/**
+ * Create a moddle instance, attaching ids to it.
+ *
+ * @param {Object} options
+ */
+Modeler.prototype._createModdle = function(options) {
+  var moddle = Viewer.prototype._createModdle.call(this, options);
+
+  // attach ids to moddle to be able to track
+  // and validated ids in the BPMN 2.0 XML document
+  // tree
+  moddle.ids = new Ids([ 32, 36, 1 ]);
+
+  return moddle;
+};
+
+/**
+ * Collect ids processed during parsing of the
+ * definitions object.
+ *
+ * @param {ModdleElement} definitions
+ * @param {Context} context
+ */
+Modeler.prototype._collectIds = function(definitions, context) {
+
+  var moddle = definitions.$model,
+      ids = moddle.ids,
+      id;
+
+  // remove references from previous import
+  ids.clear();
+
+  for (id in context.elementsById) {
+    ids.claim(id, context.elementsById[id]);
+  }
 };
 
 Modeler.prototype._modelingModules = [
@@ -69303,9 +69362,15 @@ Modeler.prototype._modelingModules = [
   require('./features/editor-actions'),
   require('./features/modeling'),
   require('./features/context-menu'),
+  require('./features/simple-editing'),
+  require('./features/descriptions/editing'),
   require('table-js/lib/features/keyboard'),
   require('table-js/lib/features/row-drag'),
-  require('./features/column-drag')
+  require('./features/expression-language'),
+  require('./features/column-drag'),
+  require('./features/date-edit/modeler'),
+  require('./features/number-edit'),
+  require('./features/string-edit/modeler')
 ];
 
 
@@ -69319,10 +69384,13 @@ Modeler.prototype._modules = [].concat(
   Modeler.prototype._modules,
   Modeler.prototype._modelingModules);
 
-
-module.exports = Modeler;
-
-},{"./Viewer":523,"./features/column-drag":532,"./features/context-menu":534,"./features/editor-actions":536,"./features/modeling":560,"inherits":608,"table-js/lib/features/editing":750,"table-js/lib/features/keyboard":756,"table-js/lib/features/row-drag":774}],523:[function(require,module,exports){
+},{"./Viewer":523,"./features/column-drag":532,"./features/context-menu":534,"./features/date-edit/modeler":537,"./features/descriptions/editing":543,"./features/editor-actions":546,"./features/expression-language":548,"./features/modeling":576,"./features/number-edit":578,"./features/simple-editing":582,"./features/string-edit/modeler":587,"ids":635,"inherits":637,"lodash/object/assign":757,"table-js/lib/features/editing":806,"table-js/lib/features/keyboard":812,"table-js/lib/features/row-drag":830}],523:[function(require,module,exports){
+/**
+ * The code in the <project-logo></project-logo> area
+ * must not be changed.
+ *
+ * @see http://bpmn.io/license for more information.
+ */
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -69336,27 +69404,12 @@ var domify = require('min-dom/lib/domify'),
 var Table = require('table-js'),
     DmnModdle = require('dmn-moddle');
 
-var IdSupport = require('dmn-moddle/lib/id-support'),
-    Ids = require('ids');
+var inherits = require('inherits');
 
 var Importer = require('./import/Importer');
 
 var ComboBox = require('table-js/lib/features/combo-box');
 
-
-function initListeners(table, listeners) {
-  var events = table.get('eventBus');
-
-  listeners.forEach(function(l) {
-    events.on(l.event, l.handler);
-  });
-
-  events.on('table.destroy', function() {
-    if (ComboBox.prototype._openedDropdown) {
-      ComboBox.prototype._openedDropdown._closeDropdown();
-    }
-  });
-}
 
 function checkValidationError(err) {
 
@@ -69427,43 +69480,87 @@ function Viewer(options) {
 
   this.options = options = assign({}, DEFAULT_OPTIONS, options || {});
 
-  var parent = options.container;
+  this.moddle = this._createModdle(options);
 
-  // support jquery element
-  // unwrap it if passed
-  if (parent.get) {
-    parent = parent.get(0);
-  }
+  this.container = this._createContainer(options);
 
-  // support selector
-  if (isString(parent)) {
-    parent = domQuery(parent);
-  }
+  /* <project-logo> */
 
-  var container = this.container = domify('<div class="dmn-table"></div>');
-  parent.appendChild(container);
+  addProjectLogo(this.container);
+
+  /* </project-logo> */
+
+  this._init(this.container, this.moddle, options);
+
+  this.on([ 'table.destroy', 'table.clear' ], function() {
+    if (ComboBox.prototype._openedDropdown) {
+      ComboBox.prototype._openedDropdown._closeDropdown();
+    }
+  }, this);
 }
 
+inherits(Viewer, Table);
+
+module.exports = Viewer;
+
+/**
+ * Parse and render a DMN 1.1 table.
+ *
+ * Once finished the viewer reports back the result to the
+ * provided callback function with (err, warnings).
+ *
+ * ## Life-Cycle Events
+ *
+ * During import the viewer will fire life-cycle events:
+ *
+ *   * import.parse.start (about to read model from xml)
+ *   * import.parse.complete (model read; may have worked or not)
+ *   * import.render.start (graphical import start)
+ *   * import.render.complete (graphical import finished)
+ *   * import.done (everything done)
+ *
+ * You can use these events to hook into the life-cycle.
+ *
+ * @param {String} xml the DMN 1.1 xml
+ * @param {Function} [done] invoked with (err, warnings=[])
+ */
 Viewer.prototype.importXML = function(xml, done) {
+
+  // done is optional
+  done = done || function() {};
 
   var self = this;
 
-  this.moddle = this.createModdle();
+  // hook in pre-parse listeners +
+  // allow xml manipulation
+  xml = this._emit('import.parse.start', { xml: xml }) || xml;
 
   this.moddle.fromXML(xml, 'dmn:Definitions', function(err, definitions, context) {
+
+    // hook in post parse listeners +
+    // allow definitions manipulation
+    definitions = self._emit('import.parse.complete', {
+      error: err,
+      definitions: definitions,
+      context: context
+    }) || definitions;
+
     if (err) {
       err = checkValidationError(err);
+
+      self._emit('import.done', { error: err });
+
       return done(err);
     }
 
     var parseWarnings = context.warnings;
 
     self.importDefinitions(definitions, function(err, importWarnings) {
-      if (err) {
-        return done(err);
-      }
+      var allWarnings = [].concat(parseWarnings, importWarnings || []);
 
-      done(null, parseWarnings.concat(importWarnings || []));
+      self._emit('import.done', { error: err, warnings: allWarnings });
+
+      done(err, allWarnings);
     });
   });
 };
@@ -69484,78 +69581,68 @@ Viewer.prototype.saveXML = function(options, done) {
   this.moddle.toXML(definitions, options, done);
 };
 
-Viewer.prototype.createModdle = function() {
-  var moddle = new DmnModdle(this.options.moddleExtensions);
-
-  IdSupport.extend(moddle, new Ids([ 32, 36, 1 ]));
-
-  return moddle;
-};
-
-Viewer.prototype.get = function(name) {
-
-  if (!this.table) {
-    throw new Error('no table loaded');
-  }
-
-  return this.table.get(name);
-};
-
-Viewer.prototype.invoke = function(fn) {
-
-  if (!this.table) {
-    throw new Error('no table loaded');
-  }
-
-  return this.table.invoke(fn);
-};
 
 Viewer.prototype.importDefinitions = function(definitions, done) {
 
   // use try/catch to not swallow synchronous exceptions
   // that may be raised during model parsing
   try {
-    if (this.table) {
+    if (this.definitions) {
       this.clear();
     }
 
     this.definitions = definitions;
 
-    var table = this.table = this._createTable(this.options);
-
-    this._init(table);
-
-    Importer.importDmnTable(table, definitions, done);
+    // perform graphical import
+    Importer.importDmnTable(this, definitions, done);
   } catch (e) {
     done(e);
   }
 };
 
-Viewer.prototype._init = function(table) {
-  initListeners(table, this.__listeners || []);
 
-  var container = table.get('sheet').getContainer();
+Viewer.prototype._createContainer = function(options) {
 
-  /**
-   * The code in the <project-logo></project-logo> area
-   * must not be changed, see http://bpmn.io/license for more information
-   *
-   * <project-logo>
-   */
-  container.appendChild(domify('<a href="http://bpmn.io" class="dmn-js-logo"></a>'));
-  /**
-   * </project-logo>
-   */
+  var parent = options.container,
+      container;
+
+  // support jquery element
+  // unwrap it if passed
+  if (parent.get) {
+    parent = parent.get(0);
+  }
+
+  // support selector
+  if (isString(parent)) {
+    parent = domQuery(parent);
+  }
+
+  container = domify('<div class="dmn-table"></div>');
+
+  parent.appendChild(container);
+
+  return container;
 };
 
-Viewer.prototype._createTable = function(options) {
+/**
+ * Create a moddle instance.
+ *
+ * @param {Object} options
+ */
+Viewer.prototype._createModdle = function(options) {
+  var moddleOptions = assign({}, this._moddleExtensions, options.moddleExtensions);
+
+  return new DmnModdle(moddleOptions);
+};
+
+Viewer.prototype._init = function(container, moddle, options) {
 
   var modules = [].concat(options.modules || this.getModules(), options.additionalModules || []);
 
   // add self as an available service
   modules.unshift({
     dmnjs: [ 'value', this ],
-    moddle: [ 'value', this.moddle ]
+    moddle: [ 'value', moddle ]
   });
 
   options = omit(options, 'additionalModules');
@@ -69564,12 +69651,13 @@ Viewer.prototype._createTable = function(options) {
     sheet: {
       width: options.width,
       height: options.height,
-      container: this.container
+      container: container
     },
     modules: modules
   });
 
-  return new Table(options);
+  // invoke diagram constructor
+  Table.call(this, options);
 };
 
 
@@ -69577,49 +69665,54 @@ Viewer.prototype.getModules = function() {
   return this._modules;
 };
 
-/**
- * Remove all drawn elements from the viewer.
- *
- * After calling this method the viewer can still
- * be reused for opening another table.
- */
-Viewer.prototype.clear = function() {
-  var table = this.table;
-
-  if (table) {
-    table.destroy();
-  }
-
-  delete this.table;
-};
 
 /**
- * Destroy the viewer instance and remove all its remainders
- * from the document tree.
+ * Destroy the viewer instance and remove all its
+ * remainders from the document tree.
  */
 Viewer.prototype.destroy = function() {
-  // clear underlying diagram
-  this.clear();
 
-  // remove container
+  // table destroy
+  Table.prototype.destroy.call(this);
+
+  // dom detach
   domRemove(this.container);
 };
 
 /**
- * Register an event listener on the viewer
+ * Emit an event on the underlying {@link EventBus}
+ *
+ * @param  {String} type
+ * @param  {Object} event
+ *
+ * @return {Object} event processing result (if any)
+ */
+Viewer.prototype._emit = function(type, event) {
+  return this.get('eventBus').fire(type, event);
+};
+
+/**
+ * Register an event listener
+ *
+ * Remove a previously added listener via {@link #off(event, callback)}.
  *
  * @param {String} event
- * @param {Function} handler
+ * @param {Number} [priority]
+ * @param {Function} callback
+ * @param {Object} [that]
  */
-Viewer.prototype.on = function(event, handler) {
-  var table = this.table,
-      listeners = this.__listeners = this.__listeners || [];
+Viewer.prototype.on = function(event, priority, callback, target) {
+  return this.get('eventBus').on(event, priority, callback, target);
+};
 
-  listeners.push({ event: event, handler: handler });
-
-  if (table) {
-    table.get('eventBus').on(event, handler);
-  }
+/**
+ * De-register an event listener
+ *
+ * @param {String} event
+ * @param {Function} callback
+ */
+Viewer.prototype.off = function(event, callback) {
+  this.get('eventBus').off(event, callback);
 };
 
 // modules the viewer is composed of
@@ -69631,16 +69724,56 @@ Viewer.prototype._modules = [
   require('./features/annotations'),
   require('./features/mappings-row'),
   require('./features/type-row'),
-  require('./features/hide-tech-control'),
+  require('./features/simple-mode'),
   require('./features/hit-policy'),
+  require('./features/descriptions'),
+  require('./features/date-edit/viewer'),
+  require('./features/string-edit/viewer'),
   require('table-js/lib/features/interaction-events'),
   require('table-js/lib/features/controls'),
   require('table-js/lib/features/complex-cell')
 ];
 
-module.exports = Viewer;
 
-},{"./core":524,"./features/annotations":529,"./features/hide-tech-control":541,"./features/hit-policy":544,"./features/io-label":548,"./features/mappings-row":551,"./features/table-name":562,"./features/type-row":565,"./import/Importer":568,"dmn-moddle":587,"dmn-moddle/lib/id-support":589,"ids":606,"lodash/lang/isString":701,"lodash/object/assign":703,"lodash/object/omit":706,"min-dom/lib/domify":714,"min-dom/lib/query":717,"min-dom/lib/remove":718,"table-js":728,"table-js/lib/features/combo-box":742,"table-js/lib/features/complex-cell":744,"table-js/lib/features/controls":746,"table-js/lib/features/interaction-events":754,"table-js/lib/features/line-numbers":758}],524:[function(require,module,exports){
+/* <project-logo> */
+
+var PoweredBy = require('./util/PoweredByUtil'),
+    domEvent = require('min-dom/lib/event');
+
+/**
+ * Adds the project logo to the diagram container as
+ * required by the bpmn.io license.
+ *
+ * @see http://bpmn.io/license
+ *
+ * @param {Element} container
+ */
+function addProjectLogo(container) {
+  var logoData = PoweredBy.BPMNIO_LOGO;
+
+  var linkMarkup =
+    '<a href="http://bpmn.io" ' +
+       'target="_blank" ' +
+       'class="dmn-js-powered-by" ' +
+       'title="Powered by bpmn.io" ' +
+       'style="position: absolute; z-index: 100">' +
+        '<img src="data:image/png;base64,' + logoData + '">' +
+    '</a>';
+
+  var linkElement = domify(linkMarkup);
+
+  container.appendChild(linkElement);
+
+  domEvent.bind(linkElement, 'click', function(event) {
+    PoweredBy.open();
+
+    event.preventDefault();
+  });
+}
+
+/* </project-logo> */
+
+},{"./core":524,"./features/annotations":529,"./features/date-edit/viewer":540,"./features/descriptions":544,"./features/hit-policy":554,"./features/io-label":558,"./features/mappings-row":562,"./features/simple-mode":584,"./features/string-edit/viewer":590,"./features/table-name":592,"./features/type-row":596,"./import/Importer":599,"./util/PoweredByUtil":603,"dmn-moddle":616,"inherits":637,"lodash/lang/isString":755,"lodash/object/assign":757,"lodash/object/omit":760,"min-dom/lib/domify":769,"min-dom/lib/event":770,"min-dom/lib/query":772,"min-dom/lib/remove":773,"table-js":783,"table-js/lib/features/combo-box":798,"table-js/lib/features/complex-cell":800,"table-js/lib/features/controls":802,"table-js/lib/features/interaction-events":810,"table-js/lib/features/line-numbers":814}],524:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../import'),
@@ -69648,15 +69781,63 @@ module.exports = {
   ]
 };
 
-},{"../draw":526,"../import":570}],525:[function(require,module,exports){
+},{"../draw":526,"../import":601}],525:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
 
-function DmnRenderer(eventBus) {
+var HIGH_PRIORITY = 1500,
+    UTILITY_COL_WIDTH = 45;
+
+
+function DmnRenderer(eventBus, elementRegistry, sheet, config) {
+
+  eventBus.on('sheet.resized', HIGH_PRIORITY, function(event) {
+    var context = event.context;
+
+    var container = sheet.getContainer();
+
+    var minColWidth = config.minColWidth;
+
+    var baseWidth = UTILITY_COL_WIDTH,
+        numberOfCols = 1,
+        utilityColumn,
+        firstColumn,
+        minTableWidth;
+
+    if (!context) {
+      event.context = context = {};
+    }
+
+    // get a random cell to figure out the width
+    utilityColumn = elementRegistry.filter(function(elem) {
+      return elem.id === 'utilityColumn';
+    })[0];
+
+    firstColumn = utilityColumn.next;
+
+    if (!firstColumn) {
+      return;
+    }
+
+    // get the number of cols
+    while (!firstColumn.isAnnotationsColumn) {
+      firstColumn = firstColumn.next;
+
+      numberOfCols++;
+    }
+
+    minTableWidth = baseWidth + numberOfCols * minColWidth;
+
+    sheet.setWidth('auto');
+
+    if (container.clientWidth <= minTableWidth) {
+      context.newWidth = minTableWidth;
+    }
+  });
 
   eventBus.on('row.render', function(event) {
-    if(event.data.isClauseRow) {
+    if (event.data.isClauseRow) {
       domClasses(event.gfx).add('labels');
     }
   });
@@ -69665,21 +69846,21 @@ function DmnRenderer(eventBus) {
     var data = event.data,
         gfx  = event.gfx;
 
-    if(!data.column.businessObject) {
+    if (!data.column.businessObject) {
       return;
     }
 
-    if(data.row.isClauseRow) {
+    if (data.row.isClauseRow) {
       // clause names
       gfx.childNodes[0].textContent = data.column.businessObject.label;
-    } else if(data.content) {
-      if(!data.content.tagName && data.row.businessObject) {
+    } else if (data.content) {
+      if (!data.content.tagName && data.row.businessObject) {
         // input and output entries
         gfx.childNodes[0].textContent = data.content.text;
       }
     }
-    if(!data.row.isFoot) {
-      if(!!data.column.businessObject.inputExpression) {
+    if (!data.row.isFoot) {
+      if (data.column.businessObject.inputExpression) {
         domClasses(gfx).add('input');
       } else {
         domClasses(gfx).add('output');
@@ -69688,11 +69869,11 @@ function DmnRenderer(eventBus) {
   });
 }
 
-DmnRenderer.$inject = [ 'eventBus' ];
+DmnRenderer.$inject = [ 'eventBus', 'elementRegistry', 'sheet', 'config' ];
 
 module.exports = DmnRenderer;
 
-},{"min-dom/lib/classes":712}],526:[function(require,module,exports){
+},{"min-dom/lib/classes":767}],526:[function(require,module,exports){
 module.exports = {
   __init__: [ 'dmnRenderer' ],
   dmnRenderer: [ 'type', require('./DmnRenderer') ]
@@ -69708,61 +69889,53 @@ var domify = require('min-dom/lib/domify');
  *
  * @param {EventBus} eventBus
  */
-function Annotations(eventBus, sheet, elementRegistry, graphicsFactory, hideTechControl) {
+function Annotations(eventBus, sheet, elementRegistry, graphicsFactory) {
 
   this.column = null;
 
-  var self = this;
-
   var labelCell;
 
-  eventBus.on('import.success', function(event) {
+  eventBus.on('import.done', function(event) {
+    var column;
+
+    if (event.error) {
+      return;
+    }
 
     eventBus.fire('annotations.add', event);
 
-    self.column = sheet.addColumn({
+    this.column = column = sheet.addColumn({
       id: 'annotations',
       isAnnotationsColumn: true
     });
 
     labelCell = elementRegistry.filter(function(element) {
-        return element._type === 'cell' && element.column === self.column && element.row.isLabelRow;
-      })[0];
-    labelCell.rowspan = hideTechControl.isHidden() ? 2 : 4;
+      return element._type === 'cell' && element.column === column && element.row.isLabelRow;
+    })[0];
+
+    labelCell.rowspan = 4;
 
     labelCell.content = domify('Annotation');
 
-    graphicsFactory.update('column', self.column, elementRegistry.getGraphics(self.column.id));
+    graphicsFactory.update('column', column, elementRegistry.getGraphics(this.column.id));
 
-    eventBus.fire('annotations.added', self.column);
-  });
+    eventBus.fire('annotations.added', column);
+  }, this);
 
-  eventBus.on('details.hidden', function() {
-    if(labelCell) {
-      labelCell.rowspan = 2;
-      graphicsFactory.update('column', self.column, elementRegistry.getGraphics(self.column.id));
-    }
-  });
-  eventBus.on('details.shown', function() {
-    if(labelCell) {
-      labelCell.rowspan = 4;
-      graphicsFactory.update('column', self.column, elementRegistry.getGraphics(self.column.id));
-    }
-  });
+  eventBus.on([ 'sheet.destroy', 'sheet.clear' ], function(event) {
+    var column = this.column;
 
-  eventBus.on('sheet.destroy', function(event) {
-
-    eventBus.fire('annotations.destroy', self.column);
+    eventBus.fire('annotations.destroy', column);
 
     sheet.removeColumn({
       id: 'annotations'
     });
 
-    eventBus.fire('annotations.destroyed', self.column);
-  });
+    eventBus.fire('annotations.destroyed', column);
+  }, this);
 }
 
-Annotations.$inject = [ 'eventBus', 'sheet', 'elementRegistry', 'graphicsFactory', 'hideTechControl' ];
+Annotations.$inject = [ 'eventBus', 'sheet', 'elementRegistry', 'graphicsFactory' ];
 
 module.exports = Annotations;
 
@@ -69770,7 +69943,7 @@ Annotations.prototype.getColumn = function() {
   return this.column;
 };
 
-},{"min-dom/lib/domify":714}],528:[function(require,module,exports){
+},{"min-dom/lib/domify":769}],528:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -69780,9 +69953,9 @@ function AnnotationsRenderer(
     annotations) {
 
   eventBus.on('cell.render', function(event) {
-    if(event.data.column === annotations.getColumn() && !event.data.row.isFoot) {
+    if (event.data.column === annotations.getColumn() && !event.data.row.isFoot) {
       domClasses(event.gfx).add('annotation');
-      if(!event.data.row.isHead) {
+      if (!event.data.row.isHead) {
         // render the description of the rule inside the cell
         event.gfx.childNodes[0].textContent = event.data.row.businessObject.description || '';
       }
@@ -69797,7 +69970,7 @@ AnnotationsRenderer.$inject = [
 
 module.exports = AnnotationsRenderer;
 
-},{"min-dom/lib/classes":712}],529:[function(require,module,exports){
+},{"min-dom/lib/classes":767}],529:[function(require,module,exports){
 module.exports = {
   __init__: [ 'annotations', 'annotationsRenderer'],
   __depends__: [
@@ -69846,22 +70019,22 @@ function ColumnDrag(eventBus, sheet, elementRegistry, modeling) {
   eventBus.on('element.mousedown', function(event) {
     var hasDragHandle = domClasses(event.originalEvent.target).has('drag-handle');
 
-    if(hasDragHandle) {
+    if (hasDragHandle) {
       event.preventDefault();
       self.startDragging(event.element);
       self.setLastDragPoint(event.originalEvent);
     }
   });
   document.body.addEventListener('mouseup', function(event) {
-    if(self.isDragging()) {
+    if (self.isDragging()) {
       self.stopDragging();
     }
   });
   document.body.addEventListener('mousemove', function(event) {
-    if(self.isDragging()) {
+    if (self.isDragging()) {
       event.preventDefault();
       self.updateDragDistance(event);
-      if(self.dragDistance > DRAG_THRESHOLD) {
+      if (self.dragDistance > DRAG_THRESHOLD) {
         self.updateVisuals(event);
       }
     }
@@ -69907,7 +70080,7 @@ ColumnDrag.prototype.clearHighlight = function() {
 
 ColumnDrag.prototype.updateVisuals = function(event) {
 
-  if(!this.dragVisual) {
+  if (!this.dragVisual) {
     this.dragVisual = this.createDragVisual(this.draggedElement);
   }
 
@@ -69924,26 +70097,26 @@ ColumnDrag.prototype.updateVisuals = function(event) {
 
   // get the element we are hovering over
   var td = event.target;
-  while(td && (td.tagName || '').toLowerCase() !== 'td') {
+  while (td && (td.tagName || '').toLowerCase() !== 'td') {
     td = td.parentNode;
   }
-  if(td && isOfSameType(this.draggedElement, this._elementRegistry.get(td.getAttribute('data-element-id')))) {
+  if (td && isOfSameType(this.draggedElement, this._elementRegistry.get(td.getAttribute('data-element-id')))) {
       // check if we hover over the left or the right half of the column
-      var e = td;
-      var offset = {x:0,y:0};
-      while (e)
+    var e = td;
+    var offset = { x:0,y:0 };
+    while (e)
       {
-          offset.x += e.offsetLeft;
-          offset.y += e.offsetTop;
-          e = e.offsetParent;
-      }
-      if(event.clientX < offset.x + td.clientWidth / 2) {
-        this.highlightColumn(td, 'left');
-        this.moveLeft = true;
-      } else {
-        this.highlightColumn(td, 'right');
-        this.moveLeft = false;
-      }
+      offset.x += e.offsetLeft;
+      offset.y += e.offsetTop;
+      e = e.offsetParent;
+    }
+    if (event.clientX < offset.x + td.clientWidth / 2) {
+      this.highlightColumn(td, 'left');
+      this.moveLeft = true;
+    } else {
+      this.highlightColumn(td, 'right');
+      this.moveLeft = false;
+    }
 
     this.highlightedBorder = td;
   }
@@ -69992,37 +70165,39 @@ ColumnDrag.prototype.createDragVisual = function(element) {
     cellClone.style.height = rowClone.childNodes.item(idx).clientHeight + 'px';
 
     // remove all childNodes from the rowClone
-    while(rowClone.firstChild) {
+    while (rowClone.firstChild) {
       rowClone.removeChild(rowClone.firstChild);
     }
 
     // add the cellclone as only child of the row
     rowClone.appendChild(cellClone);
     thead.appendChild(rowClone);
-  } while (!!(node = node.nextSibling));
+  } while ((node = node.nextSibling));
   table.appendChild(thead);
 
   // iterate over the body
   var tbody = domify('<tbody>');
   node = this._sheet.getBody().firstChild;
-  do {
-    // clone row
-    rowClone = node.cloneNode(true);
+  if (node) {
+    do {
+      // clone row
+      rowClone = node.cloneNode(true);
 
-    // clone cell with correct idx
-    cellClone = rowClone.childNodes.item(idx).cloneNode(true);
+      // clone cell with correct idx
+      cellClone = rowClone.childNodes.item(idx).cloneNode(true);
 
-    cellClone.style.height = node.childNodes.item(idx).clientHeight + 'px';
+      cellClone.style.height = node.childNodes.item(idx).clientHeight + 'px';
 
-    // remove all childNodes from the rowClone
-    while(rowClone.firstChild) {
-      rowClone.removeChild(rowClone.firstChild);
-    }
+      // remove all childNodes from the rowClone
+      while (rowClone.firstChild) {
+        rowClone.removeChild(rowClone.firstChild);
+      }
 
-    // add the cellclone as only child of the row
-    rowClone.appendChild(cellClone);
-    tbody.appendChild(rowClone);
-  } while (!!(node = node.nextSibling));
+      // add the cellclone as only child of the row
+      rowClone.appendChild(cellClone);
+      tbody.appendChild(rowClone);
+    } while ((node = node.nextSibling));
+  }
   table.appendChild(tbody);
 
 
@@ -70036,12 +70211,12 @@ ColumnDrag.prototype.createDragVisual = function(element) {
 };
 
 ColumnDrag.prototype.stopDragging = function() {
-  if(this.highlightedBorder) {
+  if (this.highlightedBorder) {
     // make sure we drop it to the element we have previously highlighted
     var targetElement = this._elementRegistry.get(this.highlightedBorder.getAttribute('data-element-id'));
     this._modeling.moveColumn(this.draggedElement.column, targetElement.column, this.moveLeft);
   }
-  if(this.dragVisual) {
+  if (this.dragVisual) {
     this.dragVisual.parentNode.removeChild(this.dragVisual);
     // restore opacity of the element
     domClasses(this._elementRegistry.getGraphics(this.draggedElement)).remove('dragged');
@@ -70058,7 +70233,7 @@ ColumnDrag.prototype.isDragging = function() {
   return !!this.draggedElement;
 };
 
-},{"lodash/collection/forEach":616,"min-dom/lib/classes":712,"min-dom/lib/domify":714}],531:[function(require,module,exports){
+},{"lodash/collection/forEach":646,"min-dom/lib/classes":767,"min-dom/lib/domify":769}],531:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -70074,7 +70249,7 @@ function DragRenderer(
 
       var hasDragHandle = domClasses(event.gfx.lastChild).has('drag-handle');
 
-      if(!hasDragHandle) {
+      if (!hasDragHandle) {
         event.gfx.appendChild(domify('<span class="drag-handle dmn-icon-drag"></span>'));
       }
     }
@@ -70093,7 +70268,7 @@ DragRenderer.$inject = [
 
 module.exports = DragRenderer;
 
-},{"min-dom/lib/classes":712,"min-dom/lib/domify":714}],532:[function(require,module,exports){
+},{"min-dom/lib/classes":767,"min-dom/lib/domify":769}],532:[function(require,module,exports){
 module.exports = {
   __init__: [ 'columnDrag', 'columnDragRenderer' ],
   __depends__: [],
@@ -70106,22 +70281,29 @@ module.exports = {
 
 var getEntriesType = require('../../util/SelectionUtil').getEntriesType;
 
-function ContextMenu(popupMenu, eventBus, modeling, elementRegistry, editorActions, selection) {
+function ContextMenu(popupMenu, eventBus, modeling, elementRegistry, editorActions, selection, sheet) {
 
   this._popupMenu = popupMenu;
   this._eventBus = eventBus;
   this._modeling = modeling;
   this._elementRegistry = elementRegistry;
   this._editorActions = editorActions;
+  this._selection = selection;
+  this._sheet = sheet;
 
   var self = this;
 
   eventBus.on('element.contextmenu', function(evt) {
+    var element = evt.element,
+        originalEvent = evt.originalEvent;
+
     // Do not open context menu on table footer
-    if(!evt.element.row.isFoot) {
+    if (!element.row.isFoot && (element.column.id !== 'utilityColumn')) {
       evt.preventDefault();
       evt.gfx.firstChild.focus();
-      self.open(evt.originalEvent.pageX, evt.originalEvent.pageY, evt.element);
+
+      self.open(originalEvent.pageX,
+                originalEvent.pageY, element);
     }
   });
 
@@ -70130,77 +70312,88 @@ function ContextMenu(popupMenu, eventBus, modeling, elementRegistry, editorActio
   };
   eventBus.on('popupmenu.open', function(evt) {
     evt.container.addEventListener('contextmenu', preventFunction);
+    selection.freeze();
   });
 
   eventBus.on('popupmenu.close', function(evt) {
     evt.container.removeEventListener('contextmenu', preventFunction);
+    selection.unfreeze();
   });
 
 
   document.addEventListener('click', function(evt) {
-    self.close();
+    if (!evt.customHandler) {
+      self.close();
+    }
   });
 
 }
 
-ContextMenu.$inject = [ 'popupMenu', 'eventBus', 'modeling', 'elementRegistry', 'editorActions' ];
+ContextMenu.$inject = [ 'popupMenu', 'eventBus', 'modeling', 'elementRegistry', 'editorActions', 'selection', 'sheet' ];
 
 module.exports = ContextMenu;
 
 ContextMenu.prototype.getRuleActions = function(context) {
-  return { id: 'rule', content: {label: 'Rule', linkClass: 'disabled', entries: [
-          {id: 'ruleAdd', action: this.ruleAddAction.bind(this),
-           content: {label: 'add', icon: 'plus', entries: [
-            {id: 'ruleAddAbove', content: {label: '', icon: 'above'},
-            action: this.ruleAddAction.bind(this, 'above')},
-            {id: 'ruleAddBelow', content: {label: '', icon: 'below'},
-            action: this.ruleAddAction.bind(this, 'below')}
-          ]}},
-          {id: 'ruleRemove', content: {label: 'remove', icon: 'minus'},
-            action: this.ruleRemoveAction.bind(this)},
-          {id: 'ruleClear', content: {label: 'clear', icon: 'clear'},
-            action: this.ruleClearAction.bind(this)}
-        ]}};
+  return { id: 'rule', content: { label: 'Rule', linkClass: 'disabled', entries: [
+          { id: 'ruleAdd', action: this.ruleAddAction.bind(this),
+           content: { label: 'add', icon: 'plus', entries: [
+            { id: 'ruleAddAbove', content: { label: '', icon: 'above' },
+            action: this.ruleAddAction.bind(this, 'above') },
+            { id: 'ruleAddBelow', content: { label: '', icon: 'below' },
+            action: this.ruleAddAction.bind(this, 'below') }
+           ] } },
+          { id: 'ruleCopy', action: this.ruleCopyAction.bind(this),
+           content: { label: 'copy', icon: 'plus', entries: [
+            { id: 'ruleCopyAbove', content: { label: '', icon: 'above' },
+            action: this.ruleCopyAction.bind(this, 'above') },
+            { id: 'ruleCopyBelow', content: { label: '', icon: 'below' },
+            action: this.ruleCopyAction.bind(this, 'below') }
+           ] } },
+          { id: 'ruleRemove', content: { label: 'remove', icon: 'minus' },
+            action: this.ruleRemoveAction.bind(this) },
+          { id: 'ruleClear', content: { label: 'clear', icon: 'clear' },
+            action: this.ruleClearAction.bind(this) }
+  ] } };
 };
 
 var isLastColumn = function(column) {
-  var type = column.businessObject.$type;
+      var type = column.businessObject.$type;
 
   // return false when the previous or the next column is of the same type
-  return !(column.next.businessObject     && column.next.businessObject.$type === type ||
+      return !(column.next.businessObject     && column.next.businessObject.$type === type ||
            column.previous.businessObject && column.previous.businessObject.$type === type);
-},
-noop = function(){};
+    },
+    noop = function() {};
 
 
 ContextMenu.prototype.getInputActions = function(context) {
   var lastColumn = isLastColumn(context.column);
-  return { id: 'clause', content: {label: 'Input', linkClass: 'disabled', icon:'input', entries: [
-          {id: 'clauseAdd', action: this.clauseAddInput.bind(this),
-           content: {label: 'add', icon:'plus', entries: [
-            {id: 'clauseAddLeft', content: {label: '', icon: 'left'},
-            action: this.clauseAddAction.bind(this, 'left')},
-            {id: 'clauseAddRight', content: {label: '', icon: 'right'},
-            action: this.clauseAddAction.bind(this, 'right')}
-          ]}},
-          {id: 'clauseRemove', content: {label: 'remove', icon: 'minus', linkClass: lastColumn ? 'disabled' : ''},
-            action: lastColumn ? noop : this.clauseRemoveAction.bind(this)}
-        ]}};
+  return { id: 'clause', content: { label: 'Input', linkClass: 'disabled', icon:'input', entries: [
+          { id: 'clauseAdd', action: this.clauseAddInput.bind(this),
+           content: { label: 'add', icon:'plus', entries: [
+            { id: 'clauseAddLeft', content: { label: '', icon: 'left' },
+            action: this.clauseAddAction.bind(this, 'left') },
+            { id: 'clauseAddRight', content: { label: '', icon: 'right' },
+            action: this.clauseAddAction.bind(this, 'right') }
+           ] } },
+          { id: 'clauseRemove', content: { label: 'remove', icon: 'minus', linkClass: lastColumn ? 'disabled' : '' },
+            action: lastColumn ? noop : this.clauseRemoveAction.bind(this) }
+  ] } };
 };
 
 ContextMenu.prototype.getOutputActions = function(context) {
   var lastColumn = isLastColumn(context.column);
-  return { id: 'clause', content: {label: 'Output', linkClass: 'disabled', icon:'output', entries: [
-          {id: 'clauseAdd', action: this.clauseAddOutput.bind(this),
-           content: {label: 'add', icon:'plus', entries: [
-            {id: 'clauseAddLeft', content: {label: '', icon: 'left'},
-            action: this.clauseAddAction.bind(this, 'left')},
-            {id: 'clauseAddRight', content: {label: '', icon: 'right'},
-            action: this.clauseAddAction.bind(this, 'right')}
-          ]}},
-          {id: 'clauseRemove', content: {label: 'remove', icon: 'minus', linkClass: lastColumn ? 'disabled' : ''},
-            action: lastColumn ? noop : this.clauseRemoveAction.bind(this)}
-        ]}};
+  return { id: 'clause', content: { label: 'Output', linkClass: 'disabled', icon:'output', entries: [
+          { id: 'clauseAdd', action: this.clauseAddOutput.bind(this),
+           content: { label: 'add', icon:'plus', entries: [
+            { id: 'clauseAddLeft', content: { label: '', icon: 'left' },
+            action: this.clauseAddAction.bind(this, 'left') },
+            { id: 'clauseAddRight', content: { label: '', icon: 'right' },
+            action: this.clauseAddAction.bind(this, 'right') }
+           ] } },
+          { id: 'clauseRemove', content: { label: 'remove', icon: 'minus', linkClass: lastColumn ? 'disabled' : '' },
+            action: lastColumn ? noop : this.clauseRemoveAction.bind(this) }
+  ] } };
 };
 
 ContextMenu.prototype.getActions = function(context) {
@@ -70218,14 +70411,24 @@ ContextMenu.prototype.getActions = function(context) {
   if (activeEntriesType.output) {
     out.push(this.getOutputActions(context));
   }
+
+  var cellActions = [];
+  this._eventBus.fire('popupmenu.cellActions', cellActions, context);
+  out = out.concat(cellActions);
+
   return out;
 };
 
 ContextMenu.prototype.open = function(x, y, context) {
+  var selection = this._selection,
+      popupMenu = this._popupMenu;
+
   var actions = this.getActions(context);
 
-  if(actions.length > 0) {
-    this._popupMenu.open({
+  selection.select(context);
+
+  if (actions.length > 0) {
+    popupMenu.open({
       position: { x: x, y: y },
       entries: actions
     });
@@ -70233,23 +70436,31 @@ ContextMenu.prototype.open = function(x, y, context) {
 };
 
 ContextMenu.prototype.close = function() {
-  this._popupMenu.close();
+  var popupMenu = this._popupMenu;
+
+  popupMenu.close();
 };
 
 ContextMenu.prototype.clauseRemoveAction = function() {
-  this._editorActions.trigger('clauseRemove');
+  var editorActions = this._editorActions;
+
+  editorActions.trigger('clauseRemove');
 
   this.close();
 };
 
 ContextMenu.prototype.clauseAddInput = function() {
-  this._editorActions.trigger('clauseAdd', 'input');
+  var editorActions = this._editorActions;
+
+  editorActions.trigger('clauseAdd', 'input');
 
   this.close();
 };
 
 ContextMenu.prototype.clauseAddOutput = function() {
-  this._editorActions.trigger('clauseAdd', 'output');
+  var editorActions = this._editorActions;
+
+  editorActions.trigger('clauseAdd', 'output');
 
   this.close();
 };
@@ -70279,10 +70490,24 @@ ContextMenu.prototype.ruleAddAction = function(position) {
   if (position === 'above') {
     editorActions.trigger('ruleAddAbove');
 
-  } else if (position === 'below'){
+  } else if (position === 'below') {
     editorActions.trigger('ruleAddBelow');
   } else {
     editorActions.trigger('ruleAdd');
+  }
+
+  this.close();
+};
+
+ContextMenu.prototype.ruleCopyAction = function(position) {
+  var editorActions = this._editorActions;
+
+  if (position === 'above') {
+    editorActions.trigger('ruleCopyAbove');
+  } else if (position === 'below') {
+    editorActions.trigger('ruleCopyBelow');
+  } else {
+    editorActions.trigger('ruleCopy');
   }
 
   this.close();
@@ -70294,7 +70519,7 @@ ContextMenu.prototype.ruleClearAction = function() {
   this.close();
 };
 
-},{"../../util/SelectionUtil":571}],534:[function(require,module,exports){
+},{"../../util/SelectionUtil":604}],534:[function(require,module,exports){
 module.exports = {
   __init__: [ 'contextMenu' ],
   __depends__: [
@@ -70303,12 +70528,584 @@ module.exports = {
   contextMenu: [ 'type', require('./ContextMenu') ]
 };
 
-},{"./ContextMenu":533,"table-js/lib/features/popup-menu":771}],535:[function(require,module,exports){
+},{"./ContextMenu":533,"table-js/lib/features/popup-menu":827}],535:[function(require,module,exports){
+'use strict';
+
+var assign = require('lodash/object/assign');
+
+var domify     = require('min-dom/lib/domify'),
+    domClasses = require('min-dom/lib/classes'),
+    utils      = require('./utils');
+
+var getSampleDate   = utils.getSampleDate,
+    isDateCell      = utils.isDateCell,
+    isISODateString = utils.isISODateString,
+    parseDate       = utils.parseDate;
+
+function DateEdit(eventBus, simpleMode, elementRegistry, graphicsFactory, modeling, complexCell) {
+  this._eventBus = eventBus;
+  this._simpleMode = simpleMode;
+  this._elementRegistry = elementRegistry;
+  this._graphicsFactory = graphicsFactory;
+  this._modeling = modeling;
+  this._complexCell = complexCell;
+
+  var refreshHandler = function() {
+    if (this._simpleMode.isActive()) {
+      this.refresh();
+    }
+  };
+
+  this._eventBus.on('simpleMode.activated', this.setupComplexCells, this);
+  this._eventBus.on('simpleMode.deactivated', this.teardownComplexCells, this);
+  this._eventBus.on('typeRow.editDataType', refreshHandler, this);
+  this._eventBus.on('contentNode.created', refreshHandler, this);
+  this._eventBus.on('element.changed', refreshHandler, this);
+
+  // whenever an type cell is opened, we have to position the template, because the x offset changes
+  // over time, when columns are added and deleted
+  this._eventBus.on('complexCell.open', function(evt) {
+    var config = evt.config;
+
+    if (config.type === 'dateEdit') {
+      var gfx = elementRegistry.getGraphics(config.element);
+      var template = config.template;
+
+      assign(template.parentNode.style, {
+        left: (gfx.offsetLeft + gfx.offsetWidth - 10) + 'px'
+      });
+    }
+  });
+
+}
+
+DateEdit.prototype.refresh = function() {
+  this.teardownComplexCells();
+  this.setupComplexCells();
+};
+
+DateEdit.prototype.setupComplexCells = function() {
+  var graphicsFactory = this._graphicsFactory;
+  var elementRegistry = this._elementRegistry;
+  var eventBus = this._eventBus;
+  var complexCell = this._complexCell;
+
+  var self = this;
+  elementRegistry.forEach(function(element) {
+    if (isDateCell(element)) {
+      var parsed = element.content && parseDate(element.content.text);
+
+      if (element.content && element.content.text && !parsed) {
+        // in this case, the date contains an expression, we should not show the date editor here
+
+        // show nothing instead
+        element.complex = {
+          template: domify('<div>'),
+          element: element,
+          type: 'dateEdit',
+          offset: {
+            x: 0,
+            y: 0
+          }
+        };
+
+        graphicsFactory.update('cell', element, elementRegistry.getGraphics(element));
+        return;
+      }
+
+      var node = domify(require('./template.html'));
+
+      // set the initial state based on the cell content
+      if (!parsed) {
+        node.querySelector('.dateEdit-type-dropdown').value = '';
+        node.querySelector('.date-1 input').value = getSampleDate();
+        node.querySelector('.date-2 input').value = getSampleDate(true);
+      } else {
+        node.querySelector('.dateEdit-type-dropdown').value = parsed.type;
+        node.querySelector('.date-1 input').value = parsed.date1 || getSampleDate();
+        node.querySelector('.date-2 input').value = parsed.date2 || getSampleDate(true);
+
+        if (parsed.date1) {
+          node.querySelector('.date-1').style.display = 'block';
+        }
+        if (parsed.date2) {
+          node.querySelector('.date-2').style.display = 'block';
+        }
+      }
+
+
+      // wire the elements
+      node.querySelector('.dateEdit-type-dropdown').addEventListener('change', function(evt) {
+        var type = evt.target.value;
+
+        // update visibility of elements
+        node.querySelector('.date-1').style.display = type === '' ? 'none' : 'block';
+        node.querySelector('.date-2').style.display = type === 'between' ? 'block' : 'none';
+      });
+
+      var closeFct = function(evt) {
+        if (evt.keyCode === 13) {
+          complexCell.close();
+        }
+      };
+
+      var validateInput = function(evt) {
+        var val = evt.target.value;
+        var date = new Date(val);
+
+        if (isISODateString(val) && date.toString() !== 'Invalid Date') {
+          // is valid
+          domClasses(evt.target).remove('invalid');
+        } else {
+          // is invalid
+          domClasses(evt.target).add('invalid');
+        }
+
+      };
+      node.querySelector('.date-1 input').addEventListener('keydown', closeFct);
+      node.querySelector('.date-2 input').addEventListener('keydown', closeFct);
+
+      node.querySelector('.date-1 input').addEventListener('input', validateInput);
+      node.querySelector('.date-2 input').addEventListener('input', validateInput);
+
+
+      var complexCellConfig = {
+        className: 'dmn-date-editor',
+        template: node,
+        element: element,
+        type: 'dateEdit',
+        offset: {
+          x: 0,
+          y: 0
+        }
+      };
+
+      eventBus.on('complexCell.close', function(complexCell) {
+        if (complexCell.config === complexCellConfig) {
+          self.updateCellContent(element, {
+            type: node.querySelector('.dateEdit-type-dropdown').value,
+            date1: node.querySelector('.date-1 input').value,
+            date2: node.querySelector('.date-2 input').value
+          });
+        }
+      });
+
+      element.complex = complexCellConfig;
+
+      graphicsFactory.update('cell', element, elementRegistry.getGraphics(element));
+    }
+  });
+};
+
+DateEdit.prototype.updateCellContent = function(element, data) {
+  var type = data.type;
+  var date1 = data.date1;
+  var date2 = data.date2;
+
+  // only apply valid entries
+  if (type) {
+    var date = new Date(date1);
+    if (!isISODateString(date1) || date.toString() === 'Invalid Date') {
+      return;
+    }
+    if (type === 'between') {
+      date = new Date(date2);
+      if (!isISODateString(date2) || date.toString() === 'Invalid Date') {
+        return;
+      }
+    }
+  }
+
+  var content = '';
+  switch (type) {
+  case 'exact':
+    content = 'date and time("' + date1 + '")';
+    break;
+  case 'before':
+    content = '< date and time("' + date1 + '")';
+    break;
+  case 'after':
+    content = '> date and time("' + date1 + '")';
+    break;
+  case 'between':
+    content = '[date and time("' + date1 + '")..date and time("' + date2 + '")]';
+    break;
+  }
+  this._modeling.editCell(element.row.id, element.column.id, content);
+};
+
+DateEdit.prototype.teardownComplexCells = function() {
+  var graphicsFactory = this._graphicsFactory;
+  var elementRegistry = this._elementRegistry;
+
+  elementRegistry.forEach(function(element) {
+    if (element.complex && element.complex.type === 'dateEdit') {
+
+      delete element.complex;
+
+      graphicsFactory.update('cell', element, elementRegistry.getGraphics(element));
+    }
+  });
+};
+
+DateEdit.$inject = [ 'eventBus', 'simpleMode', 'elementRegistry', 'graphicsFactory', 'modeling', 'complexCell' ];
+
+module.exports = DateEdit;
+
+},{"./template.html":538,"./utils":539,"lodash/object/assign":757,"min-dom/lib/classes":767,"min-dom/lib/domify":769}],536:[function(require,module,exports){
+'use strict';
+
+var domify = require('min-dom/lib/domify'),
+    utils  = require('./utils');
+
+var isDateCell = utils.isDateCell,
+    parseDate  = utils.parseDate;
+
+function DateView(eventBus, simpleMode) {
+  this._eventBus = eventBus;
+  this._simpleMode = simpleMode;
+
+  this._eventBus.on('cell.render', function(evt) {
+    if (isDateCell(evt.data)) {
+      if (this._simpleMode.isActive()) {
+        // make sure the contendeditable field is hidden
+        evt.gfx.firstChild.style.display = 'none';
+        evt.data.preventAutoUpdate = true;
+
+        // check for the datafield
+        var dateGfx = evt.gfx.querySelector('.date-content');
+        if (!dateGfx) {
+          dateGfx = domify('<span class="date-content">');
+          evt.gfx.appendChild(dateGfx);
+        }
+        this.renderDate(evt.data.content, dateGfx);
+      } else {
+        // make sure the contenteditable field is visible
+        evt.gfx.firstChild.style.display = 'inline';
+        evt.data.preventAutoUpdate = false;
+
+        // remove potential datafield
+        dateGfx = evt.gfx.querySelector('.date-content');
+        if (dateGfx) {
+          dateGfx.parentNode.removeChild(dateGfx);
+        }
+      }
+    }
+  }, this);
+}
+
+DateView.prototype.renderDate = function(data, gfx) {
+  if (data && data.text) {
+    var parsed = parseDate(data.text);
+    if (!parsed) {
+      if (data.description) {
+        gfx.innerHTML = '<span class="expression-hint"><b>[expression]</b> (<i></i>)</span>';
+        gfx.querySelector('i').textContent = data.description;
+      } else {
+        gfx.innerHTML = '<span class="expression-hint"><b>[expression]</b></span>';
+      }
+    } else {
+      var dateString;
+      var date1 = new Date(parsed.date1 + '.000Z');
+      if (parsed.type === 'exact') {
+        dateString = date1.toUTCString().slice(0, -7);
+      } else {
+        dateString = parsed.type + ' ' + date1.toUTCString().slice(0, -7);
+
+        if (parsed.date2) {
+          var date2 = new Date(parsed.date2 + '.000Z');
+          dateString += ' and ' + date2.toUTCString().slice(0, -7);
+        }
+      }
+
+      gfx.textContent = dateString;
+    }
+  } else {
+    gfx.innerHTML = '<span style="display: inline-block; width: 100%; color: #777777; text-align: center;">-</span>';
+  }
+};
+
+DateView.$inject = ['eventBus', 'simpleMode'];
+
+module.exports = DateView;
+
+},{"./utils":539,"min-dom/lib/domify":769}],537:[function(require,module,exports){
+module.exports = {
+  __init__: [ 'dateEdit' ],
+  __depends__: [],
+  dateEdit: [ 'type', require('./DateEdit') ]
+};
+
+
+},{"./DateEdit":535}],538:[function(require,module,exports){
+module.exports = "<div>\r\n  <h3>Edit Date Condition</h3>\r\n  <select class=\"dateEdit-type-dropdown\">\r\n    <option value=\"\">-</option>\r\n    <option value=\"exact\">Exactly</option>\r\n    <option value=\"before\">Before</option>\r\n    <option value=\"after\">After</option>\r\n    <option value=\"between\">Between</option>\r\n  </select>\r\n  <div class=\"date-1\" style=\"display: none;\">\r\n    <input type=\"text\" placeholder=\"yyyy-mm-dd'T'hh:mm:ss\" spellcheck=\"false\">\r\n    <div class=\"helptext\">yyyy-mm-dd'T'hh:mm:ss</div>\r\n  </div>\r\n  <div class=\"date-2\" style=\"display: none;\">\r\n    <div>and</div>\r\n    <input type=\"text\" placeholder=\"yyyy-mm-dd'T'hh:mm:ss\" spellcheck=\"false\">\r\n    <div class=\"helptext\">yyyy-mm-dd'T'hh:mm:ss</div>\r\n  </div>\r\n</div>\r\n";
+
+},{}],539:[function(require,module,exports){
+'use strict';
+
+var hasDateType = function(column) {
+  return column &&
+         (column.inputExpression &&
+         column.inputExpression.typeRef === 'date' ||
+         column.typeRef === 'date');
+};
+var isBodyRow = function(row) {
+  return !row.isHead && !row.isFoot;
+};
+
+module.exports = {
+  isISODateString: function(dateString) {
+    return /\d{4}(?:-\d\d){2}T(?:\d\d:){2}\d\d/.test(dateString);
+  },
+  getSampleDate: function(alternative) {
+    var date = new Date();
+    if (alternative) {
+      date.setUTCHours(23, 59, 59, 0);
+    } else {
+      date.setUTCHours(0, 0, 0, 0);
+    }
+
+    return date.toISOString().slice(0,-5);
+  },
+  isDateCell: function(el) {
+    return el._type === 'cell' &&
+      hasDateType(el.column.businessObject) &&
+      isBodyRow(el.row);
+  },
+  parseDate: function(dateString) {
+    // try between
+    var info = dateString.match(/^\[date and time\("(\d{4}(?:-\d\d){2}T(?:\d\d:){2}\d\d)"\)..date and time\("(\d{4}(?:-\d\d){2}T(?:\d\d:){2}\d\d)"/);
+    if (info) {
+      return {
+        type: 'between',
+        date1: info[1],
+        date2: info[2]
+      };
+    }
+
+    // try before and after
+    info = dateString.match(/^(<|>)\s*date and time\("(\d{4}(?:-\d\d){2}T(?:\d\d:){2}\d\d)"\)/);
+    if (info) {
+      return {
+        type: info[1] === '<' ? 'before' : 'after',
+        date1: info[2]
+      };
+    }
+
+    // try exact date
+    info = dateString.match(/^date and time\("(\d{4}(?:-\d\d){2}T(?:\d\d:){2}\d\d)"\)$/);
+    if (info) {
+      return {
+        type: 'exact',
+        date1: info[1]
+      };
+    }
+  }
+};
+
+},{}],540:[function(require,module,exports){
+module.exports = {
+  __init__: [ 'dateView' ],
+  __depends__: [],
+  dateView: [ 'type', require('./DateView') ]
+};
+
+
+},{"./DateView":536}],541:[function(require,module,exports){
+'use strict';
+
+var domify = require('min-dom/lib/domify');
+
+var hasSecondaryModifier = require('diagram-js/lib/util/Mouse').hasSecondaryModifier;
+
+var OFFSET_X = 2,
+    OFFSET_Y = 2;
+
+
+function Descriptions(eventBus, elementRegistry, sheet) {
+  this._eventBus = eventBus;
+  this._elementRegistry = elementRegistry;
+  this._sheet = sheet;
+
+  var self = this;
+
+  document.body.addEventListener('click', function(evt) {
+    self.closePopover();
+  });
+
+  document.body.addEventListener('keydown', function(evt) {
+    if (evt.keyCode === 13 && self.openedPopover && !hasSecondaryModifier(evt)) {
+      self.closePopover();
+    }
+  });
+
+  eventBus.on('cell.render', function(event) {
+    var data = event.data,
+        gfx = event.gfx,
+        indicator;
+
+    if (data.content && data.content.description) {
+      if (!gfx.querySelector('.description-indicator')) {
+        indicator = domify('<div class="description-indicator"></div>');
+
+        indicator.addEventListener('click', function(evt) {
+          evt.stopPropagation();
+
+          self.openPopover(data);
+        });
+
+        gfx.appendChild(indicator);
+      }
+    } else {
+      indicator = gfx.querySelector('.description-indicator');
+      if (indicator) {
+        indicator.parentNode.removeChild(indicator);
+      }
+    }
+  });
+}
+
+Descriptions.$inject = [ 'eventBus', 'elementRegistry', 'sheet' ];
+
+module.exports = Descriptions;
+
+Descriptions.prototype.closePopover = function() {
+  var eventBus = this._eventBus;
+
+  if (this.openedPopover) {
+    this.openedPopover.parentNode.removeChild(this.openedPopover);
+    this.openedPopover = null;
+
+    eventBus.fire('description.popover.closed');
+  }
+};
+
+Descriptions.prototype.openPopover = function(context) {
+  var sheet = this._sheet,
+      eventBus = this._eventBus,
+      elementRegistry = this._elementRegistry;
+
+  var container = sheet.getContainer(),
+      gfx = elementRegistry.getGraphics(context),
+      node = domify('<textarea class="descriptions-textarea"></textarea>');
+
+  this.closePopover();
+
+  eventBus.fire('description.popover.open', context);
+
+  node.style.position = 'absolute';
+  node.style.top = gfx.offsetTop + OFFSET_Y + 'px';
+  node.style.left = gfx.offsetLeft + gfx.clientWidth + OFFSET_X + 'px';
+  node.style.width = '200px';
+  node.style.height = '80px';
+
+  // setting textarea to disabled. Editing module will remove disabled attribute
+  node.setAttribute('disabled', 'disabled');
+
+  node.addEventListener('click', function(evt) {
+    evt.stopPropagation();
+  });
+
+  container.appendChild(node);
+
+  this.openedPopover = node;
+
+  eventBus.fire('description.popover.opened', node, context);
+
+  node.focus();
+
+  node.textContent = context.content.description;
+};
+
+},{"diagram-js/lib/util/Mouse":614,"min-dom/lib/domify":769}],542:[function(require,module,exports){
+'use strict';
+
+var debounce = require('lodash/function/debounce');
+
+var DEBOUNCE_DELAY = 300;
+
+function DescriptionsEditing(eventBus, modeling, graphicsFactory, selection, contextMenu, descriptions) {
+  this._eventBus = eventBus;
+  this._graphicsFactory = graphicsFactory;
+  this._contextMenu = contextMenu;
+  this._descriptions = descriptions;
+  this._selection = selection;
+  this._modeling = modeling;
+
+  var self = this;
+
+  eventBus.on('popupmenu.cellActions', function(evt, actions, context) {
+    if (context.row.isHead) {
+      return;
+    }
+
+    actions.push({
+      id: 'description',
+      action: function(evt) {
+        evt.stopPropagation();
+
+        contextMenu.close();
+
+        self.addComment(context);
+      },
+      content: {
+        label: 'Add description',
+        icon:'info'
+      }
+    });
+  });
+
+  eventBus.on('description.popover.open', function(evt, context) {
+    selection.select(context);
+    selection.freeze();
+  });
+
+  eventBus.on('description.popover.closed', function(evt) {
+    selection.unfreeze();
+    graphicsFactory.redraw();
+  });
+
+  eventBus.on('description.popover.opened', function(evt, node, context) {
+    // removing disabled attribute from textarea
+    node.removeAttribute('disabled');
+
+    node.addEventListener('input', debounce(function(evt) {
+      var value = evt.target.value;
+
+      modeling.editDescription(context.content, value.trim());
+    }, DEBOUNCE_DELAY));
+  });
+}
+
+DescriptionsEditing.$inject = [ 'eventBus', 'modeling', 'graphicsFactory', 'selection', 'contextMenu', 'descriptions' ];
+
+module.exports = DescriptionsEditing;
+
+DescriptionsEditing.prototype.addComment = function(context) {
+  var descriptions = this._descriptions;
+
+  descriptions.openPopover(context);
+};
+
+},{"lodash/function/debounce":652}],543:[function(require,module,exports){
+module.exports = {
+  __init__: [ 'descriptionsEditing' ],
+  descriptionsEditing: [ 'type', require('./DescriptionsEditing') ]
+};
+
+
+},{"./DescriptionsEditing":542}],544:[function(require,module,exports){
+module.exports = {
+  __init__: [ 'descriptions' ],
+  descriptions: [ 'type', require('./Descriptions') ]
+};
+
+},{"./Descriptions":541}],545:[function(require,module,exports){
 'use strict';
 
 var ids = new (require('diagram-js/lib/util/IdGenerator'))('table');
 
-function DmnEditorActions(modeling, elementRegistry, selection, editorActions) {
+function DmnEditorActions(modeling, elementRegistry, selection, editorActions, simpleMode) {
 
   var actions = {
     ruleAdd: function() {
@@ -70340,6 +71137,51 @@ function DmnEditorActions(modeling, elementRegistry, selection, editorActions) {
         };
         newRow.previous = selected.row;
         modeling.createRow(newRow);
+      }
+
+    },
+    ruleCopy: function() {
+      var selected = selection._selectedElement,
+          currRow, newRow;
+
+      if (selected) {
+        currRow = selected.row;
+
+        while (currRow.next) {
+          currRow = currRow.next;
+        }
+
+        newRow = {
+          id: ids.next()
+        };
+
+        modeling.copyRow(newRow, selected.row);
+      }
+    },
+    ruleCopyAbove: function() {
+      var selected = selection._selectedElement,
+          newRow;
+
+      if (selected) {
+        newRow = {
+          id: ids.next()
+        };
+        newRow.next = selected.row;
+
+        modeling.copyRow(newRow, selected.row);
+      }
+    },
+    ruleCopyBelow: function() {
+      var selected = selection._selectedElement,
+          newRow;
+
+      if (selected) {
+        newRow = {
+          id: ids.next()
+        };
+        newRow.previous = selected.row;
+
+        modeling.copyRow(newRow, selected.row);
       }
 
     },
@@ -70431,6 +71273,13 @@ function DmnEditorActions(modeling, elementRegistry, selection, editorActions) {
       if (selected) {
         modeling.deleteColumn(selected.column);
       }
+    },
+    toggleEditingMode: function() {
+      if (simpleMode.isActive()) {
+        simpleMode.deactivate();
+      } else {
+        simpleMode.activate();
+      }
     }
   };
 
@@ -70438,17 +71287,108 @@ function DmnEditorActions(modeling, elementRegistry, selection, editorActions) {
 }
 
 
-DmnEditorActions.$inject = [ 'modeling', 'elementRegistry', 'selection', 'editorActions' ];
+DmnEditorActions.$inject = [ 'modeling', 'elementRegistry', 'selection', 'editorActions', 'simpleMode' ];
 
 module.exports = DmnEditorActions;
 
-},{"diagram-js/lib/util/IdGenerator":580}],536:[function(require,module,exports){
+},{"diagram-js/lib/util/IdGenerator":613}],546:[function(require,module,exports){
 module.exports = {
   __init__: [ 'dmnEditorActions' ],
   dmnEditorActions: [ 'type', require('./DmnEditorActions') ]
 };
 
-},{"./DmnEditorActions":535}],537:[function(require,module,exports){
+},{"./DmnEditorActions":545}],547:[function(require,module,exports){
+'use strict';
+
+var ComboBox = require('table-js/lib/features/combo-box');
+
+var debounce = require('lodash/function/debounce');
+var DEBOUNCE_DELAY = 300;
+
+var getDefaultLanguageFor = function(context) {
+  if (context.column.type === 'dmn:OutputClause') {
+    return 'Juel';
+  }
+  if (context.column.type === 'dmn:InputClause') {
+    return 'FEEL';
+  }
+};
+
+function ExpressionLanguage(eventBus, modeling, contextMenu, elementRegistry, selection) {
+  this._eventBus = eventBus;
+  this._elementRegistry = elementRegistry;
+
+  this._eventBus.on('popupmenu.cellActions', function(evt, actions, context) {
+
+    if (!context.content || context.row.isHead) {
+      return;
+    }
+
+    // initializing the comboBox
+    var comboBox = new ComboBox({
+      label: '',
+      classNames: ['dmn-combobox', 'expression-language'],
+      options: ['Juel', 'FEEL'],
+      dropdownClassNames: ['dmn-combobox-suggestions'],
+      disableKeyboard: true
+    });
+    comboBox.setValue(context.content.expressionLanguage || getDefaultLanguageFor(context));
+
+    var content = comboBox.getNode();
+
+    eventBus.once('popupmenu.close', function() {
+      comboBox._closeDropdown();
+    });
+    comboBox.addEventListener('valueChanged', function(evt) {
+      if (evt.newValue !== evt.oldValue) {
+        modeling.editCellExpressionLanguage(context.content, evt.newValue);
+      }
+    });
+
+    content.addEventListener('click', function(evt) {
+      evt.customHandler = true;
+    });
+    content.addEventListener('mousedown', function(evt) {
+      evt.customHandler = true;
+    });
+    content.addEventListener('keydown', function(evt) {
+      if (evt.keyCode === 13) {
+        evt.preventDefault();
+        contextMenu.close();
+        elementRegistry.getGraphics(context.id).firstChild.focus();
+      }
+    });
+    content.addEventListener('input', debounce(function(evt) {
+      modeling.editCellExpressionLanguage(context.content, evt.target.value);
+    }, DEBOUNCE_DELAY));
+
+    actions.push({
+      id: 'expressionLanguage',
+      content: {
+        label: 'Expression Language',
+        linkClass: 'disabled',
+        icon:'language',
+        entries: [
+          { id: 'expressionLanguageEdit', content: content }
+        ]
+      }
+    });
+  });
+}
+
+ExpressionLanguage.$inject = [ 'eventBus', 'modeling', 'contextMenu', 'elementRegistry', 'selection' ];
+
+module.exports = ExpressionLanguage;
+
+},{"lodash/function/debounce":652,"table-js/lib/features/combo-box":798}],548:[function(require,module,exports){
+module.exports = {
+  __init__: [ 'expressionLanguage' ],
+  __depends__: [],
+  expressionLanguage: [ 'type', require('./ExpressionLanguage') ]
+};
+
+
+},{"./ExpressionLanguage":547}],549:[function(require,module,exports){
 'use strict';
 
 function DmnFactory(moddle) {
@@ -70483,7 +71423,7 @@ DmnFactory.prototype.create = function(type, attrs) {
 };
 
 DmnFactory.prototype.createRule = function(id) {
-  var attrs = {id: id};
+  var attrs = { id: id };
   attrs.inputEntry = attrs.inputEntry || [];
   attrs.outputEntry = attrs.outputEntry || [];
 
@@ -70500,6 +71440,11 @@ DmnFactory.prototype.createInputEntry = function(text, clause, rule) {
   var clauseIdx = clause.$parent.input.indexOf(clause);
 
   element.$parent = rule;
+
+  if (!rule.inputEntry) {
+    rule.inputEntry = [];
+  }
+
   rule.inputEntry.splice(clauseIdx, 0, element);
 
   return element;
@@ -70509,9 +71454,12 @@ DmnFactory.prototype.createInputClause = function(name) {
   var element = this.create('dmn:InputClause', {
     label: name
   });
+
   element.inputExpression = this.create('dmn:LiteralExpression', {});
 
   element.inputExpression.typeRef = 'string';
+
+  element.inputExpression.$parent = element;
 
   return element;
 };
@@ -70534,14 +71482,41 @@ DmnFactory.prototype.createOutputEntry = function(text, clause, rule) {
   var clauseIdx = clause.$parent.output.indexOf(clause);
 
   element.$parent = rule;
+
+  if (!rule.outputEntry) {
+    rule.outputEntry = [];
+  }
+
   rule.outputEntry.splice(clauseIdx, 0, element);
+
+  return element;
+};
+
+DmnFactory.prototype.createInputValues = function(input) {
+  var element = this.create('dmn:UnaryTests', {
+    text: ''
+  });
+
+  input.inputValues = element;
+  element.$parent = input;
+
+  return element;
+};
+
+DmnFactory.prototype.createOutputValues = function(output) {
+  var element = this.create('dmn:UnaryTests', {
+    text: ''
+  });
+
+  output.outputValues = element;
+  element.$parent = output;
 
   return element;
 };
 
 module.exports = DmnFactory;
 
-},{}],538:[function(require,module,exports){
+},{}],550:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -70572,9 +71547,9 @@ ElementFactory.prototype.create = function(elementType, attrs) {
   attrs = attrs || {};
 
   var businessObject = attrs.businessObject;
-  if(elementType === 'row') {
+  if (elementType === 'row') {
     attrs.type = 'dmn:DecisionRule';
-  } else if(elementType === 'column' && !attrs.type) {
+  } else if (elementType === 'column' && !attrs.type) {
     attrs.type = attrs.isInput ? 'dmn:InputClause' : 'dmn:OutputClause';
   }
 
@@ -70582,10 +71557,10 @@ ElementFactory.prototype.create = function(elementType, attrs) {
     if (!attrs.type) {
       throw new Error('no type specified');
     }
-    else if(attrs.type === 'dmn:DecisionRule') {
+    else if (attrs.type === 'dmn:DecisionRule') {
       businessObject = this._dmnFactory.createRule(attrs.id);
-    } else if(elementType === 'column') {
-      if(attrs.isInput) {
+    } else if (elementType === 'column') {
+      if (attrs.isInput) {
         businessObject = this._dmnFactory.createInputClause(attrs.name);
       } else {
         businessObject = this._dmnFactory.createOutputClause(attrs.name);
@@ -70602,7 +71577,7 @@ ElementFactory.prototype.create = function(elementType, attrs) {
 
 };
 
-},{"inherits":608,"table-js/lib/core/ElementFactory":730}],539:[function(require,module,exports){
+},{"inherits":637,"table-js/lib/core/ElementFactory":785}],551:[function(require,module,exports){
 module.exports = {
   __init__: [ ],
   __depends__: [ ],
@@ -70610,151 +71585,87 @@ module.exports = {
   elementFactory: [ 'type', require('./ElementFactory') ]
 };
 
-},{"./DmnFactory":537,"./ElementFactory":538}],540:[function(require,module,exports){
-'use strict';
-
-var domClasses = require('min-dom/lib/classes');
-/**
- *  The controls module adds a container to the top-right corner of the table which holds
- *  some control elements
- */
-function HideTechControl(eventBus, sheet, config) {
-
-  this._sheet = sheet;
-  this._eventBus = eventBus;
-  this.hidden = false;
-
-  var self = this;
-
-  eventBus.on('controls.init', function(evt) {
-
-    eventBus.on('controls.added', function(evt) {
-      self._node = evt.node;
-      if(config.hideDetails) {
-        self.hide();
-      }
-    });
-
-    evt.controls.addControl('Hide Details', function() {
-      if(!domClasses(sheet.getContainer().parentNode).contains('hide-mappings')) {
-        self.hide();
-      } else {
-        self.show();
-      }
-    });
-
-  });
-
-}
-
-HideTechControl.$inject = [ 'eventBus', 'sheet', 'config' ];
-
-module.exports = HideTechControl;
-
-HideTechControl.prototype.hide = function() {
-  if(!this._node) return;
-  domClasses(this._sheet.getContainer().parentNode).add('hide-mappings');
-  this._node.textContent = 'Show details';
-  this.hidden = true;
-  this._eventBus.fire('details.hidden');
-};
-
-HideTechControl.prototype.show = function() {
-  if(!this._node) return;
-  domClasses(this._sheet.getContainer().parentNode).remove('hide-mappings');
-  this._node.textContent = 'Hide details';
-  this.hidden = false;
-  this._eventBus.fire('details.shown');
-};
-
-HideTechControl.prototype.isHidden = function() {
-  return this.hidden;
-};
-
-},{"min-dom/lib/classes":712}],541:[function(require,module,exports){
-module.exports = {
-  __init__: [ 'hideTechControl' ],
-  __depends__: [],
-  hideTechControl: [ 'type', require('./HideTechControl') ]
-};
-
-},{"./HideTechControl":540}],542:[function(require,module,exports){
+},{"./DmnFactory":549,"./ElementFactory":550}],552:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify'),
-    ComboBox = require('table-js/lib/features/combo-box'),
     domClasses = require('min-dom/lib/classes');
+
+var ComboBox = require('table-js/lib/features/combo-box');
+
+var OFFSET_X = 36,
+    OFFSET_Y = -16;
 
 /**
  * Adds behavior to display and set the hit policy of a table
  *
  * @param {EventBus} eventBus
  */
-function HitPolicy(eventBus, utilityColumn, ioLabel, graphicsFactory, elementRegistry, rules, hideTechControl) {
+function HitPolicy(eventBus, utilityColumn, ioLabel, graphicsFactory, elementRegistry, rules) {
 
   this.table = null;
   this.hitPolicyCell = null;
 
   var self = this;
   eventBus.on('dmnElement.added', function(event) {
-    if(event.element && event.element.businessObject.$instanceOf('dmn:DecisionTable')) {
+    if (event.element && event.element.businessObject.$instanceOf('dmn:DecisionTable')) {
       self.table = event.element.businessObject;
     }
   });
 
   eventBus.on('cell.added', function(event) {
 
-    if(event.element.column === utilityColumn.getColumn() &&
+    if (event.element.column === utilityColumn.getColumn() &&
        event.element.row.id==='ioLabel') {
-        self.hitPolicyCell = event.element;
+      self.hitPolicyCell = event.element;
 
-        self.hitPolicyCell.rowspan = hideTechControl.isHidden() ? 2 : 4;
+      self.hitPolicyCell.rowspan = 4;
 
-        var template = domify('<div>');
+      var template = domify('<div>');
 
         // initializing the comboBox
-        var comboBox = new ComboBox({
-          label: 'Hit Policy',
-          classNames: ['dmn-combobox', 'hitpolicy'],
-          options: ['UNIQUE', 'FIRST', 'PRIORITY', 'ANY', 'COLLECT', 'RULE ORDER', 'OUTPUT ORDER'],
-          dropdownClassNames: ['dmn-combobox-suggestions']
-        });
+      var comboBox = new ComboBox({
+        label: 'Hit Policy',
+        classNames: ['dmn-combobox', 'hitpolicy'],
+        options: ['UNIQUE', 'FIRST', 'PRIORITY', 'ANY', 'COLLECT', 'RULE ORDER', 'OUTPUT ORDER'],
+        dropdownClassNames: ['dmn-combobox-suggestions']
+      });
 
-        template.insertBefore(
+      template.insertBefore(
           comboBox.getNode(),
           template.firstChild
         );
 
-        var operatorComboBox = new ComboBox({
-          label: 'Collect Operator',
-          classNames: ['dmn-combobox', 'operator'],
-          options: ['LIST', 'SUM', 'MIN', 'MAX', 'COUNT'],
-          dropdownClassNames: ['dmn-combobox-suggestions']
-        });
+      var operatorComboBox = new ComboBox({
+        label: 'Collect Operator',
+        classNames: ['dmn-combobox', 'operator'],
+        options: ['LIST', 'SUM', 'MIN', 'MAX', 'COUNT'],
+        dropdownClassNames: ['dmn-combobox-suggestions']
+      });
 
-        template.appendChild(operatorComboBox.getNode());
+      template.appendChild(operatorComboBox.getNode());
 
         // display and hide the operatorComboBox based on the selected hit policy
-        comboBox.addEventListener('valueChanged', function(evt) {
-          if(evt.newValue.toLowerCase() === 'collect') {
-            operatorComboBox.getNode().style.display = 'table';
-          } else {
-            operatorComboBox.getNode().style.display = 'none';
-          }
-        });
+      comboBox.addEventListener('valueChanged', function(evt) {
+        if (evt.newValue.toLowerCase() === 'collect') {
+          operatorComboBox.getNode().style.display = 'table';
+        } else {
+          operatorComboBox.getNode().style.display = 'none';
+        }
+      });
 
-        event.element.complex = {
-          className: 'dmn-hitpolicy-setter',
-          template: template,
-          element: event.element,
-          comboBox: comboBox,
-          operatorComboBox: operatorComboBox,
-          type: 'hitPolicy',
-          offset: {
-            x: 42,
-            y: -15
-          }
-        };
+      event.element.complex = {
+        className: 'dmn-hitpolicy-setter',
+        template: template,
+        element: event.element,
+        comboBox: comboBox,
+        operatorComboBox: operatorComboBox,
+        type: 'hitPolicy',
+        offset: {
+          x: OFFSET_X,
+          y: OFFSET_Y
+        }
+      };
     }
 
   });
@@ -70762,34 +71673,37 @@ function HitPolicy(eventBus, utilityColumn, ioLabel, graphicsFactory, elementReg
   // whenever an type cell is opened, we have to position the template, apply the model value and
   // potentially disable inputs
   eventBus.on('complexCell.open', function(evt) {
-    if(evt.config.type === 'hitPolicy') {
-      // feed the values to the template and combobox
-      evt.config.comboBox.setValue(self.getHitPolicy());
-      evt.config.operatorComboBox.setValue(self.getAggregation());
+    var config = evt.config;
 
-      var template = evt.config.template;
+    if (config.type === 'hitPolicy') {
+
+      // feed the values to the template and combobox
+      config.comboBox.setValue(self.getHitPolicy());
+      config.operatorComboBox.setValue(self.getAggregation());
+
+      var template = config.template;
 
       // focus the combobox input field
       template.querySelector('.dmn-combobox > input').focus();
 
       // disable all input fields if editing is not allowed
-      if(!rules.allowed('hitPolicy.edit')) {
+      if (!rules.allowed('hitPolicy.edit')) {
         var inputs = template.querySelectorAll('input');
-        for(var i = 0; i < inputs.length; i++) {
+        for (var i = 0; i < inputs.length; i++) {
           inputs[i].setAttribute('disabled', 'true');
         }
-        evt.config.comboBox.disable();
+        config.comboBox.disable();
 
         // also set a disabled css class on the template
         domClasses(template.parentNode).add('read-only');
       }
     }
-  });
+  }, this);
 
 
   // whenever a datatype cell is closed, apply the changes to the underlying model
   eventBus.on('complexCell.close', function(evt) {
-    if(evt.config.type === 'hitPolicy') {
+    if (evt.config.type === 'hitPolicy') {
       eventBus.fire('hitPolicy.edit', {
         table: self.table,
         hitPolicy: evt.config.comboBox.getValue(),
@@ -70801,25 +71715,11 @@ function HitPolicy(eventBus, utilityColumn, ioLabel, graphicsFactory, elementReg
     }
   });
 
-  eventBus.on('details.hidden', function() {
-    if(self.hitPolicyCell) {
-      self.hitPolicyCell.rowspan = 2;
-      graphicsFactory.update('cell', self.hitPolicyCell, elementRegistry.getGraphics(self.hitPolicyCell.id));
-    }
-  });
-  eventBus.on('details.shown', function() {
-    if(self.hitPolicyCell) {
-      self.hitPolicyCell.rowspan = 4;
-      graphicsFactory.update('cell', self.hitPolicyCell, elementRegistry.getGraphics(self.hitPolicyCell.id));
-    }
-  });
-
 }
 
 HitPolicy.$inject = [
   'eventBus', 'utilityColumn', 'ioLabel',
-  'graphicsFactory', 'elementRegistry', 'rules',
-  'hideTechControl'
+  'graphicsFactory', 'elementRegistry', 'rules'
 ];
 
 HitPolicy.prototype.getCell = function() {
@@ -70836,17 +71736,16 @@ HitPolicy.prototype.getAggregation = function() {
 
 module.exports = HitPolicy;
 
-
-},{"min-dom/lib/classes":712,"min-dom/lib/domify":714,"table-js/lib/features/combo-box":742}],543:[function(require,module,exports){
+},{"min-dom/lib/classes":767,"min-dom/lib/domify":769,"table-js/lib/features/combo-box":798}],553:[function(require,module,exports){
 'use strict';
 
 function convertOperators(operator) {
-  switch(operator) {
-    case 'LIST': return '';
-    case 'SUM': return '+';
-    case 'MIN': return '<';
-    case 'MAX': return '>';
-    case 'COUNT': return '#';
+  switch (operator) {
+  case 'LIST': return '';
+  case 'SUM': return '+';
+  case 'MIN': return '<';
+  case 'MAX': return '>';
+  case 'COUNT': return '#';
   }
 }
 
@@ -70872,18 +71771,18 @@ HitPolicyRenderer.$inject = [
 
 module.exports = HitPolicyRenderer;
 
-},{}],544:[function(require,module,exports){
+},{}],554:[function(require,module,exports){
 module.exports = {
   __init__: [ 'hitPolicy', 'hitPolicyRenderer' ],
   __depends__: [
     require('table-js/lib/features/utility-column'),
-    require('../io-label'),
+    require('../io-label')
   ],
   hitPolicy: [ 'type', require('./HitPolicy') ],
-  hitPolicyRenderer: [ 'type', require('./HitPolicyRenderer') ],
+  hitPolicyRenderer: [ 'type', require('./HitPolicyRenderer') ]
 };
 
-},{"../io-label":548,"./HitPolicy":542,"./HitPolicyRenderer":543,"table-js/lib/features/utility-column":779}],545:[function(require,module,exports){
+},{"../io-label":558,"./HitPolicy":552,"./HitPolicyRenderer":553,"table-js/lib/features/utility-column":835}],555:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify'),
@@ -70902,30 +71801,33 @@ function IoLabel(eventBus, sheet, elementRegistry, graphicsFactory, rules) {
   this.row = null;
 
   var self = this;
-  eventBus.on('sheet.init', function(event) {
+
+  eventBus.on([ 'sheet.init', 'sheet.cleared' ], function(event) {
 
     eventBus.fire('ioLabel.add', event);
 
-    self.row = sheet.addRow({
+    this.row = sheet.addRow({
       id: 'ioLabel',
       isHead: true,
       isLabelRow: true,
       useTH: true
     });
 
-    eventBus.fire('ioLabel.added', self.row);
-  });
+    eventBus.fire('ioLabel.added', this.row);
+  }, this);
 
-  eventBus.on('sheet.destroy', function(event) {
+  eventBus.on([ 'sheet.destroy', 'sheet.clear' ], function(event) {
 
-    eventBus.fire('ioLabel.destroy', self.row);
+    eventBus.fire('ioLabel.destroy', this.row);
 
     sheet.removeRow({
       id: 'ioLabel'
     });
 
-    eventBus.fire('ioLabel.destroyed', self.row);
-  });
+    eventBus.fire('ioLabel.destroyed', this.row);
+
+    this.row = null;
+  }, this);
 
   function updateColspans(evt) {
     var cells = elementRegistry.filter(function(element) {
@@ -70937,16 +71839,16 @@ function IoLabel(eventBus, sheet, elementRegistry, graphicsFactory, rules) {
     });
 
     forEach(inputs, function(input) {
-      if(!input.column.previous.businessObject) {
+      if (!input.column.previous.businessObject) {
         // first cell of the inputs array has the colspan attribute set
         input.colspan = inputs.length;
 
         var node;
-        if(rules.allowed('column.create')) {
+        if (rules.allowed('column.create')) {
           node = domify('Input <a class="dmn-icon-plus"></a>');
           node.querySelector('a').addEventListener('mouseup', function() {
             var col = input.column;
-            while(col.next && col.next.businessObject.$type === 'dmn:InputClause') {
+            while (col.next && col.next.businessObject.$type === 'dmn:InputClause') {
               col = col.next;
             }
 
@@ -70976,16 +71878,16 @@ function IoLabel(eventBus, sheet, elementRegistry, graphicsFactory, rules) {
     });
 
     forEach(outputs, function(output) {
-      if(output.column.previous.businessObject.inputExpression) {
+      if (output.column.previous.businessObject.inputExpression) {
         // first cell of the outputs array has the colspan attribute set
         output.colspan = outputs.length;
 
         var node;
-        if(rules.allowed('column.create')) {
+        if (rules.allowed('column.create')) {
           node = domify('Output <a class="dmn-icon-plus"></a>');
           node.querySelector('a').addEventListener('mouseup', function() {
             var col = output.column;
-            while(col.next && col.next.businessObject && col.next.businessObject.$type === 'dmn:OutputClause') {
+            while (col.next && col.next.businessObject && col.next.businessObject.$type === 'dmn:OutputClause') {
               col = col.next;
             }
 
@@ -71010,16 +71912,17 @@ function IoLabel(eventBus, sheet, elementRegistry, graphicsFactory, rules) {
       }
     });
 
-    if(cells.length > 0) {
+    if (cells.length > 0) {
       graphicsFactory.update('row', cells[0].row, elementRegistry.getGraphics(cells[0].row.id));
     }
   }
-  eventBus.on(['cells.added', 'cells.removed'], function(evt) {
-    if(evt._type === 'column') {
+  eventBus.on([ 'cells.added', 'cells.removed' ], function(evt) {
+    if (evt._type === 'column') {
       updateColspans();
     }
   });
-  eventBus.on(['column.move.applied'], updateColspans);
+
+  eventBus.on([ 'column.move.applied' ], updateColspans);
 }
 
 IoLabel.$inject = [ 'eventBus', 'sheet', 'elementRegistry', 'graphicsFactory', 'rules' ];
@@ -71030,7 +71933,7 @@ IoLabel.prototype.getRow = function() {
   return this.row;
 };
 
-},{"diagram-js/lib/util/IdGenerator":580,"lodash/collection/forEach":616,"min-dom/lib/domify":714}],546:[function(require,module,exports){
+},{"diagram-js/lib/util/IdGenerator":613,"lodash/collection/forEach":646,"min-dom/lib/domify":769}],556:[function(require,module,exports){
 'use strict';
 
 function IoLabelRenderer(
@@ -71054,7 +71957,7 @@ IoLabelRenderer.$inject = [
 
 module.exports = IoLabelRenderer;
 
-},{}],547:[function(require,module,exports){
+},{}],557:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -71079,14 +71982,14 @@ module.exports = IoLabelRules;
 IoLabelRules.prototype.init = function() {
   var self = this;
   this.addRule('cell.edit', function(context) {
-    if(context.row === self._ioLabel.row) {
+    if (context.row === self._ioLabel.row) {
       return false;
     }
   });
 
 };
 
-},{"diagram-js/lib/features/rules/RuleProvider":576,"inherits":608}],548:[function(require,module,exports){
+},{"diagram-js/lib/features/rules/RuleProvider":609,"inherits":637}],558:[function(require,module,exports){
 module.exports = {
   __init__: [ 'ioLabel', 'ioLabelRules', 'ioLabelRenderer' ],
   __depends__: [],
@@ -71095,52 +71998,78 @@ module.exports = {
   ioLabelRenderer: [ 'type', require('./IoLabelRenderer') ]
 };
 
-},{"./IoLabel":545,"./IoLabelRenderer":546,"./IoLabelRules":547}],549:[function(require,module,exports){
+},{"./IoLabel":555,"./IoLabelRenderer":556,"./IoLabelRules":557}],559:[function(require,module,exports){
+module.exports = "<div>\r\n  <div class=\"links\">\r\n    <div class=\"toggle-type\">\r\n      <label>Use:</label>\r\n      <a class=\"expression\">Expression</a>\r\n      /\r\n      <a class=\"script\">Script</a>\r\n    </div>\r\n    <a class=\"dmn-icon-clear\"></a>\r\n  </div>\r\n  <div class=\"expression region\">\r\n    <div class=\"input-expression\">\r\n      <label>Expression:</label>\r\n      <input placeholder=\"propertyName\">\r\n    </div>\r\n    <div class=\"input-expression\">\r\n      <label>Variable Name:</label>\r\n      <input placeholder=\"inputVariable\">\r\n    </div>\r\n  </div>\r\n  <div class=\"script region\">\r\n    <div class=\"input-expression\">\r\n      <label>Variable Name:</label>\r\n      <input placeholder=\"inputVariable\">\r\n    </div>\r\n    <textarea placeholder=\"return obj.propertyName;\"></textarea>\r\n  </div>\r\n</div>\r\n";
+
+},{}],560:[function(require,module,exports){
 'use strict';
-
-
 
 var domify = require('min-dom/lib/domify'),
     domClasses = require('min-dom/lib/classes'),
     assign = require('lodash/object/assign'),
-    ComboBox = require('table-js/lib/features/combo-box');
+    forEach = require('lodash/collection/forEach');
+
+var exprTemplate = require('./ExpressionTemplate.html');
+
+var ComboBox = require('table-js/lib/features/combo-box');
+
+var PROP_NAME = '.expression .input-expression input[placeholder="propertyName"]',
+    EXPR_IPT_VAR = '.expression .input-expression input[placeholder="inputVariable"]',
+    SCRPT_IPT_VAR = '.script .input-expression input[placeholder="inputVariable"]',
+    SCRPT_TEXT = '.script.region > textarea',
+    IPT_VARS = [ EXPR_IPT_VAR, SCRPT_IPT_VAR ];
+
+var OFFSET_X = 1, //20
+    OFFSET_Y = -2; //194
+
+
+function forEachSelector(node, arr, fn) {
+  forEach(arr, function(elem) {
+    fn(node.querySelector(elem));
+  });
+}
+
 
 /**
  * Adds a control to the table to define the input- and output-mappings for clauses
  */
-function MappingsRow(eventBus, sheet, elementRegistry, graphicsFactory, complexCell, rules) {
+function MappingsRow(eventBus, sheet, elementRegistry, graphicsFactory, complexCell, config) {
 
   this.row = null;
 
-  var self = this;
-
   // add row when the sheet is initialized
-  eventBus.on('sheet.init', function(event) {
+  eventBus.on([ 'sheet.init', 'sheet.cleared' ], function(event) {
+
+    if (this.row) {
+      return;
+    }
 
     eventBus.fire('mappingsRow.add', event);
 
-    self.row = sheet.addRow({
+    this.row = sheet.addRow({
       id: 'mappingsRow',
       isHead: true,
       isMappingsRow: true
     });
 
-    eventBus.fire('mappingsRow.added', self.row);
+    eventBus.fire('mappingsRow.added', this.row);
 
-    graphicsFactory.update('row', self.row, elementRegistry.getGraphics(self.row.id));
-  });
+    graphicsFactory.update('row', this.row, elementRegistry.getGraphics(this.row.id));
+  }, this);
 
   // remove the row when the sheet is destroyed
-  eventBus.on('sheet.destroy', function(event) {
+  eventBus.on([ 'sheet.clear', 'sheet.destroy' ], function(event) {
 
-    eventBus.fire('mappingsRow.destroy', self.row);
+    eventBus.fire('mappingsRow.destroy', this.row);
 
     sheet.removeRow({
       id: 'mappingsRow'
     });
 
-    eventBus.fire('mappingsRow.destroyed', self.row);
-  });
+    eventBus.fire('mappingsRow.destroyed', this.row);
+
+    this.row = null;
+  }, this);
 
   /**
    * Helper function to position and resize the template. This is needed for the switch between
@@ -71153,59 +72082,23 @@ function MappingsRow(eventBus, sheet, elementRegistry, graphicsFactory, complexC
   var positionTemplate = function(node, element, large) {
     var table = sheet.getRootElement(),
         gfx = elementRegistry.getGraphics(element),
-        e, offset;
+        tableDimensions, gfxDimensions;
 
-    if(large) {
-      e = table;
-      offset = {x:0,y:0};
-
-      while (e)
-      {
-          offset.x += e.offsetLeft;
-          offset.y += e.offsetTop;
-          e = e.offsetParent;
-      }
-
-      // now also traverse the complete parent chain to determine the full scroll offset
-      e = gfx;
-      while (e && typeof e.scrollTop === 'number' && typeof e.scrollLeft === 'number')
-      {
-          offset.x -= e.scrollLeft;
-          offset.y -= e.scrollTop;
-          e = e.parentNode;
-      }
+    if (large) {
+      tableDimensions = table.getBoundingClientRect();
 
       assign(node.style, {
-        top: offset.y + 'px',
-        left: offset.x + 'px',
+        top: tableDimensions.top + 'px',
+        left: tableDimensions.left + 'px',
         width: table.clientWidth + 'px'
       });
 
     } else {
-
-      // traverse the offset parent chain to find the offset sum
-      e = gfx;
-      offset = {x:0,y:0};
-
-      while (e)
-      {
-          offset.x += e.offsetLeft;
-          offset.y += e.offsetTop;
-          e = e.offsetParent;
-      }
-
-      // now also traverse the complete parent chain to determine the full scroll offset
-      e = gfx;
-      while (e && typeof e.scrollTop === 'number' && typeof e.scrollLeft === 'number')
-      {
-          offset.x -= e.scrollLeft;
-          offset.y -= e.scrollTop;
-          e = e.parentNode;
-      }
+      gfxDimensions = gfx.getBoundingClientRect();
 
       assign(node.style, {
-        left: (offset.x + 2) + 'px',
-        top: (offset.y - 72)  + 'px',
+        top: (gfxDimensions.top - node.offsetHeight + OFFSET_Y)  + 'px',
+        left: (gfxDimensions.left + OFFSET_X) + 'px',
         width: 'auto',
         height: 'auto'
       });
@@ -71214,29 +72107,45 @@ function MappingsRow(eventBus, sheet, elementRegistry, graphicsFactory, complexC
 
   // when an input cell on the mappings row is added, setup the complex cell
   eventBus.on('cell.added', function(evt) {
-    if(evt.element.row.id === 'mappingsRow' &&
-       evt.element.column.businessObject &&
-       evt.element.column.businessObject.inputExpression) {
+    var element = evt.element,
+        column = element.column,
+        content = element.content,
+        propertyName, parent, inputVariable;
+
+    if (element.row.id === 'mappingsRow' &&
+       column.businessObject &&
+       column.businessObject.inputExpression) {
 
       // cell content is the input expression of the clause
-      evt.element.content = evt.element.column.businessObject.inputExpression;
+      content = element.content = column.businessObject.inputExpression;
 
-      var template = domify("<div>\r\n  <div class=\"links\">\r\n    <div class=\"toggle-type\">\r\n      <label>Use:</label>\r\n      <a class=\"expression\">Expression</a>\r\n      /\r\n      <a class=\"script\">Script</a>\r\n    </div>\r\n    <a class=\"dmn-icon-clear\"></a>\r\n  </div>\r\n  <div class=\"expression region\">\r\n    <label>Expression:</label>\r\n    <input placeholder=\"propertyName\">\r\n  </div>\r\n  <div class=\"script region\">\r\n    <textarea placeholder=\"return obj.propertyName;\"></textarea>\r\n  </div>\r\n</div>\r\n");
+      var template = domify(exprTemplate);
 
       // initializing the comboBox
       var comboBox = new ComboBox({
         label: 'Language',
-        classNames: ['dmn-combobox', 'language'],
-        options: ['Javascript', 'Groovy', 'Python', 'Ruby'],
-        dropdownClassNames: ['dmn-combobox-suggestions']
+        classNames: [ 'dmn-combobox', 'language' ],
+        options: [ 'Javascript', 'Groovy', 'Python', 'Ruby' ],
+        dropdownClassNames: [ 'dmn-combobox-suggestions' ]
       });
 
       // When the inputExpression has a defined expressionLanguage, we assume that it is a script
-      if(typeof evt.element.content.expressionLanguage !== 'undefined') {
-        template.querySelector('textarea').value = evt.element.content.text || '';
-        comboBox.setValue(evt.element.content.expressionLanguage);
+      if (typeof content.expressionLanguage !== 'undefined') {
+        template.querySelector(SCRPT_TEXT).value = content.text || '';
+        comboBox.setValue(content.expressionLanguage);
+
       } else {
-        template.querySelector('input').value = evt.element.content.text || '';
+        propertyName = template.querySelector(PROP_NAME);
+
+        propertyName.value = content.text || '';
+      }
+
+      parent = content.$parent;
+
+      if (parent) {
+        forEachSelector(template, IPT_VARS, function(elem) {
+          elem.value = parent.inputVariable || '';
+        });
       }
 
       // --- setup event listeners ---
@@ -71248,31 +72157,43 @@ function MappingsRow(eventBus, sheet, elementRegistry, graphicsFactory, complexC
 
       // click on Expression link switches to expression mode
       template.querySelector('.expression').addEventListener('click', function() {
+        inputVariable = template.querySelector(SCRPT_IPT_VAR).value;
+
         domClasses(template.parentNode).remove('use-script');
         positionTemplate(template.parentNode, evt.element, false);
 
         // focus the script expression input field
-        template.querySelector('.expression.region > input').focus();
+        template.querySelector(PROP_NAME).focus();
+
+        // synchronize inputVariable
+        template.querySelector(EXPR_IPT_VAR).value = inputVariable;
 
         evt.element.complex.mappingType = 'expression';
       });
 
       // click on Script link switches to script mode
       template.querySelector('.script').addEventListener('click', function() {
+        inputVariable = template.querySelector(EXPR_IPT_VAR).value;
+
         domClasses(template.parentNode).add('use-script');
         positionTemplate(template.parentNode, evt.element, true);
 
         // focus the script area
-        template.querySelector('.script.region > textarea').focus();
+        template.querySelector(SCRPT_TEXT).focus();
+
+        // synchronize inputVariable
+        template.querySelector(SCRPT_IPT_VAR).value = inputVariable;
 
         evt.element.complex.mappingType = 'script';
       });
 
       // pressing enter in the input field closes the dialog
-      template.querySelector('.expression.region > input').addEventListener('keydown', function(evt) {
-        if(evt.keyCode === 13) {
-          complexCell.close();
-        }
+      forEachSelector(template, IPT_VARS.concat(PROP_NAME), function(elem) {
+        elem.addEventListener('keydown', function(evt) {
+          if (evt.keyCode === 13) {
+            complexCell.close();
+          }
+        });
       });
 
       // add comboBox to the template
@@ -71286,21 +72207,17 @@ function MappingsRow(eventBus, sheet, elementRegistry, graphicsFactory, complexC
         className: 'dmn-clauseexpression-setter',
         template: template,
         element: evt.element,
-        mappingType: typeof evt.element.content.expressionLanguage !== 'undefined' ? 'script' : 'expression',
+        mappingType: typeof content.expressionLanguage !== 'undefined' ? 'script' : 'expression',
         comboBox: comboBox,
-        type: 'mapping',
-        offset: {
-          x: 2,
-          y: -72
-        }
+        type: 'mapping'
       };
 
       graphicsFactory.update('cell', evt.element, elementRegistry.getGraphics(evt.element));
-    } else if(evt.element.row.id === 'mappingsRow' &&
-              evt.element.column.businessObject) {
+
+    } else if (evt.element.row.id === 'mappingsRow' && column.businessObject) {
 
       // setup output mappings as simple cells with inline editing
-      evt.element.content = evt.element.column.businessObject;
+      evt.element.content = column.businessObject;
       graphicsFactory.update('cell', evt.element, elementRegistry.getGraphics(evt.element));
     }
 
@@ -71309,52 +72226,98 @@ function MappingsRow(eventBus, sheet, elementRegistry, graphicsFactory, complexC
   // whenever an input mapping cell is opened, set the required mode (script vs. Expression)
   // and position the template accordingly
   eventBus.on('complexCell.open', function(evt) {
-    if(evt.config.type === 'mapping') {
-      var template = evt.config.template;
-      if(typeof evt.config.element.content.expressionLanguage !== 'undefined') {
-        evt.config.mappingType = 'script';
-        domClasses(evt.container).add('use-script');
-        positionTemplate(evt.container, evt.config.element, true);
-        evt.container.querySelector('.script.region > textarea').focus();
+    var cfg = evt.config,
+        container = evt.container,
+        content = cfg.element.content,
+        template, parent;
+
+    if (cfg.type === 'mapping') {
+      template = cfg.template;
+
+      if (typeof content.expressionLanguage !== 'undefined') {
+        cfg.mappingType = 'script';
+
+        domClasses(container).add('use-script');
+        positionTemplate(container, cfg.element, true);
+
+        container.querySelector(SCRPT_TEXT).focus();
+
       } else {
-        evt.config.mappingType = 'expression';
-        evt.container.querySelector('.expression.region > input').focus();
+        cfg.mappingType = 'expression';
+
+        positionTemplate(container, cfg.element);
+
+        container.querySelector(PROP_NAME).focus();
       }
+
+      parent = content.$parent;
+
+      if (parent) {
+        forEachSelector(template, IPT_VARS, function(elem) {
+          elem.value = parent.inputVariable || '';
+        });
+      }
+
       // disable input fields if inputMapping editing is not allowed
-      if(!rules.allowed('inputMapping.edit')) {
-        template.querySelector('.expression.region > input').setAttribute('disabled', 'true');
-        template.querySelector('.script.region > textarea').setAttribute('disabled', 'true');
-        evt.config.comboBox.disable();
+      if (!config.editingAllowed) {
+        template.querySelector(PROP_NAME).setAttribute('disabled', 'true');
+
+        forEachSelector(template, IPT_VARS, function(elem) {
+          elem.setAttribute('disabled', 'true');
+        });
+
+        template.querySelector(SCRPT_TEXT).setAttribute('disabled', 'true');
+
+        cfg.comboBox.disable();
 
         // also set a disabled css class on the template
         domClasses(template.parentNode).add('read-only');
       }
-
     }
   });
 
   // whenever an input mapping cell is closed, apply the changes to the underlying model
   eventBus.on('complexCell.close', function(evt) {
-    if(evt.config.type === 'mapping') {
-      var template = evt.config.template;
-      if(evt.config.mappingType === 'expression') {
-        eventBus.fire('mappingsRow.editInputMapping', {
-          element: evt.config.element,
-          expression: template.querySelector('input[placeholder="propertyName"]').value
-        });
-      } else if(evt.config.mappingType === 'script') {
-        eventBus.fire('mappingsRow.editInputMapping', {
-          element: evt.config.element,
-          expression: template.querySelector('textarea').value,
-          language: evt.config.comboBox.getValue()
-        });
+    var cfg = evt.config,
+        template, element, expression, language, inputVariable;
+
+    if (cfg.type === 'mapping') {
+      template = cfg.template;
+      element = cfg.element;
+
+      if (cfg.mappingType === 'expression') {
+        expression = template.querySelector(PROP_NAME).value;
+
+        inputVariable = template.querySelector(EXPR_IPT_VAR).value;
+
+      } else if (cfg.mappingType === 'script') {
+        language = cfg.comboBox.getValue();
+
+        inputVariable = template.querySelector(SCRPT_IPT_VAR).value;
+
+        expression = template.querySelector(SCRPT_TEXT).value;
       }
 
+      eventBus.fire('mappingsRow.editInputMapping', {
+        element: element,
+        attrs: {
+          expression: expression,
+          language: language,
+          inputVariable: inputVariable
+        }
+      });
     }
   });
 }
 
-MappingsRow.$inject = [ 'eventBus', 'sheet', 'elementRegistry', 'graphicsFactory', 'complexCell', 'rules' ];
+MappingsRow.$inject = [
+  'eventBus',
+  'sheet',
+  'elementRegistry',
+  'graphicsFactory',
+  'complexCell',
+  'config'
+];
 
 module.exports = MappingsRow;
 
@@ -71362,7 +72325,7 @@ MappingsRow.prototype.getRow = function() {
   return this.row;
 };
 
-},{"lodash/object/assign":703,"min-dom/lib/classes":712,"min-dom/lib/domify":714,"table-js/lib/features/combo-box":742}],550:[function(require,module,exports){
+},{"./ExpressionTemplate.html":559,"lodash/collection/forEach":646,"lodash/object/assign":757,"min-dom/lib/classes":767,"min-dom/lib/domify":769,"table-js/lib/features/combo-box":798}],561:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -71382,7 +72345,7 @@ function MappingsRowRenderer(
     // input cell contains the expression or the expression language for scripts
     if (event.data.row === mappingsRow.getRow() && event.data.content &&
         event.data.column.businessObject.inputExpression) {
-      if(event.data.content.expressionLanguage) {
+      if (event.data.content.expressionLanguage) {
         event.gfx.childNodes[0].textContent = event.data.content.expressionLanguage || '';
       } else {
         event.gfx.childNodes[0].textContent = event.data.content.text || '';
@@ -71402,15 +72365,17 @@ MappingsRowRenderer.$inject = [
 
 module.exports = MappingsRowRenderer;
 
-},{"min-dom/lib/classes":712}],551:[function(require,module,exports){
+},{"min-dom/lib/classes":767}],562:[function(require,module,exports){
 module.exports = {
+  __depends__: [
+    require('table-js/lib/features/complex-cell')
+  ],
   __init__: [ 'mappingsRow', 'mappingsRowRenderer' ],
-  __depends__: [ require('table-js/lib/features/complex-cell') ],
   mappingsRow: [ 'type', require('./MappingsRow') ],
   mappingsRowRenderer: [ 'type', require('./MappingsRowRenderer') ]
 };
 
-},{"./MappingsRow":549,"./MappingsRowRenderer":550,"table-js/lib/features/complex-cell":744}],552:[function(require,module,exports){
+},{"./MappingsRow":560,"./MappingsRowRenderer":561,"table-js/lib/features/complex-cell":800}],563:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits'),
@@ -71423,7 +72388,7 @@ var CommandInterceptor = require('diagram-js/lib/command/CommandInterceptor');
  * A handler responsible for updating the underlying DMN
  * once changes on the table happen
  */
-function DmnUpdater(eventBus, moddle, elementRegistry, dmnFactory, tableName) {
+function DmnUpdater(eventBus, moddle, elementRegistry, dmnFactory, tableName, graphicsFactory) {
 
   CommandInterceptor.call(this, eventBus);
 
@@ -71435,11 +72400,11 @@ function DmnUpdater(eventBus, moddle, elementRegistry, dmnFactory, tableName) {
 
 
     // create the rules array if it does not exist
-    if(!parent.rule) {
+    if (!parent.rule) {
       parent.rule = [];
     }
 
-    if(event.context.row.next) {
+    if (event.context.row.next) {
       parent.rule.splice(
         parent.rule.indexOf(event.context.row.next.businessObject), 0,
         businessObject);
@@ -71447,7 +72412,7 @@ function DmnUpdater(eventBus, moddle, elementRegistry, dmnFactory, tableName) {
       parent.rule.push(businessObject);
     }
 
-    if(!event.context._cells) {
+    if (!event.context._cells) {
       // we also have to explicitely create the cells for all clauses
       // inputs
       var allInputs = parent.input;
@@ -71460,24 +72425,26 @@ function DmnUpdater(eventBus, moddle, elementRegistry, dmnFactory, tableName) {
         };
       };
 
-      for(var i = 0; i < allInputs.length; i++) {
+      for (var i = 0; i < allInputs.length; i++) {
         var input = allInputs[i];
 
         var inputCellBO = dmnFactory.createInputEntry('', input, businessObject);
 
         var inputCell = elementRegistry.filter(filterFunction(input))[0];
         inputCell.content = inputCellBO;
+        eventBus.fire('contentNode.created', inputCell);
       }
 
       // outputs
       var allOutputs = parent.output;
-      for(i = 0; i < allOutputs.length; i++) {
+      for (i = 0; i < allOutputs.length; i++) {
         var output = allOutputs[i];
 
         var outputCellBO = dmnFactory.createOutputEntry('', output, businessObject);
 
         var outputCell = elementRegistry.filter(filterFunction(output))[0];
         outputCell.content = outputCellBO;
+        eventBus.fire('contentNode.created', outputCell);
       }
     }
   }
@@ -71492,7 +72459,7 @@ function DmnUpdater(eventBus, moddle, elementRegistry, dmnFactory, tableName) {
 
     var type = businessObject.$type === 'dmn:InputClause' ? 'input' : 'output';
 
-    if(nextColumn && nextColumn.businessObject && nextColumn.businessObject.$type === businessObject.$type) {
+    if (nextColumn && nextColumn.businessObject && nextColumn.businessObject.$type === businessObject.$type) {
       parent[type].splice(
         parent[type].indexOf(column.next.businessObject), 0,
         businessObject);
@@ -71500,10 +72467,10 @@ function DmnUpdater(eventBus, moddle, elementRegistry, dmnFactory, tableName) {
       parent[type].push(businessObject);
     }
 
-    if(event.context._cells) {
+    if (event.context._cells) {
       // if the column has cells, they should be added to the rules
       forEach(event.context._cells, function(cell) {
-        if(!cell.row.isHead && !cell.row.isFoot && cell.content) {
+        if (!cell.row.isHead && !cell.row.isFoot && cell.content) {
           var ruleObj = cell.row.businessObject[type + 'Entry'];
           ruleObj.splice(parent[type].indexOf(businessObject), 0, cell.content);
         }
@@ -71513,7 +72480,7 @@ function DmnUpdater(eventBus, moddle, elementRegistry, dmnFactory, tableName) {
       var allRules = parent.rule;
       forEach(allRules, function(rule) {
         var cellBO;
-        if(type === 'input') {
+        if (type === 'input') {
           cellBO = dmnFactory.createInputEntry('', businessObject, rule);
         } else {
           cellBO = dmnFactory.createOutputEntry('', businessObject, rule);
@@ -71561,14 +72528,14 @@ function DmnUpdater(eventBus, moddle, elementRegistry, dmnFactory, tableName) {
     var sourceIdx = rulesArray.indexOf(source);
     rulesArray.splice(sourceIdx, 1);
 
-    if(event.type.indexOf('.executed') !== -1) {
+    if (event.type.indexOf('.executed') !== -1) {
       // add source at target position
       targetIdx = rulesArray.indexOf(target);
       rulesArray.splice(targetIdx + (event.context.above ? 0 : 1), 0, source);
     } else if (event.type.indexOf('.reverted') !== -1) {
       // add source at previousBelow
       var previousBelow = event.context.previousBelow.businessObject;
-      if(previousBelow) {
+      if (previousBelow) {
         targetIdx = rulesArray.indexOf(previousBelow);
         rulesArray.splice(targetIdx, 0, source);
       } else {
@@ -71590,7 +72557,7 @@ function DmnUpdater(eventBus, moddle, elementRegistry, dmnFactory, tableName) {
     var sourceIdx = columns.indexOf(source);
     columns.splice(sourceIdx, 1);
 
-    if(event.type.indexOf('.executed') !== -1) {
+    if (event.type.indexOf('.executed') !== -1) {
       // add source at target position
       targetIdx = columns.indexOf(target);
       columns.splice(targetIdx + !event.context.left, 0, source);
@@ -71605,7 +72572,7 @@ function DmnUpdater(eventBus, moddle, elementRegistry, dmnFactory, tableName) {
     } else if (event.type.indexOf('.reverted') !== -1) {
       // add source at previousRight
       var previousRight = event.context.previousRight.businessObject;
-      if(previousRight && previousRight.$type === source.$type) {
+      if (previousRight && previousRight.$type === source.$type) {
         targetIdx = columns.indexOf(previousRight);
         columns.splice(targetIdx, 0, source);
         forEach(rules, function(rule) {
@@ -71629,6 +72596,10 @@ function DmnUpdater(eventBus, moddle, elementRegistry, dmnFactory, tableName) {
 
   }
 
+  this.postExecuted([ 'column.create' ], function() {
+    eventBus.fire('sheet.resized');
+  });
+
   this.executed([ 'column.create' ], setColumnParent);
   this.executed([ 'row.create' ], setParent);
   this.executed([ 'column.delete' ], unsetParent);
@@ -71642,27 +72613,47 @@ function DmnUpdater(eventBus, moddle, elementRegistry, dmnFactory, tableName) {
   this.reverted([ 'row.delete' ], setParent);
   this.reverted([ 'row.move' ], moveRow);
   this.reverted([ 'column.move' ], moveColumn);
+
+  this.executed([ 'column.create', 'column.delete' ], function() {
+    eventBus.fire('sheet.resized');
+  });
+
+  this.reverted([ 'column.create', 'column.delete' ], function() {
+    eventBus.fire('sheet.resized');
+  });
+
+  this.executed(['description.edit', 'dataType.edit'], function() {
+    graphicsFactory.redraw();
+  });
+  this.reverted(['description.edit', 'dataType.edit'], function() {
+    graphicsFactory.redraw();
+  });
 }
 
 inherits(DmnUpdater, CommandInterceptor);
 
 module.exports = DmnUpdater;
 
-DmnUpdater.$inject = [ 'eventBus', 'moddle', 'elementRegistry', 'dmnFactory', 'tableName' ];
+DmnUpdater.$inject = [ 'eventBus', 'moddle', 'elementRegistry', 'dmnFactory', 'tableName', 'graphicsFactory' ];
 
-},{"diagram-js/lib/command/CommandInterceptor":572,"inherits":608,"lodash/collection/forEachRight":617}],553:[function(require,module,exports){
+},{"diagram-js/lib/command/CommandInterceptor":605,"inherits":637,"lodash/collection/forEachRight":647}],564:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
 
 var BaseModeling = require('table-js/lib/features/modeling/Modeling');
 
-var EditCellHandler = require('./cmd/EditCellHandler');
-var ClearRowHandler = require('./cmd/ClearRowHandler');
-var EditInputMappingHandler = require('./cmd/EditInputMappingHandler');
-var EditIdHandler = require('./cmd/EditIdHandler');
-var EditTypeHandler = require('./cmd/EditTypeHandler');
-var EditHitPolicyHandler = require('./cmd/EditHitPolicyHandler');
+var EditCellHandler = require('./cmd/EditCellHandler'),
+    ClearRowHandler = require('./cmd/ClearRowHandler'),
+    EditInputMappingHandler = require('./cmd/EditInputMappingHandler'),
+    EditIdHandler = require('./cmd/EditIdHandler'),
+    EditTypeHandler = require('./cmd/EditTypeHandler'),
+    EditHitPolicyHandler = require('./cmd/EditHitPolicyHandler'),
+    EditCellExpressionLanguageHandler = require('./cmd/EditCellExpressionLanguageHandler'),
+    EditDescriptionHandler = require('./cmd/EditDescriptionHandler'),
+    CopyRowHandler = require('./cmd/CopyRowHandler'),
+    AddAllowedValueHandler = require('./cmd/AddAllowedValueHandler'),
+    RemoveAllowedValueHandler = require('./cmd/RemoveAllowedValueHandler');
 
 
 /**
@@ -71678,39 +72669,39 @@ function Modeling(eventBus, elementFactory, commandStack, sheet, elementRegistry
   this._elementRegistry = elementRegistry;
 
   // TODO: move this to a subclass of editBehavior
-  var self = this;
   eventBus.on('tableName.editId', function(event) {
-    self.editId(event.newId);
-  });
-
-  eventBus.on('ioLabel.createColumn', function(event) {
-    self.createColumn(event.newColumn);
-  });
-
-  eventBus.on('mappingsRow.editInputMapping', function(event) {
-    self.editInputMapping(
-      event.element,
-      event.expression,
-      event.language
-    );
-  });
+    this.editId(event.newId);
+  }, this);
 
   eventBus.on('typeRow.editDataType', function(event) {
-    self.editDataType(
-      event.element,
-      event.dataType,
-      event.allowedValues
-    );
-  });
+    this.editDataType( event.element, event.dataType, event.allowedValues);
+  }, this);
+
+  eventBus.on('mappingsRow.editInputMapping', function(event) {
+    this.editInputMapping(event.element, event.attrs);
+  }, this);
 
   eventBus.on('hitPolicy.edit', function(event) {
-    self.editHitPolicy(
-      event.table,
-      event.hitPolicy,
-      event.aggregation,
-      event.cell
+    this.editHitPolicy(event.table, event.hitPolicy, event.aggregation, event.cell);
+  }, this);
+
+  eventBus.on('ioLabel.createColumn', function(event) {
+    this.createColumn(event.newColumn);
+  }, this);
+
+  eventBus.on('typeRow.addAllowedValue', function(event) {
+    this.addAllowedValue(
+      event.element,
+      event.value
     );
-  });
+  }, this);
+
+  eventBus.on('typeRow.removeAllowedValue', function(event) {
+    this.removeAllowedValue(
+      event.element,
+      event.value
+    );
+  }, this);
 }
 
 inherits(Modeling, BaseModeling);
@@ -71724,13 +72715,67 @@ Modeling.prototype.getHandlers = function() {
   var handlers = BaseModeling.prototype.getHandlers.call(this);
 
   handlers['cell.edit'] = EditCellHandler;
+
   handlers['row.clear'] = ClearRowHandler;
+  handlers['row.copy'] = CopyRowHandler;
+
   handlers['inputMapping.edit'] = EditInputMappingHandler;
   handlers['id.edit'] = EditIdHandler;
   handlers['dataType.edit'] = EditTypeHandler;
   handlers['hitPolicy.edit'] = EditHitPolicyHandler;
+  handlers['cellExpressionLanguage.edit'] = EditCellExpressionLanguageHandler;
+  handlers['typeRow.addAllowedValue'] = AddAllowedValueHandler;
+  handlers['typeRow.removeAllowedValue'] = RemoveAllowedValueHandler;
+
+  handlers['description.edit'] = EditDescriptionHandler;
 
   return handlers;
+};
+
+Modeling.prototype.removeAllowedValue = function(businessObject, value) {
+  if ((!businessObject.content.inputValues || !businessObject.content.inputValues.text.indexOf('"' + value + '"') === -1) &&
+     (!businessObject.content.outputValues || !businessObject.content.outputValues.text.indexOf('"' + value + '"') === -1)) {
+    return;
+  }
+
+  var context = {
+    businessObject: businessObject.content,
+    value: value,
+    isInput: businessObject.content.inputExpression
+  };
+
+  this._commandStack.execute('typeRow.removeAllowedValue', context);
+
+  return context;
+};
+
+Modeling.prototype.addAllowedValue = function(businessObject, value) {
+  if (businessObject.content.inputValues && businessObject.content.inputValues.text.indexOf('"' + value + '"') !== -1 ||
+     businessObject.content.outputValues && businessObject.content.outputValues.text.indexOf('"' + value + '"') !== -1) {
+    // do not add a value twice
+    return;
+  }
+
+  var context = {
+    businessObject: businessObject.content,
+    value: value,
+    isInput: !!businessObject.content.inputExpression
+  };
+
+  this._commandStack.execute('typeRow.addAllowedValue', context);
+
+  return context;
+};
+
+Modeling.prototype.copyRow = function(row, refRow) {
+  var context = {
+    row: row,
+    refRow: refRow
+  };
+
+  this._commandStack.execute('row.copy', context);
+
+  return context;
 };
 
 Modeling.prototype.editCell = function(row, column, content) {
@@ -71742,21 +72787,22 @@ Modeling.prototype.editCell = function(row, column, content) {
   };
 
   var cell = this._elementRegistry.filter(function(element) {
-      return element._type === 'cell' && element.row.id === row && element.column.id === column;
+    return element._type === 'cell' && element.row.id === row && element.column.id === column;
   })[0];
 
-  if(cell.row.isClauseRow) {
+  if (cell.row.isClauseRow) {
     // change the clause label
-    if(cell.column.businessObject.label !== content) {
+    if (cell.column.businessObject.label !== content) {
       this._commandStack.execute('cell.edit', context);
     }
-  } else if(cell.row.isMappingsRow) {
-    if(cell.content.name !== content.trim()) {
+  } else if (cell.row.isMappingsRow) {
+    if (cell.content.name !== content.trim()) {
       this._commandStack.execute('cell.edit', context);
     }
-  } else if(!cell.row.isHead) {
+  } else if (!cell.row.isHead) {
+
     var previousContent = cell.content;
-    if((!cell.column.isAnnotationsColumn && (!previousContent && context.content.trim() !== '') ||
+    if ((!cell.column.isAnnotationsColumn && (!previousContent && context.content.trim() !== '') ||
        (previousContent && context.content.trim() !== previousContent.text)) ||
        (cell.column.isAnnotationsColumn && cell.row.businessObject.description !== context.content.trim())) {
       // only execute edit command if content changed
@@ -71775,11 +72821,11 @@ Modeling.prototype.editHitPolicy = function(table, newPolicy, aggregation, cell)
     cell: cell
   };
 
-  if(!context.newAggregation || context.newAggregation === 'LIST') {
+  if (!context.newAggregation || context.newAggregation === 'LIST') {
     context.newAggregation = undefined;
   }
 
-  if(table.hitPolicy !== newPolicy ||
+  if (table.hitPolicy !== newPolicy ||
     (!table.aggregation && context.newAggregation) ||
      table.aggregation !== context.newAggregation) {
 
@@ -71790,17 +72836,18 @@ Modeling.prototype.editHitPolicy = function(table, newPolicy, aggregation, cell)
 };
 
 
-Modeling.prototype.editInputMapping = function(cell, newMapping, language) {
+Modeling.prototype.editInputMapping = function(cell, attrs) {
   var context = {
-    cell: cell,
-    newMapping: newMapping
-  };
-  if(arguments.length === 3) {
-    // if script is used
-    context.language = language;
-  }
+        cell: cell,
+        newMapping: attrs.expression,
+        inputVariable: attrs.inputVariable,
+        language: attrs.language
+      },
+      content = cell.content;
 
-  if(cell.content.text !== newMapping || cell.content.expressionLanguage !== language) {
+  if (content.text !== context.newMapping ||
+      content.expressionLanguage !== context.language ||
+     (content.$parent && (content.$parent.inputVariable !== context.inputVariable))) {
     this._commandStack.execute('inputMapping.edit', context);
   }
 
@@ -71818,44 +72865,116 @@ Modeling.prototype.editId = function(newId) {
   return context;
 };
 
-Modeling.prototype.editDataType = function(cell, newType, allowedValues) {
+Modeling.prototype.editDataType = function(cell, newType) {
   var context = {
     cell: cell,
     newType: newType
   };
-  if(arguments.length === 3) {
-    // when allowed values are provided
-    context.allowedValues = allowedValues;
-  }
 
-  var allowedValuesChanged = false;
-
-  // changed if the number of entries is different
-  if(!cell.content.allowedValue && allowedValues ||
-      cell.content.allowedValue && !allowedValues  ||
-      cell.content.allowedValue && allowedValues && cell.content.allowedValue.length !== allowedValues.length) {
-        allowedValuesChanged = true;
-  } else
-
-  // changed if at least one entry is different from before
-  if(cell.content.allowedValue && allowedValues) {
-    for(var i = 0; i < allowedValues.length; i++) {
-      if(cell.content.allowedValue[i].text !== allowedValues[i]) {
-        allowedValuesChanged = true;
-        break;
-      }
-    }
-  }
-
-
-  if(cell.content.typeDefinition !== newType || allowedValuesChanged) {
+  if (cell.content.typeDefinition !== newType) {
     this._commandStack.execute('dataType.edit', context);
   }
 
   return context;
 };
 
-},{"./cmd/ClearRowHandler":554,"./cmd/EditCellHandler":555,"./cmd/EditHitPolicyHandler":556,"./cmd/EditIdHandler":557,"./cmd/EditInputMappingHandler":558,"./cmd/EditTypeHandler":559,"inherits":608,"table-js/lib/features/modeling/Modeling":759}],554:[function(require,module,exports){
+Modeling.prototype.editCellExpressionLanguage = function(businessObject, expressionLanguage) {
+  var context = {
+    businessObject: businessObject,
+    newExpressionLanguage: expressionLanguage
+  };
+
+  this._commandStack.execute('cellExpressionLanguage.edit', context);
+};
+
+Modeling.prototype.editDescription = function(businessObject, description) {
+  var context = {
+    businessObject: businessObject,
+    newDescription: description
+  };
+
+  this._commandStack.execute('description.edit', context);
+};
+
+},{"./cmd/AddAllowedValueHandler":565,"./cmd/ClearRowHandler":566,"./cmd/CopyRowHandler":567,"./cmd/EditCellExpressionLanguageHandler":568,"./cmd/EditCellHandler":569,"./cmd/EditDescriptionHandler":570,"./cmd/EditHitPolicyHandler":571,"./cmd/EditIdHandler":572,"./cmd/EditInputMappingHandler":573,"./cmd/EditTypeHandler":574,"./cmd/RemoveAllowedValueHandler":575,"inherits":637,"table-js/lib/features/modeling/Modeling":815}],565:[function(require,module,exports){
+'use strict';
+
+/**
+ * A handler that implements reversible addition of an allowed value for a datatype.
+ *
+ */
+function AddAllowedValueHandler(dmnFactory) {
+  this._dmnFactory = dmnFactory;
+}
+
+module.exports = AddAllowedValueHandler;
+AddAllowedValueHandler.$inject = [ 'dmnFactory' ];
+
+
+
+////// api /////////////////////////////////////////
+
+
+/**
+ * Adds the allowed value
+ *
+ * @param {Object} context
+ */
+AddAllowedValueHandler.prototype.execute = function(context) {
+
+  if (context.isInput) {
+    context.oldValue = context.businessObject.inputValues && context.businessObject.inputValues.text;
+
+    if (!context.businessObject.inputValues) {
+      this._dmnFactory.createInputValues(context.businessObject);
+    }
+
+    if (context.businessObject.inputValues.text) {
+      context.businessObject.inputValues.text += ',"' + context.value + '"';
+    } else {
+      context.businessObject.inputValues.text = '"' + context.value + '"';
+    }
+  } else {
+    context.oldValue = context.businessObject.outputValues && context.businessObject.outputValues.text;
+
+    if (!context.businessObject.outputValues) {
+      this._dmnFactory.createOutputValues(context.businessObject);
+    }
+
+    if (context.businessObject.outputValues.text) {
+      context.businessObject.outputValues.text += ',"' + context.value + '"';
+    } else {
+      context.businessObject.outputValues.text = '"' + context.value + '"';
+    }
+  }
+
+  return context;
+};
+
+
+/**
+ * Undo Edit by resetting the content
+ */
+AddAllowedValueHandler.prototype.revert = function(context) {
+
+  if (context.isInput) {
+    if (context.oldValue) {
+      context.businessObject.inputValues.text = context.oldValue;
+    } else {
+      context.businessObject.inputValues.text = '';
+    }
+  } else {
+    if (context.oldValue) {
+      context.businessObject.outputValues.text = context.oldValue;
+    } else {
+      context.businessObject.outputValues.text = '';
+    }
+  }
+
+  return context;
+};
+
+},{}],566:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -71897,7 +73016,7 @@ ClearRowHandler.prototype.execute = function(context) {
   });
   context._oldContent = [];
   forEach(cells, function(cell) {
-    if(cell.content) {
+    if (cell.content) {
       context._oldContent.push(cell.content.text);
       cell.content.text = '';
     }
@@ -71921,14 +73040,106 @@ ClearRowHandler.prototype.revert = function(context) {
   });
   var i = 0;
   forEach(cells, function(cell) {
-    if(cell.content) {
+    if (cell.content) {
       cell.content.text = context._oldContent[i++];
     }
     self._graphicsFactory.update('cell', cell, self._elementRegistry.getGraphics(cell.id));
   });
 };
 
-},{"lodash/collection/forEach":616}],555:[function(require,module,exports){
+},{"lodash/collection/forEach":646}],567:[function(require,module,exports){
+'use strict';
+
+var getBusinessObject = require('../../../util/ModelUtil').getBusinessObject;
+
+
+function CopyRowHandler(modeling, dmnFactory) {
+  this._modeling = modeling;
+  this._dmnFactory = dmnFactory;
+}
+
+CopyRowHandler.$inject = [ 'modeling', 'dmnFactory' ];
+
+module.exports = CopyRowHandler;
+
+
+CopyRowHandler.prototype.preExecute = function(context) {
+  var modeling = this._modeling;
+
+  var row = context.row;
+
+  modeling.createRow(row);
+};
+
+CopyRowHandler.prototype.postExecute = function(context) {
+  var row = context.row,
+      refRow = context.refRow;
+
+  var businessObject = getBusinessObject(row),
+      refBusinessObj = getBusinessObject(refRow),
+      idx;
+
+  // update input rules
+  for (idx = 0; idx < businessObject.inputEntry.length; idx++) {
+    businessObject.inputEntry[idx].text = refBusinessObj.inputEntry[idx].text;
+  }
+
+  // update output rules
+  for (idx = 0; idx < businessObject.outputEntry.length; idx++) {
+    businessObject.outputEntry[idx].text = refBusinessObj.outputEntry[idx].text;
+  }
+
+  // update annotation
+  businessObject.description = refBusinessObj.description;
+};
+
+CopyRowHandler.prototype.execute = function(context) {};
+
+CopyRowHandler.prototype.revert = function(context) {};
+
+},{"../../../util/ModelUtil":602}],568:[function(require,module,exports){
+'use strict';
+
+/**
+ * A handler that implements reversible editing of the expression language for a cell.
+ *
+ */
+function EditCellExpressionLanguageHandler() {
+}
+
+module.exports = EditCellExpressionLanguageHandler;
+
+
+
+////// api /////////////////////////////////////////
+
+
+/**
+ * Edits the expression language
+ *
+ * @param {Object} context
+ */
+EditCellExpressionLanguageHandler.prototype.execute = function(context) {
+
+  context.oldExpressionLanguage = context.businessObject.expressionLanguage;
+
+  context.businessObject.expressionLanguage = context.newExpressionLanguage;
+
+  return context;
+};
+
+
+/**
+ * Undo Edit by resetting the content
+ */
+EditCellExpressionLanguageHandler.prototype.revert = function(context) {
+
+  context.businessObject.expressionLanguage = context.oldExpressionLanguage;
+
+  return context;
+};
+
+},{}],569:[function(require,module,exports){
 'use strict';
 
 var calculateSelectionUpdate = require('selection-update');
@@ -71936,7 +73147,7 @@ var calculateSelectionUpdate = require('selection-update');
 function getSelection(node) {
 
   var selectObj = document.getSelection();
-  if(selectObj.rangeCount > 0) {
+  if (selectObj.rangeCount > 0) {
     var range = selectObj.getRangeAt(0);
 
     return {
@@ -71953,7 +73164,7 @@ function getSelection(node) {
 function updateSelection(newSelection, gfx) {
   var range = document.createRange();
   var sel = document.getSelection();
-  if(gfx.childNodes[0].firstChild) {
+  if (gfx.childNodes[0].firstChild) {
     range.setStart(gfx.childNodes[0].firstChild, newSelection.start);
     range.setEnd(gfx.childNodes[0].firstChild, newSelection.end);
   } else {
@@ -71996,27 +73207,39 @@ EditCellHandler.prototype.execute = function(context) {
   // get the business object
   var el = this._elementRegistry.get('cell_' + context.column + '_' + context.row);
   var gfx= this._elementRegistry.getGraphics('cell_' + context.column + '_' + context.row);
-  if(el.row.isHead) {
-    if(el.row.isMappingsRow) {
+  if (el.row.isHead) {
+    if (el.row.isMappingsRow) {
       // update the output name of the clause
       // (input expressions are handled by the popover, not the cell edit)
       context.oldContent = el.content.name;
+      if (context.oldContent === context.content) {
+        return context;
+      }
       el.content.name = context.content;
-    } else if(el.row.isClauseRow) {
+    } else if (el.row.isClauseRow) {
       // update the clause names
       context.oldContent = el.column.businessObject.label;
+      if (context.oldContent === context.content) {
+        return context;
+      }
       el.column.businessObject.label = context.content;
     }
   } else {
 
-    if(el.column.isAnnotationsColumn) {
+    if (el.column.isAnnotationsColumn) {
       // update the annotations of a rule
       context.oldContent = el.row.businessObject.description;
+      if (context.oldContent === context.content) {
+        return context;
+      }
       el.row.businessObject.description = context.content;
     } else {
       // update a rule cell
-      if(el.content) {
+      if (el.content) {
         context.oldContent = el.content.text;
+        if (context.oldContent === context.content) {
+          return context;
+        }
         el.content.text = context.content;
       } else {
         // need to create a semantic object
@@ -72029,7 +73252,19 @@ EditCellHandler.prototype.execute = function(context) {
   var selection = getSelection();
   var newSelection = calculateSelectionUpdate(selection, gfx.textContent, context.content);
   this._graphicsFactory.update('cell', el, gfx);
-  updateSelection(newSelection, gfx);
+
+  // we only want to apply the selection, when it is explicitely enforced
+  // otherwise the cursor may jump around while editing the cell
+  if (context.applySelection) {
+    updateSelection(newSelection, gfx);
+  } else {
+    // if the selection is not updated, restore the old selection
+    updateSelection(selection, gfx);
+  }
+
+  // explicitely force selection application for subsequent calls (e.g. using re-/undo)
+  context.applySelection = true;
+
 
   return context;
 };
@@ -72042,21 +73277,21 @@ EditCellHandler.prototype.revert = function(context) {
   var el = this._elementRegistry.get('cell_' + context.column + '_' + context.row);
   var gfx= this._elementRegistry.getGraphics('cell_' + context.column + '_' + context.row);
 
-  if(el.row.isHead) {
-    if(el.row.isMappingsRow) {
+  if (el.row.isHead) {
+    if (el.row.isMappingsRow) {
       // revert the output name of the clause
       el.content.name = context.oldContent;
-    } else if(el.row.isClauseRow) {
+    } else if (el.row.isClauseRow) {
       // revert clause name
       el.column.businessObject.label = context.oldContent;
     }
   } else {
-    if(el.column.isAnnotationsColumn) {
+    if (el.column.isAnnotationsColumn) {
       // revert the annotations of a rule
       el.row.businessObject.description = context.oldContent;
     } else {
       // revert a rule cell
-      if(!el.content) {
+      if (!el.content) {
         var inputOrOutput = el.column.businessObject.inputExpression ? 'createInputEntry' : 'createOutputEntry',
             oldContent = context.oldContent;
         // could have been deleted
@@ -72075,7 +73310,49 @@ EditCellHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{"selection-update":727}],556:[function(require,module,exports){
+},{"selection-update":782}],570:[function(require,module,exports){
+'use strict';
+
+/**
+ * A handler that implements reversible editing of a description for a cell
+ *
+ */
+function EditDescriptionHandler() {
+}
+
+module.exports = EditDescriptionHandler;
+
+
+
+////// api /////////////////////////////////////////
+
+
+/**
+ * Edits the expression language
+ *
+ * @param {Object} context
+ */
+EditDescriptionHandler.prototype.execute = function(context) {
+
+  context.oldDescription = context.businessObject.description;
+
+  context.businessObject.description = context.newDescription;
+
+  return context;
+};
+
+
+/**
+ * Undo Edit by resetting the content
+ */
+EditDescriptionHandler.prototype.revert = function(context) {
+
+  context.businessObject.description = context.oldDescription;
+
+  return context;
+};
+
+},{}],571:[function(require,module,exports){
 'use strict';
 
 /**
@@ -72106,7 +73383,7 @@ EditHitPolicyHandler.prototype.execute = function(context) {
 
   context.table.hitPolicy = context.newPolicy;
 
-  if(context.newAggregation) {
+  if (context.newAggregation) {
     context.table.aggregation = context.newAggregation;
   } else {
     context.table.aggregation = undefined;
@@ -72123,7 +73400,7 @@ EditHitPolicyHandler.prototype.execute = function(context) {
  */
 EditHitPolicyHandler.prototype.revert = function(context) {
   context.table.hitPolicy = context.oldPolicy;
-  if(context.oldAggregation) {
+  if (context.oldAggregation) {
     context.table.aggregation = context.oldAggregation;
   } else {
     context.table.aggregation = undefined;
@@ -72134,7 +73411,7 @@ EditHitPolicyHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],557:[function(require,module,exports){
+},{}],572:[function(require,module,exports){
 'use strict';
 
 /**
@@ -72175,7 +73452,7 @@ EditIdHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],558:[function(require,module,exports){
+},{}],573:[function(require,module,exports){
 'use strict';
 
 /**
@@ -72203,21 +73480,30 @@ module.exports = EditInputMappingHandler;
  * @param {Object} context
  */
 EditInputMappingHandler.prototype.execute = function(context) {
+  var cell = context.cell,
+      content = cell.content;
 
-  context.oldMapping = context.cell.content.text;
-  context.cell.content.text = context.newMapping;
+  context.oldMapping = content.text;
+  context.oldInputVariable = content.inputVariable;
+  content.text = context.newMapping;
 
-  if(context.cell.content.expressionLanguage) {
-    context.oldLanguage = context.cell.content.expressionLanguage;
+  if (content.expressionLanguage) {
+    context.oldLanguage = content.expressionLanguage;
   }
 
-  if(typeof context.language !== 'undefined') {
-    context.cell.content.expressionLanguage = context.language;
+  if (typeof context.inputVariable !== 'undefined') {
+    content.$parent.inputVariable = context.inputVariable;
   } else {
-    context.cell.content.expressionLanguage = undefined;
+    content.$parent.inputVariable = undefined;
   }
 
-  this._graphicsFactory.update('cell', context.cell, this._elementRegistry.getGraphics(context.cell.id));
+  if (typeof context.language !== 'undefined') {
+    content.expressionLanguage = context.language;
+  } else {
+    content.expressionLanguage = undefined;
+  }
+
+  this._graphicsFactory.update('cell', cell, this._elementRegistry.getGraphics(cell.id));
 
   return context;
 };
@@ -72227,21 +73513,30 @@ EditInputMappingHandler.prototype.execute = function(context) {
  * Undo Edit by resetting the content
  */
 EditInputMappingHandler.prototype.revert = function(context) {
+  var cell = context.cell,
+      content = cell.content;
 
-  context.cell.content.text = context.oldMapping;
+  content.text = context.oldMapping;
+  context.inputVariable = content.oldInputVariable;
 
-  if(context.oldLanguage) {
-    context.cell.content.expressionLanguage = context.oldLanguage;
+  if (context.oldInputVariable) {
+    content.$parent.inputVariable = context.oldInputVariable;
   } else {
-    context.cell.content.expressionLanguage = undefined;
+    content.$parent.inputVariable = undefined;
   }
 
-  this._graphicsFactory.update('cell', context.cell, this._elementRegistry.getGraphics(context.cell.id));
+  if (context.oldLanguage) {
+    content.expressionLanguage = context.oldLanguage;
+  } else {
+    content.expressionLanguage = undefined;
+  }
+
+  this._graphicsFactory.update('cell', cell, this._elementRegistry.getGraphics(cell.id));
 
   return context;
 };
 
-},{}],559:[function(require,module,exports){
+},{}],574:[function(require,module,exports){
 'use strict';
 
 /**
@@ -72272,12 +73567,22 @@ EditTypeHandler.prototype.execute = function(context) {
 
   var cellContent = context.cell.content;
 
-  if(cellContent.inputExpression) {
+  if (cellContent.inputExpression) {
     context.oldType = cellContent.inputExpression.typeRef;
     cellContent.inputExpression.typeRef = context.newType;
+
+    if (cellContent.inputValues && context.newType !== context.oldType) {
+      context.oldInputValues = cellContent.inputValues;
+      delete cellContent.inputValues;
+    }
   } else {
     context.oldType = cellContent.typeRef;
     cellContent.typeRef = context.newType;
+
+    if (cellContent.outputValues && context.newType !== context.oldType) {
+      context.oldOutputValues = cellContent.outputValues;
+      delete cellContent.outputValues;
+    }
   }
 
   this._graphicsFactory.update('cell', context.cell, this._elementRegistry.getGraphics(context.cell.id));
@@ -72293,10 +73598,18 @@ EditTypeHandler.prototype.revert = function(context) {
 
   var cellContent = context.cell.content;
 
-  if(cellContent.inputExpression) {
+  if (cellContent.inputExpression) {
     cellContent.inputExpression.typeRef = context.oldType;
+
+    if (context.oldInputValues) {
+      cellContent.inputValues = context.oldInputValues;
+    }
   } else {
     cellContent.typeRef = context.oldType;
+
+    if (context.oldOutputValues) {
+      cellContent.outputValues = context.oldOutputValues;
+    }
   }
 
   this._graphicsFactory.update('cell', context.cell, this._elementRegistry.getGraphics(context.cell.id));
@@ -72304,7 +73617,73 @@ EditTypeHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],560:[function(require,module,exports){
+},{}],575:[function(require,module,exports){
+'use strict';
+
+/**
+ * A handler that implements reversible removal of an allowed value of a datatype.
+ *
+ */
+function RemoveAllowedValueHandler() {
+}
+
+module.exports = RemoveAllowedValueHandler;
+
+
+////// api /////////////////////////////////////////
+
+
+/**
+ * Removes an allowed value
+ *
+ * @param {Object} context
+ */
+RemoveAllowedValueHandler.prototype.execute = function(context) {
+  var text, entries;
+
+  if (context.isInput) {
+    context.oldValue = context.businessObject.inputValues && context.businessObject.inputValues.text;
+
+    text = context.businessObject.inputValues.text;
+
+    entries = text.split(',');
+
+    entries.splice(entries.indexOf(context.value), 1);
+
+    context.businessObject.inputValues.text = entries.join(',');
+  } else {
+    context.oldValue = context.businessObject.outputValues && context.businessObject.outputValues.text;
+
+    text = context.businessObject.outputValues.text;
+
+    entries = text.split(',');
+
+    entries.splice(entries.indexOf(context.value), 1);
+
+    context.businessObject.outputValues.text = entries.join(',');
+  }
+
+  return context;
+};
+
+
+/**
+ * Undo Edit by resetting the content
+ */
+RemoveAllowedValueHandler.prototype.revert = function(context) {
+
+  if (context.oldValue) {
+    if (context.isInput) {
+      context.businessObject.inputValues.text = context.oldValue;
+    } else {
+      context.businessObject.outputValues.text = context.oldValue;
+    }
+  }
+
+  return context;
+};
+
+},{}],576:[function(require,module,exports){
 module.exports = {
   __init__: [ 'modeling', 'dmnUpdater' ],
   __depends__: [
@@ -72313,10 +73692,1229 @@ module.exports = {
     require('../factory')
   ],
   modeling: [ 'type', require('./Modeling') ],
-  dmnUpdater: [ 'type', require('./DmnUpdater') ],
+  dmnUpdater: [ 'type', require('./DmnUpdater') ]
 };
 
-},{"../factory":539,"./DmnUpdater":552,"./Modeling":553,"table-js/lib/features/add-row":739,"table-js/lib/features/modeling":769}],561:[function(require,module,exports){
+},{"../factory":551,"./DmnUpdater":563,"./Modeling":564,"table-js/lib/features/add-row":794,"table-js/lib/features/modeling":825}],577:[function(require,module,exports){
+'use strict';
+
+var assign = require('lodash/object/assign'),
+    forEach = require('lodash/collection/forEach');
+
+var domify = require('min-dom/lib/domify'),
+    domQuery = require('min-dom/lib/query'),
+    domClasses = require('min-dom/lib/classes');
+
+var isNumberCell = require('./utils').isNumberCell;
+
+var htmlTemplate = require('./template.html');
+
+var OPERATORS = [
+  [ 'equals', '=' ],
+  [ 'less', '<' ],
+  [ 'less-equal', '<=' ],
+  [ 'greater', '>' ],
+  [ 'greater-equal', '>=' ]
+];
+
+var SEL_COMP_DROP = '.comparison-dropdown',
+    SEL_COMP_NUM = '.comparison-number';
+
+var SEL_START = '.include-inputs input[placeholder="start"]',
+    SEL_INC_START = '.include-inputs input[placeholder="include-start"]',
+    SEL_END = '.include-inputs input[placeholder="end"]',
+    SEL_INC_END = '.include-inputs input[placeholder="include-end"]';
+
+function getOperator(text) {
+  var operator, index;
+
+  forEach(OPERATORS, function(option, idx) {
+    index = option.indexOf(text);
+
+    if (index === -1) {
+      return;
+    }
+
+    // we want to get the opposite operator
+    operator = option[ index ? 0 : 1 ];
+
+    index = idx;
+
+    return false;
+  });
+
+  return {
+    operator: operator,
+    index: index
+  };
+}
+
+
+function NumberEdit(eventBus, simpleMode, elementRegistry, graphicsFactory, modeling, complexCell) {
+  this._eventBus = eventBus;
+  this._simpleMode = simpleMode;
+  this._elementRegistry = elementRegistry;
+  this._graphicsFactory = graphicsFactory;
+  this._modeling = modeling;
+  this._complexCell = complexCell;
+
+  eventBus.on('simpleMode.activated', this.setupComplexCells, this);
+  eventBus.on('simpleMode.deactivated', this.teardownComplexCells, this);
+
+  var refreshHandler = function() {
+    if (simpleMode.isActive()) {
+      this.refresh();
+    }
+  };
+  this._eventBus.on('typeRow.editDataType', refreshHandler, this);
+  this._eventBus.on('contentNode.created', refreshHandler, this);
+  this._eventBus.on('element.changed', refreshHandler, this);
+
+  // whenever an type cell is opened, we have to position the template, because the x offset changes
+  // over time, when columns are added and deleted
+  eventBus.on('complexCell.open', function(evt) {
+    var config = evt.config;
+
+    if (config.type === 'numberEdit') {
+      var gfx = elementRegistry.getGraphics(config.element);
+      var template = config.template,
+          content = config.element.content,
+          text = content.text;
+
+      config.editingType = this.getEditingType(text);
+
+      if (config.editingType === null) {
+        return;
+      }
+
+      if (config.editingType === 'range') {
+        this.updateRangeNode(template, text);
+      } else {
+        this.updateComparisonNode(template, text);
+      }
+
+      assign(template.parentNode.style, {
+        left: (gfx.offsetLeft + gfx.offsetWidth - 10) + 'px'
+      });
+    }
+  }, this);
+
+  eventBus.on('cell.render', function(evt) {
+    var gfx = evt.gfx,
+        data = evt.data,
+        content = data.content,
+        editingType,
+        numberGfx;
+
+    if (content && isNumberCell(data)) {
+
+      editingType = this.getEditingType(content.text);
+
+      // add [expression] to input if it's not an editable type
+      if (simpleMode.isActive() && editingType === null) {
+        // // make sure the contendeditable field is hidden
+        gfx.firstChild.style.display = 'none';
+        evt.data.preventAutoUpdate = true;
+
+        // check for the datafield
+        numberGfx = gfx.querySelector('.number-content');
+
+        if (!numberGfx) {
+          numberGfx = domify('<span class="number-content">');
+
+          gfx.appendChild(numberGfx);
+        }
+
+        // when the cell has a value that is not a number
+        if (content.description) {
+          numberGfx.innerHTML = '<span class="expression-hint"><b>[expression]</b> (<i></i>)</span>';
+          numberGfx.querySelector('i').textContent = content.description;
+        } else {
+          numberGfx.innerHTML = '<span class="expression-hint"><b>[expression]</b></span>';
+        }
+      } else {
+        // make sure the contenteditable field is visible
+        gfx.firstChild.style.display = 'inline';
+        evt.data.preventAutoUpdate = false;
+
+        // remove potential datafield
+        numberGfx = gfx.querySelector('.number-content');
+
+        if (numberGfx) {
+          numberGfx.parentNode.removeChild(numberGfx);
+        }
+      }
+    }
+  }, this);
+}
+
+NumberEdit.$inject = [ 'eventBus', 'simpleMode', 'elementRegistry', 'graphicsFactory', 'modeling', 'complexCell' ];
+
+module.exports = NumberEdit;
+
+
+NumberEdit.prototype.refresh = function() {
+  this.teardownComplexCells();
+  this.setupComplexCells();
+};
+
+NumberEdit.prototype.setupComplexCells = function() {
+  var graphicsFactory = this._graphicsFactory,
+      elementRegistry = this._elementRegistry,
+      complexCell = this._complexCell,
+      eventBus = this._eventBus;
+
+  var self = this;
+
+  function closeOnEnter(evt) {
+    if (evt.keyCode === 13) {
+      complexCell.close();
+    }
+  }
+
+  elementRegistry.forEach(function(element) {
+    var editingType, text, node, complexCellConfig;
+
+    if (isNumberCell(element)) {
+      text = element.content && element.content.text;
+
+      editingType = self.getEditingType(text);
+
+      if (editingType === null) {
+        // show nothing instead
+        element.complex = {
+          template: domify('<div>'),
+          element: element,
+          type: 'numberEdit',
+          editingType: 'comparison',
+          offset: {
+            x: 0,
+            y: 0
+          }
+        };
+
+        return graphicsFactory.update('cell', element, elementRegistry.getGraphics(element));
+      }
+
+      node = domify(htmlTemplate);
+
+      // click on Expression link switches to expression mode
+      node.querySelector('.comparison').addEventListener('click', function() {
+        domClasses(node.parentNode).remove('use-range');
+
+        // focus the script expression input field
+        node.querySelector(SEL_COMP_NUM).focus();
+
+        element.complex.editingType = 'comparison';
+      });
+
+      // click on Script link switches to script mode
+      node.querySelector('.range').addEventListener('click', function() {
+
+        domClasses(node.parentNode).add('use-range');
+
+        node.querySelector(SEL_START).focus();
+
+        element.complex.editingType = 'range';
+      });
+
+      // keybindings
+      // close complexCell with Enter on number input
+      node.querySelector(SEL_COMP_NUM).addEventListener('keydown', closeOnEnter);
+
+      // focus End input with Enter on Start input
+      node.querySelector(SEL_START).addEventListener('keydown', function(evt) {
+        if (evt.keyCode === 13) {
+          node.querySelector(SEL_END).focus();
+        }
+      });
+
+      // close complexCell with Enter on End input
+      node.querySelector(SEL_END).addEventListener('keydown', closeOnEnter);
+
+      complexCellConfig = {
+        className: 'dmn-number-editor',
+        template: node,
+        element: element,
+        type: 'numberEdit',
+        editingType: editingType || 'comparison'
+      };
+
+      eventBus.on('complexCell.close', function(complexCell) {
+        if (complexCell.config === complexCellConfig) {
+          self.updateCellContent(element, node);
+        }
+      });
+
+      element.complex = complexCellConfig;
+
+      graphicsFactory.update('cell', element, elementRegistry.getGraphics(element));
+    }
+  });
+};
+
+/**
+ * Check if it's a valid editable type, to know whether the dialog should be shown.
+ *
+ * @param  {String} text
+ *
+ * @return {String|Null}
+ */
+NumberEdit.prototype.getEditingType = function(text) {
+  if (text === '') {
+    return text;
+  }
+
+  if (/^-?([0-9]|[0-9]e[0-9]|\.[0-9]){1,}$|^(<|>|=){0,2}\s-?([0-9]|[0-9]e[0-9]|\.[0-9]){1,}$/.test(text)) {
+    return 'comparison';
+  }
+
+  if (/^(\[|\]){1}-?([0-9]|[0-9]e[0-9]|\.[0-9]){1,}\.\.-?([0-9]|[0-9]e[0-9]|\.[0-9]){1,}(\[|\]){1}$/.test(text)) {
+    return 'range';
+  }
+
+  return null;
+};
+
+NumberEdit.prototype.updateComparisonNode = function(template, text) {
+  var numberNode = template.querySelector(SEL_COMP_NUM);
+
+  var parsedText,
+      dropdownIndex,
+      number;
+
+  if (text) {
+    parsedText = text.split(' ');
+
+    if (parsedText.length === 1) {
+      dropdownIndex = 0;
+
+      number = text;
+    } else {
+      dropdownIndex = getOperator(parsedText[0]).index;
+
+      number = parsedText[1];
+    }
+
+    template.querySelector(SEL_COMP_DROP).selectedIndex = dropdownIndex;
+
+    numberNode.value = number;
+  }
+
+  domClasses(template.parentNode).remove('use-range');
+
+  numberNode.focus();
+};
+
+NumberEdit.prototype.parseRangeString = function(text) {
+  var parsedText = text.match(/([^\[\]]*)(?:\.\.)([^\[\]]*)/);
+
+  if (!parsedText) {
+    return null;
+  }
+  return parsedText.splice(1);
+};
+
+NumberEdit.prototype.updateRangeNode = function(template, text) {
+  var startNode = domQuery(SEL_START, template),
+      isStartIncludedNode = domQuery(SEL_INC_START, template),
+      endNode = domQuery(SEL_END, template),
+      isEndIncludedNode = domQuery(SEL_INC_END, template),
+      brackets,
+      parsedNumbers;
+
+  if (text) {
+    parsedNumbers = this.parseRangeString(text);
+
+    if (parsedNumbers && parsedNumbers.length === 2) {
+      brackets = text.match(/\[|\]/g);
+
+      startNode.value = parsedNumbers[0];
+      isStartIncludedNode.checked = brackets[0] === '[';
+
+      endNode.value = parsedNumbers[1];
+      isEndIncludedNode.checked = brackets[1] === ']';
+    }
+  }
+
+  domClasses(template.parentNode).add('use-range');
+
+  template.querySelector(SEL_START).focus();
+};
+
+NumberEdit.prototype.updateCellContent = function(element, node) {
+  var modeling = this._modeling;
+
+  if (!element.complex) {
+    return;
+  }
+
+  var editingType = element.complex.editingType,
+      content;
+
+  if (editingType === 'range') {
+    content = this.parseRange(node);
+  } else {
+    content = this.parseComparison(node);
+  }
+
+  modeling.editCell(element.row.id, element.column.id, content);
+};
+
+NumberEdit.prototype.parseComparison = function(node) {
+  var dropdown = domQuery(SEL_COMP_DROP, node),
+      numberNode = domQuery(SEL_COMP_NUM, node),
+      numberValue = numberNode.value,
+      operator;
+
+  var dropdownValue = dropdown.children[dropdown.selectedIndex].value;
+
+  if (!numberValue) {
+    return '';
+  }
+
+  operator = getOperator(dropdownValue).operator;
+
+  // don't show the equal operator
+  operator = operator === '=' ? '' : operator + ' ';
+
+  return operator + numberValue;
+};
+
+NumberEdit.prototype.parseRange = function(node) {
+  var start = domQuery(SEL_START, node).value,
+      isStartIncluded = domQuery(SEL_INC_START, node).checked,
+      end = domQuery(SEL_END, node).value,
+      isEndIncluded = domQuery(SEL_INC_END, node).checked;
+
+  var startBracket = isStartIncluded ? '[' : ']',
+      endBracket = isEndIncluded ? ']' : '[';
+
+  if (!start || !end) {
+    return '';
+  }
+
+  return startBracket + start + '..' + end + endBracket;
+};
+
+NumberEdit.prototype.teardownComplexCells = function() {
+  var graphicsFactory = this._graphicsFactory,
+      elementRegistry = this._elementRegistry;
+
+  elementRegistry.forEach(function(element) {
+    if (element.complex && element.complex.type === 'numberEdit') {
+
+      delete element.complex;
+
+      graphicsFactory.update('cell', element, elementRegistry.getGraphics(element));
+    }
+  });
+};
+
+},{"./template.html":579,"./utils":580,"lodash/collection/forEach":646,"lodash/object/assign":757,"min-dom/lib/classes":767,"min-dom/lib/domify":769,"min-dom/lib/query":772}],578:[function(require,module,exports){
+'use strict';
+
+module.exports = {
+  __init__: [ 'numberEdit' ],
+  numberEdit: [ 'type', require('./NumberEdit') ]
+};
+
+},{"./NumberEdit":577}],579:[function(require,module,exports){
+module.exports = "<div>\r\n  <h4>Edit Number Condition</h4>\r\n  <div class=\"links\">\r\n    <div class=\"toggle-type\">\r\n      <a class=\"comparison\">Comparison</a>\r\n      /\r\n      <a class=\"range\">Range</a>\r\n    </div>\r\n  </div>\r\n  <div class=\"comparison region\">\r\n    <select class=\"comparison-dropdown\">\r\n      <option value=\"equals\">= (Equals)</option>\r\n      <option value=\"less\">&lt; (Less than)</option>\r\n      <option value=\"less-equal\">&lt;= (Less than or equal)</option>\r\n      <option value=\"greater\">&gt; (Greater than)</option>\r\n      <option value=\"greater-equal\">&gt;= (Greater than or equal)</option>\r\n    </select>\r\n    <input type=\"number\" class=\"comparison-number\" placeholder=\"number\" />\r\n  </div>\r\n  <div class=\"range region\">\r\n    <label>Include</label>\r\n    <div class=\"include-inputs\">\r\n      <input type=\"number\" placeholder=\"start\" />\r\n      <input type=\"checkbox\" placeholder=\"include-start\" />\r\n    </div>\r\n    <div class=\"include-inputs\">\r\n      <input type=\"number\" placeholder=\"end\" />\r\n      <input type=\"checkbox\" placeholder=\"include-end\" />\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+
+},{}],580:[function(require,module,exports){
+var types = [
+  'integer',
+  'long',
+  'double'
+];
+
+function hasType(value) {
+  return types.indexOf(value) !== -1;
+}
+
+function hasNumberType(column) {
+  return column &&
+         (column.inputExpression &&
+         hasType(column.inputExpression.typeRef) ||
+         hasType(column.typeRef));
+}
+
+module.exports.hasNumberType = hasNumberType;
+
+
+function isBodyRow(row) {
+  return !row.isHead && !row.isFoot;
+}
+
+module.exports.isBodyRow = isBodyRow;
+
+
+function isNumberCell(el) {
+  return el._type === 'cell' &&
+    hasNumberType(el.column.businessObject) &&
+    isBodyRow(el.row);
+}
+
+module.exports.isNumberCell = isNumberCell;
+
+},{}],581:[function(require,module,exports){
+'use strict';
+
+var inherits = require('inherits');
+var domClasses = require('min-dom/lib/classes');
+
+var CommandInterceptor = require('diagram-js/lib/command/CommandInterceptor');
+
+function SimpleEditing(eventBus, modeling, simpleMode, elementRegistry, graphicsFactory) {
+
+  CommandInterceptor.call(this, eventBus);
+
+  this._eventBus = eventBus;
+  this._modeling = modeling;
+
+  eventBus.on('simpleCheckbox.render', function(evt, checkbox, data) {
+    // make the checkbox editable
+    checkbox.removeAttribute('disabled');
+
+    // link the checkbox to the modeling
+    if (!checkbox.changeListenerRegistered) {
+      checkbox.addEventListener('change', function(evt) {
+        modeling.editCell(data.row.id, data.column.id, evt.target.value);
+      });
+      checkbox.changeListenerRegistered = true;
+    }
+  });
+
+  eventBus.on('element.mousedown', function(event) {
+    if (domClasses(event.originalEvent.target).contains('simple-mode-checkbox')) {
+      // returning a non-undefined variable causes the eventBus to stop the propagation of the event
+      // that leads to the behavior, that other event-handlers don't override the content of
+      // the cell, which would cause the dropdown to close again
+      return true;
+    }
+  });
+
+}
+
+inherits(SimpleEditing, CommandInterceptor);
+
+SimpleEditing.$inject = [ 'eventBus', 'modeling', 'simpleMode', 'elementRegistry', 'graphicsFactory' ];
+
+module.exports = SimpleEditing;
+
+},{"diagram-js/lib/command/CommandInterceptor":605,"inherits":637,"min-dom/lib/classes":767}],582:[function(require,module,exports){
+module.exports = {
+  __init__: [ 'simpleEditing' ],
+  __depends__: [],
+  simpleEditing: [ 'type', require('./SimpleEditing') ]
+};
+
+},{"./SimpleEditing":581}],583:[function(require,module,exports){
+'use strict';
+
+var domClasses = require('min-dom/lib/classes'),
+    domify = require('min-dom/lib/domify');
+
+function isType(bo, type) {
+  return bo.inputExpression &&
+         bo.inputExpression.typeRef === type ||
+         bo.typeRef === type;
+}
+
+function SimpleMode(eventBus, sheet, config, graphicsFactory) {
+
+  this._sheet = sheet;
+  this._eventBus = eventBus;
+  this._graphicsFactory = graphicsFactory;
+
+  this.simple = false;
+
+  var self = this;
+
+  eventBus.on('controls.init', function(event) {
+    this._node = event.controls.addControl('Exit Advanced Mode', function() {
+
+      if (!domClasses(sheet.getContainer().parentNode).contains('simple-mode')) {
+        self.activate();
+      } else {
+        self.deactivate();
+      }
+    });
+  }, this);
+
+  eventBus.on('import.done', function(event) {
+    if (event.error) {
+      return;
+    }
+
+    if (!config.advancedMode) {
+      this.activate();
+    }
+  }, this);
+
+  eventBus.on([ 'sheet.destroy', 'sheet.clear' ], function(event) {
+    if (event.error) {
+      return;
+    }
+
+    this.deactivate();
+  }, this);
+
+  eventBus.on('cell.render', function(event) {
+    var data = event.data,
+        gfx = event.gfx,
+        row = data.row,
+        businessObject = data.column.businessObject;
+
+    var checkbox = gfx.querySelector('.simple-mode-checkbox'),
+        expressionHint = gfx.querySelector('.expression-hint'),
+        hint,
+        content,
+        newCheckbox;
+
+    data.preventAutoUpdate = false;
+
+    if (expressionHint) {
+      gfx.childNodes[0].style.display = 'inline';
+      expressionHint.parentNode.removeChild(expressionHint);
+    }
+
+    if (!this.simple && checkbox) {
+      gfx.childNodes[0].style.display = 'inline';
+      checkbox.parentNode.removeChild(checkbox);
+      data.preventAutoUpdate = false;
+    }
+
+    if (!businessObject || !this.simple) {
+      return;
+    }
+
+    if (row.type === 'dmn:DecisionRule' && !row.isHead && businessObject) {
+      if (isType(businessObject, 'boolean')) {
+
+        if (this.simple) {
+          data.preventAutoUpdate = true;
+        }
+
+        content = data.content;
+
+        if (this.simple && content && content.text !== '' && content.text !== 'false' && content.text !== 'true') {
+          // in case of a non boolean expression, hint that it cannot be edited
+          gfx.childNodes[0].style.display = 'none';
+
+          hint = self.getExpressionNode(data.content);
+          data.preventAutoUpdate = true;
+
+          gfx.appendChild(hint);
+
+        } else if (this.simple && !checkbox) {
+          // create a dropdown for the booleans
+          gfx.childNodes[0].style.display = 'none';
+          newCheckbox = domify([
+            '<select class="simple-mode-checkbox">',
+            '<option value="true">Yes</option>',
+            '<option value="false">No</option>',
+            '<option value="">-</option>',
+            '</select>'
+          ].join(''));
+
+          // we set it readonly. An optional modeling module can make it editable
+          newCheckbox.setAttribute('disabled', 'disabled');
+
+          if (content && content.text) {
+            newCheckbox.selectedIndex = ['true', 'false', ''].indexOf(content.text);
+          } else {
+            newCheckbox.selectedIndex = 2;
+          }
+
+          eventBus.fire('simpleCheckbox.render', newCheckbox, data);
+
+          gfx.appendChild(newCheckbox);
+
+        } else if (this.simple && checkbox) {
+
+          if (content && content.text) {
+            checkbox.selectedIndex = ['true', 'false', ''].indexOf(content.text);
+          } else {
+            checkbox.selectedIndex = 2;
+          }
+        }
+      }
+
+      if (checkbox) {
+        // IF NOT (
+        // type is boolean
+        // ) THEN { remove checkbox }
+        if (!(
+          (businessObject.inputExpression &&
+         businessObject.inputExpression.typeRef === 'boolean' ||
+         businessObject.typeRef === 'boolean')
+        )) {
+
+          checkbox.parentNode.removeChild(checkbox);
+          gfx.childNodes[0].style.display = 'inline';
+
+        }
+
+      }
+    }
+  }, this);
+}
+
+SimpleMode.$inject = [ 'eventBus', 'sheet', 'config', 'graphicsFactory' ];
+
+module.exports = SimpleMode;
+
+SimpleMode.prototype.getExpressionNode = function(businessObject) {
+  var node;
+
+  if (businessObject.description) {
+    node = domify('<span class="expression-hint"><b>[expression]</b> (<i></i>)</span>');
+
+    node.querySelector('i').textContent = businessObject.description;
+
+  } else {
+    node = domify('<span class="expression-hint"><b>[expression]</b></span>');
+  }
+  return node;
+};
+
+SimpleMode.prototype.activate = function() {
+  if (!this._node) {
+    return;
+  }
+
+  domClasses(this._sheet.getContainer().parentNode).add('simple-mode');
+
+  this._node.textContent = 'Enter Advanced Mode';
+
+  this.simple = true;
+
+  this._graphicsFactory.redraw();
+
+  this._eventBus.fire('simpleMode.activated');
+};
+
+SimpleMode.prototype.deactivate = function() {
+  if (!this._node) {
+    return;
+  }
+
+  domClasses(this._sheet.getContainer().parentNode).remove('simple-mode');
+
+  this._node.textContent = 'Exit Advanced Mode';
+
+  this.simple = false;
+
+  this._graphicsFactory.redraw();
+
+  this._eventBus.fire('simpleMode.deactivated');
+};
+
+SimpleMode.prototype.toggle = function() {
+  if (this.simple) {
+    this.deactivate();
+  } else {
+    this.activate();
+  }
+};
+
+SimpleMode.prototype.isActive = function() {
+  return this.simple;
+};
+
+SimpleMode.prototype.hasComplexContent = function(context) {
+  var businessObject = context.column.businessObject,
+      textContent;
+
+  if (!businessObject || !context.content || !context.content.text) {
+    return false;
+  }
+
+  textContent = context.content.text;
+
+  // boolean
+  if (isType(businessObject, 'boolean')) {
+
+    return [ 'true', 'false' ].indexOf(textContent) === -1;
+  }
+
+  // string
+  if (isType(businessObject, 'string')) {
+
+    return !this.isString(textContent);
+  }
+};
+
+SimpleMode.prototype.isString = function(textContent) {
+  var match = textContent.match(/"/g),
+      firstCondition, secondCondition;
+
+  if (textContent.length === 0) {
+    return true;
+  }
+
+  // check if there are is a even number of quotes
+  firstCondition = (match && match.length % 2 === 0);
+
+  // exit early if the number of quotes is odd
+  if (!firstCondition) {
+    return false;
+  }
+
+  // being the number of quotes even, make sure there aren't multiple strings
+  secondCondition = textContent.match(/".{0,1},.{0,1}"/);
+
+  return firstCondition && !secondCondition;
+};
+
+},{"min-dom/lib/classes":767,"min-dom/lib/domify":769}],584:[function(require,module,exports){
+module.exports = {
+  __init__: [ 'simpleMode' ],
+  simpleMode: [ 'type', require('./SimpleMode') ]
+};
+
+},{"./SimpleMode":583}],585:[function(require,module,exports){
+'use strict';
+
+var assign = require('lodash/object/assign');
+
+var domify     = require('min-dom/lib/domify'),
+    domClasses = require('min-dom/lib/classes'),
+    utils      = require('./utils');
+
+var parseString        = utils.parseString,
+    parseAllowedValues = utils.parseAllowedValues,
+    isStringCell       = utils.isStringCell;
+
+function StringEdit(eventBus, simpleMode, elementRegistry, graphicsFactory, modeling) {
+  this._eventBus = eventBus;
+  this._simpleMode = simpleMode;
+  this._elementRegistry = elementRegistry;
+  this._graphicsFactory = graphicsFactory;
+  this._modeling = modeling;
+
+  var refreshHandler = function() {
+    if (this._simpleMode.isActive()) {
+      this.refresh();
+    }
+  };
+  this._eventBus.on('simpleMode.activated', this.setupComplexCells, this);
+  this._eventBus.on('simpleMode.deactivated', this.teardownComplexCells, this);
+  this._eventBus.on('typeRow.editDataType', refreshHandler, this);
+  this._eventBus.on('typeRow.editAllowedValues', refreshHandler, this);
+  this._eventBus.on('typeRow.editAllowedValues', refreshHandler, this);
+  this._eventBus.on('contentNode.created', refreshHandler, this);
+  this._eventBus.on('element.changed', refreshHandler, this);
+
+  // whenever an type cell is opened, we have to position the template, because the x offset changes
+  // over time, when columns are added and deleted
+  this._eventBus.on('complexCell.open', function(evt) {
+    var config = evt.config;
+
+    if (config.type === 'stringEdit') {
+      var gfx = elementRegistry.getGraphics(config.element);
+      var template = config.template;
+
+      assign(template.parentNode.style, {
+        left: (gfx.offsetLeft + gfx.offsetWidth - 10) + 'px'
+      });
+    }
+  });
+
+}
+
+StringEdit.prototype.refresh = function() {
+  this.teardownComplexCells();
+  this.setupComplexCells();
+};
+
+StringEdit.prototype.setupComplexCells = function() {
+  var graphicsFactory = this._graphicsFactory;
+  var elementRegistry = this._elementRegistry;
+  var eventBus = this._eventBus;
+
+  var self = this;
+  elementRegistry.forEach(function(element) {
+    if (isStringCell(element)) {
+      var parsed = parseString(element.content.text);
+
+      if (element.content.text && !parsed) {
+        // in this case, the date contains an expression, we should not show the date editor here
+
+        // show nothing instead
+        element.complex = {
+          template: domify('<div>'),
+          element: element,
+          type: 'stringEdit',
+          offset: {
+            x: 0,
+            y: 0
+          }
+        };
+
+        graphicsFactory.update('cell', element, elementRegistry.getGraphics(element));
+        return;
+      }
+
+      var node = domify(require('./template.html'));
+
+
+
+      // set the initial state based on the cell content
+      var allowedValues = parseAllowedValues(element);
+      self.updateElementVisibility(parsed.type, allowedValues, node);
+
+      // select the correct dropdown option
+      node.querySelector('.string-type-dropdown').value = parsed.type;
+
+      // add the initial data nodes
+      if (parsed.values && !allowedValues) {
+        self.renderValues(parsed.values, node.querySelector('.free-input ul'));
+      }
+      if (allowedValues) {
+        self.renderValues(allowedValues, node.querySelector('.input-values ul'), parsed.values);
+      }
+
+      // wire the elements
+      node.querySelector('.string-type-dropdown').addEventListener('change', function(evt) {
+        var type = evt.target.value;
+        parsed.type = type;
+        self.updateElementVisibility(type, allowedValues, node);
+      });
+
+      if (!allowedValues) {
+        node.querySelector('.free-input input').addEventListener('keydown', function(keyboardEvt) {
+          if (keyboardEvt.keyCode === 13 && keyboardEvt.target.value.indexOf('"') === -1) {
+            var values = keyboardEvt.target.value.split(',');
+            values.forEach(function(value) {
+              parsed.values.push(value.trim());
+            });
+            self.renderValues(parsed.values, node.querySelector('.free-input ul'));
+            keyboardEvt.target.value = '';
+          }
+        });
+
+        node.querySelector('.free-input input').addEventListener('input', function(keyboardEvt) {
+          // validate input
+          var val = keyboardEvt.target.value;
+
+          if (val.indexOf('"') === -1) {
+            // is valid
+            domClasses(keyboardEvt.target).remove('invalid');
+            node.querySelector('.free-input .helptext').style.display = 'none';
+          } else {
+            // is invalid
+            domClasses(keyboardEvt.target).add('invalid');
+            node.querySelector('.free-input .helptext').style.display = 'block';
+          }
+
+        });
+
+
+      }
+
+      var complexCellConfig = {
+        className: 'dmn-string-editor',
+        template: node,
+        element: element,
+        type: 'stringEdit',
+        offset: {
+          x: 0,
+          y: 0
+        }
+      };
+
+      eventBus.on('complexCell.close', function(complexCell) {
+
+        // if the input field contains content, add this content
+        var inputField = node.querySelector('.free-input input');
+        if (inputField.value && inputField.value.indexOf('"') === -1) {
+          var values = inputField.value.split(',');
+          values.forEach(function(value) {
+            parsed.values.push(value.trim());
+          });
+          self.renderValues(parsed.values, node.querySelector('.free-input ul'));
+        }
+        inputField.value = '';
+
+        if (complexCell.config === complexCellConfig) {
+          self.setCellContent(parsed, element);
+          graphicsFactory.update('cell', element, elementRegistry.getGraphics(element));
+        }
+      });
+
+      element.complex = complexCellConfig;
+
+      graphicsFactory.update('cell', element, elementRegistry.getGraphics(element));
+    }
+  });
+};
+
+StringEdit.prototype.setCellContent = function(data, element) {
+  if (data.type === '' || data.values.length === 0) {
+    return this._modeling.editCell(element.row.id, element.column.id, '');
+  }
+
+  var values = data.values.map(function(value) {
+    return '"' + value + '"';
+  }).join(', ');
+
+  if (data.type === 'negation') {
+    return this._modeling.editCell(element.row.id, element.column.id, 'not(' + values + ')');
+  } else {
+    return this._modeling.editCell(element.row.id, element.column.id, values);
+  }
+};
+
+StringEdit.prototype.renderValues = function(values, container, checkedValues) {
+  var self = this;
+  container.innerHTML = '';
+  values.forEach(function(value) {
+    var valueNode;
+    if (checkedValues) {
+      valueNode = domify('<li><input type="checkbox"><span class="value-text"></span></li>');
+      valueNode.querySelector('.value-text').textContent = value;
+      if (checkedValues.indexOf(value) !== -1) {
+        valueNode.querySelector('input').checked = true;
+      }
+      valueNode.querySelector('input').addEventListener('change', function(evt) {
+        if (evt.target.checked) {
+          // add value
+          checkedValues.push(value);
+        } else {
+          // remove value
+          checkedValues.splice(checkedValues.indexOf(value), 1);
+        }
+      });
+    } else {
+      valueNode = domify('<li><span class="value-text"></span><button class="dmn-icon-clear"></button></li>');
+      valueNode.querySelector('.value-text').textContent = value;
+      valueNode.querySelector('button').addEventListener('click', function(evt) {
+        values.splice(values.indexOf(value), 1);
+        self.renderValues(values, container);
+      });
+    }
+    container.appendChild(valueNode);
+  });
+};
+
+StringEdit.prototype.updateElementVisibility = function(type, allowedValues, node) {
+  if (type) {
+    node.querySelector('.input-values').style.display = allowedValues ? 'block' : 'none';
+    node.querySelector('.free-input').style.display = !allowedValues ? 'block' : 'none';
+  } else {
+    node.querySelector('.input-values').style.display = 'none';
+    node.querySelector('.free-input').style.display = 'none';
+  }
+};
+
+StringEdit.prototype.teardownComplexCells = function() {
+  var graphicsFactory = this._graphicsFactory;
+  var elementRegistry = this._elementRegistry;
+
+  elementRegistry.forEach(function(element) {
+    if (element.complex && element.complex.type === 'stringEdit') {
+
+      delete element.complex;
+
+      graphicsFactory.update('cell', element, elementRegistry.getGraphics(element));
+    }
+  });
+};
+
+StringEdit.$inject = ['eventBus', 'simpleMode', 'elementRegistry', 'graphicsFactory', 'modeling'];
+
+module.exports = StringEdit;
+
+},{"./template.html":588,"./utils":589,"lodash/object/assign":757,"min-dom/lib/classes":767,"min-dom/lib/domify":769}],586:[function(require,module,exports){
+'use strict';
+
+var domify = require('min-dom/lib/domify'),
+    utils  = require('./utils');
+
+var isStringCell = utils.isStringCell,
+    parseString  = utils.parseString;
+
+function StringView(eventBus, simpleMode) {
+  this._eventBus = eventBus;
+  this._simpleMode = simpleMode;
+
+  this._eventBus.on('cell.render', function(evt) {
+    if (isStringCell(evt.data)) {
+      if (this._simpleMode.isActive()) {
+        // make sure the contendeditable field is hidden
+        evt.gfx.firstChild.style.display = 'none';
+        evt.data.preventAutoUpdate = true;
+
+        // check for the datafield
+        var stringGfx = evt.gfx.querySelector('.string-content');
+        if (!stringGfx) {
+          stringGfx = domify('<span class="string-content">');
+          evt.gfx.appendChild(stringGfx);
+        }
+        this.renderString(evt.data.content, stringGfx);
+      } else {
+        // make sure the contenteditable field is visible
+        evt.gfx.firstChild.style.display = 'inline';
+        evt.data.preventAutoUpdate = false;
+
+        // remove potential datafield
+        stringGfx = evt.gfx.querySelector('.string-content');
+        if (stringGfx) {
+          stringGfx.parentNode.removeChild(stringGfx);
+        }
+      }
+    } else {
+      // remove potential datafield
+      stringGfx = evt.gfx.querySelector('.string-content');
+      if (stringGfx) {
+        stringGfx.parentNode.removeChild(stringGfx);
+      }
+
+      // if only the inline edit field is remaining, display it
+      if (evt.gfx.childNodes.length === 1) {
+        evt.gfx.firstChild.style.display = 'inline';
+      }
+    }
+  }, this);
+}
+
+StringView.prototype.renderString = function(data, gfx) {
+  if (data.text) {
+    var parsed = parseString(data.text);
+    if (!parsed) {
+      if (data.description) {
+        gfx.innerHTML = '<span class="expression-hint"><b>[expression]</b> (<i></i>)</span>';
+        gfx.querySelector('i').textContent = data.description;
+      } else {
+        gfx.innerHTML = '<span class="expression-hint"><b>[expression]</b></span>';
+      }
+    } else {
+      gfx.textContent = data.text;
+    }
+  } else {
+    gfx.innerHTML = '<span style="display: inline-block; width: 100%; color: #777777; text-align: center;">-</span>';
+  }
+};
+
+StringView.$inject = ['eventBus', 'simpleMode'];
+
+module.exports = StringView;
+
+},{"./utils":589,"min-dom/lib/domify":769}],587:[function(require,module,exports){
+'use strict';
+
+module.exports = {
+  __init__: [ 'stringEdit' ],
+  stringEdit: [ 'type', require('./StringEdit') ]
+};
+
+},{"./StringEdit":585}],588:[function(require,module,exports){
+module.exports = "<div>\r\n  <h3>Edit String Expression</h3>\r\n  <select class=\"string-type-dropdown\">\r\n    <option value=\"\">-</option>\r\n    <option value=\"disjunction\">Match one of</option>\r\n    <option value=\"negation\">Match anything except</option>\r\n  </select>\r\n  <div class=\"free-input\">\r\n    <ul>\r\n    </ul>\r\n    <input type=\"text\" placeholder=\"new Value\"/>\r\n    <div class=\"helptext\">Enter value without quotes</div>\r\n  </div>\r\n  <div class=\"input-values\">\r\n    <ul>\r\n    </ul>\r\n  </div>\r\n</div>\r\n";
+
+},{}],589:[function(require,module,exports){
+'use strict';
+
+var hasStringType = function(column) {
+  return column &&
+         (column.inputExpression &&
+         column.inputExpression.typeRef === 'string' ||
+         column.typeRef === 'string');
+};
+var isBodyRow = function(row) {
+  return !row.isHead && !row.isFoot;
+};
+
+var hasTextContent = function(el) {
+  return el.content && typeof el.content.text !== 'undefined';
+};
+
+module.exports = {
+  isStringCell: function(el) {
+    return el._type === 'cell' &&
+      hasStringType(el.column.businessObject) &&
+      hasTextContent(el) &&
+      isBodyRow(el.row);
+  },
+  parseString: function(string) {
+    // three cases: empty, disjunction, and negated dijunction
+
+    // try empty
+    if (string.trim() === '') {
+      return {
+        type: '',
+        values: []
+      };
+    }
+
+    // try disjunction
+    var values = string.split(',');
+    var out = {
+      type: 'disjunction',
+      values: []
+    };
+    var openString = '';
+    values.forEach(function(value) {
+      openString += value;
+      if (/^"[^"]*"$/.test(openString.trim())) {
+        out.values.push(openString.trim().slice(1,-1));
+        openString = '';
+      } else {
+        openString += ',';
+      }
+    });
+    if (!openString) {
+      return out;
+    }
+
+    // try negation
+    out.type = 'negation';
+    out.values = [];
+    openString = '';
+    var info = string.match(/^\s*not\((.*)\)\s*$/);
+    if (info) {
+      values = info[1].split(',');
+      values.forEach(function(value) {
+        openString += value;
+        if (/^"[^"]*"$/.test(openString.trim())) {
+          out.values.push(openString.trim().slice(1,-1));
+          openString = '';
+        } else {
+          openString += ',';
+        }
+      });
+      if (!openString) {
+        return out;
+      }
+    }
+  },
+  parseAllowedValues: function(el) {
+    var bo = el.column.businessObject;
+    var values = bo && (bo.inputValues || bo.outputValues);
+    if (values && values.text) {
+      values = values.text.split(',');
+      return values.map(function(value) {
+        if (value.charAt(0) === '"' && value.charAt(value.length - 1) === '"') {
+          return value.slice(1,-1);
+        } else {
+          return value;
+        }
+      });
+    }
+  }
+};
+
+},{}],590:[function(require,module,exports){
+'use strict';
+
+module.exports = {
+  __init__: [ 'stringView' ],
+  stringView: [ 'type', require('./StringView') ]
+};
+
+},{"./StringView":586}],591:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -72338,12 +74936,12 @@ function TableName(eventBus, sheet, tableName) {
   var self = this;
 
   eventBus.on('tableName.allowEdit', function(event) {
-    if(event.editAllowed) {
+    if (event.editAllowed) {
       self.node.querySelector('.tjs-table-id').setAttribute('contenteditable', true);
 
       self.node.querySelector('.tjs-table-id').addEventListener('blur', function(evt) {
         var newId = evt.target.textContent;
-        if(newId !== self.getId()) {
+        if (newId !== self.getId()) {
           eventBus.fire('tableName.editId', {
             newId: newId
           });
@@ -72377,9 +74975,10 @@ TableName.prototype.getName = function() {
 };
 
 TableName.prototype.setId = function(newId) {
-  if(!!newId) {
+  if (newId) {
     this.semantic.id = newId;
   }
+  
   this.node.querySelector('div').textContent = this.semantic.id || '';
 };
 
@@ -72387,74 +74986,103 @@ TableName.prototype.getId = function() {
   return this.semantic.id;
 };
 
-},{"inherits":608,"min-dom/lib/domify":714,"table-js/lib/features/table-name/TableName":775}],562:[function(require,module,exports){
+},{"inherits":637,"min-dom/lib/domify":769,"table-js/lib/features/table-name/TableName":831}],592:[function(require,module,exports){
 module.exports = {
   __init__: [ 'tableName' ],
   __depends__: [],
   tableName: [ 'type', require('./TableName') ]
 };
 
-},{"./TableName":561}],563:[function(require,module,exports){
+},{"./TableName":591}],593:[function(require,module,exports){
 'use strict';
 
-
+var assign = require('lodash/object/assign');
 
 var domify = require('min-dom/lib/domify'),
     domClasses = require('min-dom/lib/classes'),
     ComboBox = require('table-js/lib/features/combo-box');
 
+var typeTemplate = require('./TypeTemplate.html');
+
+var OFFSET_X = -4,
+    OFFSET_Y = -17;
+
 /**
  * Adds a control to the table to define the datatypes for clauses
  */
-function TypeRow(eventBus, sheet, elementRegistry, graphicsFactory, complexCell, rules) {
+function TypeRow(eventBus, sheet, elementRegistry, graphicsFactory, complexCell, rules, simpleMode) {
 
+  this._eventBus = eventBus;
+  this._graphicsFactory = graphicsFactory;
   this.row = null;
 
   var self = this;
 
   // add row when the sheet is initialized
-  eventBus.on('sheet.init', function(event) {
+  eventBus.on([ 'sheet.init', 'sheet.cleared' ], function(event) {
 
     eventBus.fire('typeRow.add', event);
 
-    self.row = sheet.addRow({
+    this.row = sheet.addRow({
       id: 'typeRow',
       isHead: true,
       isTypeRow: true
     });
 
-    eventBus.fire('typeRow.added', self.row);
+    eventBus.fire('typeRow.added', this.row);
 
-    graphicsFactory.update('row', self.row, elementRegistry.getGraphics(self.row.id));
-  });
+    graphicsFactory.update('row', this.row, elementRegistry.getGraphics(this.row.id));
+  }, this);
 
   // remove the row when the sheet is destroyed
-  eventBus.on('sheet.destroy', function(event) {
+  eventBus.on([ 'sheet.clear', 'sheet.destroy' ], function(event) {
 
-    eventBus.fire('typeRow.destroy', self.row);
+    eventBus.fire('typeRow.destroy', this.row);
 
     sheet.removeRow({
       id: 'typeRow'
     });
 
-    eventBus.fire('typeRow.destroyed', self.row);
-  });
+    eventBus.fire('typeRow.destroyed', this.row);
+
+    this.row = null;
+  }, this);
 
   // when an input cell on the mappings row is added, setup the complex cell
   eventBus.on('cell.added', function(evt) {
-    if(evt.element.row.id === 'typeRow' &&
+    if (evt.element.row.id === 'typeRow' &&
        evt.element.column.businessObject) {
 
       evt.element.content = evt.element.column.businessObject;
 
-      var template = domify("<div>\r\n</div>\r\n");
+      var template = domify(typeTemplate);
+
+      var isOutput = evt.element.column.type === 'dmn:OutputClause';
+      if (isOutput) {
+        template.querySelector('.allowed-values label').textContent = 'Output Values:';
+      }
 
       // initializing the comboBox
       var comboBox = new ComboBox({
         label: 'Type',
-        classNames: ['dmn-combobox', 'datatype'],
-        options: ['string', 'boolean', 'integer', 'long', 'double', 'date'],
-        dropdownClassNames: ['dmn-combobox-suggestions']
+        classNames: [ 'dmn-combobox', 'datatype' ],
+        options: [ 'string', 'boolean', 'integer', 'long', 'double', 'date' ],
+        dropdownClassNames: [ 'dmn-combobox-suggestions' ]
+      });
+
+      comboBox.addEventListener('valueChanged', function(valueEvent) {
+        if (valueEvent.oldValue !== valueEvent.newValue) {
+          eventBus.fire('typeRow.editDataType', {
+            element: evt.element,
+            dataType: valueEvent.newValue
+          });
+
+          self.updateAllowedValues(template, evt.element);
+
+          // force redraw of potential dropdowns by toggling simple mode twice
+          simpleMode.toggle();
+          simpleMode.toggle();
+        }
       });
 
       // add comboBox to the template
@@ -72462,6 +75090,19 @@ function TypeRow(eventBus, sheet, elementRegistry, graphicsFactory, complexCell,
         comboBox.getNode(),
         template.firstChild
       );
+
+      template.querySelector('.allowed-values input').addEventListener('keydown', function(keyboardEvt) {
+        if (keyboardEvt.keyCode === 13) {
+          var values = keyboardEvt.target.value.split(',');
+          values.forEach(function(value) {
+            self.addAllowedValue(evt.element, value.trim());
+          });
+          self.updateAllowedValues(template, evt.element);
+          keyboardEvt.target.value = '';
+        }
+      });
+
+      self.updateAllowedValues(template, evt.element);
 
       // set the complex property to initialize complex-cell behavior
       evt.element.complex = {
@@ -72472,7 +75113,7 @@ function TypeRow(eventBus, sheet, elementRegistry, graphicsFactory, complexCell,
         type: 'type',
         offset: {
           x: 0,
-          y: -15
+          y: OFFSET_Y
         }
       };
 
@@ -72484,24 +75125,29 @@ function TypeRow(eventBus, sheet, elementRegistry, graphicsFactory, complexCell,
   // whenever an type cell is opened, we have to position the template, because the x offset changes
   // over time, when columns are added and deleted
   eventBus.on('complexCell.open', function(evt) {
-    if(evt.config.type === 'type') {
-      var gfx = elementRegistry.getGraphics(evt.config.element);
+    var config = evt.config,
+        template, gfx, content;
 
-      evt.container.style.left = window.parseInt(evt.container.style.left, 10) + gfx.clientWidth + 'px';
-
+    if (config.type === 'type') {
+      gfx = elementRegistry.getGraphics(config.element);
       // feed the values to the template and combobox
-      var content = evt.config.element.content;
-      if(content.inputExpression) {
-        evt.config.comboBox.setValue(content.inputExpression.typeRef);
+      content = config.element.content;
+
+      if (content.inputExpression) {
+        config.comboBox.setValue(content.inputExpression.typeRef);
       } else {
-        evt.config.comboBox.setValue(content.typeRef);
+        config.comboBox.setValue(content.typeRef);
       }
 
-      var template = evt.config.template;
+      template = config.template;
+
+      assign(template.parentNode.style, {
+        left: (template.parentNode.offsetLeft + gfx.offsetWidth + OFFSET_X) + 'px'
+      });
 
       // disable all input fields if editing is not allowed
-      if(!rules.allowed('dataType.edit')) {
-        evt.config.comboBox.disable();
+      if (!rules.allowed('dataType.edit')) {
+        config.comboBox.disable();
 
         // also set a disabled css class on the template
         domClasses(template.parentNode).add('read-only');
@@ -72509,29 +75155,68 @@ function TypeRow(eventBus, sheet, elementRegistry, graphicsFactory, complexCell,
     }
   });
 
-  // whenever a datatype cell is closed, apply the changes to the underlying model
-  eventBus.on('complexCell.close', function(evt) {
-    if(evt.config.type === 'type') {
-      if(evt.config.comboBox.getValue().toLowerCase() === 'string') {
-
-        eventBus.fire('typeRow.editDataType', {
-          element: evt.config.element,
-          dataType: evt.config.comboBox.getValue()
-        });
-
-      } else {
-        eventBus.fire('typeRow.editDataType', {
-          element: evt.config.element,
-          dataType: evt.config.comboBox.getValue()
-        });
-
-      }
-    }
-  });
-
 }
 
-TypeRow.$inject = [ 'eventBus', 'sheet', 'elementRegistry', 'graphicsFactory', 'complexCell', 'rules' ];
+TypeRow.prototype.addAllowedValue = function(businessObject, newValue) {
+  this._eventBus.fire('typeRow.addAllowedValue', {
+    element: businessObject,
+    value: newValue
+  });
+};
+
+TypeRow.prototype.removeAllowedValue = function(businessObject, value) {
+  this._eventBus.fire('typeRow.removeAllowedValue', {
+    element: businessObject,
+    value: value
+  });
+};
+
+TypeRow.prototype.updateAllowedValues = function(template, businessObject) {
+  var self = this;
+
+  var type = businessObject.content.inputExpression && businessObject.content.inputExpression.typeRef ||
+             businessObject.content.typeRef;
+
+  if (type === 'string') {
+    template.querySelector('.allowed-values').style.display = 'block';
+
+    // clear the list of current allowed values
+    var list = template.querySelector('.allowed-values ul');
+    list.innerHTML = '';
+
+    // add a list of allowed values
+    if (businessObject.content.inputValues && businessObject.content.inputValues.text ||
+       businessObject.content.outputValues && businessObject.content.outputValues.text) {
+
+      var values;
+      if (businessObject.content.inputValues) {
+        values = businessObject.content.inputValues.text.split(',');
+      } else {
+        values = businessObject.content.outputValues.text.split(',');
+      }
+
+      values.forEach(function(value) {
+        var element = domify('<li><span class="value-text">'+value.substr(1, value.length - 2)+'</span><button class="dmn-icon-clear"></button></li>');
+        element.querySelector('button').addEventListener('click', function() {
+          self.removeAllowedValue(businessObject, value);
+          self.updateAllowedValues(template, businessObject);
+        });
+        list.appendChild(element);
+      });
+    }
+  } else {
+    template.querySelector('.allowed-values').style.display = 'none';
+  }
+
+  this._eventBus.fire('typeRow.editAllowedValues', {
+    element: businessObject,
+    values: values
+  });
+
+  this._graphicsFactory.redraw();
+};
+
+TypeRow.$inject = [ 'eventBus', 'sheet', 'elementRegistry', 'graphicsFactory', 'complexCell', 'rules', 'simpleMode' ];
 
 module.exports = TypeRow;
 
@@ -72539,7 +75224,7 @@ TypeRow.prototype.getRow = function() {
   return this.row;
 };
 
-},{"min-dom/lib/classes":712,"min-dom/lib/domify":714,"table-js/lib/features/combo-box":742}],564:[function(require,module,exports){
+},{"./TypeTemplate.html":595,"lodash/object/assign":757,"min-dom/lib/classes":767,"min-dom/lib/domify":769,"table-js/lib/features/combo-box":798}],594:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -72559,7 +75244,7 @@ function TypeRowRenderer(
 
     var content = event.data.content;
     if (event.data.row === typeRow.getRow() && content) {
-      if(content.inputExpression) {
+      if (content.inputExpression) {
         event.gfx.childNodes[0].textContent = content.inputExpression.typeRef || '';
       } else {
         event.gfx.childNodes[0].textContent = content.typeRef || '';
@@ -72576,7 +75261,10 @@ TypeRowRenderer.$inject = [
 
 module.exports = TypeRowRenderer;
 
-},{"min-dom/lib/classes":712}],565:[function(require,module,exports){
+},{"min-dom/lib/classes":767}],595:[function(require,module,exports){
+module.exports = "<div>\r\n  <div class=\"allowed-values\">\r\n    <label>Input Values:</label>\r\n    <ul></ul>\r\n    <input type=\"text\" placeholder=\"value1, value2, otherValue\">\r\n  </div>\r\n</div>\r\n";
+
+},{}],596:[function(require,module,exports){
 module.exports = {
   __init__: [ 'typeRow', 'typeRowRenderer' ],
   __depends__: [ require('table-js/lib/features/complex-cell') ],
@@ -72584,10 +75272,11 @@ module.exports = {
   typeRowRenderer: [ 'type', require('./TypeRowRenderer') ]
 };
 
-},{"./TypeRow":563,"./TypeRowRenderer":564,"table-js/lib/features/complex-cell":744}],566:[function(require,module,exports){
+},{"./TypeRow":593,"./TypeRowRenderer":594,"table-js/lib/features/complex-cell":800}],597:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
+    filter = require('lodash/collection/filter'),
     union  = require('lodash/array/union');
 
 var elementToString = require('./Util').elementToString;
@@ -72599,6 +75288,13 @@ function elementData(semantic, attrs) {
     type: semantic.$type,
     businessObject: semantic
   }, attrs);
+}
+
+
+function equals(type, conditions) {
+  return filter(conditions, function(condition) {
+    return condition === type;
+  }).length;
 }
 
 
@@ -72636,14 +75332,40 @@ module.exports = DmnImporter;
 DmnImporter.prototype._makeCopy = function(semantic) {
   var newSemantic = this._moddle.create(semantic.$type);
 
-  for(var prop in semantic) {
-    if(semantic.hasOwnProperty(prop) && prop !== '$type') {
+  for (var prop in semantic) {
+    if (semantic.hasOwnProperty(prop) && prop !== '$type') {
       newSemantic[prop] = semantic[prop];
     }
   }
   newSemantic.$parent = semantic.$parent;
 
   return newSemantic;
+};
+
+DmnImporter.prototype.create = function(type, parent, clause, rule) {
+  var dmnFactory = this._dmnFactory;
+
+  var parentBO = parent.businessObject,
+      isInput= equals(type, [ 'dmn:InputClause', 'dmn:UnaryTests' ]) ? 'Input' : 'Output',
+      element;
+
+  if (equals(type, [ 'dmn:InputClause', 'dmn:OutputClause' ])) {
+    element = dmnFactory['create' + isInput + 'Clause']('');
+
+    element.$parent = parentBO;
+
+    parentBO[isInput.toLowerCase()].push(element);
+  }
+
+  if (equals(type, [ 'dmn:UnaryTests', 'dmn:LiteralExpression'])) {
+    rule = clause;
+    clause = parent;
+    parent = undefined;
+
+    element = dmnFactory['create' + isInput + 'Entry']('', clause, rule);
+  }
+
+  return element;
 };
 
 /**
@@ -72683,10 +75405,10 @@ DmnImporter.prototype.add = function(semantic, parentElement, definitions) {
 
   // RULE
   else if (semantic.$instanceOf('dmn:DecisionRule')) {
-    if(!semantic.inputEntry) {
+    if (!semantic.inputEntry) {
       semantic.inputEntry = [];
     }
-    if(!semantic.outputEntry) {
+    if (!semantic.outputEntry) {
       semantic.outputEntry = [];
     }
     element = this._elementFactory.createRow(elementData(semantic, {
@@ -72704,7 +75426,7 @@ DmnImporter.prototype.add = function(semantic, parentElement, definitions) {
     var allCellsInRow = union(parentElement.inputEntry, parentElement.outputEntry);
 
     var allClauses = this._elementRegistry.filter(function(element) {
-      if(!element.businessObject) {
+      if (!element.businessObject) {
         return false;
       }
       var type = element.businessObject.$type;
@@ -72734,14 +75456,16 @@ DmnImporter.prototype.add = function(semantic, parentElement, definitions) {
   return element;
 };
 
-},{"./Util":569,"lodash/array/union":610,"lodash/object/assign":703}],567:[function(require,module,exports){
+},{"./Util":600,"lodash/array/union":639,"lodash/collection/filter":644,"lodash/object/assign":757}],598:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
 
 var elementToString = require('./Util').elementToString;
 
-function DmnTreeWalker(handler) {
+function DmnTreeWalker(handler, options) {
+
+  var canAddMissingEntries = options && options.canAddMissingEntries;
 
   function visit(element, ctx, definitions) {
 
@@ -72766,6 +75490,8 @@ function DmnTreeWalker(handler) {
     // make sure we walk the correct bpmnElement
 
     var decisions = definitions.decision,
+        missingEntries = null,
+        missingClause,
         decision;
 
     if (decisions && decisions.length) {
@@ -72777,7 +75503,7 @@ function DmnTreeWalker(handler) {
       return;
     }
 
-    if(decision.id === '') {
+    if (decision.id === '') {
       decision.id = 'decision';
     }
 
@@ -72785,17 +75511,53 @@ function DmnTreeWalker(handler) {
 
 
     // no decision table -> nothing to import
-    if(!table) {
+    if (!table) {
       throw new Error('no table for ' + elementToString(decision));
     }
 
     var ctx = visitTable(table);
 
+
+    if (canAddMissingEntries && !table.input) {
+      table.input = [];
+
+      missingEntries = 'input';
+
+      missingClause = handler.create('dmn:InputClause', ctx, definitions);
+
+    } else if (canAddMissingEntries && !table.output) {
+      table.output = [];
+
+      missingEntries = 'output';
+
+      missingClause = handler.create('dmn:OutputClause', ctx, definitions);
+    }
+
     handleClauses(table.input, ctx, definitions);
     handleClauses(table.output, ctx, definitions);
 
-    handleRules(table.rule, ctx, definitions);
+    if (table.rule && missingEntries) {
+      handleMissingEntries(table.rule, missingEntries, missingClause);
+    }
 
+    // if any input or output clauses (columns) were added
+    // make sure that for each rule the according input/output entry is created
+    handleRules(table.rule, ctx, definitions);
+  }
+
+  function handleMissingEntries(rules, missingEntries, missingClause) {
+    var isInput = missingEntries === 'input',
+        entriesNr = rules[0][(isInput ? 'output' : 'input') + 'Entry'].length,
+        entryType = isInput ? 'dmn:UnaryTests' : 'dmn:LiteralExpression';
+
+
+    forEach(rules, function(rule) {
+      var idx = 0;
+
+      for (idx; idx < entriesNr; idx++) {
+        handler.create(entryType, missingClause, rule);
+      }
+    });
   }
 
   function handleClauses(inputs, context, definitions) {
@@ -72829,7 +75591,7 @@ function DmnTreeWalker(handler) {
 
 module.exports = DmnTreeWalker;
 
-},{"./Util":569,"lodash/collection/forEach":616}],568:[function(require,module,exports){
+},{"./Util":600,"lodash/collection/forEach":646}],599:[function(require,module,exports){
 'use strict';
 
 var DmnTreeWalker = require('./DmnTreeWalker');
@@ -72849,12 +75611,23 @@ function importDmnTable(sheet, definitions, done) {
   var importer = sheet.get('dmnImporter'),
       eventBus = sheet.get('eventBus');
 
+  var hasModeling;
+
+  try {
+    hasModeling = sheet.get('modeling');
+  } catch (e) {
+    hasModeling = false;
+  }
+
   var error,
       warnings = [];
 
-  function parse(definitions) {
+  function render(definitions) {
 
     var visitor = {
+      create: function(type, parent, clause, rule) {
+        return importer.create(type, parent, clause, rule);
+      },
 
       table: function(element) {
         return importer.add(element);
@@ -72869,27 +75642,32 @@ function importDmnTable(sheet, definitions, done) {
       }
     };
 
-    var walker = new DmnTreeWalker(visitor);
+    var walker = new DmnTreeWalker(visitor, { canAddMissingEntries: hasModeling });
 
     // import
     walker.handleDefinitions(definitions);
   }
 
-  eventBus.fire('import.start');
+  eventBus.fire('import.render.start', { definitions: definitions });
 
   try {
-    parse(definitions);
+    render(definitions);
   } catch (e) {
     error = e;
   }
 
-  eventBus.fire(error ? 'import.error' : 'import.success', { error: error, warnings: warnings });
+  eventBus.fire('import.render.complete', {
+    error: error,
+    warnings: warnings
+  });
+
+
   done(error, warnings);
 }
 
 module.exports.importDmnTable = importDmnTable;
 
-},{"./DmnTreeWalker":567}],569:[function(require,module,exports){
+},{"./DmnTreeWalker":598}],600:[function(require,module,exports){
 'use strict';
 
 module.exports.elementToString = function(e) {
@@ -72899,7 +75677,7 @@ module.exports.elementToString = function(e) {
 
   return '<' + e.$type + (e.id ? ' id="' + e.id : '') + '" />';
 };
-},{}],570:[function(require,module,exports){
+},{}],601:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../features/factory')
@@ -72907,7 +75685,125 @@ module.exports = {
   dmnImporter: [ 'type', require('./DmnImporter') ]
 };
 
-},{"../features/factory":539,"./DmnImporter":566}],571:[function(require,module,exports){
+},{"../features/factory":551,"./DmnImporter":597}],602:[function(require,module,exports){
+'use strict';
+
+/**
+ * Is an element of the given BPMN type?
+ *
+ * @param  {tjs.model.Base|ModdleElement} element
+ * @param  {String} type
+ *
+ * @return {Boolean}
+ */
+function is(element, type) {
+  var bo = getBusinessObject(element);
+
+  return bo && (typeof bo.$instanceOf === 'function') && bo.$instanceOf(type);
+}
+
+module.exports.is = is;
+
+
+/**
+ * Return the business object for a given element.
+ *
+ * @param  {tjs.model.Base|ModdleElement} element
+ *
+ * @return {ModdleElement}
+ */
+function getBusinessObject(element) {
+  return (element && element.businessObject) || element;
+}
+
+module.exports.getBusinessObject = getBusinessObject;
+
+},{}],603:[function(require,module,exports){
+/**
+ * This file must not be changed or exchanged.
+ *
+ * @see http://bpmn.io/license for more information.
+ */
+
+'use strict';
+
+var domify = require('min-dom/lib/domify');
+
+var domDelegate = require('min-dom/lib/delegate');
+
+/* jshint -W101 */
+
+// inlined ../resources/bpmnjs.png
+var logoData = module.exports.BPMNIO_LOGO = 'iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAMAAADypuvZAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADBQTFRFiMte9PrwldFwfcZPqtqN0+zEyOe1XLgjvuKncsJAZ70y6fXh3vDT////UrQV////G2zN+AAAABB0Uk5T////////////////////AOAjXRkAAAHDSURBVHjavJZJkoUgDEBJmAX8979tM8u3E6x20VlYJfFFMoL4vBDxATxZcakIOJTWSmxvKWVIkJ8jHvlRv1F2LFrVISCZI+tCtQx+XfewgVTfyY3plPiQEAzI3zWy+kR6NBhFBYeBuscJLOUuA2WVLpCjVIaFzrNQZArxAZKUQm6gsj37L9Cb7dnIBUKxENaaMJQqMpDXvSL+ktxdGRm2IsKgJGGPg7atwUG5CcFUEuSv+CwQqizTrvDTNXdMU2bMiDWZd8d7QIySWVRsb2vBBioxOFt4OinPBapL+neAb5KL5IJ8szOza2/DYoipUCx+CjO0Bpsv0V6mktNZ+k8rlABlWG0FrOpKYVo8DT3dBeLEjUBAj7moDogVii7nSS9QzZnFcOVBp1g2PyBQ3Vr5aIapN91VJy33HTJLC1iX2FY6F8gRdaAeIEfVONgtFCzZTmoLEdOjBDfsIOA6128gw3eu1shAajdZNAORxuQDJN5A5PbEG6gNIu24QJD5iNyRMZIr6bsHbCtCU/OaOaSvgkUyDMdDa1BXGf5HJ1To+/Ym6mCKT02Y+/Sa126ZKyd3jxhzpc1r8zVL6YM1Qy/kR4ABAFJ6iQUnivhAAAAAAElFTkSuQmCC';
+
+/* jshint +W101 */
+
+
+function css(attrs) {
+  return attrs.join(';');
+}
+
+var LIGHTBOX_STYLES = css([
+  'z-index: 1001',
+  'position: fixed',
+  'top: 0',
+  'left: 0',
+  'right: 0',
+  'bottom: 0'
+]);
+
+var BACKDROP_STYLES = css([
+  'width: 100%',
+  'height: 100%',
+  'background: rgba(0,0,0,0.2)'
+]);
+
+var NOTICE_STYLES = css([
+  'position: absolute',
+  'left: 50%',
+  'top: 40%',
+  'margin: 0 -130px',
+  'width: 260px',
+  'padding: 10px',
+  'background: white',
+  'border: solid 1px #AAA',
+  'border-radius: 3px',
+  'font-family: Helvetica, Arial, sans-serif',
+  'font-size: 14px',
+  'line-height: 1.2em'
+]);
+
+var LIGHTBOX_MARKUP =
+  '<div class="bjs-powered-by-lightbox" style="' + LIGHTBOX_STYLES + '">' +
+    '<div class="backdrop" style="' + BACKDROP_STYLES + '"></div>' +
+    '<div class="notice" style="' + NOTICE_STYLES + '">' +
+      '<a href="http://bpmn.io" target="_blank" style="float: left; margin-right: 10px">' +
+        '<img src="data:image/png;base64,'+ logoData +'">' +
+      '</a>' +
+      'Web-based tooling for BPMN, DMN and CMMN diagrams ' +
+      'powered by <a href="http://bpmn.io" target="_blank">bpmn.io</a>.' +
+    '</div>' +
+  '</div>';
+
+
+var lightbox;
+
+function open() {
+
+  if (!lightbox) {
+    lightbox = domify(LIGHTBOX_MARKUP);
+
+    domDelegate.bind(lightbox, '.backdrop', 'click', function(event) {
+      document.body.removeChild(lightbox);
+    });
+  }
+
+  document.body.appendChild(lightbox);
+}
+
+module.exports.open = open;
+
+},{"min-dom/lib/delegate":768,"min-dom/lib/domify":769}],604:[function(require,module,exports){
 'use strict';
 
 
@@ -72950,7 +75846,7 @@ function getEntriesType(context) {
 
 module.exports.getEntriesType = getEntriesType;
 
-},{}],572:[function(require,module,exports){
+},{}],605:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -72961,6 +75857,10 @@ var forEach = require('lodash/collection/forEach'),
 
 var DEFAULT_PRIORITY = 1000;
 
+
+function isObject(element) {
+  return typeof element === 'object';
+}
 
 /**
  * A utility that can be used to plug-in into the command execution for
@@ -72993,9 +75893,9 @@ CommandInterceptor.$inject = [ 'eventBus' ];
 
 module.exports = CommandInterceptor;
 
-function unwrapEvent(fn) {
+function unwrapEvent(fn, that) {
   return function(event) {
-    return fn(event.context, event.command, event);
+    return fn.call(that || null, event.context, event.command, event);
   };
 }
 
@@ -73008,10 +75908,12 @@ function unwrapEvent(fn) {
  * @param {Function} handlerFn interceptor to be invoked with (event)
  * @param {Boolean} unwrap if true, unwrap the event and pass (context, command, event) to the
  *                          listener instead
+ * @param {Object} [that] Pass context (`this`) to the handler function
  */
-CommandInterceptor.prototype.on = function(events, hook, priority, handlerFn, unwrap) {
+CommandInterceptor.prototype.on = function(events, hook, priority, handlerFn, unwrap, that) {
 
   if (isFunction(hook) || isNumber(hook)) {
+    that = unwrap;
     unwrap = handlerFn;
     handlerFn = priority;
     priority = hook;
@@ -73019,9 +75921,15 @@ CommandInterceptor.prototype.on = function(events, hook, priority, handlerFn, un
   }
 
   if (isFunction(priority)) {
+    that = unwrap;
     unwrap = handlerFn;
     handlerFn = priority;
     priority = DEFAULT_PRIORITY;
+  }
+
+  if (isObject(unwrap)) {
+    that = unwrap;
+    unwrap = false;
   }
 
   if (!isFunction(handlerFn)) {
@@ -73038,7 +75946,7 @@ CommandInterceptor.prototype.on = function(events, hook, priority, handlerFn, un
     // concat commandStack(.event)?(.hook)?
     var fullEvent = [ 'commandStack', event, hook ].filter(function(e) { return e; }).join('.');
 
-    eventBus.on(fullEvent, priority, unwrap ? unwrapEvent(handlerFn) : handlerFn);
+    eventBus.on(fullEvent, priority, unwrap ? unwrapEvent(handlerFn, that) : handlerFn, that);
   });
 };
 
@@ -73073,20 +75981,23 @@ forEach(hooks, function(hook) {
    * @param {Function} handlerFn interceptor to be invoked with (event)
    * @param {Boolean} [unwrap=false] if true, unwrap the event and pass (context, command, event) to the
    *                          listener instead
+   * @param {Object} [that] Pass context (`this`) to the handler function
    */
-  CommandInterceptor.prototype[hook] = function(events, priority, handlerFn, unwrap) {
+  CommandInterceptor.prototype[hook] = function(events, priority, handlerFn, unwrap, that) {
 
     if (isFunction(events) || isNumber(events)) {
+      that = unwrap;
       unwrap = handlerFn;
       handlerFn = priority;
       priority = events;
       events = null;
     }
 
-    this.on(events, hook, priority, handlerFn, unwrap);
+    this.on(events, hook, priority, handlerFn, unwrap, that);
   };
 });
-},{"lodash/collection/forEach":616,"lodash/lang/isArray":696,"lodash/lang/isFunction":697,"lodash/lang/isNumber":699}],573:[function(require,module,exports){
+
+},{"lodash/collection/forEach":646,"lodash/lang/isArray":750,"lodash/lang/isFunction":751,"lodash/lang/isNumber":753}],606:[function(require,module,exports){
 'use strict';
 
 var unique = require('lodash/array/unique'),
@@ -73206,6 +76117,8 @@ function CommandStack(eventBus, injector) {
   this._eventBus = eventBus;
 
   this._uid = 1;
+
+  eventBus.on([ 'diagram.destroy', 'diagram.clear' ], this.clear, this);
 }
 
 CommandStack.$inject = [ 'eventBus', 'injector' ];
@@ -73258,16 +76171,18 @@ CommandStack.prototype.canExecute = function(command, context) {
 
   var handler = this._getHandler(command);
 
-  if (!handler) {
-    return false;
-  }
-
   var result = this._fire(command, 'canExecute', action);
 
   // handler#canExecute will only be called if no listener
   // decided on a result already
-  if (result === undefined && handler.canExecute) {
-    result = handler.canExecute(context);
+  if (result === undefined) {
+    if (!handler) {
+      return false;
+    }
+
+    if (handler.canExecute) {
+      result = handler.canExecute(context);
+    }
   }
 
   return result;
@@ -73388,18 +76303,25 @@ CommandStack.prototype._getUndoAction = function() {
 ////// internal functionality /////////////////////////////
 
 CommandStack.prototype._internalUndo = function(action) {
+  var self = this;
+
   var command = action.command,
       context = action.context;
 
   var handler = this._getHandler(command);
 
-  this._fire(command, 'revert', action);
+  // guard against illegal nested command stack invocations
+  this._atomicDo(function() {
+    self._fire(command, 'revert', action);
 
-  this._markDirty(handler.revert(context));
+    if (handler.revert) {
+      self._markDirty(handler.revert(context));
+    }
 
-  this._revertedAction(action);
+    self._revertedAction(action);
 
-  this._fire(command, 'reverted', action);
+    self._fire(command, 'reverted', action);
+  });
 };
 
 
@@ -73414,7 +76336,7 @@ CommandStack.prototype._fire = function(command, qualifier, event) {
 
   event = assign(new InternalEvent(), event);
 
-  for (i = 0; !!(name = names[i]); i++) {
+  for (i = 0; (name = names[i]); i++) {
     result = this._eventBus.fire('commandStack.' + name, event);
 
     if (event.cancelBubble) {
@@ -73429,8 +76351,22 @@ CommandStack.prototype._createId = function() {
   return this._uid++;
 };
 
+CommandStack.prototype._atomicDo = function(fn) {
+
+  var execution = this._currentExecution;
+
+  execution.atomic = true;
+
+  try {
+    fn();
+  } finally {
+    execution.atomic = false;
+  }
+};
 
 CommandStack.prototype._internalExecute = function(action, redo) {
+  var self = this;
+
   var command = action.command,
       context = action.context;
 
@@ -73452,15 +76388,21 @@ CommandStack.prototype._internalExecute = function(action, redo) {
     this._fire(command, 'preExecuted', action);
   }
 
-  this._fire(command, 'execute', action);
+  // guard against illegal nested command stack invocations
+  this._atomicDo(function() {
 
-  // execute
-  this._markDirty(handler.execute(context));
+    self._fire(command, 'execute', action);
 
-  // log to stack
-  this._executedAction(action, redo);
+    if (handler.execute) {
+      // actual execute + mark return results as dirty
+      self._markDirty(handler.execute(context));
+    }
 
-  this._fire(command, 'executed', action);
+    // log to stack
+    self._executedAction(action, redo);
+
+    self._fire(command, 'executed', action);
+  });
 
   if (!redo) {
     this._fire(command, 'postExecute', action);
@@ -73482,6 +76424,10 @@ CommandStack.prototype._pushAction = function(action) {
       actions = execution.actions;
 
   var baseAction = actions[0];
+
+  if (execution.atomic) {
+    throw new Error('illegal invocation in <execute> or <revert> phase (action: ' + action.command + ')');
+  }
 
   if (!action.id) {
     action.id = (baseAction && baseAction.id) || this._createId();
@@ -73551,398 +76497,15 @@ CommandStack.prototype._setHandler = function(command, handler) {
   this._handlerMap[command] = handler;
 };
 
-},{"../core/EventBus":575,"lodash/array/unique":612,"lodash/lang/isArray":696,"lodash/object/assign":703}],574:[function(require,module,exports){
+},{"../core/EventBus":608,"lodash/array/unique":641,"lodash/lang/isArray":750,"lodash/object/assign":757}],607:[function(require,module,exports){
 module.exports = {
   commandStack: [ 'type', require('./CommandStack') ]
 };
 
-},{"./CommandStack":573}],575:[function(require,module,exports){
-'use strict';
+},{"./CommandStack":606}],608:[function(require,module,exports){
+arguments[4][331][0].apply(exports,arguments)
+},{"dup":331,"lodash/function/bind":651,"lodash/lang/isArray":750,"lodash/lang/isFunction":751,"lodash/lang/isNumber":753,"lodash/object/assign":757}],609:[function(require,module,exports){
 
-var isFunction = require('lodash/lang/isFunction'),
-    isArray = require('lodash/lang/isArray'),
-    isNumber = require('lodash/lang/isNumber'),
-    assign = require('lodash/object/assign');
-
-var DEFAULT_PRIORITY = 1000;
-
-
-/**
- * A general purpose event bus.
- *
- * This component is used to communicate across a diagram instance.
- * Other parts of a diagram can use it to listen to and broadcast events.
- *
- *
- * ## Registering for Events
- *
- * The event bus provides the {@link EventBus#on} and {@link EventBus#once}
- * methods to register for events. {@link EventBus#off} can be used to
- * remove event registrations. Listeners receive an instance of {@link Event}
- * as the first argument. It allows them to hook into the event execution.
- *
- * ```javascript
- *
- * // listen for event
- * eventBus.on('foo', function(event) {
- *
- *   // access event type
- *   event.type; // 'foo'
- *
- *   // stop propagation to other listeners
- *   event.stopPropagation();
- *
- *   // prevent event default
- *   event.preventDefault();
- * });
- *
- * // listen for event with custom payload
- * eventBus.on('bar', function(event, payload) {
- *   console.log(payload);
- * });
- *
- * // listen for event returning value
- * eventBus.on('foobar', function(event) {
- *
- *   // stop event propagation + prevent default
- *   return false;
- *
- *   // stop event propagation + return custom result
- *   return {
- *     complex: 'listening result'
- *   };
- * });
- *
- *
- * // listen with custom priority (default=1000, higher is better)
- * eventBus.on('priorityfoo', 1500, function(event) {
- *   console.log('invoked first!');
- * });
- * ```
- *
- *
- * ## Emitting Events
- *
- * Events can be emitted via the event bus using {@link EventBus#fire}.
- *
- * ```javascript
- *
- * // false indicates that the default action
- * // was prevented by listeners
- * if (eventBus.fire('foo') === false) {
- *   console.log('default has been prevented!');
- * };
- *
- *
- * // custom args + return value listener
- * eventBus.on('sum', function(event, a, b) {
- *   return a + b;
- * });
- *
- * // you can pass custom arguments + retrieve result values.
- * var sum = eventBus.fire('sum', 1, 2);
- * console.log(sum); // 3
- * ```
- */
-function EventBus() {
-  this._listeners = {};
-
-  // cleanup on destroy
-
-  var self = this;
-
-  // destroy on lowest priority to allow
-  // message passing until the bitter end
-  this.on('diagram.destroy', 1, function() {
-    self._listeners = null;
-  });
-}
-
-module.exports = EventBus;
-
-
-/**
- * Register an event listener for events with the given name.
- *
- * The callback will be invoked with `event, ...additionalArguments`
- * that have been passed to {@link EventBus#fire}.
- *
- * Returning false from a listener will prevent the events default action
- * (if any is specified). To stop an event from being processed further in
- * other listeners execute {@link Event#stopPropagation}.
- *
- * Returning anything but `undefined` from a listener will stop the listener propagation.
- *
- * @param {String|Array<String>} events
- * @param {Number} [priority=1000] the priority in which this listener is called, larger is higher
- * @param {Function} callback
- */
-EventBus.prototype.on = function(events, priority, callback) {
-
-  events = isArray(events) ? events : [ events ];
-
-  if (isFunction(priority)) {
-    callback = priority;
-    priority = DEFAULT_PRIORITY;
-  }
-
-  if (!isNumber(priority)) {
-    throw new Error('priority must be a number');
-  }
-
-  var self = this,
-      listener = { priority: priority, callback: callback };
-
-  events.forEach(function(e) {
-    self._addListener(e, listener);
-  });
-};
-
-
-/**
- * Register an event listener that is executed only once.
- *
- * @param {String} event the event name to register for
- * @param {Function} callback the callback to execute
- */
-EventBus.prototype.once = function(event, callback) {
-
-  var self = this;
-
-  function wrappedCallback() {
-    callback.apply(self, arguments);
-    self.off(event, wrappedCallback);
-  }
-
-  this.on(event, wrappedCallback);
-};
-
-
-/**
- * Removes event listeners by event and callback.
- *
- * If no callback is given, all listeners for a given event name are being removed.
- *
- * @param {String} event
- * @param {Function} [callback]
- */
-EventBus.prototype.off = function(event, callback) {
-  var listeners = this._getListeners(event),
-      listener, idx;
-
-  if (callback) {
-
-    // move through listeners from back to front
-    // and remove matching listeners
-    for (idx = listeners.length - 1; !!(listener = listeners[idx]); idx--) {
-      if (listener.callback === callback) {
-        listeners.splice(idx, 1);
-      }
-    }
-  } else {
-    // clear listeners
-    listeners.length = 0;
-  }
-};
-
-
-/**
- * Fires a named event.
- *
- * @example
- *
- * // fire event by name
- * events.fire('foo');
- *
- * // fire event object with nested type
- * var event = { type: 'foo' };
- * events.fire(event);
- *
- * // fire event with explicit type
- * var event = { x: 10, y: 20 };
- * events.fire('element.moved', event);
- *
- * // pass additional arguments to the event
- * events.on('foo', function(event, bar) {
- *   alert(bar);
- * });
- *
- * events.fire({ type: 'foo' }, 'I am bar!');
- *
- * @param {String} [name] the optional event name
- * @param {Object} [event] the event object
- * @param {...Object} additional arguments to be passed to the callback functions
- *
- * @return {Boolean} the events return value, if specified or false if the
- *                   default action was prevented by listeners
- */
-EventBus.prototype.fire = function(type, data) {
-
-  var event,
-      originalType,
-      listeners, idx, listener,
-      returnValue,
-      args;
-
-  args = Array.prototype.slice.call(arguments);
-
-  if (typeof type === 'object') {
-    event = type;
-    type = event.type;
-  }
-
-  if (!type) {
-    throw new Error('no event type specified');
-  }
-
-  listeners = this._listeners[type];
-
-  if (!listeners) {
-    return;
-  }
-
-  // we make sure we fire instances of our home made
-  // events here. We wrap them only once, though
-  if (data instanceof Event) {
-    // we are fine, we alread have an event
-    event = data;
-  } else {
-    event = new Event();
-    event.init(data);
-  }
-
-  // ensure we pass the event as the first parameter
-  args[0] = event;
-
-  // original event type (in case we delegate)
-  originalType = event.type;
-
-  try {
-
-    // update event type before delegation
-    if (type !== originalType) {
-      event.type = type;
-    }
-
-    for (idx = 0; !!(listener = listeners[idx]); idx++) {
-
-      // handle stopped propagation
-      if (event.cancelBubble) {
-        break;
-      }
-
-      try {
-        // returning false prevents the default action
-        returnValue = event.returnValue = listener.callback.apply(null, args);
-
-        // stop propagation on return value
-        if (returnValue !== undefined) {
-          event.stopPropagation();
-        }
-
-        // prevent default on return false
-        if (returnValue === false) {
-          event.preventDefault();
-        }
-      } catch (e) {
-        if (!this.handleError(e)) {
-          console.error('unhandled error in event listener');
-          console.error(e.stack);
-
-          throw e;
-        }
-      }
-    }
-  } finally {
-    // reset event type after delegation
-    if (type !== originalType) {
-      event.type = originalType;
-    }
-  }
-
-  // set the return value to false if the event default
-  // got prevented and no other return value exists
-  if (returnValue === undefined && event.defaultPrevented) {
-    returnValue = false;
-  }
-
-  return returnValue;
-};
-
-
-EventBus.prototype.handleError = function(error) {
-  return this.fire('error', { error: error }) === false;
-};
-
-
-/*
- * Add new listener with a certain priority to the list
- * of listeners (for the given event).
- *
- * The semantics of listener registration / listener execution are
- * first register, first serve: New listeners will always be inserted
- * after existing listeners with the same priority.
- *
- * Example: Inserting two listeners with priority 1000 and 1300
- *
- *    * before: [ 1500, 1500, 1000, 1000 ]
- *    * after: [ 1500, 1500, (new=1300), 1000, 1000, (new=1000) ]
- *
- * @param {String} event
- * @param {Object} listener { priority, callback }
- */
-EventBus.prototype._addListener = function(event, newListener) {
-
-  var listeners = this._getListeners(event),
-      existingListener,
-      idx;
-
-  // ensure we order listeners by priority from
-  // 0 (high) to n > 0 (low)
-  for (idx = 0; !!(existingListener = listeners[idx]); idx++) {
-    if (existingListener.priority < newListener.priority) {
-
-      // prepend newListener at before existingListener
-      listeners.splice(idx, 0, newListener);
-      return;
-    }
-  }
-
-  listeners.push(newListener);
-};
-
-
-EventBus.prototype._getListeners = function(name) {
-  var listeners = this._listeners[name];
-
-  if (!listeners) {
-    this._listeners[name] = listeners = [];
-  }
-
-  return listeners;
-};
-
-
-/**
- * A event that is emitted via the event bus.
- */
-function Event() { }
-
-module.exports.Event = Event;
-
-Event.prototype.stopPropagation = function() {
-  this.cancelBubble = true;
-};
-
-Event.prototype.preventDefault = function() {
-  this.defaultPrevented = true;
-};
-
-Event.prototype.init = function(data) {
-  assign(this, data || {});
-};
-
-},{"lodash/lang/isArray":696,"lodash/lang/isFunction":697,"lodash/lang/isNumber":699,"lodash/object/assign":703}],576:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -73971,17 +76534,24 @@ module.exports = RuleProvider;
 
 
 /**
- * Adds a modeling rule for the given action, implemented through a callback function.
+ * Adds a modeling rule for the given action, implemented through
+ * a callback function.
  *
- * The function will receive the modeling specific action context to perform its check.
- * It must return false or null to disallow the action from happening.
+ * The function will receive the modeling specific action context
+ * to perform its check. It must return `false` to disallow the
+ * action from happening or `true` to allow the action.
  *
- * Returning <code>null</code> may encode simply ignoring the action.
+ * A rule provider may pass over the evaluation to lower priority
+ * rules by returning return nothing (or <code>undefined</code>).
  *
  * @example
  *
  * ResizableRules.prototype.init = function() {
  *
+ *   \/**
+ *    * Return `true`, `false` or nothing to denote
+ *    * _allowed_, _not allowed_ and _continue evaluating_.
+ *    *\/
  *   this.addRule('shape.resize', function(context) {
  *
  *     var shape = context.shape;
@@ -73991,6 +76561,11 @@ module.exports = RuleProvider;
  *       if (!shape.resizable) {
  *         return false;
  *       }
+ *
+ *       // not returning anything (read: undefined)
+ *       // will continue the evaluation of other rules
+ *       // (with lower priority)
+ *       return;
  *     } else {
  *       // element must have minimum size of 10*10 points
  *       return context.newBounds.width > 10 && context.newBounds.height > 10;
@@ -74017,356 +76592,79 @@ RuleProvider.prototype.addRule = function(actions, priority, fn) {
     }, true);
   });
 };
-},{"../../command/CommandInterceptor":572,"inherits":608}],577:[function(require,module,exports){
+
+/**
+ * Implement this method to add new rules during provider initialization.
+ */
+RuleProvider.prototype.init = function() {};
+},{"../../command/CommandInterceptor":605,"inherits":637}],610:[function(require,module,exports){
 'use strict';
 
 /**
  * A service that provides rules for certain diagram actions.
  *
- * @param {CommandStack} commandStack
+ * The default implementation will hook into the {@link CommandStack}
+ * to perform the actual rule evaluation. Make sure to provide the
+ * `commandStack` service with this module if you plan to use it.
+ *
+ * Together with this implementation you may use the {@link RuleProvider}
+ * to implement your own rule checkers.
+ *
+ * This module is ment to be easily replaced, thus the tiny foot print.
+ *
+ * @param {Injector} injector
  */
-function Rules(commandStack) {
-  this._commandStack = commandStack;
+function Rules(injector) {
+  this._commandStack = injector.get('commandStack', false);
 }
 
-Rules.$inject = [ 'commandStack' ];
+Rules.$inject = [ 'injector' ];
 
 module.exports = Rules;
 
 
 /**
- * This method can be queried to ask whether certain modeling actions
- * are allowed or not.
+ * Returns whether or not a given modeling action can be executed
+ * in the specified context.
  *
- * @param  {String} action the action to be checked
- * @param  {Object} [context] the context to check the action in
+ * This implementation will respond with allow unless anyone
+ * objects.
+ *
+ * @param {String} action the action to be checked
+ * @param {Object} [context] the context to check the action in
  *
  * @return {Boolean} returns true, false or null depending on whether the
  *                   operation is allowed, not allowed or should be ignored.
  */
 Rules.prototype.allowed = function(action, context) {
-  var allowed = this._commandStack.canExecute(action, context);
+  var allowed = true;
+
+  var commandStack = this._commandStack;
+
+  if (commandStack) {
+    allowed = commandStack.canExecute(action, context);
+  }
 
   // map undefined to true, i.e. no rules
   return allowed === undefined ? true : allowed;
 };
-},{}],578:[function(require,module,exports){
+},{}],611:[function(require,module,exports){
 module.exports = {
-  __depends__: [ require('../../command' ) ],
   __init__: [ 'rules' ],
   rules: [ 'type', require('./Rules') ]
 };
 
-},{"../../command":574,"./Rules":577}],579:[function(require,module,exports){
+},{"./Rules":610}],612:[function(require,module,exports){
 arguments[4][111][0].apply(exports,arguments)
-},{"dup":111}],580:[function(require,module,exports){
+},{"dup":111}],613:[function(require,module,exports){
 arguments[4][113][0].apply(exports,arguments)
-},{"dup":113}],581:[function(require,module,exports){
-arguments[4][115][0].apply(exports,arguments)
-},{"./Event":579,"./Platform":582,"dup":115}],582:[function(require,module,exports){
+},{"dup":113}],614:[function(require,module,exports){
+arguments[4][362][0].apply(exports,arguments)
+},{"./Event":612,"./Platform":615,"dup":362}],615:[function(require,module,exports){
 arguments[4][116][0].apply(exports,arguments)
-},{"dup":116}],583:[function(require,module,exports){
-
-var isArray = function(obj) {
-  return Object.prototype.toString.call(obj) === '[object Array]';
-};
-
-var annotate = function() {
-  var args = Array.prototype.slice.call(arguments);
-  
-  if (args.length === 1 && isArray(args[0])) {
-    args = args[0];
-  }
-
-  var fn = args.pop();
-
-  fn.$inject = args;
-
-  return fn;
-};
-
-
-// Current limitations:
-// - can't put into "function arg" comments
-// function /* (no parenthesis like this) */ (){}
-// function abc( /* xx (no parenthesis like this) */ a, b) {}
-//
-// Just put the comment before function or inside:
-// /* (((this is fine))) */ function(a, b) {}
-// function abc(a) { /* (((this is fine))) */}
-
-var FN_ARGS = /^function\s*[^\(]*\(\s*([^\)]*)\)/m;
-var FN_ARG = /\/\*([^\*]*)\*\//m;
-
-var parse = function(fn) {
-  if (typeof fn !== 'function') {
-    throw new Error('Cannot annotate "' + fn + '". Expected a function!');
-  }
-
-  var match = fn.toString().match(FN_ARGS);
-  return match[1] && match[1].split(',').map(function(arg) {
-    match = arg.match(FN_ARG);
-    return match ? match[1].trim() : arg.trim();
-  }) || [];
-};
-
-
-exports.annotate = annotate;
-exports.parse = parse;
-exports.isArray = isArray;
-
-},{}],584:[function(require,module,exports){
-module.exports = {
-  annotate: require('./annotation').annotate,
-  Module: require('./module'),
-  Injector: require('./injector')
-};
-
-},{"./annotation":583,"./injector":585,"./module":586}],585:[function(require,module,exports){
-var Module = require('./module');
-var autoAnnotate = require('./annotation').parse;
-var annotate = require('./annotation').annotate;
-var isArray = require('./annotation').isArray;
-
-
-var Injector = function(modules, parent) {
-  parent = parent || {
-    get: function(name) {
-      currentlyResolving.push(name);
-      throw error('No provider for "' + name + '"!');
-    }
-  };
-
-  var currentlyResolving = [];
-  var providers = this._providers = Object.create(parent._providers || null);
-  var instances = this._instances = Object.create(null);
-
-  var self = instances.injector = this;
-
-  var error = function(msg) {
-    var stack = currentlyResolving.join(' -> ');
-    currentlyResolving.length = 0;
-    return new Error(stack ? msg + ' (Resolving: ' + stack + ')' : msg);
-  };
-
-  var get = function(name) {
-    if (!providers[name] && name.indexOf('.') !== -1) {
-      var parts = name.split('.');
-      var pivot = get(parts.shift());
-
-      while(parts.length) {
-        pivot = pivot[parts.shift()];
-      }
-
-      return pivot;
-    }
-
-    if (Object.hasOwnProperty.call(instances, name)) {
-      return instances[name];
-    }
-
-    if (Object.hasOwnProperty.call(providers, name)) {
-      if (currentlyResolving.indexOf(name) !== -1) {
-        currentlyResolving.push(name);
-        throw error('Cannot resolve circular dependency!');
-      }
-
-      currentlyResolving.push(name);
-      instances[name] = providers[name][0](providers[name][1]);
-      currentlyResolving.pop();
-
-      return instances[name];
-    }
-
-    return parent.get(name);
-  };
-
-  var instantiate = function(Type) {
-    var instance = Object.create(Type.prototype);
-    var returned = invoke(Type, instance);
-
-    return typeof returned === 'object' ? returned : instance;
-  };
-
-  var invoke = function(fn, context) {
-    if (typeof fn !== 'function') {
-      if (isArray(fn)) {
-        fn = annotate(fn.slice());
-      } else {
-        throw new Error('Cannot invoke "' + fn + '". Expected a function!');
-      }
-    }
-
-    var inject = fn.$inject && fn.$inject || autoAnnotate(fn);
-    var dependencies = inject.map(function(dep) {
-      return get(dep);
-    });
-
-    // TODO(vojta): optimize without apply
-    return fn.apply(context, dependencies);
-  };
-
-
-  var createPrivateInjectorFactory = function(privateChildInjector) {
-    return annotate(function(key) {
-      return privateChildInjector.get(key);
-    });
-  };
-
-  var createChild = function(modules, forceNewInstances) {
-    if (forceNewInstances && forceNewInstances.length) {
-      var fromParentModule = Object.create(null);
-      var matchedScopes = Object.create(null);
-
-      var privateInjectorsCache = [];
-      var privateChildInjectors = [];
-      var privateChildFactories = [];
-
-      var provider;
-      var cacheIdx;
-      var privateChildInjector;
-      var privateChildInjectorFactory;
-      for (var name in providers) {
-        provider = providers[name];
-
-        if (forceNewInstances.indexOf(name) !== -1) {
-          if (provider[2] === 'private') {
-            cacheIdx = privateInjectorsCache.indexOf(provider[3]);
-            if (cacheIdx === -1) {
-              privateChildInjector = provider[3].createChild([], forceNewInstances);
-              privateChildInjectorFactory = createPrivateInjectorFactory(privateChildInjector);
-              privateInjectorsCache.push(provider[3]);
-              privateChildInjectors.push(privateChildInjector);
-              privateChildFactories.push(privateChildInjectorFactory);
-              fromParentModule[name] = [privateChildInjectorFactory, name, 'private', privateChildInjector];
-            } else {
-              fromParentModule[name] = [privateChildFactories[cacheIdx], name, 'private', privateChildInjectors[cacheIdx]];
-            }
-          } else {
-            fromParentModule[name] = [provider[2], provider[1]];
-          }
-          matchedScopes[name] = true;
-        }
-
-        if ((provider[2] === 'factory' || provider[2] === 'type') && provider[1].$scope) {
-          forceNewInstances.forEach(function(scope) {
-            if (provider[1].$scope.indexOf(scope) !== -1) {
-              fromParentModule[name] = [provider[2], provider[1]];
-              matchedScopes[scope] = true;
-            }
-          });
-        }
-      }
-
-      forceNewInstances.forEach(function(scope) {
-        if (!matchedScopes[scope]) {
-          throw new Error('No provider for "' + scope + '". Cannot use provider from the parent!');
-        }
-      });
-
-      modules.unshift(fromParentModule);
-    }
-
-    return new Injector(modules, self);
-  };
-
-  var factoryMap = {
-    factory: invoke,
-    type: instantiate,
-    value: function(value) {
-      return value;
-    }
-  };
-
-  modules.forEach(function(module) {
-
-    function arrayUnwrap(type, value) {
-      if (type !== 'value' && isArray(value)) {
-        value = annotate(value.slice());
-      }
-
-      return value;
-    }
-
-    // TODO(vojta): handle wrong inputs (modules)
-    if (module instanceof Module) {
-      module.forEach(function(provider) {
-        var name = provider[0];
-        var type = provider[1];
-        var value = provider[2];
-
-        providers[name] = [factoryMap[type], arrayUnwrap(type, value), type];
-      });
-    } else if (typeof module === 'object') {
-      if (module.__exports__) {
-        var clonedModule = Object.keys(module).reduce(function(m, key) {
-          if (key.substring(0, 2) !== '__') {
-            m[key] = module[key];
-          }
-          return m;
-        }, Object.create(null));
-
-        var privateInjector = new Injector((module.__modules__ || []).concat([clonedModule]), self);
-        var getFromPrivateInjector = annotate(function(key) {
-          return privateInjector.get(key);
-        });
-        module.__exports__.forEach(function(key) {
-          providers[key] = [getFromPrivateInjector, key, 'private', privateInjector];
-        });
-      } else {
-        Object.keys(module).forEach(function(name) {
-          if (module[name][2] === 'private') {
-            providers[name] = module[name];
-            return;
-          }
-
-          var type = module[name][0];
-          var value = module[name][1];
-
-          providers[name] = [factoryMap[type], arrayUnwrap(type, value), type];
-        });
-      }
-    }
-  });
-
-  // public API
-  this.get = get;
-  this.invoke = invoke;
-  this.instantiate = instantiate;
-  this.createChild = createChild;
-};
-
-module.exports = Injector;
-
-},{"./annotation":583,"./module":586}],586:[function(require,module,exports){
-var Module = function() {
-  var providers = [];
-
-  this.factory = function(name, factory) {
-    providers.push([name, 'factory', factory]);
-    return this;
-  };
-
-  this.value = function(name, value) {
-    providers.push([name, 'value', value]);
-    return this;
-  };
-
-  this.type = function(name, type) {
-    providers.push([name, 'type', type]);
-    return this;
-  };
-
-  this.forEach = function(iterator) {
-    providers.forEach(iterator);
-  };
-};
-
-module.exports = Module;
-
-},{}],587:[function(require,module,exports){
+},{"dup":116}],616:[function(require,module,exports){
 arguments[4][56][0].apply(exports,arguments)
-},{"./lib/simple":590,"dup":56}],588:[function(require,module,exports){
+},{"./lib/simple":618,"dup":56}],617:[function(require,module,exports){
 'use strict';
 
 var isString = require('lodash/lang/isString'),
@@ -74447,64 +76745,7 @@ DmnModdle.prototype.toXML = function(element, options, done) {
   }
 };
 
-},{"lodash/lang/isFunction":697,"lodash/lang/isString":701,"lodash/object/assign":703,"moddle":596,"moddle-xml/lib/reader":592,"moddle-xml/lib/writer":593}],589:[function(require,module,exports){
-'use strict';
-
-var ID_PATTERN = /^(.*:)?id$/;
-
-/**
- * Extends the bpmn instance with id support.
- *
- * @example
- *
- * var moddle, ids;
- *
- * require('id-support').extend(moddle, ids);
- *
- * moddle.ids.next(); // create a next id
- * moddle.ids; // ids instance
- *
- * // claims id as used
- * moddle.create('foo:Bar', { id: 'fooobar1' });
- *
- *
- * @param  {Moddle} model
- * @param  {Ids} ids
- *
- * @return {Moddle} the extended moddle instance
- */
-module.exports.extend = function(model, ids) {
-
-  var set = model.properties.set;
-
-  // do not reinitialize setter
-  // unless it is already initialized
-  if (!model.ids) {
-
-    model.properties.set = function(target, property, value) {
-
-      // ensure we log used ids once they are assigned
-      // to model elements
-      if (ID_PATTERN.test(property)) {
-
-        var assigned = model.ids.assigned(value);
-        if (assigned && assigned !== target) {
-          throw new Error('id <' + value + '> already used');
-        }
-
-        model.ids.claim(value, target);
-      }
-
-      set.call(this, target, property, value);
-    };
-  }
-
-  model.ids = ids;
-
-  return model;
-};
-
-},{}],590:[function(require,module,exports){
+},{"lodash/lang/isFunction":751,"lodash/lang/isString":755,"lodash/object/assign":757,"moddle":624,"moddle-xml/lib/reader":620,"moddle-xml/lib/writer":621}],618:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign');
@@ -74512,1911 +76753,73 @@ var assign = require('lodash/object/assign');
 var DmnModdle = require('./dmn-moddle');
 
 var packages = {
-  dmn: require('../resources/dmn/json/dmn.json')
+  dmn: require('../resources/dmn/json/dmn.json'),
+  camunda: require('../resources/dmn/camunda/camunda.json')
 };
 
 module.exports = function(additionalPackages, options) {
   return new DmnModdle(assign({}, packages, additionalPackages), options);
 };
 
-},{"../resources/dmn/json/dmn.json":605,"./dmn-moddle":588,"lodash/object/assign":703}],591:[function(require,module,exports){
+},{"../resources/dmn/camunda/camunda.json":633,"../resources/dmn/json/dmn.json":634,"./dmn-moddle":617,"lodash/object/assign":757}],619:[function(require,module,exports){
 arguments[4][59][0].apply(exports,arguments)
-},{"dup":59}],592:[function(require,module,exports){
-'use strict';
-
-var reduce = require('lodash/collection/reduce'),
-    forEach = require('lodash/collection/forEach'),
-    find = require('lodash/collection/find'),
-    assign = require('lodash/object/assign'),
-    defer = require('lodash/function/defer');
-
-var Stack = require('tiny-stack'),
-    SaxParser = require('sax').parser,
-    Moddle = require('moddle'),
-    parseNameNs = require('moddle/lib/ns').parseName,
-    Types = require('moddle/lib/types'),
-    coerceType = Types.coerceType,
-    isSimpleType = Types.isSimple,
-    common = require('./common'),
-    XSI_TYPE = common.XSI_TYPE,
-    XSI_URI = common.DEFAULT_NS_MAP.xsi,
-    serializeAsType = common.serializeAsType,
-    aliasToName = common.aliasToName;
-
-function parseNodeAttributes(node) {
-  var nodeAttrs = node.attributes;
-
-  return reduce(nodeAttrs, function(result, v, k) {
-    var name, ns;
-
-    if (!v.local) {
-      name = v.prefix;
-    } else {
-      ns = parseNameNs(v.name, v.prefix);
-      name = ns.name;
-    }
-
-    result[name] = v.value;
-    return result;
-  }, {});
-}
-
-function normalizeType(node, attr, model) {
-  var nameNs = parseNameNs(attr.value);
-
-  var uri = node.ns[nameNs.prefix || ''],
-      localName = nameNs.localName,
-      pkg = uri && model.getPackage(uri),
-      typePrefix;
-
-  if (pkg) {
-    typePrefix = pkg.xml && pkg.xml.typePrefix;
-
-    if (typePrefix && localName.indexOf(typePrefix) === 0) {
-      localName = localName.slice(typePrefix.length);
-    }
-
-    attr.value = pkg.prefix + ':' + localName;
-  }
-}
-
-/**
- * Normalizes namespaces for a node given an optional default namespace and a
- * number of mappings from uris to default prefixes.
- *
- * @param  {XmlNode} node
- * @param  {Model} model the model containing all registered namespaces
- * @param  {Uri} defaultNsUri
- */
-function normalizeNamespaces(node, model, defaultNsUri) {
-  var uri, prefix;
-
-  uri = node.uri || defaultNsUri;
-
-  if (uri) {
-    var pkg = model.getPackage(uri);
-
-    if (pkg) {
-      prefix = pkg.prefix;
-    } else {
-      prefix = node.prefix;
-    }
-
-    node.prefix = prefix;
-    node.uri = uri;
-  }
-
-  forEach(node.attributes, function(attr) {
-
-    // normalize xsi:type attributes because the
-    // assigned type may or may not be namespace prefixed
-    if (attr.uri === XSI_URI && attr.local === 'type') {
-      normalizeType(node, attr, model);
-    }
-
-    normalizeNamespaces(attr, model, null);
-  });
-}
-
-
-/**
- * A parse context.
- *
- * @class
- *
- * @param {Object} options
- * @param {ElementHandler} options.parseRoot the root handler for parsing a document
- * @param {boolean} [options.lax=false] whether or not to ignore invalid elements
- */
-function Context(options) {
-
-  /**
-   * @property {ElementHandler} parseRoot
-   */
-
-  /**
-   * @property {Boolean} lax
-   */
-
-  assign(this, options);
-
-  var elementsById = this.elementsById = {};
-  var references = this.references = [];
-  var warnings = this.warnings = [];
-
-  this.addReference = function(reference) {
-    references.push(reference);
-  };
-
-  this.addElement = function(id, element) {
-
-    if (!id || !element) {
-      throw new Error('[xml-reader] id or ctx must not be null');
-    }
-
-    elementsById[id] = element;
-  };
-
-  this.addWarning = function (w) {
-    warnings.push(w);
-  };
-}
-
-function BaseHandler() {}
-
-BaseHandler.prototype.handleEnd = function() {};
-BaseHandler.prototype.handleText = function() {};
-BaseHandler.prototype.handleNode = function() {};
-
-
-/**
- * A simple pass through handler that does nothing except for
- * ignoring all input it receives.
- *
- * This is used to ignore unknown elements and
- * attributes.
- */
-function NoopHandler() { }
-
-NoopHandler.prototype = new BaseHandler();
-
-NoopHandler.prototype.handleNode = function() {
-  return this;
-};
-
-function BodyHandler() {}
-
-BodyHandler.prototype = new BaseHandler();
-
-BodyHandler.prototype.handleText = function(text) {
-  this.body = (this.body || '') + text;
-};
-
-function ReferenceHandler(property, context) {
-  this.property = property;
-  this.context = context;
-}
-
-ReferenceHandler.prototype = new BodyHandler();
-
-ReferenceHandler.prototype.handleNode = function(node) {
-
-  if (this.element) {
-    throw new Error('expected no sub nodes');
-  } else {
-    this.element = this.createReference(node);
-  }
-
-  return this;
-};
-
-ReferenceHandler.prototype.handleEnd = function() {
-  this.element.id = this.body;
-};
-
-ReferenceHandler.prototype.createReference = function() {
-  return {
-    property: this.property.ns.name,
-    id: ''
-  };
-};
-
-function ValueHandler(propertyDesc, element) {
-  this.element = element;
-  this.propertyDesc = propertyDesc;
-}
-
-ValueHandler.prototype = new BodyHandler();
-
-ValueHandler.prototype.handleEnd = function() {
-
-  var value = this.body,
-      element = this.element,
-      propertyDesc = this.propertyDesc;
-
-  value = coerceType(propertyDesc.type, value);
-
-  if (propertyDesc.isMany) {
-    element.get(propertyDesc.name).push(value);
-  } else {
-    element.set(propertyDesc.name, value);
-  }
-};
-
-
-function BaseElementHandler() {}
-
-BaseElementHandler.prototype = Object.create(BodyHandler.prototype);
-
-BaseElementHandler.prototype.handleNode = function(node) {
-  var parser = this,
-      element = this.element,
-      id;
-
-  if (!element) {
-    element = this.element = this.createElement(node);
-    id = element.id;
-
-    if (id) {
-      this.context.addElement(id, element);
-    }
-  } else {
-    parser = this.handleChild(node);
-  }
-
-  return parser;
-};
-
-/**
- * @class XMLReader.ElementHandler
- *
- */
-function ElementHandler(model, type, context) {
-  this.model = model;
-  this.type = model.getType(type);
-  this.context = context;
-}
-
-ElementHandler.prototype = new BaseElementHandler();
-
-ElementHandler.prototype.addReference = function(reference) {
-  this.context.addReference(reference);
-};
-
-ElementHandler.prototype.handleEnd = function() {
-
-  var value = this.body,
-      element = this.element,
-      descriptor = element.$descriptor,
-      bodyProperty = descriptor.bodyProperty;
-
-  if (bodyProperty && value !== undefined) {
-    value = coerceType(bodyProperty.type, value);
-    element.set(bodyProperty.name, value);
-  }
-};
-
-/**
- * Create an instance of the model from the given node.
- *
- * @param  {Element} node the xml node
- */
-ElementHandler.prototype.createElement = function(node) {
-  var attributes = parseNodeAttributes(node),
-      Type = this.type,
-      descriptor = Type.$descriptor,
-      context = this.context,
-      instance = new Type({});
-
-  forEach(attributes, function(value, name) {
-
-    var prop = descriptor.propertiesByName[name];
-
-    if (prop && prop.isReference) {
-      context.addReference({
-        element: instance,
-        property: prop.ns.name,
-        id: value
-      });
-    } else {
-      if (prop) {
-        value = coerceType(prop.type, value);
-      }
-
-      instance.set(name, value);
-    }
-  });
-
-  return instance;
-};
-
-ElementHandler.prototype.getPropertyForNode = function(node) {
-
-  var nameNs = parseNameNs(node.local, node.prefix);
-
-  var type = this.type,
-      model = this.model,
-      descriptor = type.$descriptor;
-
-  var propertyName = nameNs.name,
-      property = descriptor.propertiesByName[propertyName],
-      elementTypeName,
-      elementType,
-      typeAnnotation;
-
-  // search for properties by name first
-
-  if (property) {
-
-    if (serializeAsType(property)) {
-      typeAnnotation = node.attributes[XSI_TYPE];
-
-      // xsi type is optional, if it does not exists the
-      // default type is assumed
-      if (typeAnnotation) {
-
-        elementTypeName = typeAnnotation.value;
-
-        // TODO: extract real name from attribute
-        elementType = model.getType(elementTypeName);
-
-        return assign({}, property, { effectiveType: elementType.$descriptor.name });
-      }
-    }
-
-    // search for properties by name first
-    return property;
-  }
-
-
-  var pkg = model.getPackage(nameNs.prefix);
-
-  if (pkg) {
-    elementTypeName = nameNs.prefix + ':' + aliasToName(nameNs.localName, descriptor.$pkg);
-    elementType = model.getType(elementTypeName);
-
-    // search for collection members later
-    property = find(descriptor.properties, function(p) {
-      return !p.isVirtual && !p.isReference && !p.isAttribute && elementType.hasType(p.type);
-    });
-
-    if (property) {
-      return assign({}, property, { effectiveType: elementType.$descriptor.name });
-    }
-  } else {
-    // parse unknown element (maybe extension)
-    property = find(descriptor.properties, function(p) {
-      return !p.isReference && !p.isAttribute && p.type === 'Element';
-    });
-
-    if (property) {
-      return property;
-    }
-  }
-
-  throw new Error('unrecognized element <' + nameNs.name + '>');
-};
-
-ElementHandler.prototype.toString = function() {
-  return 'ElementDescriptor[' + this.type.$descriptor.name + ']';
-};
-
-ElementHandler.prototype.valueHandler = function(propertyDesc, element) {
-  return new ValueHandler(propertyDesc, element);
-};
-
-ElementHandler.prototype.referenceHandler = function(propertyDesc) {
-  return new ReferenceHandler(propertyDesc, this.context);
-};
-
-ElementHandler.prototype.handler = function(type) {
-  if (type === 'Element') {
-    return new GenericElementHandler(this.model, type, this.context);
-  } else {
-    return new ElementHandler(this.model, type, this.context);
-  }
-};
-
-/**
- * Handle the child element parsing
- *
- * @param  {Element} node the xml node
- */
-ElementHandler.prototype.handleChild = function(node) {
-  var propertyDesc, type, element, childHandler;
-
-  propertyDesc = this.getPropertyForNode(node);
-  element = this.element;
-
-  type = propertyDesc.effectiveType || propertyDesc.type;
-
-  if (isSimpleType(type)) {
-    return this.valueHandler(propertyDesc, element);
-  }
-
-  if (propertyDesc.isReference) {
-    childHandler = this.referenceHandler(propertyDesc).handleNode(node);
-  } else {
-    childHandler = this.handler(type).handleNode(node);
-  }
-
-  var newElement = childHandler.element;
-
-  // child handles may decide to skip elements
-  // by not returning anything
-  if (newElement !== undefined) {
-
-    if (propertyDesc.isMany) {
-      element.get(propertyDesc.name).push(newElement);
-    } else {
-      element.set(propertyDesc.name, newElement);
-    }
-
-    if (propertyDesc.isReference) {
-      assign(newElement, {
-        element: element
-      });
-
-      this.context.addReference(newElement);
-    } else {
-      // establish child -> parent relationship
-      newElement.$parent = element;
-    }
-  }
-
-  return childHandler;
-};
-
-
-function GenericElementHandler(model, type, context) {
-  this.model = model;
-  this.context = context;
-}
-
-GenericElementHandler.prototype = Object.create(BaseElementHandler.prototype);
-
-GenericElementHandler.prototype.createElement = function(node) {
-
-  var name = node.name,
-      prefix = node.prefix,
-      uri = node.ns[prefix],
-      attributes = node.attributes;
-
-  return this.model.createAny(name, uri, attributes);
-};
-
-GenericElementHandler.prototype.handleChild = function(node) {
-
-  var handler = new GenericElementHandler(this.model, 'Element', this.context).handleNode(node),
-      element = this.element;
-
-  var newElement = handler.element,
-      children;
-
-  if (newElement !== undefined) {
-    children = element.$children = element.$children || [];
-    children.push(newElement);
-
-    // establish child -> parent relationship
-    newElement.$parent = element;
-  }
-
-  return handler;
-};
-
-GenericElementHandler.prototype.handleText = function(text) {
-  this.body = this.body || '' + text;
-};
-
-GenericElementHandler.prototype.handleEnd = function() {
-  if (this.body) {
-    this.element.$body = this.body;
-  }
-};
-
-/**
- * A reader for a meta-model
- *
- * @param {Object} options
- * @param {Model} options.model used to read xml files
- * @param {Boolean} options.lax whether to make parse errors warnings
- */
-function XMLReader(options) {
-
-  if (options instanceof Moddle) {
-    options = {
-      model: options
-    };
-  }
-
-  assign(this, { lax: false }, options);
-}
-
-
-XMLReader.prototype.fromXML = function(xml, rootHandler, done) {
-
-  var model = this.model,
-      lax = this.lax,
-      context = new Context({
-        parseRoot: rootHandler
-      });
-
-  var parser = new SaxParser(true, { xmlns: true, trim: true }),
-      stack = new Stack();
-
-  rootHandler.context = context;
-
-  // push root handler
-  stack.push(rootHandler);
-
-
-  function resolveReferences() {
-
-    var elementsById = context.elementsById;
-    var references = context.references;
-
-    var i, r;
-
-    for (i = 0; !!(r = references[i]); i++) {
-      var element = r.element;
-      var reference = elementsById[r.id];
-      var property = element.$descriptor.propertiesByName[r.property];
-
-      if (!reference) {
-        context.addWarning({
-          message: 'unresolved reference <' + r.id + '>',
-          element: r.element,
-          property: r.property,
-          value: r.id
-        });
-      }
-
-      if (property.isMany) {
-        var collection = element.get(property.name),
-            idx = collection.indexOf(r);
-
-        if (!reference) {
-          // remove unresolvable reference
-          collection.splice(idx, 1);
-        } else {
-          // update reference
-          collection[idx] = reference;
-        }
-      } else {
-        element.set(property.name, reference);
-      }
-    }
-  }
-
-  function handleClose(tagName) {
-    stack.pop().handleEnd();
-  }
-
-  function handleOpen(node) {
-    var handler = stack.peek();
-
-    normalizeNamespaces(node, model);
-
-    try {
-      stack.push(handler.handleNode(node));
-    } catch (e) {
-
-      var line = this.line,
-          column = this.column;
-
-      var message =
-        'unparsable content <' + node.name + '> detected\n\t' +
-          'line: ' + line + '\n\t' +
-          'column: ' + column + '\n\t' +
-          'nested error: ' + e.message;
-
-      if (lax) {
-        context.addWarning({
-          message: message,
-          error: e
-        });
-
-        console.warn('could not parse node');
-        console.warn(e);
-
-        stack.push(new NoopHandler());
-      } else {
-        console.error('could not parse document');
-        console.error(e);
-
-        throw new Error(message);
-      }
-    }
-  }
-
-  function handleText(text) {
-    stack.peek().handleText(text);
-  }
-
-  parser.onopentag = handleOpen;
-  parser.oncdata = parser.ontext = handleText;
-  parser.onclosetag = handleClose;
-  parser.onend = resolveReferences;
-
-  // deferred parse XML to make loading really ascnchronous
-  // this ensures the execution environment (node or browser)
-  // is kept responsive and that certain optimization strategies
-  // can kick in
-  defer(function() {
-    var error;
-
-    try {
-      parser.write(xml).close();
-    } catch (e) {
-      error = e;
-    }
-
-    done(error, error ? undefined : rootHandler.element, context);
-  });
-};
-
-XMLReader.prototype.handler = function(name) {
-  return new ElementHandler(this.model, name);
-};
-
-module.exports = XMLReader;
-module.exports.ElementHandler = ElementHandler;
-},{"./common":591,"lodash/collection/find":615,"lodash/collection/forEach":616,"lodash/collection/reduce":619,"lodash/function/defer":622,"lodash/object/assign":703,"moddle":596,"moddle/lib/ns":601,"moddle/lib/types":604,"sax":594,"tiny-stack":595}],593:[function(require,module,exports){
-'use strict';
-
-var map = require('lodash/collection/map'),
-    forEach = require('lodash/collection/forEach'),
-    isString = require('lodash/lang/isString'),
-    filter = require('lodash/collection/filter'),
-    assign = require('lodash/object/assign');
-
-var Types = require('moddle/lib/types'),
-    parseNameNs = require('moddle/lib/ns').parseName,
-    common = require('./common'),
-    nameToAlias = common.nameToAlias,
-    serializeAsType = common.serializeAsType,
-    serializeAsProperty = common.serializeAsProperty;
-
-var XML_PREAMBLE = '<?xml version="1.0" encoding="UTF-8"?>\n',
-    ESCAPE_CHARS = /(<|>|'|"|&|\n\r|\n)/g,
-    DEFAULT_NS_MAP = common.DEFAULT_NS_MAP,
-    XSI_TYPE = common.XSI_TYPE;
-
-
-function nsName(ns) {
-  if (isString(ns)) {
-    return ns;
-  } else {
-    return (ns.prefix ? ns.prefix + ':' : '') + ns.localName;
-  }
-}
-
-function getElementNs(ns, descriptor) {
-  if (descriptor.isGeneric) {
-    return descriptor.name;
-  } else {
-    return assign({ localName: nameToAlias(descriptor.ns.localName, descriptor.$pkg) }, ns);
-  }
-}
-
-function getPropertyNs(ns, descriptor) {
-  return assign({ localName: descriptor.ns.localName }, ns);
-}
-
-function getSerializableProperties(element) {
-  var descriptor = element.$descriptor;
-
-  return filter(descriptor.properties, function(p) {
-    var name = p.name;
-
-    // do not serialize defaults
-    if (!element.hasOwnProperty(name)) {
-      return false;
-    }
-
-    var value = element[name];
-
-    // do not serialize default equals
-    if (value === p.default) {
-      return false;
-    }
-
-    return p.isMany ? value.length : true;
-  });
-}
-
-var ESCAPE_MAP = {
-  '\n': '10',
-  '\n\r': '10',
-  '"': '34',
-  '\'': '39',
-  '<': '60',
-  '>': '62',
-  '&': '38'
-};
-
-/**
- * Escape a string attribute to not contain any bad values (line breaks, '"', ...)
- *
- * @param {String} str the string to escape
- * @return {String} the escaped string
- */
-function escapeAttr(str) {
-
-  // ensure we are handling strings here
-  str = isString(str) ? str : '' + str;
-
-  return str.replace(ESCAPE_CHARS, function(str) {
-    return '&#' + ESCAPE_MAP[str] + ';';
-  });
-}
-
-function filterAttributes(props) {
-  return filter(props, function(p) { return p.isAttr; });
-}
-
-function filterContained(props) {
-  return filter(props, function(p) { return !p.isAttr; });
-}
-
-
-function ReferenceSerializer(parent, ns) {
-  this.ns = ns;
-}
-
-ReferenceSerializer.prototype.build = function(element) {
-  this.element = element;
-  return this;
-};
-
-ReferenceSerializer.prototype.serializeTo = function(writer) {
-  writer
-    .appendIndent()
-    .append('<' + nsName(this.ns) + '>' + this.element.id + '</' + nsName(this.ns) + '>')
-    .appendNewLine();
-};
-
-function BodySerializer() {}
-
-BodySerializer.prototype.serializeValue = BodySerializer.prototype.serializeTo = function(writer) {
-  var escape = this.escape;
-
-  if (escape) {
-    writer.append('<![CDATA[');
-  }
-
-  writer.append(this.value);
-
-  if (escape) {
-    writer.append(']]>');
-  }
-};
-
-BodySerializer.prototype.build = function(prop, value) {
-  this.value = value;
-
-  if (prop.type === 'String' && ESCAPE_CHARS.test(value)) {
-    this.escape = true;
-  }
-
-  return this;
-};
-
-function ValueSerializer(ns) {
-  this.ns = ns;
-}
-
-ValueSerializer.prototype = new BodySerializer();
-
-ValueSerializer.prototype.serializeTo = function(writer) {
-
-  writer
-    .appendIndent()
-    .append('<' + nsName(this.ns) + '>');
-
-  this.serializeValue(writer);
-
-  writer
-    .append( '</' + nsName(this.ns) + '>')
-    .appendNewLine();
-};
-
-function ElementSerializer(parent, ns) {
-  this.body = [];
-  this.attrs = [];
-
-  this.parent = parent;
-  this.ns = ns;
-}
-
-ElementSerializer.prototype.build = function(element) {
-  this.element = element;
-
-  var otherAttrs = this.parseNsAttributes(element);
-
-  if (!this.ns) {
-    this.ns = this.nsTagName(element.$descriptor);
-  }
-
-  if (element.$descriptor.isGeneric) {
-    this.parseGeneric(element);
-  } else {
-    var properties = getSerializableProperties(element);
-
-    this.parseAttributes(filterAttributes(properties));
-    this.parseContainments(filterContained(properties));
-
-    this.parseGenericAttributes(element, otherAttrs);
-  }
-
-  return this;
-};
-
-ElementSerializer.prototype.nsTagName = function(descriptor) {
-  var effectiveNs = this.logNamespaceUsed(descriptor.ns);
-  return getElementNs(effectiveNs, descriptor);
-};
-
-ElementSerializer.prototype.nsPropertyTagName = function(descriptor) {
-  var effectiveNs = this.logNamespaceUsed(descriptor.ns);
-  return getPropertyNs(effectiveNs, descriptor);
-};
-
-ElementSerializer.prototype.isLocalNs = function(ns) {
-  return ns.uri === this.ns.uri;
-};
-
-ElementSerializer.prototype.nsAttributeName = function(element) {
-
-  var ns;
-
-  if (isString(element)) {
-    ns = parseNameNs(element);
-  } else
-  if (element.ns) {
-    ns = element.ns;
-  }
-
-  var effectiveNs = this.logNamespaceUsed(ns);
-
-  // strip prefix if same namespace like parent
-  if (this.isLocalNs(effectiveNs)) {
-    return { localName: ns.localName };
-  } else {
-    return assign({ localName: ns.localName }, effectiveNs);
-  }
-};
-
-ElementSerializer.prototype.parseGeneric = function(element) {
-
-  var self = this,
-      body = this.body,
-      attrs = this.attrs;
-
-  forEach(element, function(val, key) {
-
-    if (key === '$body') {
-      body.push(new BodySerializer().build({ type: 'String' }, val));
-    } else
-    if (key === '$children') {
-      forEach(val, function(child) {
-        body.push(new ElementSerializer(self).build(child));
-      });
-    } else
-    if (key.indexOf('$') !== 0) {
-      attrs.push({ name: key, value: escapeAttr(val) });
-    }
-  });
-};
-
-/**
- * Parse namespaces and return a list of left over generic attributes
- *
- * @param  {Object} element
- * @return {Array<Object>}
- */
-ElementSerializer.prototype.parseNsAttributes = function(element) {
-  var self = this;
-
-  var genericAttrs = element.$attrs;
-
-  var attributes = [];
-
-  // parse namespace attributes first
-  // and log them. push non namespace attributes to a list
-  // and process them later
-  forEach(genericAttrs, function(value, name) {
-    var nameNs = parseNameNs(name);
-
-    if (nameNs.prefix === 'xmlns') {
-      self.logNamespace({ prefix: nameNs.localName, uri: value });
-    } else
-    if (!nameNs.prefix && nameNs.localName === 'xmlns') {
-      self.logNamespace({ uri: value });
-    } else {
-      attributes.push({ name: name, value: value });
-    }
-  });
-
-  return attributes;
-};
-
-ElementSerializer.prototype.parseGenericAttributes = function(element, attributes) {
-
-  var self = this;
-
-  forEach(attributes, function(attr) {
-
-    // do not serialize xsi:type attribute
-    // it is set manually based on the actual implementation type
-    if (attr.name === XSI_TYPE) {
-      return;
-    }
-
-    try {
-      self.addAttribute(self.nsAttributeName(attr.name), attr.value);
-    } catch (e) {
-      console.warn('[writer] missing namespace information for ', attr.name, '=', attr.value, 'on', element, e);
-    }
-  });
-};
-
-ElementSerializer.prototype.parseContainments = function(properties) {
-
-  var self = this,
-      body = this.body,
-      element = this.element;
-
-  forEach(properties, function(p) {
-    var value = element.get(p.name),
-        isReference = p.isReference,
-        isMany = p.isMany;
-
-    var ns = self.nsPropertyTagName(p);
-
-    if (!isMany) {
-      value = [ value ];
-    }
-
-    if (p.isBody) {
-      body.push(new BodySerializer().build(p, value[0]));
-    } else
-    if (Types.isSimple(p.type)) {
-      forEach(value, function(v) {
-        body.push(new ValueSerializer(ns).build(p, v));
-      });
-    } else
-    if (isReference) {
-      forEach(value, function(v) {
-        body.push(new ReferenceSerializer(self, ns).build(v));
-      });
-    } else {
-      // allow serialization via type
-      // rather than element name
-      var asType = serializeAsType(p),
-          asProperty = serializeAsProperty(p);
-
-      forEach(value, function(v) {
-        var serializer;
-
-        if (asType) {
-          serializer = new TypeSerializer(self, ns);
-        } else
-        if (asProperty) {
-          serializer = new ElementSerializer(self, ns);
-        } else {
-          serializer = new ElementSerializer(self);
-        }
-
-        body.push(serializer.build(v));
-      });
-    }
-  });
-};
-
-ElementSerializer.prototype.getNamespaces = function() {
-  if (!this.parent) {
-    if (!this.namespaces) {
-      this.namespaces = {
-        prefixMap: {},
-        uriMap: {},
-        used: {}
-      };
-    }
-  } else {
-    this.namespaces = this.parent.getNamespaces();
-  }
-
-  return this.namespaces;
-};
-
-ElementSerializer.prototype.logNamespace = function(ns) {
-  var namespaces = this.getNamespaces();
-
-  var existing = namespaces.uriMap[ns.uri];
-
-  if (!existing) {
-    namespaces.uriMap[ns.uri] = ns;
-  }
-
-  namespaces.prefixMap[ns.prefix] = ns.uri;
-
-  return ns;
-};
-
-ElementSerializer.prototype.logNamespaceUsed = function(ns) {
-  var element = this.element,
-      model = element.$model,
-      namespaces = this.getNamespaces();
-
-  // ns may be
-  //
-  //   * prefix only
-  //   * prefix:uri
-
-  var prefix = ns.prefix;
-  var uri = ns.uri || DEFAULT_NS_MAP[prefix] ||
-            namespaces.prefixMap[prefix] || (model ? (model.getPackage(prefix) || {}).uri : null);
-
-  if (!uri) {
-    throw new Error('no namespace uri given for prefix <' + ns.prefix + '>');
-  }
-
-  ns = namespaces.uriMap[uri];
-
-  if (!ns) {
-    ns = this.logNamespace({ prefix: prefix, uri: uri });
-  }
-
-  if (!namespaces.used[ns.uri]) {
-    namespaces.used[ns.uri] = ns;
-  }
-
-  return ns;
-};
-
-ElementSerializer.prototype.parseAttributes = function(properties) {
-  var self = this,
-      element = this.element;
-
-  forEach(properties, function(p) {
-    self.logNamespaceUsed(p.ns);
-
-    var value = element.get(p.name);
-
-    if (p.isReference) {
-      value = value.id;
-    }
-
-    self.addAttribute(self.nsAttributeName(p), value);
-  });
-};
-
-ElementSerializer.prototype.addAttribute = function(name, value) {
-  var attrs = this.attrs;
-
-  if (isString(value)) {
-    value = escapeAttr(value);
-  }
-
-  attrs.push({ name: name, value: value });
-};
-
-ElementSerializer.prototype.serializeAttributes = function(writer) {
-  var attrs = this.attrs,
-      root = !this.parent,
-      namespaces = this.namespaces;
-
-  function collectNsAttrs() {
-    return map(namespaces.used, function(ns) {
-      var name = 'xmlns' + (ns.prefix ? ':' + ns.prefix : '');
-      return { name: name, value: ns.uri };
-    });
-  }
-
-  if (root) {
-    attrs = collectNsAttrs().concat(attrs);
-  }
-
-  forEach(attrs, function(a) {
-    writer
-      .append(' ')
-      .append(nsName(a.name)).append('="').append(a.value).append('"');
-  });
-};
-
-ElementSerializer.prototype.serializeTo = function(writer) {
-  var hasBody = this.body.length,
-      indent = !(this.body.length === 1 && this.body[0] instanceof BodySerializer);
-
-  writer
-    .appendIndent()
-    .append('<' + nsName(this.ns));
-
-  this.serializeAttributes(writer);
-
-  writer.append(hasBody ? '>' : ' />');
-
-  if (hasBody) {
-
-    if (indent) {
-      writer
-        .appendNewLine()
-        .indent();
-    }
-
-    forEach(this.body, function(b) {
-      b.serializeTo(writer);
-    });
-
-    if (indent) {
-      writer
-        .unindent()
-        .appendIndent();
-    }
-
-    writer.append('</' + nsName(this.ns) + '>');
-  }
-
-  writer.appendNewLine();
-};
-
-/**
- * A serializer for types that handles serialization of data types
- */
-function TypeSerializer(parent, ns) {
-  ElementSerializer.call(this, parent, ns);
-}
-
-TypeSerializer.prototype = new ElementSerializer();
-
-TypeSerializer.prototype.build = function(element) {
-  var descriptor = element.$descriptor;
-
-  this.element = element;
-
-  this.typeNs = this.nsTagName(descriptor);
-
-  // add xsi:type attribute to represent the elements
-  // actual type
-
-  var typeNs = this.typeNs,
-      pkg = element.$model.getPackage(typeNs.uri),
-      typePrefix = (pkg.xml && pkg.xml.typePrefix) || '';
-
-  this.addAttribute(this.nsAttributeName(XSI_TYPE),
-    (typeNs.prefix ? typeNs.prefix + ':' : '') +
-    typePrefix + descriptor.ns.localName);
-
-  // do the usual stuff
-  return ElementSerializer.prototype.build.call(this, element);
-};
-
-TypeSerializer.prototype.isLocalNs = function(ns) {
-  return ns.uri === this.typeNs.uri;
-};
-
-function SavingWriter() {
-  this.value = '';
-
-  this.write = function(str) {
-    this.value += str;
-  };
-}
-
-function FormatingWriter(out, format) {
-
-  var indent = [''];
-
-  this.append = function(str) {
-    out.write(str);
-
-    return this;
-  };
-
-  this.appendNewLine = function() {
-    if (format) {
-      out.write('\n');
-    }
-
-    return this;
-  };
-
-  this.appendIndent = function() {
-    if (format) {
-      out.write(indent.join('  '));
-    }
-
-    return this;
-  };
-
-  this.indent = function() {
-    indent.push('');
-    return this;
-  };
-
-  this.unindent = function() {
-    indent.pop();
-    return this;
-  };
-}
-
-/**
- * A writer for meta-model backed document trees
- *
- * @param {Object} options output options to pass into the writer
- */
-function XMLWriter(options) {
-
-  options = assign({ format: false, preamble: true }, options || {});
-
-  function toXML(tree, writer) {
-    var internalWriter = writer || new SavingWriter();
-    var formatingWriter = new FormatingWriter(internalWriter, options.format);
-
-    if (options.preamble) {
-      formatingWriter.append(XML_PREAMBLE);
-    }
-
-    new ElementSerializer().build(tree).serializeTo(formatingWriter);
-
-    if (!writer) {
-      return internalWriter.value;
-    }
-  }
-
-  return {
-    toXML: toXML
-  };
-}
-
-module.exports = XMLWriter;
-
-},{"./common":591,"lodash/collection/filter":614,"lodash/collection/forEach":616,"lodash/collection/map":618,"lodash/lang/isString":701,"lodash/object/assign":703,"moddle/lib/ns":601,"moddle/lib/types":604}],594:[function(require,module,exports){
+},{"dup":59}],620:[function(require,module,exports){
+arguments[4][309][0].apply(exports,arguments)
+},{"./common":619,"dup":309,"lodash/collection/find":645,"lodash/collection/forEach":646,"lodash/collection/reduce":649,"lodash/function/defer":653,"lodash/object/assign":757,"moddle":624,"moddle/lib/ns":629,"moddle/lib/types":632,"sax":622,"tiny-stack":623}],621:[function(require,module,exports){
+arguments[4][310][0].apply(exports,arguments)
+},{"./common":619,"dup":310,"lodash/collection/filter":644,"lodash/collection/forEach":646,"lodash/collection/map":648,"lodash/lang/isString":755,"lodash/object/assign":757,"moddle/lib/ns":629,"moddle/lib/types":632}],622:[function(require,module,exports){
 arguments[4][62][0].apply(exports,arguments)
-},{"buffer":782,"dup":62,"stream":806,"string_decoder":807}],595:[function(require,module,exports){
+},{"buffer":842,"dup":62,"stream":866,"string_decoder":867}],623:[function(require,module,exports){
 arguments[4][63][0].apply(exports,arguments)
-},{"dup":63}],596:[function(require,module,exports){
+},{"dup":63}],624:[function(require,module,exports){
 arguments[4][64][0].apply(exports,arguments)
-},{"./lib/moddle":600,"dup":64}],597:[function(require,module,exports){
+},{"./lib/moddle":628,"dup":64}],625:[function(require,module,exports){
 arguments[4][65][0].apply(exports,arguments)
-},{"dup":65}],598:[function(require,module,exports){
-'use strict';
-
-var pick = require('lodash/object/pick'),
-    assign = require('lodash/object/assign'),
-    forEach = require('lodash/collection/forEach');
-
-var parseNameNs = require('./ns').parseName;
-
-
-function DescriptorBuilder(nameNs) {
-  this.ns = nameNs;
-  this.name = nameNs.name;
-  this.allTypes = [];
-  this.properties = [];
-  this.propertiesByName = {};
-}
-
-module.exports = DescriptorBuilder;
-
-
-DescriptorBuilder.prototype.build = function() {
-  return pick(this, [ 'ns', 'name', 'allTypes', 'properties', 'propertiesByName', 'bodyProperty' ]);
-};
-
-/**
- * Add property at given index.
- *
- * @param {Object} p
- * @param {Number} [idx]
- * @param {Boolean} [validate=true]
- */
-DescriptorBuilder.prototype.addProperty = function(p, idx, validate) {
-
-  if (typeof idx === 'boolean') {
-    validate = idx;
-    idx = undefined;
-  }
-
-  this.addNamedProperty(p, validate !== false);
-
-  var properties = this.properties;
-
-  if (idx !== undefined) {
-    properties.splice(idx, 0, p);
-  } else {
-    properties.push(p);
-  }
-};
-
-
-DescriptorBuilder.prototype.replaceProperty = function(oldProperty, newProperty, replace) {
-  var oldNameNs = oldProperty.ns;
-
-  var props = this.properties,
-      propertiesByName = this.propertiesByName,
-      rename = oldProperty.name !== newProperty.name;
-
-  if (oldProperty.isBody) {
-
-    if (!newProperty.isBody) {
-      throw new Error(
-        'property <' + newProperty.ns.name + '> must be body property ' +
-        'to refine <' + oldProperty.ns.name + '>');
-    }
-
-    // TODO: Check compatibility
-    this.setBodyProperty(newProperty, false);
-  }
-
-  // validate existence and get location of old property
-  var idx = props.indexOf(oldProperty);
-  if (idx === -1) {
-    throw new Error('property <' + oldNameNs.name + '> not found in property list');
-  }
-
-  // remove old property
-  props.splice(idx, 1);
-
-  // replacing the named property is intentional
-  //
-  //  * validate only if this is a "rename" operation
-  //  * add at specific index unless we "replace"
-  //
-  this.addProperty(newProperty, replace ? undefined : idx, rename);
-
-  // make new property available under old name
-  propertiesByName[oldNameNs.name] = propertiesByName[oldNameNs.localName] = newProperty;
-};
-
-
-DescriptorBuilder.prototype.redefineProperty = function(p, targetPropertyName, replace) {
-
-  var nsPrefix = p.ns.prefix;
-  var parts = targetPropertyName.split('#');
-
-  var name = parseNameNs(parts[0], nsPrefix);
-  var attrName = parseNameNs(parts[1], name.prefix).name;
-
-  var redefinedProperty = this.propertiesByName[attrName];
-  if (!redefinedProperty) {
-    throw new Error('refined property <' + attrName + '> not found');
-  } else {
-    this.replaceProperty(redefinedProperty, p, replace);
-  }
-
-  delete p.redefines;
-};
-
-DescriptorBuilder.prototype.addNamedProperty = function(p, validate) {
-  var ns = p.ns,
-      propsByName = this.propertiesByName;
-
-  if (validate) {
-    this.assertNotDefined(p, ns.name);
-    this.assertNotDefined(p, ns.localName);
-  }
-
-  propsByName[ns.name] = propsByName[ns.localName] = p;
-};
-
-DescriptorBuilder.prototype.removeNamedProperty = function(p) {
-  var ns = p.ns,
-      propsByName = this.propertiesByName;
-
-  delete propsByName[ns.name];
-  delete propsByName[ns.localName];
-};
-
-DescriptorBuilder.prototype.setBodyProperty = function(p, validate) {
-
-  if (validate && this.bodyProperty) {
-    throw new Error(
-      'body property defined multiple times ' +
-      '(<' + this.bodyProperty.ns.name + '>, <' + p.ns.name + '>)');
-  }
-
-  this.bodyProperty = p;
-};
-
-DescriptorBuilder.prototype.addIdProperty = function(name) {
-  var nameNs = parseNameNs(name, this.ns.prefix);
-
-  var p = {
-    name: nameNs.localName,
-    type: 'String',
-    isAttr: true,
-    ns: nameNs
-  };
-
-  // ensure that id is always the first attribute (if present)
-  this.addProperty(p, 0);
-};
-
-DescriptorBuilder.prototype.assertNotDefined = function(p, name) {
-  var propertyName = p.name,
-      definedProperty = this.propertiesByName[propertyName];
-
-  if (definedProperty) {
-    throw new Error(
-      'property <' + propertyName + '> already defined; ' +
-      'override of <' + definedProperty.definedBy.ns.name + '#' + definedProperty.ns.name + '> by ' +
-      '<' + p.definedBy.ns.name + '#' + p.ns.name + '> not allowed without redefines');
-  }
-};
-
-DescriptorBuilder.prototype.hasProperty = function(name) {
-  return this.propertiesByName[name];
-};
-
-DescriptorBuilder.prototype.addTrait = function(t, inherited) {
-
-  var allTypes = this.allTypes;
-
-  if (allTypes.indexOf(t) !== -1) {
-    return;
-  }
-
-  forEach(t.properties, function(p) {
-
-    // clone property to allow extensions
-    p = assign({}, p, {
-      name: p.ns.localName,
-      inherited: inherited
-    });
-
-    Object.defineProperty(p, 'definedBy', {
-      value: t
-    });
-
-    var replaces = p.replaces,
-        redefines = p.redefines;
-
-    // add replace/redefine support
-    if (replaces || redefines) {
-      this.redefineProperty(p, replaces || redefines, replaces);
-    } else {
-      if (p.isBody) {
-        this.setBodyProperty(p);
-      }
-      this.addProperty(p);
-    }
-  }, this);
-
-  allTypes.push(t);
-};
-
-},{"./ns":601,"lodash/collection/forEach":616,"lodash/object/assign":703,"lodash/object/pick":708}],599:[function(require,module,exports){
+},{"dup":65}],626:[function(require,module,exports){
+arguments[4][66][0].apply(exports,arguments)
+},{"./ns":629,"dup":66,"lodash/collection/forEach":646,"lodash/object/assign":757,"lodash/object/pick":762}],627:[function(require,module,exports){
 arguments[4][67][0].apply(exports,arguments)
-},{"./base":597,"dup":67,"lodash/collection/forEach":616}],600:[function(require,module,exports){
-'use strict';
-
-var isString = require('lodash/lang/isString'),
-    isObject = require('lodash/lang/isObject'),
-    forEach = require('lodash/collection/forEach'),
-    find = require('lodash/collection/find');
-
-
-var Factory = require('./factory'),
-    Registry = require('./registry'),
-    Properties = require('./properties');
-
-var parseNameNs = require('./ns').parseName;
-
-
-//// Moddle implementation /////////////////////////////////////////////////
-
-/**
- * @class Moddle
- *
- * A model that can be used to create elements of a specific type.
- *
- * @example
- *
- * var Moddle = require('moddle');
- *
- * var pkg = {
- *   name: 'mypackage',
- *   prefix: 'my',
- *   types: [
- *     { name: 'Root' }
- *   ]
- * };
- *
- * var moddle = new Moddle([pkg]);
- *
- * @param {Array<Package>} packages  the packages to contain
- * @param {Object} options  additional options to pass to the model
- */
-function Moddle(packages, options) {
-
-  options = options || {};
-
-  this.properties = new Properties(this);
-
-  this.factory = new Factory(this, this.properties);
-  this.registry = new Registry(packages, this.properties, options);
-
-  this.typeCache = {};
-}
-
-module.exports = Moddle;
-
-
-/**
- * Create an instance of the specified type.
- *
- * @method Moddle#create
- *
- * @example
- *
- * var foo = moddle.create('my:Foo');
- * var bar = moddle.create('my:Bar', { id: 'BAR_1' });
- *
- * @param  {String|Object} descriptor the type descriptor or name know to the model
- * @param  {Object} attrs   a number of attributes to initialize the model instance with
- * @return {Object}         model instance
- */
-Moddle.prototype.create = function(descriptor, attrs) {
-  var Type = this.getType(descriptor);
-
-  if (!Type) {
-    throw new Error('unknown type <' + descriptor + '>');
-  }
-
-  return new Type(attrs);
-};
-
-
-/**
- * Returns the type representing a given descriptor
- *
- * @method Moddle#getType
- *
- * @example
- *
- * var Foo = moddle.getType('my:Foo');
- * var foo = new Foo({ 'id' : 'FOO_1' });
- *
- * @param  {String|Object} descriptor the type descriptor or name know to the model
- * @return {Object}         the type representing the descriptor
- */
-Moddle.prototype.getType = function(descriptor) {
-
-  var cache = this.typeCache;
-
-  var name = isString(descriptor) ? descriptor : descriptor.ns.name;
-
-  var type = cache[name];
-
-  if (!type) {
-    descriptor = this.registry.getEffectiveDescriptor(name);
-    type = cache[name] = this.factory.createType(descriptor);
-  }
-
-  return type;
-};
-
-
-/**
- * Creates an any-element type to be used within model instances.
- *
- * This can be used to create custom elements that lie outside the meta-model.
- * The created element contains all the meta-data required to serialize it
- * as part of meta-model elements.
- *
- * @method Moddle#createAny
- *
- * @example
- *
- * var foo = moddle.createAny('vendor:Foo', 'http://vendor', {
- *   value: 'bar'
- * });
- *
- * var container = moddle.create('my:Container', 'http://my', {
- *   any: [ foo ]
- * });
- *
- * // go ahead and serialize the stuff
- *
- *
- * @param  {String} name  the name of the element
- * @param  {String} nsUri the namespace uri of the element
- * @param  {Object} [properties] a map of properties to initialize the instance with
- * @return {Object} the any type instance
- */
-Moddle.prototype.createAny = function(name, nsUri, properties) {
-
-  var nameNs = parseNameNs(name);
-
-  var element = {
-    $type: name
-  };
-
-  var descriptor = {
-    name: name,
-    isGeneric: true,
-    ns: {
-      prefix: nameNs.prefix,
-      localName: nameNs.localName,
-      uri: nsUri
-    }
-  };
-
-  this.properties.defineDescriptor(element, descriptor);
-  this.properties.defineModel(element, this);
-  this.properties.define(element, '$parent', { enumerable: false, writable: true });
-
-  forEach(properties, function(a, key) {
-    if (isObject(a) && a.value !== undefined) {
-      element[a.name] = a.value;
-    } else {
-      element[key] = a;
-    }
-  });
-
-  return element;
-};
-
-/**
- * Returns a registered package by uri or prefix
- *
- * @return {Object} the package
- */
-Moddle.prototype.getPackage = function(uriOrPrefix) {
-  return this.registry.getPackage(uriOrPrefix);
-};
-
-/**
- * Returns a snapshot of all known packages
- *
- * @return {Object} the package
- */
-Moddle.prototype.getPackages = function() {
-  return this.registry.getPackages();
-};
-
-/**
- * Returns the descriptor for an element
- */
-Moddle.prototype.getElementDescriptor = function(element) {
-  return element.$descriptor;
-};
-
-/**
- * Returns true if the given descriptor or instance
- * represents the given type.
- *
- * May be applied to this, if element is omitted.
- */
-Moddle.prototype.hasType = function(element, type) {
-  if (type === undefined) {
-    type = element;
-    element = this;
-  }
-
-  var descriptor = element.$model.getElementDescriptor(element);
-
-  return !!find(descriptor.allTypes, function(t) {
-    return t.name === type;
-  });
-};
-
-
-/**
- * Returns the descriptor of an elements named property
- */
-Moddle.prototype.getPropertyDescriptor = function(element, property) {
-  return this.getElementDescriptor(element).propertiesByName[property];
-};
-
-},{"./factory":599,"./ns":601,"./properties":602,"./registry":603,"lodash/collection/find":615,"lodash/collection/forEach":616,"lodash/lang/isObject":700,"lodash/lang/isString":701}],601:[function(require,module,exports){
+},{"./base":625,"dup":67,"lodash/collection/forEach":646}],628:[function(require,module,exports){
+arguments[4][68][0].apply(exports,arguments)
+},{"./factory":627,"./ns":629,"./properties":630,"./registry":631,"dup":68,"lodash/collection/find":645,"lodash/collection/forEach":646,"lodash/lang/isObject":754,"lodash/lang/isString":755}],629:[function(require,module,exports){
 arguments[4][69][0].apply(exports,arguments)
-},{"dup":69}],602:[function(require,module,exports){
+},{"dup":69}],630:[function(require,module,exports){
 arguments[4][70][0].apply(exports,arguments)
-},{"dup":70}],603:[function(require,module,exports){
-'use strict';
-
-var assign = require('lodash/object/assign'),
-    forEach = require('lodash/collection/forEach');
-
-var Types = require('./types'),
-    DescriptorBuilder = require('./descriptor-builder');
-
-var parseNameNs = require('./ns').parseName,
-    isBuiltInType = Types.isBuiltIn;
-
-
-function Registry(packages, properties, options) {
-  this.options = assign({ generateId: 'id' }, options || {});
-
-  this.packageMap = {};
-  this.typeMap = {};
-
-  this.packages = [];
-
-  this.properties = properties;
-
-  forEach(packages, this.registerPackage, this);
+},{"dup":70}],631:[function(require,module,exports){
+arguments[4][71][0].apply(exports,arguments)
+},{"./descriptor-builder":626,"./ns":629,"./types":632,"dup":71,"lodash/collection/forEach":646,"lodash/object/assign":757}],632:[function(require,module,exports){
+arguments[4][72][0].apply(exports,arguments)
+},{"dup":72}],633:[function(require,module,exports){
+module.exports={
+  "name": "Camunda",
+  "uri": "http://camunda.org/schema/1.0/dmn",
+  "prefix": "camunda",
+  "xml": {
+    "tagAlias": "lowerCase"
+  },
+  "types": [
+    {
+      "name": "InputVariable",
+      "extends": [
+        "dmn:InputClause"
+      ],
+      "properties": [
+        {
+          "name": "inputVariable",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    }
+  ]
 }
 
-module.exports = Registry;
-
-
-Registry.prototype.getPackage = function(uriOrPrefix) {
-  return this.packageMap[uriOrPrefix];
-};
-
-Registry.prototype.getPackages = function() {
-  return this.packages;
-};
-
-
-Registry.prototype.registerPackage = function(pkg) {
-
-  // copy package
-  pkg = assign({}, pkg);
-
-  // register types
-  forEach(pkg.types, function(descriptor) {
-    this.registerType(descriptor, pkg);
-  }, this);
-
-  this.packageMap[pkg.uri] = this.packageMap[pkg.prefix] = pkg;
-  this.packages.push(pkg);
-};
-
-
-/**
- * Register a type from a specific package with us
- */
-Registry.prototype.registerType = function(type, pkg) {
-
-  type = assign({}, type, {
-    superClass: (type.superClass || []).slice(),
-    extends: (type.extends || []).slice(),
-    properties: (type.properties || []).slice()
-  });
-
-  var ns = parseNameNs(type.name, pkg.prefix),
-      name = ns.name,
-      propertiesByName = {};
-
-  // parse properties
-  forEach(type.properties, function(p) {
-
-    // namespace property names
-    var propertyNs = parseNameNs(p.name, ns.prefix),
-        propertyName = propertyNs.name;
-
-    // namespace property types
-    if (!isBuiltInType(p.type)) {
-      p.type = parseNameNs(p.type, propertyNs.prefix).name;
-    }
-
-    assign(p, {
-      ns: propertyNs,
-      name: propertyName
-    });
-
-    propertiesByName[propertyName] = p;
-  });
-
-  // update ns + name
-  assign(type, {
-    ns: ns,
-    name: name,
-    propertiesByName: propertiesByName
-  });
-
-  forEach(type.extends, function(extendsName) {
-    var extended = this.typeMap[extendsName];
-
-    extended.traits = extended.traits || [];
-    extended.traits.push(name);
-  }, this);
-
-  // link to package
-  this.definePackage(type, pkg);
-
-  // register
-  this.typeMap[name] = type;
-};
-
-
-/**
- * Traverse the type hierarchy from bottom to top,
- * calling iterator with (type, inherited) for all elements in
- * the inheritance chain.
- *
- * @param {Object} nsName
- * @param {Function} iterator
- * @param {Boolean} [trait=false]
- */
-Registry.prototype.mapTypes = function(nsName, iterator, trait) {
-
-  var type = isBuiltInType(nsName.name) ? { name: nsName.name } : this.typeMap[nsName.name];
-
-  var self = this;
-
-  /**
-   * Traverse the selected trait.
-   *
-   * @param {String} cls
-   */
-  function traverseTrait(cls) {
-    return traverseSuper(cls, true);
-  }
-
-  /**
-   * Traverse the selected super type or trait
-   *
-   * @param {String} cls
-   * @param {Boolean} [trait=false]
-   */
-  function traverseSuper(cls, trait) {
-    var parentNs = parseNameNs(cls, isBuiltInType(cls) ? '' : nsName.prefix);
-    self.mapTypes(parentNs, iterator, trait);
-  }
-
-  if (!type) {
-    throw new Error('unknown type <' + nsName.name + '>');
-  }
-
-  forEach(type.superClass, trait ? traverseTrait : traverseSuper);
-
-  // call iterator with (type, inherited=!trait)
-  iterator(type, !trait);
-
-  forEach(type.traits, traverseTrait);
-};
-
-
-/**
- * Returns the effective descriptor for a type.
- *
- * @param  {String} type the namespaced name (ns:localName) of the type
- *
- * @return {Descriptor} the resulting effective descriptor
- */
-Registry.prototype.getEffectiveDescriptor = function(name) {
-
-  var nsName = parseNameNs(name);
-
-  var builder = new DescriptorBuilder(nsName);
-
-  this.mapTypes(nsName, function(type, inherited) {
-    builder.addTrait(type, inherited);
-  });
-
-  // check we have an id assigned
-  var id = this.options.generateId;
-  if (id && !builder.hasProperty(id)) {
-    builder.addIdProperty(id);
-  }
-
-  var descriptor = builder.build();
-
-  // define package link
-  this.definePackage(descriptor, descriptor.allTypes[descriptor.allTypes.length - 1].$pkg);
-
-  return descriptor;
-};
-
-
-Registry.prototype.definePackage = function(target, pkg) {
-  this.properties.define(target, '$pkg', { value: pkg });
-};
-},{"./descriptor-builder":598,"./ns":601,"./types":604,"lodash/collection/forEach":616,"lodash/object/assign":703}],604:[function(require,module,exports){
-arguments[4][72][0].apply(exports,arguments)
-},{"dup":72}],605:[function(require,module,exports){
+},{}],634:[function(require,module,exports){
 module.exports={
   "name": "DMN",
-
-  "uri": "http://www.omg.org/spec/DMN/20151101/dmn11.xsd",
+  "uri": "http://www.omg.org/spec/DMN/20151101/dmn.xsd",
   "xml": {
-      "tagAlias": "lowerCase"
+    "tagAlias": "lowerCase"
   },
   "prefix": "dmn",
   "types": [
@@ -76424,7 +76827,7 @@ module.exports={
       "name": "DMNElement",
       "properties": [
         { "name": "description", "type": "String" },
-        { "name": "id", "type": "String", "isAttr": true },
+        { "name": "id", "type": "String", "isAttr": true, "isId": true },
         { "name": "label", "type": "String", "isAttr": true }
       ]
     },
@@ -76600,7 +77003,7 @@ module.exports={
   ]
 }
 
-},{}],606:[function(require,module,exports){
+},{}],635:[function(require,module,exports){
 'use strict';
 
 var hat = require('hat');
@@ -76686,7 +77089,20 @@ Ids.prototype.unclaim = function(id) {
   delete this._seed.hats[id];
 };
 
-},{"hat":607}],607:[function(require,module,exports){
+
+/**
+ * Clear all claimed ids.
+ */
+Ids.prototype.clear = function() {
+
+  var hats = this._seed.hats,
+      id;
+
+  for (id in hats) {
+    this.unclaim(id);
+  }
+};
+},{"hat":636}],636:[function(require,module,exports){
 var hat = module.exports = function (bits, base) {
     if (!base) base = 16;
     if (bits === undefined) bits = 128;
@@ -76750,11 +77166,11 @@ hat.rack = function (bits, base, expandBy) {
     return fn;
 };
 
-},{}],608:[function(require,module,exports){
+},{}],637:[function(require,module,exports){
 arguments[4][126][0].apply(exports,arguments)
-},{"dup":126}],609:[function(require,module,exports){
+},{"dup":126}],638:[function(require,module,exports){
 arguments[4][127][0].apply(exports,arguments)
-},{"dup":127}],610:[function(require,module,exports){
+},{"dup":127}],639:[function(require,module,exports){
 var baseFlatten = require('../internal/baseFlatten'),
     baseUniq = require('../internal/baseUniq'),
     restParam = require('../function/restParam');
@@ -76780,7 +77196,7 @@ var union = restParam(function(arrays) {
 
 module.exports = union;
 
-},{"../function/restParam":623,"../internal/baseFlatten":645,"../internal/baseUniq":664}],611:[function(require,module,exports){
+},{"../function/restParam":654,"../internal/baseFlatten":680,"../internal/baseUniq":701}],640:[function(require,module,exports){
 var baseCallback = require('../internal/baseCallback'),
     baseUniq = require('../internal/baseUniq'),
     isIterateeCall = require('../internal/isIterateeCall'),
@@ -76853,18 +77269,20 @@ function uniq(array, isSorted, iteratee, thisArg) {
 
 module.exports = uniq;
 
-},{"../internal/baseCallback":635,"../internal/baseUniq":664,"../internal/isIterateeCall":684,"../internal/sortedUniq":692}],612:[function(require,module,exports){
+},{"../internal/baseCallback":669,"../internal/baseUniq":701,"../internal/isIterateeCall":730,"../internal/sortedUniq":745}],641:[function(require,module,exports){
 module.exports = require('./uniq');
 
-},{"./uniq":611}],613:[function(require,module,exports){
+},{"./uniq":640}],642:[function(require,module,exports){
+arguments[4][128][0].apply(exports,arguments)
+},{"../internal/LazyWrapper":655,"../internal/LodashWrapper":656,"../internal/baseLodash":691,"../internal/isObjectLike":734,"../internal/wrapperClone":748,"../lang/isArray":750,"dup":128}],643:[function(require,module,exports){
 arguments[4][129][0].apply(exports,arguments)
-},{"../internal/arrayEvery":627,"../internal/baseCallback":635,"../internal/baseEvery":641,"../internal/isIterateeCall":684,"../lang/isArray":696,"dup":129}],614:[function(require,module,exports){
+},{"../internal/arrayEvery":661,"../internal/baseCallback":669,"../internal/baseEvery":676,"../internal/isIterateeCall":730,"../lang/isArray":750,"dup":129}],644:[function(require,module,exports){
 arguments[4][130][0].apply(exports,arguments)
-},{"../internal/arrayFilter":628,"../internal/baseCallback":635,"../internal/baseFilter":642,"../lang/isArray":696,"dup":130}],615:[function(require,module,exports){
+},{"../internal/arrayFilter":662,"../internal/baseCallback":669,"../internal/baseFilter":677,"../lang/isArray":750,"dup":130}],645:[function(require,module,exports){
 arguments[4][131][0].apply(exports,arguments)
-},{"../internal/baseEach":639,"../internal/createFind":672,"dup":131}],616:[function(require,module,exports){
+},{"../internal/baseEach":674,"../internal/createFind":713,"dup":131}],646:[function(require,module,exports){
 arguments[4][132][0].apply(exports,arguments)
-},{"../internal/arrayEach":625,"../internal/baseEach":639,"../internal/createForEach":673,"dup":132}],617:[function(require,module,exports){
+},{"../internal/arrayEach":659,"../internal/baseEach":674,"../internal/createForEach":714,"dup":132}],647:[function(require,module,exports){
 var arrayEachRight = require('../internal/arrayEachRight'),
     baseEachRight = require('../internal/baseEachRight'),
     createForEach = require('../internal/createForEach');
@@ -76892,23 +77310,31 @@ var forEachRight = createForEach(arrayEachRight, baseEachRight);
 
 module.exports = forEachRight;
 
-},{"../internal/arrayEachRight":626,"../internal/baseEachRight":640,"../internal/createForEach":673}],618:[function(require,module,exports){
+},{"../internal/arrayEachRight":660,"../internal/baseEachRight":675,"../internal/createForEach":714}],648:[function(require,module,exports){
 arguments[4][135][0].apply(exports,arguments)
-},{"../internal/arrayMap":629,"../internal/baseCallback":635,"../internal/baseMap":656,"../lang/isArray":696,"dup":135}],619:[function(require,module,exports){
+},{"../internal/arrayMap":663,"../internal/baseCallback":669,"../internal/baseMap":692,"../lang/isArray":750,"dup":135}],649:[function(require,module,exports){
 arguments[4][136][0].apply(exports,arguments)
-},{"../internal/arrayReduce":631,"../internal/baseEach":639,"../internal/createReduce":674,"dup":136}],620:[function(require,module,exports){
+},{"../internal/arrayReduce":665,"../internal/baseEach":674,"../internal/createReduce":717,"dup":136}],650:[function(require,module,exports){
 arguments[4][138][0].apply(exports,arguments)
-},{"../internal/getNative":680,"dup":138}],621:[function(require,module,exports){
+},{"../internal/getNative":726,"dup":138}],651:[function(require,module,exports){
+arguments[4][139][0].apply(exports,arguments)
+},{"../internal/createWrapper":718,"../internal/replaceHolders":742,"./restParam":654,"dup":139}],652:[function(require,module,exports){
 arguments[4][140][0].apply(exports,arguments)
-},{"../date/now":620,"../lang/isObject":700,"dup":140}],622:[function(require,module,exports){
+},{"../date/now":650,"../lang/isObject":754,"dup":140}],653:[function(require,module,exports){
 arguments[4][141][0].apply(exports,arguments)
-},{"../internal/baseDelay":637,"./restParam":623,"dup":141}],623:[function(require,module,exports){
+},{"../internal/baseDelay":672,"./restParam":654,"dup":141}],654:[function(require,module,exports){
 arguments[4][142][0].apply(exports,arguments)
-},{"dup":142}],624:[function(require,module,exports){
+},{"dup":142}],655:[function(require,module,exports){
+arguments[4][143][0].apply(exports,arguments)
+},{"./baseCreate":671,"./baseLodash":691,"dup":143}],656:[function(require,module,exports){
+arguments[4][144][0].apply(exports,arguments)
+},{"./baseCreate":671,"./baseLodash":691,"dup":144}],657:[function(require,module,exports){
 arguments[4][145][0].apply(exports,arguments)
-},{"./cachePush":667,"./getNative":680,"dup":145}],625:[function(require,module,exports){
+},{"./cachePush":704,"./getNative":726,"dup":145}],658:[function(require,module,exports){
+arguments[4][146][0].apply(exports,arguments)
+},{"dup":146}],659:[function(require,module,exports){
 arguments[4][147][0].apply(exports,arguments)
-},{"dup":147}],626:[function(require,module,exports){
+},{"dup":147}],660:[function(require,module,exports){
 /**
  * A specialized version of `_.forEachRight` for arrays without support for
  * callback shorthands and `this` binding.
@@ -76931,33 +77357,35 @@ function arrayEachRight(array, iteratee) {
 
 module.exports = arrayEachRight;
 
-},{}],627:[function(require,module,exports){
+},{}],661:[function(require,module,exports){
 arguments[4][148][0].apply(exports,arguments)
-},{"dup":148}],628:[function(require,module,exports){
+},{"dup":148}],662:[function(require,module,exports){
 arguments[4][149][0].apply(exports,arguments)
-},{"dup":149}],629:[function(require,module,exports){
+},{"dup":149}],663:[function(require,module,exports){
 arguments[4][150][0].apply(exports,arguments)
-},{"dup":150}],630:[function(require,module,exports){
+},{"dup":150}],664:[function(require,module,exports){
 arguments[4][151][0].apply(exports,arguments)
-},{"dup":151}],631:[function(require,module,exports){
+},{"dup":151}],665:[function(require,module,exports){
 arguments[4][152][0].apply(exports,arguments)
-},{"dup":152}],632:[function(require,module,exports){
+},{"dup":152}],666:[function(require,module,exports){
 arguments[4][153][0].apply(exports,arguments)
-},{"dup":153}],633:[function(require,module,exports){
+},{"dup":153}],667:[function(require,module,exports){
 arguments[4][154][0].apply(exports,arguments)
-},{"../object/keys":704,"dup":154}],634:[function(require,module,exports){
+},{"../object/keys":758,"dup":154}],668:[function(require,module,exports){
 arguments[4][155][0].apply(exports,arguments)
-},{"../object/keys":704,"./baseCopy":636,"dup":155}],635:[function(require,module,exports){
+},{"../object/keys":758,"./baseCopy":670,"dup":155}],669:[function(require,module,exports){
 arguments[4][156][0].apply(exports,arguments)
-},{"../utility/identity":709,"../utility/property":710,"./baseMatches":657,"./baseMatchesProperty":658,"./bindCallback":665,"dup":156}],636:[function(require,module,exports){
+},{"../utility/identity":763,"../utility/property":765,"./baseMatches":693,"./baseMatchesProperty":694,"./bindCallback":702,"dup":156}],670:[function(require,module,exports){
 arguments[4][157][0].apply(exports,arguments)
-},{"dup":157}],637:[function(require,module,exports){
+},{"dup":157}],671:[function(require,module,exports){
+arguments[4][158][0].apply(exports,arguments)
+},{"../lang/isObject":754,"dup":158}],672:[function(require,module,exports){
 arguments[4][159][0].apply(exports,arguments)
-},{"dup":159}],638:[function(require,module,exports){
+},{"dup":159}],673:[function(require,module,exports){
 arguments[4][160][0].apply(exports,arguments)
-},{"./baseIndexOf":652,"./cacheIndexOf":666,"./createCache":671,"dup":160}],639:[function(require,module,exports){
+},{"./baseIndexOf":687,"./cacheIndexOf":703,"./createCache":711,"dup":160}],674:[function(require,module,exports){
 arguments[4][161][0].apply(exports,arguments)
-},{"./baseForOwn":648,"./createBaseEach":669,"dup":161}],640:[function(require,module,exports){
+},{"./baseForOwn":683,"./createBaseEach":708,"dup":161}],675:[function(require,module,exports){
 var baseForOwnRight = require('./baseForOwnRight'),
     createBaseEach = require('./createBaseEach');
 
@@ -76974,23 +77402,23 @@ var baseEachRight = createBaseEach(baseForOwnRight, true);
 
 module.exports = baseEachRight;
 
-},{"./baseForOwnRight":649,"./createBaseEach":669}],641:[function(require,module,exports){
+},{"./baseForOwnRight":684,"./createBaseEach":708}],676:[function(require,module,exports){
 arguments[4][162][0].apply(exports,arguments)
-},{"./baseEach":639,"dup":162}],642:[function(require,module,exports){
+},{"./baseEach":674,"dup":162}],677:[function(require,module,exports){
 arguments[4][163][0].apply(exports,arguments)
-},{"./baseEach":639,"dup":163}],643:[function(require,module,exports){
+},{"./baseEach":674,"dup":163}],678:[function(require,module,exports){
 arguments[4][164][0].apply(exports,arguments)
-},{"dup":164}],644:[function(require,module,exports){
+},{"dup":164}],679:[function(require,module,exports){
 arguments[4][165][0].apply(exports,arguments)
-},{"dup":165}],645:[function(require,module,exports){
+},{"dup":165}],680:[function(require,module,exports){
 arguments[4][166][0].apply(exports,arguments)
-},{"../lang/isArguments":695,"../lang/isArray":696,"./arrayPush":630,"./isArrayLike":682,"./isObjectLike":687,"dup":166}],646:[function(require,module,exports){
+},{"../lang/isArguments":749,"../lang/isArray":750,"./arrayPush":664,"./isArrayLike":728,"./isObjectLike":734,"dup":166}],681:[function(require,module,exports){
 arguments[4][167][0].apply(exports,arguments)
-},{"./createBaseFor":670,"dup":167}],647:[function(require,module,exports){
+},{"./createBaseFor":709,"dup":167}],682:[function(require,module,exports){
 arguments[4][168][0].apply(exports,arguments)
-},{"../object/keysIn":705,"./baseFor":646,"dup":168}],648:[function(require,module,exports){
+},{"../object/keysIn":759,"./baseFor":681,"dup":168}],683:[function(require,module,exports){
 arguments[4][169][0].apply(exports,arguments)
-},{"../object/keys":704,"./baseFor":646,"dup":169}],649:[function(require,module,exports){
+},{"../object/keys":758,"./baseFor":681,"dup":169}],684:[function(require,module,exports){
 var baseForRight = require('./baseForRight'),
     keys = require('../object/keys');
 
@@ -77009,7 +77437,7 @@ function baseForOwnRight(object, iteratee) {
 
 module.exports = baseForOwnRight;
 
-},{"../object/keys":704,"./baseForRight":650}],650:[function(require,module,exports){
+},{"../object/keys":758,"./baseForRight":685}],685:[function(require,module,exports){
 var createBaseFor = require('./createBaseFor');
 
 /**
@@ -77026,33 +77454,37 @@ var baseForRight = createBaseFor(true);
 
 module.exports = baseForRight;
 
-},{"./createBaseFor":670}],651:[function(require,module,exports){
+},{"./createBaseFor":709}],686:[function(require,module,exports){
 arguments[4][170][0].apply(exports,arguments)
-},{"./toObject":693,"dup":170}],652:[function(require,module,exports){
+},{"./toObject":746,"dup":170}],687:[function(require,module,exports){
 arguments[4][171][0].apply(exports,arguments)
-},{"./indexOfNaN":681,"dup":171}],653:[function(require,module,exports){
+},{"./indexOfNaN":727,"dup":171}],688:[function(require,module,exports){
 arguments[4][172][0].apply(exports,arguments)
-},{"../lang/isObject":700,"./baseIsEqualDeep":654,"./isObjectLike":687,"dup":172}],654:[function(require,module,exports){
+},{"../lang/isObject":754,"./baseIsEqualDeep":689,"./isObjectLike":734,"dup":172}],689:[function(require,module,exports){
 arguments[4][173][0].apply(exports,arguments)
-},{"../lang/isArray":696,"../lang/isTypedArray":702,"./equalArrays":675,"./equalByTag":676,"./equalObjects":677,"dup":173}],655:[function(require,module,exports){
+},{"../lang/isArray":750,"../lang/isTypedArray":756,"./equalArrays":719,"./equalByTag":720,"./equalObjects":721,"dup":173}],690:[function(require,module,exports){
 arguments[4][174][0].apply(exports,arguments)
-},{"./baseIsEqual":653,"./toObject":693,"dup":174}],656:[function(require,module,exports){
+},{"./baseIsEqual":688,"./toObject":746,"dup":174}],691:[function(require,module,exports){
+arguments[4][175][0].apply(exports,arguments)
+},{"dup":175}],692:[function(require,module,exports){
 arguments[4][176][0].apply(exports,arguments)
-},{"./baseEach":639,"./isArrayLike":682,"dup":176}],657:[function(require,module,exports){
+},{"./baseEach":674,"./isArrayLike":728,"dup":176}],693:[function(require,module,exports){
 arguments[4][177][0].apply(exports,arguments)
-},{"./baseIsMatch":655,"./getMatchData":679,"./toObject":693,"dup":177}],658:[function(require,module,exports){
+},{"./baseIsMatch":690,"./getMatchData":725,"./toObject":746,"dup":177}],694:[function(require,module,exports){
 arguments[4][178][0].apply(exports,arguments)
-},{"../array/last":609,"../lang/isArray":696,"./baseGet":651,"./baseIsEqual":653,"./baseSlice":662,"./isKey":685,"./isStrictComparable":688,"./toObject":693,"./toPath":694,"dup":178}],659:[function(require,module,exports){
+},{"../array/last":638,"../lang/isArray":750,"./baseGet":686,"./baseIsEqual":688,"./baseSlice":699,"./isKey":731,"./isStrictComparable":735,"./toObject":746,"./toPath":747,"dup":178}],695:[function(require,module,exports){
 arguments[4][181][0].apply(exports,arguments)
-},{"dup":181}],660:[function(require,module,exports){
+},{"dup":181}],696:[function(require,module,exports){
 arguments[4][182][0].apply(exports,arguments)
-},{"./baseGet":651,"./toPath":694,"dup":182}],661:[function(require,module,exports){
+},{"./baseGet":686,"./toPath":747,"dup":182}],697:[function(require,module,exports){
 arguments[4][183][0].apply(exports,arguments)
-},{"dup":183}],662:[function(require,module,exports){
+},{"dup":183}],698:[function(require,module,exports){
+arguments[4][184][0].apply(exports,arguments)
+},{"../utility/identity":763,"./metaMap":737,"dup":184}],699:[function(require,module,exports){
 arguments[4][185][0].apply(exports,arguments)
-},{"dup":185}],663:[function(require,module,exports){
+},{"dup":185}],700:[function(require,module,exports){
 arguments[4][187][0].apply(exports,arguments)
-},{"dup":187}],664:[function(require,module,exports){
+},{"dup":187}],701:[function(require,module,exports){
 var baseIndexOf = require('./baseIndexOf'),
     cacheIndexOf = require('./cacheIndexOf'),
     createCache = require('./createCache');
@@ -77114,61 +77546,93 @@ function baseUniq(array, iteratee) {
 
 module.exports = baseUniq;
 
-},{"./baseIndexOf":652,"./cacheIndexOf":666,"./createCache":671}],665:[function(require,module,exports){
+},{"./baseIndexOf":687,"./cacheIndexOf":703,"./createCache":711}],702:[function(require,module,exports){
 arguments[4][189][0].apply(exports,arguments)
-},{"../utility/identity":709,"dup":189}],666:[function(require,module,exports){
+},{"../utility/identity":763,"dup":189}],703:[function(require,module,exports){
 arguments[4][190][0].apply(exports,arguments)
-},{"../lang/isObject":700,"dup":190}],667:[function(require,module,exports){
+},{"../lang/isObject":754,"dup":190}],704:[function(require,module,exports){
 arguments[4][191][0].apply(exports,arguments)
-},{"../lang/isObject":700,"dup":191}],668:[function(require,module,exports){
+},{"../lang/isObject":754,"dup":191}],705:[function(require,module,exports){
+arguments[4][192][0].apply(exports,arguments)
+},{"dup":192}],706:[function(require,module,exports){
+arguments[4][193][0].apply(exports,arguments)
+},{"dup":193}],707:[function(require,module,exports){
 arguments[4][195][0].apply(exports,arguments)
-},{"../function/restParam":623,"./bindCallback":665,"./isIterateeCall":684,"dup":195}],669:[function(require,module,exports){
+},{"../function/restParam":654,"./bindCallback":702,"./isIterateeCall":730,"dup":195}],708:[function(require,module,exports){
 arguments[4][196][0].apply(exports,arguments)
-},{"./getLength":678,"./isLength":686,"./toObject":693,"dup":196}],670:[function(require,module,exports){
+},{"./getLength":724,"./isLength":733,"./toObject":746,"dup":196}],709:[function(require,module,exports){
 arguments[4][197][0].apply(exports,arguments)
-},{"./toObject":693,"dup":197}],671:[function(require,module,exports){
+},{"./toObject":746,"dup":197}],710:[function(require,module,exports){
+arguments[4][198][0].apply(exports,arguments)
+},{"./createCtorWrapper":712,"dup":198}],711:[function(require,module,exports){
 arguments[4][199][0].apply(exports,arguments)
-},{"./SetCache":624,"./getNative":680,"dup":199}],672:[function(require,module,exports){
+},{"./SetCache":657,"./getNative":726,"dup":199}],712:[function(require,module,exports){
+arguments[4][200][0].apply(exports,arguments)
+},{"../lang/isObject":754,"./baseCreate":671,"dup":200}],713:[function(require,module,exports){
 arguments[4][201][0].apply(exports,arguments)
-},{"../lang/isArray":696,"./baseCallback":635,"./baseFind":643,"./baseFindIndex":644,"dup":201}],673:[function(require,module,exports){
+},{"../lang/isArray":750,"./baseCallback":669,"./baseFind":678,"./baseFindIndex":679,"dup":201}],714:[function(require,module,exports){
 arguments[4][202][0].apply(exports,arguments)
-},{"../lang/isArray":696,"./bindCallback":665,"dup":202}],674:[function(require,module,exports){
+},{"../lang/isArray":750,"./bindCallback":702,"dup":202}],715:[function(require,module,exports){
+arguments[4][203][0].apply(exports,arguments)
+},{"./arrayCopy":658,"./composeArgs":705,"./composeArgsRight":706,"./createCtorWrapper":712,"./isLaziable":732,"./reorder":741,"./replaceHolders":742,"./setData":743,"dup":203}],716:[function(require,module,exports){
+arguments[4][204][0].apply(exports,arguments)
+},{"./createCtorWrapper":712,"dup":204}],717:[function(require,module,exports){
 arguments[4][205][0].apply(exports,arguments)
-},{"../lang/isArray":696,"./baseCallback":635,"./baseReduce":661,"dup":205}],675:[function(require,module,exports){
+},{"../lang/isArray":750,"./baseCallback":669,"./baseReduce":697,"dup":205}],718:[function(require,module,exports){
+arguments[4][206][0].apply(exports,arguments)
+},{"./baseSetData":698,"./createBindWrapper":710,"./createHybridWrapper":715,"./createPartialWrapper":716,"./getData":722,"./mergeData":736,"./setData":743,"dup":206}],719:[function(require,module,exports){
 arguments[4][207][0].apply(exports,arguments)
-},{"./arraySome":632,"dup":207}],676:[function(require,module,exports){
+},{"./arraySome":666,"dup":207}],720:[function(require,module,exports){
 arguments[4][208][0].apply(exports,arguments)
-},{"dup":208}],677:[function(require,module,exports){
+},{"dup":208}],721:[function(require,module,exports){
 arguments[4][209][0].apply(exports,arguments)
-},{"../object/keys":704,"dup":209}],678:[function(require,module,exports){
+},{"../object/keys":758,"dup":209}],722:[function(require,module,exports){
+arguments[4][210][0].apply(exports,arguments)
+},{"../utility/noop":764,"./metaMap":737,"dup":210}],723:[function(require,module,exports){
+arguments[4][211][0].apply(exports,arguments)
+},{"./realNames":740,"dup":211}],724:[function(require,module,exports){
 arguments[4][212][0].apply(exports,arguments)
-},{"./baseProperty":659,"dup":212}],679:[function(require,module,exports){
+},{"./baseProperty":695,"dup":212}],725:[function(require,module,exports){
 arguments[4][213][0].apply(exports,arguments)
-},{"../object/pairs":707,"./isStrictComparable":688,"dup":213}],680:[function(require,module,exports){
+},{"../object/pairs":761,"./isStrictComparable":735,"dup":213}],726:[function(require,module,exports){
 arguments[4][214][0].apply(exports,arguments)
-},{"../lang/isNative":698,"dup":214}],681:[function(require,module,exports){
+},{"../lang/isNative":752,"dup":214}],727:[function(require,module,exports){
 arguments[4][215][0].apply(exports,arguments)
-},{"dup":215}],682:[function(require,module,exports){
+},{"dup":215}],728:[function(require,module,exports){
 arguments[4][216][0].apply(exports,arguments)
-},{"./getLength":678,"./isLength":686,"dup":216}],683:[function(require,module,exports){
+},{"./getLength":724,"./isLength":733,"dup":216}],729:[function(require,module,exports){
 arguments[4][217][0].apply(exports,arguments)
-},{"dup":217}],684:[function(require,module,exports){
+},{"dup":217}],730:[function(require,module,exports){
 arguments[4][218][0].apply(exports,arguments)
-},{"../lang/isObject":700,"./isArrayLike":682,"./isIndex":683,"dup":218}],685:[function(require,module,exports){
+},{"../lang/isObject":754,"./isArrayLike":728,"./isIndex":729,"dup":218}],731:[function(require,module,exports){
 arguments[4][219][0].apply(exports,arguments)
-},{"../lang/isArray":696,"./toObject":693,"dup":219}],686:[function(require,module,exports){
+},{"../lang/isArray":750,"./toObject":746,"dup":219}],732:[function(require,module,exports){
+arguments[4][220][0].apply(exports,arguments)
+},{"../chain/lodash":642,"./LazyWrapper":655,"./getData":722,"./getFuncName":723,"dup":220}],733:[function(require,module,exports){
 arguments[4][221][0].apply(exports,arguments)
-},{"dup":221}],687:[function(require,module,exports){
+},{"dup":221}],734:[function(require,module,exports){
 arguments[4][222][0].apply(exports,arguments)
-},{"dup":222}],688:[function(require,module,exports){
+},{"dup":222}],735:[function(require,module,exports){
 arguments[4][223][0].apply(exports,arguments)
-},{"../lang/isObject":700,"dup":223}],689:[function(require,module,exports){
+},{"../lang/isObject":754,"dup":223}],736:[function(require,module,exports){
+arguments[4][224][0].apply(exports,arguments)
+},{"./arrayCopy":658,"./composeArgs":705,"./composeArgsRight":706,"./replaceHolders":742,"dup":224}],737:[function(require,module,exports){
+arguments[4][225][0].apply(exports,arguments)
+},{"./getNative":726,"dup":225}],738:[function(require,module,exports){
 arguments[4][226][0].apply(exports,arguments)
-},{"./toObject":693,"dup":226}],690:[function(require,module,exports){
+},{"./toObject":746,"dup":226}],739:[function(require,module,exports){
 arguments[4][227][0].apply(exports,arguments)
-},{"./baseForIn":647,"dup":227}],691:[function(require,module,exports){
+},{"./baseForIn":682,"dup":227}],740:[function(require,module,exports){
+arguments[4][228][0].apply(exports,arguments)
+},{"dup":228}],741:[function(require,module,exports){
+arguments[4][229][0].apply(exports,arguments)
+},{"./arrayCopy":658,"./isIndex":729,"dup":229}],742:[function(require,module,exports){
+arguments[4][230][0].apply(exports,arguments)
+},{"dup":230}],743:[function(require,module,exports){
+arguments[4][231][0].apply(exports,arguments)
+},{"../date/now":650,"./baseSetData":698,"dup":231}],744:[function(require,module,exports){
 arguments[4][232][0].apply(exports,arguments)
-},{"../lang/isArguments":695,"../lang/isArray":696,"../object/keysIn":705,"./isIndex":683,"./isLength":686,"dup":232}],692:[function(require,module,exports){
+},{"../lang/isArguments":749,"../lang/isArray":750,"../object/keysIn":759,"./isIndex":729,"./isLength":733,"dup":232}],745:[function(require,module,exports){
 /**
  * An implementation of `_.uniq` optimized for sorted arrays without support
  * for callback shorthands and `this` binding.
@@ -77199,75 +77663,79 @@ function sortedUniq(array, iteratee) {
 
 module.exports = sortedUniq;
 
-},{}],693:[function(require,module,exports){
+},{}],746:[function(require,module,exports){
 arguments[4][233][0].apply(exports,arguments)
-},{"../lang/isObject":700,"dup":233}],694:[function(require,module,exports){
+},{"../lang/isObject":754,"dup":233}],747:[function(require,module,exports){
 arguments[4][234][0].apply(exports,arguments)
-},{"../lang/isArray":696,"./baseToString":663,"dup":234}],695:[function(require,module,exports){
+},{"../lang/isArray":750,"./baseToString":700,"dup":234}],748:[function(require,module,exports){
+arguments[4][235][0].apply(exports,arguments)
+},{"./LazyWrapper":655,"./LodashWrapper":656,"./arrayCopy":658,"dup":235}],749:[function(require,module,exports){
 arguments[4][236][0].apply(exports,arguments)
-},{"../internal/isArrayLike":682,"../internal/isObjectLike":687,"dup":236}],696:[function(require,module,exports){
+},{"../internal/isArrayLike":728,"../internal/isObjectLike":734,"dup":236}],750:[function(require,module,exports){
 arguments[4][237][0].apply(exports,arguments)
-},{"../internal/getNative":680,"../internal/isLength":686,"../internal/isObjectLike":687,"dup":237}],697:[function(require,module,exports){
+},{"../internal/getNative":726,"../internal/isLength":733,"../internal/isObjectLike":734,"dup":237}],751:[function(require,module,exports){
 arguments[4][238][0].apply(exports,arguments)
-},{"./isObject":700,"dup":238}],698:[function(require,module,exports){
+},{"./isObject":754,"dup":238}],752:[function(require,module,exports){
 arguments[4][239][0].apply(exports,arguments)
-},{"../internal/isObjectLike":687,"./isFunction":697,"dup":239}],699:[function(require,module,exports){
+},{"../internal/isObjectLike":734,"./isFunction":751,"dup":239}],753:[function(require,module,exports){
 arguments[4][240][0].apply(exports,arguments)
-},{"../internal/isObjectLike":687,"dup":240}],700:[function(require,module,exports){
+},{"../internal/isObjectLike":734,"dup":240}],754:[function(require,module,exports){
 arguments[4][241][0].apply(exports,arguments)
-},{"dup":241}],701:[function(require,module,exports){
+},{"dup":241}],755:[function(require,module,exports){
 arguments[4][243][0].apply(exports,arguments)
-},{"../internal/isObjectLike":687,"dup":243}],702:[function(require,module,exports){
+},{"../internal/isObjectLike":734,"dup":243}],756:[function(require,module,exports){
 arguments[4][244][0].apply(exports,arguments)
-},{"../internal/isLength":686,"../internal/isObjectLike":687,"dup":244}],703:[function(require,module,exports){
+},{"../internal/isLength":733,"../internal/isObjectLike":734,"dup":244}],757:[function(require,module,exports){
 arguments[4][246][0].apply(exports,arguments)
-},{"../internal/assignWith":633,"../internal/baseAssign":634,"../internal/createAssigner":668,"dup":246}],704:[function(require,module,exports){
+},{"../internal/assignWith":667,"../internal/baseAssign":668,"../internal/createAssigner":707,"dup":246}],758:[function(require,module,exports){
 arguments[4][247][0].apply(exports,arguments)
-},{"../internal/getNative":680,"../internal/isArrayLike":682,"../internal/shimKeys":691,"../lang/isObject":700,"dup":247}],705:[function(require,module,exports){
+},{"../internal/getNative":726,"../internal/isArrayLike":728,"../internal/shimKeys":744,"../lang/isObject":754,"dup":247}],759:[function(require,module,exports){
 arguments[4][248][0].apply(exports,arguments)
-},{"../internal/isIndex":683,"../internal/isLength":686,"../lang/isArguments":695,"../lang/isArray":696,"../lang/isObject":700,"dup":248}],706:[function(require,module,exports){
+},{"../internal/isIndex":729,"../internal/isLength":733,"../lang/isArguments":749,"../lang/isArray":750,"../lang/isObject":754,"dup":248}],760:[function(require,module,exports){
 arguments[4][250][0].apply(exports,arguments)
-},{"../function/restParam":623,"../internal/arrayMap":629,"../internal/baseDifference":638,"../internal/baseFlatten":645,"../internal/bindCallback":665,"../internal/pickByArray":689,"../internal/pickByCallback":690,"./keysIn":705,"dup":250}],707:[function(require,module,exports){
+},{"../function/restParam":654,"../internal/arrayMap":663,"../internal/baseDifference":673,"../internal/baseFlatten":680,"../internal/bindCallback":702,"../internal/pickByArray":738,"../internal/pickByCallback":739,"./keysIn":759,"dup":250}],761:[function(require,module,exports){
 arguments[4][251][0].apply(exports,arguments)
-},{"../internal/toObject":693,"./keys":704,"dup":251}],708:[function(require,module,exports){
+},{"../internal/toObject":746,"./keys":758,"dup":251}],762:[function(require,module,exports){
 arguments[4][252][0].apply(exports,arguments)
-},{"../function/restParam":623,"../internal/baseFlatten":645,"../internal/bindCallback":665,"../internal/pickByArray":689,"../internal/pickByCallback":690,"dup":252}],709:[function(require,module,exports){
+},{"../function/restParam":654,"../internal/baseFlatten":680,"../internal/bindCallback":702,"../internal/pickByArray":738,"../internal/pickByCallback":739,"dup":252}],763:[function(require,module,exports){
 arguments[4][254][0].apply(exports,arguments)
-},{"dup":254}],710:[function(require,module,exports){
+},{"dup":254}],764:[function(require,module,exports){
+arguments[4][255][0].apply(exports,arguments)
+},{"dup":255}],765:[function(require,module,exports){
 arguments[4][256][0].apply(exports,arguments)
-},{"../internal/baseProperty":659,"../internal/basePropertyDeep":660,"../internal/isKey":685,"dup":256}],711:[function(require,module,exports){
+},{"../internal/baseProperty":695,"../internal/basePropertyDeep":696,"../internal/isKey":731,"dup":256}],766:[function(require,module,exports){
 arguments[4][502][0].apply(exports,arguments)
-},{"dup":502}],712:[function(require,module,exports){
+},{"dup":502}],767:[function(require,module,exports){
 arguments[4][257][0].apply(exports,arguments)
-},{"component-classes":719,"dup":257}],713:[function(require,module,exports){
+},{"component-classes":774,"dup":257}],768:[function(require,module,exports){
 arguments[4][259][0].apply(exports,arguments)
-},{"component-delegate":722,"dup":259}],714:[function(require,module,exports){
+},{"component-delegate":777,"dup":259}],769:[function(require,module,exports){
 arguments[4][260][0].apply(exports,arguments)
-},{"domify":726,"dup":260}],715:[function(require,module,exports){
+},{"domify":781,"dup":260}],770:[function(require,module,exports){
 arguments[4][261][0].apply(exports,arguments)
-},{"component-event":723,"dup":261}],716:[function(require,module,exports){
+},{"component-event":778,"dup":261}],771:[function(require,module,exports){
 module.exports = require('component-matches-selector');
-},{"component-matches-selector":724}],717:[function(require,module,exports){
+},{"component-matches-selector":779}],772:[function(require,module,exports){
 arguments[4][262][0].apply(exports,arguments)
-},{"component-query":725,"dup":262}],718:[function(require,module,exports){
+},{"component-query":780,"dup":262}],773:[function(require,module,exports){
 arguments[4][263][0].apply(exports,arguments)
-},{"dup":263}],719:[function(require,module,exports){
+},{"dup":263}],774:[function(require,module,exports){
 arguments[4][264][0].apply(exports,arguments)
-},{"component-indexof":720,"dup":264,"indexof":720}],720:[function(require,module,exports){
+},{"component-indexof":775,"dup":264,"indexof":775}],775:[function(require,module,exports){
 arguments[4][265][0].apply(exports,arguments)
-},{"dup":265}],721:[function(require,module,exports){
+},{"dup":265}],776:[function(require,module,exports){
 arguments[4][266][0].apply(exports,arguments)
-},{"dup":266,"matches-selector":724}],722:[function(require,module,exports){
+},{"dup":266,"matches-selector":779}],777:[function(require,module,exports){
 arguments[4][267][0].apply(exports,arguments)
-},{"closest":721,"component-closest":721,"component-event":723,"dup":267,"event":723}],723:[function(require,module,exports){
+},{"closest":776,"component-closest":776,"component-event":778,"dup":267,"event":778}],778:[function(require,module,exports){
 arguments[4][268][0].apply(exports,arguments)
-},{"dup":268}],724:[function(require,module,exports){
+},{"dup":268}],779:[function(require,module,exports){
 arguments[4][269][0].apply(exports,arguments)
-},{"component-query":725,"dup":269,"query":725}],725:[function(require,module,exports){
+},{"component-query":780,"dup":269,"query":780}],780:[function(require,module,exports){
 arguments[4][270][0].apply(exports,arguments)
-},{"dup":270}],726:[function(require,module,exports){
+},{"dup":270}],781:[function(require,module,exports){
 arguments[4][271][0].apply(exports,arguments)
-},{"dup":271}],727:[function(require,module,exports){
+},{"dup":271}],782:[function(require,module,exports){
 'use strict';
 
 /**
@@ -77419,10 +77887,10 @@ function splitStr(str, position) {
     after: str.substring(position)
   };
 }
-},{}],728:[function(require,module,exports){
+},{}],783:[function(require,module,exports){
 module.exports = require('./lib/Table');
 
-},{"./lib/Table":729}],729:[function(require,module,exports){
+},{"./lib/Table":784}],784:[function(require,module,exports){
 'use strict';
 
 var di = require('didi');
@@ -77579,15 +78047,30 @@ module.exports = Table;
 
 
 /**
- * Destroys the table
+ * Destroys the table. This results in removing the attachment from the container.
  *
  * @method  Table#destroy
  */
 Table.prototype.destroy = function() {
   this.get('eventBus').fire('table.destroy');
+
+  // so we can reset the services directly used from diagram-js
+  this.get('eventBus').fire('diagram.destroy');
 };
 
-},{"./core":734,"didi":584}],730:[function(require,module,exports){
+/**
+ * Clears the table. Should be used to reset the state of any stateful services.
+ *
+ * @method  Table#clear
+ */
+Table.prototype.clear = function() {
+  this.get('eventBus').fire('table.clear');
+
+  // so we can reset the services directly used from diagram-js
+  this.get('eventBus').fire('diagram.clear');
+};
+
+},{"./core":789,"didi":838}],785:[function(require,module,exports){
 'use strict';
 
 var Model = require('../model');
@@ -77635,7 +78118,7 @@ ElementFactory.prototype.create = function(type, attrs) {
   return Model.create(type, attrs);
 };
 
-},{"../model":780}],731:[function(require,module,exports){
+},{"../model":836}],786:[function(require,module,exports){
 'use strict';
 
 var ELEMENT_ID = 'data-element-id';
@@ -77810,6 +78293,15 @@ ElementRegistry.prototype.getGraphics = function(filter, secondary) {
 };
 
 /**
+ * Return all rendered model elements.
+ *
+ * @return {Array<djs.model.Base>}
+ */
+ElementRegistry.prototype.getAll = function() {
+  return this.filter(function(e) { return e; });
+};
+
+/**
  * Validate the suitability of the given id and signals a problem
  * with an exception.
  *
@@ -77827,7 +78319,7 @@ ElementRegistry.prototype._validateId = function(id) {
   }
 };
 
-},{}],732:[function(require,module,exports){
+},{}],787:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -77848,16 +78340,16 @@ module.exports = GraphicsFactory;
 
 GraphicsFactory.prototype.create = function(type, element, parent) {
   var newElement;
-  switch(type) {
-    case 'row':
-      newElement = document.createElement('tr');
-      break;
-    case 'cell':
+  switch (type) {
+  case 'row':
+    newElement = document.createElement('tr');
+    break;
+  case 'cell':
       // cells consist of a td element with a nested span which contains the content
-      newElement = document.createElement(element.row.useTH ? 'th' : 'td');
-      var contentContainer = document.createElement('span');
-      newElement.appendChild(contentContainer);
-      break;
+    newElement = document.createElement(element.row.useTH ? 'th' : 'td');
+    var contentContainer = document.createElement('span');
+    newElement.appendChild(contentContainer);
+    break;
   }
   if (newElement && type === 'row') {
     if (element.next) {
@@ -77882,11 +78374,11 @@ GraphicsFactory.prototype.moveRow = function(source, target, above) {
   var gfxSource = this._elementRegistry.getGraphics(source);
   var gfxTarget;
 
-  if(above) {
+  if (above) {
     gfxTarget = this._elementRegistry.getGraphics(target);
     gfxTarget.parentNode.insertBefore(gfxSource, gfxTarget);
   } else {
-    if(source.next) {
+    if (source.next) {
       gfxTarget = this._elementRegistry.getGraphics(source.next);
       gfxTarget.parentNode.insertBefore(gfxSource, gfxTarget);
     } else {
@@ -77900,18 +78392,28 @@ GraphicsFactory.prototype.moveColumn = function(source, target, left) {
 
   // find all cells which belong to the source and add them at their new place
   this._elementRegistry.forEach(function(element, gfx) {
-    if(element._type === 'cell' && element.column === source) {
+    if (element._type === 'cell' && element.column === source) {
 
       // find the cell exactly right of them
       self._elementRegistry.forEach(function(targetElement, targetGfx) {
-        if(targetElement._type === 'cell' && targetElement.row === element.row) {
-          if(left && targetElement.column === target) {
+        if (targetElement._type === 'cell' && targetElement.row === element.row) {
+          if (left && targetElement.column === target) {
             targetGfx.parentNode.insertBefore(gfx, targetGfx);
-          } else if(!left && targetElement.column === source.next) {
+          } else if (!left && targetElement.column === source.next) {
             targetGfx.parentNode.insertBefore(gfx, targetGfx);
           }
         }
       });
+    }
+  });
+};
+
+// redraw complete table
+GraphicsFactory.prototype.redraw = function() {
+  var self = this;
+  this._elementRegistry.forEach(function(element) {
+    if (element._type === 'row') {
+      self.update('row', element, self._elementRegistry.getGraphics(element));
     }
   });
 };
@@ -77960,7 +78462,7 @@ GraphicsFactory.prototype.remove = function(element) {
   gfx.parentNode && gfx.parentNode.removeChild(gfx);
 };
 
-},{"lodash/collection/forEach":616}],733:[function(require,module,exports){
+},{"lodash/collection/forEach":646}],788:[function(require,module,exports){
 'use strict';
 
 var isNumber = require('lodash/lang/isNumber'),
@@ -78001,6 +78503,8 @@ var REQUIRED_MODEL_ATTRS = {
   cell: [ 'row', 'column' ]
 };
 
+var LOW_PRIORITY = 250;
+
 /**
  * The main drawing sheet.
  *
@@ -78018,6 +78522,7 @@ function Sheet(config, eventBus, elementRegistry, graphicsFactory) {
   this._eventBus = eventBus;
   this._elementRegistry = elementRegistry;
   this._graphicsFactory = graphicsFactory;
+  this._config = config;
 
   this._init(config || {});
 }
@@ -78026,94 +78531,6 @@ Sheet.$inject = [ 'config.sheet', 'eventBus', 'elementRegistry', 'graphicsFactor
 
 module.exports = Sheet;
 
-
-Sheet.prototype.getLastColumn = function() {
-  return this._lastColumn;
-};
-
-Sheet.prototype.setLastColumn = function(element) {
-  this._lastColumn = element;
-};
-
-Sheet.prototype.getLastRow = function(type) {
-  return this._lastRow[type];
-};
-
-Sheet.prototype.setLastRow = function(element, type) {
-  this._lastRow[type] = element;
-};
-
-Sheet.prototype.setSibling = function(first, second) {
-  if (first) first.next = second;
-  if (second) second.previous = first;
-};
-
-Sheet.prototype.addSiblings = function(type, element) {
-  var tmp, subType;
-  if (type === 'row') {
-    subType = element.isHead ? 'head' : element.isFoot ? 'foot' : 'body';
-  }
-  if (!element.previous && !element.next) {
-    if (type === 'column') {
-      // add column to end of table per default
-      element.next = null;
-      this.setSibling(this.getLastColumn(), element);
-      this.setLastColumn(element);
-    } else if (type === 'row') {
-      // add row to end of table per default
-      element.next = null;
-      this.setSibling(this.getLastRow(subType), element);
-      this.setLastRow(element, subType);
-    }
-  } else if (element.previous && !element.next) {
-    tmp = element.previous.next;
-    this.setSibling(element.previous, element);
-    this.setSibling(element, tmp);
-    if(!tmp) {
-      if(type === 'row') {
-        this.setLastRow(element, subType);
-      } else if (type === 'column') {
-        this.setLastColumn(element, subType);
-      }
-    }
-  } else if (!element.previous && element.next) {
-    tmp = element.next.previous;
-    this.setSibling(tmp, element);
-    this.setSibling(element, element.next);
-  } else if (element.previous && element.next) {
-    if (element.previous.next !== element.next) {
-      throw new Error('cannot set both previous and next when adding new element <' + type + '>');
-    } else {
-      this.setSibling(element.previous, element);
-      this.setSibling(element, element.next);
-    }
-  }
-};
-
-Sheet.prototype.removeSiblings = function(type, element) {
-  var subType;
-  if (type === 'row') {
-    subType = element.isHead ? 'head' : element.isFoot ? 'foot' : 'body';
-  }
-  if (type === 'column') {
-    if (this.getLastColumn() === element) {
-      this.setLastColumn(element.previous);
-    }
-  } else
-  if (type === 'row') {
-    if (this.getLastRow(subType) === element) {
-      this.setLastRow(element.previous, subType);
-    }
-  }
-  if (element.previous) {
-    element.previous.next = element.next;
-  }
-  if (element.next) {
-    element.next.previous = element.previous;
-  }
-  delete element.previous;
-  delete element.next;
-};
 
 Sheet.prototype._init = function(config) {
 
@@ -78172,22 +78589,186 @@ Sheet.prototype._init = function(config) {
      * @property {Snap<SVGGroup>} viewport the direct parent of diagram elements and shapes
      */
 
-    eventBus.fire('sheet.init', {sheet: self._rootNode});
+    eventBus.fire('sheet.init', { sheet: self._rootNode });
+
+    eventBus.fire('sheet.resized');
   });
 
-  eventBus.on('table.destroy', function() {
+  // This event expects that another party hooks up earlier and provides
+  // the new width to be used.
+  eventBus.on('sheet.resized', LOW_PRIORITY, function(evt) {
+    var context = evt.context;
 
-    var parent = self._container.parentNode;
-
-    if (parent) {
-      parent.removeChild(container);
+    if (!context) {
+      return;
     }
 
-    eventBus.fire('sheet.destroy', { sheet: self._rootNode });
+    self.setWidth(context.newWidth);
   });
 
+  eventBus.on('table.destroy', LOW_PRIORITY, this._destroy, this);
+
+
+  eventBus.on('table.clear', LOW_PRIORITY, function() {
+
+    /**
+     * An event indicating that the sheet is going to be cleared.
+     * Services can now hook in with this event and reset their states.
+     *
+     * @memberOf Sheet
+     *
+     * @event sheet.clear
+     */
+    eventBus.fire('sheet.clear');
+
+    this._clear();
+
+    /**
+     * An event indicating that the sheet has been cleared.
+     * Interested services can now hook in with this event and instantiate their states.
+     *
+     * @memberOf Sheet
+     *
+     * @event sheet.cleared
+     *
+     * @type {Object}
+     * @property {DOMElement} sheet the created table element
+     */
+    eventBus.fire('sheet.cleared', { sheet: self._rootNode });
+
+    eventBus.fire('sheet.resized');
+  }, this);
 };
 
+Sheet.prototype._destroy = function() {
+  var eventBus = this._eventBus;
+
+  var container = this._container,
+      rootNode = this._rootNode,
+      parent;
+
+  eventBus.fire('sheet.destroy', { sheet: rootNode });
+
+  parent = container.parentNode;
+
+  if (parent) {
+    parent.removeChild(container);
+  }
+
+  delete this._container;
+  delete this._rootNode;
+};
+
+Sheet.prototype._clear = function() {
+  var elementRegistry = this._elementRegistry;
+
+  var self = this,
+      allElements = elementRegistry.getAll();
+
+  // remove all elements
+  allElements.forEach(function(element) {
+    if (element.element && element.element.id === 'decisionTable') {
+      self.setRootElement(null, true);
+    } else {
+      self._removeElement(element, element.type);
+    }
+  });
+
+  this._lastColumn = null;
+  this._lastRow = {
+    head: null,
+    body: null,
+    foot: null
+  };
+};
+
+Sheet.prototype.getLastColumn = function() {
+  return this._lastColumn;
+};
+
+Sheet.prototype.setLastColumn = function(element) {
+  this._lastColumn = element;
+};
+
+Sheet.prototype.getLastRow = function(type) {
+  return this._lastRow[type];
+};
+
+Sheet.prototype.setLastRow = function(element, type) {
+  this._lastRow[type] = element;
+};
+
+Sheet.prototype.setSibling = function(first, second) {
+  if (first) first.next = second;
+  if (second) second.previous = first;
+};
+
+Sheet.prototype.addSiblings = function(type, element) {
+  var tmp, subType;
+  if (type === 'row') {
+    subType = element.isHead ? 'head' : element.isFoot ? 'foot' : 'body';
+  }
+  if (!element.previous && !element.next) {
+    if (type === 'column') {
+      // add column to end of table per default
+      element.next = null;
+      this.setSibling(this.getLastColumn(), element);
+      this.setLastColumn(element);
+    } else if (type === 'row') {
+      // add row to end of table per default
+      element.next = null;
+      this.setSibling(this.getLastRow(subType), element);
+      this.setLastRow(element, subType);
+    }
+  } else if (element.previous && !element.next) {
+    tmp = element.previous.next;
+    this.setSibling(element.previous, element);
+    this.setSibling(element, tmp);
+    if (!tmp) {
+      if (type === 'row') {
+        this.setLastRow(element, subType);
+      } else if (type === 'column') {
+        this.setLastColumn(element, subType);
+      }
+    }
+  } else if (!element.previous && element.next) {
+    tmp = element.next.previous;
+    this.setSibling(tmp, element);
+    this.setSibling(element, element.next);
+  } else if (element.previous && element.next) {
+    if (element.previous.next !== element.next) {
+      throw new Error('cannot set both previous and next when adding new element <' + type + '>');
+    } else {
+      this.setSibling(element.previous, element);
+      this.setSibling(element, element.next);
+    }
+  }
+};
+
+Sheet.prototype.removeSiblings = function(type, element) {
+  var subType;
+  if (type === 'row') {
+    subType = element.isHead ? 'head' : element.isFoot ? 'foot' : 'body';
+  }
+  if (type === 'column') {
+    if (this.getLastColumn() === element) {
+      this.setLastColumn(element.previous);
+    }
+  } else
+  if (type === 'row') {
+    if (this.getLastRow(subType) === element) {
+      this.setLastRow(element.previous, subType);
+    }
+  }
+  if (element.previous) {
+    element.previous.next = element.next;
+  }
+  if (element.next) {
+    element.next.previous = element.previous;
+  }
+  delete element.previous;
+  delete element.next;
+};
 
 /**
  * Returns the html element that encloses the
@@ -78214,32 +78795,34 @@ Sheet.prototype.getBody = function() {
  *
  */
 Sheet.prototype.moveRow = function(source, target, above) {
+  var eventBus = this._eventBus,
+      graphicsFactory = this._graphicsFactory;
 
-  if(source === target) {
+  if (source === target) {
     return;
   }
 
-  this._eventBus.fire('row.move', {
+  eventBus.fire('row.move', {
     source: source,
     target: target,
     above: above
   });
 
   // update the last row if necessary
-  if(this.getLastRow('body') === source) {
+  if (this.getLastRow('body') === source) {
     this.setLastRow(source.previous, 'body');
   }
 
   // re-wire the prev/next relations for the source
-  if(source.previous) {
+  if (source.previous) {
     source.previous.next = source.next;
   }
-  if(source.next) {
+  if (source.next) {
     source.next.previous = source.previous;
   }
   // re-wire the prev/next relations for the target
-  if(above) {
-    if(target.previous) {
+  if (above) {
+    if (target.previous) {
       // (previous --> source --> target)
       target.previous.next = source;
       source.previous = target.previous;
@@ -78254,7 +78837,7 @@ Sheet.prototype.moveRow = function(source, target, above) {
       target.previous = source;
     }
   } else {
-    if(target.next) {
+    if (target.next) {
       // (target --> source --> next)
       target.next.previous = source;
       source.next = target.next;
@@ -78271,9 +78854,9 @@ Sheet.prototype.moveRow = function(source, target, above) {
     }
   }
 
-  this._graphicsFactory.moveRow(source, target, above);
+  graphicsFactory.moveRow(source, target, above);
 
-  this._eventBus.fire('row.moved', {
+  eventBus.fire('row.moved', {
     source: source,
     target: target,
     above: above
@@ -78286,32 +78869,34 @@ Sheet.prototype.moveRow = function(source, target, above) {
  *
  */
 Sheet.prototype.moveColumn = function(source, target, left) {
+  var eventBus = this._eventBus,
+      graphicsFactory = this._graphicsFactory;
 
-  if(source === target) {
+  if (source === target) {
     return;
   }
 
-  this._eventBus.fire('column.move', {
+  eventBus.fire('column.move', {
     source: source,
     target: target,
     left: left
   });
 
   // update the last row if necessary
-  if(this.getLastColumn() === source) {
+  if (this.getLastColumn() === source) {
     this.setLastColumn(source.previous);
   }
 
   // re-wire the prev/next relations for the source
-  if(source.previous) {
+  if (source.previous) {
     source.previous.next = source.next;
   }
-  if(source.next) {
+  if (source.next) {
     source.next.previous = source.previous;
   }
   // re-wire the prev/next relations for the target
-  if(left) {
-    if(target.previous) {
+  if (left) {
+    if (target.previous) {
       // (previous --> source --> target)
       target.previous.next = source;
       source.previous = target.previous;
@@ -78326,7 +78911,7 @@ Sheet.prototype.moveColumn = function(source, target, left) {
       target.previous = source;
     }
   } else {
-    if(target.next) {
+    if (target.next) {
       // (target --> source --> next)
       target.next.previous = source;
       source.next = target.next;
@@ -78339,13 +78924,14 @@ Sheet.prototype.moveColumn = function(source, target, left) {
 
       source.previous = target;
       target.next = source;
+
       this.setLastColumn(source);
     }
   }
 
-  this._graphicsFactory.moveColumn(source, target, left);
+  graphicsFactory.moveColumn(source, target, left);
 
-  this._eventBus.fire('column.moved', {
+  eventBus.fire('column.moved', {
     source: source,
     target: target,
     left: left
@@ -78357,11 +78943,13 @@ Sheet.prototype.moveColumn = function(source, target, left) {
 ///////////// add functionality ///////////////////////////////
 
 Sheet.prototype._ensureValid = function(type, element) {
+  var elementRegistry = this._elementRegistry;
+
   if (!element.id) {
     throw new Error('element must have an id');
   }
 
-  if (this._elementRegistry.get(element.id)) {
+  if (elementRegistry.get(element.id)) {
     throw new Error('element with id ' + element.id + ' already exists');
   }
 
@@ -78397,11 +78985,10 @@ Sheet.prototype._ensureValid = function(type, element) {
  * @return {Object|djs.model.Base} the added element
  */
 Sheet.prototype._addElement = function(type, element, parent) {
-
-  element._type = type;
-
   var eventBus = this._eventBus,
       graphicsFactory = this._graphicsFactory;
+
+  element._type = type;
 
   this._ensureValid(type, element);
 
@@ -78424,59 +79011,79 @@ Sheet.prototype._addElement = function(type, element, parent) {
 };
 
 Sheet.prototype.addRow = function(row) {
+  var eventBus = this._eventBus,
+      elementRegistry = this._elementRegistry;
+
+  var self = this,
+      columns;
+
   this.addSiblings('row', row);
 
   var r = this._addElement('row', row, row.isHead ? this._head : row.isFoot ? this._foot : this._body);
 
-  this._eventBus.fire('cells.add', r);
+  eventBus.fire('cells.add', r);
 
   // create new cells
-  var self = this;
-  forEach(this._elementRegistry.filter(function(el) {
+  columns = elementRegistry.filter(function(el) {
     return el._type === 'column';
-  }).sort(function(a, b) {
+  });
+
+  forEach(columns.sort(function(a, b) {
     var c = a;
-    while (!!(c = c.next)) {
+    while ((c = c.next)) {
       if (c === b) {
         return -1;
       }
     }
     return 1;
   }), function(el) {
-    self._addCell({row: r, column: el, id: 'cell_'+el.id+'_'+r.id});
+    self._addCell({ row: r, column: el, id: 'cell_'+el.id+'_'+r.id });
   });
 
-  this._eventBus.fire('cells.added', r);
+  eventBus.fire('cells.added', r);
 
   return r;
 };
 
 Sheet.prototype.addColumn = function(column) {
+  var eventBus = this._eventBus,
+      elementRegistry = this._elementRegistry;
+
+  var self = this,
+      rows;
 
   this.addSiblings('column', column);
 
   var c = this._addElement('column', column);
 
-  this._eventBus.fire('cells.add', c);
+  eventBus.fire('cells.add', c);
 
-  // create new cells
-  var self = this;
-  forEach(this._elementRegistry.filter(function(el) {
+  rows = elementRegistry.filter(function(el) {
     return el._type === 'row';
-  }), function(el) {
-    self._addCell({row: el, column: c, id: 'cell_'+c.id+'_'+el.id});
   });
 
-  this._eventBus.fire('cells.added', c);
+  // create new cells
+  forEach(rows, function(el) {
+    self._addCell({ row: el, column: c, id: 'cell_' + c.id + '_' + el.id });
+  });
+
+  eventBus.fire('cells.added', c);
 
   return c;
 };
 
 Sheet.prototype._addCell = function(cell) {
-  return this._addElement('cell', cell, this._elementRegistry.getGraphics(cell.row.id));
+  var elementRegistry = this._elementRegistry;
+
+  var row = elementRegistry.getGraphics(cell.row.id);
+
+  return this._addElement('cell', cell, row);
 };
 
 Sheet.prototype.setCellContent = function(config) {
+  var elementRegistry = this._elementRegistry,
+      graphicsFactory = this._graphicsFactory;
+
   if (typeof config.column === 'object') {
     config.column = config.column.id;
   }
@@ -78484,13 +79091,17 @@ Sheet.prototype.setCellContent = function(config) {
     config.row = config.row.id;
   }
 
-  this._elementRegistry.get('cell_'+config.column+'_'+config.row).content = config.content;
-  this._graphicsFactory.update('cell', this._elementRegistry.get('cell_'+config.column+'_'+config.row),
-    this._elementRegistry.getGraphics('cell_'+config.column+'_'+config.row));
+  elementRegistry.get('cell_' + config.column + '_' + config.row).content = config.content;
+
+  graphicsFactory.update('cell',
+    elementRegistry.get('cell_' + config.column + '_' + config.row),
+    elementRegistry.getGraphics('cell_' + config.column + '_' + config.row));
 };
 
 Sheet.prototype.getCellContent = function(config) {
-  return this._elementRegistry.get('cell_'+config.column+'_'+config.row).content;
+  var elementRegistry = this._elementRegistry;
+
+  return elementRegistry.get('cell_' + config.column + '_' + config.row).content;
 };
 
 
@@ -78524,13 +79135,14 @@ Sheet.prototype._removeElement = function(element, type) {
 };
 
 Sheet.prototype.removeRow = function(element) {
+  var eventBus = this._eventBus;
 
   this.removeSiblings('row', element);
 
   var el = this._removeElement(element, 'row');
 
   // remove cells
-  this._eventBus.fire('cells.remove', el);
+  eventBus.fire('cells.remove', el);
 
   var self = this;
   forEach(this._elementRegistry.filter(function(el) {
@@ -78539,19 +79151,20 @@ Sheet.prototype.removeRow = function(element) {
     self._removeElement(el.id, 'cell');
   });
 
-  this._eventBus.fire('cells.removed', el);
+  eventBus.fire('cells.removed', el);
 
   return el;
 };
 
 Sheet.prototype.removeColumn = function(element) {
+  var eventBus = this._eventBus;
 
   this.removeSiblings('column', element);
 
   var el = this._removeElement(element, 'column');
 
   // remove cells
-  this._eventBus.fire('cells.remove', el);
+  eventBus.fire('cells.remove', el);
 
   var self = this;
   forEach(this._elementRegistry.filter(function(el) {
@@ -78560,7 +79173,7 @@ Sheet.prototype.removeColumn = function(element) {
     self._removeElement(el.id, 'cell');
   });
 
-  this._eventBus.fire('cells.removed', el);
+  eventBus.fire('cells.removed', el);
 
   return el;
 };
@@ -78569,11 +79182,65 @@ Sheet.prototype.getRootElement = function() {
   return this._rootNode;
 };
 
-Sheet.prototype.setRootElement = function(root) {
-  this._rootNode = root;
+Sheet.prototype.setRootElement = function(element, override) {
+
+  if (element) {
+    this._ensureValid('root', element);
+  }
+
+  var currentRoot = this._rootNode,
+      elementRegistry = this._elementRegistry,
+      eventBus = this._eventBus;
+
+  if (currentRoot) {
+    if (!override) {
+      throw new Error('rootNode already set, need to specify override');
+    }
+
+    // simulate element remove event sequence
+    eventBus.fire('root.remove', { element: currentRoot });
+    eventBus.fire('root.removed', { element: currentRoot });
+
+    elementRegistry.remove(currentRoot);
+  }
+
+  if (element) {
+    var gfx = this.getDefaultLayer();
+
+    // resemble element add event sequence
+    eventBus.fire('root.add', { element: element });
+
+    elementRegistry.add(element, gfx, this._svg);
+
+    eventBus.fire('root.added', { element: element, gfx: gfx });
+  }
+
+  this._rootNode = element;
+
+  return element;
 };
 
-},{"lodash/collection/every":613,"lodash/collection/forEach":616,"lodash/lang/isNumber":699,"lodash/object/assign":703}],734:[function(require,module,exports){
+Sheet.prototype.setWidth = function(newWidth) {
+  var container = this.getContainer();
+
+  if (!newWidth) {
+    return;
+  }
+
+  if (typeof newWidth === 'number') {
+    newWidth = newWidth + 'px';
+  }
+
+  container.style.width = newWidth;
+};
+
+Sheet.prototype.resized = function() {
+  var eventBus = this._eventBus;
+
+  eventBus.fire('sheet.resized');
+};
+
+},{"lodash/collection/every":643,"lodash/collection/forEach":646,"lodash/lang/isNumber":753,"lodash/object/assign":757}],789:[function(require,module,exports){
 module.exports = {
   __depends__: [ require('../draw') ],
   __init__: [ 'sheet' ],
@@ -78584,7 +79251,7 @@ module.exports = {
   eventBus: [ 'type', require('diagram-js/lib/core/EventBus') ]
 };
 
-},{"../draw":736,"./ElementFactory":730,"./ElementRegistry":731,"./GraphicsFactory":732,"./Sheet":733,"diagram-js/lib/core/EventBus":575}],735:[function(require,module,exports){
+},{"../draw":791,"./ElementFactory":785,"./ElementRegistry":786,"./GraphicsFactory":787,"./Sheet":788,"diagram-js/lib/core/EventBus":608}],790:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -78673,7 +79340,7 @@ Renderer.prototype.drawCell = function drawCell(gfx, data) {
   if (data.content) {
     if (typeof data.content === 'string' && !data.content.tagName) {
       gfx.childNodes[0].textContent = data.content;
-    } else if (!!data.content.tagName) {
+    } else if (data.content.tagName) {
       gfx.childNodes[0].appendChild(data.content);
     }
   } else {
@@ -78688,13 +79355,12 @@ Renderer.prototype.drawCell = function drawCell(gfx, data) {
   return gfx;
 };
 
-
-},{"lodash/collection/forEach":616}],736:[function(require,module,exports){
+},{"lodash/collection/forEach":646}],791:[function(require,module,exports){
 module.exports = {
   renderer: [ 'type', require('./Renderer') ]
 };
 
-},{"./Renderer":735}],737:[function(require,module,exports){
+},{"./Renderer":790}],792:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -78743,7 +79409,7 @@ AddRow.prototype.getRow = function() {
   return this.row;
 };
 
-},{"diagram-js/lib/util/IdGenerator":580,"min-dom/lib/domify":714}],738:[function(require,module,exports){
+},{"diagram-js/lib/util/IdGenerator":613,"min-dom/lib/domify":769}],793:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -78774,7 +79440,7 @@ AddRowRenderer.$inject = [
 
 module.exports = AddRowRenderer;
 
-},{"min-dom/lib/classes":712}],739:[function(require,module,exports){
+},{"min-dom/lib/classes":767}],794:[function(require,module,exports){
 module.exports = {
   __init__: [ 'addRow', 'addRowRenderer'],
   __depends__: [
@@ -78785,7 +79451,7 @@ module.exports = {
   addRowRenderer: [ 'type', require('./AddRowRenderer') ]
 };
 
-},{"../modeling":769,"../utility-column":779,"./AddRow":737,"./AddRowRenderer":738}],740:[function(require,module,exports){
+},{"../modeling":825,"../utility-column":835,"./AddRow":792,"./AddRowRenderer":793}],795:[function(require,module,exports){
 'use strict';
 
 /**
@@ -78824,7 +79490,7 @@ function ChangeSupport(eventBus, elementRegistry, graphicsFactory) {
   });
 
   eventBus.on('elements.changed', function(event) {
-    for(var i = 0; i < event.elements.length; i++) {
+    for (var i = 0; i < event.elements.length; i++) {
       eventBus.fire('element.changed', { element: event.elements[i] });
     }
   });
@@ -78840,7 +79506,7 @@ function ChangeSupport(eventBus, elementRegistry, graphicsFactory) {
     var cells = elementRegistry.filter(function(ea) {
       return ea.row === event.element;
     });
-    for(var i = 0; i < cells.length; i++) {
+    for (var i = 0; i < cells.length; i++) {
       graphicsFactory.update('cell', cells[i], elementRegistry.getGraphics(cells[i]));
     }
   });
@@ -78850,21 +79516,24 @@ ChangeSupport.$inject = [ 'eventBus', 'elementRegistry', 'graphicsFactory' ];
 
 module.exports = ChangeSupport;
 
-},{}],741:[function(require,module,exports){
+},{}],796:[function(require,module,exports){
 module.exports = {
   __init__: [ 'changeSupport'],
   changeSupport: [ 'type', require('./ChangeSupport') ]
 };
 
-},{"./ChangeSupport":740}],742:[function(require,module,exports){
+},{"./ChangeSupport":795}],797:[function(require,module,exports){
+module.exports = "<div>\n  <label></label>\n  <input tabindex=\"0\" />\n  <span class=\"cb-caret\"></span>\n</div>\n";
+
+},{}],798:[function(require,module,exports){
 'use strict';
-
-
 
 var domify = require('min-dom/lib/domify'),
     domClasses = require('min-dom/lib/classes'),
     assign = require('lodash/object/assign'),
     forEach = require('lodash/collection/forEach');
+
+var comboBoxTemplate = require('./ComboBoxTemplate.html');
 
 /**
  * Offers the ability to create a combobox which is a combination of an
@@ -78888,7 +79557,7 @@ var domify = require('min-dom/lib/domify'),
 function ComboBox(config) {
 
   var self = this;
-  var template = domify("<div>\r\n  <label></label>\r\n  <input tabindex=\"0\" />\r\n  <span class=\"cb-caret\"></span>\r\n</div>\r\n");
+  var template = domify(comboBoxTemplate);
 
   var label = config.label,
       classNames = config.classNames,
@@ -78921,7 +79590,9 @@ function ComboBox(config) {
   });
 
   // set the label of the combobox
-  template.querySelector('label').textContent = label + ':';
+  if (label) {
+    template.querySelector('label').textContent = label + ':';
+  }
 
 
   // --- event listeners ---
@@ -78955,34 +79626,36 @@ function ComboBox(config) {
   this._dropdown.addEventListener('focus', update, true);
 
   // keyboard behavior for dropdown and input field
-  var keyboardFunction = function(evt) {
-    var code = evt.which || evt.keyCode;
+  if (!config.disableKeyboard) {
+    var keyboardFunction = function(evt) {
+      var code = evt.which || evt.keyCode;
 
-    // ESC
-    if (code === 27) {
-      self._closeDropdown();
-    } else
+      // ESC
+      if (code === 27) {
+        self._closeDropdown();
+      } else
 
-    // ENTER
-    if (code === 13) {
-      self._toggleDropdown(options);
-    } else
+      // ENTER
+      if (code === 13) {
+        self._toggleDropdown(options);
+      } else
 
-    // TAB, DOWN
-    if (code === 9 || code === 40) {
-      evt.preventDefault();
-      self._focusNext(code === 9 && evt.shiftKey);
-    } else
+      // TAB, DOWN
+      if (code === 9 || code === 40) {
+        evt.preventDefault();
+        self._focusNext(code === 9 && evt.shiftKey);
+      } else
 
-    // UP
-    if (code === 38) {
-      evt.preventDefault();
-      self._focusNext(true);
-    }
+      // UP
+      if (code === 38) {
+        evt.preventDefault();
+        self._focusNext(true);
+      }
 
-  };
-  this._dropdown.addEventListener('keydown', keyboardFunction);
-  this._template.querySelector('input').addEventListener('keydown', keyboardFunction);
+    };
+    this._dropdown.addEventListener('keydown', keyboardFunction);
+    this._template.querySelector('input').addEventListener('keydown', keyboardFunction);
+  }
 
   // when typing, show only options that match the typed text
   this._template.querySelector('input').addEventListener('input', function(evt) {
@@ -79089,20 +79762,21 @@ ComboBox.prototype._openDropdown = function(options) {
   // position the dropdown in relation to the position of the input element
   var input = this._template.querySelector('input');
   var e = input;
-  var offset = {x:0,y:0};
+  var offset = { x:0,y:0 };
   while (e)
   {
-      offset.x += e.offsetLeft;
-      offset.y += e.offsetTop;
-      e = e.offsetParent;
+    offset.x += e.offsetLeft;
+    offset.y += e.offsetTop;
+    e = e.offsetParent;
   }
 
   assign(this._dropdown.style, {
     'display': 'block',
-    'position': 'absolute',
+    'position': 'fixed',
     'top': (offset.y + input.clientHeight)+'px',
     'left': offset.x+'px',
     'width': input.clientWidth+'px',
+    'z-index': 9001
   });
   document.body.appendChild(this._dropdown);
 
@@ -79153,7 +79827,7 @@ ComboBox.prototype.enable = function() {
 
 module.exports = ComboBox;
 
-},{"lodash/collection/forEach":616,"lodash/object/assign":703,"min-dom/lib/classes":712,"min-dom/lib/domify":714}],743:[function(require,module,exports){
+},{"./ComboBoxTemplate.html":797,"lodash/collection/forEach":646,"lodash/object/assign":757,"min-dom/lib/classes":767,"min-dom/lib/domify":769}],799:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -79186,16 +79860,20 @@ var assign = require('lodash/object/assign'),
  *      offset: { x: 0, y: 10 }
  * };
  */
-function ComplexCell(eventBus, elementRegistry) {
+function ComplexCell(eventBus, elementRegistry, sheet) {
 
   this._eventBus = eventBus;
   this._elementRegistry = elementRegistry;
+  this._sheet = sheet;
 
   this.setupListeners();
 }
 
 
 ComplexCell.prototype.setupListeners = function() {
+  var eventBus = this._eventBus,
+      elementRegistry = this._elementRegistry;
+
   var self = this;
 
   // click on body closes open complex cells
@@ -79210,15 +79888,14 @@ ComplexCell.prototype.setupListeners = function() {
     self.close();
   });
 
-  this._eventBus.on(['table.scroll', 'table.destroy', 'popupmenu.open'], function(event) {
-    self.close();
-  });
+  eventBus.on([ 'table.scroll', 'table.destroy', 'popupmenu.open' ], this.close, this);
 
   // click on elements close potentially open complex cells
   // and open a complex cell at the position of the cell
-  this._eventBus.on('element.click', function(event) {
+  eventBus.on('element.click', function(event) {
+    var gfx, gfxDimensions, element;
 
-    self.close();
+    this.close();
 
     // set flag on original event to prevent closing the opened dialog
     // this only applies if the event has an original event (so it was generated
@@ -79228,41 +79905,21 @@ ComplexCell.prototype.setupListeners = function() {
     }
 
     if (event.element && event.element.complex) {
+      element = event.element;
 
       // calculate position based on the position of the cell
-      var gfx = self._elementRegistry.getGraphics(event.element);
+      gfx = elementRegistry.getGraphics(element);
 
-      // traverse the offset parent chain to find the offset sum
-      var e = gfx;
-      var offset = {x:0,y:0};
-      while (e)
-      {
-          offset.x += e.offsetLeft;
-          offset.y += e.offsetTop;
-          e = e.offsetParent;
-      }
+      gfxDimensions = gfx.getBoundingClientRect();
 
-      // now also traverse the complete parent chain to determine the full scroll offset
-      e = gfx;
-      while (e && typeof e.scrollTop === 'number' && typeof e.scrollLeft === 'number')
-      {
-          offset.x -= e.scrollLeft;
-          offset.y -= e.scrollTop;
-          e = e.parentNode;
-      }
-
-      // add the global scroll offset
-      offset.x += window.pageXOffset;
-      offset.y += window.pageYOffset;
-
-      event.element.complex.position = {
-        x: offset.x,
-        y: offset.y
+      element.complex.position = {
+        x: gfxDimensions.left,
+        y: gfxDimensions.top
       };
 
-      self.open(event.element.complex);
+      this.open(element.complex);
     }
-  });
+  }, this);
 };
 
 ComplexCell.prototype.close = function() {
@@ -79285,11 +79942,12 @@ ComplexCell.prototype._createContainer = function(className, position) {
   var container = document.createElement('div');
 
   assign(container.style, {
-    position: 'absolute',
+    position: 'fixed',
     left: position.x + 'px',
     top: position.y  + 'px',
     width: 'auto',
-    height: 'auto'
+    height: 'auto',
+    'z-index': 9000
   });
 
   // stop propagation of click events on the container to avoid closing the template
@@ -79300,7 +79958,7 @@ ComplexCell.prototype._createContainer = function(className, position) {
   if (typeof className === 'string') {
     domClasses(container).add(className);
   } else {
-    for(var i = 0; i < className.length; i++) {
+    for (var i = 0; i < className.length; i++) {
       domClasses(container).add(className[i]);
     }
   }
@@ -79309,6 +79967,9 @@ ComplexCell.prototype._createContainer = function(className, position) {
 };
 
 ComplexCell.prototype.open = function(config) {
+  var eventBus = this._eventBus,
+      sheet = this._sheet;
+
   var className = config.className || 'complex-cell',
       template = config.template;
 
@@ -79323,7 +79984,7 @@ ComplexCell.prototype.open = function(config) {
     y: config.position.y + (config.offset && config.offset.y || 0)
   };
 
-  var parent = document.body,
+  var parent = sheet.getContainer(),
 
       // create the template container
       container = this._createContainer(className, position);
@@ -79340,7 +80001,7 @@ ComplexCell.prototype.open = function(config) {
     config: config
   };
 
-  this._eventBus.fire('complexCell.open', this._current);
+  eventBus.fire('complexCell.open', this._current);
 
   return this;
 };
@@ -79366,11 +80027,11 @@ ComplexCell.prototype._attachContent = function(content, container) {
   container.appendChild(content);
 };
 
-ComplexCell.$inject = [ 'eventBus', 'elementRegistry' ];
+ComplexCell.$inject = [ 'eventBus', 'elementRegistry', 'sheet' ];
 
 module.exports = ComplexCell;
 
-},{"lodash/object/assign":703,"min-dom/lib/classes":712,"min-dom/lib/remove":718}],744:[function(require,module,exports){
+},{"lodash/object/assign":757,"min-dom/lib/classes":767,"min-dom/lib/remove":773}],800:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -79378,7 +80039,7 @@ module.exports = {
   complexCell: [ 'type', require('./ComplexCell') ]
 };
 
-},{"./ComplexCell":743}],745:[function(require,module,exports){
+},{"./ComplexCell":799}],801:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -79393,14 +80054,14 @@ function Controls(eventBus) {
 
   var self = this;
 
-  eventBus.on('sheet.init', function(evt) {
+  eventBus.on([ 'sheet.init', 'sheet.cleared' ], function(evt) {
 
     var domNode = document.createElement('div');
     domClasses(domNode).add('tjs-controls');
 
     self.controlsContainer = domNode;
     evt.sheet.parentNode.appendChild(domNode);
-    
+
     eventBus.fire('controls.init', {
       node: domNode,
       controls: self
@@ -79415,7 +80076,7 @@ Controls.prototype.addControl = function(label, fct) {
     label: label
   });
 
-  var newNode = document.createElement('a');
+  var newNode = document.createElement('button');
   newNode.textContent = label;
 
   newNode.addEventListener('click', fct);
@@ -79426,6 +80087,8 @@ Controls.prototype.addControl = function(label, fct) {
     label: label,
     node: newNode
   });
+
+  return newNode;
 };
 
 
@@ -79433,7 +80096,7 @@ Controls.$inject = [ 'eventBus' ];
 
 module.exports = Controls;
 
-},{"min-dom/lib/classes":712}],746:[function(require,module,exports){
+},{"min-dom/lib/classes":767}],802:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -79441,7 +80104,7 @@ module.exports = {
   controls: [ 'type', require('./Controls') ]
 };
 
-},{"./Controls":745}],747:[function(require,module,exports){
+},{"./Controls":801}],803:[function(require,module,exports){
 'use strict';
 
 var debounce = require('lodash/function/debounce');
@@ -79455,9 +80118,9 @@ function EditBehavior(
     modeling,
     rules,
     graphicsFactory,
-    keyboard,
     commandStack,
-    tableName) {
+    tableName,
+    editorActions) {
 
   var replaceFct = function(text) {
     return text
@@ -79473,7 +80136,7 @@ function EditBehavior(
 
     // create an temporary textarea to translate html entities to normal chars
     var textArea = document.createElement('textarea');
-        textArea.innerHTML = encodedString;
+    textArea.innerHTML = encodedString;
     return textArea.value;
   };
 
@@ -79482,7 +80145,7 @@ function EditBehavior(
 
     // create an temporary textarea to translate html entities to normal chars
     var textArea = document.createElement('textarea');
-        textArea.innerHTML = encodedString;
+    textArea.innerHTML = encodedString;
     return textArea.value;
   };
 
@@ -79510,7 +80173,7 @@ function EditBehavior(
       // table editing features
       try {
         document.execCommand('enableInlineTableEditing', false, 'false');
-      } catch(e) {
+      } catch (e) {
         // only catch the IE error
         if (e.description !== 'Invalid argument.') {
           // rethrow all other errors
@@ -79550,7 +80213,7 @@ function EditBehavior(
   eventBus.on('element.input', debounce(function(event) {
     var element = event.element;
     var gfx = elementRegistry.getGraphics(event.element);
-    if (selection.isSelected(element)) {
+    if (selection.isSelected(element) && !element.preventAutoUpdate) {
 
       modeling.editCell(element.row.id, element.column.id, sanitizeInputWithoutTrim(gfx.innerHTML));
 
@@ -79562,7 +80225,9 @@ function EditBehavior(
       // apply changes of the diagram to the model
       var gfxOld = elementRegistry.getGraphics(event.oldSelection);
       if (gfxOld) {
-        modeling.editCell(event.oldSelection.row.id, event.oldSelection.column.id, sanitizeInput(gfxOld.innerHTML));
+        if (!event.oldSelection.preventAutoUpdate) {
+          modeling.editCell(event.oldSelection.row.id, event.oldSelection.column.id, sanitizeInput(gfxOld.innerHTML));
+        }
         graphicsFactory.update('row', event.oldSelection.row, elementRegistry.getGraphics(event.oldSelection.row));
         graphicsFactory.update('column', event.oldSelection.column,
                 elementRegistry.getGraphics(event.oldSelection.column));
@@ -79576,12 +80241,8 @@ function EditBehavior(
     }
   });
 
-  var nameFocus = false;
-  var nameElement = null;
   eventBus.on('tableName.init', function(event) {
     if (rules.allowed('name.edit')) {
-
-      nameElement = event.node;
 
       eventBus.fire('tableName.allowEdit', {
         editAllowed: true
@@ -79589,11 +80250,7 @@ function EditBehavior(
 
       event.node.setAttribute('contenteditable', true);
 
-      event.node.addEventListener('focus', function(evt) {
-        nameFocus = true;
-      }, true);
       event.node.addEventListener('blur', function(evt) {
-        nameFocus = false;
         var newName = sanitizeInput(evt.target.innerHTML);
         if (newName !== tableName.getName()) {
           modeling.editName(newName);
@@ -79602,40 +80259,34 @@ function EditBehavior(
     }
   });
 
-  if (keyboard) {
-    keyboard._listeners.unshift(function(key, modifiers) {
-      if(key === 13) {
-        var evt = modifiers;
-        if(modifiers.ctrlKey || modifiers.metaKey) {
-          // standard behavior (linebreak) on ctrl+enter
-          // http://stackoverflow.com/a/12957539/4582955
-            var selectObj = document.getSelection();
-            var range = selectObj.getRangeAt(0);
+  editorActions.register({
+    insertNewLine: function() {
+      // standard behavior (linebreak) on ctrl+enter
+      // http://stackoverflow.com/a/12957539/4582955
+      var selectObj = document.getSelection();
+      var range = selectObj.getRangeAt(0);
 
-            var br = document.createElement('br'),
-                textNode = document.createTextNode('\u00a0');
-                    //Passing ' ' directly will not end up being shown correctly
+      var br = document.createElement('br'),
+          textNode = document.createTextNode('\u00a0');
+                //Passing ' ' directly will not end up being shown correctly
 
-            range.deleteContents();             // delete the selection
-            range.insertNode(br);               // add a linebreak
-            range.collapse(false);              // go after the linebreak
-            range.insertNode(textNode);         // add a whitespace (so the linebreak gets displayed)
-            range.collapse(true);               // place cursor before whitespace
+      range.deleteContents();             // delete the selection
+      range.insertNode(br);               // add a linebreak
+      range.collapse(false);              // go after the linebreak
+      range.insertNode(textNode);         // add a whitespace (so the linebreak gets displayed)
+      range.collapse(true);               // place cursor before whitespace
 
-            // update the selection with the new range
-            selectObj.removeAllRanges();
-            selectObj.addRange(range);
-
-        } else if(modifiers.shiftKey) {
-          evt.preventDefault();
-          selection.selectAbove();
-        } else {
-          evt.preventDefault();
-          selection.selectBelow();
-        }
-      }
-    });
-  }
+        // update the selection with the new range
+      selectObj.removeAllRanges();
+      selectObj.addRange(range);
+    },
+    selectNextRow: function() {
+      selection.selectBelow();
+    },
+    selectPreviousRow: function() {
+      selection.selectAbove();
+    }
+  });
 }
 
 EditBehavior.$inject = [
@@ -79646,13 +80297,14 @@ EditBehavior.$inject = [
   'modeling',
   'rules',
   'graphicsFactory',
-  'keyboard',
   'commandStack',
-  'tableName' ];
+  'tableName',
+  'editorActions'
+];
 
 module.exports = EditBehavior;
 
-},{"lodash/function/debounce":621}],748:[function(require,module,exports){
+},{"lodash/function/debounce":652}],804:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -79714,7 +80366,7 @@ EditRenderer.$inject = [
 
 module.exports = EditRenderer;
 
-},{"min-dom/lib/classes":712}],749:[function(require,module,exports){
+},{"min-dom/lib/classes":767}],805:[function(require,module,exports){
 'use strict';
 
 /**
@@ -79731,6 +80383,8 @@ function Selection(eventBus, elementRegistry) {
   this._elementRegistry = elementRegistry;
 
   this._selectedElement = null;
+
+  this.frozen = false;
 }
 
 Selection.$inject = [ 'eventBus', 'elementRegistry' ];
@@ -79738,7 +80392,25 @@ Selection.$inject = [ 'eventBus', 'elementRegistry' ];
 module.exports = Selection;
 
 
+Selection.prototype.freeze = function() {
+  this.frozen = true;
+  this.pendingSelection = this._selectedElement;
+};
+
+Selection.prototype.unfreeze = function() {
+  this.frozen = false;
+  if (this.pendingSelection) {
+    this.select(this.pendingSelection);
+  } else {
+    this.deselect();
+  }
+};
+
 Selection.prototype.deselect = function(skipEvent) {
+  if (this.frozen) {
+    this.pendingSelection = null;
+    return;
+  }
   if (this._selectedElement) {
     var oldSelection = this._selectedElement;
 
@@ -79771,6 +80443,10 @@ Selection.prototype.isSelected = function(element) {
  * @param  {Object} element element to be selected
  */
 Selection.prototype.select = function(element) {
+  if (this.frozen) {
+    this.pendingSelection = element;
+    return;
+  }
   if (!element || this.isSelected(element)) {
     return;
   }
@@ -79796,7 +80472,7 @@ Selection.prototype.select = function(element) {
  */
 Selection.prototype.selectAbove = function() {
   var node = this.get();
-  if(node && node.row && node.row.previous) {
+  if (node && node.row && node.row.previous) {
     var cell = this._elementRegistry.filter(function(element) {
       return element.row && element.row === node.row.previous &&
          element.column && element.column === node.column;
@@ -79813,7 +80489,7 @@ Selection.prototype.selectAbove = function() {
  */
 Selection.prototype.selectBelow = function() {
   var node = this.get();
-  if(node && node.row && node.row.next) {
+  if (node && node.row && node.row.next) {
     var cell = this._elementRegistry.filter(function(element) {
       return element.row && element.row === node.row.next &&
          element.column && element.column === node.column;
@@ -79823,7 +80499,7 @@ Selection.prototype.selectBelow = function() {
   }
 };
 
-},{}],750:[function(require,module,exports){
+},{}],806:[function(require,module,exports){
 module.exports = {
   __init__: [ 'editBehavior', 'editRenderer' ],
   __depends__: [
@@ -79837,7 +80513,7 @@ module.exports = {
   editRenderer: [ 'type', require('./EditRenderer') ]
 };
 
-},{"../interaction-events":754,"../keyboard":756,"../modeling":769,"./EditBehavior":747,"./EditRenderer":748,"./Selection":749,"diagram-js/lib/features/rules":578}],751:[function(require,module,exports){
+},{"../interaction-events":810,"../keyboard":812,"../modeling":825,"./EditBehavior":803,"./EditRenderer":804,"./Selection":805,"diagram-js/lib/features/rules":611}],807:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -79971,13 +80647,13 @@ function error(action, message) {
   return new Error(action + ' ' + message);
 }
 
-},{"lodash/collection/forEach":616}],752:[function(require,module,exports){
+},{"lodash/collection/forEach":646}],808:[function(require,module,exports){
 module.exports = {
   __init__: [ 'editorActions' ],
   editorActions: [ 'type', require('./EditorActions') ]
 };
 
-},{"./EditorActions":751}],753:[function(require,module,exports){
+},{"./EditorActions":807}],809:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -80091,7 +80767,7 @@ function InteractionEvents(eventBus, elementRegistry) {
     var fn = handlers.scroll;
 
     if (!fn) {
-      fn = handlers.scroll = function (event) {
+      fn = handlers.scroll = function(event) {
         if (event.target.contains(node)) {
           eventBus.fire('table.scroll', { gfx: event.target, originalEvent: event });
         }
@@ -80224,13 +80900,13 @@ module.exports = InteractionEvents;
  * @property {Event} originalEvent
  */
 
-},{"diagram-js/lib/util/Mouse":581,"lodash/collection/forEach":616,"min-dom/lib/delegate":713}],754:[function(require,module,exports){
+},{"diagram-js/lib/util/Mouse":614,"lodash/collection/forEach":646,"min-dom/lib/delegate":768}],810:[function(require,module,exports){
 module.exports = {
   __init__: [ 'interactionEvents' ],
   interactionEvents: [ 'type', require('./InteractionEvents') ]
 };
 
-},{"./InteractionEvents":753}],755:[function(require,module,exports){
+},{"./InteractionEvents":809}],811:[function(require,module,exports){
 'use strict';
 
 var domEvent = require('min-dom/lib/event'),
@@ -80282,7 +80958,7 @@ function Keyboard(config, eventBus, editorActions) {
       return;
     }
 
-    for (i = 0; !!(l = listeners[i]); i++) {
+    for (i = 0; (l = listeners[i]); i++) {
       if (l(code, event)) {
         event.stopPropagation();
         event.preventDefault();
@@ -80375,8 +81051,39 @@ Keyboard.prototype._init = function() {
     }
   }
 
+  function insertNewLine(key, modifiers) {
+
+    if (isCmd(modifiers) && key === 13) {
+      editorActions.trigger('insertNewLine');
+
+      return true;
+    }
+  }
+
+  function selectNextRow(key, modifiers) {
+
+    if (!isShift(modifiers) && !isCmd(modifiers) && key === 13) {
+      editorActions.trigger('selectNextRow');
+
+      return true;
+    }
+  }
+
+  function selectPreviousRow(key, modifiers) {
+
+    if (isShift(modifiers) && !isCmd(modifiers) && key === 13) {
+      editorActions.trigger('selectPreviousRow');
+
+      return true;
+    }
+  }
+
   listeners.push(undo);
   listeners.push(redo);
+
+  listeners.push(insertNewLine);
+  listeners.push(selectNextRow);
+  listeners.push(selectPreviousRow);
 };
 
 
@@ -80407,7 +81114,7 @@ function isShift(modifiers) {
   return modifiers.shiftKey;
 }
 
-},{"min-dom/lib/event":715,"min-dom/lib/matches":716}],756:[function(require,module,exports){
+},{"min-dom/lib/event":770,"min-dom/lib/matches":771}],812:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../editor-actions')
@@ -80416,10 +81123,12 @@ module.exports = {
   keyboard: [ 'type', require('./Keyboard') ]
 };
 
-},{"../editor-actions":752,"./Keyboard":755}],757:[function(require,module,exports){
+},{"../editor-actions":808,"./Keyboard":811}],813:[function(require,module,exports){
 'use strict';
 
 var debounce = require('lodash/function/debounce');
+
+var VERY_LOW_PRIORITY = 150;
 
 function LineNumbers(eventBus, sheet) {
 
@@ -80430,13 +81139,20 @@ function LineNumbers(eventBus, sheet) {
 
   eventBus.on('utilityColumn.added', function(event) {
     var column = event.column;
-    self._utilityColumn = column;
-    self.updateLineNumbers();
-  });
+
+    this._utilityColumn = column;
+
+    this.updateLineNumbers();
+  }, this);
+
   eventBus.on([ 'cells.added', 'row.removed', 'row.moved' ], debounce(self.updateLineNumbers.bind(self), 100, {
     'leading': true,
     'trailing': true
   }));
+
+  eventBus.on([ 'sheet.clear', 'sheet.destroy' ], VERY_LOW_PRIORITY, function() {
+    this._utilityColumn = null;
+  }, this);
 }
 
 
@@ -80445,6 +81161,7 @@ LineNumbers.$inject = [ 'eventBus', 'sheet' ];
 module.exports = LineNumbers;
 
 LineNumbers.prototype.updateLineNumbers = function() {
+
   if (!this._utilityColumn || !this._sheet.getLastRow('body')) {
     // only render line numbers if utility column has been added
     return;
@@ -80469,7 +81186,7 @@ LineNumbers.prototype.updateLineNumbers = function() {
   }
 };
 
-},{"lodash/function/debounce":621}],758:[function(require,module,exports){
+},{"lodash/function/debounce":652}],814:[function(require,module,exports){
 module.exports = {
   __init__: [ 'lineNumbers' ],
   __depends__: [
@@ -80478,7 +81195,7 @@ module.exports = {
   lineNumbers: [ 'type', require('./LineNumbers') ]
 };
 
-},{"../utility-column":779,"./LineNumbers":757}],759:[function(require,module,exports){
+},{"../utility-column":835,"./LineNumbers":813}],815:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -80651,7 +81368,7 @@ Modeling.prototype.editName = function(newName) {
   return context;
 };
 
-},{"./cmd/ClearRowHandler":760,"./cmd/CreateColumnHandler":761,"./cmd/CreateRowHandler":762,"./cmd/DeleteColumnHandler":763,"./cmd/DeleteRowHandler":764,"./cmd/EditCellHandler":765,"./cmd/EditNameHandler":766,"./cmd/MoveColumnHandler":767,"./cmd/MoveRowHandler":768,"lodash/collection/forEach":616}],760:[function(require,module,exports){
+},{"./cmd/ClearRowHandler":816,"./cmd/CreateColumnHandler":817,"./cmd/CreateRowHandler":818,"./cmd/DeleteColumnHandler":819,"./cmd/DeleteRowHandler":820,"./cmd/EditCellHandler":821,"./cmd/EditNameHandler":822,"./cmd/MoveColumnHandler":823,"./cmd/MoveRowHandler":824,"lodash/collection/forEach":646}],816:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -80694,7 +81411,7 @@ DeleteRowHandler.prototype.execute = function(context) {
   context._oldContent = [];
   forEach(cells, function(cell) {
     context._oldContent.push(cell.content);
-    self._sheet.setCellContent({row: context.row, column: cell.column, content: null});
+    self._sheet.setCellContent({ row: context.row, column: cell.column, content: null });
   });
 };
 
@@ -80714,11 +81431,11 @@ DeleteRowHandler.prototype.revert = function(context) {
   });
   var i = 0;
   forEach(cells, function(cell) {
-    self._sheet.setCellContent({row: context.row, column: cell.column, content: context._oldContent[i++]});
+    self._sheet.setCellContent({ row: context.row, column: cell.column, content: context._oldContent[i++] });
   });
 };
 
-},{"lodash/collection/forEach":616}],761:[function(require,module,exports){
+},{"lodash/collection/forEach":646}],817:[function(require,module,exports){
 'use strict';
 
 /**
@@ -80768,7 +81485,7 @@ CreateColumnHandler.prototype.revert = function(context) {
   this._sheet.removeColumn(context.column);
 };
 
-},{}],762:[function(require,module,exports){
+},{}],818:[function(require,module,exports){
 'use strict';
 
 /**
@@ -80818,7 +81535,7 @@ CreateRowHandler.prototype.revert = function(context) {
   this._sheet.removeRow(context.row);
 };
 
-},{}],763:[function(require,module,exports){
+},{}],819:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -80876,11 +81593,11 @@ DeleteColumnHandler.prototype.revert = function(context) {
 
   // relive the cells
   forEach(context._cells, function(cell) {
-    self._sheet.setCellContent({row: cell.row, column: context.column, content: cell.content});
+    self._sheet.setCellContent({ row: cell.row, column: context.column, content: cell.content });
   });
 };
 
-},{"lodash/collection/forEach":616}],764:[function(require,module,exports){
+},{"lodash/collection/forEach":646}],820:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -80938,11 +81655,11 @@ DeleteRowHandler.prototype.revert = function(context) {
 
   // relive the cells
   forEach(context._cells, function(cell) {
-    self._sheet.setCellContent({column: cell.column, row: context.row, content: cell.content});
+    self._sheet.setCellContent({ column: cell.column, row: context.row, content: cell.content });
   });
 };
 
-},{"lodash/collection/forEach":616}],765:[function(require,module,exports){
+},{"lodash/collection/forEach":646}],821:[function(require,module,exports){
 'use strict';
 
 /**
@@ -80979,11 +81696,11 @@ EditCellHandler.prototype.execute = function(context) {
  * Undo Edit by resetting the content
  */
 EditCellHandler.prototype.revert = function(context) {
-  this._sheet.setCellContent({row: context.row, column: context.column, content: context.oldContent});
+  this._sheet.setCellContent({ row: context.row, column: context.column, content: context.oldContent });
   return context;
 };
 
-},{}],766:[function(require,module,exports){
+},{}],822:[function(require,module,exports){
 'use strict';
 
 /**
@@ -81024,7 +81741,7 @@ EditNameHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],767:[function(require,module,exports){
+},{}],823:[function(require,module,exports){
 'use strict';
 
 /**
@@ -81064,7 +81781,7 @@ MoveColumnHandler.prototype.execute = function(context) {
  * @param {Object} context
  */
 MoveColumnHandler.prototype.revert = function(context) {
-  if(context.previousRight) {
+  if (context.previousRight) {
     // if it had a column below previously, we can move it back there again
     this._sheet.moveColumn(context.source, context.previousRight, true);
   } else {
@@ -81073,7 +81790,7 @@ MoveColumnHandler.prototype.revert = function(context) {
   }
 };
 
-},{}],768:[function(require,module,exports){
+},{}],824:[function(require,module,exports){
 'use strict';
 
 /**
@@ -81113,7 +81830,7 @@ MoveRowHandler.prototype.execute = function(context) {
  * @param {Object} context
  */
 MoveRowHandler.prototype.revert = function(context) {
-  if(context.previousBelow) {
+  if (context.previousBelow) {
     // if it had a row below previously, we can move it back there again
     this._sheet.moveRow(context.source, context.previousBelow, true);
   } else {
@@ -81122,7 +81839,7 @@ MoveRowHandler.prototype.revert = function(context) {
   }
 };
 
-},{}],769:[function(require,module,exports){
+},{}],825:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('diagram-js/lib/command'),
@@ -81134,7 +81851,7 @@ module.exports = {
   modeling: [ 'type', require('./Modeling') ]
 };
 
-},{"../change-support":741,"../utility-column":779,"./Modeling":759,"diagram-js/lib/command":574,"diagram-js/lib/features/rules":578}],770:[function(require,module,exports){
+},{"../change-support":796,"../utility-column":835,"./Modeling":815,"diagram-js/lib/command":607,"diagram-js/lib/features/rules":611}],826:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -81246,6 +81963,7 @@ PopupMenu.$inject = [ 'eventBus', 'sheet' ];
  * @return {PopupMenu}
  */
 PopupMenu.prototype.open = function(menu) {
+  var sheet = this._sheet;
 
   var className = menu.className || 'tjs-menu',
       position = menu.position,
@@ -81264,8 +81982,7 @@ PopupMenu.prototype.open = function(menu) {
     this.close();
   }
 
-  var //sheet = this._sheet,
-      parent = document.body, //sheet.getContainer(),
+  var parent = sheet.getContainer(),
       container = this._createContainer(className, position);
 
   this._createEntries(entries, container);
@@ -81314,10 +82031,6 @@ PopupMenu.prototype.isOpen = function() {
  * @param {Object} event
  */
 PopupMenu.prototype.trigger = function(event) {
-
-  // silence other actions
-  event.preventDefault();
-
   var element = event.delegateTarget || event.target,
       entryId = domAttr(element, DATA_REF);
 
@@ -81368,7 +82081,7 @@ PopupMenu.prototype._getEntry = function(entryId) {
   var menu = this._current.menu;
 
   var searchFct = function(haystack, needle) {
-    for(var i = 0; i < haystack.length; i++) {
+    for (var i = 0; i < haystack.length; i++) {
       if (haystack[i].id === needle) {
         return haystack[i];
       }
@@ -81400,7 +82113,7 @@ PopupMenu.prototype._createContainer = function(className, position) {
   var container = domify('<nav class="tjs-context-menu">');
 
   assign(container.style, {
-    position: 'absolute',
+    position: 'fixed',
     left: position.x + 'px',
     top: position.y  + 'px'
   });
@@ -81427,7 +82140,9 @@ PopupMenu.prototype._attachContainer = function(container, parent) {
 
   // Prevent default for mousedown events (so that selection does not get lost)
   domDelegate.bind(container, '.tjs-entry' ,'mousedown', function(event) {
-    event.preventDefault();
+    if (!event.customHandler) {
+      event.preventDefault();
+    }
   });
   // Attach to DOM
   parent.appendChild(container);
@@ -81464,14 +82179,29 @@ PopupMenu.prototype._createEntries = function(entries, container) {
  */
 PopupMenu.prototype._createEntry = function(entry, container) {
 
-    if (!entry.id) {
-      throw new Error ('every entry must have the id property set');
-    }
+  if (!entry.id) {
+    throw new Error ('every entry must have the id property set');
+  }
 
-    var entryContainer = domify('<li class="tjs-entry">'),
-        entryClasses = domClasses(entryContainer),
-        link = domify('<a>'),
+  var entryContainer,
+      entryClasses;
+
+  if (entry.content instanceof HTMLElement) {
+    entryContainer = domify('<li class="tjs-entry">');
+    entryClasses = domClasses(entryContainer);
+
+    domAttr(entryContainer, DATA_REF, entry.id);
+
+    entryContainer.appendChild(entry.content);
+
+    container.appendChild(entryContainer);
+  } else {
+    var link = domify('<a>'),
         linkClasses = domClasses(link);
+
+    entryContainer = domify('<li class="tjs-entry">');
+    entryClasses = domClasses(entryContainer);
+
 
     entryContainer.appendChild(link);
 
@@ -81524,12 +82254,14 @@ PopupMenu.prototype._createEntry = function(entry, container) {
     }
 
     container.appendChild(entryContainer);
+  }
+
 };
 
 
 module.exports = PopupMenu;
 
-},{"lodash/collection/forEach":616,"lodash/object/assign":703,"min-dom/lib/attr":711,"min-dom/lib/classes":712,"min-dom/lib/delegate":713,"min-dom/lib/domify":714,"min-dom/lib/remove":718}],771:[function(require,module,exports){
+},{"lodash/collection/forEach":646,"lodash/object/assign":757,"min-dom/lib/attr":766,"min-dom/lib/classes":767,"min-dom/lib/delegate":768,"min-dom/lib/domify":769,"min-dom/lib/remove":773}],827:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -81537,7 +82269,7 @@ module.exports = {
   popupMenu: [ 'type', require('./PopupMenu') ]
 };
 
-},{"./PopupMenu":770}],772:[function(require,module,exports){
+},{"./PopupMenu":826}],828:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -81560,7 +82292,7 @@ DragRenderer.$inject = [
 
 module.exports = DragRenderer;
 
-},{"min-dom/lib/classes":712}],773:[function(require,module,exports){
+},{"min-dom/lib/classes":767}],829:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -81592,22 +82324,22 @@ function RowDrag(eventBus, sheet, elementRegistry, modeling) {
   this.moveAbove = false;
 
   eventBus.on('element.mousedown', function(event) {
-    if(event.element.column === self._utilityColumn) {
+    if (event.element.column === self._utilityColumn) {
       event.preventDefault();
       self.startDragging(event.element.row);
       self.setLastDragPoint(event.originalEvent);
     }
   });
   document.body.addEventListener('mouseup', function(event) {
-    if(self.isDragging()) {
+    if (self.isDragging()) {
       self.stopDragging();
     }
   });
   document.body.addEventListener('mousemove', function(event) {
-    if(self.isDragging()) {
+    if (self.isDragging()) {
       event.preventDefault();
       self.updateDragDistance(event);
-      if(self.dragDistance > DRAG_THRESHOLD) {
+      if (self.dragDistance > DRAG_THRESHOLD) {
         self.updateVisuals(event);
       }
     }
@@ -81625,7 +82357,7 @@ RowDrag.prototype.setLastDragPoint = function(event) {
 
 RowDrag.prototype.updateVisuals = function(event) {
 
-  if(!this.dragVisual) {
+  if (!this.dragVisual) {
     this.dragVisual = this.createDragVisual(this.draggedElement);
   }
 
@@ -81637,7 +82369,7 @@ RowDrag.prototype.updateVisuals = function(event) {
   this.dragVisual.style.top = (this.previousCoordinates.y + 5) + 'px';
 
   // clear the indicator for the previous run
-  if(this.highlightedBorder) {
+  if (this.highlightedBorder) {
     domClasses(this.highlightedBorder).remove('drop');
     domClasses(this.highlightedBorder).remove('above');
     domClasses(this.highlightedBorder).remove('below');
@@ -81646,22 +82378,22 @@ RowDrag.prototype.updateVisuals = function(event) {
 
   // get the element we are hovering over
   var tr = event.target;
-  while(tr && (tr.tagName || '').toLowerCase() !== 'tr') {
+  while (tr && (tr.tagName || '').toLowerCase() !== 'tr') {
     tr = tr.parentNode;
   }
-  if(tr) {
+  if (tr) {
     // tr must be child of tbody
-    if(this._sheet.getBody().contains(tr)) {
+    if (this._sheet.getBody().contains(tr)) {
       // check if we hover over the top or the bottom half of the row
       var e = tr;
-      var offset = {x:0,y:0};
+      var offset = { x:0,y:0 };
       while (e)
       {
-          offset.x += e.offsetLeft;
-          offset.y += e.offsetTop;
-          e = e.offsetParent;
+        offset.x += e.offsetLeft;
+        offset.y += e.offsetTop;
+        e = e.offsetParent;
       }
-      if(event.clientY < offset.y + tr.clientHeight / 2) {
+      if (event.clientY < offset.y + tr.clientHeight / 2) {
         domClasses(tr).add('drop');
         domClasses(tr).add('above');
         this.moveAbove = true;
@@ -81712,18 +82444,18 @@ RowDrag.prototype.createDragVisual = function(element) {
 };
 
 RowDrag.prototype.stopDragging = function() {
-  if(this.highlightedBorder) {
+  if (this.highlightedBorder) {
     // make sure we drop it to the element we have previously highlighted
     var targetElement = this._elementRegistry.get(this.highlightedBorder.getAttribute('data-element-id'));
     this._modeling.moveRow(this.draggedElement, targetElement, this.moveAbove);
   }
-  if(this.dragVisual) {
+  if (this.dragVisual) {
     this.dragVisual.parentNode.removeChild(this.dragVisual);
     // restore opacity of the element
     domClasses(this._elementRegistry.getGraphics(this.draggedElement)).remove('dragged');
     this._elementRegistry.getGraphics(this.draggedElement).style.opacity = '';
   }
-  if(this.highlightedBorder) {
+  if (this.highlightedBorder) {
     domClasses(this.highlightedBorder).remove('drop');
     domClasses(this.highlightedBorder).remove('above');
     domClasses(this.highlightedBorder).remove('below');
@@ -81737,7 +82469,7 @@ RowDrag.prototype.isDragging = function() {
   return !!this.draggedElement;
 };
 
-},{"min-dom/lib/classes":712,"min-dom/lib/domify":714}],774:[function(require,module,exports){
+},{"min-dom/lib/classes":767,"min-dom/lib/domify":769}],830:[function(require,module,exports){
 module.exports = {
   __init__: [ 'rowDrag', 'dragRenderer' ],
   __depends__: [
@@ -81747,7 +82479,7 @@ module.exports = {
   dragRenderer: [ 'type', require('./DragRenderer') ]
 };
 
-},{"../utility-column":779,"./DragRenderer":772,"./RowDrag":773}],775:[function(require,module,exports){
+},{"../utility-column":835,"./DragRenderer":828,"./RowDrag":829}],831:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -81764,13 +82496,15 @@ function TableName(eventBus, sheet, tableName) {
   this.node = domify('<header><h3 class="tjs-table-name">'+this.tableName+'</h3></header>');
 
   var self = this;
-  eventBus.on('sheet.init', function(event) {
+
+  eventBus.on([ 'sheet.init', 'sheet.cleared' ], function(event) {
     sheet.getContainer().insertBefore(self.node, sheet.getRootElement());
-    eventBus.fire('tableName.init', {node: self.node.querySelector('h3')});
+    eventBus.fire('tableName.init', { node: self.node.querySelector('h3') });
   });
+
   eventBus.on('sheet.destroy', function(event) {
     sheet.getContainer().removeChild(self.node);
-    eventBus.fire('tableName.destroy', {node: self.node.querySelector('h3')});
+    eventBus.fire('tableName.destroy', { node: self.node.querySelector('h3') });
   });
 }
 
@@ -81791,7 +82525,7 @@ TableName.prototype.getNode = function() {
   return this.node.querySelector('h3');
 };
 
-},{"min-dom/lib/domify":714}],776:[function(require,module,exports){
+},{"min-dom/lib/domify":769}],832:[function(require,module,exports){
 'use strict';
 
 /**
@@ -81803,27 +82537,30 @@ function UtilityColumn(eventBus, sheet) {
 
   // add the row control row
   this.column = null;
-  var self = this;
-  eventBus.on('sheet.init', function(event) {
+
+  eventBus.on([ 'sheet.init', 'sheet.cleared' ], function(event) {
 
     eventBus.fire('utilityColumn.add', event);
 
-    self.column = sheet.addColumn({
+    this.column = sheet.addColumn({
       id: 'utilityColumn'
     });
 
-    eventBus.fire('utilityColumn.added', {column: self.column});
-  });
-  eventBus.on('sheet.destroy', function(event) {
+    eventBus.fire('utilityColumn.added', { column: this.column });
+  }, this);
 
-    eventBus.fire('utilityColumn.destroy', {column: self.column});
+  eventBus.on([ 'sheet.clear', 'sheet.destroy' ], function(event) {
+
+    eventBus.fire('utilityColumn.destroy', { column: this.column });
 
     sheet.removeColumn({
       id: 'utilityColumn'
     });
 
-    eventBus.fire('utilityColumn.destroyed', {column: self.column});
-  });
+    eventBus.fire('utilityColumn.destroyed', { column: this.column });
+
+    this.column = null;
+  }, this);
 }
 
 UtilityColumn.$inject = [ 'eventBus', 'sheet' ];
@@ -81835,19 +82572,19 @@ UtilityColumn.prototype.getColumn = function() {
   return this.column;
 };
 
-},{}],777:[function(require,module,exports){
+},{}],833:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
 
-function UtilityColumnRenderer(
-    eventBus,
-    utilityColumn) {
+function UtilityColumnRenderer(eventBus, utilityColumn) {
 
   eventBus.on('cell.render', function(event) {
     if (event.data.column === utilityColumn.getColumn() && !event.data.row.isFoot) {
       event.gfx.childNodes[0].textContent = event.data.content;
       domClasses(event.gfx).add(event.data.row.isHead ? 'hit' : 'number');
+
+      event.gfx.style.width = '45px';
     }
   });
 }
@@ -81859,7 +82596,7 @@ UtilityColumnRenderer.$inject = [
 
 module.exports = UtilityColumnRenderer;
 
-},{"min-dom/lib/classes":712}],778:[function(require,module,exports){
+},{"min-dom/lib/classes":767}],834:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -81891,10 +82628,11 @@ UtilityColumnRules.prototype.init = function() {
 
 };
 
-},{"diagram-js/lib/features/rules/RuleProvider":576,"inherits":608}],779:[function(require,module,exports){
+},{"diagram-js/lib/features/rules/RuleProvider":609,"inherits":637}],835:[function(require,module,exports){
 module.exports = {
   __init__: [ 'utilityColumn', 'utilityColumnRules', 'utilityColumnRenderer' ],
   __depends__: [
+    require('diagram-js/lib/command'),
     require('diagram-js/lib/features/rules')
   ],
   utilityColumn: [ 'type', require('./UtilityColumn') ],
@@ -81902,7 +82640,7 @@ module.exports = {
   utilityColumnRenderer: [ 'type', require('./UtilityColumnRenderer') ]
 };
 
-},{"./UtilityColumn":776,"./UtilityColumnRenderer":777,"./UtilityColumnRules":778,"diagram-js/lib/features/rules":578}],780:[function(require,module,exports){
+},{"./UtilityColumn":832,"./UtilityColumnRenderer":833,"./UtilityColumnRules":834,"diagram-js/lib/command":607,"diagram-js/lib/features/rules":611}],836:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -81969,9 +82707,17 @@ module.exports.Table = Table;
 module.exports.Row = Row;
 module.exports.Column = Column;
 
-},{"inherits":608,"lodash/object/assign":703}],781:[function(require,module,exports){
+},{"inherits":637,"lodash/object/assign":757}],837:[function(require,module,exports){
+arguments[4][119][0].apply(exports,arguments)
+},{"dup":119}],838:[function(require,module,exports){
+arguments[4][120][0].apply(exports,arguments)
+},{"./annotation":837,"./injector":839,"./module":840,"dup":120}],839:[function(require,module,exports){
+arguments[4][121][0].apply(exports,arguments)
+},{"./annotation":837,"./module":840,"dup":121}],840:[function(require,module,exports){
+arguments[4][122][0].apply(exports,arguments)
+},{"dup":122}],841:[function(require,module,exports){
 
-},{}],782:[function(require,module,exports){
+},{}],842:[function(require,module,exports){
 (function (global){
 /*!
  * The buffer module from node.js, for the browser.
@@ -83523,7 +84269,7 @@ function blitBuffer (src, dst, offset, length) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"base64-js":783,"ieee754":784,"isarray":785}],783:[function(require,module,exports){
+},{"base64-js":843,"ieee754":844,"isarray":845}],843:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
 ;(function (exports) {
@@ -83649,7 +84395,7 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 	exports.fromByteArray = uint8ToBase64
 }(typeof exports === 'undefined' ? (this.base64js = {}) : exports))
 
-},{}],784:[function(require,module,exports){
+},{}],844:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = nBytes * 8 - mLen - 1
@@ -83735,14 +84481,14 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],785:[function(require,module,exports){
+},{}],845:[function(require,module,exports){
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
-},{}],786:[function(require,module,exports){
+},{}],846:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -84045,9 +84791,9 @@ function isUndefined(arg) {
   return arg === void 0;
 }
 
-},{}],787:[function(require,module,exports){
+},{}],847:[function(require,module,exports){
 arguments[4][126][0].apply(exports,arguments)
-},{"dup":126}],788:[function(require,module,exports){
+},{"dup":126}],848:[function(require,module,exports){
 /*!
  * Determine if an object is a Buffer
  *
@@ -84070,7 +84816,7 @@ function isSlowBuffer (obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
 }
 
-},{}],789:[function(require,module,exports){
+},{}],849:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -84252,10 +84998,10 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],790:[function(require,module,exports){
+},{}],850:[function(require,module,exports){
 module.exports = require("./lib/_stream_duplex.js")
 
-},{"./lib/_stream_duplex.js":791}],791:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":851}],851:[function(require,module,exports){
 // a duplex stream is just a stream that is both readable and writable.
 // Since JS doesn't have multiple prototypal inheritance, this class
 // prototypally inherits from Readable, and then parasitically from
@@ -84331,7 +85077,7 @@ function forEach(xs, f) {
     f(xs[i], i);
   }
 }
-},{"./_stream_readable":793,"./_stream_writable":795,"core-util-is":798,"inherits":787,"process-nextick-args":800}],792:[function(require,module,exports){
+},{"./_stream_readable":853,"./_stream_writable":855,"core-util-is":858,"inherits":847,"process-nextick-args":860}],852:[function(require,module,exports){
 // a passthrough stream.
 // basically just the most minimal sort of Transform stream.
 // Every written chunk gets output as-is.
@@ -84358,7 +85104,7 @@ function PassThrough(options) {
 PassThrough.prototype._transform = function (chunk, encoding, cb) {
   cb(null, chunk);
 };
-},{"./_stream_transform":794,"core-util-is":798,"inherits":787}],793:[function(require,module,exports){
+},{"./_stream_transform":854,"core-util-is":858,"inherits":847}],853:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -85298,7 +86044,7 @@ function indexOf(xs, x) {
   return -1;
 }
 }).call(this,require('_process'))
-},{"./_stream_duplex":791,"./internal/streams/BufferList":796,"_process":789,"buffer":782,"buffer-shims":797,"core-util-is":798,"events":786,"inherits":787,"isarray":799,"process-nextick-args":800,"string_decoder/":807,"util":781}],794:[function(require,module,exports){
+},{"./_stream_duplex":851,"./internal/streams/BufferList":856,"_process":849,"buffer":842,"buffer-shims":857,"core-util-is":858,"events":846,"inherits":847,"isarray":859,"process-nextick-args":860,"string_decoder/":867,"util":841}],854:[function(require,module,exports){
 // a transform stream is a readable/writable stream where you do
 // something with the data.  Sometimes it's called a "filter",
 // but that's not a great name for it, since that implies a thing where
@@ -85479,7 +86225,7 @@ function done(stream, er) {
 
   return stream.push(null);
 }
-},{"./_stream_duplex":791,"core-util-is":798,"inherits":787}],795:[function(require,module,exports){
+},{"./_stream_duplex":851,"core-util-is":858,"inherits":847}],855:[function(require,module,exports){
 (function (process){
 // A bit simpler than readable streams.
 // Implement an async ._write(chunk, encoding, cb), and it'll handle all
@@ -86008,7 +86754,7 @@ function CorkedRequest(state) {
   };
 }
 }).call(this,require('_process'))
-},{"./_stream_duplex":791,"_process":789,"buffer":782,"buffer-shims":797,"core-util-is":798,"events":786,"inherits":787,"process-nextick-args":800,"util-deprecate":801}],796:[function(require,module,exports){
+},{"./_stream_duplex":851,"_process":849,"buffer":842,"buffer-shims":857,"core-util-is":858,"events":846,"inherits":847,"process-nextick-args":860,"util-deprecate":861}],856:[function(require,module,exports){
 'use strict';
 
 var Buffer = require('buffer').Buffer;
@@ -86073,7 +86819,7 @@ BufferList.prototype.concat = function (n) {
   }
   return ret;
 };
-},{"buffer":782,"buffer-shims":797}],797:[function(require,module,exports){
+},{"buffer":842,"buffer-shims":857}],857:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -86185,7 +86931,7 @@ exports.allocUnsafeSlow = function allocUnsafeSlow(size) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"buffer":782}],798:[function(require,module,exports){
+},{"buffer":842}],858:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -86296,9 +87042,9 @@ function objectToString(o) {
 }
 
 }).call(this,{"isBuffer":require("../../../../insert-module-globals/node_modules/is-buffer/index.js")})
-},{"../../../../insert-module-globals/node_modules/is-buffer/index.js":788}],799:[function(require,module,exports){
-arguments[4][785][0].apply(exports,arguments)
-},{"dup":785}],800:[function(require,module,exports){
+},{"../../../../insert-module-globals/node_modules/is-buffer/index.js":848}],859:[function(require,module,exports){
+arguments[4][845][0].apply(exports,arguments)
+},{"dup":845}],860:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -86345,7 +87091,7 @@ function nextTick(fn, arg1, arg2, arg3) {
 }
 
 }).call(this,require('_process'))
-},{"_process":789}],801:[function(require,module,exports){
+},{"_process":849}],861:[function(require,module,exports){
 (function (global){
 
 /**
@@ -86416,10 +87162,10 @@ function config (name) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],802:[function(require,module,exports){
+},{}],862:[function(require,module,exports){
 module.exports = require("./lib/_stream_passthrough.js")
 
-},{"./lib/_stream_passthrough.js":792}],803:[function(require,module,exports){
+},{"./lib/_stream_passthrough.js":852}],863:[function(require,module,exports){
 (function (process){
 var Stream = (function (){
   try {
@@ -86439,13 +87185,13 @@ if (!process.browser && process.env.READABLE_STREAM === 'disable' && Stream) {
 }
 
 }).call(this,require('_process'))
-},{"./lib/_stream_duplex.js":791,"./lib/_stream_passthrough.js":792,"./lib/_stream_readable.js":793,"./lib/_stream_transform.js":794,"./lib/_stream_writable.js":795,"_process":789}],804:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":851,"./lib/_stream_passthrough.js":852,"./lib/_stream_readable.js":853,"./lib/_stream_transform.js":854,"./lib/_stream_writable.js":855,"_process":849}],864:[function(require,module,exports){
 module.exports = require("./lib/_stream_transform.js")
 
-},{"./lib/_stream_transform.js":794}],805:[function(require,module,exports){
+},{"./lib/_stream_transform.js":854}],865:[function(require,module,exports){
 module.exports = require("./lib/_stream_writable.js")
 
-},{"./lib/_stream_writable.js":795}],806:[function(require,module,exports){
+},{"./lib/_stream_writable.js":855}],866:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -86574,7 +87320,7 @@ Stream.prototype.pipe = function(dest, options) {
   return dest;
 };
 
-},{"events":786,"inherits":787,"readable-stream/duplex.js":790,"readable-stream/passthrough.js":802,"readable-stream/readable.js":803,"readable-stream/transform.js":804,"readable-stream/writable.js":805}],807:[function(require,module,exports){
+},{"events":846,"inherits":847,"readable-stream/duplex.js":850,"readable-stream/passthrough.js":862,"readable-stream/readable.js":863,"readable-stream/transform.js":864,"readable-stream/writable.js":865}],867:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -86797,7 +87543,7 @@ function base64DetectIncompleteChar(buffer) {
   this.charLength = this.charReceived ? 3 : 0;
 }
 
-},{"buffer":782}],808:[function(require,module,exports){
+},{"buffer":842}],868:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.1
  * http://jquery.com/
@@ -95989,7 +96735,7 @@ return jQuery;
 
 }));
 
-},{}],809:[function(require,module,exports){
+},{}],869:[function(require,module,exports){
 (function (global){
 //! moment.js
 //! version : 2.9.0
@@ -99036,7 +99782,7 @@ return jQuery;
 }).call(this);
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],810:[function(require,module,exports){
+},{}],870:[function(require,module,exports){
 /*
  * angular-ui-bootstrap
  * http://angular-ui.github.io/bootstrap/
