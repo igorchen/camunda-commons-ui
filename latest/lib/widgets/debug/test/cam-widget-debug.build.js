@@ -129,6 +129,8 @@ testModule.controller('testController', [
       },
       array: 'abcdef'.split('')
     };
+
+    $scope.info = 'testInfo';
   }]);
 
 
