@@ -429,7 +429,7 @@ module.exports = [
     };
   }];
 
-},{"jquery":20}],5:[function(require,module,exports){
+},{"jquery":21}],5:[function(require,module,exports){
 'use strict';
 
 
@@ -946,7 +946,7 @@ angular.element(document).ready(function() {
   angular.bootstrap(document.body, [testModule.name]);
 });
 
-},{"../../../../vendor/ui-bootstrap-tpls-0.11.2-camunda":21,"../../clipboard/cam-widget-clipboard":1,"../../variable/cam-variable-utils":2,"../../variable/cam-widget-variable":3,"../cam-render-var-template":4,"../cam-widget-variables-table":5,"camunda-bpm-sdk-js/vendor/angular":10}],7:[function(require,module,exports){
+},{"../../../../vendor/ui-bootstrap-tpls-0.11.2-camunda":22,"../../clipboard/cam-widget-clipboard":1,"../../variable/cam-variable-utils":2,"../../variable/cam-widget-variable":3,"../cam-render-var-template":4,"../cam-widget-variables-table":5,"camunda-bpm-sdk-js/vendor/angular":10}],7:[function(require,module,exports){
 'use strict';
 
 var INTEGER_PATTERN = /^-?[\d]+$/;
@@ -23438,7 +23438,7 @@ module.exports = require('angular');
 
     module.exports = ClipboardAction;
 });
-},{"select":18}],12:[function(require,module,exports){
+},{"select":19}],12:[function(require,module,exports){
 (function (global, factory) {
     if (typeof define === "function" && define.amd) {
         define(['module', './clipboard-action', 'tiny-emitter', 'good-listener'], factory);
@@ -23598,19 +23598,54 @@ module.exports = require('angular');
 
     module.exports = Clipboard;
 });
-},{"./clipboard-action":11,"good-listener":17,"tiny-emitter":19}],13:[function(require,module,exports){
-var matches = require('matches-selector')
+},{"./clipboard-action":11,"good-listener":18,"tiny-emitter":20}],13:[function(require,module,exports){
+/**
+ * Module Dependencies
+ */
 
-module.exports = function (element, selector, checkYoSelf) {
-  var parent = checkYoSelf ? element : element.parentNode
-
-  while (parent && parent !== document) {
-    if (matches(parent, selector)) return parent;
-    parent = parent.parentNode
-  }
+try {
+  var matches = require('matches-selector')
+} catch (err) {
+  var matches = require('component-matches-selector')
 }
 
-},{"matches-selector":14}],14:[function(require,module,exports){
+/**
+ * Export `closest`
+ */
+
+module.exports = closest
+
+/**
+ * Closest
+ *
+ * @param {Element} el
+ * @param {String} selector
+ * @param {Element} scope (optional)
+ */
+
+function closest (el, selector, scope) {
+  scope = scope || document.documentElement;
+
+  // walk up the dom
+  while (el && el !== scope) {
+    if (matches(el, selector)) return el;
+    el = el.parentNode;
+  }
+
+  // check scope for match
+  return matches(el, selector) ? el : null;
+}
+
+},{"component-matches-selector":14,"matches-selector":14}],14:[function(require,module,exports){
+/**
+ * Module dependencies.
+ */
+
+try {
+  var query = require('query');
+} catch (err) {
+  var query = require('component-query');
+}
 
 /**
  * Element prototype.
@@ -23622,7 +23657,7 @@ var proto = Element.prototype;
  * Vendor function.
  */
 
-var vendor = proto.matchesSelector
+var vendor = proto.matches
   || proto.webkitMatchesSelector
   || proto.mozMatchesSelector
   || proto.msMatchesSelector
@@ -23644,15 +23679,40 @@ module.exports = match;
  */
 
 function match(el, selector) {
+  if (!el || el.nodeType !== 1) return false;
   if (vendor) return vendor.call(el, selector);
-  var nodes = el.parentNode.querySelectorAll(selector);
+  var nodes = query.all(selector, el.parentNode);
   for (var i = 0; i < nodes.length; ++i) {
     if (nodes[i] == el) return true;
   }
   return false;
 }
-},{}],15:[function(require,module,exports){
-var closest = require('closest');
+
+},{"component-query":15,"query":15}],15:[function(require,module,exports){
+function one(selector, el) {
+  return el.querySelector(selector);
+}
+
+exports = module.exports = function(selector, el){
+  el = el || document;
+  return one(selector, el);
+};
+
+exports.all = function(selector, el){
+  el = el || document;
+  return el.querySelectorAll(selector);
+};
+
+exports.engine = function(obj){
+  if (!obj.one) throw new Error('.one callback required');
+  if (!obj.all) throw new Error('.all callback required');
+  one = obj.one;
+  exports.all = obj.all;
+  return exports;
+};
+
+},{}],16:[function(require,module,exports){
+var closest = require('component-closest');
 
 /**
  * Delegates event to a selector.
@@ -23697,7 +23757,7 @@ function listener(element, selector, type, callback) {
 
 module.exports = delegate;
 
-},{"closest":13}],16:[function(require,module,exports){
+},{"component-closest":13}],17:[function(require,module,exports){
 /**
  * Check if argument is a HTML element.
  *
@@ -23748,7 +23808,7 @@ exports.fn = function(value) {
     return type === '[object Function]';
 };
 
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 var is = require('./is');
 var delegate = require('delegate');
 
@@ -23845,7 +23905,7 @@ function listenSelector(selector, type, callback) {
 
 module.exports = listen;
 
-},{"./is":16,"delegate":15}],18:[function(require,module,exports){
+},{"./is":17,"delegate":16}],19:[function(require,module,exports){
 function select(element) {
     var selectedText;
 
@@ -23875,7 +23935,7 @@ function select(element) {
 
 module.exports = select;
 
-},{}],19:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 function E () {
   // Keep this empty so it's easier to inherit from
   // (via https://github.com/lipsmack from https://github.com/scottcorgan/tiny-emitter/issues/3)
@@ -23943,7 +24003,7 @@ E.prototype = {
 
 module.exports = E;
 
-},{}],20:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.1
  * http://jquery.com/
@@ -33135,7 +33195,7 @@ return jQuery;
 
 }));
 
-},{}],21:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 /*
  * angular-ui-bootstrap
  * http://angular-ui.github.io/bootstrap/

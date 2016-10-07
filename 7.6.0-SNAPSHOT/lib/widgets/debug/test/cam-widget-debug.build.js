@@ -22542,7 +22542,7 @@ module.exports = require('angular');
 
     module.exports = ClipboardAction;
 });
-},{"select":14}],8:[function(require,module,exports){
+},{"select":15}],8:[function(require,module,exports){
 (function (global, factory) {
     if (typeof define === "function" && define.amd) {
         define(['module', './clipboard-action', 'tiny-emitter', 'good-listener'], factory);
@@ -22702,19 +22702,54 @@ module.exports = require('angular');
 
     module.exports = Clipboard;
 });
-},{"./clipboard-action":7,"good-listener":13,"tiny-emitter":15}],9:[function(require,module,exports){
-var matches = require('matches-selector')
+},{"./clipboard-action":7,"good-listener":14,"tiny-emitter":16}],9:[function(require,module,exports){
+/**
+ * Module Dependencies
+ */
 
-module.exports = function (element, selector, checkYoSelf) {
-  var parent = checkYoSelf ? element : element.parentNode
-
-  while (parent && parent !== document) {
-    if (matches(parent, selector)) return parent;
-    parent = parent.parentNode
-  }
+try {
+  var matches = require('matches-selector')
+} catch (err) {
+  var matches = require('component-matches-selector')
 }
 
-},{"matches-selector":10}],10:[function(require,module,exports){
+/**
+ * Export `closest`
+ */
+
+module.exports = closest
+
+/**
+ * Closest
+ *
+ * @param {Element} el
+ * @param {String} selector
+ * @param {Element} scope (optional)
+ */
+
+function closest (el, selector, scope) {
+  scope = scope || document.documentElement;
+
+  // walk up the dom
+  while (el && el !== scope) {
+    if (matches(el, selector)) return el;
+    el = el.parentNode;
+  }
+
+  // check scope for match
+  return matches(el, selector) ? el : null;
+}
+
+},{"component-matches-selector":10,"matches-selector":10}],10:[function(require,module,exports){
+/**
+ * Module dependencies.
+ */
+
+try {
+  var query = require('query');
+} catch (err) {
+  var query = require('component-query');
+}
 
 /**
  * Element prototype.
@@ -22726,7 +22761,7 @@ var proto = Element.prototype;
  * Vendor function.
  */
 
-var vendor = proto.matchesSelector
+var vendor = proto.matches
   || proto.webkitMatchesSelector
   || proto.mozMatchesSelector
   || proto.msMatchesSelector
@@ -22748,15 +22783,40 @@ module.exports = match;
  */
 
 function match(el, selector) {
+  if (!el || el.nodeType !== 1) return false;
   if (vendor) return vendor.call(el, selector);
-  var nodes = el.parentNode.querySelectorAll(selector);
+  var nodes = query.all(selector, el.parentNode);
   for (var i = 0; i < nodes.length; ++i) {
     if (nodes[i] == el) return true;
   }
   return false;
 }
-},{}],11:[function(require,module,exports){
-var closest = require('closest');
+
+},{"component-query":11,"query":11}],11:[function(require,module,exports){
+function one(selector, el) {
+  return el.querySelector(selector);
+}
+
+exports = module.exports = function(selector, el){
+  el = el || document;
+  return one(selector, el);
+};
+
+exports.all = function(selector, el){
+  el = el || document;
+  return el.querySelectorAll(selector);
+};
+
+exports.engine = function(obj){
+  if (!obj.one) throw new Error('.one callback required');
+  if (!obj.all) throw new Error('.all callback required');
+  one = obj.one;
+  exports.all = obj.all;
+  return exports;
+};
+
+},{}],12:[function(require,module,exports){
+var closest = require('component-closest');
 
 /**
  * Delegates event to a selector.
@@ -22801,7 +22861,7 @@ function listener(element, selector, type, callback) {
 
 module.exports = delegate;
 
-},{"closest":9}],12:[function(require,module,exports){
+},{"component-closest":9}],13:[function(require,module,exports){
 /**
  * Check if argument is a HTML element.
  *
@@ -22852,7 +22912,7 @@ exports.fn = function(value) {
     return type === '[object Function]';
 };
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 var is = require('./is');
 var delegate = require('delegate');
 
@@ -22949,7 +23009,7 @@ function listenSelector(selector, type, callback) {
 
 module.exports = listen;
 
-},{"./is":12,"delegate":11}],14:[function(require,module,exports){
+},{"./is":13,"delegate":12}],15:[function(require,module,exports){
 function select(element) {
     var selectedText;
 
@@ -22979,7 +23039,7 @@ function select(element) {
 
 module.exports = select;
 
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 function E () {
   // Keep this empty so it's easier to inherit from
   // (via https://github.com/lipsmack from https://github.com/scottcorgan/tiny-emitter/issues/3)
