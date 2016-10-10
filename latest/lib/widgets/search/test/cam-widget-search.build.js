@@ -2996,7 +2996,7 @@ module.exports = ['$timeout', '$location', 'search',
           return out;
         };
 
-        $scope.$watch('searches', function() {
+        var handleSearchesUpdate = function() {
           var searches = $scope.searches;
           // add valid searches to validSearchesBuffer
           angular.forEach(searches, function(search) {
@@ -3024,8 +3024,9 @@ module.exports = ['$timeout', '$location', 'search',
           $timeout(function() {IGNORE_URL_UPDATE = false;});
 
           updateSearchTypes();
+        };
 
-        }, true);
+        $scope.$watch('searches', handleSearchesUpdate, true);
 
         $scope.$on('$locationChangeSuccess', function() {
           if(!IGNORE_URL_UPDATE && $location.search().hasOwnProperty(searchId+'Query')) {
@@ -3068,9 +3069,14 @@ module.exports = ['$timeout', '$location', 'search',
         };
 
         $scope.$watch('types', function() {
+          //in case if array of types changed - update dropdown values
+          $scope.searchTypes = $scope.types.map(function(el) {
+            return el.id;
+          });
+          $scope.dropdownTypes = getTypes();
+
           // Currently we only allow to change the potential names of a type, to support changing the filter
           // in the tasklist while preserving existing search queries
-
           angular.forEach($scope.searches, function(search) {
             search.potentialNames = getConfigByTypeKey(search.type.value.key).potentialNames || [];
           });
