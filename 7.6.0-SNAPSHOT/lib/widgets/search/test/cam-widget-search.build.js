@@ -146,7 +146,7 @@ module.exports = function() {
   };
 };
 
-},{"camunda-bpm-sdk-js/vendor/angular":278,"jquery":942}],5:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":278,"jquery":1107}],5:[function(require,module,exports){
 'use strict';
 
 
@@ -303,7 +303,7 @@ directivesModule.config([
 
 module.exports = directivesModule;
 
-},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":944,"../util/index":15,"./autoFill":1,"./compileTemplate":2,"./email":3,"./engineSelect":4,"./inPlaceTextField":5,"./instantTypeahead":7,"./nl2br":8,"./notificationsPanel":9,"./passwordRepeat":10,"./showIfAuthorized":11,"camunda-bpm-sdk-js/vendor/angular":278}],7:[function(require,module,exports){
+},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":1109,"../util/index":15,"./autoFill":1,"./compileTemplate":2,"./email":3,"./engineSelect":4,"./inPlaceTextField":5,"./instantTypeahead":7,"./nl2br":8,"./notificationsPanel":9,"./passwordRepeat":10,"./showIfAuthorized":11,"camunda-bpm-sdk-js/vendor/angular":278}],7:[function(require,module,exports){
   'use strict';
 
   var secretEmptyKey = '[$empty$]';
@@ -669,7 +669,7 @@ filtersModule.config([
 
 module.exports = filtersModule;
 
-},{"angular-translate":40,"camunda-bpm-sdk-js/vendor/angular":278,"moment":943}],13:[function(require,module,exports){
+},{"angular-translate":40,"camunda-bpm-sdk-js/vendor/angular":278,"moment":1108}],13:[function(require,module,exports){
 'use strict';
 
 var angular = require('camunda-bpm-sdk-js/vendor/angular');
@@ -1756,7 +1756,7 @@ module.exports = [function() {
 
 var angular = require('camunda-bpm-sdk-js/vendor/angular');
 var Viewer = require('dmn-js/lib/NavigatedViewer');
-var Modeler = require('dmn-js/lib/table/Modeler');
+var Modeler = require('dmn-js/lib/Modeler');
 var changeDmnNamespace = require('../../util/change-dmn-namespace');
 
 var template = "<div class=\"alert alert-danger\"\n     ng-if=\"error\">\n  <strong>Could not render table:</strong><br/>\n  {{ error.message }}\n</div>\n\n<div ng-show=\"!error\"\n     ng-if=\"!loaded\"\n     class=\"placeholder-container\">\n  <div class=\"placeholder-content\">\n    Loading table<br />\n    <span class=\"glyphicon glyphicon-refresh animate-spin\"></span>\n  </div>\n</div>\n\n<div ng-show=\"!error\"\n     class=\"table-holder\"></div>\n\n<div ng-if=\"!error && !disableNavigation && isDrd\">\n  <div class=\"navigation zoom\">\n    <button class=\"btn btn-default in\"\n            title=\"zoom in\"\n            ng-click=\"zoomIn()\">\n      <span class=\"glyphicon glyphicon-plus\"></span>\n    </button>\n    <button class=\"btn btn-default out\"\n            title=\"zoom out\"\n            ng-click=\"zoomOut()\">\n      <span class=\"glyphicon glyphicon-minus\"></span>\n    </button>\n  </div>\n\n  <div class=\"navigation reset\">\n    <button class=\"btn btn-default\"\n            title=\"reset zoom\"\n            ng-click=\"resetZoom()\">\n      <span class=\"glyphicon glyphicon-screenshot\"></span>\n    </button>\n  </div>\n</div>\n";
@@ -1801,7 +1801,7 @@ module.exports = ['$window', function($window) {
       };
 
       $scope.control.highlightRow = function(elementId, className) {
-        var tableViewer = viewer.tableViewer;
+        var tableViewer = viewer.table;
         var elementRegistry = tableViewer.get('elementRegistry');
 
         tableViewer.get('eventBus').on('row.render', function(event) {
@@ -1888,6 +1888,12 @@ module.exports = ['$window', function($window) {
         });
       });
 
+      viewer.on('view.switch', function(e) {
+        $scope.$apply(function() {
+          $scope.isDrd = e.fromTable;
+        });
+      });
+
       $scope.zoomIn = function() {
         viewer.get('zoomScroll').zoom(1, {
           x: $element[0].offsetWidth / 2,
@@ -1964,7 +1970,7 @@ module.exports = ['$window', function($window) {
   };
 }];
 
-},{"../../util/change-dmn-namespace":14,"camunda-bpm-sdk-js/vendor/angular":278,"dmn-js/lib/NavigatedViewer":521,"dmn-js/lib/table/Modeler":531}],24:[function(require,module,exports){
+},{"../../util/change-dmn-namespace":14,"camunda-bpm-sdk-js/vendor/angular":278,"dmn-js/lib/Modeler":521,"dmn-js/lib/NavigatedViewer":522}],24:[function(require,module,exports){
 'use strict';
 
 
@@ -2121,7 +2127,7 @@ widgetModule.filter('camQueryComponent', camQueryComponent);
 
 module.exports = widgetModule;
 
-},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":944,"../directives/index":6,"../filter/date/index":12,"../search/index":13,"./bpmn-viewer/cam-widget-bpmn-viewer":19,"./clipboard/cam-widget-clipboard":20,"./cmmn-viewer/cam-widget-cmmn-viewer":21,"./debug/cam-widget-debug":22,"./dmn-viewer/cam-widget-dmn-viewer":23,"./footer/cam-widget-footer":24,"./header/cam-widget-header":25,"./inline-field/cam-widget-inline-field":27,"./loader/cam-widget-loader":28,"./search-pill/cam-query-component":29,"./search-pill/cam-widget-search-pill":30,"./search/cam-widget-search":31,"./variable/cam-variable-validator":34,"./variable/cam-widget-variable":35,"./variables-table/cam-render-var-template":36,"./variables-table/cam-widget-variables-table":37,"camunda-bpm-sdk-js/vendor/angular":278}],27:[function(require,module,exports){
+},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":1109,"../directives/index":6,"../filter/date/index":12,"../search/index":13,"./bpmn-viewer/cam-widget-bpmn-viewer":19,"./clipboard/cam-widget-clipboard":20,"./cmmn-viewer/cam-widget-cmmn-viewer":21,"./debug/cam-widget-debug":22,"./dmn-viewer/cam-widget-dmn-viewer":23,"./footer/cam-widget-footer":24,"./header/cam-widget-header":25,"./inline-field/cam-widget-inline-field":27,"./loader/cam-widget-loader":28,"./search-pill/cam-query-component":29,"./search-pill/cam-widget-search-pill":30,"./search/cam-widget-search":31,"./variable/cam-variable-validator":34,"./variable/cam-widget-variable":35,"./variables-table/cam-render-var-template":36,"./variables-table/cam-widget-variables-table":37,"camunda-bpm-sdk-js/vendor/angular":278}],27:[function(require,module,exports){
 'use strict';
 
 
@@ -2546,7 +2552,7 @@ module.exports = [
     };
   }];
 
-},{"camunda-bpm-sdk-js/vendor/angular":278,"jquery":942}],28:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":278,"jquery":1107}],28:[function(require,module,exports){
 'use strict';
 
 
@@ -2712,7 +2718,7 @@ module.exports = ['$timeout',
     };
   }];
 
-},{"jquery":942}],31:[function(require,module,exports){
+},{"jquery":1107}],31:[function(require,module,exports){
 'use strict';
 
 
@@ -3218,7 +3224,7 @@ module.exports = ['$timeout', '$location', 'search',
     };
   }];
 
-},{"camunda-bpm-sdk-js/vendor/angular":278,"jquery":942}],32:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":278,"jquery":1107}],32:[function(require,module,exports){
 'use strict';
 
 var angular = require('camunda-bpm-sdk-js/vendor/angular'),
@@ -3730,7 +3736,7 @@ module.exports = [
     };
   }];
 
-},{"jquery":942}],37:[function(require,module,exports){
+},{"jquery":1107}],37:[function(require,module,exports){
 'use strict';
 
 
@@ -12296,7 +12302,7 @@ if (!String.fromCodePoint) {
 })(typeof exports === "undefined" ? sax = {} : exports);
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":916,"stream":940,"string_decoder":941}],63:[function(require,module,exports){
+},{"buffer":1081,"stream":1105,"string_decoder":1106}],63:[function(require,module,exports){
 /**
  * Tiny stack for browser or server
  *
@@ -63136,7 +63142,7 @@ module.exports = XMLWriter;
 
 },{"./common":307,"lodash/collection/filter":377,"lodash/collection/forEach":379,"lodash/collection/map":381,"lodash/lang/isString":488,"lodash/object/assign":491,"moddle/lib/ns":317,"moddle/lib/types":320}],310:[function(require,module,exports){
 arguments[4][62][0].apply(exports,arguments)
-},{"buffer":916,"dup":62,"stream":940,"string_decoder":941}],311:[function(require,module,exports){
+},{"buffer":1081,"dup":62,"stream":1105,"string_decoder":1106}],311:[function(require,module,exports){
 arguments[4][63][0].apply(exports,arguments)
 },{"dup":63}],312:[function(require,module,exports){
 arguments[4][64][0].apply(exports,arguments)
@@ -69296,6 +69302,247 @@ arguments[4][274][0].apply(exports,arguments)
 
 var inherits = require('inherits');
 
+var assign = require('lodash/object/assign');
+
+var Ids = require('ids');
+
+var Viewer = require('./Viewer');
+
+var TableModeler = require('./table/Modeler');
+
+var initialTemplate = [
+  '<?xml version="1.0" encoding="UTF-8"?>',
+  '<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd"',
+  'id="definitions"',
+  'name="definitions"',
+  'namespace="http://camunda.org/schema/1.0/dmn">',
+  '<decision id="decision" name="">',
+  '<decisionTable id="decisionTable">',
+  '<input id="input1" label="">',
+  '<inputExpression id="inputExpression1" typeRef="string">',
+  '<text></text>',
+  '</inputExpression>',
+  '</input>',
+  '<output id="output1" label="" name="" typeRef="string">',
+  '</output>',
+  '</decisionTable>',
+  '</decision>',
+  '</definitions>'
+].join('\n');
+
+/**
+ * A modeler for DMN tables.
+ *
+ *
+ * ## Extending the Modeler
+ *
+ * In order to extend the viewer pass extension modules to bootstrap via the
+ * `additionalModules` option. An extension module is an object that exposes
+ * named services.
+ *
+ * The following example depicts the integration of a simple
+ * logging component that integrates with interaction events:
+ *
+ *
+ * ```javascript
+ *
+ * // logging component
+ * function InteractionLogger(eventBus) {
+ *   eventBus.on('element.hover', function(event) {
+ *     console.log()
+ *   })
+ * }
+ *
+ * InteractionLogger.$inject = [ 'eventBus' ]; // minification save
+ *
+ * // extension module
+ * var extensionModule = {
+ *   __init__: [ 'interactionLogger' ],
+ *   interactionLogger: [ 'type', InteractionLogger ]
+ * };
+ *
+ * // extend the viewer
+ * var dmnModeler = new Modeler({ additionalModules: [ extensionModule ] });
+ * dmnModeler.importXML(...);
+ * ```
+ *
+ *
+ * ## Customizing / Replacing Components
+ *
+ * You can replace individual table components by redefining them in override modules.
+ * This works for all components, including those defined in the core.
+ *
+ * Pass in override modules via the `options.additionalModules` flag like this:
+ *
+ * ```javascript
+ * function CustomContextPadProvider(contextPad) {
+ *
+ *   contextPad.registerProvider(this);
+ *
+ *   this.getContextPadEntries = function(element) {
+ *     // no entries, effectively disable the context pad
+ *     return {};
+ *   };
+ * }
+ *
+ * CustomContextPadProvider.$inject = [ 'contextPad' ];
+ *
+ * var overrideModule = {
+ *   contextPadProvider: [ 'type', CustomContextPadProvider ]
+ * };
+ *
+ * var dmnModeler = new Modeler({ additionalModules: [ overrideModule ]});
+ * ```
+ *
+ * @param {Object} [options] configuration options to pass to the viewer
+ * @param {DOMElement} [options.container] the container to render the viewer in, defaults to body.
+ * @param {String|Number} [options.width] the width of the viewer
+ * @param {String|Number} [options.height] the height of the viewer
+ * @param {Object} [options.moddleExtensions] extension packages to provide
+ * @param {Array<didi.Module>} [options.modules] a list of modules to override the default modules
+ * @param {Array<didi.Module>} [options.additionalModules] a list of modules to use with the default modules
+ */
+function Modeler(options) {
+
+  options = assign({ editingAllowed: true }, options);
+
+  options.editor = TableModeler;
+
+  Viewer.call(this, options);
+
+  // hook ID collection into the modeler
+  this.on('import.parse.complete', function(event) {
+    if (!event.error) {
+      this._collectIds(event.definitions, event.context);
+    }
+  }, this);
+
+  this.on('table.destroy', function() {
+    this.moddle.ids.clear();
+  }, this);
+
+  this.on('view.switch', function(context) {
+    var decision = context.decision;
+
+    if (context.fromTable && !decision.extensionElements) {
+      this.createDecisionDi(decision);
+    }
+  }, this);
+}
+
+inherits(Modeler, Viewer);
+
+module.exports = Modeler;
+
+
+Modeler.prototype.createTemplate = function(done) {
+  this.importXML(initialTemplate, done);
+};
+
+
+/**
+ * Create a moddle instance, attaching ids to it.
+ *
+ * @param {Object} options
+ */
+Modeler.prototype._createModdle = function(options) {
+  var moddle = Viewer.prototype._createModdle.call(this, options);
+
+  // attach ids to moddle to be able to track
+  // and validated ids in the DMN 1.1 XML document
+  // tree
+  moddle.ids = new Ids([ 32, 36, 1 ]);
+
+  return moddle;
+};
+
+/**
+ * Collect ids processed during parsing of the
+ * definitions object.
+ *
+ * @param {ModdleElement} definitions
+ * @param {Context} context
+ */
+Modeler.prototype._collectIds = function(definitions, context) {
+
+  var moddle = definitions.$model,
+      ids = moddle.ids,
+      id;
+
+  // remove references from previous import
+  ids.clear();
+
+  for (id in context.elementsById) {
+    ids.claim(id, context.elementsById[id]);
+  }
+};
+
+Modeler.prototype.createDecisionDi = function(decision) {
+  var elementFactory = this.get('elementFactory'),
+      canvas = this.get('canvas'),
+      eventBus = this.get('eventBus'),
+      drdFactory = this.get('drdFactory');
+
+  var decisionShape = elementFactory.createShape({ type: 'dmn:Decision', businessObject: decision }),
+      bounds;
+
+  decisionShape = assign(decisionShape, { x: 0, y: 0 });
+
+  bounds = drdFactory.createDiBounds({
+    x: 0,
+    y: 0,
+    width: decisionShape.width,
+    height: decisionShape.height
+  });
+
+  decision.extensionElements.$parent = decision;
+
+  bounds.$parent = decision.extensionElements;
+
+  decision.extensionElements.values.push(bounds);
+
+  canvas.addShape(decisionShape);
+
+  eventBus.fire('drdElement.added', { element: decisionShape, di: decision.extensionElements });
+};
+
+// modules the modeler is composed of
+//
+// - viewer modules
+// - interaction modules
+// - modeling modules
+
+Modeler.prototype._interactionModules = [
+  // non-modeling components
+  require('diagram-js/lib/navigation/movecanvas'),
+  require('diagram-js/lib/navigation/touch'),
+  require('diagram-js/lib/navigation/zoomscroll')
+];
+
+Modeler.prototype._modelingModules = [
+  // modeling components
+  require('diagram-js/lib/features/move'),
+  require('diagram-js/lib/features/bendpoints'),
+  require('diagram-js/lib/features/overlays'),
+  require('./features/editor-actions'),
+  require('./features/context-pad'),
+  require('./features/keyboard'),
+  require('./features/label-editing'),
+  require('./features/modeling'),
+  require('./features/palette'),
+  require('./features/definition-id/modeler')
+];
+
+Modeler.prototype._modules = [].concat(
+  Modeler.prototype._modules,
+  Modeler.prototype._interactionModules,
+  Modeler.prototype._modelingModules);
+
+},{"./Viewer":523,"./features/context-pad":530,"./features/definition-id/modeler":533,"./features/editor-actions":538,"./features/keyboard":540,"./features/label-editing":544,"./features/modeling":556,"./features/palette":558,"./table/Modeler":570,"diagram-js/lib/features/bendpoints":683,"diagram-js/lib/features/move":736,"diagram-js/lib/features/overlays":740,"diagram-js/lib/navigation/movecanvas":767,"diagram-js/lib/navigation/touch":768,"diagram-js/lib/navigation/zoomscroll":771,"ids":818,"inherits":820,"lodash/object/assign":964}],522:[function(require,module,exports){
+'use strict';
+
+var inherits = require('inherits');
+
 var Viewer = require('./Viewer');
 
 
@@ -69321,7 +69568,7 @@ NavigatedViewer.prototype._modules = [].concat(
   NavigatedViewer.prototype._modules,
   NavigatedViewer.prototype._navigationModules);
 
-},{"./Viewer":522,"diagram-js/lib/navigation/movecanvas":653,"diagram-js/lib/navigation/zoomscroll":656,"inherits":699}],522:[function(require,module,exports){
+},{"./Viewer":523,"diagram-js/lib/navigation/movecanvas":767,"diagram-js/lib/navigation/zoomscroll":771,"inherits":820}],523:[function(require,module,exports){
 /**
  * The code in the <project-logo></project-logo> area
  * must not be changed.
@@ -69331,6 +69578,7 @@ NavigatedViewer.prototype._modules = [].concat(
 'use strict';
 
 var assign = require('lodash/object/assign'),
+    filter = require('lodash/collection/filter'),
     omit = require('lodash/object/omit'),
     isString = require('lodash/lang/isString'),
     isNumber = require('lodash/lang/isNumber');
@@ -69340,7 +69588,7 @@ var domify = require('min-dom/lib/domify'),
     domRemove = require('min-dom/lib/remove');
 
 var Diagram = require('diagram-js'),
-    BpmnModdle = require('dmn-moddle');
+    DmnModdle = require('dmn-moddle');
 
 var TableViewer = require('./table/Viewer');
 
@@ -69348,10 +69596,15 @@ var inherits = require('inherits');
 
 var Importer = require('./import/Importer');
 
+var is = require('./util/ModelUtil').is;
+
+function lengthOne(arr) {
+  return arr && arr.length === 1;
+}
 
 function checkValidationError(err) {
 
-  // check if we can help the user by indicating wrong BPMN 2.0 xml
+  // check if we can help the user by indicating wrong DMN 1.1 xml
   // (in case he or the exporting tool did not get that right)
 
   var pattern = /unparsable content <([^>]+)> detected([\s\S]*)$/,
@@ -69360,7 +69613,7 @@ function checkValidationError(err) {
   if (match) {
     err.message =
       'unparsable content <' + match[1] + '> detected; ' +
-      'this may indicate an invalid BPMN 2.0 diagram file' + match[2];
+      'this may indicate an invalid DMN 1.1 diagram file' + match[2];
   }
 
   return err;
@@ -69370,7 +69623,9 @@ var DEFAULT_OPTIONS = {
   width: '100%',
   height: '100%',
   position: 'relative',
-  container: 'body'
+  container: 'body',
+  loadDiagram: false,
+  disableDrdInteraction: false
 };
 
 
@@ -69382,7 +69637,7 @@ function ensureUnit(val) {
 }
 
 /**
- * A viewer for BPMN 2.0 diagrams.
+ * A viewer for DMN 1.1 diagrams.
  *
  * Have a look at {@link NavigatedViewer} or {@link Modeler} for bundles that include
  * additional features.
@@ -69416,11 +69671,12 @@ function ensureUnit(val) {
  * };
  *
  * // extend the viewer
- * var bpmnViewer = new Viewer({ additionalModules: [ extensionModule ] });
- * bpmnViewer.importXML(...);
+ * var drdViewer = new Viewer({ additionalModules: [ extensionModule ] });
+ * drdViewer.importXML(...);
  * ```
  *
  * @param {Object} [options] configuration options to pass to the viewer
+ * @param {Object} [options.table] configuration options to pass to the table viewer
  * @param {DOMElement} [options.container] the container to render the viewer in, defaults to body.
  * @param {String|Number} [options.width] the width of the viewer
  * @param {String|Number} [options.height] the height of the viewer
@@ -69429,12 +69685,22 @@ function ensureUnit(val) {
  * @param {Array<didi.Module>} [options.additionalModules] a list of modules to use with the default modules
  */
 function Viewer(options) {
+  var TableEditor = TableViewer;
 
-  this.tableViewer = new TableViewer(assign({}, options, { isDetached: true }));
-
-  options = assign({}, DEFAULT_OPTIONS, options);
+  options = assign({}, DEFAULT_OPTIONS ,options);
 
   this.moddle = this._createModdle(options);
+
+  if (options.editor) {
+    TableEditor = options.editor;
+  }
+
+  this.table = new TableEditor(assign({}, {
+    container: options.container,
+    moddle: this.moddle,
+    loadDiagram: options.loadDiagram, // load the DRD diagram even if there's only one decision
+    isDetached: true // we instanciate the table with a detached container
+  }, options.table));
 
   this.container = this._createContainer(options);
 
@@ -69445,15 +69711,21 @@ function Viewer(options) {
   /* </project-logo> */
 
   this._init(this.container, this.moddle, options);
+
+  // setup decision drill down listener
+  this.on('decision.open', function(context) {
+    var decision = context.decision;
+
+    this.showDecision(decision);
+  }, this);
 }
 
 inherits(Viewer, Diagram);
 
 module.exports = Viewer;
 
-
 /**
- * Parse and render a BPMN 2.0 diagram.
+ * Parse and render a DMN 1.1 diagram.
  *
  * Once finished the viewer reports back the result to the
  * provided callback function with (err, warnings).
@@ -69470,7 +69742,7 @@ module.exports = Viewer;
  *
  * You can use these events to hook into the life-cycle.
  *
- * @param {String} xml the BPMN 2.0 xml
+ * @param {String} xml the DMN 1.1 xml
  * @param {Function} [done] invoked with (err, warnings=[])
  */
 Viewer.prototype.importXML = function(xml, done) {
@@ -69480,6 +69752,13 @@ Viewer.prototype.importXML = function(xml, done) {
   done = done || function() {};
 
   var self = this;
+
+  var oldNm = 'xmlns="http://www.omg.org/spec/DMN/20151101/dmn11.xsd"';
+
+  // LEGACY YEAH! - convert to correct namespace
+  if (xml.indexOf(oldNm)) {
+    xml = xml.replace(new RegExp(oldNm), 'xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd"');
+  }
 
   // hook in pre-parse listeners +
   // allow xml manipulation
@@ -69514,7 +69793,9 @@ Viewer.prototype.importXML = function(xml, done) {
       // if there is only one decision, switch to table view
       decisions = self.getDecisions();
 
-      if (decisions && decisions.length === 1 && !loadDiagram) {
+      if (lengthOne(definitions.drgElements) &&
+          lengthOne(decisions) &&
+          loadDiagram === false) {
         self.showDecision(decisions[0]);
       }
 
@@ -69524,8 +69805,8 @@ Viewer.prototype.importXML = function(xml, done) {
 };
 
 /**
- * Export the currently displayed BPMN 2.0 diagram as
- * a BPMN 2.0 XML document.
+ * Export the currently displayed DMN 1.1 diagram as
+ * a DMN 1.1 XML document.
  *
  * @param {Object} [options] export options
  * @param {Boolean} [options.format=false] output formated XML
@@ -69550,7 +69831,7 @@ Viewer.prototype.saveXML = function(options, done) {
 };
 
 /**
- * Export the currently displayed BPMN 2.0 diagram as
+ * Export the currently displayed DMN 1.1 diagram as
  * an SVG image.
  *
  * @param {Object} [options]
@@ -69575,7 +69856,7 @@ Viewer.prototype.saveSVG = function(options, done) {
 
   var svg =
     '<?xml version="1.0" encoding="utf-8"?>\n' +
-    '<!-- created with bpmn-js / http://bpmn.io -->\n' +
+    '<!-- created with dmn-js / http://bpmn.io -->\n' +
     '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n' +
     '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" ' +
          'width="' + bbox.width + '" height="' + bbox.height + '" ' +
@@ -69587,10 +69868,6 @@ Viewer.prototype.saveSVG = function(options, done) {
 };
 
 Viewer.prototype.importDefinitions = function(definitions, done) {
-  if (this.tableViewer) {
-    this.tableViewer.importDefinitions(definitions, function() {});
-  }
-
   // use try/catch to not swallow synchronous exceptions
   // that may be raised during model parsing
   try {
@@ -69603,6 +69880,10 @@ Viewer.prototype.importDefinitions = function(definitions, done) {
     // update definitions
     this.definitions = definitions;
 
+    if (this.table) {
+      this.table.definitions = definitions;
+    }
+
     // perform graphical import
     Importer.importDRD(this, definitions, done);
   } catch (e) {
@@ -69611,8 +69892,16 @@ Viewer.prototype.importDefinitions = function(definitions, done) {
   }
 };
 
-Viewer.prototype.getDecisions = function() {
-  return this.tableViewer.getDecisions();
+Viewer.prototype.getDecisions = function(definitions) {
+  var defs = definitions || this.definitions;
+
+  if (!defs) {
+    return;
+  }
+
+  return filter(defs.drgElements, function(element) {
+    return is(element, 'dmn:Decision');
+  });
 };
 
 Viewer.prototype.attach = function(container, oldContainer) {
@@ -69625,17 +69914,36 @@ Viewer.prototype.attach = function(container, oldContainer) {
   parent.appendChild(container);
 };
 
-Viewer.prototype.showDecision = function(decision, done) {
-  var tableViewer = this.tableViewer;
+Viewer.prototype.showDecision = function(decision, attrs, done) {
+  var table = this.table,
+      self = this;
 
-  this.attach(tableViewer.container, this.container);
+  if (typeof attrs === 'function') {
+    done = attrs;
+    attrs = {};
+  }
 
-  return tableViewer.showDecision(decision, done);
+  done = done || function(err, warnings) {
+    console.log(err, warnings);
+  };
+
+  this.attach(table.container, this.container);
+
+  return table.showDecision(decision, function(err, warnings) {
+    self._emit('view.switch', assign({ decision: decision }, attrs));
+
+    done(err, warnings);
+  });
 };
 
-Viewer.prototype.showDRD = function() {
+Viewer.prototype.showDRD = function(attrs) {
+  var decision = this.table.getCurrentDecision();
 
-  this.attach(this.container, this.tableViewer.container);
+  attrs = attrs || {};
+
+  this.attach(this.container, this.table.container);
+
+  this._emit('view.switch', assign({ decision: decision }, attrs));
 };
 
 Viewer.prototype.getModules = function() {
@@ -69686,7 +69994,7 @@ Viewer.prototype._init = function(container, moddle, options) {
       additionalModules = options.additionalModules || [],
       staticModules = [
         {
-          bpmnjs: [ 'value', this ],
+          drdjs: [ 'value', this ],
           moddle: [ 'value', moddle ]
         }
       ];
@@ -69707,31 +70015,23 @@ Viewer.prototype._init = function(container, moddle, options) {
   // invoke diagram constructor
   Diagram.call(this, diagramOptions);
 
-  this._setupTableSwitchListeners(options);
+  // Enabled DRD interaction -> setup table switch buttons
+  if (options.disableDrdInteraction === false) {
+    this._setupTableSwitchListeners(options);
+  }
 };
 
 Viewer.prototype._setupTableSwitchListeners = function(options) {
-  var tableViewer = this.tableViewer;
+  var table = this.table;
 
   var self = this;
 
-  if (!options.disableDrdInteraction) {
+  table.get('eventBus').on('controls.init', function(event) {
 
-    this.get('eventBus').on('element.dblclick', function(evt) {
-      var businessObject = evt.element.businessObject;
-
-      if (businessObject.$instanceOf('dmn:Decision')) {
-        this.showDecision(businessObject);
-      }
-    }, this);
-
-    tableViewer.get('eventBus').on('controls.init', function(event) {
-
-      event.controls.addControl('Show DRD', function() {
-        self.showDRD();
-      });
+    event.controls.addControl('Show DRD', function() {
+      self.showDRD({ fromTable: true });
     });
-  }
+  });
 };
 
 /**
@@ -69780,17 +70080,18 @@ Viewer.prototype._createContainer = function(options) {
 Viewer.prototype._createModdle = function(options) {
   var moddleOptions = assign({}, this._moddleExtensions, options.moddleExtensions);
 
-  return new BpmnModdle(moddleOptions);
+  return new DmnModdle(moddleOptions);
 };
 
 
 // modules the viewer is composed of
 Viewer.prototype._modules = [
-  require('./import'),
-  require('./draw'),
-  require('diagram-js/lib/i18n/translate'),
+  require('./core'),
   require('diagram-js/lib/features/selection'),
-  require('diagram-js/lib/features/overlays')
+  require('diagram-js/lib/features/overlays'),
+  require('./features/rules'),
+  require('./features/drill-down'),
+  require('./features/definition-id/viewer')
 ];
 
 // default moddle extensions the viewer is composed of
@@ -69834,13 +70135,63 @@ function addProjectLogo(container) {
 
 /* </project-logo> */
 
-},{"./draw":525,"./import":530,"./import/Importer":529,"./table/Viewer":532,"./util/PoweredByUtil":620,"diagram-js":621,"diagram-js/lib/features/overlays":641,"diagram-js/lib/features/selection":648,"diagram-js/lib/i18n/translate":649,"dmn-moddle":676,"inherits":699,"lodash/lang/isNumber":819,"lodash/lang/isString":822,"lodash/object/assign":825,"lodash/object/omit":829,"min-dom/lib/domify":840,"min-dom/lib/event":841,"min-dom/lib/query":843,"min-dom/lib/remove":844}],523:[function(require,module,exports){
+},{"./core":524,"./features/definition-id/viewer":534,"./features/drill-down":536,"./features/rules":565,"./import/Importer":568,"./table/Viewer":571,"./util/ModelUtil":658,"./util/PoweredByUtil":659,"diagram-js":663,"diagram-js/lib/features/overlays":740,"diagram-js/lib/features/selection":755,"dmn-moddle":797,"inherits":820,"lodash/collection/filter":830,"lodash/lang/isNumber":958,"lodash/lang/isString":961,"lodash/object/assign":964,"lodash/object/omit":968,"min-dom/lib/domify":981,"min-dom/lib/event":982,"min-dom/lib/query":984,"min-dom/lib/remove":985}],524:[function(require,module,exports){
+'use strict';
+
+module.exports = {
+  __depends__: [
+    require('../draw'),
+    require('../import')
+  ]
+};
+
+},{"../draw":528,"../import":569}],525:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach');
+
+function DecisionLabelUpdater(eventBus, elementRegistry, graphicsFactory) {
+  this._elementRegistry = elementRegistry;
+  this._graphicsFactory = graphicsFactory;
+
+  eventBus.on('view.switch', this.updateDecisionLabels, this);
+}
+
+DecisionLabelUpdater.$inject = [ 'eventBus', 'elementRegistry', 'graphicsFactory' ];
+
+module.exports = DecisionLabelUpdater;
+
+DecisionLabelUpdater.prototype.updateDecisionLabels = function(context) {
+  var elementRegistry = this._elementRegistry,
+      graphicsFactory = this._graphicsFactory,
+      decisions;
+
+  decisions = elementRegistry.filter(function(element) {
+    return element.type === 'dmn:Decision';
+  });
+
+  forEach(decisions, function(decision) {
+    var gfx = elementRegistry.getGraphics(decision.id);
+
+    graphicsFactory.update('shape', decision, gfx);
+  });
+
+};
+
+},{"lodash/collection/forEach":832}],526:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits'),
     isArray = require('lodash/lang/isArray'),
     isObject = require('lodash/lang/isObject'),
     assign = require('lodash/object/assign');
+
+var domClasses = require('min-dom/lib/classes'),
+    domQuery = require('min-dom/lib/query');
+
+var svgAppend = require('tiny-svg/lib/append'),
+    svgAttr = require('tiny-svg/lib/attr'),
+    svgCreate = require('tiny-svg/lib/create');
 
 var BaseRenderer = require('diagram-js/lib/draw/BaseRenderer'),
     RenderUtil = require('diagram-js/lib/util/RenderUtil'),
@@ -69873,7 +70224,9 @@ function DrdRenderer(eventBus, pathMap, styles) {
   }
 
   function marker(id) {
-    return markers[id];
+    var marker = markers[id];
+
+    return 'url(#' + marker.id + ')';
   }
 
   function initMarkers(svg) {
@@ -69895,19 +70248,40 @@ function DrdRenderer(eventBus, pathMap, styles) {
         attrs.strokeDasharray = [10000, 1];
       }
 
-      var marker = options.element
-                     .attr(attrs)
-                     .marker(0, 0, 20, 20, ref.x, ref.y)
-                     .attr({
-                       markerWidth: 20 * scale,
-                       markerHeight: 20 * scale
-                     });
+      var marker = svgCreate('marker');
+
+      svgAttr(options.element, attrs);
+
+      svgAppend(marker, options.element);
+
+      svgAttr(marker, {
+        id: id,
+        viewBox: '0 0 20 20',
+        refX: ref.x,
+        refY: ref.y,
+        markerWidth: 20 * scale,
+        markerHeight: 20 * scale,
+        orient: 'auto'
+      });
+
+      var defs = domQuery('defs', svg);
+
+      if (!defs) {
+        defs = svgCreate('defs');
+
+        svgAppend(svg, defs);
+      }
+
+      svgAppend(defs, marker);
 
       return addMarker(id, marker);
     }
 
+    var associationStart = svgCreate('path');
+    svgAttr(associationStart, { d: 'M 11 5 L 1 10 L 11 15' });
+
     createMarker('association-start', {
-      element: svg.path('M 11 5 L 1 10 L 11 15'),
+      element: associationStart,
       attrs: {
         fill: 'none',
         stroke: 'black',
@@ -69917,8 +70291,11 @@ function DrdRenderer(eventBus, pathMap, styles) {
       scale: 0.5
     });
 
+    var associationEnd = svgCreate('path');
+    svgAttr(associationEnd, { d: 'M 1 5 L 11 10 L 1 15' });
+
     createMarker('association-end', {
-      element: svg.path('M 1 5 L 11 10 L 1 15'),
+      element: associationEnd,
       attrs: {
         fill: 'none',
         stroke: 'black',
@@ -69928,24 +70305,34 @@ function DrdRenderer(eventBus, pathMap, styles) {
       scale: 0.5
     });
 
+    var informationRequirementEnd = svgCreate('path');
+    svgAttr(informationRequirementEnd, { d: 'M 1 5 L 11 10 L 1 15 Z' });
+
     createMarker('information-requirement-end', {
-      element: svg.path('M 1 5 L 11 10 L 1 15 Z'),
+      element: informationRequirementEnd,
       ref: { x: 11, y: 10 },
       scale: 1
     });
 
+    var knowledgeRequirementEnd = svgCreate('path');
+    svgAttr(knowledgeRequirementEnd, { d: 'M 1 3 L 11 10 L 1 17' });
+
     createMarker('knowledge-requirement-end', {
-      element: svg.path('M 1 3 L 11 10 L 1 17').attr({
+      element: knowledgeRequirementEnd,
+      attrs: {
         fill: 'none',
         stroke: 'black',
         strokeWidth: 2
-      }),
+      },
       ref: { x: 11, y: 10 },
       scale: 0.8
     });
 
+    var authorityRequirementEnd = svgCreate('circle');
+    svgAttr(authorityRequirementEnd, { cx: 3, cy: 3, r: 3 });
+
     createMarker('authority-requirement-end', {
-      element: svg.circle(3, 3, 3),
+      element: authorityRequirementEnd,
       ref: { x: 3, y: 3 },
       scale: 0.9
     });
@@ -69976,11 +70363,27 @@ function DrdRenderer(eventBus, pathMap, styles) {
       fill: 'white'
     });
 
-    return p.rect(offset, offset, width - offset * 2, height - offset * 2, r).attr(attrs);
+    var rect = svgCreate('rect');
+    svgAttr(rect, {
+      x: offset,
+      y: offset,
+      width: width - offset * 2,
+      height: height - offset * 2,
+      rx: r,
+      ry: r
+    });
+    svgAttr(rect, attrs);
+
+    svgAppend(p, rect);
+
+    return rect;
   }
 
   function renderLabel(p, label, options) {
-    return textUtil.createText(p, label || '', options).addClass('djs-label');
+    var text = textUtil.createText(p, label || '', options);
+    domClasses(text).add('djs-label');
+
+    return text;
   }
 
   function renderEmbeddedLabel(p, element, align) {
@@ -69995,7 +70398,13 @@ function DrdRenderer(eventBus, pathMap, styles) {
       stroke: 'black'
     });
 
-    return p.path(d).attr(attrs);
+    var path = svgCreate('path');
+    svgAttr(path, { d: d });
+    svgAttr(path, attrs);
+
+    svgAppend(p, path);
+
+    return path;
   }
 
 
@@ -70174,7 +70583,11 @@ function DrdRenderer(eventBus, pathMap, styles) {
       fill: 'none'
     });
 
-    return createLine(waypoints, attrs).appendTo(p);
+    var line = createLine(waypoints, attrs);
+
+    svgAppend(p, line);
+
+    return line;
   }
 
   this.canRender = function(element) {
@@ -70208,10 +70621,8 @@ function getSemantic(element) {
   return element.businessObject;
 }
 
-},{"../util/ModelUtil":619,"diagram-js/lib/draw/BaseRenderer":632,"diagram-js/lib/util/RenderUtil":667,"diagram-js/lib/util/Text":668,"inherits":699,"lodash/lang/isArray":816,"lodash/lang/isObject":820,"lodash/object/assign":825}],524:[function(require,module,exports){
+},{"../util/ModelUtil":658,"diagram-js/lib/draw/BaseRenderer":674,"diagram-js/lib/util/RenderUtil":789,"diagram-js/lib/util/Text":791,"inherits":820,"lodash/lang/isArray":955,"lodash/lang/isObject":959,"lodash/object/assign":964,"min-dom/lib/classes":977,"min-dom/lib/query":984,"tiny-svg/lib/append":1067,"tiny-svg/lib/attr":1069,"tiny-svg/lib/create":1073}],527:[function(require,module,exports){
 'use strict';
-
-var Snap = require('diagram-js/vendor/snapsvg');
 
 /**
  * Map containing SVG paths needed by BpmnRenderer.
@@ -70372,7 +70783,7 @@ function PathMap() {
     }
 
     //Apply value to raw path
-    var path = Snap.format(
+    var path = format(
       rawPath.d, {
         mx: mx,
         my: my,
@@ -70385,29 +70796,2395 @@ function PathMap() {
 
 module.exports = PathMap;
 
-},{"diagram-js/vendor/snapsvg":675}],525:[function(require,module,exports){
+
+////////// helpers //////////
+
+// copied from https://github.com/adobe-webplatform/Snap.svg/blob/master/src/svg.js
+var tokenRegex = /\{([^\}]+)\}/g,
+    objNotationRegex = /(?:(?:^|\.)(.+?)(?=\[|\.|$|\()|\[('|")(.+?)\2\])(\(\))?/g; // matches .xxxxx or ["xxxxx"] to run over object properties
+
+function replacer(all, key, obj) {
+  var res = obj;
+  key.replace(objNotationRegex, function(all, name, quote, quotedName, isFunc) {
+    name = name || quotedName;
+    if (res) {
+      if (name in res) {
+        res = res[name];
+      }
+      typeof res == 'function' && isFunc && (res = res());
+    }
+  });
+  res = (res == null || res == obj ? all : res) + '';
+
+  return res;
+}
+
+function format(str, obj) {
+  return String(str).replace(tokenRegex, function(all, key) {
+    return replacer(all, key, obj);
+  });
+}
+
+},{}],528:[function(require,module,exports){
+'use strict';
+
 module.exports = {
-  __init__: [ 'drdRenderer' ],
+  __init__: [ 'drdRenderer', 'decisionLabelUpdater' ],
   drdRenderer: [ 'type', require('./DrdRenderer') ],
-  pathMap: [ 'type', require('./PathMap')]
+  pathMap: [ 'type', require('./PathMap')],
+  decisionLabelUpdater: [ 'type', require('./DecisionLabelUpdater') ]
 };
 
-},{"./DrdRenderer":523,"./PathMap":524}],526:[function(require,module,exports){
+},{"./DecisionLabelUpdater":525,"./DrdRenderer":526,"./PathMap":527}],529:[function(require,module,exports){
+'use strict';
+
+
+var assign = require('lodash/object/assign'),
+    isArray = require('lodash/lang/isArray');
+
+var ModelUtil = require('../../util/ModelUtil'),
+    is = ModelUtil.is,
+    isAny = ModelUtil.isAny,
+    hasPrimaryModifier = require('diagram-js/lib/util/Mouse').hasPrimaryModifier;
+
+/**
+* A provider for DMN 1.1 elements context pad
+*/
+function ContextPadProvider(eventBus, contextPad, modeling, elementFactory, connect, create, rules, popupMenu, canvas) {
+
+  contextPad.registerProvider(this);
+
+  this._contextPad = contextPad;
+
+  this._modeling = modeling;
+
+  this._elementFactory = elementFactory;
+  this._connect = connect;
+  this._create = create;
+  this._rules = rules;
+  this._popupMenu = popupMenu;
+  this._canvas = canvas;
+
+
+  eventBus.on('create.end', 250, function(event) {
+    var shape = event.context.shape;
+
+    if (!hasPrimaryModifier(event)) {
+      return;
+    }
+
+    var entries = contextPad.getEntries(shape);
+
+    if (entries.replace) {
+      entries.replace.action.click(event, shape);
+    }
+  });
+}
+
+ContextPadProvider.$inject = [
+  'eventBus',
+  'contextPad',
+  'modeling',
+  'elementFactory',
+  'connect',
+  'create',
+  'rules',
+  'popupMenu',
+  'canvas'
+];
+
+module.exports = ContextPadProvider;
+
+
+ContextPadProvider.prototype.getContextPadEntries = function(element) {
+
+  var modeling = this._modeling,
+
+      elementFactory = this._elementFactory,
+      connect = this._connect,
+      create = this._create,
+      popupMenu = this._popupMenu,
+      canvas = this._canvas,
+      contextPad = this._contextPad,
+      rules = this._rules;
+
+
+  var actions = {};
+
+  if (element.type === 'label') {
+    return actions;
+  }
+
+  var businessObject = element.businessObject;
+
+  function startConnect(event, element, autoActivate) {
+    connect.start(event, element, autoActivate);
+  }
+
+  function removeElement(e) {
+    modeling.removeElements([ element ]);
+  }
+
+  function getReplaceMenuPosition(element) {
+
+    var Y_OFFSET = 5;
+
+    var diagramContainer = canvas.getContainer(),
+        pad = contextPad.getPad(element).html;
+
+    var diagramRect = diagramContainer.getBoundingClientRect(),
+        padRect = pad.getBoundingClientRect();
+
+    var top = padRect.top - diagramRect.top;
+    var left = padRect.left - diagramRect.left;
+
+    var pos = {
+      x: left,
+      y: top + padRect.height + Y_OFFSET
+    };
+
+    return pos;
+  }
+
+  /**
+  * Create an append action
+  *
+  * @param {String} type
+  * @param {String} className
+  * @param {String} [title]
+  * @param {Object} [options]
+  *
+  * @return {Object} descriptor
+  */
+  function appendAction(type, className, title, options) {
+
+    if (typeof title !== 'string') {
+      options = title;
+      title = 'Append ' + type.replace(/^dmn\:/, '');
+    }
+
+    function appendListener(event, element) {
+
+      var shape = elementFactory.createShape(assign({ type: type }, options));
+      create.start(event, shape, element);
+    }
+
+    return {
+      group: 'model',
+      className: className,
+      title: title,
+      action: {
+        dragstart: appendListener,
+        click: appendListener
+      }
+    };
+  }
+
+  if (isAny(businessObject, [ 'dmn:InputData', 'dmn:BusinessKnowledgeModel', 'dmn:KnowledgeSource', 'dmn:Decision' ])) {
+    assign(actions, {
+      'append.decision': appendAction('dmn:Decision', 'dmn-icon-decision')
+    });
+  }
+
+  if (isAny(businessObject, [ 'dmn:InputData', 'dmn:Decision', 'dmn:KnowledgeSource' ])) {
+    assign(actions, {
+      'append.knowledge-source': appendAction('dmn:KnowledgeSource', 'dmn-icon-knowledge-source')
+    });
+  }
+
+  if (isAny(businessObject, [ 'dmn:BusinessKnowledgeModel', 'dmn:KnowledgeSource' ])) {
+    assign(actions, {
+      'append.business-knowledge-model': appendAction('dmn:BusinessKnowledgeModel', 'dmn-icon-business-knowledge')
+    });
+  }
+
+  if (isAny(businessObject, [ 'dmn:Decision' ])) {
+    assign(actions, {
+      'append.input-data': appendAction('dmn:InputData', 'dmn-icon-input-data')
+    });
+  }
+
+  if (is(businessObject, 'dmn:DRGElement')) {
+
+    assign(actions, {
+      'append.text-annotation': appendAction('dmn:TextAnnotation', 'dmn-icon-text-annotation'),
+
+      'connect': {
+        group: 'connect',
+        className: 'dmn-icon-connection-multi',
+        title: 'Connect using Information/Knowledge/Authority Requirement or Association',
+        action: {
+          click: startConnect,
+          dragstart: startConnect
+        }
+      }
+    });
+  }
+
+  var replaceMenu;
+
+  if (popupMenu._providers['dmn-replace']) {
+    replaceMenu = popupMenu.create('dmn-replace', element);
+  }
+
+  if (replaceMenu && !replaceMenu.isEmpty()) {
+
+    // Replace menu entry
+    assign(actions, {
+      'replace': {
+        group: 'edit',
+        className: 'dmn-icon-screw-wrench',
+        title: 'Change type',
+        action: {
+          click: function(event, element) {
+            replaceMenu.open(assign(getReplaceMenuPosition(element), {
+              cursor: { x: event.x, y: event.y }
+            }), element);
+          }
+        }
+      }
+    });
+  }
+
+
+  // delete element entry, only show if allowed by rules
+  var deleteAllowed = rules.allowed('elements.delete', { elements: [ element ] });
+
+  if (isArray(deleteAllowed)) {
+    // was the element returned as a deletion candidate?
+    deleteAllowed = deleteAllowed[0] === element;
+  }
+
+  if (deleteAllowed) {
+    assign(actions, {
+      'delete': {
+        group: 'edit',
+        className: 'dmn-icon-trash',
+        title: 'Remove',
+        action: {
+          click: removeElement,
+          dragstart: removeElement
+        }
+      }
+    });
+  }
+
+  return actions;
+};
+
+},{"../../util/ModelUtil":658,"diagram-js/lib/util/Mouse":785,"lodash/lang/isArray":955,"lodash/object/assign":964}],530:[function(require,module,exports){
+'use strict';
+
+module.exports = {
+  __depends__: [
+    require('diagram-js/lib/features/context-pad'),
+    require('diagram-js/lib/features/selection'),
+    require('diagram-js/lib/features/connect'),
+    require('diagram-js/lib/features/create'),
+    require('../popup-menu')
+  ],
+  __init__: [ 'contextPadProvider' ],
+  contextPadProvider: [ 'type', require('./ContextPadProvider') ]
+};
+
+},{"../popup-menu":560,"./ContextPadProvider":529,"diagram-js/lib/features/connect":689,"diagram-js/lib/features/context-pad":691,"diagram-js/lib/features/create":695,"diagram-js/lib/features/selection":755}],531:[function(require,module,exports){
+'use strict';
+
+var domQuery = require('min-dom/lib/query');
+
+function DefinitionIdEdit(eventBus, modeling, canvas) {
+  this._eventBus = eventBus;
+  this._modeling = modeling;
+  this._canvas = canvas;
+
+  eventBus.on('definitionIdView.create', function(event) {
+    var container = event.html,
+        nameElement = domQuery('.dmn-definitions-name', container),
+        idElement = domQuery('.dmn-definitions-id', container);
+
+    this._setup(nameElement, 'name');
+    this._setup(idElement, 'id');
+  }, this);
+}
+
+DefinitionIdEdit.$inject = [ 'eventBus', 'modeling', 'canvas' ];
+
+module.exports = DefinitionIdEdit;
+
+DefinitionIdEdit.prototype.update = function(type, newValue) {
+  var newProperties = {};
+  newProperties[type] = newValue;
+
+  this._modeling.updateProperties(this._canvas.getRootElement(), newProperties);
+};
+
+DefinitionIdEdit.prototype._setup = function(node, type) {
+  var self = this;
+
+  node.setAttribute('contenteditable', true);
+
+  node.addEventListener('blur', function(evt) {
+    self.update(type, node.textContent.trim());
+  });
+
+  node.addEventListener('keydown', function(evt) {
+    if (evt.keyCode === 13)  {
+      node.blur();
+      window.getSelection().removeAllRanges();
+    }
+  });
+
+};
+
+},{"min-dom/lib/query":984}],532:[function(require,module,exports){
+'use strict';
+
+var domify = require('min-dom/lib/domify'),
+    domQuery = require('min-dom/lib/query'),
+    domDelegate = require('min-dom/lib/delegate');
+
+function DefinitionIdView(eventBus, canvas) {
+  this._eventBus = eventBus;
+  this._canvas = canvas;
+
+  eventBus.on('diagram.init', function() {
+    this._init();
+  }, this);
+
+  eventBus.on('import.done', function(event) {
+    this.update();
+  }, this);
+}
+
+DefinitionIdView.$inject = [ 'eventBus', 'canvas' ];
+
+module.exports = DefinitionIdView;
+
+/**
+ * Initialize
+ */
+DefinitionIdView.prototype._init = function() {
+  var canvas = this._canvas,
+      eventBus = this._eventBus;
+
+  var parent = canvas.getContainer(),
+      container = this._container = domify(DefinitionIdView.HTML_MARKUP);
+
+  parent.appendChild(container);
+
+  domDelegate.bind(container, '.dmn-definitions-name, .dmn-definitions-id', 'mousedown', function(event) {
+    event.stopPropagation();
+  });
+
+  eventBus.fire('definitionIdView.create', {
+    html: container
+  });
+};
+
+DefinitionIdView.prototype.update = function(newName) {
+  var businessObject = this._canvas.getRootElement().businessObject,
+      nameElement = domQuery('.dmn-definitions-name', this._container),
+      idElement = domQuery('.dmn-definitions-id', this._container);
+
+  nameElement.textContent = businessObject.name;
+  idElement.textContent = businessObject.id;
+};
+
+
+/* markup definition */
+
+DefinitionIdView.HTML_MARKUP =
+  '<div class="dmn-definitions">' +
+    '<div class="dmn-definitions-name" title="Definition Name"></div>' +
+    '<div class="dmn-definitions-id" title="Definition ID"></div>' +
+  '</div>';
+
+},{"min-dom/lib/delegate":980,"min-dom/lib/domify":981,"min-dom/lib/query":984}],533:[function(require,module,exports){
+module.exports = {
+  __depends__: [ ],
+  __init__: [ 'definitionIdEdit' ],
+  definitionIdEdit: [ 'type', require('./DefinitionIdEdit') ]
+};
+
+},{"./DefinitionIdEdit":531}],534:[function(require,module,exports){
+module.exports = {
+  __depends__: [ ],
+  __init__: [ 'definitionIdView' ],
+  definitionIdView: [ 'type', require('./DefinitionIdView') ]
+};
+
+},{"./DefinitionIdView":532}],535:[function(require,module,exports){
+'use strict';
+
+var domify = require('min-dom/lib/domify'),
+    domDelegate = require('min-dom/lib/delegate');
+
+function DrillDown(eventBus, overlays, drdRules) {
+  this._eventBus = eventBus;
+  this._overlays = overlays;
+  this._drdRules = drdRules;
+
+  eventBus.on([ 'drdElement.added', 'shape.create' ], function(context) {
+    var element = context.element,
+        canDrillDown = drdRules.canDrillDown(element);
+
+    if (canDrillDown) {
+      this.addOverlay(element, canDrillDown);
+    }
+  }, this);
+}
+
+module.exports = DrillDown;
+
+DrillDown.$inject = [ 'eventBus', 'overlays', 'drdRules' ];
+
+
+DrillDown.prototype.addOverlay = function(decision, decisionType) {
+  var overlays = this._overlays;
+
+  var icon = decisionType === 'table' ? 'decision-table' : 'literal-expression';
+
+  var overlay = domify([
+    '<div class="drill-down-overlay">',
+    '<span class="dmn-icon-' + icon + '" />',
+    '</div>'
+  ].join(''));
+
+  var overlayId = overlays.add(decision, {
+    position: {
+      top: 1,
+      left: 1
+    },
+    html: overlay
+  });
+
+  this.bindEventListener(decision, overlay, overlayId);
+};
+
+DrillDown.prototype.bindEventListener = function(decision, overlay, id) {
+  var overlays = this._overlays,
+      eventBus = this._eventBus;
+
+  var overlaysRoot = overlays._overlayRoot;
+
+  domDelegate.bind(overlaysRoot, '[data-overlay-id="' + id + '"]', 'click', function() {
+
+    eventBus.fire('decision.open', { decision: decision.businessObject });
+  });
+};
+
+},{"min-dom/lib/delegate":980,"min-dom/lib/domify":981}],536:[function(require,module,exports){
+'use strict';
+
+module.exports = {
+  __depends__: [
+    require('diagram-js/lib/features/context-pad')
+  ],
+  __init__: [ 'drillDown' ],
+  drillDown: [ 'type', require('./DrillDown') ]
+};
+
+},{"./DrillDown":535,"diagram-js/lib/features/context-pad":691}],537:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
 
-var BaseElementFactory = require('diagram-js/lib/core/ElementFactory');
+var EditorActions = require('diagram-js/lib/features/editor-actions/EditorActions');
 
-function DrdElementFactory() {
-  BaseElementFactory.call(this);
+
+function DrdEditorActions(
+    injector,
+    canvas, elementRegistry, selection,
+    lassoTool,
+    directEditing) {
+
+  injector.invoke(EditorActions, this);
+
+  this.register({
+    selectElements: function() {
+      // select all elements except for the invisible
+      // root element
+      var rootElement = canvas.getRootElement();
+
+      var elements = elementRegistry.filter(function(element) {
+        return element !== rootElement;
+      });
+
+      selection.select(elements);
+
+      return elements;
+    },
+    lassoTool: function() {
+      lassoTool.toggle();
+    },
+    directEditing: function() {
+      var currentSelection = selection.get();
+
+      if (currentSelection.length) {
+        directEditing.activate(currentSelection[0]);
+      }
+    }
+  });
 }
 
-inherits(DrdElementFactory, BaseElementFactory);
+inherits(DrdEditorActions, EditorActions);
 
-module.exports = DrdElementFactory;
+DrdEditorActions.$inject = [
+  'injector',
+  'canvas', 'elementRegistry', 'selection',
+  'lassoTool',
+  'directEditing'
+];
 
-},{"diagram-js/lib/core/ElementFactory":627,"inherits":699}],527:[function(require,module,exports){
+module.exports = DrdEditorActions;
+
+},{"diagram-js/lib/features/editor-actions/EditorActions":699,"inherits":820}],538:[function(require,module,exports){
+'use strict';
+
+module.exports = {
+  __depends__: [
+    require('diagram-js/lib/features/editor-actions'),
+    require('diagram-js/lib/features/lasso-tool')
+  ],
+  editorActions: [ 'type', require('./DrdEditorActions') ]
+};
+
+},{"./DrdEditorActions":537,"diagram-js/lib/features/editor-actions":700,"diagram-js/lib/features/lasso-tool":706}],539:[function(require,module,exports){
+'use strict';
+
+/**
+ * DRD specific key bindings.
+ *
+ * @param {Keyboard} keyboard
+ * @param {EditorActions} editorActions
+ */
+function DrdKeyBindings(keyboard, editorActions) {
+
+  keyboard.addListener(function(key, modifiers) {
+
+    // ctrl + a -> select all elements
+    if (key === 65 && keyboard.isCmd(modifiers)) {
+      editorActions.trigger('selectElements');
+
+      return true;
+    }
+
+    if (keyboard.hasModifier(modifiers)) {
+      return;
+    }
+
+    // l -> activate lasso tool
+    if (key === 76) {
+      editorActions.trigger('lassoTool');
+
+      return true;
+    }
+
+    // e -> activate direct editing
+    if (key === 69) {
+      editorActions.trigger('directEditing');
+
+      return true;
+    }
+  });
+}
+
+DrdKeyBindings.$inject = [
+  'keyboard',
+  'editorActions'
+];
+
+module.exports = DrdKeyBindings;
+
+},{}],540:[function(require,module,exports){
+'use strict';
+
+module.exports = {
+  __depends__: [
+    require('diagram-js/lib/features/keyboard')
+  ],
+  __init__: [ 'drdKeyBindings' ],
+  drdKeyBindings: [ 'type', require('./DrdKeyBindings') ]
+};
+
+},{"./DrdKeyBindings":539,"diagram-js/lib/features/keyboard":704}],541:[function(require,module,exports){
+'use strict';
+
+var UpdateLabelHandler = require('./cmd/UpdateLabelHandler');
+
+var LabelUtil = require('./LabelUtil');
+
+var is = require('../../util/ModelUtil').is;
+
+function LabelEditingProvider(eventBus, canvas, directEditing, commandStack) {
+
+  this._canvas = canvas;
+  this._commandStack = commandStack;
+
+  directEditing.registerProvider(this);
+
+  commandStack.registerHandler('element.updateLabel', UpdateLabelHandler);
+
+  // listen to dblclick on non-root elements
+  eventBus.on('element.dblclick', function(event) {
+    directEditing.activate(event.element);
+  });
+
+  // complete on followup canvas operation
+  eventBus.on([ 'element.mousedown', 'drag.init', 'canvas.viewbox.changed' ], function(event) {
+    directEditing.complete();
+  });
+
+  // cancel on command stack changes
+  eventBus.on([ 'commandStack.changed' ], function() {
+    directEditing.cancel();
+  });
+
+  eventBus.on('create.end', 500, function(e) {
+
+    var element = e.shape;
+
+    if (is(element, 'dmn:Decision') || is(element, 'dmn:InputData') ||
+        is(element, 'dmn:BusinessKnowledgeModel') || is(element, 'dmn:KnowledgeSource')) {
+
+      directEditing.activate(element);
+    }
+  });
+}
+
+LabelEditingProvider.$inject = [ 'eventBus', 'canvas', 'directEditing', 'commandStack' ];
+
+module.exports = LabelEditingProvider;
+
+
+/**
+ * Activate direct editing for drgs and text annotations.
+ *
+ * @param  {djs.model.Base} element
+ *
+ * @return {Object} an object with properties bounds (position and size) and text
+ */
+LabelEditingProvider.prototype.activate = function(element) {
+
+  var text = LabelUtil.getLabel(element);
+
+  if (text === undefined) {
+    return;
+  }
+
+  var properties = this.getEditingBBox(element);
+
+  properties.text = text;
+
+  return properties;
+};
+
+
+/**
+ * Get the editing bounding box based on the element's size and position
+ *
+ * @param  {djs.model.Base} element
+ *
+ * @return {Object} an object containing information about position and size (fixed or minimum and/or maximum)
+ */
+LabelEditingProvider.prototype.getEditingBBox = function(element) {
+  var canvas = this._canvas;
+
+  var target = element.label || element;
+
+  var bbox = canvas.getAbsoluteBBox(target);
+
+  // default position
+  var bounds = { x: bbox.x, y: bbox.y };
+
+  var style = {},
+      zoom;
+
+  zoom = canvas.zoom();
+
+  // fixed size for internal labels:
+  // on high zoom levels: text box size === bbox size
+  // on low zoom levels: text box size === bbox size at 100% zoom
+  // This ensures minimum bounds at low zoom levels
+  if (zoom > 1) {
+    bounds.width = bbox.width;
+    bounds.height = bbox.height;
+  } else {
+    bounds.width = bbox.width / zoom;
+    bounds.height = bbox.height / zoom;
+  }
+
+  // centering overlapping text box size at low zoom levels
+  if (zoom < 1) {
+    bounds.x = bbox.x - (bounds.width / 2 - bbox.width / 2);
+    bounds.y = bbox.y - (bounds.height / 2 - bbox.height / 2);
+  }
+
+  // text annotations
+  if (is(element, 'dmn:TextAnnotation')) {
+    bounds.minWidth = 100;
+    bounds.height = element.height;
+
+    style.textAlign = 'left';
+  }
+
+  return { bounds: bounds, style: style };
+};
+
+
+LabelEditingProvider.prototype.update = function(element, newLabel) {
+  this._commandStack.execute('element.updateLabel', {
+    element: element,
+    newLabel: newLabel
+  });
+};
+
+},{"../../util/ModelUtil":658,"./LabelUtil":542,"./cmd/UpdateLabelHandler":543}],542:[function(require,module,exports){
+'use strict';
+
+var is = require('../../util/ModelUtil').is;
+
+function getLabelAttr(semantic) {
+  if (is(semantic, 'dmn:Decision') ||
+      is(semantic, 'dmn:BusinessKnowledgeModel') ||
+      is(semantic, 'dmn:InputData') ||
+      is(semantic, 'dmn:KnowledgeSource')) {
+
+    return 'name';
+  }
+
+  if (is(semantic, 'dmn:TextAnnotation')) {
+    return 'text';
+  }
+}
+
+module.exports.getLabel = function(element) {
+  var semantic = element.businessObject,
+      attr = getLabelAttr(semantic);
+
+  if (attr) {
+    return semantic[attr] || '';
+  }
+};
+
+
+module.exports.setLabel = function(element, text, isExternal) {
+  var semantic = element.businessObject,
+      attr = getLabelAttr(semantic);
+
+  if (attr) {
+    semantic[attr] = text;
+  }
+
+  // show external label if not empty
+  if (isExternal) {
+    element.hidden = !text;
+  }
+
+  return element;
+};
+
+},{"../../util/ModelUtil":658}],543:[function(require,module,exports){
+'use strict';
+
+var LabelUtil = require('../LabelUtil');
+
+
+/**
+ * A handler that updates the name of a DMN element.
+ */
+function UpdateLabelHandler() {
+
+  /**
+   * Set the label and return the changed elements.
+   *
+   * Element parameter can be label itself or connection (i.e. sequence flow).
+   *
+   * @param {djs.model.Base} element
+   * @param {String} text
+   */
+  function setText(element, text) {
+
+    // external label if present
+    var label = element.label || element;
+
+    var labelTarget = element.labelTarget || element;
+
+    LabelUtil.setLabel(label, text, labelTarget !== label);
+
+    return [ label, labelTarget ];
+  }
+
+  function execute(ctx) {
+    ctx.oldLabel = LabelUtil.getLabel(ctx.element);
+    return setText(ctx.element, ctx.newLabel);
+  }
+
+  function revert(ctx) {
+    return setText(ctx.element, ctx.oldLabel);
+  }
+
+  // API
+
+  this.execute = execute;
+  this.revert = revert;
+}
+
+module.exports = UpdateLabelHandler;
+
+},{"../LabelUtil":542}],544:[function(require,module,exports){
+module.exports = {
+  __depends__: [
+    require('diagram-js/lib/command'),
+    require('diagram-js/lib/features/change-support'),
+    require('diagram-js-direct-editing')
+  ],
+  __init__: [ 'labelEditingProvider' ],
+  labelEditingProvider: [ 'type', require('./LabelEditingProvider') ]
+};
+
+},{"./LabelEditingProvider":541,"diagram-js-direct-editing":660,"diagram-js/lib/command":667,"diagram-js/lib/features/change-support":685}],545:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach');
+
+
+function DrdFactory(moddle) {
+  this._model = moddle;
+}
+
+DrdFactory.$inject = [ 'moddle' ];
+
+
+DrdFactory.prototype._needsId = function(element) {
+  return element.$instanceOf('dmn:DRGElement') ||
+         element.$instanceOf('dmn:Artifact');
+};
+
+DrdFactory.prototype._ensureId = function(element) {
+
+  // generate semantic ids for elements
+  // dmn:Decision -> Decision_ID
+  var prefix = (element.$type || '').replace(/^[^:]*:/g, '') + '_';
+
+  if (!element.id && this._needsId(element)) {
+    element.id = this._model.ids.nextPrefixed(prefix, element);
+  }
+};
+
+DrdFactory.prototype.create = function(type, attrs) {
+  var element = this._model.create(type, attrs || {});
+
+  this._ensureId(element);
+
+  return element;
+};
+
+DrdFactory.prototype.createDi = function() {
+  return this.create('dmn:ExtensionElements', { values: [] });
+};
+
+DrdFactory.prototype.createDiBounds = function(bounds) {
+  return this.create('biodi:Bounds', bounds);
+};
+
+DrdFactory.prototype.createDiEdge = function(source, waypoints) {
+  var semanticWaypoints = [];
+
+  forEach(waypoints || [], function(wp) {
+    semanticWaypoints.push(this.createDiWaypoint(wp));
+  }, this);
+
+  return this.create('biodi:Edge', {
+    waypoints: semanticWaypoints,
+    source: source.id
+  });
+};
+
+DrdFactory.prototype.createDiWaypoint = function(waypoint) {
+  return this.create('biodi:Waypoint', waypoint);
+};
+
+
+module.exports = DrdFactory;
+
+},{"lodash/collection/forEach":832}],546:[function(require,module,exports){
+'use strict';
+
+var inherits = require('inherits');
+
+var BaseLayouter = require('diagram-js/lib/layout/BaseLayouter');
+
+var LayoutUtil = require('diagram-js/lib/layout/LayoutUtil');
+
+var getMid = LayoutUtil.getMid;
+
+function DrdLayouter() {}
+
+inherits(DrdLayouter, BaseLayouter);
+
+module.exports = DrdLayouter;
+
+
+DrdLayouter.prototype.layoutConnection = function(connection, hints) {
+
+  hints = hints || {};
+
+  var source = connection.source,
+      target = connection.target,
+      waypoints = connection.waypoints,
+      start = hints.connectionStart,
+      end = hints.connectionEnd,
+      middle;
+
+  waypoints = waypoints || [];
+
+  middle = waypoints.slice(1, waypoints.length - 1);
+
+  if (!start) {
+    start = getConnectionDocking(waypoints && waypoints[0], source);
+  }
+
+  if (!end) {
+    end = getConnectionDocking(waypoints && waypoints[waypoints.length - 1], target);
+  }
+
+  return [ start ].concat(middle, [ end ]);
+};
+
+function getConnectionDocking(point, shape) {
+  return point ? (point.original || point) : getMid(shape);
+}
+
+},{"diagram-js/lib/layout/BaseLayouter":762,"diagram-js/lib/layout/LayoutUtil":764,"inherits":820}],547:[function(require,module,exports){
+'use strict';
+
+var assign = require('lodash/object/assign'),
+    map = require('lodash/collection/map'),
+    forEach = require('lodash/collection/forEach'),
+    pick = require('lodash/object/pick'),
+    inherits = require('inherits');
+
+var Collections = require('diagram-js/lib/util/Collections');
+
+var ModelUtil = require('../../util/ModelUtil'),
+    getBusinessObject = ModelUtil.getBusinessObject,
+    is = ModelUtil.is;
+
+var CommandInterceptor = require('diagram-js/lib/command/CommandInterceptor');
+
+/**
+ * A handler responsible for updating the underlying DMN 1.1 XML + DI
+ * once changes on the diagram happen
+ */
+function DrdUpdater(eventBus, drdFactory, connectionDocking, drillDown, drdRules, definitionIdView) {
+
+  CommandInterceptor.call(this, eventBus);
+
+  this._drdFactory = drdFactory;
+  this._drillDown = drillDown;
+  this._drdRules = drdRules;
+  this._definitionIdView = definitionIdView;
+
+  var self = this;
+
+  ////// connection cropping /////////////////////////
+
+  // crop connection ends during create/update
+  function cropConnection(e) {
+    var context = e.context,
+        connection;
+
+    if (!context.cropped) {
+      connection = context.connection;
+      connection.waypoints = connectionDocking.getCroppedWaypoints(connection);
+      context.cropped = true;
+    }
+  }
+
+  this.executed([
+    'connection.layout',
+    'connection.create',
+    'connection.reconnectEnd',
+    'connection.reconnectStart'
+  ], cropConnection);
+
+  this.reverted([ 'connection.layout' ], function(e) {
+    delete e.context.cropped;
+  });
+
+  ////// DRD + DI update /////////////////////////
+
+
+  // update parent
+  function updateParent(e) {
+    var context = e.context;
+
+    self.updateParent(context.shape || context.connection, context.oldParent);
+  }
+
+  function reverseUpdateParent(e) {
+    var context = e.context;
+
+    var element = context.shape || context.connection,
+        // oldParent is the (old) new parent, because we are undoing
+        oldParent = context.parent || context.newParent;
+
+    // for all requirements the semantic parent is the target
+    if (context.connection && !is(element, 'dmn:Association')) {
+      oldParent = element.target;
+    }
+
+    self.updateParent(element, oldParent);
+  }
+
+  this.executed([ 'shape.create',
+                  'shape.delete',
+                  'connection.create',
+                  'connection.move',
+                  'connection.delete' ], updateParent);
+
+  this.reverted([ 'shape.create',
+                  'shape.delete',
+                  'connection.create',
+                  'connection.move',
+                  'connection.delete' ], reverseUpdateParent);
+
+
+  // update bounds
+  function updateBounds(e) {
+    var shape = e.context.shape;
+
+    if (!(is(shape, 'dmn:DRGElement') || is(shape, 'dmn:TextAnnotation'))) {
+      return;
+    }
+
+    self.updateBounds(shape);
+  }
+
+  this.executed([ 'shape.create', 'shape.move' ], updateBounds);
+
+  this.reverted([ 'shape.create', 'shape.move' ], updateBounds);
+
+  function updateConnectionWaypoints(e) {
+    self.updateConnectionWaypoints(e.context);
+  }
+
+  this.executed([ 'connection.layout', 'connection.updateWaypoints' ], updateConnectionWaypoints);
+
+  this.reverted([ 'connection.layout', 'connection.updateWaypoints' ], updateConnectionWaypoints);
+
+  this.executed([ 'connection.create' ], function(event) {
+    var context = event.context,
+        connection = context.connection,
+        targetBO = context.target.businessObject,
+        di, ext;
+
+    if (is(connection, 'dmn:Association')) {
+      updateParent(event);
+    } else {
+      // semantic parent is target (instead of graphical parent)
+      self.updateSemanticParent(connection.businessObject, targetBO);
+
+      // add di to target business object extension elements
+      di = context.di;
+      ext = targetBO.extensionElements.values;
+
+      // fix di waypoints, due to connection cropping
+      forEach(di.waypoints, function(waypoint, index) {
+        waypoint.x = connection.waypoints[index].x;
+        waypoint.y = connection.waypoints[index].y;
+      });
+
+      ext.push(di);
+    }
+  });
+
+  this.reverted([ 'connection.create' ], function(event) {
+    var context = event.context,
+        connection = context.connection,
+        di, ext, idx;
+
+    reverseUpdateParent(event);
+
+    if (!is(connection, 'dmn:Association')) {
+      // remove di from target business object extension elements
+      di = context.di;
+      ext = context.target.businessObject.extensionElements.values;
+      idx = ext.indexOf(di);
+
+      if (idx !== -1) {
+        ext.splice(idx, 1);
+      }
+    }
+  });
+
+  this.executed([ 'connection.delete' ], function(event) {
+    var context = event.context,
+        connection = getBusinessObject(context.connection),
+        source = context.source,
+        target = getBusinessObject(context.target),
+        index;
+
+    if (is(connection, 'dmn:Association')) {
+      return;
+    }
+
+    forEach(target.extensionElements.values, function(value, idx) {
+      if (is(value, 'biodi:Edge') && source.id === value.source) {
+        index = idx;
+
+        return false;
+      }
+    });
+
+    if (index !== undefined) {
+      context.oldDI = target.extensionElements.values[index];
+
+      target.extensionElements.values.splice(index, 1);
+    }
+  });
+
+  this.reverted([ 'connection.delete' ], function(event) {
+    var context = event.context,
+        connection = context.connection,
+        target = getBusinessObject(context.target),
+        oldDI = context.oldDI;
+
+    if (!oldDI || is(connection, 'dmn:Association')) {
+      return;
+    }
+
+    target.extensionElements.values.push(oldDI);
+  });
+
+  function handleDrillDown(element) {
+    var canDrillDown = drdRules.canDrillDown(element);
+    if (canDrillDown) {
+      drillDown.addOverlay(element, canDrillDown);
+    }
+  }
+
+  this.executed([ 'shape.replace' ], function(event) {
+    handleDrillDown(event.context.newShape);
+  });
+
+  this.reverted([ 'shape.replace' ], function(event) {
+    handleDrillDown(event.context.oldShape);
+  });
+
+  this.reverted([ 'shape.delete' ], function(event) {
+    handleDrillDown(event.context.shape);
+  });
+
+  this.executed([ 'element.updateProperties' ], function(event) {
+    definitionIdView.update();
+  });
+  this.reverted([ 'element.updateProperties' ], function(event) {
+    definitionIdView.update();
+  });
+
+}
+
+inherits(DrdUpdater, CommandInterceptor);
+
+module.exports = DrdUpdater;
+
+DrdUpdater.$inject = [ 'eventBus', 'drdFactory', 'connectionDocking', 'drillDown', 'drdRules', 'definitionIdView' ];
+
+
+/////// implementation //////////////////////////////////
+
+DrdUpdater.prototype.updateParent = function(element, oldParent) {
+  var parentShape = element.parent;
+
+  if (!is(element, 'dmn:DRGElement') && !is(element, 'dmn:Artifact')) {
+    parentShape = oldParent;
+  }
+
+  var businessObject = element.businessObject,
+      parentBusinessObject = parentShape && parentShape.businessObject;
+
+  this.updateSemanticParent(businessObject, parentBusinessObject);
+
+  this.updateExtensionElements(businessObject);
+};
+
+
+DrdUpdater.prototype.updateBounds = function(shape) {
+  var drdFactory = this._drdFactory;
+
+  var businessObject = getBusinessObject(shape),
+      extensionElements = businessObject.extensionElements,
+      values, bounds;
+
+  if (!extensionElements) {
+    return;
+  }
+
+  values = extensionElements.values;
+  bounds = values[0];
+
+  if (!bounds) {
+    values.push(drdFactory.createDiBounds({
+      x: shape.x,
+      y: shape.y,
+      width: shape.width,
+      height: shape.height
+    }));
+  } else {
+    values[0] = assign(bounds, {
+      x: shape.x,
+      y: shape.y,
+      width: shape.width,
+      height: shape.height
+    });
+  }
+};
+
+
+DrdUpdater.prototype.updateExtensionElements = function(businessObject) {
+  var extensionElements = businessObject.extensionElements;
+
+  if (extensionElements && !extensionElements.$parent) {
+    extensionElements.$parent = businessObject;
+  }
+};
+
+
+DrdUpdater.prototype.updateSemanticParent = function(businessObject, newParent) {
+
+  var containment, children;
+
+  if (businessObject.$parent === newParent) {
+    return;
+  }
+
+  if (businessObject.$instanceOf('dmn:DRGElement')) {
+    containment = 'drgElements';
+  } else if (businessObject.$instanceOf('dmn:Artifact')) {
+    containment = 'artifacts';
+  } else if (businessObject.$instanceOf('dmn:InformationRequirement')) {
+    containment = 'informationRequirement';
+  } else if (businessObject.$instanceOf('dmn:AuthorityRequirement')) {
+    containment = 'authorityRequirement';
+  } else if (businessObject.$instanceOf('dmn:KnowledgeRequirement')) {
+    containment = 'knowledgeRequirement';
+  }
+
+  if (businessObject.$parent) {
+    // remove from old parent
+    children = businessObject.$parent.get(containment);
+
+    Collections.remove(children, businessObject);
+  }
+
+  if (!newParent) {
+    businessObject.$parent = null;
+  } else {
+    // add to new parent
+    children = newParent.get(containment);
+    children.push(businessObject);
+
+    businessObject.$parent = newParent;
+  }
+};
+
+
+DrdUpdater.prototype.updateConnectionWaypoints = function(context) {
+  var drdFactory = this._drdFactory;
+
+  var connection = context.connection,
+      source = connection.source,
+      target = connection.target,
+      extensionElements;
+
+  if (is(connection, 'dmn:Association')) {
+    extensionElements = connection.businessObject.extensionElements;
+  } else {
+    extensionElements = target.businessObject.extensionElements;
+  }
+
+  // update di -> target extensionElements
+  extensionElements.values = map(extensionElements.values, function(value) {
+
+    if (is(value, 'biodi:Edge') && value.source === source.id) {
+      value.waypoints = [];
+
+      forEach(connection.waypoints, function(waypoint, index) {
+        var semanticWaypoint = drdFactory.createDiWaypoint(pick(waypoint, [ 'x', 'y' ]));
+
+        semanticWaypoint.$parent = value;
+
+        value.waypoints.push(semanticWaypoint);
+      });
+    }
+
+    return value;
+  });
+};
+
+},{"../../util/ModelUtil":658,"diagram-js/lib/command/CommandInterceptor":665,"diagram-js/lib/util/Collections":774,"inherits":820,"lodash/collection/forEach":832,"lodash/collection/map":835,"lodash/object/assign":964,"lodash/object/pick":970}],548:[function(require,module,exports){
+'use strict';
+
+var assign = require('lodash/object/assign'),
+    inherits = require('inherits');
+
+var is = require('../../util/ModelUtil').is;
+
+var BaseElementFactory = require('diagram-js/lib/core/ElementFactory');
+
+/**
+ * A drd-aware factory for diagram-js shapes
+ */
+function ElementFactory(drdFactory) {
+  BaseElementFactory.call(this);
+
+  this._drdFactory = drdFactory;
+}
+
+inherits(ElementFactory, BaseElementFactory);
+
+
+ElementFactory.$inject = [ 'drdFactory' ];
+
+module.exports = ElementFactory;
+
+ElementFactory.prototype.baseCreate = BaseElementFactory.prototype.create;
+
+ElementFactory.prototype.create = function(elementType, attrs) {
+  return this.createDrdElement(elementType, attrs);
+};
+
+ElementFactory.prototype.createDrdElement = function(elementType, attrs) {
+  var drdFactory = this._drdFactory;
+
+  var size;
+
+  attrs = attrs || {};
+
+  var businessObject = attrs.businessObject;
+
+  if (!businessObject) {
+    if (!attrs.type) {
+      throw new Error('no shape type specified');
+    }
+
+    businessObject = drdFactory.create(attrs.type);
+  }
+
+  if ((elementType !== 'root' && elementType !== 'connection') && !businessObject.extensionElements) {
+    businessObject.extensionElements = drdFactory.createDi();
+  }
+
+  size = this._getDefaultSize(businessObject);
+
+  attrs = assign({
+    businessObject: businessObject,
+    id: businessObject.id
+  }, size, attrs);
+
+  return this.baseCreate(elementType, attrs);
+};
+
+
+ElementFactory.prototype._getDefaultSize = function(semantic) {
+
+  if (is(semantic, 'dmn:Decision')) {
+    return { width: 100, height: 55 };
+  }
+
+  if (is(semantic, 'dmn:InputData')) {
+    return { width: 125, height: 45 };
+  }
+
+  if (is(semantic, 'dmn:KnowledgeSource')) {
+    return { width: 100, height: 63 };
+  }
+
+  if (is(semantic, 'dmn:BusinessKnowledgeModel')) {
+    return { width: 135, height: 46 };
+  }
+
+  return { width: 100, height: 80 };
+};
+
+},{"../../util/ModelUtil":658,"diagram-js/lib/core/ElementFactory":669,"inherits":820,"lodash/object/assign":964}],549:[function(require,module,exports){
+'use strict';
+
+var inherits = require('inherits');
+
+var BaseModeling = require('diagram-js/lib/features/modeling/Modeling');
+
+var UpdatePropertiesHandler = require('./cmd/UpdatePropertiesHandler.js'),
+    IdClaimHandler = require('./cmd/IdClaimHandler.js');
+
+/**
+ * DMN 1.1 modeling features activator
+ *
+ * @param {Canvas} canvas
+ * @param {EventBus} eventBus
+ * @param {ElementFactory} elementFactory
+ * @param {CommandStack} commandStack
+ * @param {DrdRules} drdRules
+ */
+function Modeling(canvas, eventBus, elementFactory, commandStack, drdRules) {
+  this._canvas = canvas;
+  this._drdRules = drdRules;
+  
+  BaseModeling.call(this, eventBus, elementFactory, commandStack);
+}
+
+inherits(Modeling, BaseModeling);
+
+Modeling.$inject = [ 'canvas', 'eventBus', 'elementFactory', 'commandStack', 'drdRules' ];
+
+module.exports = Modeling;
+
+
+Modeling.prototype.getHandlers = function() {
+  var handlers = BaseModeling.prototype.getHandlers.call(this);
+
+  handlers['element.updateProperties'] = UpdatePropertiesHandler;
+  handlers['id.updateClaim'] = IdClaimHandler;
+
+  return handlers;
+};
+
+Modeling.prototype.updateProperties = function(element, properties) {
+  this._commandStack.execute('element.updateProperties', {
+    element: element,
+    properties: properties
+  });
+};
+
+Modeling.prototype.claimId = function(id, moddleElement) {
+  this._commandStack.execute('id.updateClaim', {
+    id: id,
+    element: moddleElement,
+    claiming: true
+  });
+};
+
+
+Modeling.prototype.unclaimId = function(id, moddleElement) {
+  this._commandStack.execute('id.updateClaim', {
+    id: id,
+    element: moddleElement
+  });
+};
+
+Modeling.prototype.connect = function(source, target, attrs, hints) {
+
+  var drdRules = this._drdRules,
+      rootElement = this._canvas.getRootElement();
+
+  if (!attrs) {
+    attrs = drdRules.canConnect(source, target) || { type: 'dmn:Association' };
+  }
+
+  return this.createConnection(source, target, attrs, rootElement, hints);
+};
+
+},{"./cmd/IdClaimHandler.js":554,"./cmd/UpdatePropertiesHandler.js":555,"diagram-js/lib/features/modeling/Modeling":707,"inherits":820}],550:[function(require,module,exports){
+'use strict';
+
+var inherits = require('inherits');
+
+var CommandInterceptor = require('diagram-js/lib/command/CommandInterceptor');
+
+var getMid = require('diagram-js/lib/layout/LayoutUtil').getMid;
+
+var is = require('../../../util/ModelUtil').is;
+
+var getRequirementType = function(source) {
+  switch (source.type) {
+  case 'dmn:InputData':
+    return 'Input';
+  case 'dmn:Decision':
+    return 'Decision';
+  case 'dmn:KnowledgeSource':
+    return 'Authority';
+  case 'dmn:BusinessKnowledgeModel':
+    return 'Knowledge';
+  }
+};
+
+function CreateConnectionBehavior(eventBus, drdFactory, drdRules) {
+
+  CommandInterceptor.call(this, eventBus);
+
+  this.preExecute('connection.create', function(context) {
+    var connection = context.connection,
+        connectionBusinessObject = connection.businessObject,
+        source =  context.source,
+        target = context.target,
+        sourceRef, targetRef,
+        requirementType, requirement, edge;
+
+    if (connection.type === 'dmn:Association') {
+      sourceRef = drdFactory.create('dmn:DMNElementReference', {
+        href: '#' + source.id
+      });
+      targetRef = drdFactory.create('dmn:DMNElementReference', {
+        href: '#' + target.id
+      });
+
+      connectionBusinessObject.sourceRef = sourceRef;
+      connectionBusinessObject.targetRef = targetRef;
+
+      connectionBusinessObject.extensionElements = drdFactory.createDi();
+
+      edge = drdFactory.createDiEdge(source, [ getMid(source), getMid(target)]);
+
+      connectionBusinessObject.extensionElements.values.push(edge);
+
+    } else {
+
+      // flip around source and target
+      if (is(source, 'dmn:Decision') && is(target, 'dmn:InputData')) {
+        context.target = source;
+        context.source = source = target;
+      }
+
+      requirementType = getRequirementType(source);
+      requirement = drdFactory.create('dmn:DMNElementReference', {
+        href: '#' + source.id
+      });
+
+      connectionBusinessObject['required' + requirementType] = requirement;
+
+      edge = drdFactory.createDiEdge(source, [ getMid(source), getMid(context.target)]);
+
+      // DI
+      context.di = edge;
+    }
+  }, true);
+}
+
+
+CreateConnectionBehavior.$inject = [ 'eventBus', 'drdFactory', 'drdRules' ];
+
+inherits(CreateConnectionBehavior, CommandInterceptor);
+
+module.exports = CreateConnectionBehavior;
+
+},{"../../../util/ModelUtil":658,"diagram-js/lib/command/CommandInterceptor":665,"diagram-js/lib/layout/LayoutUtil":764,"inherits":820}],551:[function(require,module,exports){
+'use strict';
+
+var inherits = require('inherits');
+
+var filter = require('lodash/collection/filter');
+
+var CommandInterceptor = require('diagram-js/lib/command/CommandInterceptor');
+
+function ReplaceConnectionBehavior(eventBus, modeling, drdRules) {
+
+  CommandInterceptor.call(this, eventBus);
+
+  function fixConnection(connection) {
+
+    var source = connection.source,
+        target = connection.target,
+        parent = connection.parent,
+        replacementAttrs;
+
+    // do not do anything if connection
+    // is already deleted (may happen due to other
+    // behaviors plugged-in before)
+    if (!parent) {
+      return;
+    }
+
+    replacementAttrs = drdRules.canConnect(source, target) || { type: 'dmn:Association' };
+    replacementAttrs.waypoints = connection.waypoints.slice();
+
+    // create a new connection
+    modeling.removeConnection(connection);
+    modeling.connect(source, target, replacementAttrs);
+  }
+
+  this.postExecuted('connection.reconnectStart', function(event) {
+
+    // remove old di information from target
+    var extensionElements = event.context.connection.target.businessObject.extensionElements.values;
+
+    var extension = filter(extensionElements, function(extension) {
+      return extension.$type === 'biodi:Edge' && extension.source === event.context.oldSource.id;
+    })[0];
+
+    if (extension) {
+      extensionElements.splice(extensionElements.indexOf(extension), 1);
+    }
+  });
+
+  this.postExecuted([
+    'connection.reconnectStart',
+    'connection.reconnectEnd'
+  ], function(event) {
+
+    var connection = event.context.connection;
+
+    fixConnection(connection);
+  });
+
+}
+
+inherits(ReplaceConnectionBehavior, CommandInterceptor);
+
+ReplaceConnectionBehavior.$inject = [ 'eventBus', 'modeling', 'drdRules' ];
+
+module.exports = ReplaceConnectionBehavior;
+
+},{"diagram-js/lib/command/CommandInterceptor":665,"inherits":820,"lodash/collection/filter":830}],552:[function(require,module,exports){
+'use strict';
+
+var inherits = require('inherits');
+
+var forEach = require('lodash/collection/forEach'),
+    filter = require('lodash/collection/filter');
+
+var CommandInterceptor = require('diagram-js/lib/command/CommandInterceptor');
+
+/**
+ * Defines the behaviour of what happens to the elements inside a container
+ * that morphs into another DRD element
+ */
+function ReplaceElementBehaviour(eventBus, modeling) {
+  CommandInterceptor.call(this, eventBus);
+
+  this._modeling = modeling;
+
+  this.postExecuted( [ 'shape.replace' ], 1500, function(e) {
+    var context = e.context,
+        oldShape = context.oldShape,
+        newShape = context.newShape,
+        newId = newShape.id;
+
+
+    modeling.unclaimId(oldShape.businessObject.id, oldShape.businessObject);
+    modeling.updateProperties(newShape, { id: oldShape.id });
+
+    // update id of target connection references
+    forEach(newShape.outgoing, function(connection) {
+      connection.businessObject.requiredDecision.href = '#' + oldShape.id;
+
+      var extensionElements = connection.businessObject.$parent.extensionElements.values;
+      var extension = filter(extensionElements, function(extension) {
+        return extension.$type === 'biodi:Edge' && extension.source === newId;
+      })[0];
+
+      if (extension) {
+        extension.source = oldShape.id;
+      }
+    });
+  });
+}
+
+inherits(ReplaceElementBehaviour, CommandInterceptor);
+
+ReplaceElementBehaviour.$inject = [ 'eventBus', 'modeling' ];
+
+module.exports = ReplaceElementBehaviour;
+
+},{"diagram-js/lib/command/CommandInterceptor":665,"inherits":820,"lodash/collection/filter":830,"lodash/collection/forEach":832}],553:[function(require,module,exports){
+module.exports = {
+  __init__: [
+    'createConnectionBehavior',
+    'replaceConnectionBehavior',
+    'replaceElementBehavior'
+  ],
+  createConnectionBehavior: [ 'type', require('./CreateConnectionBehavior') ],
+  replaceConnectionBehavior: [ 'type', require('./ReplaceConnectionBehavior') ],
+  replaceElementBehavior: [ 'type', require('./ReplaceElementBehavior') ]
+};
+
+},{"./CreateConnectionBehavior":550,"./ReplaceConnectionBehavior":551,"./ReplaceElementBehavior":552}],554:[function(require,module,exports){
+'use strict';
+
+
+function IdClaimHandler(moddle) {
+  this._moddle = moddle;
+}
+
+IdClaimHandler.$inject = [ 'moddle' ];
+
+module.exports = IdClaimHandler;
+
+
+IdClaimHandler.prototype.execute = function(context) {
+  var ids = this._moddle.ids,
+      id = context.id,
+      element = context.element,
+      claiming = context.claiming;
+
+  if (claiming) {
+    ids.claim(id, element);
+  } else {
+    ids.unclaim(id);
+  }
+};
+
+/**
+ * Command revert implementation.
+ */
+IdClaimHandler.prototype.revert = function(context) {
+  var ids = this._moddle.ids,
+      id = context.id,
+      element = context.element,
+      claiming = context.claiming;
+
+  if (claiming) {
+    ids.unclaim(id);
+  } else {
+    ids.claim(id, element);
+  }
+};
+
+},{}],555:[function(require,module,exports){
+'use strict';
+
+var reduce = require('lodash/object/transform'),
+    keys = require('lodash/object/keys'),
+    forEach = require('lodash/collection/forEach');
+
+var NAME = 'name',
+    ID = 'id';
+
+
+/**
+ * A handler that implements a DMN property update.
+ *
+ * This should be used to set simple properties on elements with
+ * an underlying DMN business object.
+ *
+ * Use respective diagram-js provided handlers if you would
+ * like to perform automated modeling.
+ */
+function UpdatePropertiesHandler(elementRegistry, moddle) {
+  this._elementRegistry = elementRegistry;
+  this._moddle = moddle;
+}
+
+UpdatePropertiesHandler.$inject = [ 'elementRegistry', 'moddle' ];
+
+module.exports = UpdatePropertiesHandler;
+
+
+////// api /////////////////////////////////////////////
+
+/**
+ * Updates a DMN element with a list of new properties
+ *
+ * @param {Object} context
+ * @param {djs.model.Base} context.element the element to update
+ * @param {Object} context.properties a list of properties to set on the element's
+ *                                    businessObject (the DMN model element)
+ *
+ * @return {Array<djs.model.Base>} the updated element
+ */
+UpdatePropertiesHandler.prototype.execute = function(context) {
+
+  var element = context.element,
+      changed = [ element];
+
+  if (!element) {
+    throw new Error('element required');
+  }
+
+  var elementRegistry = this._elementRegistry,
+      ids = this._moddle.ids;
+
+  var businessObject = element.businessObject,
+      properties = context.properties,
+      oldProperties = context.oldProperties || getProperties(businessObject, keys(properties));
+
+  if (isIdChange(properties, businessObject)) {
+    ids.unclaim(businessObject[ID]);
+
+    elementRegistry.updateId(element, properties[ID]);
+
+    ids.claim(properties[ID], businessObject);
+  }
+
+  if (NAME in properties && element.label) {
+    changed.push(element.label);
+  }
+
+  // update properties
+  setProperties(businessObject, properties);
+
+  // store old values
+  context.oldProperties = oldProperties;
+  context.changed = changed;
+
+  // indicate changed on objects affected by the update
+  return changed;
+};
+
+/**
+ * Reverts the update on a DMN elements properties.
+ *
+ * @param  {Object} context
+ *
+ * @return {djs.model.Base} the updated element
+ */
+UpdatePropertiesHandler.prototype.revert = function(context) {
+
+  var element = context.element,
+      properties = context.properties,
+      oldProperties = context.oldProperties,
+      businessObject = element.businessObject,
+      elementRegistry = this._elementRegistry,
+      ids = this._moddle.ids;
+
+  // update properties
+  setProperties(businessObject, oldProperties);
+
+  if (isIdChange(properties, businessObject)) {
+    ids.unclaim(properties[ID]);
+
+    elementRegistry.updateId(element, oldProperties[ID]);
+
+    ids.claim(oldProperties[ID], businessObject);
+  }
+
+  return context.changed;
+};
+
+
+function isIdChange(properties, businessObject) {
+  return ID in properties && properties[ID] !== businessObject[ID];
+}
+
+
+function getProperties(businessObject, propertyNames) {
+  return reduce(propertyNames, function(result, key) {
+    result[key] = businessObject.get(key);
+    return result;
+  }, {});
+}
+
+
+function setProperties(businessObject, properties) {
+  forEach(properties, function(value, key) {
+    businessObject.set(key, value);
+  });
+}
+
+},{"lodash/collection/forEach":832,"lodash/object/keys":965,"lodash/object/transform":971}],556:[function(require,module,exports){
+'use strict';
+
+module.exports = {
+  __init__: [ 'modeling', 'drdUpdater' ],
+  __depends__: [
+    require('./behavior'),
+    require('../rules'),
+    require('../drill-down'),
+    require('../definition-id/viewer'),
+    require('diagram-js/lib/command'),
+    require('diagram-js/lib/features/selection'),
+    require('diagram-js/lib/features/change-support')
+  ],
+  drdFactory: [ 'type', require('./DrdFactory') ],
+  drdUpdater: [ 'type', require('./DrdUpdater') ],
+  elementFactory: [ 'type', require('./ElementFactory') ],
+  modeling: [ 'type', require('./Modeling') ],
+  layouter: [ 'type', require('./DrdLayouter') ],
+  connectionDocking: [ 'type', require('diagram-js/lib/layout/CroppingConnectionDocking') ]
+};
+
+},{"../definition-id/viewer":534,"../drill-down":536,"../rules":565,"./DrdFactory":545,"./DrdLayouter":546,"./DrdUpdater":547,"./ElementFactory":548,"./Modeling":549,"./behavior":553,"diagram-js/lib/command":667,"diagram-js/lib/features/change-support":685,"diagram-js/lib/features/selection":755,"diagram-js/lib/layout/CroppingConnectionDocking":763}],557:[function(require,module,exports){
+'use strict';
+
+var assign = require('lodash/object/assign');
+
+/**
+ * A palette provider for DMN 1.1 elements.
+ */
+function PaletteProvider(palette, create, elementFactory, lassoTool) {
+
+  this._palette = palette;
+  this._create = create;
+  this._elementFactory = elementFactory;
+  this._lassoTool = lassoTool;
+
+  palette.registerProvider(this);
+}
+
+module.exports = PaletteProvider;
+
+PaletteProvider.$inject = [
+  'palette',
+  'create',
+  'elementFactory',
+  'lassoTool'
+];
+
+
+PaletteProvider.prototype.getPaletteEntries = function(element) {
+
+  var actions  = {},
+      create = this._create,
+      elementFactory = this._elementFactory,
+      lassoTool = this._lassoTool;
+
+  function createAction(type, group, className, title, options) {
+
+    function createListener(event) {
+      var shape = elementFactory.createShape(assign({ type: type }, options));
+
+      create.start(event, shape);
+    }
+
+    return {
+      group: group,
+      className: className,
+      title: title,
+      action: {
+        dragstart: createListener,
+        click: createListener
+      }
+    };
+  }
+
+  assign(actions, {
+    'lasso-tool': {
+      group: 'tools',
+      className: 'dmn-icon-lasso-tool',
+      title: 'Activate the lasso tool',
+      action: {
+        click: function(event) {
+          lassoTool.activateSelection(event);
+        }
+      }
+    },
+    'tool-separator': {
+      group: 'tools',
+      separator: true
+    },
+    'create.decision': createAction(
+      'dmn:Decision', 'drd', 'dmn-icon-decision'
+    ),
+    'create.input-data': createAction(
+      'dmn:InputData', 'drd', 'dmn-icon-input-data'
+    ),
+    'create.knowledge-source': createAction(
+      'dmn:KnowledgeSource', 'drd', 'dmn-icon-knowledge-source'
+    ),
+    'create.business-knowledge-model': createAction(
+      'dmn:BusinessKnowledgeModel', 'drd', 'dmn-icon-business-knowledge'
+    )
+  });
+
+  return actions;
+};
+
+},{"lodash/object/assign":964}],558:[function(require,module,exports){
+module.exports = {
+  __depends__: [
+    require('diagram-js/lib/features/palette'),
+    require('diagram-js/lib/features/create'),
+    require('diagram-js/lib/features/lasso-tool')
+  ],
+  __init__: [ 'paletteProvider' ],
+  paletteProvider: [ 'type', require('./PaletteProvider') ]
+};
+
+},{"./PaletteProvider":557,"diagram-js/lib/features/create":695,"diagram-js/lib/features/lasso-tool":706,"diagram-js/lib/features/palette":742}],559:[function(require,module,exports){
+'use strict';
+
+var is = require('../../util/ModelUtil').is;
+
+var forEach = require('lodash/collection/forEach'),
+    filter = require('lodash/collection/filter');
+
+var replaceOptions = require ('../replace/ReplaceOptions');
+
+
+/**
+ * This module is an element agnostic replace menu provider for the popup menu.
+ */
+function ReplaceMenuProvider(popupMenu, modeling, moddle, drdReplace, rules) {
+
+  this._popupMenu = popupMenu;
+  this._modeling = modeling;
+  this._moddle = moddle;
+  this._drdReplace = drdReplace;
+  this._rules = rules;
+
+  this.register();
+}
+
+ReplaceMenuProvider.$inject = [ 'popupMenu', 'modeling', 'moddle', 'drdReplace', 'rules' ];
+
+
+/**
+ * Register replace menu provider in the popup menu
+ */
+ReplaceMenuProvider.prototype.register = function() {
+  this._popupMenu.registerProvider('dmn-replace', this);
+};
+
+
+/**
+ * Get all entries from replaceOptions for the given element.
+ *
+ * @param {djs.model.Base} element
+ *
+ * @return {Array<Object>} a list of menu entry items
+ */
+ReplaceMenuProvider.prototype.getEntries = function(element) {
+
+  var businessObject = element.businessObject;
+
+  var rules = this._rules;
+
+  if (!rules.allowed('shape.replace', { element: element })) {
+    return [];
+  }
+
+  // start events outside event sub processes
+  if (is(businessObject, 'dmn:Decision')) {
+
+    var options = filter(replaceOptions.DECISION, function(option) {
+      var notEmpty = option.actionName === 'replace-with-empty-decision' && (businessObject.decisionTable || businessObject.literalExpression);
+      var notTable = option.actionName === 'replace-with-decision-table' && !businessObject.decisionTable;
+      var notExp = option.actionName === 'replace-with-literal-expression' && !businessObject.literalExpression;
+
+      return notEmpty || notTable || notExp;
+    });
+
+    return this._createEntries(element, options);
+  }
+
+  return [];
+};
+
+
+/**
+ * Creates an array of menu entry objects for a given element.
+ *
+ * @param  {djs.model.Base} element
+ * @param  {Object} replaceOptions
+ *
+ * @return {Array<Object>} a list of menu items
+ */
+ReplaceMenuProvider.prototype._createEntries = function(element, replaceOptions) {
+  var menuEntries = [];
+
+  var self = this;
+
+  forEach(replaceOptions, function(definition) {
+    var entry = self._createMenuEntry(definition, element);
+
+    menuEntries.push(entry);
+  });
+
+  return menuEntries;
+};
+
+
+/**
+ * Creates and returns a single menu entry item.
+ *
+ * @param  {Object} definition a single replace options definition object
+ * @param  {djs.model.Base} element
+ * @param  {Function} [action] an action callback function which gets called when
+ *                             the menu entry is being triggered.
+ *
+ * @return {Object} menu entry item
+ */
+ReplaceMenuProvider.prototype._createMenuEntry = function(definition, element, action) {
+  var replaceElement = this._drdReplace.replaceElement;
+
+  var replaceAction = function() {
+    return replaceElement(element, definition.target);
+  };
+
+  action = action || replaceAction;
+
+  var menuEntry = {
+    label: definition.label,
+    className: definition.className,
+    id: definition.actionName,
+    action: action
+  };
+
+  return menuEntry;
+};
+
+ReplaceMenuProvider.prototype.getHeaderEntries = function(element) {
+  return [];
+};
+
+
+module.exports = ReplaceMenuProvider;
+
+},{"../../util/ModelUtil":658,"../replace/ReplaceOptions":562,"lodash/collection/filter":830,"lodash/collection/forEach":832}],560:[function(require,module,exports){
+module.exports = {
+  __depends__: [
+    require('diagram-js/lib/features/popup-menu'),
+    require('../replace')
+  ],
+  __init__: [ 'replaceMenuProvider' ],
+  replaceMenuProvider: [ 'type', require('./ReplaceMenuProvider') ]
+};
+
+},{"../replace":563,"./ReplaceMenuProvider":559,"diagram-js/lib/features/popup-menu":744}],561:[function(require,module,exports){
+'use strict';
+
+/**
+ * This module takes care of replacing DRD elements
+ */
+function DrdReplace(drdFactory, replace, selection, modeling) {
+
+  /**
+   * Prepares a new business object for the replacement element
+   * and triggers the replace operation.
+   *
+   * @param  {djs.model.Base} element
+   * @param  {Object} target
+   * @param  {Object} [hints]
+   *
+   * @return {djs.model.Base} the newly created element
+   */
+  function replaceElement(element, target, hints) {
+
+    hints = hints || {};
+
+    var type = target.type,
+        oldBusinessObject = element.businessObject;
+
+    var newBusinessObject = drdFactory.create(type);
+
+    var newElement = {
+      type: type,
+      businessObject: newBusinessObject
+    };
+
+    newElement.width = element.width;
+    newElement.height = element.height;
+
+    newBusinessObject.name = oldBusinessObject.name;
+
+    if (target.table) {
+      var table = drdFactory.create('dmn:DecisionTable');
+      newBusinessObject.decisionTable = table;
+      table.$parent = newBusinessObject;
+
+      var output = drdFactory.create('dmn:OutputClause');
+      output.typeRef = 'string';
+      output.$parent = table;
+      table.output = [ output ];
+    }
+
+    if (target.expression) {
+      newBusinessObject.literalExpression = drdFactory.create('dmn:LiteralExpression');
+      newBusinessObject.variable = drdFactory.create('dmn:InformationItem');
+    }
+
+    return replace.replaceElement(element, newElement, hints);
+  }
+
+  this.replaceElement = replaceElement;
+}
+
+DrdReplace.$inject = [ 'drdFactory', 'replace', 'selection', 'modeling' ];
+
+module.exports = DrdReplace;
+
+},{}],562:[function(require,module,exports){
+'use strict';
+
+module.exports.DECISION = [
+  {
+    label: 'Empty',
+    actionName: 'replace-with-empty-decision',
+    className: 'dmn-icon-clear',
+    target: {
+      type: 'dmn:Decision',
+      table: false,
+      expression: false
+    }
+  },
+  {
+    label: 'Decision Table',
+    actionName: 'replace-with-decision-table',
+    className: 'dmn-icon-decision-table',
+    target: {
+      type: 'dmn:Decision',
+      table: true,
+      expression: false
+    }
+  },
+  {
+    label: 'Literal Expression',
+    actionName: 'replace-with-literal-expression',
+    className: 'dmn-icon-literal-expression',
+    target: {
+      type: 'dmn:Decision',
+      table: false,
+      expression: true
+    }
+  }
+];
+
+},{}],563:[function(require,module,exports){
+module.exports = {
+  __depends__: [
+    require('diagram-js/lib/features/replace'),
+    require('diagram-js/lib/features/selection')
+  ],
+  drdReplace: [ 'type', require('./DrdReplace') ]
+};
+
+},{"./DrdReplace":561,"diagram-js/lib/features/replace":748,"diagram-js/lib/features/selection":755}],564:[function(require,module,exports){
+'use strict';
+
+var ModelUtil = require('../../util/ModelUtil'),
+    is = ModelUtil.is,
+    isAny = ModelUtil.isAny;
+
+var inherits = require('inherits');
+
+var RuleProvider = require('diagram-js/lib/features/rules/RuleProvider');
+
+/**
+ * DRD specific modeling rule
+ */
+function DrdRules(eventBus) {
+  RuleProvider.call(this, eventBus);
+}
+
+inherits(DrdRules, RuleProvider);
+
+DrdRules.$inject = [ 'eventBus' ];
+
+module.exports = DrdRules;
+
+DrdRules.prototype.init = function() {
+
+  this.addRule('elements.move', function(context) {
+
+    var target = context.target,
+        shapes = context.shapes,
+        position = context.position;
+
+    return canMove(shapes, target, position);
+  });
+
+  this.addRule('connection.create', function(context) {
+    var source = context.source,
+        target = context.target;
+
+    return canConnect(source, target);
+  });
+
+  this.addRule('connection.reconnectStart', function(context) {
+
+    var connection = context.connection,
+        source = context.hover || context.source,
+        target = connection.target;
+
+    return canConnect(source, target, connection);
+  });
+
+  this.addRule('connection.reconnectEnd', function(context) {
+
+    var connection = context.connection,
+        source = connection.source,
+        target = context.hover || context.target;
+
+    return canConnect(source, target, connection);
+  });
+
+  this.addRule('connection.updateWaypoints', function(context) {
+    // OK! but visually ignore
+    return null;
+  });
+
+};
+
+DrdRules.prototype.canConnect = canConnect;
+
+DrdRules.prototype.canMove = canMove;
+
+DrdRules.prototype.canDrillDown = canDrillDown;
+
+
+function canConnect(source, target) {
+
+  if (is(source, 'dmn:Decision') || is(source, 'dmn:InputData')) {
+    if (is(target, 'dmn:Decision') ||
+       (is(source, 'dmn:Decision') && is(target, 'dmn:InputData'))) {
+      return { type: 'dmn:InformationRequirement' };
+    }
+
+    if (is(target, 'dmn:KnowledgeSource')) {
+      return { type: 'dmn:AuthorityRequirement' };
+    }
+  }
+
+  if (is(source, 'dmn:BusinessKnowledgeModel') &&
+      isAny(target, [ 'dmn:Decision', 'dmn:BusinessKnowledgeModel' ])) {
+    return { type: 'dmn:KnowledgeRequirement' };
+  }
+
+  if (is(source, 'dmn:KnowledgeSource') &&
+      isAny(target, [ 'dmn:Decision', 'dmn:BusinessKnowledgeModel', 'dmn:KnowledgeSource' ])) {
+    return { type: 'dmn:AuthorityRequirement' };
+  }
+
+  if (is(target, 'dmn:TextAnnotation')) {
+    return { type: 'dmn:Association' };
+  }
+
+  return false;
+}
+
+function canMove(elements, target) {
+
+  // allow default move check to start move operation
+  if (!target) {
+    return true;
+  }
+
+  if (is(target, 'dmn:Definitions')) {
+    return true;
+  }
+
+  return false;
+}
+
+function canDrillDown(element) {
+  var businessObject = element.businessObject;
+
+  if (!is(element, 'dmn:Decision')) {
+    return false;
+  }
+
+  if (businessObject.decisionTable) {
+    return 'table';
+  } else if (businessObject.literalExpression) {
+    return 'literal';
+  }
+
+  return false;
+}
+
+},{"../../util/ModelUtil":658,"diagram-js/lib/features/rules/RuleProvider":749,"inherits":820}],565:[function(require,module,exports){
+'use strict';
+
+module.exports = {
+  __depends__: [
+    require('diagram-js/lib/features/rules')
+  ],
+  __init__: [ 'drdRules' ],
+  drdRules: [ 'type', require('./DrdRules') ]
+};
+
+},{"./DrdRules":564,"diagram-js/lib/features/rules":751}],566:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -70433,19 +73210,21 @@ function collectWaypoints(edge) {
 
   if (waypoints) {
     return map(waypoints, function(waypoint) {
-      return { x: waypoint.x, y: waypoint.y };
+      var position = { x: waypoint.x, y: waypoint.y };
+
+      return assign({ original: position }, position);
     });
   }
 }
 
-function DrdImporter(eventBus, canvas, drdElementFactory, elementRegistry) {
+function DrdImporter(eventBus, canvas, elementFactory, elementRegistry) {
   this._eventBus = eventBus;
   this._canvas = canvas;
   this._elementRegistry = elementRegistry;
-  this._elementFactory = drdElementFactory;
+  this._elementFactory = elementFactory;
 }
 
-DrdImporter.$inject = [ 'eventBus', 'canvas', 'drdElementFactory', 'elementRegistry' ];
+DrdImporter.$inject = [ 'eventBus', 'canvas', 'elementFactory', 'elementRegistry' ];
 
 module.exports = DrdImporter;
 
@@ -70462,7 +73241,6 @@ DrdImporter.prototype.root = function(diagram) {
  * Add drd element (semantic) to the canvas.
  */
 DrdImporter.prototype.add = function(semantic, di) {
-
   var elementFactory = this._elementFactory,
       canvas = this._canvas,
       eventBus = this._eventBus;
@@ -70497,8 +73275,6 @@ DrdImporter.prototype.add = function(semantic, di) {
     sourceShape = this._getShape(sourceID);
     targetShape = this._getShape(targetID);
 
-    semantic.di = di;
-
     if (sourceShape && targetShape) {
       elementDefinition = elementData(semantic, {
         hidden: false,
@@ -70525,7 +73301,7 @@ DrdImporter.prototype._getShape = function(id) {
   return this._elementRegistry.get(id);
 };
 
-},{"../util/ModelUtil":619,"lodash/collection/map":711,"lodash/object/assign":825}],528:[function(require,module,exports){
+},{"../util/ModelUtil":658,"lodash/collection/map":835,"lodash/object/assign":964}],567:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -70668,7 +73444,7 @@ function DRDTreeWalker(handler, options) {
 
 module.exports = DRDTreeWalker;
 
-},{"../util/ModelUtil":619,"lodash/collection/find":707,"lodash/collection/forEach":708}],529:[function(require,module,exports){
+},{"../util/ModelUtil":658,"lodash/collection/find":831,"lodash/collection/forEach":832}],568:[function(require,module,exports){
 'use strict';
 
 var DrdTreeWalker = require('./DrdTreeWalker');
@@ -70732,15 +73508,14 @@ function importDRD(canvas, definitions, done) {
 
 module.exports.importDRD = importDRD;
 
-},{"./DrdTreeWalker":528}],530:[function(require,module,exports){
+},{"./DrdTreeWalker":567}],569:[function(require,module,exports){
 'use strict';
 
 module.exports = {
-  drdImporter: [ 'type', require('./DrdImporter') ],
-  drdElementFactory: [ 'type', require('./DrdElementFactory') ]
+  drdImporter: [ 'type', require('./DrdImporter') ]
 };
 
-},{"./DrdElementFactory":526,"./DrdImporter":527}],531:[function(require,module,exports){
+},{"./DrdImporter":566}],570:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -70880,7 +73655,7 @@ Modeler.prototype._createModdle = function(options) {
   var moddle = Viewer.prototype._createModdle.call(this, options);
 
   // attach ids to moddle to be able to track
-  // and validated ids in the BPMN 2.0 XML document
+  // and validated ids in the DMN 1.1 XML document
   // tree
   moddle.ids = new Ids([ 32, 36, 1 ]);
 
@@ -70936,7 +73711,7 @@ Modeler.prototype._modules = [].concat(
   Modeler.prototype._modules,
   Modeler.prototype._modelingModules);
 
-},{"./Viewer":532,"./features/column-drag":541,"./features/context-menu":543,"./features/date-edit/modeler":546,"./features/descriptions/editing":553,"./features/editor-actions":556,"./features/expression-language":558,"./features/modeling":590,"./features/number-edit":592,"./features/simple-editing":597,"./features/string-edit/modeler":602,"ids":697,"inherits":699,"lodash/object/assign":825,"table-js/lib/features/editing":880,"table-js/lib/features/keyboard":886,"table-js/lib/features/row-drag":904}],532:[function(require,module,exports){
+},{"./Viewer":571,"./features/column-drag":580,"./features/context-menu":582,"./features/date-edit/modeler":585,"./features/descriptions/editing":592,"./features/editor-actions":595,"./features/expression-language":597,"./features/modeling":629,"./features/number-edit":631,"./features/simple-editing":636,"./features/string-edit/modeler":641,"ids":818,"inherits":820,"lodash/object/assign":964,"table-js/lib/features/editing":1021,"table-js/lib/features/keyboard":1027,"table-js/lib/features/row-drag":1045}],571:[function(require,module,exports){
 /**
  * The code in the <project-logo></project-logo> area
  * must not be changed.
@@ -71035,7 +73810,11 @@ function Viewer(options) {
 
   this.options = options = assign({}, DEFAULT_OPTIONS, options || {});
 
-  this.moddle = this._createModdle(options);
+  this.moddle = options.moddle;
+
+  if (!this.moddle) {
+    this.moddle = this._createModdle(options);
+  }
 
   this.container = this._createContainer(options);
 
@@ -71136,6 +73915,10 @@ Viewer.prototype.getDecisions = function(definitions) {
   });
 };
 
+Viewer.prototype.getCurrentDecision = function() {
+  return this._decision;
+};
+
 Viewer.prototype.showDecision = function(decision, done) {
   var self = this;
 
@@ -71151,7 +73934,10 @@ Viewer.prototype.showDecision = function(decision, done) {
     done = function() {};
   }
 
-  // import the definition with the given index
+  // so we can get it later from the DRD Viewer
+  this._decision = decision;
+
+  // import the definition with the given decision
   this.importDefinitions(this.definitions, decision, function(err, importWarnings) {
     var warnings = importWarnings || [];
 
@@ -71225,7 +74011,7 @@ Viewer.prototype._createContainer = function(options) {
   container = domify('<div class="dmn-table"></div>');
 
   // append to DOM unless explicity defined otherwise
-  if (!options.isDetached) {
+  if (options.isDetached !== true) {
     parent.appendChild(container);
   }
 
@@ -71383,7 +74169,7 @@ function addProjectLogo(container) {
 
 /* </project-logo> */
 
-},{"../util/ModelUtil":619,"./../util/PoweredByUtil":620,"./core":533,"./features/annotations":538,"./features/date-edit/viewer":550,"./features/descriptions":554,"./features/hit-policy":564,"./features/io-label":568,"./features/literal-expression":571,"./features/mappings-row":575,"./features/simple-mode":599,"./features/string-edit/viewer":606,"./features/table-name":608,"./features/type-row":612,"./import/Importer":613,"dmn-moddle":676,"inherits":699,"lodash/collection/filter":706,"lodash/lang/isString":822,"lodash/object/assign":825,"lodash/object/omit":829,"min-dom/lib/domify":840,"min-dom/lib/event":841,"min-dom/lib/query":843,"min-dom/lib/remove":844,"table-js":857,"table-js/lib/features/combo-box":872,"table-js/lib/features/complex-cell":874,"table-js/lib/features/controls":876,"table-js/lib/features/interaction-events":884,"table-js/lib/features/line-numbers":888}],533:[function(require,module,exports){
+},{"../util/ModelUtil":658,"./../util/PoweredByUtil":659,"./core":572,"./features/annotations":577,"./features/date-edit/viewer":589,"./features/descriptions":593,"./features/hit-policy":603,"./features/io-label":607,"./features/literal-expression":610,"./features/mappings-row":614,"./features/simple-mode":638,"./features/string-edit/viewer":645,"./features/table-name":647,"./features/type-row":651,"./import/Importer":652,"dmn-moddle":797,"inherits":820,"lodash/collection/filter":830,"lodash/lang/isString":961,"lodash/object/assign":964,"lodash/object/omit":968,"min-dom/lib/domify":981,"min-dom/lib/event":982,"min-dom/lib/query":984,"min-dom/lib/remove":985,"table-js":998,"table-js/lib/features/combo-box":1013,"table-js/lib/features/complex-cell":1015,"table-js/lib/features/controls":1017,"table-js/lib/features/interaction-events":1025,"table-js/lib/features/line-numbers":1029}],572:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../import'),
@@ -71391,7 +74177,7 @@ module.exports = {
   ]
 };
 
-},{"../draw":535,"../import":617}],534:[function(require,module,exports){
+},{"../draw":574,"../import":656}],573:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -71483,13 +74269,13 @@ DmnRenderer.$inject = [ 'eventBus', 'elementRegistry', 'sheet', 'config' ];
 
 module.exports = DmnRenderer;
 
-},{"min-dom/lib/classes":836}],535:[function(require,module,exports){
+},{"min-dom/lib/classes":977}],574:[function(require,module,exports){
 module.exports = {
   __init__: [ 'tableRenderer' ],
   tableRenderer: [ 'type', require('./TableRenderer') ]
 };
 
-},{"./TableRenderer":534}],536:[function(require,module,exports){
+},{"./TableRenderer":573}],575:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -71553,7 +74339,7 @@ Annotations.prototype.getColumn = function() {
   return this.column;
 };
 
-},{"min-dom/lib/domify":840}],537:[function(require,module,exports){
+},{"min-dom/lib/domify":981}],576:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -71580,7 +74366,7 @@ AnnotationsRenderer.$inject = [
 
 module.exports = AnnotationsRenderer;
 
-},{"min-dom/lib/classes":836}],538:[function(require,module,exports){
+},{"min-dom/lib/classes":977}],577:[function(require,module,exports){
 module.exports = {
   __init__: [ 'annotations', 'annotationsRenderer'],
   __depends__: [
@@ -71589,7 +74375,7 @@ module.exports = {
   annotationsRenderer: [ 'type', require('./AnnotationsRenderer') ]
 };
 
-},{"./Annotations":536,"./AnnotationsRenderer":537}],539:[function(require,module,exports){
+},{"./Annotations":575,"./AnnotationsRenderer":576}],578:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -71843,7 +74629,7 @@ ColumnDrag.prototype.isDragging = function() {
   return !!this.draggedElement;
 };
 
-},{"lodash/collection/forEach":708,"min-dom/lib/classes":836,"min-dom/lib/domify":840}],540:[function(require,module,exports){
+},{"lodash/collection/forEach":832,"min-dom/lib/classes":977,"min-dom/lib/domify":981}],579:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -71878,7 +74664,7 @@ DragRenderer.$inject = [
 
 module.exports = DragRenderer;
 
-},{"min-dom/lib/classes":836,"min-dom/lib/domify":840}],541:[function(require,module,exports){
+},{"min-dom/lib/classes":977,"min-dom/lib/domify":981}],580:[function(require,module,exports){
 module.exports = {
   __init__: [ 'columnDrag', 'columnDragRenderer' ],
   __depends__: [],
@@ -71886,7 +74672,7 @@ module.exports = {
   columnDragRenderer: [ 'type', require('./DragRenderer') ]
 };
 
-},{"./ColumnDrag":539,"./DragRenderer":540}],542:[function(require,module,exports){
+},{"./ColumnDrag":578,"./DragRenderer":579}],581:[function(require,module,exports){
 'use strict';
 
 var getEntriesType = require('../../util/SelectionUtil').getEntriesType;
@@ -72129,7 +74915,7 @@ ContextMenu.prototype.ruleClearAction = function() {
   this.close();
 };
 
-},{"../../util/SelectionUtil":618}],543:[function(require,module,exports){
+},{"../../util/SelectionUtil":657}],582:[function(require,module,exports){
 module.exports = {
   __init__: [ 'contextMenu' ],
   __depends__: [
@@ -72138,7 +74924,7 @@ module.exports = {
   contextMenu: [ 'type', require('./ContextMenu') ]
 };
 
-},{"./ContextMenu":542,"table-js/lib/features/popup-menu":901}],544:[function(require,module,exports){
+},{"./ContextMenu":581,"table-js/lib/features/popup-menu":1042}],583:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign');
@@ -72402,7 +75188,7 @@ DateEdit.$inject = [ 'eventBus', 'simpleMode', 'elementRegistry', 'graphicsFacto
 
 module.exports = DateEdit;
 
-},{"./template-input.html":547,"./template-output.html":548,"./utils":549,"lodash/object/assign":825,"min-dom/lib/classes":836,"min-dom/lib/domify":840}],545:[function(require,module,exports){
+},{"./template-input.html":586,"./template-output.html":587,"./utils":588,"lodash/object/assign":964,"min-dom/lib/classes":977,"min-dom/lib/domify":981}],584:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify'),
@@ -72492,7 +75278,7 @@ DateView.$inject = ['eventBus', 'simpleMode'];
 
 module.exports = DateView;
 
-},{"./utils":549,"min-dom/lib/domify":840}],546:[function(require,module,exports){
+},{"./utils":588,"min-dom/lib/domify":981}],585:[function(require,module,exports){
 module.exports = {
   __init__: [ 'dateEdit' ],
   __depends__: [],
@@ -72500,13 +75286,13 @@ module.exports = {
 };
 
 
-},{"./DateEdit":544}],547:[function(require,module,exports){
+},{"./DateEdit":583}],586:[function(require,module,exports){
 module.exports = "<div>\n  <h4>Edit Date Condition</h4>\n  <select class=\"dateEdit-type-dropdown\">\n    <option value=\"exact\">Exactly</option>\n    <option value=\"before\">Before</option>\n    <option value=\"after\">After</option>\n    <option value=\"between\">Between</option>\n  </select>\n  <div class=\"date-1\">\n    <input type=\"text\" placeholder=\"yyyy-mm-dd'T'hh:mm:ss\" spellcheck=\"false\"><button>Today</button>\n    <div class=\"helptext\">yyyy-mm-dd'T'hh:mm:ss</div>\n  </div>\n  <div class=\"date-2\" style=\"display: none;\">\n    <div>and</div>\n    <input type=\"text\" placeholder=\"yyyy-mm-dd'T'hh:mm:ss\" spellcheck=\"false\"><button>Today</button>\n    <div class=\"helptext\">yyyy-mm-dd'T'hh:mm:ss</div>\n  </div>\n</div>\n";
 
-},{}],548:[function(require,module,exports){
+},{}],587:[function(require,module,exports){
 module.exports = "<div>\n  <h4>Edit Date Result</h4>\n  <div class=\"date-1\">\n    <input type=\"text\" placeholder=\"yyyy-mm-dd'T'hh:mm:ss\" spellcheck=\"false\"><button>Today</button>\n    <div class=\"helptext\">yyyy-mm-dd'T'hh:mm:ss</div>\n  </div>\n</div>\n";
 
-},{}],549:[function(require,module,exports){
+},{}],588:[function(require,module,exports){
 'use strict';
 
 var hasDateType = function(column) {
@@ -72577,7 +75363,7 @@ module.exports = {
   }
 };
 
-},{}],550:[function(require,module,exports){
+},{}],589:[function(require,module,exports){
 module.exports = {
   __init__: [ 'dateView' ],
   __depends__: [],
@@ -72585,7 +75371,7 @@ module.exports = {
 };
 
 
-},{"./DateView":545}],551:[function(require,module,exports){
+},{"./DateView":584}],590:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -72691,7 +75477,7 @@ Descriptions.prototype.openPopover = function(context) {
   node.textContent = context.content.description;
 };
 
-},{"diagram-js/lib/util/Mouse":665,"min-dom/lib/domify":840}],552:[function(require,module,exports){
+},{"diagram-js/lib/util/Mouse":785,"min-dom/lib/domify":981}],591:[function(require,module,exports){
 'use strict';
 
 var debounce = require('lodash/function/debounce');
@@ -72761,20 +75547,20 @@ DescriptionsEditing.prototype.addComment = function(context) {
   descriptions.openPopover(context);
 };
 
-},{"lodash/function/debounce":715}],553:[function(require,module,exports){
+},{"lodash/function/debounce":842}],592:[function(require,module,exports){
 module.exports = {
   __init__: [ 'descriptionsEditing' ],
   descriptionsEditing: [ 'type', require('./DescriptionsEditing') ]
 };
 
 
-},{"./DescriptionsEditing":552}],554:[function(require,module,exports){
+},{"./DescriptionsEditing":591}],593:[function(require,module,exports){
 module.exports = {
   __init__: [ 'descriptions' ],
   descriptions: [ 'type', require('./Descriptions') ]
 };
 
-},{"./Descriptions":551}],555:[function(require,module,exports){
+},{"./Descriptions":590}],594:[function(require,module,exports){
 'use strict';
 
 var ids = new (require('diagram-js/lib/util/IdGenerator'))('table');
@@ -72965,13 +75751,13 @@ DmnEditorActions.$inject = [ 'modeling', 'elementRegistry', 'selection', 'editor
 
 module.exports = DmnEditorActions;
 
-},{"diagram-js/lib/util/IdGenerator":663}],556:[function(require,module,exports){
+},{"diagram-js/lib/util/IdGenerator":781}],595:[function(require,module,exports){
 module.exports = {
   __init__: [ 'dmnEditorActions' ],
   dmnEditorActions: [ 'type', require('./DmnEditorActions') ]
 };
 
-},{"./DmnEditorActions":555}],557:[function(require,module,exports){
+},{"./DmnEditorActions":594}],596:[function(require,module,exports){
 'use strict';
 
 var ComboBox = require('table-js/lib/features/combo-box');
@@ -72984,7 +75770,7 @@ var getDefaultLanguageFor = function(context) {
     return 'juel';
   }
   if (context.column.type === 'dmn:InputClause') {
-    return 'FEEL';
+    return 'feel';
   }
 };
 
@@ -73002,7 +75788,7 @@ function ExpressionLanguage(eventBus, modeling, contextMenu, elementRegistry, se
     var comboBox = new ComboBox({
       label: '',
       classNames: ['dmn-combobox', 'expression-language'],
-      options: ['juel', 'FEEL'],
+      options: [ 'javascript', 'groovy', 'python', 'jruby', 'juel', 'feel' ],
       dropdownClassNames: ['dmn-combobox-suggestions'],
       disableKeyboard: true
     });
@@ -73054,7 +75840,7 @@ ExpressionLanguage.$inject = [ 'eventBus', 'modeling', 'contextMenu', 'elementRe
 
 module.exports = ExpressionLanguage;
 
-},{"lodash/function/debounce":715,"table-js/lib/features/combo-box":872}],558:[function(require,module,exports){
+},{"lodash/function/debounce":842,"table-js/lib/features/combo-box":1013}],597:[function(require,module,exports){
 module.exports = {
   __init__: [ 'expressionLanguage' ],
   __depends__: [],
@@ -73062,7 +75848,7 @@ module.exports = {
 };
 
 
-},{"./ExpressionLanguage":557}],559:[function(require,module,exports){
+},{"./ExpressionLanguage":596}],598:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -73125,7 +75911,7 @@ ElementFactory.prototype.create = function(elementType, attrs) {
 
 };
 
-},{"inherits":699,"table-js/lib/core/ElementFactory":859}],560:[function(require,module,exports){
+},{"inherits":820,"table-js/lib/core/ElementFactory":1000}],599:[function(require,module,exports){
 'use strict';
 
 function TableFactory(moddle) {
@@ -73253,13 +76039,13 @@ TableFactory.prototype.createOutputValues = function(output) {
 
 module.exports = TableFactory;
 
-},{}],561:[function(require,module,exports){
+},{}],600:[function(require,module,exports){
 module.exports = {
   tableFactory: [ 'type', require('./TableFactory') ],
   elementFactory: [ 'type', require('./ElementFactory') ]
 };
 
-},{"./ElementFactory":559,"./TableFactory":560}],562:[function(require,module,exports){
+},{"./ElementFactory":598,"./TableFactory":599}],601:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify'),
@@ -73410,7 +76196,7 @@ HitPolicy.prototype.getAggregation = function() {
 
 module.exports = HitPolicy;
 
-},{"min-dom/lib/classes":836,"min-dom/lib/domify":840,"table-js/lib/features/combo-box":872}],563:[function(require,module,exports){
+},{"min-dom/lib/classes":977,"min-dom/lib/domify":981,"table-js/lib/features/combo-box":1013}],602:[function(require,module,exports){
 'use strict';
 
 function convertOperators(operator) {
@@ -73445,7 +76231,7 @@ HitPolicyRenderer.$inject = [
 
 module.exports = HitPolicyRenderer;
 
-},{}],564:[function(require,module,exports){
+},{}],603:[function(require,module,exports){
 module.exports = {
   __init__: [ 'hitPolicy', 'hitPolicyRenderer' ],
   __depends__: [
@@ -73456,7 +76242,7 @@ module.exports = {
   hitPolicyRenderer: [ 'type', require('./HitPolicyRenderer') ]
 };
 
-},{"../io-label":568,"./HitPolicy":562,"./HitPolicyRenderer":563,"table-js/lib/features/utility-column":909}],565:[function(require,module,exports){
+},{"../io-label":607,"./HitPolicy":601,"./HitPolicyRenderer":602,"table-js/lib/features/utility-column":1050}],604:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify'),
@@ -73607,7 +76393,7 @@ IoLabel.prototype.getRow = function() {
   return this.row;
 };
 
-},{"diagram-js/lib/util/IdGenerator":663,"lodash/collection/forEach":708,"min-dom/lib/domify":840}],566:[function(require,module,exports){
+},{"diagram-js/lib/util/IdGenerator":781,"lodash/collection/forEach":832,"min-dom/lib/domify":981}],605:[function(require,module,exports){
 'use strict';
 
 function IoLabelRenderer(
@@ -73631,7 +76417,7 @@ IoLabelRenderer.$inject = [
 
 module.exports = IoLabelRenderer;
 
-},{}],567:[function(require,module,exports){
+},{}],606:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -73663,7 +76449,7 @@ IoLabelRules.prototype.init = function() {
 
 };
 
-},{"diagram-js/lib/features/rules/RuleProvider":642,"inherits":699}],568:[function(require,module,exports){
+},{"diagram-js/lib/features/rules/RuleProvider":749,"inherits":820}],607:[function(require,module,exports){
 module.exports = {
   __init__: [ 'ioLabel', 'ioLabelRules', 'ioLabelRenderer' ],
   __depends__: [],
@@ -73672,10 +76458,10 @@ module.exports = {
   ioLabelRenderer: [ 'type', require('./IoLabelRenderer') ]
 };
 
-},{"./IoLabel":565,"./IoLabelRenderer":566,"./IoLabelRules":567}],569:[function(require,module,exports){
+},{"./IoLabel":604,"./IoLabelRenderer":605,"./IoLabelRules":606}],608:[function(require,module,exports){
 module.exports = "<div class=\"literal-expression-editor\">\n  <textarea placeholder=\"return obj.propertyName;\"></textarea>\n\n  <div>\n    <div class=\"literal-expression-field\">\n      <div class=\"dmn-combobox\">\n        <label>Variable Name:</label>\n        <input class=\"variable-name\" placeholder=\"varName\">\n      </div>\n    </div>\n    <div class=\"literal-expression-field variable-type\">\n    </div>\n  </div>\n  <div>\n    <div class=\"literal-expression-field expression-language\">\n    </div>\n  </div>\n</div>\n";
 
-},{}],570:[function(require,module,exports){
+},{}],609:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -73718,7 +76504,7 @@ LiteralExpressionEditor.prototype.show = function(decision) {
   var editor = domify(template);
 
   // set the literal expression to the textarea
-  editor.querySelector('textarea').value = decision.literalExpression.text;
+  editor.querySelector('textarea').value = decision.literalExpression.text || '';
 
   // add variable with name and type information
   var typeBox = new ComboBox({
@@ -73738,7 +76524,7 @@ LiteralExpressionEditor.prototype.show = function(decision) {
   var languageBox = new ComboBox({
     label: 'Expression Language',
     classNames: [ 'dmn-combobox', 'expression-language' ],
-    options: [ 'juel', 'FEEL' ],
+    options: [ 'javascript', 'groovy', 'python', 'jruby', 'juel', 'feel' ],
     dropdownClassNames: [ 'dmn-combobox-suggestions' ]
   });
   editor.querySelector('.expression-language').appendChild(languageBox.getNode());
@@ -73751,7 +76537,7 @@ LiteralExpressionEditor.prototype.show = function(decision) {
       text: editor.querySelector('textarea').value,
       variableName: editor.querySelector('.variable-name').value,
       variableType: typeBox.getValue(),
-      language: editor.querySelector('.expression-language').value
+      language: languageBox.getValue()
     });
   };
 
@@ -73782,17 +76568,17 @@ LiteralExpressionEditor.prototype.show = function(decision) {
 
 };
 
-},{"./EditorTemplate.html":569,"min-dom/lib/domify":840,"table-js/lib/features/combo-box":872}],571:[function(require,module,exports){
+},{"./EditorTemplate.html":608,"min-dom/lib/domify":981,"table-js/lib/features/combo-box":1013}],610:[function(require,module,exports){
 module.exports = {
   __init__: [ 'literalExpressionEditor' ],
   __depends__: [],
   literalExpressionEditor: [ 'type', require('./LiteralExpressionEditor') ]
 };
 
-},{"./LiteralExpressionEditor":570}],572:[function(require,module,exports){
+},{"./LiteralExpressionEditor":609}],611:[function(require,module,exports){
 module.exports = "<div>\n  <div class=\"links\">\n    <div class=\"toggle-type\">\n      <label>Use:</label>\n      <a class=\"expression\">Expression</a>\n      /\n      <a class=\"script\">Script</a>\n    </div>\n    <a class=\"dmn-icon-clear\"></a>\n  </div>\n  <div class=\"expression region\">\n    <div class=\"input-expression\">\n      <label>Expression:</label>\n      <input placeholder=\"propertyName\">\n    </div>\n    <div class=\"input-expression\">\n      <label>Input Variable Name:</label>\n      <input placeholder=\"cellInput\">\n    </div>\n  </div>\n  <div class=\"script region\">\n    <textarea placeholder=\"return obj.propertyName;\"></textarea>\n    <div class=\"input-expression\">\n      <label>Input Variable Name:</label>\n      <input placeholder=\"cellInput\">\n    </div>\n  </div>\n</div>\n";
 
-},{}],573:[function(require,module,exports){
+},{}],612:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify'),
@@ -73916,7 +76702,7 @@ function MappingsRow(eventBus, sheet, elementRegistry, graphicsFactory, complexC
       var comboBox = new ComboBox({
         label: 'Language',
         classNames: [ 'dmn-combobox', 'language' ],
-        options: [ 'Javascript', 'Groovy', 'Python', 'Ruby' ],
+        options: [ 'javascript', 'groovy', 'python', 'jruby', 'juel', 'feel' ],
         dropdownClassNames: [ 'dmn-combobox-suggestions' ]
       });
 
@@ -74116,7 +76902,7 @@ MappingsRow.prototype.getRow = function() {
   return this.row;
 };
 
-},{"./ExpressionTemplate.html":572,"lodash/collection/forEach":708,"lodash/object/assign":825,"min-dom/lib/classes":836,"min-dom/lib/domify":840,"table-js/lib/features/combo-box":872}],574:[function(require,module,exports){
+},{"./ExpressionTemplate.html":611,"lodash/collection/forEach":832,"lodash/object/assign":964,"min-dom/lib/classes":977,"min-dom/lib/domify":981,"table-js/lib/features/combo-box":1013}],613:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -74156,7 +76942,7 @@ MappingsRowRenderer.$inject = [
 
 module.exports = MappingsRowRenderer;
 
-},{"min-dom/lib/classes":836}],575:[function(require,module,exports){
+},{"min-dom/lib/classes":977}],614:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('table-js/lib/features/complex-cell')
@@ -74166,7 +76952,7 @@ module.exports = {
   mappingsRowRenderer: [ 'type', require('./MappingsRowRenderer') ]
 };
 
-},{"./MappingsRow":573,"./MappingsRowRenderer":574,"table-js/lib/features/complex-cell":874}],576:[function(require,module,exports){
+},{"./MappingsRow":612,"./MappingsRowRenderer":613,"table-js/lib/features/complex-cell":1015}],615:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -74446,7 +77232,7 @@ Modeling.prototype.editDescription = function(businessObject, description) {
   this._commandStack.execute('description.edit', context);
 };
 
-},{"./cmd/AddAllowedValueHandler":578,"./cmd/ClearRowHandler":579,"./cmd/CopyRowHandler":580,"./cmd/EditCellExpressionLanguageHandler":581,"./cmd/EditCellHandler":582,"./cmd/EditDescriptionHandler":583,"./cmd/EditHitPolicyHandler":584,"./cmd/EditIdHandler":585,"./cmd/EditInputMappingHandler":586,"./cmd/EditLiteralExpressionHandler":587,"./cmd/EditTypeHandler":588,"./cmd/RemoveAllowedValueHandler":589,"inherits":699,"table-js/lib/features/modeling/Modeling":889}],577:[function(require,module,exports){
+},{"./cmd/AddAllowedValueHandler":617,"./cmd/ClearRowHandler":618,"./cmd/CopyRowHandler":619,"./cmd/EditCellExpressionLanguageHandler":620,"./cmd/EditCellHandler":621,"./cmd/EditDescriptionHandler":622,"./cmd/EditHitPolicyHandler":623,"./cmd/EditIdHandler":624,"./cmd/EditInputMappingHandler":625,"./cmd/EditLiteralExpressionHandler":626,"./cmd/EditTypeHandler":627,"./cmd/RemoveAllowedValueHandler":628,"inherits":820,"table-js/lib/features/modeling/Modeling":1030}],616:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits'),
@@ -74708,7 +77494,7 @@ module.exports = TableUpdater;
 
 TableUpdater.$inject = [ 'eventBus', 'moddle', 'elementRegistry', 'tableFactory', 'tableName', 'graphicsFactory' ];
 
-},{"diagram-js/lib/command/CommandInterceptor":623,"inherits":699,"lodash/collection/forEachRight":709}],578:[function(require,module,exports){
+},{"diagram-js/lib/command/CommandInterceptor":665,"inherits":820,"lodash/collection/forEachRight":833}],617:[function(require,module,exports){
 'use strict';
 
 /**
@@ -74787,7 +77573,7 @@ AddAllowedValueHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],579:[function(require,module,exports){
+},{}],618:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -74860,7 +77646,7 @@ ClearRowHandler.prototype.revert = function(context) {
   });
 };
 
-},{"lodash/collection/forEach":708}],580:[function(require,module,exports){
+},{"lodash/collection/forEach":832}],619:[function(require,module,exports){
 'use strict';
 
 var getBusinessObject = require('../../../../util/ModelUtil').getBusinessObject;
@@ -74910,7 +77696,7 @@ CopyRowHandler.prototype.execute = function(context) {};
 
 CopyRowHandler.prototype.revert = function(context) {};
 
-},{"../../../../util/ModelUtil":619}],581:[function(require,module,exports){
+},{"../../../../util/ModelUtil":658}],620:[function(require,module,exports){
 'use strict';
 
 /**
@@ -74952,7 +77738,7 @@ EditCellExpressionLanguageHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],582:[function(require,module,exports){
+},{}],621:[function(require,module,exports){
 'use strict';
 
 var calculateSelectionUpdate = require('selection-update');
@@ -75125,7 +77911,7 @@ EditCellHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{"selection-update":856}],583:[function(require,module,exports){
+},{"selection-update":997}],622:[function(require,module,exports){
 'use strict';
 
 /**
@@ -75167,7 +77953,7 @@ EditDescriptionHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],584:[function(require,module,exports){
+},{}],623:[function(require,module,exports){
 'use strict';
 
 /**
@@ -75226,7 +78012,7 @@ EditHitPolicyHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],585:[function(require,module,exports){
+},{}],624:[function(require,module,exports){
 'use strict';
 
 /**
@@ -75267,7 +78053,7 @@ EditIdHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],586:[function(require,module,exports){
+},{}],625:[function(require,module,exports){
 'use strict';
 
 /**
@@ -75351,7 +78137,7 @@ EditInputMappingHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],587:[function(require,module,exports){
+},{}],626:[function(require,module,exports){
 'use strict';
 
 /**
@@ -75410,7 +78196,7 @@ EditLiteralExpressionHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],588:[function(require,module,exports){
+},{}],627:[function(require,module,exports){
 'use strict';
 
 /**
@@ -75491,7 +78277,7 @@ EditTypeHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],589:[function(require,module,exports){
+},{}],628:[function(require,module,exports){
 'use strict';
 
 /**
@@ -75557,7 +78343,7 @@ RemoveAllowedValueHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],590:[function(require,module,exports){
+},{}],629:[function(require,module,exports){
 module.exports = {
   __init__: [ 'modeling', 'tableUpdater' ],
   __depends__: [
@@ -75569,7 +78355,7 @@ module.exports = {
   tableUpdater: [ 'type', require('./TableUpdater') ]
 };
 
-},{"../factory":561,"./Modeling":576,"./TableUpdater":577,"table-js/lib/features/add-row":868,"table-js/lib/features/modeling":899}],591:[function(require,module,exports){
+},{"../factory":600,"./Modeling":615,"./TableUpdater":616,"table-js/lib/features/add-row":1009,"table-js/lib/features/modeling":1040}],630:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -76026,7 +78812,7 @@ NumberEdit.prototype.teardownComplexCells = function() {
   });
 };
 
-},{"./template-input.html":593,"./template-output.html":594,"./utils":595,"lodash/collection/forEach":708,"lodash/object/assign":825,"min-dom/lib/classes":836,"min-dom/lib/domify":840,"min-dom/lib/query":843}],592:[function(require,module,exports){
+},{"./template-input.html":632,"./template-output.html":633,"./utils":634,"lodash/collection/forEach":832,"lodash/object/assign":964,"min-dom/lib/classes":977,"min-dom/lib/domify":981,"min-dom/lib/query":984}],631:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -76034,13 +78820,13 @@ module.exports = {
   numberEdit: [ 'type', require('./NumberEdit') ]
 };
 
-},{"./NumberEdit":591}],593:[function(require,module,exports){
+},{"./NumberEdit":630}],632:[function(require,module,exports){
 module.exports = "<div>\n  <h4>Edit Number Condition</h4>\n  <div class=\"links\">\n    <div class=\"toggle-type\">\n      <a class=\"comparison\">Comparison</a>\n      /\n      <a class=\"range\">Range</a>\n    </div>\n  </div>\n  <div class=\"comparison region\">\n    <select class=\"comparison-dropdown\">\n      <option value=\"equals\">= (Equals)</option>\n      <option value=\"less\">&lt; (Less than)</option>\n      <option value=\"less-equal\">&lt;= (Less than or equal)</option>\n      <option value=\"greater\">&gt; (Greater than)</option>\n      <option value=\"greater-equal\">&gt;= (Greater than or equal)</option>\n    </select>\n    <input type=\"number\" class=\"comparison-number\" placeholder=\"number\" />\n  </div>\n  <div class=\"range region\">\n    <label>Include</label>\n    <div class=\"include-inputs\">\n      <input type=\"number\" placeholder=\"start\" />\n      <input type=\"checkbox\" placeholder=\"include-start\" />\n    </div>\n    <div class=\"include-inputs\">\n      <input type=\"number\" placeholder=\"end\" />\n      <input type=\"checkbox\" placeholder=\"include-end\" />\n    </div>\n  </div>\n</div>\n";
 
-},{}],594:[function(require,module,exports){
+},{}],633:[function(require,module,exports){
 module.exports = "<div>\n  <h4>Edit Number Result</h4>\n  <div class=\"comparison region\">\n    <input type=\"number\" class=\"comparison-number\" placeholder=\"number\" style=\"width: 100%\" />\n  </div>\n</div>\n";
 
-},{}],595:[function(require,module,exports){
+},{}],634:[function(require,module,exports){
 var types = [
   'integer',
   'long',
@@ -76076,7 +78862,7 @@ function isNumberCell(el) {
 
 module.exports.isNumberCell = isNumberCell;
 
-},{}],596:[function(require,module,exports){
+},{}],635:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -76121,14 +78907,14 @@ SimpleEditing.$inject = [ 'eventBus', 'modeling', 'simpleMode', 'elementRegistry
 
 module.exports = SimpleEditing;
 
-},{"diagram-js/lib/command/CommandInterceptor":623,"inherits":699,"min-dom/lib/classes":836}],597:[function(require,module,exports){
+},{"diagram-js/lib/command/CommandInterceptor":665,"inherits":820,"min-dom/lib/classes":977}],636:[function(require,module,exports){
 module.exports = {
   __init__: [ 'simpleEditing' ],
   __depends__: [],
   simpleEditing: [ 'type', require('./SimpleEditing') ]
 };
 
-},{"./SimpleEditing":596}],598:[function(require,module,exports){
+},{"./SimpleEditing":635}],637:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes'),
@@ -76387,13 +79173,13 @@ SimpleMode.prototype.isString = function(textContent) {
   return firstCondition && !secondCondition;
 };
 
-},{"min-dom/lib/classes":836,"min-dom/lib/domify":840}],599:[function(require,module,exports){
+},{"min-dom/lib/classes":977,"min-dom/lib/domify":981}],638:[function(require,module,exports){
 module.exports = {
   __init__: [ 'simpleMode' ],
   simpleMode: [ 'type', require('./SimpleMode') ]
 };
 
-},{"./SimpleMode":598}],600:[function(require,module,exports){
+},{"./SimpleMode":637}],639:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign');
@@ -76733,7 +79519,7 @@ StringEdit.$inject = ['eventBus', 'simpleMode', 'elementRegistry', 'graphicsFact
 
 module.exports = StringEdit;
 
-},{"./template-input.html":603,"./template-output.html":604,"./utils":605,"diagram-js/lib/util/Mouse":665,"lodash/object/assign":825,"min-dom/lib/classes":836,"min-dom/lib/domify":840}],601:[function(require,module,exports){
+},{"./template-input.html":642,"./template-output.html":643,"./utils":644,"diagram-js/lib/util/Mouse":785,"lodash/object/assign":964,"min-dom/lib/classes":977,"min-dom/lib/domify":981}],640:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify'),
@@ -76819,7 +79605,7 @@ StringView.$inject = ['eventBus', 'simpleMode'];
 
 module.exports = StringView;
 
-},{"./utils":605,"min-dom/lib/domify":840}],602:[function(require,module,exports){
+},{"./utils":644,"min-dom/lib/domify":981}],641:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -76827,13 +79613,13 @@ module.exports = {
   stringEdit: [ 'type', require('./StringEdit') ]
 };
 
-},{"./StringEdit":600}],603:[function(require,module,exports){
+},{"./StringEdit":639}],642:[function(require,module,exports){
 module.exports = "<div>\n  <h4>Edit String Expression</h4>\n  <select class=\"string-type-dropdown\">\n    <option value=\"disjunction\">Match one of</option>\n    <option value=\"negation\">Match anything except</option>\n  </select>\n  <div class=\"free-input\">\n    <ul>\n    </ul>\n    <input type=\"text\" placeholder=\"new Value\" class=\"free-input-value-field\" />\n    <div class=\"helptext\">Enter value without quotes</div>\n  </div>\n  <div class=\"input-values\">\n    <ul>\n    </ul>\n  </div>\n</div>\n";
 
-},{}],604:[function(require,module,exports){
+},{}],643:[function(require,module,exports){
 module.exports = "<div>\n  <h4>Edit String Result</h4>\n  <div class=\"free-input\">\n    <textarea type=\"text\" placeholder=\"new Value\" class=\"free-input-value-field\"></textarea>\n    <div class=\"helptext\">Enter value without quotes</div>\n  </div>\n  <div class=\"input-values\">\n    <ul>\n    </ul>\n  </div>\n</div>\n";
 
-},{}],605:[function(require,module,exports){
+},{}],644:[function(require,module,exports){
 'use strict';
 
 var hasStringType = function(column) {
@@ -76925,7 +79711,7 @@ module.exports = {
   }
 };
 
-},{}],606:[function(require,module,exports){
+},{}],645:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -76933,7 +79719,7 @@ module.exports = {
   stringView: [ 'type', require('./StringView') ]
 };
 
-},{"./StringView":601}],607:[function(require,module,exports){
+},{"./StringView":640}],646:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -77005,14 +79791,14 @@ TableName.prototype.getId = function() {
   return this.semantic.id;
 };
 
-},{"inherits":699,"min-dom/lib/domify":840,"table-js/lib/features/table-name/TableName":905}],608:[function(require,module,exports){
+},{"inherits":820,"min-dom/lib/domify":981,"table-js/lib/features/table-name/TableName":1046}],647:[function(require,module,exports){
 module.exports = {
   __init__: [ 'tableName' ],
   __depends__: [],
   tableName: [ 'type', require('./TableName') ]
 };
 
-},{"./TableName":607}],609:[function(require,module,exports){
+},{"./TableName":646}],648:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign');
@@ -77266,7 +80052,7 @@ TypeRow.prototype.getRow = function() {
   return this.row;
 };
 
-},{"./TypeTemplate.html":611,"lodash/object/assign":825,"min-dom/lib/classes":836,"min-dom/lib/domify":840,"table-js/lib/features/combo-box":872}],610:[function(require,module,exports){
+},{"./TypeTemplate.html":650,"lodash/object/assign":964,"min-dom/lib/classes":977,"min-dom/lib/domify":981,"table-js/lib/features/combo-box":1013}],649:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -77303,10 +80089,10 @@ TypeRowRenderer.$inject = [
 
 module.exports = TypeRowRenderer;
 
-},{"min-dom/lib/classes":836}],611:[function(require,module,exports){
+},{"min-dom/lib/classes":977}],650:[function(require,module,exports){
 module.exports = "<div>\n  <div class=\"allowed-values\">\n    <label>Input Values:</label>\n    <ul></ul>\n    <input type=\"text\" placeholder=\"value1, value2, otherValue\">\n  </div>\n</div>\n";
 
-},{}],612:[function(require,module,exports){
+},{}],651:[function(require,module,exports){
 module.exports = {
   __init__: [ 'typeRow', 'typeRowRenderer' ],
   __depends__: [ require('table-js/lib/features/complex-cell') ],
@@ -77314,7 +80100,7 @@ module.exports = {
   typeRowRenderer: [ 'type', require('./TypeRowRenderer') ]
 };
 
-},{"./TypeRow":609,"./TypeRowRenderer":610,"table-js/lib/features/complex-cell":874}],613:[function(require,module,exports){
+},{"./TypeRow":648,"./TypeRowRenderer":649,"table-js/lib/features/complex-cell":1015}],652:[function(require,module,exports){
 'use strict';
 
 var TableTreeWalker = require('./TableTreeWalker');
@@ -77390,7 +80176,7 @@ function importDmnTable(sheet, definitions, decision, done) {
 
 module.exports.importDmnTable = importDmnTable;
 
-},{"./TableTreeWalker":615}],614:[function(require,module,exports){
+},{"./TableTreeWalker":654}],653:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -77584,7 +80370,7 @@ TableImporter.prototype.add = function(semantic, parentElement, definitions) {
   return element;
 };
 
-},{"./Util":616,"lodash/array/union":701,"lodash/collection/filter":706,"lodash/object/assign":825}],615:[function(require,module,exports){
+},{"./Util":655,"lodash/array/union":824,"lodash/collection/filter":830,"lodash/object/assign":964}],654:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -77719,9 +80505,9 @@ function TableTreeWalker(handler, options) {
 
 module.exports = TableTreeWalker;
 
-},{"./Util":616,"lodash/collection/forEach":708}],616:[function(require,module,exports){
+},{"./Util":655,"lodash/collection/forEach":832}],655:[function(require,module,exports){
 arguments[4][50][0].apply(exports,arguments)
-},{"dup":50}],617:[function(require,module,exports){
+},{"dup":50}],656:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../features/factory')
@@ -77729,7 +80515,7 @@ module.exports = {
   tableImporter: [ 'type', require('./TableImporter') ]
 };
 
-},{"../features/factory":561,"./TableImporter":614}],618:[function(require,module,exports){
+},{"../features/factory":600,"./TableImporter":653}],657:[function(require,module,exports){
 'use strict';
 
 
@@ -77772,11 +80558,13 @@ function getEntriesType(context) {
 
 module.exports.getEntriesType = getEntriesType;
 
-},{}],619:[function(require,module,exports){
+},{}],658:[function(require,module,exports){
 'use strict';
 
+var any = require('lodash/collection/any');
+
 /**
- * Is an element of the given BPMN type?
+ * Is an element of the given DMN type?
  *
  * @param  {tjs.model.Base|ModdleElement} element
  * @param  {String} type
@@ -77816,7 +80604,24 @@ function getName(element) {
 
 module.exports.getName = getName;
 
-},{}],620:[function(require,module,exports){
+
+/**
+ * Return true if element has any of the given types.
+ *
+ * @param {djs.model.Base} element
+ * @param {Array<String>} types
+ *
+ * @return {Boolean}
+ */
+function isAny(element, types) {
+  return any(types, function(t) {
+    return is(element, t);
+  });
+}
+
+module.exports.isAny = isAny;
+
+},{"lodash/collection/any":828}],659:[function(require,module,exports){
 /**
  * This file must not be changed or exchanged.
  *
@@ -77901,11 +80706,530 @@ function open() {
 
 module.exports.open = open;
 
-},{"min-dom/lib/delegate":839,"min-dom/lib/domify":840}],621:[function(require,module,exports){
+},{"min-dom/lib/delegate":980,"min-dom/lib/domify":981}],660:[function(require,module,exports){
+module.exports = {
+  __depends__: [ require('diagram-js/lib/features/interaction-events') ],
+  __init__: [ 'directEditing' ],
+  directEditing: [ 'type', require('./lib/DirectEditing') ]
+};
+},{"./lib/DirectEditing":661,"diagram-js/lib/features/interaction-events":702}],661:[function(require,module,exports){
+'use strict';
+
+var bind = require('lodash/function/bind'),
+    find = require('lodash/collection/find');
+
+var TextBox = require('./TextBox');
+
+
+/**
+ * A direct editing component that allows users
+ * to edit an elements text directly in the diagram
+ *
+ * @param {EventBus} eventBus the event bus
+ */
+function DirectEditing(eventBus, canvas) {
+
+  this._eventBus = eventBus;
+
+  this._providers = [];
+  this._textbox = new TextBox({
+    container: canvas.getContainer(),
+    keyHandler: bind(this._handleKey, this)
+  });
+}
+
+DirectEditing.$inject = [ 'eventBus', 'canvas' ];
+
+
+/**
+ * Register a direct editing provider
+
+ * @param {Object} provider the provider, must expose an #activate(element) method that returns
+ *                          an activation context ({ bounds: {x, y, width, height }, text }) if
+ *                          direct editing is available for the given element.
+ *                          Additionally the provider must expose a #update(element, value) method
+ *                          to receive direct editing updates.
+ */
+DirectEditing.prototype.registerProvider = function(provider) {
+  this._providers.push(provider);
+};
+
+
+/**
+ * Returns true if direct editing is currently active
+ *
+ * @return {Boolean}
+ */
+DirectEditing.prototype.isActive = function() {
+  return !!this._active;
+};
+
+
+/**
+ * Cancel direct editing, if it is currently active
+ */
+DirectEditing.prototype.cancel = function() {
+  if (!this._active) {
+    return;
+  }
+
+  this._fire('cancel');
+  this.close();
+};
+
+
+DirectEditing.prototype._fire = function(event) {
+  this._eventBus.fire('directEditing.' + event, { active: this._active });
+};
+
+DirectEditing.prototype.close = function() {
+  this._textbox.destroy();
+
+  this._fire('deactivate');
+
+  this._active = null;
+};
+
+
+DirectEditing.prototype.complete = function() {
+
+  var active = this._active;
+
+  if (!active) {
+    return;
+  }
+
+  var text = this.getValue();
+
+  if (text !== active.context.text) {
+    active.provider.update(active.element, text, active.context.text);
+  }
+
+  this._fire('complete');
+
+  this.close();
+};
+
+
+DirectEditing.prototype.getValue = function() {
+  return this._textbox.getValue();
+};
+
+
+DirectEditing.prototype._handleKey = function(e) {
+
+  // stop bubble
+  e.stopPropagation();
+
+  var key = e.keyCode || e.charCode;
+
+  // ESC
+  if (key === 27) {
+    e.preventDefault();
+    return this.cancel();
+  }
+
+  // Enter
+  if (key === 13 && !e.shiftKey) {
+    e.preventDefault();
+    return this.complete();
+  }
+};
+
+
+/**
+ * Activate direct editing on the given element
+ *
+ * @param {Object} ElementDescriptor the descriptor for a shape or connection
+ * @return {Boolean} true if the activation was possible
+ */
+DirectEditing.prototype.activate = function(element) {
+
+  if (this.isActive()) {
+    this.cancel();
+  }
+
+  // the direct editing context
+  var context;
+
+  var provider = find(this._providers, function(p) {
+    return (context = p.activate(element)) ? p : null;
+  });
+
+  // check if activation took place
+  if (context) {
+    this._textbox.create(context.bounds, context.style, context.text);
+
+    this._active = {
+      element: element,
+      context: context,
+      provider: provider
+    };
+
+    this._fire('activate');
+  }
+
+  return !!context;
+};
+
+
+module.exports = DirectEditing;
+},{"./TextBox":662,"lodash/collection/find":831,"lodash/function/bind":841}],662:[function(require,module,exports){
+'use strict';
+
+var assign = require('lodash/object/assign'),
+    domEvent = require('min-dom/lib/event'),
+    domRemove = require('min-dom/lib/remove');
+
+function stopPropagation(event) {
+  event.stopPropagation();
+}
+
+
+/**
+ * Initializes a container div 'contentContainer' which contains an editable content div 'content'.
+ *
+ * @param {object} options
+ * @param {DOMElement} options.container The DOM element to append the contentContainer to
+ * @param {String} options.keyHandler
+ */
+function TextBox(options) {
+
+  this.container = options.container;
+
+  this.content = document.createElement('div');
+
+  this.content.contentEditable = 'true';
+
+  this.keyHandler = options.keyHandler || function() {};
+}
+
+module.exports = TextBox;
+
+
+/**
+ * Create a text box with the given position, size, style and text content
+ *
+ * @param {Object} bounds
+ * @param {Number} bounds.x absolute x position
+ * @param {Number} bounds.y absolute y position
+ * @param {Number} [bounds.width] fixed width value
+ * @param {Number} [bounds.height] fixed height value
+ * @param {Number} [bounds.maxWidth] maximum width value
+ * @param {Number} [bounds.maxHeight] maximum height value
+ * @param {Number} [bounds.minWidth] minimum width value
+ * @param {Number} [bounds.minHeight] minimum height value
+ * @param {Object} [style]
+ * @param {String} value text content
+ *
+ * @return {DOMElement} The created content DOM element
+ */
+TextBox.prototype.create = function(bounds, style, value) {
+
+  var content = this.content,
+      container = this.container;
+
+  assign(content.style, {
+    width: bounds.width + 'px',
+    height: bounds.height + 'px',
+    maxWidth: bounds.maxWidth + 'px',
+    maxHeight: bounds.maxHeight + 'px',
+    minWidth: bounds.minWidth + 'px',
+    minHeight: bounds.minHeight + 'px',
+    left: bounds.x + 'px',
+    top: bounds.y + 'px',
+    backgroundColor: '#ffffff',
+    position: 'absolute',
+    overflowY: 'auto',
+    border: '1px solid #ccc',
+    padding: '2px',
+    wordWrap: 'normal',
+    textAlign: 'center',
+    outline: 'none'
+  }, style || {});
+
+  content.innerText = value;
+
+  domEvent.bind(content, 'keydown', this.keyHandler);
+  domEvent.bind(content, 'mousedown', stopPropagation);
+
+  container.appendChild(content);
+
+  this.setCursor();
+
+  return content;
+};
+
+
+/**
+ * Clear content and style of the textbox, unbind listeners and
+ * reset CSS style.
+ */
+TextBox.prototype.destroy = function() {
+  var content = this.content;
+
+  // clear content
+  content.innerText = '';
+
+  // clear optional bounds values
+  assign(content.style, {
+    width: '',
+    height: '',
+    maxWidth: '',
+    maxHeight: '',
+    minWidth: '',
+    minHeight: ''
+  });
+
+  domEvent.unbind(content, 'keydown', this.keyHandler);
+  domEvent.unbind(content, 'mousedown', stopPropagation);
+
+  domRemove(content);
+};
+
+
+TextBox.prototype.getValue = function() {
+  return this.content.innerText;
+};
+
+
+/**
+ * Set the cursor to the end of the text
+ */
+TextBox.prototype.setCursor = function() {
+
+  this.content.focus();
+
+  // scroll to the bottom
+  this.content.scrollTop = this.content.scrollHeight;
+
+  if (typeof window.getSelection != 'undefined' && typeof document.createRange != 'undefined') {
+
+    var range = document.createRange();
+
+    range.selectNodeContents(this.content);
+    range.collapse(false);
+
+    var selection = window.getSelection();
+
+    selection.removeAllRanges();
+    selection.addRange(range);
+
+  } else if (typeof document.body.createTextRange != 'undefined') {
+
+    var textRange = document.body.createTextRange();
+
+    textRange.moveToElementText(this.content);
+    textRange.collapse(false);
+    textRange.select();
+  }
+};
+
+},{"lodash/object/assign":964,"min-dom/lib/event":982,"min-dom/lib/remove":985}],663:[function(require,module,exports){
 arguments[4][77][0].apply(exports,arguments)
-},{"./lib/Diagram":622,"dup":77}],622:[function(require,module,exports){
-arguments[4][78][0].apply(exports,arguments)
-},{"./core":631,"didi":670,"dup":78}],623:[function(require,module,exports){
+},{"./lib/Diagram":664,"dup":77}],664:[function(require,module,exports){
+'use strict';
+
+var di = require('didi');
+
+
+/**
+ * Bootstrap an injector from a list of modules, instantiating a number of default components
+ *
+ * @ignore
+ * @param {Array<didi.Module>} bootstrapModules
+ *
+ * @return {didi.Injector} a injector to use to access the components
+ */
+function bootstrap(bootstrapModules) {
+
+  var modules = [],
+      components = [];
+
+  function hasModule(m) {
+    return modules.indexOf(m) >= 0;
+  }
+
+  function addModule(m) {
+    modules.push(m);
+  }
+
+  function visit(m) {
+    if (hasModule(m)) {
+      return;
+    }
+
+    (m.__depends__ || []).forEach(visit);
+
+    if (hasModule(m)) {
+      return;
+    }
+
+    addModule(m);
+
+    (m.__init__ || []).forEach(function(c) {
+      components.push(c);
+    });
+  }
+
+  bootstrapModules.forEach(visit);
+
+  var injector = new di.Injector(modules);
+
+  components.forEach(function(c) {
+
+    try {
+      // eagerly resolve component (fn or string)
+      injector[typeof c === 'string' ? 'get' : 'invoke'](c);
+    } catch (e) {
+      console.error('Failed to instantiate component');
+      console.error(e.stack);
+
+      throw e;
+    }
+  });
+
+  return injector;
+}
+
+/**
+ * Creates an injector from passed options.
+ *
+ * @ignore
+ * @param  {Object} options
+ * @return {didi.Injector}
+ */
+function createInjector(options) {
+
+  options = options || {};
+
+  var configModule = {
+    'config': ['value', options]
+  };
+
+  var coreModule = require('./core');
+
+  var modules = [ configModule, coreModule ].concat(options.modules || []);
+
+  return bootstrap(modules);
+}
+
+
+/**
+ * The main diagram-js entry point that bootstraps the diagram with the given
+ * configuration.
+ *
+ * To register extensions with the diagram, pass them as Array<didi.Module> to the constructor.
+ *
+ * @class djs.Diagram
+ * @memberOf djs
+ * @constructor
+ *
+ * @example
+ *
+ * <caption>Creating a plug-in that logs whenever a shape is added to the canvas.</caption>
+ *
+ * // plug-in implemenentation
+ * function MyLoggingPlugin(eventBus) {
+ *   eventBus.on('shape.added', function(event) {
+ *     console.log('shape ', event.shape, ' was added to the diagram');
+ *   });
+ * }
+ *
+ * // export as module
+ * module.exports = {
+ *   __init__: [ 'myLoggingPlugin' ],
+ *     myLoggingPlugin: [ 'type', MyLoggingPlugin ]
+ * };
+ *
+ *
+ * // instantiate the diagram with the new plug-in
+ *
+ * var diagram = new Diagram({ modules: [ require('path-to-my-logging-plugin') ] });
+ *
+ * diagram.invoke([ 'canvas', function(canvas) {
+ *   // add shape to drawing canvas
+ *   canvas.addShape({ x: 10, y: 10 });
+ * });
+ *
+ * // 'shape ... was added to the diagram' logged to console
+ *
+ * @param {Object} options
+ * @param {Array<didi.Module>} [options.modules] external modules to instantiate with the diagram
+ * @param {didi.Injector} [injector] an (optional) injector to bootstrap the diagram with
+ */
+function Diagram(options, injector) {
+
+  // create injector unless explicitly specified
+  this.injector = injector = injector || createInjector(options);
+
+  // API
+
+  /**
+   * Resolves a diagram service
+   *
+   * @method Diagram#get
+   *
+   * @param {String} name the name of the diagram service to be retrieved
+   * @param {Boolean} [strict=true] if false, resolve missing services to null
+   */
+  this.get = injector.get;
+
+  /**
+   * Executes a function into which diagram services are injected
+   *
+   * @method Diagram#invoke
+   *
+   * @param {Function|Object[]} fn the function to resolve
+   * @param {Object} locals a number of locals to use to resolve certain dependencies
+   */
+  this.invoke = injector.invoke;
+
+  // init
+
+  // indicate via event
+
+
+  /**
+   * An event indicating that all plug-ins are loaded.
+   *
+   * Use this event to fire other events to interested plug-ins
+   *
+   * @memberOf Diagram
+   *
+   * @event diagram.init
+   *
+   * @example
+   *
+   * eventBus.on('diagram.init', function() {
+   *   eventBus.fire('my-custom-event', { foo: 'BAR' });
+   * });
+   *
+   * @type {Object}
+   */
+  this.get('eventBus').fire('diagram.init');
+}
+
+module.exports = Diagram;
+
+
+/**
+ * Destroys the diagram
+ *
+ * @method  Diagram#destroy
+ */
+Diagram.prototype.destroy = function() {
+  this.get('eventBus').fire('diagram.destroy');
+};
+
+/**
+ * Clear the diagram, removing all contents.
+ */
+Diagram.prototype.clear = function() {
+  this.get('eventBus').fire('diagram.clear');
+};
+
+},{"./core":673,"didi":793}],665:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -78056,7 +81380,7 @@ forEach(hooks, function(hook) {
   };
 });
 
-},{"lodash/collection/forEach":708,"lodash/lang/isArray":816,"lodash/lang/isFunction":817,"lodash/lang/isNumber":819}],624:[function(require,module,exports){
+},{"lodash/collection/forEach":832,"lodash/lang/isArray":955,"lodash/lang/isFunction":956,"lodash/lang/isNumber":958}],666:[function(require,module,exports){
 'use strict';
 
 var unique = require('lodash/array/unique'),
@@ -78109,8 +81433,11 @@ var InternalEvent = require('../core/EventBus').Event;
  *
  * Command handlers should provide the {@link CommandHandler#execute(ctx)}
  * and {@link CommandHandler#revert(ctx)} methods to implement
- * redoing and undoing of a command. They must ensure undo is performed
- * properly in order not to break the undo chain.
+ * redoing and undoing of a command.
+ *
+ * A command handler _must_ ensure undo is performed properly in order
+ * not to break the undo chain. It must also return the shapes that
+ * got changed during the `execute` and `revert` operations.
  *
  * Command handlers may execute other modeling operations (and thus
  * commands) in their `preExecute` and `postExecute` phases. The command
@@ -78134,6 +81461,7 @@ var InternalEvent = require('../core/EventBus').Event;
  * that elements have been changed. One use case for this is updating
  * their graphical representation after moving / resizing or deletion.
  *
+ * @see CommandHandler
  *
  * @param {EventBus} eventBus
  * @param {Injector} injector
@@ -78556,44 +81884,9970 @@ CommandStack.prototype._setHandler = function(command, handler) {
   this._handlerMap[command] = handler;
 };
 
-},{"../core/EventBus":629,"lodash/array/unique":703,"lodash/lang/isArray":816,"lodash/object/assign":825}],625:[function(require,module,exports){
+},{"../core/EventBus":671,"lodash/array/unique":826,"lodash/lang/isArray":955,"lodash/object/assign":964}],667:[function(require,module,exports){
 module.exports = {
   commandStack: [ 'type', require('./CommandStack') ]
 };
 
-},{"./CommandStack":624}],626:[function(require,module,exports){
-arguments[4][327][0].apply(exports,arguments)
-},{"../../vendor/snapsvg":675,"../util/Collections":658,"../util/Elements":660,"dup":327,"lodash/collection/every":705,"lodash/collection/forEach":708,"lodash/function/debounce":715,"lodash/lang/isNumber":819,"lodash/object/assign":825}],627:[function(require,module,exports){
+},{"./CommandStack":666}],668:[function(require,module,exports){
+'use strict';
+
+var isNumber = require('lodash/lang/isNumber'),
+    assign = require('lodash/object/assign'),
+    forEach = require('lodash/collection/forEach'),
+    every = require('lodash/collection/every'),
+    debounce = require('lodash/function/debounce');
+
+var Collections = require('../util/Collections'),
+    Elements = require('../util/Elements');
+
+var svgAppend = require('tiny-svg/lib/append'),
+    svgAttr = require('tiny-svg/lib/attr'),
+    svgClasses = require('tiny-svg/lib/classes'),
+    svgCreate = require('tiny-svg/lib/create'),
+    svgTransform = require('tiny-svg/lib/transform');
+
+var createMatrix = require('tiny-svg/lib/geometry').createMatrix;
+
+
+function round(number, resolution) {
+  return Math.round(number * resolution) / resolution;
+}
+
+function ensurePx(number) {
+  return isNumber(number) ? number + 'px' : number;
+}
+
+/**
+ * Creates a HTML container element for a SVG element with
+ * the given configuration
+ *
+ * @param  {Object} options
+ * @return {HTMLElement} the container element
+ */
+function createContainer(options) {
+
+  options = assign({}, { width: '100%', height: '100%' }, options);
+
+  var container = options.container || document.body;
+
+  // create a <div> around the svg element with the respective size
+  // this way we can always get the correct container size
+  // (this is impossible for <svg> elements at the moment)
+  var parent = document.createElement('div');
+  parent.setAttribute('class', 'djs-container');
+
+  assign(parent.style, {
+    position: 'relative',
+    overflow: 'hidden',
+    width: ensurePx(options.width),
+    height: ensurePx(options.height)
+  });
+
+  container.appendChild(parent);
+
+  return parent;
+}
+
+function createGroup(parent, cls) {
+  var group = svgCreate('g');
+  svgClasses(group).add(cls);
+
+  svgAppend(parent, group);
+
+  return group;
+}
+
+var BASE_LAYER = 'base';
+
+
+var REQUIRED_MODEL_ATTRS = {
+  shape: [ 'x', 'y', 'width', 'height' ],
+  connection: [ 'waypoints' ]
+};
+
+/**
+ * The main drawing canvas.
+ *
+ * @class
+ * @constructor
+ *
+ * @emits Canvas#canvas.init
+ *
+ * @param {Object} config
+ * @param {EventBus} eventBus
+ * @param {GraphicsFactory} graphicsFactory
+ * @param {ElementRegistry} elementRegistry
+ */
+function Canvas(config, eventBus, graphicsFactory, elementRegistry) {
+
+  this._eventBus = eventBus;
+  this._elementRegistry = elementRegistry;
+  this._graphicsFactory = graphicsFactory;
+
+  this._init(config || {});
+}
+
+Canvas.$inject = [ 'config.canvas', 'eventBus', 'graphicsFactory', 'elementRegistry' ];
+
+module.exports = Canvas;
+
+
+Canvas.prototype._init = function(config) {
+
+  var eventBus = this._eventBus;
+
+  // Creates a <svg> element that is wrapped into a <div>.
+  // This way we are always able to correctly figure out the size of the svg element
+  // by querying the parent node.
+  //
+  // (It is not possible to get the size of a svg element cross browser @ 2014-04-01)
+  //
+  // <div class="djs-container" style="width: {desired-width}, height: {desired-height}">
+  //   <svg width="100%" height="100%">
+  //    ...
+  //   </svg>
+  // </div>
+
+  // html container
+  var container = this._container = createContainer(config);
+
+  var svg = this._svg = svgCreate('svg');
+  svgAttr(svg, { width: '100%', height: '100%' });
+
+  svgAppend(container, svg);
+
+  var viewport = this._viewport = createGroup(svg, 'viewport');
+
+  this._layers = {};
+
+  // debounce canvas.viewbox.changed events
+  // for smoother diagram interaction
+  if (config.deferUpdate !== false) {
+    this._viewboxChanged = debounce(this._viewboxChanged, 300);
+  }
+
+  eventBus.on('diagram.init', function() {
+
+    /**
+     * An event indicating that the canvas is ready to be drawn on.
+     *
+     * @memberOf Canvas
+     *
+     * @event canvas.init
+     *
+     * @type {Object}
+     * @property {Snap<SVGSVGElement>} svg the created svg element
+     * @property {Snap<SVGGroup>} viewport the direct parent of diagram elements and shapes
+     */
+    eventBus.fire('canvas.init', {
+      svg: svg,
+      viewport: viewport
+    });
+
+    // fire this in order for certain components to check
+    // if they need to be adjusted due the canvas size
+    this.resized();
+
+  }, this);
+
+  eventBus.on('diagram.destroy', 500, this._destroy, this);
+  eventBus.on('diagram.clear', 500, this._clear, this);
+};
+
+Canvas.prototype._destroy = function(emit) {
+  this._eventBus.fire('canvas.destroy', {
+    svg: this._svg,
+    viewport: this._viewport
+  });
+
+  var parent = this._container.parentNode;
+
+  if (parent) {
+    parent.removeChild(this._container);
+  }
+
+  delete this._svg;
+  delete this._container;
+  delete this._layers;
+  delete this._rootElement;
+  delete this._viewport;
+};
+
+Canvas.prototype._clear = function() {
+
+  var self = this;
+
+  var allElements = this._elementRegistry.getAll();
+
+  // remove all elements
+  allElements.forEach(function(element) {
+    var type = Elements.getType(element);
+
+    if (type === 'root') {
+      self.setRootElement(null, true);
+    } else {
+      self._removeElement(element, type);
+    }
+  });
+
+  // force recomputation of view box
+  delete this._cachedViewbox;
+};
+
+/**
+ * Returns the default layer on which
+ * all elements are drawn.
+ *
+ * @returns {Snap<SVGGroup>}
+ */
+Canvas.prototype.getDefaultLayer = function() {
+  return this.getLayer(BASE_LAYER);
+};
+
+/**
+ * Returns a layer that is used to draw elements
+ * or annotations on it.
+ *
+ * @param  {String} name
+ *
+ * @returns {Snap<SVGGroup>}
+ */
+Canvas.prototype.getLayer = function(name) {
+
+  if (!name) {
+    throw new Error('must specify a name');
+  }
+
+  var layer = this._layers[name];
+  if (!layer) {
+    layer = this._layers[name] = createGroup(this._viewport, 'layer-' + name);
+  }
+
+  return layer;
+};
+
+
+/**
+ * Returns the html element that encloses the
+ * drawing canvas.
+ *
+ * @return {DOMNode}
+ */
+Canvas.prototype.getContainer = function() {
+  return this._container;
+};
+
+
+/////////////// markers ///////////////////////////////////
+
+Canvas.prototype._updateMarker = function(element, marker, add) {
+  var container;
+
+  if (!element.id) {
+    element = this._elementRegistry.get(element);
+  }
+
+  // we need to access all
+  container = this._elementRegistry._elements[element.id];
+
+  if (!container) {
+    return;
+  }
+
+  forEach([ container.gfx, container.secondaryGfx ], function(gfx) {
+    if (gfx) {
+      // invoke either addClass or removeClass based on mode
+      if (add) {
+        svgClasses(gfx).add(marker);
+      } else {
+        svgClasses(gfx).remove(marker);
+      }
+    }
+  });
+
+  /**
+   * An event indicating that a marker has been updated for an element
+   *
+   * @event element.marker.update
+   * @type {Object}
+   * @property {djs.model.Element} element the shape
+   * @property {Object} gfx the graphical representation of the shape
+   * @property {String} marker
+   * @property {Boolean} add true if the marker was added, false if it got removed
+   */
+  this._eventBus.fire('element.marker.update', { element: element, gfx: container.gfx, marker: marker, add: !!add });
+};
+
+
+/**
+ * Adds a marker to an element (basically a css class).
+ *
+ * Fires the element.marker.update event, making it possible to
+ * integrate extension into the marker life-cycle, too.
+ *
+ * @example
+ * canvas.addMarker('foo', 'some-marker');
+ *
+ * var fooGfx = canvas.getGraphics('foo');
+ *
+ * fooGfx; // <g class="... some-marker"> ... </g>
+ *
+ * @param {String|djs.model.Base} element
+ * @param {String} marker
+ */
+Canvas.prototype.addMarker = function(element, marker) {
+  this._updateMarker(element, marker, true);
+};
+
+
+/**
+ * Remove a marker from an element.
+ *
+ * Fires the element.marker.update event, making it possible to
+ * integrate extension into the marker life-cycle, too.
+ *
+ * @param  {String|djs.model.Base} element
+ * @param  {String} marker
+ */
+Canvas.prototype.removeMarker = function(element, marker) {
+  this._updateMarker(element, marker, false);
+};
+
+/**
+ * Check the existence of a marker on element.
+ *
+ * @param  {String|djs.model.Base} element
+ * @param  {String} marker
+ */
+Canvas.prototype.hasMarker = function(element, marker) {
+  if (!element.id) {
+    element = this._elementRegistry.get(element);
+  }
+
+  var gfx = this.getGraphics(element);
+
+  return svgClasses(gfx).has(marker);
+};
+
+/**
+ * Toggles a marker on an element.
+ *
+ * Fires the element.marker.update event, making it possible to
+ * integrate extension into the marker life-cycle, too.
+ *
+ * @param  {String|djs.model.Base} element
+ * @param  {String} marker
+ */
+Canvas.prototype.toggleMarker = function(element, marker) {
+  if (this.hasMarker(element, marker)) {
+    this.removeMarker(element, marker);
+  } else {
+    this.addMarker(element, marker);
+  }
+};
+
+Canvas.prototype.getRootElement = function() {
+  if (!this._rootElement) {
+    this.setRootElement({ id: '__implicitroot', children: [] });
+  }
+
+  return this._rootElement;
+};
+
+
+
+//////////////// root element handling ///////////////////////////
+
+/**
+ * Sets a given element as the new root element for the canvas
+ * and returns the new root element.
+ *
+ * @param {Object|djs.model.Root} element
+ * @param {Boolean} [override] whether to override the current root element, if any
+ *
+ * @return {Object|djs.model.Root} new root element
+ */
+Canvas.prototype.setRootElement = function(element, override) {
+
+  if (element) {
+    this._ensureValid('root', element);
+  }
+
+  var currentRoot = this._rootElement,
+      elementRegistry = this._elementRegistry,
+      eventBus = this._eventBus;
+
+  if (currentRoot) {
+    if (!override) {
+      throw new Error('rootElement already set, need to specify override');
+    }
+
+    // simulate element remove event sequence
+    eventBus.fire('root.remove', { element: currentRoot });
+    eventBus.fire('root.removed', { element: currentRoot });
+
+    elementRegistry.remove(currentRoot);
+  }
+
+  if (element) {
+    var gfx = this.getDefaultLayer();
+
+    // resemble element add event sequence
+    eventBus.fire('root.add', { element: element });
+
+    elementRegistry.add(element, gfx, this._svg);
+
+    eventBus.fire('root.added', { element: element, gfx: gfx });
+  }
+
+  this._rootElement = element;
+
+  return element;
+};
+
+
+
+///////////// add functionality ///////////////////////////////
+
+Canvas.prototype._ensureValid = function(type, element) {
+  if (!element.id) {
+    throw new Error('element must have an id');
+  }
+
+  if (this._elementRegistry.get(element.id)) {
+    throw new Error('element with id ' + element.id + ' already exists');
+  }
+
+  var requiredAttrs = REQUIRED_MODEL_ATTRS[type];
+
+  var valid = every(requiredAttrs, function(attr) {
+    return typeof element[attr] !== 'undefined';
+  });
+
+  if (!valid) {
+    throw new Error(
+      'must supply { ' + requiredAttrs.join(', ') + ' } with ' + type);
+  }
+};
+
+Canvas.prototype._setParent = function(element, parent, parentIndex) {
+  Collections.add(parent.children, element, parentIndex);
+  element.parent = parent;
+};
+
+/**
+ * Adds an element to the canvas.
+ *
+ * This wires the parent <-> child relationship between the element and
+ * a explicitly specified parent or an implicit root element.
+ *
+ * During add it emits the events
+ *
+ *  * <{type}.add> (element, parent)
+ *  * <{type}.added> (element, gfx)
+ *
+ * Extensions may hook into these events to perform their magic.
+ *
+ * @param {String} type
+ * @param {Object|djs.model.Base} element
+ * @param {Object|djs.model.Base} [parent]
+ * @param {Number} [parentIndex]
+ *
+ * @return {Object|djs.model.Base} the added element
+ */
+Canvas.prototype._addElement = function(type, element, parent, parentIndex) {
+
+  parent = parent || this.getRootElement();
+
+  var eventBus = this._eventBus,
+      graphicsFactory = this._graphicsFactory;
+
+  this._ensureValid(type, element);
+
+  eventBus.fire(type + '.add', { element: element, parent: parent });
+
+  this._setParent(element, parent, parentIndex);
+
+  // create graphics
+  var gfx = graphicsFactory.create(type, element);
+
+  this._elementRegistry.add(element, gfx);
+
+  // update its visual
+  graphicsFactory.update(type, element, gfx);
+
+  eventBus.fire(type + '.added', { element: element, gfx: gfx });
+
+  return element;
+};
+
+/**
+ * Adds a shape to the canvas
+ *
+ * @param {Object|djs.model.Shape} shape to add to the diagram
+ * @param {djs.model.Base} [parent]
+ * @param {Number} [parentIndex]
+ *
+ * @return {djs.model.Shape} the added shape
+ */
+Canvas.prototype.addShape = function(shape, parent, parentIndex) {
+  return this._addElement('shape', shape, parent, parentIndex);
+};
+
+/**
+ * Adds a connection to the canvas
+ *
+ * @param {Object|djs.model.Connection} connection to add to the diagram
+ * @param {djs.model.Base} [parent]
+ * @param {Number} [parentIndex]
+ *
+ * @return {djs.model.Connection} the added connection
+ */
+Canvas.prototype.addConnection = function(connection, parent, parentIndex) {
+  return this._addElement('connection', connection, parent, parentIndex);
+};
+
+
+/**
+ * Internal remove element
+ */
+Canvas.prototype._removeElement = function(element, type) {
+
+  var elementRegistry = this._elementRegistry,
+      graphicsFactory = this._graphicsFactory,
+      eventBus = this._eventBus;
+
+  element = elementRegistry.get(element.id || element);
+
+  if (!element) {
+    // element was removed already
+    return;
+  }
+
+  eventBus.fire(type + '.remove', { element: element });
+
+  graphicsFactory.remove(element);
+
+  // unset parent <-> child relationship
+  Collections.remove(element.parent && element.parent.children, element);
+  element.parent = null;
+
+  eventBus.fire(type + '.removed', { element: element });
+
+  elementRegistry.remove(element);
+
+  return element;
+};
+
+
+/**
+ * Removes a shape from the canvas
+ *
+ * @param {String|djs.model.Shape} shape or shape id to be removed
+ *
+ * @return {djs.model.Shape} the removed shape
+ */
+Canvas.prototype.removeShape = function(shape) {
+
+  /**
+   * An event indicating that a shape is about to be removed from the canvas.
+   *
+   * @memberOf Canvas
+   *
+   * @event shape.remove
+   * @type {Object}
+   * @property {djs.model.Shape} element the shape descriptor
+   * @property {Object} gfx the graphical representation of the shape
+   */
+
+  /**
+   * An event indicating that a shape has been removed from the canvas.
+   *
+   * @memberOf Canvas
+   *
+   * @event shape.removed
+   * @type {Object}
+   * @property {djs.model.Shape} element the shape descriptor
+   * @property {Object} gfx the graphical representation of the shape
+   */
+  return this._removeElement(shape, 'shape');
+};
+
+
+/**
+ * Removes a connection from the canvas
+ *
+ * @param {String|djs.model.Connection} connection or connection id to be removed
+ *
+ * @return {djs.model.Connection} the removed connection
+ */
+Canvas.prototype.removeConnection = function(connection) {
+
+  /**
+   * An event indicating that a connection is about to be removed from the canvas.
+   *
+   * @memberOf Canvas
+   *
+   * @event connection.remove
+   * @type {Object}
+   * @property {djs.model.Connection} element the connection descriptor
+   * @property {Object} gfx the graphical representation of the connection
+   */
+
+  /**
+   * An event indicating that a connection has been removed from the canvas.
+   *
+   * @memberOf Canvas
+   *
+   * @event connection.removed
+   * @type {Object}
+   * @property {djs.model.Connection} element the connection descriptor
+   * @property {Object} gfx the graphical representation of the connection
+   */
+  return this._removeElement(connection, 'connection');
+};
+
+
+/**
+ * Return the graphical object underlaying a certain diagram element
+ *
+ * @param {String|djs.model.Base} element descriptor of the element
+ * @param {Boolean} [secondary=false] whether to return the secondary connected element
+ *
+ * @return {SVGElement}
+ */
+Canvas.prototype.getGraphics = function(element, secondary) {
+  return this._elementRegistry.getGraphics(element, secondary);
+};
+
+
+/**
+ * Perform a viewbox update via a given change function.
+ *
+ * @param {Function} changeFn
+ */
+Canvas.prototype._changeViewbox = function(changeFn) {
+
+  // notify others of the upcoming viewbox change
+  this._eventBus.fire('canvas.viewbox.changing');
+
+  // perform actual change
+  changeFn.apply(this);
+
+  // reset the cached viewbox so that
+  // a new get operation on viewbox or zoom
+  // triggers a viewbox re-computation
+  this._cachedViewbox = null;
+
+  // notify others of the change; this step
+  // may or may not be debounced
+  this._viewboxChanged();
+};
+
+Canvas.prototype._viewboxChanged = function() {
+  this._eventBus.fire('canvas.viewbox.changed', { viewbox: this.viewbox() });
+};
+
+
+/**
+ * Gets or sets the view box of the canvas, i.e. the
+ * area that is currently displayed.
+ *
+ * The getter may return a cached viewbox (if it is currently
+ * changing). To force a recomputation, pass `false` as the first argument.
+ *
+ * @example
+ *
+ * canvas.viewbox({ x: 100, y: 100, width: 500, height: 500 })
+ *
+ * // sets the visible area of the diagram to (100|100) -> (600|100)
+ * // and and scales it according to the diagram width
+ *
+ * var viewbox = canvas.viewbox(); // pass `false` to force recomputing the box.
+ *
+ * console.log(viewbox);
+ * // {
+ * //   inner: Dimensions,
+ * //   outer: Dimensions,
+ * //   scale,
+ * //   x, y,
+ * //   width, height
+ * // }
+ *
+ * @param  {Object} [box] the new view box to set
+ * @param  {Number} box.x the top left X coordinate of the canvas visible in view box
+ * @param  {Number} box.y the top left Y coordinate of the canvas visible in view box
+ * @param  {Number} box.width the visible width
+ * @param  {Number} box.height
+ *
+ * @return {Object} the current view box
+ */
+Canvas.prototype.viewbox = function(box) {
+
+  if (box === undefined && this._cachedViewbox) {
+    return this._cachedViewbox;
+  }
+
+  var viewport = this._viewport,
+      innerBox,
+      outerBox = this.getSize(),
+      matrix,
+      scale,
+      x, y;
+
+  if (!box) {
+    // compute the inner box based on the
+    // diagrams default layer. This allows us to exclude
+    // external components, such as overlays
+    innerBox = this.getDefaultLayer().getBBox();
+
+    var transform = svgTransform(viewport);
+    matrix = transform ? transform.matrix : createMatrix();
+    scale = round(matrix.a, 1000);
+
+    x = round(-matrix.e || 0, 1000);
+    y = round(-matrix.f || 0, 1000);
+
+    box = this._cachedViewbox = {
+      x: x ? x / scale : 0,
+      y: y ? y / scale : 0,
+      width: outerBox.width / scale,
+      height: outerBox.height / scale,
+      scale: scale,
+      inner: {
+        width: innerBox.width,
+        height: innerBox.height,
+        x: innerBox.x,
+        y: innerBox.y
+      },
+      outer: outerBox
+    };
+
+    return box;
+  } else {
+
+    this._changeViewbox(function() {
+      scale = Math.min(outerBox.width / box.width, outerBox.height / box.height);
+
+      var matrix = this._svg.createSVGMatrix()
+        .scale(scale)
+        .translate(-box.x, -box.y);
+
+      svgTransform(viewport, matrix);
+    });
+  }
+
+  return box;
+};
+
+
+/**
+ * Gets or sets the scroll of the canvas.
+ *
+ * @param {Object} [delta] the new scroll to apply.
+ *
+ * @param {Number} [delta.dx]
+ * @param {Number} [delta.dy]
+ */
+Canvas.prototype.scroll = function(delta) {
+
+  var node = this._viewport;
+  var matrix = node.getCTM();
+
+  if (delta) {
+    this._changeViewbox(function() {
+      delta = assign({ dx: 0, dy: 0 }, delta || {});
+
+      matrix = this._svg.createSVGMatrix().translate(delta.dx, delta.dy).multiply(matrix);
+
+      setCTM(node, matrix);
+    });
+  }
+
+  return { x: matrix.e, y: matrix.f };
+};
+
+
+/**
+ * Gets or sets the current zoom of the canvas, optionally zooming
+ * to the specified position.
+ *
+ * The getter may return a cached zoom level. Call it with `false` as
+ * the first argument to force recomputation of the current level.
+ *
+ * @param {String|Number} [newScale] the new zoom level, either a number, i.e. 0.9,
+ *                                   or `fit-viewport` to adjust the size to fit the current viewport
+ * @param {String|Point} [center] the reference point { x: .., y: ..} to zoom to, 'auto' to zoom into mid or null
+ *
+ * @return {Number} the current scale
+ */
+Canvas.prototype.zoom = function(newScale, center) {
+
+  if (!newScale) {
+    return this.viewbox(newScale).scale;
+  }
+
+  if (newScale === 'fit-viewport') {
+    return this._fitViewport(center);
+  }
+
+  var outer,
+      matrix;
+
+  this._changeViewbox(function() {
+
+    if (typeof center !== 'object') {
+      outer = this.viewbox().outer;
+
+      center = {
+        x: outer.width / 2,
+        y: outer.height / 2
+      };
+    }
+
+    matrix = this._setZoom(newScale, center);
+  });
+
+  return round(matrix.a, 1000);
+};
+
+function setCTM(node, m) {
+  var mstr = 'matrix(' + m.a + ',' + m.b + ',' + m.c + ',' + m.d + ',' + m.e + ',' + m.f + ')';
+  node.setAttribute('transform', mstr);
+}
+
+Canvas.prototype._fitViewport = function(center) {
+
+  var vbox = this.viewbox(),
+      outer = vbox.outer,
+      inner = vbox.inner,
+      newScale,
+      newViewbox;
+
+  // display the complete diagram without zooming in.
+  // instead of relying on internal zoom, we perform a
+  // hard reset on the canvas viewbox to realize this
+  //
+  // if diagram does not need to be zoomed in, we focus it around
+  // the diagram origin instead
+
+  if (inner.x >= 0 &&
+      inner.y >= 0 &&
+      inner.x + inner.width <= outer.width &&
+      inner.y + inner.height <= outer.height &&
+      !center) {
+
+    newViewbox = {
+      x: 0,
+      y: 0,
+      width: Math.max(inner.width + inner.x, outer.width),
+      height: Math.max(inner.height + inner.y, outer.height)
+    };
+  } else {
+
+    newScale = Math.min(1, outer.width / inner.width, outer.height / inner.height);
+    newViewbox = {
+      x: inner.x + (center ? inner.width / 2 - outer.width / newScale / 2 : 0),
+      y: inner.y + (center ? inner.height / 2 - outer.height / newScale / 2 : 0),
+      width: outer.width / newScale,
+      height: outer.height / newScale
+    };
+  }
+
+  this.viewbox(newViewbox);
+
+  return this.viewbox(false).scale;
+};
+
+
+Canvas.prototype._setZoom = function(scale, center) {
+
+  var svg = this._svg,
+      viewport = this._viewport;
+
+  var matrix = svg.createSVGMatrix();
+  var point = svg.createSVGPoint();
+
+  var centerPoint,
+      originalPoint,
+      currentMatrix,
+      scaleMatrix,
+      newMatrix;
+
+  currentMatrix = viewport.getCTM();
+
+  var currentScale = currentMatrix.a;
+
+  if (center) {
+    centerPoint = assign(point, center);
+
+    // revert applied viewport transformations
+    originalPoint = centerPoint.matrixTransform(currentMatrix.inverse());
+
+    // create scale matrix
+    scaleMatrix = matrix
+                    .translate(originalPoint.x, originalPoint.y)
+                    .scale(1 / currentScale * scale)
+                    .translate(-originalPoint.x, -originalPoint.y);
+
+    newMatrix = currentMatrix.multiply(scaleMatrix);
+  } else {
+    newMatrix = matrix.scale(scale);
+  }
+
+  setCTM(this._viewport, newMatrix);
+
+  return newMatrix;
+};
+
+
+/**
+ * Returns the size of the canvas
+ *
+ * @return {Dimensions}
+ */
+Canvas.prototype.getSize = function() {
+  return {
+    width: this._container.clientWidth,
+    height: this._container.clientHeight
+  };
+};
+
+
+/**
+ * Return the absolute bounding box for the given element
+ *
+ * The absolute bounding box may be used to display overlays in the
+ * callers (browser) coordinate system rather than the zoomed in/out
+ * canvas coordinates.
+ *
+ * @param  {ElementDescriptor} element
+ * @return {Bounds} the absolute bounding box
+ */
+Canvas.prototype.getAbsoluteBBox = function(element) {
+  var vbox = this.viewbox();
+  var bbox;
+
+  // connection
+  // use svg bbox
+  if (element.waypoints) {
+    var gfx = this.getGraphics(element);
+
+    var transformBBox = gfx.getBBox(true);
+    bbox = gfx.getBBox();
+
+    bbox.x -= transformBBox.x;
+    bbox.y -= transformBBox.y;
+
+    bbox.width += 2 * transformBBox.x;
+    bbox.height +=  2 * transformBBox.y;
+  }
+  // shapes
+  // use data
+  else {
+    bbox = element;
+  }
+
+  var x = bbox.x * vbox.scale - vbox.x * vbox.scale;
+  var y = bbox.y * vbox.scale - vbox.y * vbox.scale;
+
+  var width = bbox.width * vbox.scale;
+  var height = bbox.height * vbox.scale;
+
+  return {
+    x: x,
+    y: y,
+    width: width,
+    height: height
+  };
+};
+
+/**
+ * Fires an event in order other modules can react to the
+ * canvas resizing
+ */
+Canvas.prototype.resized = function() {
+
+  // force recomputation of view box
+  delete this._cachedViewbox;
+
+  this._eventBus.fire('canvas.resized');
+};
+
+},{"../util/Collections":774,"../util/Elements":777,"lodash/collection/every":829,"lodash/collection/forEach":832,"lodash/function/debounce":842,"lodash/lang/isNumber":958,"lodash/object/assign":964,"tiny-svg/lib/append":1067,"tiny-svg/lib/attr":1069,"tiny-svg/lib/classes":1070,"tiny-svg/lib/create":1073,"tiny-svg/lib/geometry":1074,"tiny-svg/lib/transform":1076}],669:[function(require,module,exports){
 arguments[4][328][0].apply(exports,arguments)
-},{"../model":651,"dup":328,"lodash/object/assign":825}],628:[function(require,module,exports){
-arguments[4][329][0].apply(exports,arguments)
-},{"dup":329}],629:[function(require,module,exports){
+},{"../model":765,"dup":328,"lodash/object/assign":964}],670:[function(require,module,exports){
+'use strict';
+
+var ELEMENT_ID = 'data-element-id';
+
+var svgAttr = require('tiny-svg/lib/attr');
+
+
+/**
+ * @class
+ *
+ * A registry that keeps track of all shapes in the diagram.
+ */
+function ElementRegistry() {
+  this._elements = {};
+}
+
+module.exports = ElementRegistry;
+
+/**
+ * Register a pair of (element, gfx, (secondaryGfx)).
+ *
+ * @param {djs.model.Base} element
+ * @param {SVGElement} gfx
+ * @param {SVGElement} [secondaryGfx] optional other element to register, too
+ */
+ElementRegistry.prototype.add = function(element, gfx, secondaryGfx) {
+
+  var id = element.id;
+
+  this._validateId(id);
+
+  // associate dom node with element
+  svgAttr(gfx, ELEMENT_ID, id);
+
+  if (secondaryGfx) {
+    svgAttr(secondaryGfx, ELEMENT_ID, id);
+  }
+
+  this._elements[id] = { element: element, gfx: gfx, secondaryGfx: secondaryGfx };
+};
+
+/**
+ * Removes an element from the registry.
+ *
+ * @param {djs.model.Base} element
+ */
+ElementRegistry.prototype.remove = function(element) {
+  var elements = this._elements,
+      id = element.id || element,
+      container = id && elements[id];
+
+  if (container) {
+
+    // unset element id on gfx
+    svgAttr(container.gfx, ELEMENT_ID, '');
+
+    if (container.secondaryGfx) {
+      svgAttr(container.secondaryGfx, ELEMENT_ID, '');
+    }
+
+    delete elements[id];
+  }
+};
+
+/**
+ * Update the id of an element
+ *
+ * @param {djs.model.Base} element
+ * @param {String} newId
+ */
+ElementRegistry.prototype.updateId = function(element, newId) {
+
+  this._validateId(newId);
+
+  if (typeof element === 'string') {
+    element = this.get(element);
+  }
+
+  var gfx = this.getGraphics(element),
+      secondaryGfx = this.getGraphics(element, true);
+
+  this.remove(element);
+
+  element.id = newId;
+
+  this.add(element, gfx, secondaryGfx);
+};
+
+/**
+ * Return the model element for a given id or graphics.
+ *
+ * @example
+ *
+ * elementRegistry.get('SomeElementId_1');
+ * elementRegistry.get(gfx);
+ *
+ *
+ * @param {String|SVGElement} filter for selecting the element
+ *
+ * @return {djs.model.Base}
+ */
+ElementRegistry.prototype.get = function(filter) {
+  var id;
+
+  if (typeof filter === 'string') {
+    id = filter;
+  } else {
+    id = filter && svgAttr(filter, ELEMENT_ID);
+  }
+
+  var container = this._elements[id];
+  return container && container.element;
+};
+
+/**
+ * Return all elements that match a given filter function.
+ *
+ * @param {Function} fn
+ *
+ * @return {Array<djs.model.Base>}
+ */
+ElementRegistry.prototype.filter = function(fn) {
+
+  var filtered = [];
+
+  this.forEach(function(element, gfx) {
+    if (fn(element, gfx)) {
+      filtered.push(element);
+    }
+  });
+
+  return filtered;
+};
+
+/**
+ * Return all rendered model elements.
+ *
+ * @return {Array<djs.model.Base>}
+ */
+ElementRegistry.prototype.getAll = function() {
+  return this.filter(function(e) { return e; });
+};
+
+/**
+ * Iterate over all diagram elements.
+ *
+ * @param {Function} fn
+ */
+ElementRegistry.prototype.forEach = function(fn) {
+
+  var map = this._elements;
+
+  Object.keys(map).forEach(function(id) {
+    var container = map[id],
+        element = container.element,
+        gfx = container.gfx;
+
+    return fn(element, gfx);
+  });
+};
+
+/**
+ * Return the graphical representation of an element or its id.
+ *
+ * @example
+ * elementRegistry.getGraphics('SomeElementId_1');
+ * elementRegistry.getGraphics(rootElement); // <g ...>
+ *
+ * elementRegistry.getGraphics(rootElement, true); // <svg ...>
+ *
+ *
+ * @param {String|djs.model.Base} filter
+ * @param {Boolean} [secondary=false] whether to return the secondary connected element
+ *
+ * @return {SVGElement}
+ */
+ElementRegistry.prototype.getGraphics = function(filter, secondary) {
+  var id = filter.id || filter;
+
+  var container = this._elements[id];
+  return container && (secondary ? container.secondaryGfx : container.gfx);
+};
+
+/**
+ * Validate the suitability of the given id and signals a problem
+ * with an exception.
+ *
+ * @param {String} id
+ *
+ * @throws {Error} if id is empty or already assigned
+ */
+ElementRegistry.prototype._validateId = function(id) {
+  if (!id) {
+    throw new Error('element must have an id');
+  }
+
+  if (this._elements[id]) {
+    throw new Error('element with id ' + id + ' already added');
+  }
+};
+
+},{"tiny-svg/lib/attr":1069}],671:[function(require,module,exports){
 arguments[4][330][0].apply(exports,arguments)
-},{"dup":330,"lodash/function/bind":714,"lodash/lang/isArray":816,"lodash/lang/isFunction":817,"lodash/lang/isNumber":819,"lodash/object/assign":825}],630:[function(require,module,exports){
-arguments[4][331][0].apply(exports,arguments)
-},{"../util/GraphicsUtil":662,"dup":331,"lodash/collection/forEach":708,"lodash/collection/reduce":712,"min-dom/lib/clear":837}],631:[function(require,module,exports){
+},{"dup":330,"lodash/function/bind":841,"lodash/lang/isArray":955,"lodash/lang/isFunction":956,"lodash/lang/isNumber":958,"lodash/object/assign":964}],672:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach'),
+    reduce = require('lodash/collection/reduce');
+
+var GraphicsUtil = require('../util/GraphicsUtil');
+
+var translate = require('../util/SvgTransformUtil').translate;
+
+var domClear = require('min-dom/lib/clear');
+
+var svgAppend = require('tiny-svg/lib/append'),
+    svgAttr = require('tiny-svg/lib/attr'),
+    svgClasses = require('tiny-svg/lib/classes'),
+    svgCreate = require('tiny-svg/lib/create'),
+    svgRemove = require('tiny-svg/lib/remove');
+
+
+/**
+ * A factory that creates graphical elements
+ *
+ * @param {EventBus} eventBus
+ * @param {ElementRegistry} elementRegistry
+ */
+function GraphicsFactory(eventBus, elementRegistry) {
+  this._eventBus = eventBus;
+  this._elementRegistry = elementRegistry;
+}
+
+GraphicsFactory.$inject = [ 'eventBus' , 'elementRegistry' ];
+
+module.exports = GraphicsFactory;
+
+
+GraphicsFactory.prototype._getChildren = function(element) {
+
+  var gfx = this._elementRegistry.getGraphics(element);
+
+  var childrenGfx;
+
+  // root element
+  if (!element.parent) {
+    childrenGfx = gfx;
+  } else {
+    childrenGfx = GraphicsUtil.getChildren(gfx);
+    if (!childrenGfx) {
+      childrenGfx = svgCreate('g');
+      svgClasses(childrenGfx).add('djs-children');
+
+      svgAppend(gfx.parentNode, childrenGfx);
+    }
+  }
+
+  return childrenGfx;
+};
+
+/**
+ * Clears the graphical representation of the element and returns the
+ * cleared visual (the <g class="djs-visual" /> element).
+ */
+GraphicsFactory.prototype._clear = function(gfx) {
+  var visual = GraphicsUtil.getVisual(gfx);
+
+  domClear(visual);
+
+  return visual;
+};
+
+/**
+ * Creates a gfx container for shapes and connections
+ *
+ * The layout is as follows:
+ *
+ * <g class="djs-group">
+ *
+ *   <!-- the gfx -->
+ *   <g class="djs-element djs-(shape|connection)">
+ *     <g class="djs-visual">
+ *       <!-- the renderer draws in here -->
+ *     </g>
+ *
+ *     <!-- extensions (overlays, click box, ...) goes here
+ *   </g>
+ *
+ *   <!-- the gfx child nodes -->
+ *   <g class="djs-children"></g>
+ * </g>
+ *
+ * @param {Object} parent
+ * @param {String} type the type of the element, i.e. shape | connection
+ */
+GraphicsFactory.prototype._createContainer = function(type, parentGfx) {
+  var outerGfx = svgCreate('g');
+  svgClasses(outerGfx).add('djs-group');
+
+  svgAppend(parentGfx, outerGfx);
+
+  var gfx = svgCreate('g');
+  svgClasses(gfx).add('djs-element');
+  svgClasses(gfx).add('djs-' + type);
+
+  svgAppend(outerGfx, gfx);
+
+  // create visual
+  var visual = svgCreate('g');
+  svgClasses(visual).add('djs-visual');
+
+  svgAppend(gfx, visual);
+
+  return gfx;
+};
+
+GraphicsFactory.prototype.create = function(type, element) {
+  var childrenGfx = this._getChildren(element.parent);
+  return this._createContainer(type, childrenGfx);
+};
+
+GraphicsFactory.prototype.updateContainments = function(elements) {
+
+  var self = this,
+      elementRegistry = this._elementRegistry,
+      parents;
+
+  parents = reduce(elements, function(map, e) {
+
+    if (e.parent) {
+      map[e.parent.id] = e.parent;
+    }
+
+    return map;
+  }, {});
+
+  // update all parents of changed and reorganized their children
+  // in the correct order (as indicated in our model)
+  forEach(parents, function(parent) {
+
+    var childGfx = self._getChildren(parent),
+        children = parent.children;
+
+    if (!children) {
+      return;
+    }
+
+    forEach(children.slice().reverse(), function(c) {
+      var gfx = elementRegistry.getGraphics(c);
+
+      prependTo(gfx.parentNode, childGfx);
+    });
+  });
+};
+
+GraphicsFactory.prototype.drawShape = function(visual, element) {
+  var eventBus = this._eventBus;
+
+  return eventBus.fire('render.shape', { gfx: visual, element: element });
+};
+
+GraphicsFactory.prototype.getShapePath = function(element) {
+  var eventBus = this._eventBus;
+
+  return eventBus.fire('render.getShapePath', element);
+};
+
+GraphicsFactory.prototype.drawConnection = function(visual, element) {
+  var eventBus = this._eventBus;
+
+  return eventBus.fire('render.connection', { gfx: visual, element: element });
+};
+
+GraphicsFactory.prototype.getConnectionPath = function(waypoints) {
+  var eventBus = this._eventBus;
+
+  return eventBus.fire('render.getConnectionPath', waypoints);
+};
+
+GraphicsFactory.prototype.update = function(type, element, gfx) {
+  // Do not update root element
+  if (!element.parent) {
+    return;
+  }
+
+  var visual = this._clear(gfx);
+
+  // redraw
+  if (type === 'shape') {
+    this.drawShape(visual, element);
+
+    // update positioning
+    translate(gfx, element.x, element.y);
+  } else
+  if (type === 'connection') {
+    this.drawConnection(visual, element);
+  } else {
+    throw new Error('unknown type: ' + type);
+  }
+
+  if (element.hidden) {
+    svgAttr(gfx, 'display', 'none');
+  } else {
+    svgAttr(gfx, 'display', 'block');
+  }
+};
+
+GraphicsFactory.prototype.remove = function(element) {
+  var gfx = this._elementRegistry.getGraphics(element);
+
+  // remove
+  svgRemove(gfx.parentNode);
+};
+
+////////// helpers ///////////
+
+function prependTo(newNode, parentNode) {
+  parentNode.insertBefore(newNode, parentNode.firstChild);
+}
+
+},{"../util/GraphicsUtil":780,"../util/SvgTransformUtil":790,"lodash/collection/forEach":832,"lodash/collection/reduce":836,"min-dom/lib/clear":978,"tiny-svg/lib/append":1067,"tiny-svg/lib/attr":1069,"tiny-svg/lib/classes":1070,"tiny-svg/lib/create":1073,"tiny-svg/lib/remove":1075}],673:[function(require,module,exports){
 arguments[4][84][0].apply(exports,arguments)
-},{"../draw":635,"./Canvas":626,"./ElementFactory":627,"./ElementRegistry":628,"./EventBus":629,"./GraphicsFactory":630,"dup":84}],632:[function(require,module,exports){
+},{"../draw":677,"./Canvas":668,"./ElementFactory":669,"./ElementRegistry":670,"./EventBus":671,"./GraphicsFactory":672,"dup":84}],674:[function(require,module,exports){
 arguments[4][85][0].apply(exports,arguments)
-},{"dup":85}],633:[function(require,module,exports){
-arguments[4][334][0].apply(exports,arguments)
-},{"../util/RenderUtil":667,"./BaseRenderer":632,"dup":334,"inherits":699}],634:[function(require,module,exports){
+},{"dup":85}],675:[function(require,module,exports){
+'use strict';
+
+var inherits = require('inherits');
+
+var BaseRenderer = require('./BaseRenderer');
+
+var renderUtil = require('../util/RenderUtil');
+
+var componentsToPath = renderUtil.componentsToPath,
+    createLine = renderUtil.createLine;
+
+var svgAppend = require('tiny-svg/lib/append'),
+    svgAttr = require('tiny-svg/lib/attr'),
+    svgCreate = require('tiny-svg/lib/create');
+
+// apply default renderer with lowest possible priority
+// so that it only kicks in if noone else could render
+var DEFAULT_RENDER_PRIORITY = 1;
+
+/**
+ * The default renderer used for shapes and connections.
+ *
+ * @param {EventBus} eventBus
+ * @param {Styles} styles
+ */
+function DefaultRenderer(eventBus, styles) {
+  //
+  BaseRenderer.call(this, eventBus, DEFAULT_RENDER_PRIORITY);
+
+  this.CONNECTION_STYLE = styles.style([ 'no-fill' ], { strokeWidth: 5, stroke: 'fuchsia' });
+  this.SHAPE_STYLE = styles.style({ fill: 'white', stroke: 'fuchsia', strokeWidth: 2 });
+}
+
+inherits(DefaultRenderer, BaseRenderer);
+
+
+DefaultRenderer.prototype.canRender = function() {
+  return true;
+};
+
+DefaultRenderer.prototype.drawShape = function drawShape(visuals, element) {
+
+  var rect = svgCreate('rect');
+  svgAttr(rect, {
+    x: 0,
+    y: 0,
+    width: element.width || 0,
+    height: element.height || 0
+  });
+  svgAttr(rect, this.SHAPE_STYLE);
+
+  svgAppend(visuals, rect);
+
+  return rect;
+};
+
+DefaultRenderer.prototype.drawConnection = function drawConnection(visuals, connection) {
+
+  var line = createLine(connection.waypoints, this.CONNECTION_STYLE);
+  svgAppend(visuals, line);
+
+  return line;
+};
+
+DefaultRenderer.prototype.getShapePath = function getShapePath(shape) {
+
+  var x = shape.x,
+      y = shape.y,
+      width = shape.width,
+      height = shape.height;
+
+  var shapePath = [
+    ['M', x, y],
+    ['l', width, 0],
+    ['l', 0, height],
+    ['l', -width, 0],
+    ['z']
+  ];
+
+  return componentsToPath(shapePath);
+};
+
+DefaultRenderer.prototype.getConnectionPath = function getConnectionPath(connection) {
+  var waypoints = connection.waypoints;
+
+  var idx, point, connectionPath = [];
+
+  for (idx = 0; (point = waypoints[idx]); idx++) {
+
+    // take invisible docking into account
+    // when creating the path
+    point = point.original || point;
+
+    connectionPath.push([ idx === 0 ? 'M' : 'L', point.x, point.y ]);
+  }
+
+  return componentsToPath(connectionPath);
+};
+
+
+DefaultRenderer.$inject = [ 'eventBus', 'styles' ];
+
+module.exports = DefaultRenderer;
+
+},{"../util/RenderUtil":789,"./BaseRenderer":674,"inherits":820,"tiny-svg/lib/append":1067,"tiny-svg/lib/attr":1069,"tiny-svg/lib/create":1073}],676:[function(require,module,exports){
 arguments[4][87][0].apply(exports,arguments)
-},{"dup":87,"lodash/collection/reduce":712,"lodash/lang/isArray":816,"lodash/object/assign":825}],635:[function(require,module,exports){
+},{"dup":87,"lodash/collection/reduce":836,"lodash/lang/isArray":955,"lodash/object/assign":964}],677:[function(require,module,exports){
 arguments[4][88][0].apply(exports,arguments)
-},{"./DefaultRenderer":633,"./Styles":634,"dup":88}],636:[function(require,module,exports){
-arguments[4][337][0].apply(exports,arguments)
-},{"../../../vendor/snapsvg":675,"../../util/Mouse":665,"../../util/RenderUtil":667,"dup":337,"lodash/collection/forEach":708,"min-dom/lib/delegate":839}],637:[function(require,module,exports){
+},{"./DefaultRenderer":675,"./Styles":676,"dup":88}],678:[function(require,module,exports){
+'use strict';
+
+var Geometry = require('../../util/Geometry'),
+    BendpointUtil = require('./BendpointUtil');
+
+var MARKER_OK = 'connect-ok',
+    MARKER_NOT_OK = 'connect-not-ok',
+    MARKER_CONNECT_HOVER = 'connect-hover',
+    MARKER_CONNECT_UPDATING = 'djs-updating';
+
+var COMMAND_BENDPOINT_UPDATE = 'connection.updateWaypoints',
+    COMMAND_RECONNECT_START = 'connection.reconnectStart',
+    COMMAND_RECONNECT_END = 'connection.reconnectEnd';
+
+var round = Math.round;
+
+var svgClasses = require('tiny-svg/lib/classes'),
+    svgRemove = require('tiny-svg/lib/remove');
+
+var translate = require('../../util/SvgTransformUtil').translate;
+
+
+/**
+ * A component that implements moving of bendpoints
+ */
+function BendpointMove(injector, eventBus, canvas, dragging, graphicsFactory, rules, modeling) {
+
+  // optional connection docking integration
+  var connectionDocking = injector.get('connectionDocking', false);
+
+
+  // API
+
+  this.start = function(event, connection, bendpointIndex, insert) {
+
+    var type,
+        context,
+        waypoints = connection.waypoints,
+        gfx = canvas.getGraphics(connection);
+
+    if (!insert && bendpointIndex === 0) {
+      type = COMMAND_RECONNECT_START;
+    } else
+    if (!insert && bendpointIndex === waypoints.length - 1) {
+      type = COMMAND_RECONNECT_END;
+    } else {
+      type = COMMAND_BENDPOINT_UPDATE;
+    }
+
+    context = {
+      connection: connection,
+      bendpointIndex: bendpointIndex,
+      insert: insert,
+      type: type
+    };
+
+    dragging.init(event, 'bendpoint.move', {
+      data: {
+        connection: connection,
+        connectionGfx: gfx,
+        context: context
+      }
+    });
+  };
+
+
+  // DRAGGING IMPLEMENTATION
+
+
+  function redrawConnection(data) {
+    graphicsFactory.update('connection', data.connection, data.connectionGfx);
+  }
+
+  function filterRedundantWaypoints(waypoints) {
+
+    // alter copy of waypoints, not original
+    waypoints = waypoints.slice();
+
+    var idx = 0,
+        point,
+        previousPoint,
+        nextPoint;
+
+    while (waypoints[idx]) {
+      point = waypoints[idx];
+      previousPoint = waypoints[idx - 1];
+      nextPoint = waypoints[idx + 1];
+
+      if (Geometry.pointDistance(point, nextPoint) === 0 ||
+          Geometry.pointsOnLine(previousPoint, nextPoint, point)) {
+
+        // remove point, if overlapping with {nextPoint}
+        // or on line with {previousPoint} -> {point} -> {nextPoint}
+        waypoints.splice(idx, 1);
+      } else {
+        idx++;
+      }
+    }
+
+    return waypoints;
+  }
+
+  eventBus.on('bendpoint.move.start', function(e) {
+
+    var context = e.context,
+        connection = context.connection,
+        originalWaypoints = connection.waypoints,
+        waypoints = originalWaypoints.slice(),
+        insert = context.insert,
+        idx = context.bendpointIndex;
+
+    context.originalWaypoints = originalWaypoints;
+
+    if (insert) {
+      // insert placeholder for bendpoint to-be-added
+      waypoints.splice(idx, 0, null);
+    }
+
+    connection.waypoints = waypoints;
+
+    // add dragger gfx
+    context.draggerGfx = BendpointUtil.addBendpoint(canvas.getLayer('overlays'));
+    svgClasses(context.draggerGfx).add('djs-dragging');
+
+    canvas.addMarker(connection, MARKER_CONNECT_UPDATING);
+  });
+
+  eventBus.on('bendpoint.move.hover', function(e) {
+
+    e.context.hover = e.hover;
+    canvas.addMarker(e.hover, MARKER_CONNECT_HOVER);
+  });
+
+  eventBus.on([
+    'bendpoint.move.out',
+    'bendpoint.move.cleanup'
+  ], function(e) {
+
+    // remove connect marker
+    // if it was added
+    var hover = e.context.hover;
+
+    if (hover) {
+      canvas.removeMarker(hover, MARKER_CONNECT_HOVER);
+      canvas.removeMarker(hover, e.context.target ? MARKER_OK : MARKER_NOT_OK);
+    }
+  });
+
+  eventBus.on('bendpoint.move.move', function(e) {
+
+    var context = e.context,
+        moveType = context.type,
+        connection = e.connection,
+        source, target;
+
+    connection.waypoints[context.bendpointIndex] = { x: e.x, y: e.y };
+
+    if (connectionDocking) {
+
+      if (context.hover) {
+        if (moveType === COMMAND_RECONNECT_START) {
+          source = context.hover;
+        }
+
+        if (moveType === COMMAND_RECONNECT_END) {
+          target = context.hover;
+        }
+      }
+
+      connection.waypoints = connectionDocking.getCroppedWaypoints(connection, source, target);
+    }
+
+    // asks whether reconnect / bendpoint move / bendpoint add
+    // is allowed at the given position
+    var allowed = context.allowed = rules.allowed(context.type, context);
+
+    if (allowed) {
+
+      if (context.hover) {
+        canvas.removeMarker(context.hover, MARKER_NOT_OK);
+        canvas.addMarker(context.hover, MARKER_OK);
+
+        context.target = context.hover;
+      }
+    } else
+    if (allowed === false) {
+      if (context.hover) {
+        canvas.removeMarker(context.hover, MARKER_OK);
+        canvas.addMarker(context.hover, MARKER_NOT_OK);
+
+        context.target = null;
+      }
+    }
+
+    // add dragger gfx
+    translate(context.draggerGfx, e.x, e.y);
+
+    redrawConnection(e);
+  });
+
+  eventBus.on([
+    'bendpoint.move.end',
+    'bendpoint.move.cancel'
+  ], function(e) {
+
+    var context = e.context,
+        hover = context.hover,
+        connection = context.connection;
+
+    // remove dragger gfx
+    svgRemove(context.draggerGfx);
+    context.newWaypoints = connection.waypoints.slice();
+    connection.waypoints = context.originalWaypoints;
+    canvas.removeMarker(connection, MARKER_CONNECT_UPDATING);
+
+    if (hover) {
+      canvas.removeMarker(hover, MARKER_OK);
+      canvas.removeMarker(hover, MARKER_NOT_OK);
+    }
+  });
+
+  eventBus.on('bendpoint.move.end', function(e) {
+
+    var context = e.context,
+        waypoints = context.newWaypoints,
+        bendpointIndex = context.bendpointIndex,
+        bendpoint = waypoints[bendpointIndex],
+        allowed = context.allowed,
+        hints;
+
+    // ensure we have actual pixel values bendpoint
+    // coordinates (important when zoom level was > 1 during move)
+    bendpoint.x = round(bendpoint.x);
+    bendpoint.y = round(bendpoint.y);
+
+    if (allowed && context.type === COMMAND_RECONNECT_START) {
+      modeling.reconnectStart(context.connection, context.target, bendpoint);
+    } else
+    if (allowed && context.type === COMMAND_RECONNECT_END) {
+      modeling.reconnectEnd(context.connection, context.target, bendpoint);
+    } else
+    if (allowed !== false && context.type === COMMAND_BENDPOINT_UPDATE) {
+
+      // pass hints on the actual moved bendpoint
+      // this is useful for connection and label layouting
+      hints = {
+        bendpointMove: {
+          insert: e.context.insert,
+          bendpointIndex: bendpointIndex
+        }
+      };
+
+      modeling.updateWaypoints(context.connection, filterRedundantWaypoints(waypoints), hints);
+    } else {
+      redrawConnection(e);
+
+      return false;
+    }
+  });
+
+  eventBus.on('bendpoint.move.cancel', function(e) {
+    redrawConnection(e);
+  });
+}
+
+BendpointMove.$inject = [ 'injector', 'eventBus', 'canvas', 'dragging', 'graphicsFactory', 'rules', 'modeling' ];
+
+module.exports = BendpointMove;
+
+},{"../../util/Geometry":779,"../../util/SvgTransformUtil":790,"./BendpointUtil":680,"tiny-svg/lib/classes":1070,"tiny-svg/lib/remove":1075}],679:[function(require,module,exports){
+'use strict';
+
+var assign = require('lodash/object/assign'),
+    forEach = require('lodash/collection/forEach'),
+    isArray = require('lodash/lang/isArray');
+
+var abs= Math.abs,
+    round = Math.round;
+
+var TOLERANCE = 10;
+
+
+function BendpointSnapping(eventBus) {
+
+  function snapTo(values, value) {
+
+    if (isArray(values)) {
+      var i = values.length;
+
+      while (i--) if (abs(values[i] - value) <= TOLERANCE) {
+        return values[i];
+      }
+    } else {
+      values = +values;
+      var rem = value % values;
+
+      if (rem < TOLERANCE) {
+        return value - rem;
+      }
+
+      if (rem > values - TOLERANCE) {
+        return value - rem + values;
+      }
+    }
+
+    return value;
+  }
+
+  function mid(element) {
+    if (element.width) {
+      return {
+        x: round(element.width / 2 + element.x),
+        y: round(element.height / 2 + element.y)
+      };
+    }
+  }
+
+  ////////// connection segment snapping //////////////////////////////////////
+
+  function getConnectionSegmentSnaps(context) {
+
+    var snapPoints = context.snapPoints,
+        connection = context.connection,
+        waypoints = connection.waypoints,
+        segmentStart = context.segmentStart,
+        segmentStartIndex = context.segmentStartIndex,
+        segmentEnd = context.segmentEnd,
+        segmentEndIndex = context.segmentEndIndex,
+        axis = context.axis;
+
+    if (snapPoints) {
+      return snapPoints;
+    }
+
+    var referenceWaypoints = [
+      waypoints[segmentStartIndex - 1],
+      segmentStart,
+      segmentEnd,
+      waypoints[segmentEndIndex + 1]
+    ];
+
+    if (segmentStartIndex < 2) {
+      referenceWaypoints.unshift(mid(connection.source));
+    }
+
+    if (segmentEndIndex > waypoints.length - 3) {
+      referenceWaypoints.unshift(mid(connection.target));
+    }
+
+    context.snapPoints = snapPoints = { horizontal: [] , vertical: [] };
+
+    forEach(referenceWaypoints, function(p) {
+      // we snap on existing bendpoints only,
+      // not placeholders that are inserted during add
+      if (p) {
+        p = p.original || p;
+
+        if (axis === 'y') {
+          snapPoints.horizontal.push(p.y);
+        }
+
+        if (axis === 'x') {
+          snapPoints.vertical.push(p.x);
+        }
+      }
+    });
+
+    return snapPoints;
+  }
+
+  eventBus.on('connectionSegment.move.move', 1500, function(event) {
+    var context = event.context,
+        snapPoints = getConnectionSegmentSnaps(context),
+        x = event.x,
+        y = event.y,
+        sx, sy;
+
+    if (!snapPoints) {
+      return;
+    }
+
+    // snap
+    sx = snapTo(snapPoints.vertical, x);
+    sy = snapTo(snapPoints.horizontal, y);
+
+
+    // correction x/y
+    var cx = (x - sx),
+        cy = (y - sy);
+
+    // update delta
+    assign(event, {
+      dx: event.dx - cx,
+      dy: event.dy - cy,
+      x: sx,
+      y: sy
+    });
+  });
+
+
+  ///////// bendpoint snapping /////////////////////////////
+
+  function getBendpointSnaps(context) {
+
+    var snapPoints = context.snapPoints,
+        waypoints = context.connection.waypoints,
+        bendpointIndex = context.bendpointIndex;
+
+    if (snapPoints) {
+      return snapPoints;
+    }
+
+    var referenceWaypoints = [ waypoints[bendpointIndex - 1], waypoints[bendpointIndex + 1] ];
+
+    context.snapPoints = snapPoints = { horizontal: [] , vertical: [] };
+
+    forEach(referenceWaypoints, function(p) {
+      // we snap on existing bendpoints only,
+      // not placeholders that are inserted during add
+      if (p) {
+        p = p.original || p;
+
+        snapPoints.horizontal.push(p.y);
+        snapPoints.vertical.push(p.x);
+      }
+    });
+
+    return snapPoints;
+  }
+
+
+  eventBus.on('bendpoint.move.move', 1500, function(event) {
+
+    var context = event.context,
+        snapPoints = getBendpointSnaps(context),
+        target = context.target,
+        targetMid = target && mid(target),
+        x = event.x,
+        y = event.y,
+        sx, sy;
+
+    if (!snapPoints) {
+      return;
+    }
+
+    // snap
+    sx = snapTo(targetMid ? snapPoints.vertical.concat([ targetMid.x ]) : snapPoints.vertical, x);
+    sy = snapTo(targetMid ? snapPoints.horizontal.concat([ targetMid.y ]) : snapPoints.horizontal, y);
+
+
+    // correction x/y
+    var cx = (x - sx),
+        cy = (y - sy);
+
+    // update delta
+    assign(event, {
+      dx: event.dx - cx,
+      dy: event.dy - cy,
+      x: event.x - cx,
+      y: event.y - cy
+    });
+  });
+}
+
+
+BendpointSnapping.$inject = [ 'eventBus' ];
+
+module.exports = BendpointSnapping;
+
+},{"lodash/collection/forEach":832,"lodash/lang/isArray":955,"lodash/object/assign":964}],680:[function(require,module,exports){
+'use strict';
+
+var Events = require('../../util/Event'),
+    Geometry = require('../../util/Geometry');
+
+var BENDPOINT_CLS = module.exports.BENDPOINT_CLS = 'djs-bendpoint';
+var SEGMENT_DRAGGER_CLS = module.exports.SEGMENT_DRAGGER_CLS = 'djs-segment-dragger';
+
+var svgAppend = require('tiny-svg/lib/append'),
+    svgAttr = require('tiny-svg/lib/attr'),
+    svgClasses = require('tiny-svg/lib/classes'),
+    svgCreate = require('tiny-svg/lib/create');
+
+var rotate = require('../../util/SvgTransformUtil').rotate,
+    translate = require('../../util/SvgTransformUtil').translate;
+
+
+module.exports.toCanvasCoordinates = function(canvas, event) {
+
+  var position = Events.toPoint(event),
+      clientRect = canvas._container.getBoundingClientRect(),
+      offset;
+
+  // canvas relative position
+
+  offset = {
+    x: clientRect.left,
+    y: clientRect.top
+  };
+
+  // update actual event payload with canvas relative measures
+
+  var viewbox = canvas.viewbox();
+
+  return {
+    x: viewbox.x + (position.x - offset.x) / viewbox.scale,
+    y: viewbox.y + (position.y - offset.y) / viewbox.scale
+  };
+};
+
+module.exports.addBendpoint = function(parentGfx, cls) {
+  var groupGfx = svgCreate('g');
+  svgClasses(groupGfx).add(BENDPOINT_CLS);
+
+  svgAppend(parentGfx, groupGfx);
+
+  var visual = svgCreate('circle');
+  svgAttr(visual, {
+    cx: 0,
+    cy: 0,
+    r: 4
+  });
+  svgClasses(visual).add('djs-visual');
+
+  svgAppend(groupGfx, visual);
+
+  var hit = svgCreate('circle');
+  svgAttr(hit, {
+    cx: 0,
+    cy: 0,
+    r: 10
+  });
+  svgClasses(hit).add('djs-hit');
+
+  svgAppend(groupGfx, hit);
+
+  if (cls) {
+    svgClasses(groupGfx).add(cls);
+  }
+
+  return groupGfx;
+};
+
+function createParallelDragger(parentGfx, position, alignment) {
+  var draggerGfx = svgCreate('g');
+
+  svgAppend(parentGfx, draggerGfx);
+
+  var width = 14,
+      height = 3,
+      padding = 6,
+      hitWidth = width + padding,
+      hitHeight = height + padding;
+
+  var visual = svgCreate('rect');
+  svgAttr(visual, {
+    x: -width / 2,
+    y: -height / 2,
+    width: width,
+    height: height
+  });
+  svgClasses(visual).add('djs-visual');
+
+  svgAppend(draggerGfx, visual);
+
+  var hit = svgCreate('rect');
+  svgAttr(hit, {
+    x: -hitWidth / 2,
+    y: -hitHeight / 2,
+    width: hitWidth,
+    height: hitHeight
+  });
+  svgClasses(hit).add('djs-hit');
+
+  svgAppend(draggerGfx, hit);
+
+  rotate(draggerGfx, alignment === 'h' ? 90 : 0, 0, 0);
+
+  return draggerGfx;
+}
+
+
+module.exports.addSegmentDragger = function(parentGfx, segmentStart, segmentEnd) {
+
+  var groupGfx = svgCreate('g'),
+      mid = Geometry.getMidPoint(segmentStart, segmentEnd),
+      alignment = Geometry.pointsAligned(segmentStart, segmentEnd);
+
+  svgAppend(parentGfx, groupGfx);
+
+  createParallelDragger(groupGfx, mid, alignment);
+
+  svgClasses(groupGfx).add(SEGMENT_DRAGGER_CLS);
+  svgClasses(groupGfx).add(alignment === 'h' ? 'vertical' : 'horizontal');
+
+  translate(groupGfx, mid.x, mid.y);
+
+  return groupGfx;
+};
+
+},{"../../util/Event":778,"../../util/Geometry":779,"../../util/SvgTransformUtil":790,"tiny-svg/lib/append":1067,"tiny-svg/lib/attr":1069,"tiny-svg/lib/classes":1070,"tiny-svg/lib/create":1073}],681:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach');
+
+var domEvent = require('min-dom/lib/event'),
+    domQuery = require('min-dom/lib/query'),
+    BendpointUtil = require('./BendpointUtil');
+
+var pointsAligned = require('../../util/Geometry').pointsAligned,
+    getMidPoint = require('../../util/Geometry').getMidPoint;
+
+var BENDPOINT_CLS = BendpointUtil.BENDPOINT_CLS,
+    SEGMENT_DRAGGER_CLS = BendpointUtil.SEGMENT_DRAGGER_CLS;
+
+var getApproxIntersection = require('../../util/LineIntersection').getApproxIntersection;
+
+var svgAppend = require('tiny-svg/lib/append'),
+    svgAttr = require('tiny-svg/lib/attr'),
+    svgClasses = require('tiny-svg/lib/classes'),
+    svgCreate = require('tiny-svg/lib/create'),
+    svgRemove = require('tiny-svg/lib/remove');
+
+var translate = require('../../util/SvgTransformUtil').translate;
+
+
+/**
+ * A service that adds editable bendpoints to connections.
+ */
+function Bendpoints(eventBus, canvas, interactionEvents,
+                    bendpointMove, connectionSegmentMove) {
+
+  function getConnectionIntersection(waypoints, event) {
+    var localPosition = BendpointUtil.toCanvasCoordinates(canvas, event),
+        intersection = getApproxIntersection(waypoints, localPosition);
+
+    return intersection;
+  }
+
+  function isIntersectionMiddle(intersection, waypoints, treshold) {
+    var idx = intersection.index,
+        p = intersection.point,
+        p0, p1, mid, aligned, xDelta, yDelta;
+
+    if (idx <= 0 || intersection.bendpoint) {
+      return false;
+    }
+
+    p0 = waypoints[idx - 1];
+    p1 = waypoints[idx];
+    mid = getMidPoint(p0, p1),
+    aligned = pointsAligned(p0, p1);
+    xDelta = Math.abs(p.x - mid.x);
+    yDelta = Math.abs(p.y - mid.y);
+
+    return aligned && xDelta <= treshold && yDelta <= treshold;
+  }
+
+  function activateBendpointMove(event, connection) {
+    var waypoints = connection.waypoints,
+        intersection = getConnectionIntersection(waypoints, event);
+
+    if (!intersection) {
+      return;
+    }
+
+    if (isIntersectionMiddle(intersection, waypoints, 10)) {
+      connectionSegmentMove.start(event, connection, intersection.index);
+    } else {
+      bendpointMove.start(event, connection, intersection.index, !intersection.bendpoint);
+    }
+  }
+
+  function bindInteractionEvents(node, eventName, element) {
+
+    domEvent.bind(node, eventName, function(event) {
+      interactionEvents.triggerMouseEvent(eventName, event, element);
+      event.stopPropagation();
+    });
+  }
+
+  function getBendpointsContainer(element, create) {
+
+    var layer = canvas.getLayer('overlays'),
+        gfx = domQuery('.djs-bendpoints[data-element-id=' + element.id + ']', layer);
+
+    if (!gfx && create) {
+      gfx = svgCreate('g');
+      svgAttr(gfx, { 'data-element-id': element.id });
+      svgClasses(gfx).add('djs-bendpoints');
+
+      svgAppend(layer, gfx);
+
+      bindInteractionEvents(gfx, 'mousedown', element);
+      bindInteractionEvents(gfx, 'click', element);
+      bindInteractionEvents(gfx, 'dblclick', element);
+    }
+
+    return gfx;
+  }
+
+  function createBendpoints(gfx, connection) {
+    connection.waypoints.forEach(function(p, idx) {
+      var bendpoint = BendpointUtil.addBendpoint(gfx);
+
+      svgAppend(gfx, bendpoint);
+
+      translate(bendpoint, p.x, p.y);
+    });
+
+    // add floating bendpoint
+    BendpointUtil.addBendpoint(gfx, 'floating');
+  }
+
+  function createSegmentDraggers(gfx, connection) {
+
+    var waypoints = connection.waypoints;
+
+    var segmentStart,
+        segmentEnd;
+
+    for (var i = 1; i < waypoints.length; i++) {
+
+      segmentStart = waypoints[i - 1];
+      segmentEnd = waypoints[i];
+
+      if (pointsAligned(segmentStart, segmentEnd)) {
+        BendpointUtil.addSegmentDragger(gfx, segmentStart, segmentEnd);
+      }
+    }
+  }
+
+  function clearBendpoints(gfx) {
+    forEach(domQuery.all('.' + BENDPOINT_CLS, gfx), function(node) {
+      svgRemove(node);
+    });
+  }
+
+  function clearSegmentDraggers(gfx) {
+    forEach(domQuery.all('.' + SEGMENT_DRAGGER_CLS, gfx), function(node) {
+      svgRemove(node);
+    });
+  }
+
+  function addHandles(connection) {
+
+    var gfx = getBendpointsContainer(connection);
+
+    if (!gfx) {
+      gfx = getBendpointsContainer(connection, true);
+
+      createBendpoints(gfx, connection);
+      createSegmentDraggers(gfx, connection);
+    }
+
+    return gfx;
+  }
+
+  function updateHandles(connection) {
+
+    var gfx = getBendpointsContainer(connection);
+
+    if (gfx) {
+      clearSegmentDraggers(gfx);
+      clearBendpoints(gfx);
+      createSegmentDraggers(gfx, connection);
+      createBendpoints(gfx, connection);
+    }
+  }
+
+  eventBus.on('connection.changed', function(event) {
+    updateHandles(event.element);
+  });
+
+  eventBus.on('connection.remove', function(event) {
+    var gfx = getBendpointsContainer(event.element);
+
+    if (gfx) {
+      svgRemove(gfx);
+    }
+  });
+
+  eventBus.on('element.marker.update', function(event) {
+
+    var element = event.element,
+        bendpointsGfx;
+
+    if (!element.waypoints) {
+      return;
+    }
+
+    bendpointsGfx = addHandles(element);
+
+    if (event.add) {
+      svgClasses(bendpointsGfx).add(event.marker);
+    } else {
+      svgClasses(bendpointsGfx).remove(event.marker);
+    }
+  });
+
+  eventBus.on('element.mousemove', function(event) {
+
+    var element = event.element,
+        waypoints = element.waypoints,
+        bendpointsGfx,
+        floating,
+        intersection;
+
+    if (waypoints) {
+      bendpointsGfx = getBendpointsContainer(element, true);
+      floating = domQuery('.floating', bendpointsGfx);
+
+      if (!floating) {
+        return;
+      }
+
+      intersection = getConnectionIntersection(waypoints, event.originalEvent);
+
+      if (intersection) {
+        translate(floating, intersection.point.x, intersection.point.y);
+      }
+    }
+  });
+
+  eventBus.on('element.mousedown', function(event) {
+
+    var originalEvent = event.originalEvent,
+        element = event.element,
+        waypoints = element.waypoints;
+
+    if (!waypoints) {
+      return;
+    }
+
+    activateBendpointMove(originalEvent, element, waypoints);
+  });
+
+  eventBus.on('selection.changed', function(event) {
+    var newSelection = event.newSelection,
+        primary = newSelection[0];
+
+    if (primary && primary.waypoints) {
+      addHandles(primary);
+    }
+  });
+
+  eventBus.on('element.hover', function(event) {
+    var element = event.element;
+
+    if (element.waypoints) {
+      addHandles(element);
+      interactionEvents.registerEvent(event.gfx, 'mousemove', 'element.mousemove');
+    }
+  });
+
+  eventBus.on('element.out', function(event) {
+    interactionEvents.unregisterEvent(event.gfx, 'mousemove', 'element.mousemove');
+  });
+
+  // API
+
+  this.addHandles = addHandles;
+  this.updateHandles = updateHandles;
+  this.getBendpointsContainer = getBendpointsContainer;
+}
+
+Bendpoints.$inject = [
+  'eventBus', 'canvas', 'interactionEvents',
+  'bendpointMove', 'connectionSegmentMove'
+];
+
+module.exports = Bendpoints;
+
+},{"../../util/Geometry":779,"../../util/LineIntersection":783,"../../util/SvgTransformUtil":790,"./BendpointUtil":680,"lodash/collection/forEach":832,"min-dom/lib/event":982,"min-dom/lib/query":984,"tiny-svg/lib/append":1067,"tiny-svg/lib/attr":1069,"tiny-svg/lib/classes":1070,"tiny-svg/lib/create":1073,"tiny-svg/lib/remove":1075}],682:[function(require,module,exports){
+'use strict';
+
+var Geometry = require('../../util/Geometry'),
+    BendpointUtil = require('./BendpointUtil'),
+    LayoutUtil = require('../../layout/LayoutUtil');
+
+var MARKER_CONNECT_HOVER = 'connect-hover',
+    MARKER_CONNECT_UPDATING = 'djs-updating';
+
+var svgClasses = require('tiny-svg/lib/classes'),
+    svgRemove = require('tiny-svg/lib/remove');
+
+var translate = require('../../util/SvgTransformUtil').translate;
+
+
+function axisAdd(point, axis, delta) {
+  return axisSet(point, axis, point[axis] + delta);
+}
+
+function axisSet(point, axis, value) {
+  return {
+    x: (axis === 'x' ? value : point.x),
+    y: (axis === 'y' ? value : point.y)
+  };
+}
+
+function axisFenced(position, segmentStart, segmentEnd, axis) {
+
+  var maxValue = Math.max(segmentStart[axis], segmentEnd[axis]),
+      minValue = Math.min(segmentStart[axis], segmentEnd[axis]);
+
+  var padding = 20;
+
+  var fencedValue = Math.min(Math.max(minValue + padding, position[axis]), maxValue - padding);
+
+  return axisSet(segmentStart, axis, fencedValue);
+}
+
+function flipAxis(axis) {
+  return axis === 'x' ? 'y' : 'x';
+}
+
+/**
+ * Get the docking point on the given element.
+ *
+ * Compute a reasonable docking, if non exists.
+ *
+ * @param  {Point} point
+ * @param  {djs.model.Shape} referenceElement
+ * @param  {String} moveAxis (x|y)
+ *
+ * @return {Point}
+ */
+function getDocking(point, referenceElement, moveAxis) {
+
+  var referenceMid,
+      inverseAxis;
+
+  if (point.original) {
+    return point.original;
+  } else {
+    referenceMid = LayoutUtil.getMid(referenceElement);
+    inverseAxis = flipAxis(moveAxis);
+
+    return axisSet(point, inverseAxis, referenceMid[inverseAxis]);
+  }
+}
+
+/**
+ * A component that implements moving of bendpoints
+ */
+function ConnectionSegmentMove(injector, eventBus, canvas, dragging, graphicsFactory, rules, modeling) {
+
+  // optional connection docking integration
+  var connectionDocking = injector.get('connectionDocking', false);
+
+
+  // API
+
+  this.start = function(event, connection, idx) {
+
+    var context,
+        gfx = canvas.getGraphics(connection),
+        segmentStartIndex = idx - 1,
+        segmentEndIndex = idx,
+        waypoints = connection.waypoints,
+        segmentStart = waypoints[segmentStartIndex],
+        segmentEnd = waypoints[segmentEndIndex],
+        direction,
+        axis;
+
+    direction = Geometry.pointsAligned(segmentStart, segmentEnd);
+
+    // do not move diagonal connection
+    if (!direction) {
+      return;
+    }
+
+    // the axis where we are going to move things
+    axis = direction === 'v' ? 'y' : 'x';
+
+    if (segmentStartIndex === 0) {
+      segmentStart = getDocking(segmentStart, connection.source, axis);
+    }
+
+    if (segmentEndIndex === waypoints.length - 1) {
+      segmentEnd = getDocking(segmentEnd, connection.target, axis);
+    }
+
+    context = {
+      connection: connection,
+      segmentStartIndex: segmentStartIndex,
+      segmentEndIndex: segmentEndIndex,
+      segmentStart: segmentStart,
+      segmentEnd: segmentEnd,
+      axis: axis
+    };
+
+    dragging.init(event, {
+      x: (segmentStart.x + segmentEnd.x)/2,
+      y: (segmentStart.y + segmentEnd.y)/2
+    }, 'connectionSegment.move', {
+      cursor: axis === 'x' ? 'resize-ew' : 'resize-ns',
+      data: {
+        connection: connection,
+        connectionGfx: gfx,
+        context: context
+      }
+    });
+  };
+
+  /**
+   * Crop connection if connection cropping is provided.
+   *
+   * @param {Connection} connection
+   * @param {Array<Point>} newWaypoints
+   *
+   * @return {Array<Point>} cropped connection waypoints
+   */
+  function cropConnection(connection, newWaypoints) {
+
+    // crop connection, if docking service is provided only
+    if (!connectionDocking) {
+      return newWaypoints;
+    }
+
+    var oldWaypoints = connection.waypoints,
+        croppedWaypoints;
+
+    // temporary set new waypoints
+    connection.waypoints = newWaypoints;
+
+    croppedWaypoints = connectionDocking.getCroppedWaypoints(connection);
+
+    // restore old waypoints
+    connection.waypoints = oldWaypoints;
+
+    return croppedWaypoints;
+  }
+
+  // DRAGGING IMPLEMENTATION
+
+  function redrawConnection(data) {
+    graphicsFactory.update('connection', data.connection, data.connectionGfx);
+  }
+
+  function updateDragger(context, segmentOffset, event) {
+
+    var newWaypoints = context.newWaypoints,
+        segmentStartIndex = context.segmentStartIndex + segmentOffset,
+        segmentStart = newWaypoints[segmentStartIndex],
+        segmentEndIndex = context.segmentEndIndex + segmentOffset,
+        segmentEnd = newWaypoints[segmentEndIndex],
+        axis = flipAxis(context.axis);
+
+    // make sure the dragger does not move
+    // outside the connection
+    var draggerPosition = axisFenced(event, segmentStart, segmentEnd, axis);
+
+    // update dragger
+    translate(context.draggerGfx, draggerPosition.x, draggerPosition.y);
+  }
+
+  /**
+   * Filter waypoints for redundant ones (i.e. on the same axis).
+   * Returns the filtered waypoints and the offset related to the segment move.
+   *
+   * @param {Array<Point>} waypoints
+   * @param {Integer} segmentStartIndex of moved segment start
+   *
+   * @return {Object} { filteredWaypoints, segmentOffset }
+   */
+  function filterRedundantWaypoints(waypoints, segmentStartIndex) {
+
+    var segmentOffset = 0;
+
+    var filteredWaypoints = waypoints.filter(function(r, idx) {
+      if (Geometry.pointsOnLine(waypoints[idx - 1], waypoints[idx + 1], r)) {
+
+        // remove point and increment offset
+        segmentOffset = idx <= segmentStartIndex ? segmentOffset - 1 : segmentOffset;
+        return false;
+      }
+
+      // dont remove point
+      return true;
+    });
+
+    return {
+      waypoints: filteredWaypoints,
+      segmentOffset: segmentOffset
+    };
+  }
+
+  eventBus.on('connectionSegment.move.start', function(e) {
+
+    var context = e.context,
+        connection = e.connection,
+        layer = canvas.getLayer('overlays');
+
+    context.originalWaypoints = connection.waypoints.slice();
+
+    // add dragger gfx
+    context.draggerGfx = BendpointUtil.addSegmentDragger(layer, context.segmentStart, context.segmentEnd);
+    svgClasses(context.draggerGfx).add('djs-dragging');
+
+    canvas.addMarker(connection, MARKER_CONNECT_UPDATING);
+  });
+
+  eventBus.on('connectionSegment.move.move', function(e) {
+
+    var context = e.context,
+        connection = context.connection,
+        segmentStartIndex = context.segmentStartIndex,
+        segmentEndIndex = context.segmentEndIndex,
+        segmentStart = context.segmentStart,
+        segmentEnd = context.segmentEnd,
+        axis = context.axis;
+
+    var newWaypoints = context.originalWaypoints.slice(),
+        newSegmentStart = axisAdd(segmentStart, axis, e['d' + axis]),
+        newSegmentEnd = axisAdd(segmentEnd, axis, e['d' + axis]);
+
+    // original waypoint count and added / removed
+    // from start waypoint delta. We use the later
+    // to retrieve the updated segmentStartIndex / segmentEndIndex
+    var waypointCount = newWaypoints.length,
+        segmentOffset = 0;
+
+    // move segment start / end by axis delta
+    newWaypoints[segmentStartIndex] = newSegmentStart;
+    newWaypoints[segmentEndIndex] = newSegmentEnd;
+
+    var sourceToSegmentOrientation,
+        targetToSegmentOrientation;
+
+    // handle first segment
+    if (segmentStartIndex < 2) {
+      sourceToSegmentOrientation = LayoutUtil.getOrientation(connection.source, newSegmentStart);
+
+      // first bendpoint, remove first segment if intersecting
+      if (segmentStartIndex === 1) {
+
+        if (sourceToSegmentOrientation === 'intersect') {
+          newWaypoints.shift();
+          newWaypoints[0] = newSegmentStart;
+          segmentOffset--;
+        }
+      }
+
+      // docking point, add segment if not intersecting anymore
+      else {
+        if (sourceToSegmentOrientation !== 'intersect') {
+          newWaypoints.unshift(segmentStart);
+          segmentOffset++;
+        }
+      }
+    }
+
+    // handle last segment
+    if (segmentEndIndex > waypointCount - 3) {
+      targetToSegmentOrientation = LayoutUtil.getOrientation(connection.target, newSegmentEnd);
+
+      // last bendpoint, remove last segment if intersecting
+      if (segmentEndIndex === waypointCount - 2) {
+
+        if (targetToSegmentOrientation === 'intersect') {
+          newWaypoints.pop();
+          newWaypoints[newWaypoints.length - 1] = newSegmentEnd;
+        }
+      }
+
+      // last bendpoint, remove last segment if intersecting
+      else {
+        if (targetToSegmentOrientation !== 'intersect') {
+          newWaypoints.push(segmentEnd);
+        }
+      }
+    }
+
+    // update connection waypoints
+    context.newWaypoints = connection.waypoints = cropConnection(connection, newWaypoints);
+
+    // update dragger position
+    updateDragger(context, segmentOffset, e);
+
+    // save segmentOffset in context
+    context.newSegmentStartIndex = segmentStartIndex + segmentOffset;
+
+    // redraw connection
+    redrawConnection(e);
+  });
+
+  eventBus.on('connectionSegment.move.hover', function(e) {
+
+    e.context.hover = e.hover;
+    canvas.addMarker(e.hover, MARKER_CONNECT_HOVER);
+  });
+
+  eventBus.on([
+    'connectionSegment.move.out',
+    'connectionSegment.move.cleanup'
+  ], function(e) {
+
+    // remove connect marker
+    // if it was added
+    var hover = e.context.hover;
+
+    if (hover) {
+      canvas.removeMarker(hover, MARKER_CONNECT_HOVER);
+    }
+  });
+
+  eventBus.on('connectionSegment.move.cleanup', function(e) {
+
+    var context = e.context,
+        connection = context.connection;
+
+    // remove dragger gfx
+    if (context.draggerGfx) {
+      svgRemove(context.draggerGfx);
+    }
+
+    canvas.removeMarker(connection, MARKER_CONNECT_UPDATING);
+  });
+
+  eventBus.on([
+    'connectionSegment.move.cancel',
+    'connectionSegment.move.end'
+  ], function(e) {
+    var context = e.context,
+        connection = context.connection;
+
+    connection.waypoints = context.originalWaypoints;
+
+    redrawConnection(e);
+  });
+
+  eventBus.on('connectionSegment.move.end', function(e) {
+
+    var context = e.context,
+        connection = context.connection,
+        newWaypoints = context.newWaypoints,
+        newSegmentStartIndex = context.newSegmentStartIndex;
+
+    // ensure we have actual pixel values bendpoint
+    // coordinates (important when zoom level was > 1 during move)
+    newWaypoints = newWaypoints.map(function(p) {
+      return {
+        original: p.original,
+        x: Math.round(p.x),
+        y: Math.round(p.y)
+      };
+    });
+
+    // apply filter redunant waypoints
+    var filtered = filterRedundantWaypoints(newWaypoints, newSegmentStartIndex);
+
+    // get filtered waypoints
+    var filteredWaypoints = filtered.waypoints,
+        croppedWaypoints = cropConnection(connection, filteredWaypoints),
+        segmentOffset = filtered.segmentOffset;
+
+    var hints = {
+      segmentMove: {
+        segmentStartIndex: context.segmentStartIndex,
+        newSegmentStartIndex: newSegmentStartIndex + segmentOffset
+      }
+    };
+
+    modeling.updateWaypoints(connection, croppedWaypoints, hints);
+  });
+}
+
+ConnectionSegmentMove.$inject = [
+  'injector', 'eventBus', 'canvas',
+  'dragging', 'graphicsFactory', 'rules',
+  'modeling'
+];
+
+module.exports = ConnectionSegmentMove;
+
+},{"../../layout/LayoutUtil":764,"../../util/Geometry":779,"../../util/SvgTransformUtil":790,"./BendpointUtil":680,"tiny-svg/lib/classes":1070,"tiny-svg/lib/remove":1075}],683:[function(require,module,exports){
+module.exports = {
+  __depends__: [ require('../dragging'), require('../rules') ],
+  __init__: [ 'bendpoints', 'bendpointSnapping' ],
+  bendpoints: [ 'type', require('./Bendpoints') ],
+  bendpointMove: [ 'type', require('./BendpointMove') ],
+  connectionSegmentMove: [ 'type', require('./ConnectionSegmentMove') ],
+  bendpointSnapping: [ 'type', require('./BendpointSnapping') ]
+};
+
+},{"../dragging":698,"../rules":751,"./BendpointMove":678,"./BendpointSnapping":679,"./Bendpoints":681,"./ConnectionSegmentMove":682}],684:[function(require,module,exports){
+'use strict';
+
+var getElementType = require('../../util/Elements').getType;
+
+/**
+ * Adds change support to the diagram, including
+ *
+ * <ul>
+ *   <li>redrawing shapes and connections on change</li>
+ * </ul>
+ *
+ * @param {EventBus} eventBus
+ * @param {Canvas} canvas
+ * @param {ElementRegistry} elementRegistry
+ * @param {GraphicsFactory} graphicsFactory
+ */
+function ChangeSupport(eventBus, canvas, elementRegistry, graphicsFactory) {
+
+  // redraw shapes / connections on change
+
+  eventBus.on('element.changed', function(event) {
+
+    var element = event.element;
+
+    // element might have been deleted and replaced by new element with same ID
+    // thus check for parent of element except for root element
+    if (element.parent || element === canvas.getRootElement()) {
+      event.gfx = elementRegistry.getGraphics(element);
+    }
+
+    // shape + gfx may have been deleted
+    if (!event.gfx) {
+      return;
+    }
+
+    eventBus.fire(getElementType(element) + '.changed', event);
+  });
+
+  eventBus.on('elements.changed', function(event) {
+
+    var elements = event.elements;
+
+    elements.forEach(function(e) {
+      eventBus.fire('element.changed', { element: e });
+    });
+
+    graphicsFactory.updateContainments(elements);
+  });
+
+  eventBus.on('shape.changed', function(event) {
+    graphicsFactory.update('shape', event.element, event.gfx);
+  });
+
+  eventBus.on('connection.changed', function(event) {
+    graphicsFactory.update('connection', event.element, event.gfx);
+  });
+}
+
+ChangeSupport.$inject = [ 'eventBus', 'canvas', 'elementRegistry', 'graphicsFactory' ];
+
+module.exports = ChangeSupport;
+
+},{"../../util/Elements":777}],685:[function(require,module,exports){
+module.exports = {
+  __init__: [ 'changeSupport'],
+  changeSupport: [ 'type', require('./ChangeSupport') ]
+};
+},{"./ChangeSupport":684}],686:[function(require,module,exports){
+'use strict';
+
+/**
+ * A clip board stub
+ */
+function Clipboard() {}
+
+module.exports = Clipboard;
+
+
+Clipboard.prototype.get = function() {
+  return this._data;
+};
+
+Clipboard.prototype.set = function(data) {
+  this._data = data;
+};
+
+Clipboard.prototype.clear = function() {
+  var data = this._data;
+
+  delete this._data;
+
+  return data;
+};
+
+Clipboard.prototype.isEmpty = function() {
+  return !this._data;
+};
+},{}],687:[function(require,module,exports){
+module.exports = {
+  clipboard: [ 'type', require('./Clipboard') ]
+};
+
+},{"./Clipboard":686}],688:[function(require,module,exports){
+'use strict';
+
+var LayoutUtil = require('../../layout/LayoutUtil');
+
+var MARKER_OK = 'connect-ok',
+    MARKER_NOT_OK = 'connect-not-ok';
+
+var svgAppend = require('tiny-svg/lib/append'),
+    svgAttr = require('tiny-svg/lib/attr'),
+    svgCreate = require('tiny-svg/lib/create'),
+    svgRemove = require('tiny-svg/lib/remove');
+
+
+function Connect(eventBus, dragging, modeling, rules, canvas, graphicsFactory) {
+
+  // TODO(nre): separate UI and events
+
+  // rules
+
+  function canConnect(source, target) {
+    return rules.allowed('connection.create', {
+      source: source,
+      target: target
+    });
+  }
+
+
+  // layouting
+
+  function crop(start, end, source, target) {
+
+    var sourcePath = graphicsFactory.getShapePath(source),
+        targetPath = target && graphicsFactory.getShapePath(target),
+        connectionPath = graphicsFactory.getConnectionPath({ waypoints: [ start, end ] });
+
+    start = LayoutUtil.getElementLineIntersection(sourcePath, connectionPath, true) || start;
+    end = (target && LayoutUtil.getElementLineIntersection(targetPath, connectionPath, false)) || end;
+
+    return [ start, end ];
+  }
+
+
+  // event handlers
+
+  eventBus.on('connect.move', function(event) {
+
+    var context = event.context,
+        source = context.source,
+        target = context.target,
+        visual = context.visual,
+        sourcePosition = context.sourcePosition,
+        endPosition,
+        waypoints;
+
+    // update connection visuals during drag
+
+    endPosition = {
+      x: event.x,
+      y: event.y
+    };
+
+    waypoints = crop(sourcePosition, endPosition, source, target);
+
+    svgAttr(visual, { 'points': [ waypoints[0].x, waypoints[0].y, waypoints[1].x, waypoints[1].y ] });
+  });
+
+  eventBus.on('connect.hover', function(event) {
+    var context = event.context,
+        source = context.source,
+        hover = event.hover,
+        canExecute;
+
+    canExecute = context.canExecute = canConnect(source, hover);
+
+    // simply ignore hover
+    if (canExecute === null) {
+      return;
+    }
+
+    context.target = hover;
+
+    canvas.addMarker(hover, canExecute ? MARKER_OK : MARKER_NOT_OK);
+  });
+
+  eventBus.on([ 'connect.out', 'connect.cleanup' ], function(event) {
+    var context = event.context;
+
+    if (context.target) {
+      canvas.removeMarker(context.target, context.canExecute ? MARKER_OK : MARKER_NOT_OK);
+    }
+
+    context.target = null;
+  });
+
+  eventBus.on('connect.cleanup', function(event) {
+    var context = event.context;
+
+    if (context.visual) {
+      svgRemove(context.visual);
+    }
+  });
+
+  eventBus.on('connect.start', function(event) {
+    var context = event.context,
+        visual;
+
+    visual = svgCreate('polyline');
+    svgAttr(visual, {
+      'stroke': '#333',
+      'strokeDasharray': [ 1 ],
+      'strokeWidth': 2,
+      'pointer-events': 'none'
+    });
+
+    svgAppend(canvas.getDefaultLayer(), visual);
+
+    context.visual = visual;
+  });
+
+  eventBus.on('connect.end', function(event) {
+
+    var context = event.context,
+        source = context.source,
+        sourcePosition = context.sourcePosition,
+        target = context.target,
+        targetPosition = {
+          x: event.x,
+          y: event.y
+        },
+        canExecute = context.canExecute || canConnect(source, target);
+
+    if (!canExecute) {
+      return false;
+    }
+
+    var attrs = null,
+        hints = {
+          connectionStart: sourcePosition,
+          connectionEnd: targetPosition
+        };
+
+    if (typeof canExecute === 'object') {
+      attrs = canExecute;
+    }
+
+    modeling.connect(source, target, attrs, hints);
+  });
+
+
+  // API
+
+  /**
+   * Start connect operation.
+   *
+   * @param {DOMEvent} event
+   * @param {djs.model.Base} source
+   * @param {Point} [sourcePosition]
+   * @param {Boolean} [autoActivate=false]
+   */
+  this.start = function(event, source, sourcePosition, autoActivate) {
+
+    if (typeof sourcePosition !== 'object') {
+      autoActivate = sourcePosition;
+      sourcePosition = LayoutUtil.getMid(source);
+    }
+
+    dragging.init(event, 'connect', {
+      autoActivate: autoActivate,
+      data: {
+        shape: source,
+        context: {
+          source: source,
+          sourcePosition: sourcePosition
+        }
+      }
+    });
+  };
+}
+
+Connect.$inject = [ 'eventBus', 'dragging', 'modeling', 'rules', 'canvas', 'graphicsFactory' ];
+
+module.exports = Connect;
+
+},{"../../layout/LayoutUtil":764,"tiny-svg/lib/append":1067,"tiny-svg/lib/attr":1069,"tiny-svg/lib/create":1073,"tiny-svg/lib/remove":1075}],689:[function(require,module,exports){
+module.exports = {
+  __depends__: [
+    require('../selection'),
+    require('../rules'),
+    require('../dragging')
+  ],
+  connect: [ 'type', require('./Connect') ]
+};
+
+},{"../dragging":698,"../rules":751,"../selection":755,"./Connect":688}],690:[function(require,module,exports){
+'use strict';
+
+var isFunction = require('lodash/lang/isFunction'),
+    isArray = require('lodash/lang/isArray'),
+    forEach = require('lodash/collection/forEach'),
+
+    domDelegate = require('min-dom/lib/delegate'),
+    domEvent = require('min-dom/lib/event'),
+    domAttr = require('min-dom/lib/attr'),
+    domQuery = require('min-dom/lib/query'),
+    domClasses = require('min-dom/lib/classes'),
+    domify = require('min-dom/lib/domify');
+
+
+var entrySelector = '.entry';
+
+
+/**
+ * A context pad that displays element specific, contextual actions next
+ * to a diagram element.
+ *
+ * @param {EventBus} eventBus
+ * @param {Overlays} overlays
+ */
+function ContextPad(eventBus, overlays) {
+
+  this._providers = [];
+
+  this._eventBus = eventBus;
+  this._overlays = overlays;
+
+  this._current = null;
+
+  this._init();
+}
+
+ContextPad.$inject = [ 'eventBus', 'overlays' ];
+
+module.exports = ContextPad;
+
+
+/**
+ * Registers events needed for interaction with other components
+ */
+ContextPad.prototype._init = function() {
+
+  var eventBus = this._eventBus;
+
+  var self = this;
+
+  eventBus.on('selection.changed', function(e) {
+
+    var selection = e.newSelection;
+
+    if (selection.length === 1) {
+      self.open(selection[0]);
+    } else {
+      self.close();
+    }
+  });
+
+  eventBus.on('elements.delete', function(event) {
+    var elements = event.elements;
+
+    forEach(elements, function(e) {
+      if (self.isOpen(e)) {
+        self.close();
+      }
+    });
+  });
+
+  eventBus.on('element.changed', function(event) {
+    var element = event.element,
+        current = self._current;
+
+    // force reopen if element for which we are currently opened changed
+    if (current && current.element === element) {
+      self.open(element, true);
+    }
+  });
+};
+
+
+/**
+ * Register a provider with the context pad
+ *
+ * @param  {ContextPadProvider} provider
+ */
+ContextPad.prototype.registerProvider = function(provider) {
+  this._providers.push(provider);
+};
+
+
+/**
+ * Returns the context pad entries for a given element
+ *
+ * @param {djs.element.Base} element
+ *
+ * @return {Array<ContextPadEntryDescriptor>} list of entries
+ */
+ContextPad.prototype.getEntries = function(element) {
+  var entries = {};
+
+  // loop through all providers and their entries.
+  // group entries by id so that overriding an entry is possible
+  forEach(this._providers, function(provider) {
+    var e = provider.getContextPadEntries(element);
+
+    forEach(e, function(entry, id) {
+      entries[id] = entry;
+    });
+  });
+
+  return entries;
+};
+
+
+/**
+ * Trigger an action available on the opened context pad
+ *
+ * @param  {String} action
+ * @param  {Event} event
+ * @param  {Boolean} [autoActivate=false]
+ */
+ContextPad.prototype.trigger = function(action, event, autoActivate) {
+
+  var element = this._current.element,
+      entries = this._current.entries,
+      entry,
+      handler,
+      originalEvent,
+      button = event.delegateTarget || event.target;
+
+  if (!button) {
+    return event.preventDefault();
+  }
+
+  entry = entries[domAttr(button, 'data-action')];
+  handler = entry.action;
+
+  originalEvent = event.originalEvent || event;
+
+  // simple action (via callback function)
+  if (isFunction(handler)) {
+    if (action === 'click') {
+      return handler(originalEvent, element, autoActivate);
+    }
+  } else {
+    if (handler[action]) {
+      return handler[action](originalEvent, element, autoActivate);
+    }
+  }
+
+  // silence other actions
+  event.preventDefault();
+};
+
+
+/**
+ * Open the context pad for the given element
+ *
+ * @param {djs.model.Base} element
+ * @param {Boolean} force if true, force reopening the context pad
+ */
+ContextPad.prototype.open = function(element, force) {
+  if (!force && this.isOpen(element)) {
+    return;
+  }
+
+  this.close();
+  this._updateAndOpen(element);
+};
+
+
+ContextPad.prototype._updateAndOpen = function(element) {
+
+  var entries = this.getEntries(element),
+      pad = this.getPad(element),
+      html = pad.html;
+
+  forEach(entries, function(entry, id) {
+    var grouping = entry.group || 'default',
+        control = domify(entry.html || '<div class="entry" draggable="true"></div>'),
+        container;
+
+    domAttr(control, 'data-action', id);
+
+    container = domQuery('[data-group=' + grouping + ']', html);
+    if (!container) {
+      container = domify('<div class="group" data-group="' + grouping + '"></div>');
+      html.appendChild(container);
+    }
+
+    container.appendChild(control);
+
+    if (entry.className) {
+      addClasses(control, entry.className);
+    }
+
+    if (entry.title) {
+      domAttr(control, 'title', entry.title);
+    }
+
+    if (entry.imageUrl) {
+      control.appendChild(domify('<img src="' + entry.imageUrl + '">'));
+    }
+  });
+
+  domClasses(html).add('open');
+
+  this._current = {
+    element: element,
+    pad: pad,
+    entries: entries
+  };
+
+  this._eventBus.fire('contextPad.open', { current: this._current });
+};
+
+
+ContextPad.prototype.getPad = function(element) {
+  if (this.isOpen()) {
+    return this._current.pad;
+  }
+
+  var self = this;
+
+  var overlays = this._overlays;
+
+  var html = domify('<div class="djs-context-pad"></div>');
+
+  domDelegate.bind(html, entrySelector, 'click', function(event) {
+    self.trigger('click', event);
+  });
+
+  domDelegate.bind(html, entrySelector, 'dragstart', function(event) {
+    self.trigger('dragstart', event);
+  });
+
+  // stop propagation of mouse events
+  domEvent.bind(html, 'mousedown', function(event) {
+    event.stopPropagation();
+  });
+
+  this._overlayId = overlays.add(element, 'context-pad', {
+    position: {
+      right: -9,
+      top: -6
+    },
+    html: html
+  });
+
+  var pad = overlays.get(this._overlayId);
+
+  this._eventBus.fire('contextPad.create', { element: element, pad: pad });
+
+  return pad;
+};
+
+
+/**
+ * Close the context pad
+ */
+ContextPad.prototype.close = function() {
+  if (!this.isOpen()) {
+    return;
+  }
+
+  this._overlays.remove(this._overlayId);
+
+  this._overlayId = null;
+
+  this._eventBus.fire('contextPad.close', { current: this._current });
+
+  this._current = null;
+};
+
+/**
+ * Check if pad is open. If element is given, will check
+ * if pad is opened with given element.
+ *
+ * @param {Element} element
+ * @return {Boolean}
+ */
+ContextPad.prototype.isOpen = function(element) {
+  return !!this._current && (!element ? true : this._current.element === element);
+};
+
+
+
+
+////////// helpers /////////////////////////////
+
+function addClasses(element, classNames) {
+
+  var classes = domClasses(element);
+
+  var actualClassNames = isArray(classNames) ? classNames : classNames.split(/\s+/g);
+  actualClassNames.forEach(function(cls) {
+    classes.add(cls);
+  });
+}
+},{"lodash/collection/forEach":832,"lodash/lang/isArray":955,"lodash/lang/isFunction":956,"min-dom/lib/attr":976,"min-dom/lib/classes":977,"min-dom/lib/delegate":980,"min-dom/lib/domify":981,"min-dom/lib/event":982,"min-dom/lib/query":984}],691:[function(require,module,exports){
+module.exports = {
+  __depends__: [
+    require('../interaction-events'),
+    require('../overlays')
+  ],
+  contextPad: [ 'type', require('./ContextPad') ]
+};
+},{"../interaction-events":702,"../overlays":740,"./ContextPad":690}],692:[function(require,module,exports){
+'use strict';
+
+var isArray = require('lodash/lang/isArray'),
+    forEach = require('lodash/collection/forEach'),
+    map = require('lodash/collection/map'),
+    find = require('lodash/collection/find'),
+    findIndex = require('lodash/array/findIndex'),
+    sortBy = require('lodash/collection/sortBy'),
+    reduce = require('lodash/collection/reduce');
+
+var getBBox = require('../../util/Elements').getBBox;
+
+var PositionUtil = require('../../util/PositionUtil');
+
+var CopyPasteUtil = require('../../util/CopyPasteUtil'),
+    ElementsUtil = require('../../util/Elements');
+
+
+
+function CopyPaste(eventBus, modeling, elementFactory, rules, clipboard, canvas) {
+  this._eventBus = eventBus;
+  this._modeling = modeling;
+  this._elementFactory = elementFactory;
+  this._rules = rules;
+  this._canvas = canvas;
+
+  this._clipboard = clipboard;
+
+  this._descriptors = [];
+
+
+  // Element creation priorities:
+  // - 1: Independent shapes
+  // - 2: Attached shapes
+  // - 3: Connections
+  // - 4: labels
+  this.registerDescriptor(function(element, descriptor) {
+    // Base priority
+    descriptor.priority = 1;
+
+    descriptor.id = element.id;
+
+    if (element.parent) {
+      descriptor.parent = element.parent.id;
+    }
+
+    if (element.labelTarget) {
+      // Labels priority
+      descriptor.priority = 4;
+      descriptor.labelTarget = element.labelTarget.id;
+    }
+
+    if (element.host) {
+      // Attached shapes priority
+      descriptor.priority = 2;
+      descriptor.host = element.host.id;
+    }
+
+    if (element.x) {
+      descriptor.x = element.x;
+      descriptor.y = element.y;
+    }
+
+    if (element.width) {
+      descriptor.width = element.width;
+      descriptor.height = element.height;
+    }
+
+    if (element.waypoints) {
+      // Connections priority
+      descriptor.priority = 3;
+      descriptor.waypoints = [];
+
+      forEach(element.waypoints, function(waypoint) {
+        var wp = {
+          x: waypoint.x,
+          y: waypoint.y
+        };
+
+        if (waypoint.original) {
+          wp.original = {
+            x: waypoint.original.x,
+            y: waypoint.original.y
+          };
+        }
+
+        descriptor.waypoints.push(wp);
+      });
+    }
+
+    if (element.source && element.target) {
+      descriptor.source = element.source.id;
+      descriptor.target = element.target.id;
+    }
+
+    return descriptor;
+  });
+}
+
+CopyPaste.$inject = [
+  'eventBus',
+  'modeling',
+  'elementFactory',
+  'rules',
+  'clipboard',
+  'canvas'
+];
+
+module.exports = CopyPaste;
+
+/**
+ * Copy a number of elements.
+ *
+ * @param {djs.model.Base} selectedElements
+ *
+ * @return {Object} the copied tree
+ */
+CopyPaste.prototype.copy = function(selectedElements) {
+  var clipboard = this._clipboard,
+      tree, bbox;
+
+  if (!isArray(selectedElements)) {
+    selectedElements = selectedElements ? [ selectedElements ] : [];
+  }
+
+  if (!selectedElements.length) {
+    return;
+  }
+
+  tree = this.createTree(selectedElements);
+
+  bbox = this._bbox = PositionUtil.center(getBBox(tree.allShapes));
+
+  // not needed after computing the center position of the copied elements
+  delete tree.allShapes;
+
+  forEach(tree, function(elements) {
+
+    forEach(elements, function(element) {
+      var delta, labelTarget;
+
+      // set label's relative position to their label target
+      if (element.labelTarget) {
+        labelTarget = find(elements, { id: element.labelTarget });
+
+        // just grab the delta from the first waypoint
+        if (labelTarget.waypoints) {
+          delta = PositionUtil.delta(element, labelTarget.waypoints[0]);
+        } else {
+          delta = PositionUtil.delta(element, labelTarget);
+        }
+
+      } else
+      if (element.priority === 3) {
+        // connections have priority 3
+        delta = [];
+
+        forEach(element.waypoints, function(waypoint) {
+          var waypointDelta = PositionUtil.delta(waypoint, bbox);
+
+          delta.push(waypointDelta);
+        }, this);
+      } else {
+        delta = PositionUtil.delta(element, bbox);
+      }
+
+      element.delta = delta;
+    });
+  });
+
+  this._eventBus.fire('elements.copy', { context: { tree: tree } });
+
+  // if tree is empty, means that nothing can be or is allowed to be copied
+  if (Object.keys(tree).length === 0) {
+    clipboard.clear();
+  } else {
+    clipboard.set(tree);
+  }
+
+  this._eventBus.fire('elements.copied', { context: { tree: tree } });
+
+  return tree;
+};
+
+
+// Allow pasting under the cursor
+CopyPaste.prototype.paste = function(context) {
+  var clipboard = this._clipboard,
+      modeling = this._modeling,
+      eventBus = this._eventBus,
+      rules = this._rules;
+
+  var tree = clipboard.get(),
+      topParent = context.element,
+      position = context.point,
+      newTree, canPaste;
+
+  if (clipboard.isEmpty()) {
+    return;
+  }
+
+  newTree = reduce(tree, function(pasteTree, elements, depthStr) {
+    var depth = parseInt(depthStr, 10);
+
+    if (isNaN(depth)) {
+      return pasteTree;
+    }
+
+    pasteTree[depth] = elements;
+
+    return pasteTree;
+  }, {}, this);
+
+
+  canPaste = rules.allowed('elements.paste', {
+    tree: newTree,
+    target: topParent
+  });
+
+  if (!canPaste) {
+    eventBus.fire('elements.paste.rejected', {
+      context: {
+        tree: newTree,
+        position: position,
+        target: topParent
+      }
+    });
+
+    return;
+  }
+
+  modeling.pasteElements(newTree, topParent, position);
+};
+
+
+CopyPaste.prototype._computeDelta = function(elements, element) {
+  var bbox = this._bbox,
+      delta = {};
+
+  // set label's relative position to their label target
+  if (element.labelTarget) {
+    console.log(elements);
+    return PositionUtil.delta(element, element.labelTarget);
+  }
+
+  // connections have prority 3
+  if (element.priority === 3) {
+    delta = [];
+
+    forEach(element.waypoints, function(waypoint) {
+      var waypointDelta = PositionUtil.delta(waypoint, bbox);
+
+      delta.push(waypointDelta);
+    }, this);
+  } else {
+    delta = PositionUtil.delta(element, bbox);
+  }
+
+  return delta;
+};
+
+
+/**
+ * Checks if the element in question has a relations to other elements.
+ * Possible dependants: connections, labels, attachers
+ *
+ * @param  {Array} elements
+ * @param  {Object} element
+ *
+ * @return {Boolean}
+ */
+CopyPaste.prototype.hasRelations = function(elements, element) {
+  var source, target, labelTarget;
+
+  if (element.waypoints) {
+    source = find(elements, { id: element.source.id });
+    target = find(elements, { id: element.target.id });
+
+    if (!source || !target) {
+      return false;
+    }
+  }
+
+  if (element.labelTarget) {
+    labelTarget = find(elements, { id: element.labelTarget.id });
+
+    if (!labelTarget) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+
+CopyPaste.prototype.registerDescriptor = function(descriptor) {
+  if (typeof descriptor !== 'function') {
+    throw new Error('the descriptor must be a function');
+  }
+
+  if (this._descriptors.indexOf(descriptor) !== -1) {
+    throw new Error('this descriptor is already registered');
+  }
+
+  this._descriptors.push(descriptor);
+};
+
+
+CopyPaste.prototype._executeDescriptors = function(data) {
+  if (!data.descriptor) {
+    data.descriptor = {};
+  }
+
+  forEach(this._descriptors, function(descriptor) {
+    data.descriptor = descriptor(data.element, data.descriptor);
+  });
+
+  return data;
+};
+
+/**
+ * Creates a tree like structure from an arbitrary collection of elements
+ *
+ * @example
+ * tree: {
+ *	0: [
+ *		{ id: 'shape_12da', priority: 1, ... },
+ *		{ id: 'shape_01bj', priority: 1, ... },
+ *		{ id: 'connection_79fa', source: 'shape_12da', target: 'shape_01bj', priority: 3, ... },
+ *	],
+ *	1: [ ... ]
+ * };
+ *
+ * @param  {Array} elements
+ * @return {Object}
+ */
+CopyPaste.prototype.createTree = function(elements) {
+  var rules = this._rules;
+
+  var tree = {},
+      includedElements = [],
+      _elements;
+
+  var topLevel = CopyPasteUtil.getTopLevel(elements);
+
+  tree.allShapes = [];
+
+  function canCopy(collection, element) {
+    return rules.allowed('element.copy', {
+      collection: collection,
+      element: element
+    });
+  }
+
+  function includeElement(data) {
+    var idx = findIndex(includedElements, { element: data.element }),
+        element;
+
+    if (idx !== -1) {
+      element = includedElements[idx];
+    } else {
+      return includedElements.push(data);
+    }
+
+    // makes sure that it has the correct depth
+    if (element.depth < data.depth) {
+      includedElements.splice(idx, 1);
+
+      includedElements.push(data);
+    }
+  }
+
+
+  ElementsUtil.eachElement(topLevel, function(element, i, depth) {
+    var nestedChildren = element.children;
+
+    // don't add labels directly
+    if (element.labelTarget) {
+      return;
+    }
+
+    function getNested(lists) {
+      forEach(lists, function(list) {
+        if (list && list.length) {
+
+          forEach(list, function(elem) {
+            // fetch element's label
+            if (elem.label) {
+              includeElement({
+                element: elem.label,
+                depth: depth
+              });
+            }
+
+            includeElement({
+              element: elem,
+              depth: depth
+            });
+          });
+        }
+      });
+    }
+
+    // fetch element's label
+    if (element.label) {
+      includeElement({
+        element: element.label,
+        depth: depth
+      });
+    }
+
+    getNested([ element.attachers, element.incoming, element.outgoing ]);
+
+    includeElement({
+      element: element,
+      depth: depth
+    });
+
+    if (nestedChildren) {
+      return nestedChildren;
+    }
+  });
+
+  includedElements = map(includedElements, function(data) {
+    // this is where other registered descriptors hook in
+    return this._executeDescriptors(data);
+  }, this);
+
+  // order the elements to check if the ones dependant on others (by relationship)
+  // can be copied. f.ex: label needs it's label target
+  includedElements = sortBy(includedElements, function(data) {
+    return data.descriptor.priority;
+  });
+
+  _elements = map(includedElements, function(data) {
+    return data.element;
+  });
+
+  forEach(includedElements, function(data) {
+    var depth = data.depth;
+
+    if (!this.hasRelations(tree.allShapes, data.element)) {
+      return;
+    }
+
+    if (!canCopy(_elements, data.element)) {
+      return;
+    }
+
+    tree.allShapes.push(data.element);
+
+    // create depth branches
+    if (!tree[depth]) {
+      tree[depth] = [];
+    }
+
+    tree[depth].push(data.descriptor);
+  }, this);
+
+  return tree;
+};
+
+},{"../../util/CopyPasteUtil":775,"../../util/Elements":777,"../../util/PositionUtil":787,"lodash/array/findIndex":821,"lodash/collection/find":831,"lodash/collection/forEach":832,"lodash/collection/map":835,"lodash/collection/reduce":836,"lodash/collection/sortBy":839,"lodash/lang/isArray":955}],693:[function(require,module,exports){
+module.exports = {
+  __depends__: [
+    require('../clipboard'),
+    require('../rules'),
+    require('../mouse-tracking')
+  ],
+  __init__: [ 'copyPaste' ],
+  copyPaste: [ 'type', require('./CopyPaste') ]
+};
+
+},{"../clipboard":687,"../mouse-tracking":733,"../rules":751,"./CopyPaste":692}],694:[function(require,module,exports){
+'use strict';
+
+var LOW_PRIORITY = 750;
+
+var MARKER_OK = 'drop-ok',
+    MARKER_NOT_OK = 'drop-not-ok',
+    MARKER_ATTACH = 'attach-ok',
+    MARKER_NEW_PARENT = 'new-parent';
+
+var svgAppend = require('tiny-svg/lib/append'),
+    svgAttr = require('tiny-svg/lib/attr'),
+    svgClasses = require('tiny-svg/lib/classes'),
+    svgCreate = require('tiny-svg/lib/create'),
+    svgRemove = require('tiny-svg/lib/remove');
+
+var translate = require('../../util/SvgTransformUtil').translate;
+
+
+function Create(eventBus, dragging, rules, modeling, canvas, styles, graphicsFactory) {
+
+  // rules
+
+  function canCreate(shape, target, source, position) {
+
+    if (source) {
+      return rules.allowed('shape.append', {
+        source: source,
+        shape: shape,
+        target: target,
+        position: position
+      });
+    } else {
+      return rules.allowed('shape.create', {
+        shape: shape,
+        target: target,
+        position: position
+      });
+    }
+  }
+
+
+  /** set drop marker on an element */
+  function setMarker(element, marker) {
+
+    [ MARKER_ATTACH, MARKER_OK, MARKER_NOT_OK, MARKER_NEW_PARENT ].forEach(function(m) {
+
+      if (m === marker) {
+        canvas.addMarker(element, m);
+      } else {
+        canvas.removeMarker(element, m);
+      }
+    });
+  }
+
+
+  // visual helpers
+
+  function createVisual(shape) {
+    var group, preview, visual;
+
+    group = svgCreate('g');
+    svgAttr(group, styles.cls('djs-drag-group', [ 'no-events' ]));
+
+    svgAppend(canvas.getDefaultLayer(), group);
+
+    preview = svgCreate('g');
+    svgClasses(preview).add('djs-dragger');
+
+    svgAppend(group, preview);
+
+    translate(preview, shape.width / -2, shape.height / -2);
+
+    var visualGroup = svgCreate('g');
+    svgClasses(visualGroup).add('djs-visual');
+
+    svgAppend(preview, visualGroup);
+
+    visual = visualGroup;
+
+    // hijack renderer to draw preview
+    graphicsFactory.drawShape(visual, shape);
+
+    return group;
+  }
+
+
+  // event handlers
+
+  eventBus.on('create.move', function(event) {
+
+    var context = event.context,
+        hover = event.hover,
+        canExecute;
+
+    var position = {
+      x: event.x,
+      y: event.y
+    };
+
+    canExecute = context.canExecute = hover && canCreate(context.shape, hover, context.source, position);
+
+    // ignore hover visually if canExecute is null
+    if (hover && canExecute !== null) {
+      context.target = hover;
+
+      if (canExecute === 'attach') {
+        setMarker(hover, MARKER_ATTACH);
+      } else {
+        setMarker(hover, context.canExecute ? MARKER_NEW_PARENT : MARKER_NOT_OK);
+      }
+    }
+  });
+
+  eventBus.on('create.move', LOW_PRIORITY, function(event) {
+
+    var context = event.context,
+        shape = context.shape,
+        visual = context.visual;
+
+    // lazy init drag visual once we received the first real
+    // drag move event (this allows us to get the proper canvas local coordinates)
+    if (!visual) {
+      visual = context.visual = createVisual(shape);
+    }
+
+    translate(visual, event.x, event.y);
+  });
+
+
+  eventBus.on([ 'create.end', 'create.out', 'create.cleanup' ], function(event) {
+    var context = event.context,
+        target = context.target;
+
+    if (target) {
+      setMarker(target, null);
+    }
+  });
+
+  eventBus.on('create.end', function(event) {
+    var context = event.context,
+        source = context.source,
+        shape = context.shape,
+        target = context.target,
+        canExecute = context.canExecute,
+        isAttach,
+        position = {
+          x: event.x,
+          y: event.y
+        };
+
+    if (!canExecute) {
+      return false;
+    }
+
+    if (source) {
+      shape = modeling.appendShape(source, shape, position, target);
+    } else {
+      isAttach = canExecute === 'attach';
+
+      shape = modeling.createShape(shape, position, target, isAttach);
+    }
+
+    // make sure we provide the actual attached
+    // shape with the context so that selection and
+    // other components can use it right after the create
+    // operation ends
+    context.shape = shape;
+  });
+
+
+  eventBus.on('create.cleanup', function(event) {
+    var context = event.context;
+
+    if (context.visual) {
+      svgRemove(context.visual);
+    }
+  });
+
+  // API
+
+  this.start = function(event, shape, source) {
+
+    dragging.init(event, 'create', {
+      cursor: 'grabbing',
+      autoActivate: true,
+      data: {
+        shape: shape,
+        context: {
+          shape: shape,
+          source: source
+        }
+      }
+    });
+  };
+}
+
+Create.$inject = [ 'eventBus', 'dragging', 'rules', 'modeling', 'canvas', 'styles', 'graphicsFactory' ];
+
+module.exports = Create;
+
+},{"../../util/SvgTransformUtil":790,"tiny-svg/lib/append":1067,"tiny-svg/lib/attr":1069,"tiny-svg/lib/classes":1070,"tiny-svg/lib/create":1073,"tiny-svg/lib/remove":1075}],695:[function(require,module,exports){
+module.exports = {
+  __depends__: [
+    require('../dragging'),
+    require('../selection'),
+    require('../rules')
+  ],
+  create: [ 'type', require('./Create') ]
+};
+
+},{"../dragging":698,"../rules":751,"../selection":755,"./Create":694}],696:[function(require,module,exports){
+'use strict';
+
+/* global TouchEvent */
+
+var round = Math.round;
+
+var assign = require('lodash/object/assign');
+
+var domEvent = require('min-dom/lib/event'),
+    Event = require('../../util/Event'),
+    ClickTrap = require('../../util/ClickTrap'),
+    Cursor = require('../../util/Cursor');
+
+var EventBusEvent = require('../../core/EventBus').Event;
+
+var DRAG_ACTIVE_CLS = 'djs-drag-active';
+
+
+function suppressEvent(event) {
+  if (event instanceof MouseEvent) {
+    Event.stopEvent(event, true);
+  } else {
+    Event.preventDefault(event);
+  }
+}
+
+function getLength(point) {
+  return Math.sqrt(Math.pow(point.x, 2) + Math.pow(point.y, 2));
+}
+
+function substract(p1, p2) {
+  return {
+    x: p1.x - p2.x,
+    y: p1.y - p2.y
+  };
+}
+
+/**
+ * A helper that fires canvas localized drag events and realizes
+ * the general "drag-and-drop" look and feel.
+ *
+ * Calling {@link Dragging#activate} activates dragging on a canvas.
+ *
+ * It provides the following:
+ *
+ *   * emits life cycle events, namespaced with a prefix assigned
+ *     during dragging activation
+ *   * sets and restores the cursor
+ *   * sets and restores the selection
+ *   * ensures there can be only one drag operation active at a time
+ *
+ * Dragging may be canceled manually by calling {@link Dragging#cancel}
+ * or by pressing ESC.
+ *
+ *
+ * ## Life-cycle events
+ *
+ * Dragging can be in three different states, off, initialized
+ * and active.
+ *
+ * (1) off: no dragging operation is in progress
+ * (2) initialized: a new drag operation got initialized but not yet
+ *                  started (i.e. because of no initial move)
+ * (3) started: dragging is in progress
+ *
+ * Eventually dragging will be off again after a drag operation has
+ * been ended or canceled via user click or ESC key press.
+ *
+ * To indicate transitions between these states dragging emits generic
+ * life-cycle events with the `drag.` prefix _and_ events namespaced
+ * to a prefix choosen by a user during drag initialization.
+ *
+ * The following events are emitted (appropriately prefixed) via
+ * the {@link EventBus}.
+ *
+ * * `init`
+ * * `start`
+ * * `move`
+ * * `end`
+ * * `ended` (dragging already in off state)
+ * * `cancel` (only if previously started)
+ * * `canceled` (dragging already in off state, only if previously started)
+ * * `cleanup`
+ *
+ *
+ * @example
+ *
+ * function MyDragComponent(eventBus, dragging) {
+ *
+ *   eventBus.on('mydrag.start', function(event) {
+ *     console.log('yes, we start dragging');
+ *   });
+ *
+ *   eventBus.on('mydrag.move', function(event) {
+ *     console.log('canvas local coordinates', event.x, event.y, event.dx, event.dy);
+ *
+ *     // local drag data is passed with the event
+ *     event.context.foo; // "BAR"
+ *
+ *     // the original mouse event, too
+ *     event.originalEvent; // MouseEvent(...)
+ *   });
+ *
+ *   eventBus.on('element.click', function(event) {
+ *     dragging.init(event, 'mydrag', {
+ *       cursor: 'grabbing',
+ *       data: {
+ *         context: {
+ *           foo: "BAR"
+ *         }
+ *       }
+ *     });
+ *   });
+ * }
+ */
+function Dragging(eventBus, canvas, selection) {
+
+  var defaultOptions = {
+    threshold: 5,
+    trapClick: true
+  };
+
+  // the currently active drag operation
+  // dragging is active as soon as this context exists.
+  //
+  // it is visually _active_ only when a context.active flag is set to true.
+  var context;
+
+  /* convert a global event into local coordinates */
+  function toLocalPoint(globalPosition) {
+
+    var viewbox = canvas.viewbox();
+
+    var clientRect = canvas._container.getBoundingClientRect();
+
+    return {
+      x: viewbox.x + round((globalPosition.x - clientRect.left) / viewbox.scale),
+      y: viewbox.y + round((globalPosition.y - clientRect.top) / viewbox.scale)
+    };
+  }
+
+  // helpers
+
+  function fire(type, dragContext) {
+    dragContext = dragContext || context;
+
+    var event = assign(new EventBusEvent(), dragContext.payload, dragContext.data);
+
+    // default integration
+    if (eventBus.fire('drag.' + type, event) === false) {
+      return false;
+    }
+
+    return eventBus.fire(dragContext.prefix + '.' + type, event);
+  }
+
+  // event listeners
+
+  function move(event, activate) {
+    var payload = context.payload,
+        displacement = context.displacement;
+
+    var globalStart = context.globalStart,
+        globalCurrent = Event.toPoint(event),
+        globalDelta = substract(globalCurrent, globalStart);
+
+    var localStart = context.localStart,
+        localCurrent = toLocalPoint(globalCurrent),
+        localDelta = substract(localCurrent, localStart);
+
+    // activate context explicitly or once threshold is reached
+    if (!context.active && (activate || getLength(globalDelta) > context.threshold)) {
+
+      // fire start event with original
+      // starting coordinates
+
+      assign(payload, {
+        x: localStart.x + displacement.x,
+        y: localStart.y + displacement.y,
+        dx: 0,
+        dy: 0
+      }, { originalEvent: event });
+
+      if (false === fire('start')) {
+        return cancel();
+      }
+
+      context.active = true;
+
+      // unset selection and remember old selection
+      // the previous (old) selection will always passed
+      // with the event via the event.previousSelection property
+      if (!context.keepSelection) {
+        payload.previousSelection = selection.get();
+        selection.select(null);
+      }
+
+      // allow custom cursor
+      if (context.cursor) {
+        Cursor.set(context.cursor);
+      }
+
+      // indicate dragging via marker on root element
+      canvas.addMarker(canvas.getRootElement(), DRAG_ACTIVE_CLS);
+    }
+
+    suppressEvent(event);
+
+    if (context.active) {
+
+      // update payload with actual coordinates
+      assign(payload, {
+        x: localCurrent.x + displacement.x,
+        y: localCurrent.y + displacement.y,
+        dx: localDelta.x,
+        dy: localDelta.y
+      }, { originalEvent: event });
+
+      // emit move event
+      fire('move');
+    }
+  }
+
+  function end(event) {
+    var previousContext,
+        returnValue = true;
+
+    if (context.active) {
+
+      if (event) {
+        context.payload.originalEvent = event;
+
+        // suppress original event (click, ...)
+        // because we just ended a drag operation
+        suppressEvent(event);
+      }
+
+      // implementations may stop restoring the
+      // original state (selections, ...) by preventing the
+      // end events default action
+      returnValue = fire('end');
+    }
+
+    if (returnValue === false) {
+      fire('rejected');
+    }
+
+    previousContext = cleanup(returnValue !== true);
+
+    // last event to be fired when all drag operations are done
+    // at this point in time no drag operation is in progress anymore
+    fire('ended', previousContext);
+  }
+
+
+  // cancel active drag operation if the user presses
+  // the ESC key on the keyboard
+
+  function checkCancel(event) {
+
+    if (event.which === 27) {
+      event.preventDefault();
+
+      cancel();
+    }
+  }
+
+
+  // prevent ghost click that might occur after a finished
+  // drag and drop session
+
+  function trapClickAndEnd(event) {
+
+    var untrap;
+
+    // trap the click in case we are part of an active
+    // drag operation. This will effectively prevent
+    // the ghost click that cannot be canceled otherwise.
+    if (context.active) {
+      untrap = ClickTrap.install();
+      setTimeout(untrap, 400);
+    }
+
+    end(event);
+  }
+
+  function trapTouch(event) {
+    move(event);
+  }
+
+  // update the drag events hover (djs.model.Base) and hoverGfx (Snap<SVGElement>)
+  // properties during hover and out and fire {prefix}.hover and {prefix}.out properties
+  // respectively
+
+  function hover(event) {
+    var payload = context.payload;
+
+    payload.hoverGfx = event.gfx;
+    payload.hover = event.element;
+
+    fire('hover');
+  }
+
+  function out(event) {
+    fire('out');
+
+    var payload = context.payload;
+
+    payload.hoverGfx = null;
+    payload.hover = null;
+  }
+
+
+  // life-cycle methods
+
+  function cancel(restore) {
+    var previousContext;
+
+    if (!context) {
+      return;
+    }
+
+    var wasActive = context.active;
+
+    if (wasActive) {
+      fire('cancel');
+    }
+
+    previousContext = cleanup(restore);
+
+    if (wasActive) {
+      // last event to be fired when all drag operations are done
+      // at this point in time no drag operation is in progress anymore
+      fire('canceled', previousContext);
+    }
+  }
+
+  function cleanup(restore) {
+    var previousContext,
+        endDrag;
+
+    fire('cleanup');
+
+    // reset cursor
+    Cursor.unset();
+
+    if (context.trapClick) {
+      endDrag = trapClickAndEnd;
+    } else {
+      endDrag = end;
+    }
+
+    // reset dom listeners
+    domEvent.unbind(document, 'mousemove', move);
+
+    domEvent.unbind(document, 'mousedown', endDrag, true);
+    domEvent.unbind(document, 'mouseup', endDrag, true);
+
+    domEvent.unbind(document, 'keyup', checkCancel);
+
+    domEvent.unbind(document, 'touchstart', trapTouch, true);
+    domEvent.unbind(document, 'touchcancel', cancel, true);
+    domEvent.unbind(document, 'touchmove', move, true);
+    domEvent.unbind(document, 'touchend', end, true);
+
+    eventBus.off('element.hover', hover);
+    eventBus.off('element.out', out);
+
+    // remove drag marker on root element
+    canvas.removeMarker(canvas.getRootElement(), DRAG_ACTIVE_CLS);
+
+    // restore selection, unless it has changed
+    var previousSelection = context.payload.previousSelection;
+
+    if (restore !== false && previousSelection && !selection.get().length) {
+      selection.select(previousSelection);
+    }
+
+    previousContext = context;
+
+    context = null;
+
+    return previousContext;
+  }
+
+  /**
+   * Initialize a drag operation.
+   *
+   * If `localPosition` is given, drag events will be emitted
+   * relative to it.
+   *
+   * @param {MouseEvent|TouchEvent} [event]
+   * @param {Point} [localPosition] actual diagram local position this drag operation should start at
+   * @param {String} prefix
+   * @param {Object} [options]
+   */
+  function init(event, relativeTo, prefix, options) {
+
+    // only one drag operation may be active, at a time
+    if (context) {
+      cancel(false);
+    }
+
+    if (typeof relativeTo === 'string') {
+      options = prefix;
+      prefix = relativeTo;
+      relativeTo = null;
+    }
+
+    options = assign({}, defaultOptions, options || {});
+
+    var data = options.data || {},
+        originalEvent,
+        globalStart,
+        endDrag;
+
+    if (options.trapClick) {
+      endDrag = trapClickAndEnd;
+    } else {
+      endDrag = end;
+    }
+
+    if (event) {
+      originalEvent = Event.getOriginal(event) || event;
+      globalStart = Event.toPoint(event);
+
+      suppressEvent(event);
+    } else {
+      originalEvent = null;
+      globalStart = { x: 0, y: 0 };
+    }
+
+    var localStart = toLocalPoint(globalStart);
+
+    if (!relativeTo) {
+      relativeTo = localStart;
+    }
+
+    context = assign({
+      prefix: prefix,
+      data: data,
+      payload: {},
+      globalStart: globalStart,
+      displacement: substract(relativeTo, localStart),
+      localStart: localStart
+    }, options);
+
+    // skip dom registration if trigger
+    // is set to manual (during testing)
+    if (!options.manual) {
+
+      // add dom listeners
+
+      // fixes TouchEvent not being available on desktop Firefox
+      if (typeof TouchEvent !== 'undefined' && originalEvent instanceof TouchEvent) {
+        domEvent.bind(document, 'touchstart', trapTouch, true);
+        domEvent.bind(document, 'touchcancel', cancel, true);
+        domEvent.bind(document, 'touchmove', move, true);
+        domEvent.bind(document, 'touchend', end, true);
+      } else {
+        // assume we use the mouse to interact per default
+        domEvent.bind(document, 'mousemove', move);
+
+        domEvent.bind(document, 'mousedown', endDrag, true);
+        domEvent.bind(document, 'mouseup', endDrag, true);
+      }
+
+      domEvent.bind(document, 'keyup', checkCancel);
+
+      eventBus.on('element.hover', hover);
+      eventBus.on('element.out', out);
+    }
+
+    fire('init');
+
+    if (options.autoActivate) {
+      move(event, true);
+    }
+  }
+
+  // cancel on diagram destruction
+  eventBus.on('diagram.destroy', cancel);
+
+
+  // API
+
+  this.init = init;
+  this.move = move;
+  this.hover = hover;
+  this.out = out;
+  this.end = end;
+
+  this.cancel = cancel;
+
+  // for introspection
+
+  this.context = function() {
+    return context;
+  };
+
+  this.setOptions = function(options) {
+    assign(defaultOptions, options);
+  };
+}
+
+Dragging.$inject = [ 'eventBus', 'canvas', 'selection' ];
+
+module.exports = Dragging;
+
+},{"../../core/EventBus":671,"../../util/ClickTrap":773,"../../util/Cursor":776,"../../util/Event":778,"lodash/object/assign":964,"min-dom/lib/event":982}],697:[function(require,module,exports){
+'use strict';
+
+var domClosest = require('min-dom/lib/closest');
+
+var Event = require('../../util/Event');
+
+function getGfx(target) {
+  var node = domClosest(target, 'svg, .djs-element', true);
+  return node;
+}
+
+
+/**
+ * Browsers may swallow the hover event if users are to
+ * fast with the mouse.
+ *
+ * @see http://stackoverflow.com/questions/7448468/why-cant-i-reliably-capture-a-mouseout-event
+ *
+ * The fix implemented in this component ensure that we
+ * have a hover state after a successive drag.move event.
+ *
+ * @param {EventBus} eventBus
+ * @param {Dragging} dragging
+ * @param {ElementRegistry} elementRegistry
+ */
+function HoverFix(eventBus, dragging, elementRegistry) {
+
+  var self = this;
+
+  // we wait for a specific sequence of events before
+  // emitting a fake drag.hover event.
+  //
+  // Event Sequence:
+  //
+  // drag.start
+  // drag.move
+  // drag.move >> ensure we are hovering
+  //
+  eventBus.on('drag.start', function(event) {
+
+    eventBus.once('drag.move', function() {
+
+      eventBus.once('drag.move', function(event) {
+
+        self.ensureHover(event);
+      });
+    });
+  });
+
+  /**
+   * Make sure we are god damn hovering!
+   *
+   * @param {Event} dragging event
+   */
+  this.ensureHover = function(event) {
+
+    if (event.hover) {
+      return;
+    }
+
+    var originalEvent = event.originalEvent,
+        position,
+        target,
+        element,
+        gfx;
+
+    if (!(originalEvent instanceof MouseEvent)) {
+      return;
+    }
+
+    position = Event.toPoint(originalEvent);
+
+    // damn expensive operation, ouch!
+    target = document.elementFromPoint(position.x, position.y);
+
+    gfx = getGfx(target);
+
+    if (gfx) {
+      element = elementRegistry.get(gfx);
+
+      dragging.hover({ element: element, gfx: gfx });
+    }
+  };
+
+}
+
+HoverFix.$inject = [ 'eventBus', 'dragging', 'elementRegistry' ];
+
+module.exports = HoverFix;
+
+},{"../../util/Event":778,"min-dom/lib/closest":979}],698:[function(require,module,exports){
+module.exports = {
+  __init__: [
+    'hoverFix'
+  ],
+  __depends__: [
+    require('../selection')
+  ],
+  dragging: [ 'type', require('./Dragging') ],
+  hoverFix: [ 'type', require('./HoverFix') ]
+};
+},{"../selection":755,"./Dragging":696,"./HoverFix":697}],699:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach'),
+    isArray = require('lodash/lang/isArray');
+
+var NOT_REGISTERED_ERROR = 'is not a registered action',
+    IS_REGISTERED_ERROR = 'is already registered';
+
+
+/**
+ * An interface that provides access to modeling actions by decoupling
+ * the one who requests the action to be triggered and the trigger itself.
+ *
+ * It's possible to add new actions by registering them with ´registerAction´ and likewise
+ * unregister existing ones with ´unregisterAction´.
+ *
+ */
+function EditorActions(eventBus, commandStack, modeling, selection,
+  zoomScroll, copyPaste, canvas, rules, mouseTracking) {
+
+  this._actions = {
+    undo: function() {
+      commandStack.undo();
+    },
+    redo: function() {
+      commandStack.redo();
+    },
+    copy: function() {
+      var selectedElements = selection.get();
+
+      copyPaste.copy(selectedElements);
+    },
+    paste: function() {
+      var context = mouseTracking.getHoverContext();
+
+      copyPaste.paste(context);
+    },
+    stepZoom: function(opts) {
+      zoomScroll.stepZoom(opts.value);
+    },
+    zoom: function(opts) {
+      canvas.zoom(opts.value);
+    },
+    removeSelection: function() {
+      var selectedElements = selection.get();
+
+      if (selectedElements.length) {
+        var allowed = rules.allowed('elements.delete', { elements: selectedElements }),
+            removableElements;
+
+        if (allowed === false) {
+          return;
+        }
+        else if (isArray(allowed)) {
+          removableElements = allowed;
+        }
+        else {
+          removableElements = selectedElements;
+        }
+
+        if (removableElements.length) {
+          modeling.removeElements(removableElements.slice());
+        }
+      }
+    },
+    moveCanvas: function(opts) {
+      var dx = 0,
+          dy = 0,
+          invertY = opts.invertY,
+          speed = opts.speed;
+
+      var actualSpeed = speed / Math.min(Math.sqrt(canvas.viewbox().scale), 1);
+
+      switch (opts.direction) {
+      case 'left':    // Left
+        dx = actualSpeed;
+        break;
+      case 'up':    // Up
+        dy = actualSpeed;
+        break;
+      case 'right':    // Right
+        dx = -actualSpeed;
+        break;
+      case 'down':    // Down
+        dy = -actualSpeed;
+        break;
+      }
+
+      if (dy && invertY) {
+        dy = -dy;
+      }
+
+      canvas.scroll({ dx: dx, dy: dy });
+    }
+  };
+}
+
+EditorActions.$inject = [
+  'eventBus',
+  'commandStack',
+  'modeling',
+  'selection',
+  'zoomScroll',
+  'copyPaste',
+  'canvas',
+  'rules',
+  'mouseTracking'
+];
+
+module.exports = EditorActions;
+
+
+/**
+ * Triggers a registered action
+ *
+ * @param  {String} action
+ * @param  {Object} opts
+ *
+ * @return {Unknown} Returns what the registered listener returns
+ */
+EditorActions.prototype.trigger = function(action, opts) {
+  if (!this._actions[action]) {
+    throw error(action, NOT_REGISTERED_ERROR);
+  }
+
+  return this._actions[action](opts);
+};
+
+
+/**
+ * Registers a collections of actions.
+ * The key of the object will be the name of the action.
+ *
+ * @example
+ * ´´´
+ * var actions = {
+ *   spaceTool: function() {
+ *     spaceTool.activateSelection();
+ *   },
+ *   lassoTool: function() {
+ *     lassoTool.activateSelection();
+ *   }
+ * ];
+ *
+ * editorActions.register(actions);
+ *
+ * editorActions.isRegistered('spaceTool'); // true
+ * ´´´
+ *
+ * @param  {Object} actions
+ */
+EditorActions.prototype.register = function(actions, listener) {
+  if (typeof actions === 'string') {
+    return this._registerAction(actions, listener);
+  }
+
+  forEach(actions, function(listener, action) {
+    this._registerAction(action, listener);
+  }, this);
+};
+
+/**
+ * Registers a listener to an action key
+ *
+ * @param  {String} action
+ * @param  {Function} listener
+ */
+EditorActions.prototype._registerAction = function(action, listener) {
+  if (this.isRegistered(action)) {
+    throw error(action, IS_REGISTERED_ERROR);
+  }
+
+  this._actions[action] = listener;
+};
+
+/**
+ * Unregister an existing action
+ *
+ * @param {String} action
+ */
+EditorActions.prototype.unregister = function(action) {
+  if (!this.isRegistered(action)) {
+    throw error(action, NOT_REGISTERED_ERROR);
+  }
+
+  this._actions[action] = undefined;
+};
+
+/**
+ * Returns the number of actions that are currently registered
+ *
+ * @return {Number}
+ */
+EditorActions.prototype.length = function() {
+  return Object.keys(this._actions).length;
+};
+
+/**
+ * Checks wether the given action is registered
+ *
+ * @param {String} action
+ *
+ * @return {Boolean}
+ */
+EditorActions.prototype.isRegistered = function(action) {
+  return !!this._actions[action];
+};
+
+
+function error(action, message) {
+  return new Error(action + ' ' + message);
+}
+
+},{"lodash/collection/forEach":832,"lodash/lang/isArray":955}],700:[function(require,module,exports){
+module.exports = {
+  __depends__: [
+    require('../selection'),
+    require('../copy-paste'),
+    require('../../navigation/zoomscroll')
+  ],
+  __init__: [ 'editorActions' ],
+  editorActions: [ 'type', require('./EditorActions') ]
+};
+
+},{"../../navigation/zoomscroll":771,"../copy-paste":693,"../selection":755,"./EditorActions":699}],701:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach'),
+    domDelegate = require('min-dom/lib/delegate');
+
+var isPrimaryButton = require('../../util/Mouse').isPrimaryButton;
+
+var svgAppend = require('tiny-svg/lib/append'),
+    svgAttr = require('tiny-svg/lib/attr'),
+    svgCreate = require('tiny-svg/lib/create');
+
+var domQuery = require('min-dom/lib/query');
+
+var renderUtil = require('../../util/RenderUtil');
+
+var createLine = renderUtil.createLine,
+    updateLine = renderUtil.updateLine;
+
+var LOW_PRIORITY = 500;
+
+/**
+ * A plugin that provides interaction events for diagram elements.
+ *
+ * It emits the following events:
+ *
+ *   * element.hover
+ *   * element.out
+ *   * element.click
+ *   * element.dblclick
+ *   * element.mousedown
+ *
+ * Each event is a tuple { element, gfx, originalEvent }.
+ *
+ * Canceling the event via Event#preventDefault() prevents the original DOM operation.
+ *
+ * @param {EventBus} eventBus
+ */
+function InteractionEvents(eventBus, elementRegistry, styles) {
+
+  var HIT_STYLE = styles.cls('djs-hit', [ 'no-fill', 'no-border' ], {
+    stroke: 'white',
+    strokeWidth: 15
+  });
+
+  /**
+   * Fire an interaction event.
+   *
+   * @param {String} type local event name, e.g. element.click.
+   * @param {DOMEvent} event native event
+   * @param {djs.model.Base} [element] the diagram element to emit the event on;
+   *                                   defaults to the event target
+   */
+  function fire(type, event, element) {
+
+    // only react on left mouse button interactions
+    // for interaction events
+    if (!isPrimaryButton(event)) {
+      return;
+    }
+
+    var target, gfx, returnValue;
+
+    if (!element) {
+      target = event.delegateTarget || event.target;
+
+      if (target) {
+        gfx = target;
+        element = elementRegistry.get(gfx);
+      }
+    } else {
+      gfx = elementRegistry.getGraphics(element);
+    }
+
+    if (!gfx || !element) {
+      return;
+    }
+
+    returnValue = eventBus.fire(type, { element: element, gfx: gfx, originalEvent: event });
+
+    if (returnValue === false) {
+      event.stopPropagation();
+      event.preventDefault();
+    }
+  }
+
+  // TODO(nikku): document this
+  var handlers = {};
+
+  function mouseHandler(type) {
+
+    var fn = handlers[type];
+
+    if (!fn) {
+      fn = handlers[type] = function(event) {
+        fire(type, event);
+      };
+    }
+
+    return fn;
+  }
+
+  var bindings = {
+    mouseover: 'element.hover',
+    mouseout: 'element.out',
+    click: 'element.click',
+    dblclick: 'element.dblclick',
+    mousedown: 'element.mousedown',
+    mouseup: 'element.mouseup'
+  };
+
+
+  ///// manual event trigger
+
+  /**
+   * Trigger an interaction event (based on a native dom event)
+   * on the target shape or connection.
+   *
+   * @param {String} eventName the name of the triggered DOM event
+   * @param {MouseEvent} event
+   * @param {djs.model.Base} targetElement
+   */
+  function triggerMouseEvent(eventName, event, targetElement) {
+
+    // i.e. element.mousedown...
+    var localEventName = bindings[eventName];
+
+    if (!localEventName) {
+      throw new Error('unmapped DOM event name <' + eventName + '>');
+    }
+
+    return fire(localEventName, event, targetElement);
+  }
+
+
+  var elementSelector = 'svg, .djs-element';
+
+  ///// event registration
+
+  function registerEvent(node, event, localEvent) {
+    var handler = mouseHandler(localEvent);
+    handler.$delegate = domDelegate.bind(node, elementSelector, event, handler);
+  }
+
+  function unregisterEvent(node, event, localEvent) {
+    domDelegate.unbind(node, event, mouseHandler(localEvent).$delegate);
+  }
+
+  function registerEvents(svg) {
+    forEach(bindings, function(val, key) {
+      registerEvent(svg, key, val);
+    });
+  }
+
+  function unregisterEvents(svg) {
+    forEach(bindings, function(val, key) {
+      unregisterEvent(svg, key, val);
+    });
+  }
+
+  eventBus.on('canvas.destroy', function(event) {
+    unregisterEvents(event.svg);
+  });
+
+  eventBus.on('canvas.init', function(event) {
+    registerEvents(event.svg);
+  });
+
+
+  eventBus.on([ 'shape.added', 'connection.added' ], function(event) {
+    var element = event.element,
+        gfx = event.gfx,
+        hit;
+
+    if (element.waypoints) {
+      hit = createLine(element.waypoints);
+    } else {
+      hit = svgCreate('rect');
+      svgAttr(hit, {
+        x: 0,
+        y: 0,
+        width: element.width,
+        height: element.height
+      });
+    }
+
+    svgAttr(hit, HIT_STYLE);
+
+    svgAppend(gfx, hit);
+  });
+
+  // Update djs-hit on change.
+  // A low priortity is necessary, because djs-hit of labels has to be updated
+  // after the label bounds have been updated in the renderer.
+  eventBus.on('shape.changed', LOW_PRIORITY, function(event) {
+
+    var element = event.element,
+        gfx = event.gfx,
+        hit = domQuery('.djs-hit', gfx);
+
+    svgAttr(hit, {
+      width: element.width,
+      height: element.height
+    });
+  });
+
+  eventBus.on('connection.changed', function(event) {
+
+    var element = event.element,
+        gfx = event.gfx,
+        hit = domQuery('.djs-hit', gfx);
+
+    updateLine(hit, element.waypoints);
+  });
+
+
+  // API
+
+  this.fire = fire;
+
+  this.triggerMouseEvent = triggerMouseEvent;
+
+  this.mouseHandler = mouseHandler;
+
+  this.registerEvent = registerEvent;
+  this.unregisterEvent = unregisterEvent;
+}
+
+
+InteractionEvents.$inject = [ 'eventBus', 'elementRegistry', 'styles' ];
+
+module.exports = InteractionEvents;
+
+
+/**
+ * An event indicating that the mouse hovered over an element
+ *
+ * @event element.hover
+ *
+ * @type {Object}
+ * @property {djs.model.Base} element
+ * @property {SVGElement} gfx
+ * @property {Event} originalEvent
+ */
+
+/**
+ * An event indicating that the mouse has left an element
+ *
+ * @event element.out
+ *
+ * @type {Object}
+ * @property {djs.model.Base} element
+ * @property {SVGElement} gfx
+ * @property {Event} originalEvent
+ */
+
+/**
+ * An event indicating that the mouse has clicked an element
+ *
+ * @event element.click
+ *
+ * @type {Object}
+ * @property {djs.model.Base} element
+ * @property {SVGElement} gfx
+ * @property {Event} originalEvent
+ */
+
+/**
+ * An event indicating that the mouse has double clicked an element
+ *
+ * @event element.dblclick
+ *
+ * @type {Object}
+ * @property {djs.model.Base} element
+ * @property {SVGElement} gfx
+ * @property {Event} originalEvent
+ */
+
+/**
+ * An event indicating that the mouse has gone down on an element.
+ *
+ * @event element.mousedown
+ *
+ * @type {Object}
+ * @property {djs.model.Base} element
+ * @property {SVGElement} gfx
+ * @property {Event} originalEvent
+ */
+
+/**
+ * An event indicating that the mouse has gone up on an element.
+ *
+ * @event element.mouseup
+ *
+ * @type {Object}
+ * @property {djs.model.Base} element
+ * @property {SVGElement} gfx
+ * @property {Event} originalEvent
+ */
+
+},{"../../util/Mouse":785,"../../util/RenderUtil":789,"lodash/collection/forEach":832,"min-dom/lib/delegate":980,"min-dom/lib/query":984,"tiny-svg/lib/append":1067,"tiny-svg/lib/attr":1069,"tiny-svg/lib/create":1073}],702:[function(require,module,exports){
 arguments[4][90][0].apply(exports,arguments)
-},{"./InteractionEvents":636,"dup":90}],638:[function(require,module,exports){
-arguments[4][339][0].apply(exports,arguments)
-},{"../../util/Elements":660,"dup":339}],639:[function(require,module,exports){
+},{"./InteractionEvents":701,"dup":90}],703:[function(require,module,exports){
+'use strict';
+
+var domEvent = require('min-dom/lib/event'),
+    domMatches = require('min-dom/lib/matches');
+
+/**
+ * A keyboard abstraction that may be activated and
+ * deactivated by users at will, consuming key events
+ * and triggering diagram actions.
+ *
+ * The implementation fires the following key events that allow
+ * other components to hook into key handling:
+ *
+ *  - keyboard.bind
+ *  - keyboard.unbind
+ *  - keyboard.init
+ *  - keyboard.destroy
+ *
+ * All events contain the fields (node, listeners).
+ *
+ * A default binding for the keyboard may be specified via the
+ * `keyboard.bindTo` configuration option.
+ *
+ * @param {Config} config
+ * @param {EventBus} eventBus
+ * @param {EditorActions} editorActions
+ */
+function Keyboard(config, eventBus, editorActions) {
+  var self = this;
+
+  this._config = config || {};
+  this._eventBus = eventBus;
+  this._editorActions = editorActions;
+
+  this._listeners = [];
+
+  // our key handler is a singleton that passes
+  // (keycode, modifiers) to each listener.
+  //
+  // listeners must indicate that they handled a key event
+  // by returning true. This stops the event propagation.
+  //
+  this._keyHandler = function(event) {
+
+    var i, l,
+        target = event.target,
+        listeners = self._listeners,
+        code = event.keyCode || event.charCode || -1;
+
+    if (target && (domMatches(target, 'input, textarea') || target.contentEditable === 'true')) {
+      return;
+    }
+
+    for (i = 0; (l = listeners[i]); i++) {
+      if (l(code, event)) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+    }
+  };
+
+  // properly clean dom registrations
+  eventBus.on('diagram.destroy', function() {
+    self._fire('destroy');
+
+    self.unbind();
+    self._listeners = null;
+  });
+
+  eventBus.on('diagram.init', function() {
+    self._fire('init');
+
+    if (config && config.bindTo) {
+      self.bind(config.bindTo);
+    }
+  });
+
+  this._init();
+}
+
+Keyboard.$inject = [
+  'config.keyboard',
+  'eventBus',
+  'editorActions'
+];
+
+module.exports = Keyboard;
+
+
+Keyboard.prototype.bind = function(node) {
+  // make sure that the keyboard is only bound once to the DOM
+  this.unbind();
+
+  this._node = node;
+
+  // bind key events
+  domEvent.bind(node, 'keydown', this._keyHandler, true);
+
+  this._fire('bind');
+};
+
+Keyboard.prototype.getBinding = function() {
+  return this._node;
+};
+
+Keyboard.prototype.unbind = function() {
+  var node = this._node;
+
+  if (node) {
+    this._fire('unbind');
+
+    // unbind key events
+    domEvent.unbind(node, 'keydown', this._keyHandler, true);
+  }
+
+  this._node = null;
+};
+
+Keyboard.prototype._fire = function(event) {
+  this._eventBus.fire('keyboard.' + event, { node: this._node, listeners: this._listeners });
+};
+
+Keyboard.prototype._init = function() {
+
+  var listeners = this._listeners;
+
+  var editorActions = this._editorActions,
+      config = this._config;
+
+  // init default listeners
+
+  // undo
+  // (CTRL|CMD) + Z
+  function undo(key, modifiers) {
+
+    if (isCmd(modifiers) && !isShift(modifiers) && key === 90) {
+      editorActions.trigger('undo');
+
+      return true;
+    }
+  }
+
+  // redo
+  // CTRL + Y
+  // CMD + SHIFT + Z
+  function redo(key, modifiers) {
+
+    if (isCmd(modifiers) && (key === 89 || (key === 90 && isShift(modifiers)))) {
+      editorActions.trigger('redo');
+
+      return true;
+    }
+  }
+
+  // copy
+  // CTRL/CMD + C
+  function copy(key, modifiers) {
+
+    if (isCmd(modifiers) && (key === 67)) {
+      editorActions.trigger('copy');
+
+      return true;
+    }
+  }
+
+  // paste
+  // CTRL/CMD + V
+  function paste(key, modifiers) {
+
+    if (isCmd(modifiers) && (key === 86)) {
+      editorActions.trigger('paste');
+
+      return true;
+    }
+  }
+
+  /**
+   * zoom in one step
+   * CTRL + +
+   *
+   * 107 = numpad plus
+   * 187 = regular plus
+   * 171 = regular plus in Firefox (german keyboard layout)
+   *  61 = regular plus in Firefox (US keyboard layout)
+   */
+  function zoomIn(key, modifiers) {
+
+    if ((key === 107 || key === 187 || key === 171 || key === 61) && isCmd(modifiers)) {
+      editorActions.trigger('stepZoom', { value: 1 });
+
+      return true;
+    }
+  }
+
+  /**
+   * zoom out one step
+   * CTRL + -
+   *
+   * 109 = numpad minus
+   * 189 = regular minus
+   * 173 = regular minus in Firefox (US and german keyboard layout)
+   */
+  function zoomOut(key, modifiers) {
+
+    if ((key === 109 || key === 189 || key === 173)  && isCmd(modifiers)) {
+      editorActions.trigger('stepZoom', { value: -1 });
+
+      return true;
+    }
+  }
+
+  /**
+   * zoom to the default level
+   * CTRL + 0
+   *
+   * 96 = numpad zero
+   * 48 = regular zero
+   */
+  function zoomDefault(key, modifiers) {
+
+    if ((key === 96 || key === 48) && isCmd(modifiers)) {
+      editorActions.trigger('zoom', { value: 1 });
+
+      return true;
+    }
+  }
+
+  // delete selected element
+  // DEL
+  function removeSelection(key, modifiers) {
+
+    if (key === 46) {
+      editorActions.trigger('removeSelection');
+
+      return true;
+    }
+  }
+
+  // move canvas left
+  // left arrow
+  //
+  // 37 = Left
+  // 38 = Up
+  // 39 = Right
+  // 40 = Down
+  function moveCanvas(key, modifiers) {
+
+    if ([37, 38, 39, 40].indexOf(key) >= 0) {
+
+      var opts = {
+        invertY: config.invertY,
+        speed: (config.speed || 50)
+      };
+
+      switch (key) {
+      case 37:    // Left
+        opts.direction = 'left';
+        break;
+      case 38:    // Up
+        opts.direction = 'up';
+        break;
+      case 39:    // Right
+        opts.direction = 'right';
+        break;
+      case 40:    // Down
+        opts.direction = 'down';
+        break;
+      }
+
+      editorActions.trigger('moveCanvas', opts);
+
+      return true;
+    }
+  }
+
+  listeners.push(undo);
+  listeners.push(redo);
+  listeners.push(copy);
+  listeners.push(paste);
+  listeners.push(removeSelection);
+  listeners.push(zoomIn);
+  listeners.push(zoomOut);
+  listeners.push(zoomDefault);
+  listeners.push(moveCanvas);
+};
+
+
+/**
+ * Add a listener function that is notified with (key, modifiers) whenever
+ * the keyboard is bound and the user presses a key.
+ *
+ * @param {Function} listenerFn
+ */
+Keyboard.prototype.addListener = function(listenerFn) {
+  this._listeners.push(listenerFn);
+};
+
+Keyboard.prototype.hasModifier = hasModifier;
+Keyboard.prototype.isCmd = isCmd;
+Keyboard.prototype.isShift = isShift;
+
+
+function hasModifier(modifiers) {
+  return (modifiers.ctrlKey || modifiers.metaKey || modifiers.shiftKey || modifiers.altKey);
+}
+
+function isCmd(modifiers) {
+  return modifiers.ctrlKey || modifiers.metaKey;
+}
+
+function isShift(modifiers) {
+  return modifiers.shiftKey;
+}
+
+},{"min-dom/lib/event":982,"min-dom/lib/matches":983}],704:[function(require,module,exports){
+module.exports = {
+  __init__: [ 'keyboard' ],
+  keyboard: [ 'type', require('./Keyboard') ]
+};
+
+},{"./Keyboard":703}],705:[function(require,module,exports){
+'use strict';
+
+var values = require('lodash/object/values');
+
+var getEnclosedElements = require('../../util/Elements').getEnclosedElements;
+
+var hasSecondaryModifier = require('../../util/Mouse').hasSecondaryModifier;
+
+var svgAppend = require('tiny-svg/lib/append'),
+    svgAttr = require('tiny-svg/lib/attr'),
+    svgCreate = require('tiny-svg/lib/create'),
+    svgRemove = require('tiny-svg/lib/remove');
+
+var LASSO_TOOL_CURSOR = 'crosshair';
+
+
+function LassoTool(eventBus, canvas, dragging, elementRegistry, selection, toolManager) {
+
+  this._selection = selection;
+  this._dragging = dragging;
+
+  var self = this;
+
+  // lasso visuals implementation
+
+  /**
+  * A helper that realizes the selection box visual
+  */
+  var visuals = {
+
+    create: function(context) {
+      var container = canvas.getDefaultLayer(),
+          frame;
+
+      frame = context.frame = svgCreate('rect');
+      svgAttr(frame, {
+        class: 'djs-lasso-overlay',
+        width:  1,
+        height: 1,
+        x: 0,
+        y: 0
+      });
+
+      svgAppend(container, frame);
+    },
+
+    update: function(context) {
+      var frame = context.frame,
+          bbox  = context.bbox;
+
+      svgAttr(frame, {
+        x: bbox.x,
+        y: bbox.y,
+        width: bbox.width,
+        height: bbox.height
+      });
+    },
+
+    remove: function(context) {
+
+      if (context.frame) {
+        svgRemove(context.frame);
+      }
+    }
+  };
+
+  toolManager.registerTool('lasso', {
+    tool: 'lasso.selection',
+    dragging: 'lasso'
+  });
+
+  eventBus.on('lasso.selection.end', function(event) {
+    var target = event.originalEvent.target;
+
+    // only reactive on diagram click
+    // on some occasions, event.hover is not set and we have to check if the target is an svg
+    if (!event.hover && !(target instanceof SVGElement)) {
+      return;
+    }
+
+    eventBus.once('lasso.selection.ended', function() {
+      self.activateLasso(event.originalEvent, true);
+    });
+  });
+
+  // lasso interaction implementation
+
+  eventBus.on('lasso.end', function(event) {
+
+    var bbox = toBBox(event);
+
+    var elements = elementRegistry.filter(function(element) {
+      return element;
+    });
+
+    self.select(elements, bbox);
+  });
+
+  eventBus.on('lasso.start', function(event) {
+
+    var context = event.context;
+
+    context.bbox = toBBox(event);
+    visuals.create(context);
+  });
+
+  eventBus.on('lasso.move', function(event) {
+
+    var context = event.context;
+
+    context.bbox = toBBox(event);
+    visuals.update(context);
+  });
+
+  eventBus.on('lasso.cleanup', function(event) {
+
+    var context = event.context;
+
+    visuals.remove(context);
+  });
+
+
+  // event integration
+
+  eventBus.on('element.mousedown', 1500, function(event) {
+
+    if (hasSecondaryModifier(event)) {
+      self.activateLasso(event.originalEvent);
+
+      event.stopPropagation();
+    }
+  });
+}
+
+LassoTool.$inject = [
+  'eventBus',
+  'canvas',
+  'dragging',
+  'elementRegistry',
+  'selection',
+  'toolManager'
+];
+
+module.exports = LassoTool;
+
+
+LassoTool.prototype.activateLasso = function(event, autoActivate) {
+
+  this._dragging.init(event, 'lasso', {
+    autoActivate: autoActivate,
+    cursor: LASSO_TOOL_CURSOR,
+    data: {
+      context: {}
+    }
+  });
+};
+
+LassoTool.prototype.activateSelection = function(event) {
+
+  this._dragging.init(event, 'lasso.selection', {
+    trapClick: false,
+    cursor: LASSO_TOOL_CURSOR,
+    data: {
+      context: {}
+    }
+  });
+};
+
+LassoTool.prototype.select = function(elements, bbox) {
+  var selectedElements = getEnclosedElements(elements, bbox);
+
+  this._selection.select(values(selectedElements));
+};
+
+LassoTool.prototype.toggle = function() {
+  if (this.isActive()) {
+    this._dragging.cancel();
+  } else {
+    this.activateSelection();
+  }
+};
+
+LassoTool.prototype.isActive = function() {
+  var context = this._dragging.context();
+
+  return context && /^lasso/.test(context.prefix);
+};
+
+
+
+function toBBox(event) {
+
+  var start = {
+
+    x: event.x - event.dx,
+    y: event.y - event.dy
+  };
+
+  var end = {
+    x: event.x,
+    y: event.y
+  };
+
+  var bbox;
+
+  if ((start.x <= end.x && start.y < end.y) ||
+      (start.x < end.x && start.y <= end.y)) {
+
+    bbox = {
+      x: start.x,
+      y: start.y,
+      width:  end.x - start.x,
+      height: end.y - start.y
+    };
+  } else if ((start.x >= end.x && start.y < end.y) ||
+             (start.x > end.x && start.y <= end.y)) {
+
+    bbox = {
+      x: end.x,
+      y: start.y,
+      width:  start.x - end.x,
+      height: end.y - start.y
+    };
+  } else if ((start.x <= end.x && start.y > end.y) ||
+             (start.x < end.x && start.y >= end.y)) {
+
+    bbox = {
+      x: start.x,
+      y: end.y,
+      width:  end.x - start.x,
+      height: start.y - end.y
+    };
+  } else if ((start.x >= end.x && start.y > end.y) ||
+             (start.x > end.x && start.y >= end.y)) {
+
+    bbox = {
+      x: end.x,
+      y: end.y,
+      width:  start.x - end.x,
+      height: start.y - end.y
+    };
+  } else {
+
+    bbox = {
+      x: end.x,
+      y: end.y,
+      width:  0,
+      height: 0
+    };
+  }
+  return bbox;
+}
+
+},{"../../util/Elements":777,"../../util/Mouse":785,"lodash/object/values":972,"tiny-svg/lib/append":1067,"tiny-svg/lib/attr":1069,"tiny-svg/lib/create":1073,"tiny-svg/lib/remove":1075}],706:[function(require,module,exports){
+'use strict';
+
+module.exports = {
+  __depends__: [ require('../tool-manager') ],
+  __init__: [ 'lassoTool' ],
+  lassoTool: [ 'type', require('./LassoTool') ]
+};
+
+},{"../tool-manager":758,"./LassoTool":705}],707:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach');
+
+var model = require('../../model');
+
+
+/**
+ * The basic modeling entry point.
+ *
+ * @param {EventBus} eventBus
+ * @param {ElementFactory} elementFactory
+ * @param {CommandStack} commandStack
+ */
+function Modeling(eventBus, elementFactory, commandStack) {
+  this._eventBus = eventBus;
+  this._elementFactory = elementFactory;
+  this._commandStack = commandStack;
+
+  var self = this;
+
+  eventBus.on('diagram.init', function() {
+    // register modeling handlers
+    self.registerHandlers(commandStack);
+  });
+}
+
+Modeling.$inject = [ 'eventBus', 'elementFactory', 'commandStack' ];
+
+module.exports = Modeling;
+
+
+Modeling.prototype.getHandlers = function() {
+  return {
+    'shape.append': require('./cmd/AppendShapeHandler'),
+    'shape.create': require('./cmd/CreateShapeHandler'),
+    'shape.delete': require('./cmd/DeleteShapeHandler'),
+    'shape.move': require('./cmd/MoveShapeHandler'),
+    'shape.resize': require('./cmd/ResizeShapeHandler'),
+    'shape.replace': require('./cmd/ReplaceShapeHandler'),
+    'shape.toggleCollapse': require('./cmd/ToggleShapeCollapseHandler'),
+
+    'spaceTool': require('./cmd/SpaceToolHandler'),
+
+    'label.create': require('./cmd/CreateLabelHandler'),
+
+    'connection.create': require('./cmd/CreateConnectionHandler'),
+    'connection.delete': require('./cmd/DeleteConnectionHandler'),
+    'connection.move': require('./cmd/MoveConnectionHandler'),
+    'connection.layout': require('./cmd/LayoutConnectionHandler'),
+
+    'connection.updateWaypoints': require('./cmd/UpdateWaypointsHandler'),
+
+    'connection.reconnectStart': require('./cmd/ReconnectConnectionHandler'),
+    'connection.reconnectEnd': require('./cmd/ReconnectConnectionHandler'),
+
+    'elements.move': require('./cmd/MoveElementsHandler'),
+    'elements.delete': require('./cmd/DeleteElementsHandler'),
+
+    'elements.distribute': require('./cmd/DistributeElementsHandler'),
+    'elements.align': require('./cmd/AlignElementsHandler'),
+
+    'element.updateAttachment': require('./cmd/UpdateAttachmentHandler'),
+
+    'elements.paste': require('./cmd/PasteHandler')
+  };
+};
+
+/**
+ * Register handlers with the command stack
+ *
+ * @param {CommandStack} commandStack
+ */
+Modeling.prototype.registerHandlers = function(commandStack) {
+  forEach(this.getHandlers(), function(handler, id) {
+    commandStack.registerHandler(id, handler);
+  });
+};
+
+
+///// modeling helpers /////////////////////////////////////////
+
+Modeling.prototype.moveShape = function(shape, delta, newParent, newParentIndex, hints) {
+
+  if (typeof newParentIndex === 'object') {
+    hints = newParentIndex;
+    newParentIndex = null;
+  }
+
+  var context = {
+    shape: shape,
+    delta:  delta,
+    newParent: newParent,
+    newParentIndex: newParentIndex,
+    hints: hints || {}
+  };
+
+  this._commandStack.execute('shape.move', context);
+};
+
+
+/**
+ * Update the attachment of the given shape.
+ *
+ * @param  {djs.mode.Base} shape
+ * @param  {djs.model.Base} [newHost]
+ */
+Modeling.prototype.updateAttachment = function(shape, newHost) {
+  var context = {
+    shape: shape,
+    newHost: newHost
+  };
+
+  this._commandStack.execute('element.updateAttachment', context);
+};
+
+/**
+ * Move a number of shapes to a new target, either setting it as
+ * the new parent or attaching it.
+ *
+ * @param {Array<djs.mode.Base>} shapes
+ * @param {Point} delta
+ * @param {djs.model.Base} [target]
+ * @param {Boolean} [isAttach=false]
+ * @param {Object} [hints]
+ */
+Modeling.prototype.moveElements = function(shapes, delta, target, isAttach, hints) {
+  if (typeof isAttach === 'object') {
+    hints = isAttach;
+    isAttach = undefined;
+  }
+
+  var newParent = target,
+      newHost;
+
+  if (isAttach === true) {
+    newHost = target;
+    newParent = target.parent;
+  }
+
+  if (isAttach === false) {
+    newHost = null;
+  }
+
+  var context = {
+    shapes: shapes,
+    delta: delta,
+    newParent: newParent,
+    newHost: newHost,
+    hints: hints || {}
+  };
+
+  this._commandStack.execute('elements.move', context);
+};
+
+Modeling.prototype.moveConnection = function(connection, delta, newParent, newParentIndex, hints) {
+
+  if (typeof newParentIndex === 'object') {
+    hints = newParentIndex;
+    newParentIndex = undefined;
+  }
+
+  var context = {
+    connection: connection,
+    delta: delta,
+    newParent: newParent,
+    newParentIndex: newParentIndex,
+    hints: hints || {}
+  };
+
+  this._commandStack.execute('connection.move', context);
+};
+
+
+Modeling.prototype.layoutConnection = function(connection, hints) {
+  var context = {
+    connection: connection,
+    hints: hints || {}
+  };
+
+  this._commandStack.execute('connection.layout', context);
+};
+
+/**
+ * Create connection.
+ *
+ * @param {djs.model.Base} source
+ * @param {djs.model.Base} target
+ * @param {Number} [targetIndex]
+ * @param {Object|djs.model.Connection} connection
+ * @param {djs.model.Base} parent
+ * @param {Object} hints
+ *
+ * @return {djs.model.Connection} the created connection.
+ */
+Modeling.prototype.createConnection = function(source, target, targetIndex, connection, parent, hints) {
+
+  if (typeof targetIndex === 'object') {
+    hints = parent;
+    parent = connection;
+    connection = targetIndex;
+    targetIndex = undefined;
+  }
+
+  connection = this._create('connection', connection);
+
+  var context = {
+    source: source,
+    target: target,
+    parent: parent,
+    parentIndex: targetIndex,
+    connection: connection,
+    hints: hints
+  };
+
+  this._commandStack.execute('connection.create', context);
+
+  return context.connection;
+};
+
+Modeling.prototype.createShape = function(shape, position, target, targetIndex, isAttach, hints) {
+
+  if (typeof targetIndex !== 'number') {
+    hints = isAttach;
+    isAttach = targetIndex;
+  }
+
+  if (typeof isAttach !== 'boolean') {
+    hints = isAttach;
+    isAttach = false;
+  }
+
+  shape = this._create('shape', shape);
+
+  var context = {
+    position: position,
+    shape: shape,
+    parent: target,
+    parentIndex: targetIndex,
+    host: shape.host,
+    hints: hints || {}
+  };
+
+  if (isAttach) {
+    context.parent = target.parent;
+    context.host = target;
+  }
+
+  this._commandStack.execute('shape.create', context);
+
+  return context.shape;
+};
+
+
+Modeling.prototype.createLabel = function(labelTarget, position, label, parent) {
+
+  label = this._create('label', label);
+
+  var context = {
+    labelTarget: labelTarget,
+    position: position,
+    parent: parent || labelTarget.parent,
+    shape: label
+  };
+
+  this._commandStack.execute('label.create', context);
+
+  return context.shape;
+};
+
+
+Modeling.prototype.appendShape = function(source, shape, position, parent, connection, connectionParent) {
+
+  shape = this._create('shape', shape);
+
+  var context = {
+    source: source,
+    position: position,
+    parent: parent,
+    shape: shape,
+    connection: connection,
+    connectionParent: connectionParent
+  };
+
+  this._commandStack.execute('shape.append', context);
+
+  return context.shape;
+};
+
+
+Modeling.prototype.removeElements = function(elements) {
+  var context = {
+    elements: elements
+  };
+
+  this._commandStack.execute('elements.delete', context);
+};
+
+
+Modeling.prototype.distributeElements = function(groups, axis, dimension) {
+  var context = {
+    groups: groups,
+    axis: axis,
+    dimension: dimension
+  };
+
+  this._commandStack.execute('elements.distribute', context);
+};
+
+
+Modeling.prototype.removeShape = function(shape, hints) {
+  var context = {
+    shape: shape,
+    hints: hints || {}
+  };
+
+  this._commandStack.execute('shape.delete', context);
+};
+
+
+Modeling.prototype.removeConnection = function(connection, hints) {
+  var context = {
+    connection: connection,
+    hints: hints || {}
+  };
+
+  this._commandStack.execute('connection.delete', context);
+};
+
+Modeling.prototype.replaceShape = function(oldShape, newShape, hints) {
+  var context = {
+    oldShape: oldShape,
+    newData: newShape,
+    hints: hints || {}
+  };
+
+  this._commandStack.execute('shape.replace', context);
+
+  return context.newShape;
+};
+
+Modeling.prototype.pasteElements = function(tree, topParent, position) {
+  var context = {
+    tree: tree,
+    topParent: topParent,
+    position: position
+  };
+
+  this._commandStack.execute('elements.paste', context);
+};
+
+Modeling.prototype.alignElements = function(elements, alignment) {
+  var context = {
+    elements: elements,
+    alignment: alignment
+  };
+
+  this._commandStack.execute('elements.align', context);
+};
+
+Modeling.prototype.resizeShape = function(shape, newBounds) {
+  var context = {
+    shape: shape,
+    newBounds: newBounds
+  };
+
+  this._commandStack.execute('shape.resize', context);
+};
+
+Modeling.prototype.createSpace = function(movingShapes, resizingShapes, delta, direction) {
+  var context = {
+    movingShapes: movingShapes,
+    resizingShapes: resizingShapes,
+    delta: delta,
+    direction: direction
+  };
+
+  this._commandStack.execute('spaceTool', context);
+};
+
+Modeling.prototype.updateWaypoints = function(connection, newWaypoints, hints) {
+  var context = {
+    connection: connection,
+    newWaypoints: newWaypoints,
+    hints: hints || {}
+  };
+
+  this._commandStack.execute('connection.updateWaypoints', context);
+};
+
+Modeling.prototype.reconnectStart = function(connection, newSource, dockingOrPoints) {
+  var context = {
+    connection: connection,
+    newSource: newSource,
+    dockingOrPoints: dockingOrPoints
+  };
+
+  this._commandStack.execute('connection.reconnectStart', context);
+};
+
+Modeling.prototype.reconnectEnd = function(connection, newTarget, dockingOrPoints) {
+  var context = {
+    connection: connection,
+    newTarget: newTarget,
+    dockingOrPoints: dockingOrPoints
+  };
+
+  this._commandStack.execute('connection.reconnectEnd', context);
+};
+
+Modeling.prototype.connect = function(source, target, attrs, hints) {
+  return this.createConnection(source, target, attrs || {}, source.parent, hints);
+};
+
+Modeling.prototype._create = function(type, attrs) {
+  if (attrs instanceof model.Base) {
+    return attrs;
+  } else {
+    return this._elementFactory.create(type, attrs);
+  }
+};
+
+Modeling.prototype.toggleCollapse = function(shape, hints) {
+  var context = {
+    shape: shape,
+    hints: hints || {}
+  };
+
+  this._commandStack.execute('shape.toggleCollapse', context);
+};
+
+},{"../../model":765,"./cmd/AlignElementsHandler":708,"./cmd/AppendShapeHandler":709,"./cmd/CreateConnectionHandler":710,"./cmd/CreateLabelHandler":711,"./cmd/CreateShapeHandler":712,"./cmd/DeleteConnectionHandler":713,"./cmd/DeleteElementsHandler":714,"./cmd/DeleteShapeHandler":715,"./cmd/DistributeElementsHandler":716,"./cmd/LayoutConnectionHandler":717,"./cmd/MoveConnectionHandler":718,"./cmd/MoveElementsHandler":719,"./cmd/MoveShapeHandler":720,"./cmd/PasteHandler":722,"./cmd/ReconnectConnectionHandler":723,"./cmd/ReplaceShapeHandler":724,"./cmd/ResizeShapeHandler":725,"./cmd/SpaceToolHandler":726,"./cmd/ToggleShapeCollapseHandler":727,"./cmd/UpdateAttachmentHandler":728,"./cmd/UpdateWaypointsHandler":729,"lodash/collection/forEach":832}],708:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach');
+
+/**
+ * A handler that align elements in a certain way.
+ *
+ */
+function AlignElements(modeling, canvas) {
+  this._modeling = modeling;
+  this._canvas = canvas;
+}
+
+AlignElements.$inject = [ 'modeling', 'canvas' ];
+
+module.exports = AlignElements;
+
+
+AlignElements.prototype.preExecute = function(context) {
+  var modeling = this._modeling;
+
+  var elements = context.elements,
+      alignment = context.alignment;
+
+
+  forEach(elements, function(element) {
+    var delta = {
+      x: 0,
+      y: 0
+    };
+
+    if (alignment.left) {
+      delta.x = alignment.left - element.x;
+
+    } else if (alignment.right) {
+      delta.x = (alignment.right - element.width) - element.x;
+
+    } else if (alignment.center) {
+      delta.x = (alignment.center - Math.round(element.width / 2)) - element.x;
+
+    } else if (alignment.top) {
+      delta.y = alignment.top - element.y;
+
+    } else if (alignment.bottom) {
+      delta.y = (alignment.bottom - element.height) - element.y;
+
+    } else if (alignment.middle) {
+      delta.y = (alignment.middle - Math.round(element.height / 2)) - element.y;
+    }
+
+    modeling.moveElements([ element ], delta, element.parent);
+  });
+};
+
+AlignElements.prototype.postExecute = function(context) {
+
+};
+
+},{"lodash/collection/forEach":832}],709:[function(require,module,exports){
+'use strict';
+
+var any = require('lodash/collection/any');
+
+var inherits = require('inherits');
+
+
+/**
+ * A handler that implements reversible appending of shapes
+ * to a source shape.
+ *
+ * @param {canvas} Canvas
+ * @param {elementFactory} ElementFactory
+ * @param {modeling} Modeling
+ */
+function AppendShapeHandler(modeling) {
+  this._modeling = modeling;
+}
+
+inherits(AppendShapeHandler, require('./NoopHandler'));
+
+
+AppendShapeHandler.$inject = [ 'modeling' ];
+
+module.exports = AppendShapeHandler;
+
+
+////// api /////////////////////////////////////////////
+
+/**
+ * Creates a new shape
+ *
+ * @param {Object} context
+ * @param {ElementDescriptor} context.shape the new shape
+ * @param {ElementDescriptor} context.source the source object
+ * @param {ElementDescriptor} context.parent the parent object
+ * @param {Point} context.position position of the new element
+ */
+AppendShapeHandler.prototype.preExecute = function(context) {
+
+  if (!context.source) {
+    throw new Error('source required');
+  }
+
+  var parent = context.parent || context.source.parent,
+      shape = this._modeling.createShape(context.shape, context.position, parent);
+
+  context.shape = shape;
+};
+
+AppendShapeHandler.prototype.postExecute = function(context) {
+  var parent = context.connectionParent || context.shape.parent;
+
+  if (!existsConnection(context.source, context.shape)) {
+
+    // create connection
+    this._modeling.connect(context.source, context.shape, context.connection, parent);
+  }
+};
+
+
+function existsConnection(source, target) {
+  return any(source.outgoing, function(c) {
+    return c.target === target;
+  });
+}
+},{"./NoopHandler":721,"inherits":820,"lodash/collection/any":828}],710:[function(require,module,exports){
+'use strict';
+
+
+function CreateConnectionHandler(canvas, layouter) {
+  this._canvas = canvas;
+  this._layouter = layouter;
+}
+
+CreateConnectionHandler.$inject = [ 'canvas', 'layouter' ];
+
+module.exports = CreateConnectionHandler;
+
+
+
+////// api /////////////////////////////////////////
+
+/**
+ * Appends a shape to a target shape
+ *
+ * @param {Object} context
+ * @param {djs.element.Base} context.source the source object
+ * @param {djs.element.Base} context.target the parent object
+ * @param {Point} context.position position of the new element
+ */
+CreateConnectionHandler.prototype.execute = function(context) {
+
+  var connection = context.connection,
+      source = context.source,
+      target = context.target,
+      parent = context.parent,
+      hints = context.hints;
+
+  if (!source || !target) {
+    throw new Error('source and target required');
+  }
+
+  if (!parent) {
+    throw new Error('parent required');
+  }
+
+  connection.source = source;
+  connection.target = target;
+
+  if (!connection.waypoints) {
+    connection.waypoints = this._layouter.layoutConnection(connection, hints);
+  }
+
+  // add connection
+  this._canvas.addConnection(connection, parent);
+
+  return connection;
+};
+
+CreateConnectionHandler.prototype.revert = function(context) {
+  var connection = context.connection;
+
+  this._canvas.removeConnection(connection);
+
+  connection.source = null;
+  connection.target = null;
+};
+},{}],711:[function(require,module,exports){
+'use strict';
+
+var inherits = require('inherits');
+
+var CreateShapeHandler = require('./CreateShapeHandler');
+
+
+/**
+ * A handler that attaches a label to a given target shape.
+ *
+ * @param {canvas} Canvas
+ */
+function CreateLabelHandler(canvas) {
+  CreateShapeHandler.call(this, canvas);
+}
+
+inherits(CreateLabelHandler, CreateShapeHandler);
+
+CreateLabelHandler.$inject = [ 'canvas' ];
+
+module.exports = CreateLabelHandler;
+
+
+
+////// api /////////////////////////////////////////
+
+
+var originalExecute = CreateShapeHandler.prototype.execute;
+
+/**
+ * Appends a label to a target shape.
+ *
+ * @method CreateLabelHandler#execute
+ *
+ * @param {Object} context
+ * @param {ElementDescriptor} context.target the element the label is attached to
+ * @param {ElementDescriptor} context.parent the parent object
+ * @param {Point} context.position position of the new element
+ */
+CreateLabelHandler.prototype.execute = function(context) {
+
+  var label = context.shape;
+
+  ensureValidDimensions(label);
+
+  label.labelTarget = context.labelTarget;
+
+  return originalExecute.call(this, context);
+};
+
+var originalRevert = CreateShapeHandler.prototype.revert;
+
+/**
+ * Undo append by removing the shape
+ */
+CreateLabelHandler.prototype.revert = function(context) {
+  context.shape.labelTarget = null;
+
+  return originalRevert.call(this, context);
+};
+
+
+////// helpers /////////////////////////////////////////
+
+function ensureValidDimensions(label) {
+  // make sure a label has valid { width, height } dimensions
+  [ 'width', 'height' ].forEach(function(prop) {
+    if (typeof label[prop] === 'undefined') {
+      label[prop] = 0;
+    }
+  });
+}
+},{"./CreateShapeHandler":712,"inherits":820}],712:[function(require,module,exports){
+'use strict';
+
+var assign = require('lodash/object/assign');
+
+var round = Math.round;
+
+
+/**
+ * A handler that implements reversible addition of shapes.
+ *
+ * @param {canvas} Canvas
+ */
+function CreateShapeHandler(canvas) {
+  this._canvas = canvas;
+}
+
+CreateShapeHandler.$inject = [ 'canvas' ];
+
+module.exports = CreateShapeHandler;
+
+
+
+////// api /////////////////////////////////////////
+
+
+/**
+ * Appends a shape to a target shape
+ *
+ * @param {Object} context
+ * @param {djs.model.Base} context.parent the parent object
+ * @param {Point} context.position position of the new element
+ */
+CreateShapeHandler.prototype.execute = function(context) {
+
+  var shape = context.shape,
+      positionOrBounds = context.position,
+      parent = context.parent,
+      parentIndex = context.parentIndex;
+
+  if (!parent) {
+    throw new Error('parent required');
+  }
+
+  if (!positionOrBounds) {
+    throw new Error('position required');
+  }
+
+  // (1) add at event center position _or_ at given bounds
+  if (positionOrBounds.width !== undefined) {
+    assign(shape, positionOrBounds);
+  } else {
+    assign(shape, {
+      x: positionOrBounds.x - round(shape.width / 2),
+      y: positionOrBounds.y - round(shape.height / 2)
+    });
+  }
+
+  // (2) add to canvas
+  this._canvas.addShape(shape, parent, parentIndex);
+
+  return shape;
+};
+
+
+/**
+ * Undo append by removing the shape
+ */
+CreateShapeHandler.prototype.revert = function(context) {
+
+  // (3) remove form canvas
+  this._canvas.removeShape(context.shape);
+};
+},{"lodash/object/assign":964}],713:[function(require,module,exports){
+'use strict';
+
+var Collections = require('../../../util/Collections');
+
+
+/**
+ * A handler that implements reversible deletion of Connections.
+ *
+ */
+function DeleteConnectionHandler(canvas, modeling) {
+  this._canvas = canvas;
+  this._modeling = modeling;
+}
+
+DeleteConnectionHandler.$inject = [ 'canvas', 'modeling' ];
+
+module.exports = DeleteConnectionHandler;
+
+
+/**
+ * - Remove attached label
+ */
+DeleteConnectionHandler.prototype.preExecute = function(context) {
+
+  var connection = context.connection;
+
+  // Remove label
+  if (connection.label) {
+    this._modeling.removeShape(connection.label);
+  }
+};
+
+DeleteConnectionHandler.prototype.execute = function(context) {
+
+  var connection = context.connection,
+      parent = connection.parent;
+
+  context.parent = parent;
+  context.parentIndex = Collections.indexOf(parent.children, connection);
+
+  context.source = connection.source;
+  context.target = connection.target;
+
+  this._canvas.removeConnection(connection);
+
+  connection.source = null;
+  connection.target = null;
+  connection.label  = null;
+
+  return connection;
+};
+
+/**
+ * Command revert implementation.
+ */
+DeleteConnectionHandler.prototype.revert = function(context) {
+
+  var connection = context.connection,
+      parent = context.parent,
+      parentIndex = context.parentIndex;
+
+  connection.source = context.source;
+  connection.target = context.target;
+
+  // restore previous location in old parent
+  Collections.add(parent.children, connection, parentIndex);
+
+  this._canvas.addConnection(connection, parent);
+
+  return connection;
+};
+
+},{"../../../util/Collections":774}],714:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach'),
+    inherits = require('inherits');
+
+
+function DeleteElementsHandler(modeling, elementRegistry) {
+  this._modeling = modeling;
+  this._elementRegistry = elementRegistry;
+}
+
+inherits(DeleteElementsHandler, require('./NoopHandler'));
+
+DeleteElementsHandler.$inject = [ 'modeling', 'elementRegistry' ];
+
+module.exports = DeleteElementsHandler;
+
+
+DeleteElementsHandler.prototype.postExecute = function(context) {
+
+  var modeling = this._modeling,
+      elementRegistry = this._elementRegistry,
+      elements = context.elements;
+
+  forEach(elements, function(element) {
+
+    // element may have been removed with previous
+    // remove operations already (e.g. in case of nesting)
+    if (!elementRegistry.get(element.id)) {
+      return;
+    }
+
+    if (element.waypoints) {
+      modeling.removeConnection(element);
+    } else {
+      modeling.removeShape(element);
+    }
+  });
+};
+},{"./NoopHandler":721,"inherits":820,"lodash/collection/forEach":832}],715:[function(require,module,exports){
+'use strict';
+
+var Collections = require('../../../util/Collections');
+
+var saveClear = require('../../../util/Removal').saveClear;
+
+
+/**
+ * A handler that implements reversible deletion of shapes.
+ *
+ */
+function DeleteShapeHandler(canvas, modeling) {
+  this._canvas = canvas;
+  this._modeling = modeling;
+}
+
+DeleteShapeHandler.$inject = [ 'canvas', 'modeling' ];
+
+module.exports = DeleteShapeHandler;
+
+
+/**
+ * - Remove connections
+ * - Remove all direct children
+ */
+DeleteShapeHandler.prototype.preExecute = function(context) {
+
+  var modeling = this._modeling;
+
+  var shape = context.shape,
+      label = shape.label;
+
+  // Clean up on removeShape(label)
+  if (shape.labelTarget) {
+    context.labelTarget = shape.labelTarget;
+    shape.labelTarget = null;
+  }
+
+  // Remove label
+  if (label) {
+    this._modeling.removeShape(label, { nested: true });
+  }
+
+  // remove connections
+  saveClear(shape.incoming, function(connection) {
+    // To make sure that the connection isn't removed twice
+    // For example if a container is removed
+    modeling.removeConnection(connection, { nested: true });
+  });
+
+  saveClear(shape.outgoing, function(connection) {
+    modeling.removeConnection(connection, { nested: true });
+  });
+
+
+  // remove children
+  saveClear(shape.children, function(e) {
+    modeling.removeShape(e, { nested: true });
+  });
+};
+
+/**
+ * Remove shape and remember the parent
+ */
+DeleteShapeHandler.prototype.execute = function(context) {
+  var canvas = this._canvas;
+
+  var shape = context.shape,
+      oldParent = shape.parent;
+
+  context.oldParent = oldParent;
+  context.oldParentIndex = Collections.indexOf(oldParent.children, shape);
+
+  shape.label = null;
+
+  canvas.removeShape(shape);
+
+  return shape;
+};
+
+
+/**
+ * Command revert implementation
+ */
+DeleteShapeHandler.prototype.revert = function(context) {
+
+  var canvas = this._canvas;
+
+  var shape = context.shape,
+      oldParent = context.oldParent,
+      oldParentIndex = context.oldParentIndex,
+      labelTarget = context.labelTarget;
+
+  // restore previous location in old oldParent
+  Collections.add(oldParent.children, shape, oldParentIndex);
+
+  if (labelTarget) {
+    labelTarget.label = shape;
+  }
+
+  canvas.addShape(shape, oldParent);
+
+  return shape;
+};
+
+},{"../../../util/Collections":774,"../../../util/Removal":788}],716:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach'),
+    sortBy = require('lodash/collection/sortBy');
+
+/**
+ * A handler that distributes elements evenly.
+ */
+function DistributeElements(modeling) {
+  this._modeling = modeling;
+}
+
+DistributeElements.$inject = [ 'modeling' ];
+
+module.exports = DistributeElements;
+
+var OFF_AXIS = {
+  x: 'y',
+  y: 'x'
+};
+
+DistributeElements.prototype.preExecute = function(context) {
+  var modeling = this._modeling;
+
+  var groups = context.groups,
+      axis = context.axis,
+      dimension = context.dimension;
+
+  function updateRange(group, element) {
+    group.range.min = Math.min(element[axis], group.range.min);
+    group.range.max = Math.max(element[axis] + element[dimension], group.range.max);
+  }
+
+  function center(element) {
+    return element[axis] + element[dimension] / 2;
+  }
+
+  function lastIdx(arr) {
+    return arr.length - 1;
+  }
+
+  function rangeDiff(range) {
+    return range.max - range.min;
+  }
+
+  function centerElement(refCenter, element) {
+    var delta = { y: 0 };
+
+    delta[axis] = refCenter - center(element);
+
+    if (delta[axis]) {
+
+      delta[OFF_AXIS[axis]] = 0;
+
+      modeling.moveElements([ element ], delta, element.parent);
+    }
+  }
+
+  var firstGroup = groups[0],
+      lastGroupIdx = lastIdx(groups),
+      lastGroup = groups[ lastGroupIdx ];
+
+  var margin,
+      spaceInBetween,
+      groupsSize = 0; // the size of each range
+
+  forEach(groups, function(group, idx) {
+    var sortedElements,
+        refElem,
+        refCenter;
+
+    if (group.elements.length < 2) {
+      if (idx && idx !== groups.length - 1) {
+        updateRange(group, group.elements[0]);
+
+        groupsSize += rangeDiff(group.range);
+      }
+      return;
+    }
+
+    sortedElements = sortBy(group.elements, axis);
+
+    refElem = sortedElements[0];
+
+    if (idx === lastGroupIdx) {
+      refElem = sortedElements[lastIdx(sortedElements)];
+    }
+
+    refCenter = center(refElem);
+
+    // wanna update the ranges after the shapes have been centered
+    group.range = null;
+
+    forEach(sortedElements, function(element) {
+
+      centerElement(refCenter, element);
+
+      if (group.range === null) {
+        group.range = {
+          min: element[axis],
+          max: element[axis] + element[dimension]
+        };
+
+        return;
+      }
+
+      // update group's range after centering the range elements
+      updateRange(group, element);
+    });
+
+    if (idx && idx !== groups.length - 1) {
+      groupsSize += rangeDiff(group.range);
+    }
+  });
+
+  spaceInBetween = Math.abs(lastGroup.range.min - firstGroup.range.max);
+
+  margin = Math.round((spaceInBetween - groupsSize) / (groups.length - 1));
+
+  if (margin < groups.length - 1) {
+    return;
+  }
+
+  forEach(groups, function(group, groupIdx) {
+    var delta = {},
+        prevGroup;
+
+    if (group === firstGroup || group === lastGroup) {
+      return;
+    }
+
+    prevGroup = groups[groupIdx - 1];
+
+    group.range.max = 0;
+
+    forEach(group.elements, function(element, idx) {
+      delta[OFF_AXIS[axis]] = 0;
+      delta[axis] = (prevGroup.range.max - element[axis]) + margin;
+
+      if (group.range.min !== element[axis]) {
+        delta[axis] += element[axis] - group.range.min;
+      }
+
+      if (delta[axis]) {
+        modeling.moveElements([ element ], delta, element.parent);
+      }
+
+      group.range.max = Math.max(element[axis] + element[dimension], idx ? group.range.max : 0);
+    });
+  });
+};
+
+DistributeElements.prototype.postExecute = function(context) {
+
+};
+
+},{"lodash/collection/forEach":832,"lodash/collection/sortBy":839}],717:[function(require,module,exports){
+'use strict';
+
+var assign = require('lodash/object/assign');
+
+
+/**
+ * A handler that implements reversible moving of shapes.
+ */
+function LayoutConnectionHandler(layouter, canvas) {
+  this._layouter = layouter;
+  this._canvas = canvas;
+}
+
+LayoutConnectionHandler.$inject = [ 'layouter', 'canvas' ];
+
+module.exports = LayoutConnectionHandler;
+
+LayoutConnectionHandler.prototype.execute = function(context) {
+
+  var connection = context.connection,
+      parent = connection.parent,
+      connectionSiblings = parent.children;
+
+  var oldIndex = connectionSiblings.indexOf(connection);
+
+  var oldWaypoints = connection.waypoints;
+
+  assign(context, {
+    oldWaypoints: oldWaypoints,
+    oldIndex: oldIndex
+  });
+
+  sendToFront(connection);
+
+  connection.waypoints = this._layouter.layoutConnection(connection, context.hints);
+
+  return connection;
+};
+
+LayoutConnectionHandler.prototype.revert = function(context) {
+
+  var connection = context.connection,
+      parent = connection.parent,
+      connectionSiblings = parent.children,
+      currentIndex = connectionSiblings.indexOf(connection),
+      oldIndex = context.oldIndex;
+
+  connection.waypoints = context.oldWaypoints;
+
+  if (oldIndex !== currentIndex) {
+
+    // change position of connection in shape
+    connectionSiblings.splice(currentIndex, 1);
+    connectionSiblings.splice(oldIndex, 0, connection);
+  }
+
+  return connection;
+};
+
+
+////////////// helpers /////////////////////////////////////
+
+
+// connections should have a higher z-order as there source and targets
+function sendToFront(connection) {
+
+  var connectionSiblings = connection.parent.children;
+
+  var connectionIdx = connectionSiblings.indexOf(connection),
+      sourceIdx = findIndex(connectionSiblings, connection.source),
+      targetIdx = findIndex(connectionSiblings, connection.target),
+
+      // ensure we do not send the connection back
+      // if it is already in front
+      insertIndex = Math.max(sourceIdx + 1, targetIdx + 1, connectionIdx);
+
+  if (connectionIdx < insertIndex) {
+    connectionSiblings.splice(insertIndex, 0, connection); // add to new position
+    connectionSiblings.splice(connectionIdx, 1); // remove from old position
+  }
+
+  function findIndex(array, obj) {
+
+    var index = array.indexOf(obj);
+    if (index < 0 && obj) {
+      var parent = obj.parent;
+      index = findIndex(array, parent);
+    }
+    return index;
+  }
+
+  return insertIndex;
+}
+
+},{"lodash/object/assign":964}],718:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach');
+
+var Collections = require('../../../util/Collections');
+
+
+/**
+ * A handler that implements reversible moving of connections.
+ *
+ * The handler differs from the layout connection handler in a sense
+ * that it preserves the connection layout.
+ */
+function MoveConnectionHandler() { }
+
+module.exports = MoveConnectionHandler;
+
+
+MoveConnectionHandler.prototype.execute = function(context) {
+
+  var connection = context.connection,
+      delta = context.delta;
+
+  var newParent = context.newParent || connection.parent,
+      newParentIndex = context.newParentIndex,
+      oldParent = connection.parent;
+
+  // save old parent in context
+  context.oldParent = oldParent;
+  context.oldParentIndex = Collections.remove(oldParent.children, connection);
+
+  // add to new parent at position
+  Collections.add(newParent.children, connection, newParentIndex);
+
+  // update parent
+  connection.parent = newParent;
+
+  // update waypoint positions
+  forEach(connection.waypoints, function(p) {
+    p.x += delta.x;
+    p.y += delta.y;
+
+    if (p.original) {
+      p.original.x += delta.x;
+      p.original.y += delta.y;
+    }
+  });
+
+  return connection;
+};
+
+MoveConnectionHandler.prototype.revert = function(context) {
+
+  var connection = context.connection,
+      newParent = connection.parent,
+      oldParent = context.oldParent,
+      oldParentIndex = context.oldParentIndex,
+      delta = context.delta;
+
+  // remove from newParent
+  Collections.remove(newParent.children, connection);
+
+  // restore previous location in old parent
+  Collections.add(oldParent.children, connection, oldParentIndex);
+
+  // restore parent
+  connection.parent = oldParent;
+
+  // revert to old waypoint positions
+  forEach(connection.waypoints, function(p) {
+    p.x -= delta.x;
+    p.y -= delta.y;
+
+    if (p.original) {
+      p.original.x -= delta.x;
+      p.original.y -= delta.y;
+    }
+  });
+
+  return connection;
+};
+},{"../../../util/Collections":774,"lodash/collection/forEach":832}],719:[function(require,module,exports){
+'use strict';
+
+var MoveHelper = require('./helper/MoveHelper');
+
+
+/**
+ * A handler that implements reversible moving of shapes.
+ */
+function MoveElementsHandler(modeling) {
+  this._helper = new MoveHelper(modeling);
+}
+
+MoveElementsHandler.$inject = [ 'modeling' ];
+
+module.exports = MoveElementsHandler;
+
+MoveElementsHandler.prototype.preExecute = function(context) {
+  context.closure = this._helper.getClosure(context.shapes);
+};
+
+MoveElementsHandler.prototype.postExecute = function(context) {
+
+  var hints = context.hints,
+      primaryShape;
+
+  if (hints && hints.primaryShape) {
+    primaryShape = hints.primaryShape;
+    hints.oldParent = primaryShape.parent;
+  }
+
+  this._helper.moveClosure(context.closure, context.delta, context.newParent, context.newHost, primaryShape);
+};
+
+
+MoveElementsHandler.prototype.execute = function(context) { };
+MoveElementsHandler.prototype.revert = function(context) { };
+
+},{"./helper/MoveHelper":731}],720:[function(require,module,exports){
+'use strict';
+
+var assign = require('lodash/object/assign'),
+    forEach = require('lodash/collection/forEach'),
+    pick = require('lodash/object/pick');
+
+var MoveHelper = require('./helper/MoveHelper'),
+    Collections = require('../../../util/Collections');
+
+var getMovedSourceAnchor = require('./helper/AnchorsHelper').getMovedSourceAnchor,
+    getMovedTargetAnchor = require('./helper/AnchorsHelper').getMovedTargetAnchor;
+
+
+/**
+ * A handler that implements reversible moving of shapes.
+ */
+function MoveShapeHandler(modeling) {
+  this._modeling = modeling;
+
+  this._helper = new MoveHelper(modeling);
+}
+
+MoveShapeHandler.$inject = [ 'modeling' ];
+
+module.exports = MoveShapeHandler;
+
+
+MoveShapeHandler.prototype.execute = function(context) {
+
+  var shape = context.shape,
+      delta = context.delta,
+      newParent = context.newParent || shape.parent,
+      newParentIndex = context.newParentIndex,
+      oldParent = shape.parent;
+
+  context.oldBounds = pick(shape, [ 'x', 'y', 'width', 'height']);
+
+  // save old parent in context
+  context.oldParent = oldParent;
+  context.oldParentIndex = Collections.remove(oldParent.children, shape);
+
+  // add to new parent at position
+  Collections.add(newParent.children, shape, newParentIndex);
+
+  // update shape parent + position
+  assign(shape, {
+    parent: newParent,
+    x: shape.x + delta.x,
+    y: shape.y + delta.y
+  });
+
+  return shape;
+};
+
+MoveShapeHandler.prototype.postExecute = function(context) {
+
+  var shape = context.shape,
+      delta = context.delta,
+      hints = context.hints;
+
+  var modeling = this._modeling;
+
+  if (hints.layout !== false) {
+
+    forEach(shape.incoming, function(c) {
+      modeling.layoutConnection(c, {
+        connectionEnd: getMovedTargetAnchor(c, shape, delta)
+      });
+    });
+
+    forEach(shape.outgoing, function(c) {
+      modeling.layoutConnection(c, {
+        connectionStart: getMovedSourceAnchor(c, shape, delta)
+      });
+    });
+  }
+
+  if (hints.recurse !== false) {
+    this.moveChildren(context);
+  }
+};
+
+MoveShapeHandler.prototype.revert = function(context) {
+
+  var shape = context.shape,
+      oldParent = context.oldParent,
+      oldParentIndex = context.oldParentIndex,
+      delta = context.delta;
+
+  // restore previous location in old parent
+  Collections.add(oldParent.children, shape, oldParentIndex);
+
+  // revert to old position and parent
+  assign(shape, {
+    parent: oldParent,
+    x: shape.x - delta.x,
+    y: shape.y - delta.y
+  });
+
+  return shape;
+};
+
+MoveShapeHandler.prototype.moveChildren = function(context) {
+
+  var delta = context.delta,
+      shape = context.shape;
+
+  this._helper.moveRecursive(shape.children, delta, null);
+};
+
+MoveShapeHandler.prototype.getNewParent = function(context) {
+  return context.newParent || context.shape.parent;
+};
+
+},{"../../../util/Collections":774,"./helper/AnchorsHelper":730,"./helper/MoveHelper":731,"lodash/collection/forEach":832,"lodash/object/assign":964,"lodash/object/pick":970}],721:[function(require,module,exports){
+'use strict';
+
+function NoopHandler() {}
+
+module.exports = NoopHandler;
+
+NoopHandler.prototype.execute = function() {};
+NoopHandler.prototype.revert = function() {};
+},{}],722:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach'),
+    map = require('lodash/collection/map'),
+    sortBy = require('lodash/collection/sortBy'),
+    clone = require('lodash/lang/clone');
+
+var inherits = require('inherits');
+
+
+
+function removeProperties(element, properties) {
+  forEach(properties, function(prop) {
+    if (element[prop]) {
+      delete element[prop];
+    }
+  });
+}
+
+/**
+ * A handler that implements pasting of elements onto the diagram.
+ *
+ * @param {eventBus} EventBus
+ * @param {canvas} Canvas
+ * @param {selection} Selection
+ * @param {elementFactory} ElementFactory
+ * @param {modeling} Modeling
+ * @param {rules} Rules
+ */
+function PasteHandler(eventBus, canvas, selection, elementFactory, modeling, rules) {
+  this._eventBus = eventBus;
+  this._canvas = canvas;
+  this._selection = selection;
+  this._elementFactory = elementFactory;
+  this._modeling = modeling;
+  this._rules = rules;
+}
+
+inherits(PasteHandler, require('./NoopHandler'));
+
+
+PasteHandler.$inject = [
+  'eventBus',
+  'canvas',
+  'selection',
+  'elementFactory',
+  'modeling',
+  'rules'
+];
+
+module.exports = PasteHandler;
+
+
+////// api /////////////////////////////////////////////
+
+/**
+ * Creates a new shape
+ *
+ * @param {Object} context
+ * @param {Object} context.tree the new shape
+ * @param {Element} context.topParent the paste target
+ */
+PasteHandler.prototype.preExecute = function(context) {
+  var eventBus = this._eventBus;
+
+  var tree = context.tree,
+      topParent = context.topParent,
+      position = context.position;
+
+  tree.createdElements = {};
+
+  tree.labels = [];
+
+  forEach(tree, function(elements, depthStr) {
+    var depth = parseInt(depthStr, 10);
+
+    if (isNaN(depth)) {
+      return;
+    }
+
+    // set the parent on the top level elements
+    if (!depth) {
+      elements = map(elements, function(descriptor) {
+        descriptor.parent = topParent;
+
+        return descriptor;
+      });
+    }
+
+    // Order by priority for element creation
+    elements = sortBy(elements, 'priority');
+
+    forEach(elements, function(descriptor) {
+      var id = descriptor.id,
+          parent = descriptor.parent,
+          isAttach = false,
+          hints,
+          newPosition;
+
+      var element = clone(descriptor);
+
+      if (depth) {
+        element.parent = this._getCreatedElement(parent, tree);
+      }
+
+      // this happens when shapes have not been created due to rules
+      if (!parent) {
+        return;
+      }
+
+      eventBus.fire('element.paste', {
+        createdElements: tree.createdElements,
+        descriptor: element
+      });
+
+      // in case the parent changed during 'element.paste'
+      parent = element.parent;
+
+      if (element.waypoints) {
+        element = this._createConnection(element, parent, position, tree);
+
+        if (element) {
+          tree.createdElements[id] = {
+            element: element,
+            descriptor: descriptor
+          };
+        }
+
+        return;
+      }
+
+      // supply not-root information as hint
+      if (element.parent !== topParent) {
+        hints = { root: false };
+      }
+
+      // set host
+      if (element.host) {
+        isAttach = true;
+
+        parent = this._getCreatedElement(element.host, tree);
+      }
+
+      // handle labels
+      if (element.labelTarget) {
+        return tree.labels.push(element);
+      }
+
+      newPosition = {
+        x: Math.round(position.x + element.delta.x + (element.width / 2)),
+        y: Math.round(position.y + element.delta.y + (element.height / 2))
+      };
+
+      removeProperties(element, [ 'id', 'parent', 'delta', 'host', 'priority' ]);
+
+      element = this._createShape(element, parent, newPosition, isAttach, hints);
+
+      if (element) {
+        tree.createdElements[id] = {
+          element: element,
+          descriptor: descriptor
+        };
+      }
+    }, this);
+  }, this);
+};
+
+// move label's to their relative position
+PasteHandler.prototype.postExecute = function(context) {
+  var modeling = this._modeling,
+      selection = this._selection;
+
+  var tree = context.tree,
+      labels = tree.labels,
+      topLevelElements = [];
+
+  forEach(labels, function(labelDescriptor) {
+    var labelTarget = this._getCreatedElement(labelDescriptor.labelTarget, tree),
+        label, labelTargetPos, newPosition;
+
+    if (!labelTarget) {
+      return;
+    }
+
+    label = labelTarget.label;
+
+    if (!label) {
+      return;
+    }
+
+    labelTargetPos = {
+      x: labelTarget.x,
+      y: labelTarget.y
+    };
+
+    if (labelTarget.waypoints) {
+      labelTargetPos = labelTarget.waypoints[0];
+    }
+
+    newPosition = {
+      x: Math.round((labelTargetPos.x - label.x) + labelDescriptor.delta.x),
+      y: Math.round((labelTargetPos.y - label.y) + labelDescriptor.delta.y)
+    };
+
+    modeling.moveShape(label, newPosition, labelTarget.parent);
+  }, this);
+
+  forEach(tree[0], function(descriptor) {
+    var id = descriptor.id,
+        toplevel = tree.createdElements[id];
+
+    if (toplevel) {
+      topLevelElements.push(toplevel.element);
+    }
+  });
+
+  selection.select(topLevelElements);
+};
+
+
+PasteHandler.prototype._createConnection = function(element, parent, parentCenter, tree) {
+  var modeling = this._modeling,
+      rules = this._rules;
+
+  var connection, source, target, canPaste;
+
+  element.waypoints = map(element.waypoints, function(waypoint, idx) {
+    return {
+      x: Math.round(parentCenter.x + element.delta[idx].x),
+      y: Math.round(parentCenter.y + element.delta[idx].y)
+    };
+  });
+
+  source = this._getCreatedElement(element.source, tree);
+  target = this._getCreatedElement(element.target, tree);
+
+  if (!source || !target) {
+    return null;
+  }
+
+  canPaste = rules.allowed('element.paste', {
+    source: source,
+    target: target
+  });
+
+  if (!canPaste) {
+    return null;
+  }
+
+  removeProperties(element, [ 'id', 'parent', 'delta', 'source', 'target', 'width', 'height', 'priority' ]);
+
+  connection = modeling.createConnection(source, target, element, parent);
+
+  return connection;
+};
+
+
+PasteHandler.prototype._createShape = function(element, parent, position, isAttach, hints) {
+  var modeling = this._modeling,
+      elementFactory = this._elementFactory,
+      rules = this._rules;
+
+  var canPaste = rules.allowed('element.paste', {
+    element: element,
+    position: position,
+    parent: parent
+  });
+
+  if (!canPaste) {
+    return null;
+  }
+
+  var shape = elementFactory.createShape(element);
+
+  modeling.createShape(shape, position, parent, isAttach, hints);
+
+  return shape;
+};
+
+
+PasteHandler.prototype._getCreatedElement = function(id, tree) {
+  return tree.createdElements[id] && tree.createdElements[id].element;
+};
+
+},{"./NoopHandler":721,"inherits":820,"lodash/collection/forEach":832,"lodash/collection/map":835,"lodash/collection/sortBy":839,"lodash/lang/clone":953}],723:[function(require,module,exports){
+'use strict';
+
+var isArray = require('lodash/lang/isArray');
+
+
+/**
+ * Reconnect connection handler
+ */
+function ReconnectConnectionHandler() { }
+
+ReconnectConnectionHandler.$inject = [ ];
+
+module.exports = ReconnectConnectionHandler;
+
+ReconnectConnectionHandler.prototype.execute = function(context) {
+
+  var newSource = context.newSource,
+      newTarget = context.newTarget,
+      connection = context.connection,
+      dockingOrPoints = context.dockingOrPoints,
+      oldWaypoints = connection.waypoints,
+      newWaypoints;
+
+  if (!newSource && !newTarget) {
+    throw new Error('newSource or newTarget are required');
+  }
+
+  if (newSource && newTarget) {
+    throw new Error('must specify either newSource or newTarget');
+  }
+
+  context.oldWaypoints = oldWaypoints;
+
+  if (isArray(dockingOrPoints)) {
+    newWaypoints = dockingOrPoints;
+  } else {
+    newWaypoints = oldWaypoints.slice();
+
+    newWaypoints.splice(newSource ? 0 : -1, 1, dockingOrPoints);
+  }
+
+  if (newSource) {
+    context.oldSource = connection.source;
+    connection.source = newSource;
+  }
+
+  if (newTarget) {
+    context.oldTarget = connection.target;
+    connection.target = newTarget;
+  }
+
+  connection.waypoints = newWaypoints;
+
+  return connection;
+};
+
+ReconnectConnectionHandler.prototype.revert = function(context) {
+
+  var newSource = context.newSource,
+      newTarget = context.newTarget,
+      connection = context.connection;
+
+  if (newSource) {
+    connection.source = context.oldSource;
+  }
+
+  if (newTarget) {
+    connection.target = context.oldTarget;
+  }
+
+  connection.waypoints = context.oldWaypoints;
+
+  return connection;
+};
+},{"lodash/lang/isArray":955}],724:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach');
+
+
+/**
+ * A handler that implements reversible replacing of shapes.
+ * Internally the old shape will be removed and the new shape will be added.
+ *
+ *
+ * @class
+ * @constructor
+ *
+ * @param {canvas} Canvas
+ */
+function ReplaceShapeHandler(modeling, rules) {
+  this._modeling = modeling;
+  this._rules = rules;
+}
+
+ReplaceShapeHandler.$inject = [ 'modeling', 'rules' ];
+
+module.exports = ReplaceShapeHandler;
+
+
+
+////// api /////////////////////////////////////////
+
+
+/**
+ * Replaces a shape with an replacement Element.
+ *
+ * The newData object should contain type, x, y.
+ *
+ * If possible also the incoming/outgoing connection
+ * will be restored.
+ *
+ * @param {Object} context
+ */
+ReplaceShapeHandler.prototype.preExecute = function(context) {
+
+  var self = this,
+      modeling = this._modeling,
+      rules = this._rules;
+
+  var oldShape = context.oldShape,
+      newData = context.newData,
+      hints = context.hints,
+      newShape;
+
+  function canReconnect(type, source, target, connection) {
+    return rules.allowed(type, {
+      source: source,
+      target: target,
+      connection: connection
+    });
+  }
+
+
+  // (1) place a new shape at the given position
+
+  var position = {
+    x: newData.x,
+    y: newData.y
+  };
+
+  newShape = context.newShape = context.newShape || self.createShape(newData, position, oldShape.parent);
+
+
+  // (2) update the host
+
+  if (oldShape.host) {
+    modeling.updateAttachment(newShape, oldShape.host);
+  }
+
+
+  // (3) adopt all children from the old shape
+
+  var children;
+
+  if (hints.moveChildren !== false) {
+    children = oldShape.children.slice();
+
+    modeling.moveElements(children, { x: 0, y: 0 }, newShape);
+  }
+
+  // (4) reconnect connections to the new shape (where allowed)
+
+  var incoming = oldShape.incoming.slice(),
+      outgoing = oldShape.outgoing.slice();
+
+  forEach(incoming, function(connection) {
+    var waypoints = connection.waypoints,
+        docking = waypoints[waypoints.length - 1],
+        source = connection.source,
+        allowed = canReconnect('connection.reconnectEnd', source, newShape, connection);
+
+    if (allowed) {
+      self.reconnectEnd(connection, newShape, docking);
+    }
+  });
+
+  forEach(outgoing, function(connection) {
+    var waypoints = connection.waypoints,
+        docking = waypoints[0],
+        target = connection.target,
+        allowed = canReconnect('connection.reconnectStart', newShape, target, connection);
+
+    if (allowed) {
+      self.reconnectStart(connection, newShape, docking);
+    }
+
+  });
+};
+
+
+ReplaceShapeHandler.prototype.postExecute = function(context) {
+  var modeling = this._modeling;
+
+  var oldShape = context.oldShape,
+      newShape = context.newShape;
+
+  // if an element gets resized on replace, layout the connection again
+  forEach(newShape.incoming, function(c) {
+    modeling.layoutConnection(c, { endChanged: true });
+  });
+
+  forEach(newShape.outgoing, function(c) {
+    modeling.layoutConnection(c, { startChanged: true });
+  });
+
+  modeling.removeShape(oldShape);
+};
+
+
+ReplaceShapeHandler.prototype.execute = function(context) {};
+
+ReplaceShapeHandler.prototype.revert = function(context) {};
+
+
+ReplaceShapeHandler.prototype.createShape = function(shape, position, target) {
+  var modeling = this._modeling;
+  return modeling.createShape(shape, position, target);
+};
+
+
+ReplaceShapeHandler.prototype.reconnectStart = function(connection, newSource, dockingPoint) {
+  var modeling = this._modeling;
+  modeling.reconnectStart(connection, newSource, dockingPoint);
+};
+
+
+ReplaceShapeHandler.prototype.reconnectEnd = function(connection, newTarget, dockingPoint) {
+  var modeling = this._modeling;
+  modeling.reconnectEnd(connection, newTarget, dockingPoint);
+};
+
+},{"lodash/collection/forEach":832}],725:[function(require,module,exports){
+'use strict';
+
+var assign = require('lodash/object/assign'),
+    forEach = require('lodash/collection/forEach');
+
+var getResizedSourceAnchor = require('./helper/AnchorsHelper').getResizedSourceAnchor,
+    getResizedTargetAnchor = require('./helper/AnchorsHelper').getResizedTargetAnchor;
+
+/**
+ * A handler that implements reversible resizing of shapes.
+ *
+ * @param {Modeling} modeling
+ */
+function ResizeShapeHandler(modeling) {
+  this._modeling = modeling;
+}
+
+ResizeShapeHandler.$inject = [ 'modeling' ];
+
+module.exports = ResizeShapeHandler;
+
+/**
+ * {
+ *   shape: {....}
+ *   newBounds: {
+ *     width:  20,
+ *     height: 40,
+ *     x:       5,
+ *     y:      10
+ *   }
+ *
+ * }
+ */
+ResizeShapeHandler.prototype.execute = function(context) {
+
+  var shape = context.shape,
+      newBounds = context.newBounds;
+
+  if (newBounds.x === undefined || newBounds.y === undefined ||
+      newBounds.width === undefined || newBounds.height === undefined) {
+    throw new Error('newBounds must have {x, y, width, height} properties');
+  }
+
+  if (newBounds.width < 10 || newBounds.height < 10) {
+    throw new Error('width and height cannot be less than 10px');
+  }
+
+  // save old bbox in context
+  context.oldBounds = {
+    width:  shape.width,
+    height: shape.height,
+    x:      shape.x,
+    y:      shape.y
+  };
+
+  // update shape
+  assign(shape, {
+    width:  newBounds.width,
+    height: newBounds.height,
+    x:      newBounds.x,
+    y:      newBounds.y
+  });
+
+  return shape;
+};
+
+ResizeShapeHandler.prototype.postExecute = function(context) {
+
+  var shape = context.shape,
+      oldBounds = context.oldBounds;
+
+  var modeling = this._modeling;
+
+  forEach(shape.incoming, function(c) {
+    modeling.layoutConnection(c, {
+      connectionEnd: getResizedTargetAnchor(c, shape, oldBounds)
+    });
+  });
+
+  forEach(shape.outgoing, function(c) {
+    modeling.layoutConnection(c, {
+      connectionStart: getResizedSourceAnchor(c, shape, oldBounds)
+    });
+  });
+
+};
+
+ResizeShapeHandler.prototype.revert = function(context) {
+
+  var shape = context.shape,
+      oldBounds = context.oldBounds;
+
+  // restore previous bbox
+  assign(shape, {
+    width:  oldBounds.width,
+    height: oldBounds.height,
+    x:      oldBounds.x,
+    y:      oldBounds.y
+  });
+
+  return shape;
+};
+
+},{"./helper/AnchorsHelper":730,"lodash/collection/forEach":832,"lodash/object/assign":964}],726:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach');
+
+var SpaceUtil = require('../../space-tool/SpaceUtil');
+
+/**
+ * A handler that implements reversible creating and removing of space.
+ *
+ * It executes in two phases:
+ *
+ *  (1) resize all affected resizeShapes
+ *  (2) move all affected moveElements
+ */
+function SpaceToolHandler(modeling) {
+  this._modeling = modeling;
+}
+
+SpaceToolHandler.$inject = [ 'modeling' ];
+
+module.exports = SpaceToolHandler;
+
+
+SpaceToolHandler.prototype.preExecute = function(context) {
+
+  // resize
+  var modeling = this._modeling,
+      resizingShapes = context.resizingShapes,
+      delta = context.delta,
+      direction = context.direction;
+
+  forEach(resizingShapes, function(shape) {
+    var newBounds = SpaceUtil.resizeBounds(shape, direction, delta);
+
+    modeling.resizeShape(shape, newBounds);
+  });
+};
+
+SpaceToolHandler.prototype.postExecute = function(context) {
+  // move
+  var modeling = this._modeling,
+      movingShapes = context.movingShapes,
+      delta = context.delta;
+
+  modeling.moveElements(movingShapes, delta, undefined, false, { autoResize: false });
+};
+
+SpaceToolHandler.prototype.execute = function(context) {};
+SpaceToolHandler.prototype.revert = function(context) {};
+
+},{"../../space-tool/SpaceUtil":756,"lodash/collection/forEach":832}],727:[function(require,module,exports){
+'use strict';
+
+/**
+ * A handler that toggles the collapsed state of an element
+ * and the visibility of all its children.
+ *
+ * @param {Modeling} modeling
+ */
+function ToggleShapeCollapseHandler(modeling) {
+  this._modeling = modeling;
+}
+
+ToggleShapeCollapseHandler.$inject = [ 'modeling' ];
+
+module.exports = ToggleShapeCollapseHandler;
+
+
+ToggleShapeCollapseHandler.prototype.execute = function(context) {
+
+  var shape = context.shape,
+      children = shape.children;
+
+  // remember previous visibility of children
+  context.oldChildrenVisibility = getElementsVisibility(children);
+
+  // toggle state
+  shape.collapsed = !shape.collapsed;
+
+  // hide/show children
+  setHidden(children, shape.collapsed);
+
+  return [shape].concat(children);
+};
+
+
+ToggleShapeCollapseHandler.prototype.revert = function(context) {
+
+  var shape = context.shape,
+      oldChildrenVisibility = context.oldChildrenVisibility;
+
+  var children = shape.children;
+
+  // set old visability of children
+  restoreVisibility(children, oldChildrenVisibility);
+
+  // retoggle state
+  shape.collapsed = !shape.collapsed;
+
+  return [shape].concat(children);
+};
+
+
+/////// helpers ///////////////////////////////
+
+/**
+ * Return a map { elementId -> hiddenState}.
+ *
+ * @param {Array<djs.model.Shape>} elements
+ *
+ * @return {Object}
+ */
+function getElementsVisibility(elements) {
+
+  var result = {};
+
+  elements.forEach(function(e) {
+    result[e.id] = e.hidden;
+  });
+
+  return result;
+}
+
+
+function setHidden(elements, newHidden) {
+  elements.forEach(function(element) {
+    element.hidden = newHidden;
+  });
+}
+
+function restoreVisibility(elements, lastState) {
+  elements.forEach(function(e) {
+    e.hidden = lastState[e.id];
+  });
+}
+
+},{}],728:[function(require,module,exports){
+'use strict';
+
+var Collections = require('../../../util/Collections');
+
+/**
+ * A handler that implements reversible attaching/detaching of shapes.
+ */
+function UpdateAttachmentHandler(modeling) {
+  this._modeling = modeling;
+}
+
+module.exports = UpdateAttachmentHandler;
+
+UpdateAttachmentHandler.$inject = [ 'modeling' ];
+
+
+UpdateAttachmentHandler.prototype.execute = function(context) {
+  var shape = context.shape,
+      newHost = context.newHost,
+      oldHost = shape.host;
+
+  // (0) detach from old host
+  context.oldHost = oldHost;
+  context.attacherIdx = removeAttacher(oldHost, shape);
+
+  // (1) attach to new host
+  addAttacher(newHost, shape);
+
+  // (2) update host
+  shape.host = newHost;
+
+  return shape;
+};
+
+UpdateAttachmentHandler.prototype.revert = function(context) {
+  var shape = context.shape,
+      newHost = context.newHost,
+      oldHost = context.oldHost,
+      attacherIdx = context.attacherIdx;
+
+  // (2) update host
+  shape.host = oldHost;
+
+  // (1) attach to new host
+  removeAttacher(newHost, shape);
+
+  // (0) detach from old host
+  addAttacher(oldHost, shape, attacherIdx);
+
+  return shape;
+};
+
+
+function removeAttacher(host, attacher) {
+  // remove attacher from host
+  return Collections.remove(host && host.attachers, attacher);
+}
+
+function addAttacher(host, attacher, idx) {
+
+  if (!host) {
+    return;
+  }
+
+  var attachers = host.attachers;
+
+  if (!attachers) {
+    host.attachers = attachers = [];
+  }
+
+  Collections.add(attachers, attacher, idx);
+}
+
+},{"../../../util/Collections":774}],729:[function(require,module,exports){
+'use strict';
+
+function UpdateWaypointsHandler() { }
+
+module.exports = UpdateWaypointsHandler;
+
+UpdateWaypointsHandler.prototype.execute = function(context) {
+
+  var connection = context.connection,
+      newWaypoints = context.newWaypoints;
+
+  context.oldWaypoints = connection.waypoints;
+
+  connection.waypoints = newWaypoints;
+
+  return connection;
+};
+
+UpdateWaypointsHandler.prototype.revert = function(context) {
+
+  var connection = context.connection,
+      oldWaypoints = context.oldWaypoints;
+
+  connection.waypoints = oldWaypoints;
+
+  return connection;
+};
+},{}],730:[function(require,module,exports){
+'use strict';
+
+var getNewAttachPoint = require('../../../../util/AttachUtil').getNewAttachPoint;
+
+function getResizedSourceAnchor(connection, shape, oldBounds) {
+
+  var waypoints = safeGetWaypoints(connection),
+      oldAnchor = waypoints[0];
+
+  return getNewAttachPoint(oldAnchor.original || oldAnchor, oldBounds, shape);
+}
+
+module.exports.getResizedSourceAnchor = getResizedSourceAnchor;
+
+
+function getResizedTargetAnchor(connection, shape, oldBounds) {
+
+  var waypoints = safeGetWaypoints(connection),
+      oldAnchor = waypoints[waypoints.length - 1];
+
+  return getNewAttachPoint(oldAnchor.original || oldAnchor, oldBounds, shape);
+}
+
+module.exports.getResizedTargetAnchor = getResizedTargetAnchor;
+
+
+function getMovedSourceAnchor(connection, source, moveDelta) {
+  return getResizedSourceAnchor(connection, source, substractPosition(source, moveDelta));
+}
+
+module.exports.getMovedSourceAnchor = getMovedSourceAnchor;
+
+
+function getMovedTargetAnchor(connection, target, moveDelta) {
+  return getResizedTargetAnchor(connection, target, substractPosition(target, moveDelta));
+}
+
+module.exports.getMovedTargetAnchor = getMovedTargetAnchor;
+
+
+//////// helpers ////////////////////////////////////
+
+function substractPosition(bounds, delta) {
+  return {
+    x: bounds.x - delta.x,
+    y: bounds.y - delta.y,
+    width: bounds.width,
+    height: bounds.height
+  };
+}
+
+
+/**
+ * Return waypoints of given connection; throw if non exists (should not happen!!).
+ *
+ * @param {Connection} connection
+ *
+ * @return {Array<Point>}
+ */
+function safeGetWaypoints(connection) {
+
+  var waypoints = connection.waypoints;
+
+  if (!waypoints.length) {
+    throw new Error('connection#' + connection.id + ': no waypoints');
+  }
+
+  return waypoints;
+}
+
+},{"../../../../util/AttachUtil":772}],731:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach');
+
+var Elements = require('../../../../util/Elements');
+
+var getMovedSourceAnchor = require('./AnchorsHelper').getMovedSourceAnchor,
+    getMovedTargetAnchor = require('./AnchorsHelper').getMovedTargetAnchor;
+
+/**
+ * A helper that is able to carry out serialized move operations on multiple elements.
+ *
+ * @param {Modeling} modeling
+ */
+function MoveHelper(modeling) {
+  this._modeling = modeling;
+}
+
+module.exports = MoveHelper;
+
+/**
+ * Move the specified elements and all children by the given delta.
+ *
+ * This moves all enclosed connections, too and layouts all affected
+ * external connections.
+ *
+ * @param  {Array<djs.model.Base>} elements
+ * @param  {Point} delta
+ * @param  {djs.model.Base} newParent applied to the first level of shapes
+ *
+ * @return {Array<djs.model.Base>} list of touched elements
+ */
+MoveHelper.prototype.moveRecursive = function(elements, delta, newParent) {
+  if (!elements) {
+    return [];
+  } else {
+    return this.moveClosure(this.getClosure(elements), delta, newParent);
+  }
+};
+
+/**
+ * Move the given closure of elmements.
+ *
+ * @param {Object} closure
+ * @param {Point} delta
+ * @param {djs.model.Base} [newParent]
+ * @param {djs.model.Base} [newHost]
+ */
+MoveHelper.prototype.moveClosure = function(closure, delta, newParent, newHost, primaryShape) {
+  var modeling = this._modeling;
+
+  var allShapes = closure.allShapes,
+      allConnections = closure.allConnections,
+      enclosedConnections = closure.enclosedConnections,
+      topLevel = closure.topLevel,
+      keepParent = false;
+
+  if (primaryShape && primaryShape.parent === newParent) {
+    keepParent = true;
+  }
+
+  // move all shapes
+  forEach(allShapes, function(shape) {
+
+    // move the element according to the given delta
+    modeling.moveShape(shape, delta, topLevel[shape.id] && !keepParent && newParent, {
+      recurse: false,
+      layout: false
+    });
+  });
+
+  // move all child connections / layout external connections
+  forEach(allConnections, function(c) {
+
+    var sourceMoved = !!allShapes[c.source.id],
+        targetMoved = !!allShapes[c.target.id];
+
+    if (enclosedConnections[c.id] && sourceMoved && targetMoved) {
+      modeling.moveConnection(c, delta, topLevel[c.id] && !keepParent && newParent);
+    } else {
+      modeling.layoutConnection(c, {
+        connectionStart: sourceMoved && getMovedSourceAnchor(c, c.source, delta),
+        connectionEnd: targetMoved && getMovedTargetAnchor(c, c.target, delta)
+      });
+    }
+  });
+};
+
+/**
+ * Returns the closure for the selected elements
+ *
+ * @param  {Array<djs.model.Base>} elements
+ * @return {Object} closure
+ */
+MoveHelper.prototype.getClosure = function(elements) {
+  return Elements.getClosure(elements);
+};
+
+},{"../../../../util/Elements":777,"./AnchorsHelper":730,"lodash/collection/forEach":832}],732:[function(require,module,exports){
+'use strict';
+
+var bind = require('lodash/function/bind');
+
+
+function MouseTracking(eventBus, canvas) {
+  this._eventBus = eventBus;
+  this._canvas = canvas;
+
+  this._init();
+}
+
+MouseTracking.$inject = [
+  'eventBus',
+  'canvas'
+];
+
+module.exports = MouseTracking;
+
+
+MouseTracking.prototype.getHoverContext = function() {
+  var viewbox = this._canvas.viewbox();
+
+  return {
+    element: this._hoverElement,
+    point: {
+      x: viewbox.x + Math.round(this._mouseX / viewbox.scale),
+      y: viewbox.y + Math.round(this._mouseY / viewbox.scale)
+    }
+  };
+};
+
+MouseTracking.prototype._init = function() {
+  var eventBus = this._eventBus,
+      canvas = this._canvas;
+
+  var container = canvas.getContainer();
+
+  this._setMousePosition = bind(this._setMousePosition, this);
+
+  container.addEventListener('mousemove', this._setMousePosition);
+
+  eventBus.on('diagram.destroy', function() {
+    container.removeEventListener('mousemove', this._setMousePosition);
+  }, this);
+
+  eventBus.on('element.hover', this._setHoverElement, this);
+};
+
+
+MouseTracking.prototype._setHoverElement = function(event) {
+  this._hoverElement = event.element;
+};
+
+
+MouseTracking.prototype._setMousePosition = function(event) {
+  this._mouseX = event.layerX;
+  this._mouseY = event.layerY;
+};
+
+},{"lodash/function/bind":841}],733:[function(require,module,exports){
+'use strict';
+
+module.exports = {
+  __init__: [ 'mouseTracking' ],
+  mouseTracking: [ 'type', require('./MouseTracking') ]
+};
+
+},{"./MouseTracking":732}],734:[function(require,module,exports){
+'use strict';
+
+var assign = require('lodash/object/assign'),
+    filter = require('lodash/collection/filter'),
+    groupBy = require('lodash/collection/groupBy');
+
+var LOW_PRIORITY = 500,
+    MEDIUM_PRIORITY = 1250,
+    HIGH_PRIORITY = 1500;
+
+var getOriginalEvent = require('../../util/Event').getOriginal;
+
+var round = Math.round;
+
+function mid(element) {
+  return {
+    x: element.x + round(element.width / 2),
+    y: element.y + round(element.height / 2)
+  };
+}
+
+/**
+ * A plugin that makes shapes draggable / droppable.
+ *
+ * @param {EventBus} eventBus
+ * @param {Dragging} dragging
+ * @param {Modeling} modeling
+ * @param {Selection} selection
+ * @param {Rules} rules
+ */
+function MoveEvents(eventBus, dragging, modeling, selection, rules) {
+
+  // rules
+
+  function canMove(shapes, delta, position, target) {
+
+    return rules.allowed('elements.move', {
+      shapes: shapes,
+      delta: delta,
+      position: position,
+      target: target
+    });
+  }
+
+
+  // move events
+
+  // assign a high priority to this handler to setup the environment
+  // others may hook up later, e.g. at default priority and modify
+  // the move environment.
+  //
+  // This sets up the context with
+  //
+  // * shape: the primary shape being moved
+  // * shapes: a list of shapes to be moved
+  // * validatedShapes: a list of shapes that are being checked
+  //                    against the rules before and during move
+  //
+  eventBus.on('shape.move.start', HIGH_PRIORITY, function(event) {
+
+    var context = event.context,
+        shape = event.shape,
+        shapes = selection.get().slice();
+
+    // move only single shape if the dragged element
+    // is not part of the current selection
+    if (shapes.indexOf(shape) === -1) {
+      shapes = [ shape ];
+    }
+
+    // ensure we remove nested elements in the collection
+    // and add attachers for a proper dragger
+    shapes = removeNested(shapes);
+
+    // attach shapes to drag context
+    assign(context, {
+      shapes: shapes,
+      validatedShapes: shapes,
+      shape: shape
+    });
+  });
+
+
+  // assign a high priority to this handler to setup the environment
+  // others may hook up later, e.g. at default priority and modify
+  // the move environment
+  //
+  eventBus.on('shape.move.start', MEDIUM_PRIORITY, function(event) {
+
+    var context = event.context,
+        validatedShapes = context.validatedShapes,
+        canExecute;
+
+    canExecute = context.canExecute = canMove(validatedShapes);
+
+    // check if we can move the elements
+    if (!canExecute) {
+      // suppress move operation
+      event.stopPropagation();
+
+      return false;
+    }
+  });
+
+  // assign a low priority to this handler
+  // to let others modify the move event before we update
+  // the context
+  //
+  eventBus.on('shape.move.move', LOW_PRIORITY, function(event) {
+
+    var context = event.context,
+        validatedShapes = context.validatedShapes,
+        hover = event.hover,
+        delta = { x: event.dx, y: event.dy },
+        position = { x: event.x, y: event.y },
+        canExecute;
+
+    // check if we can move the elements
+    canExecute = canMove(validatedShapes, delta, position, hover);
+
+    context.delta = delta;
+    context.canExecute = canExecute;
+
+    // simply ignore move over
+    if (canExecute === null) {
+      context.target = null;
+
+      return;
+    }
+
+    context.target = hover;
+  });
+
+  eventBus.on('shape.move.end', function(event) {
+
+    var context = event.context;
+
+    var delta = context.delta,
+        canExecute = context.canExecute,
+        isAttach = canExecute === 'attach',
+        shapes = context.shapes;
+
+    if (!canExecute) {
+      return false;
+    }
+
+    // ensure we have actual pixel values deltas
+    // (important when zoom level was > 1 during move)
+    delta.x = round(delta.x);
+    delta.y = round(delta.y);
+
+    modeling.moveElements(shapes, delta, context.target, isAttach, { primaryShape: context.shape });
+  });
+
+
+  // move activation
+
+  eventBus.on('element.mousedown', function(event) {
+
+    var originalEvent = getOriginalEvent(event);
+
+    if (!originalEvent) {
+      throw new Error('must supply DOM mousedown event');
+    }
+
+    start(originalEvent, event.element);
+  });
+
+
+  function start(event, element, activate) {
+
+    // do not move connections or the root element
+    if (element.waypoints || !element.parent) {
+      return;
+    }
+
+    var referencePoint = mid(element);
+
+    dragging.init(event, referencePoint, 'shape.move', {
+      cursor: 'grabbing',
+      autoActivate: activate,
+      data: {
+        shape: element,
+        context: {}
+      }
+    });
+  }
+
+  // API
+
+  this.start = start;
+}
+
+MoveEvents.$inject = [ 'eventBus', 'dragging', 'modeling', 'selection', 'rules' ];
+
+module.exports = MoveEvents;
+
+
+/**
+ * Return a filtered list of elements that do not contain
+ * those nested into others.
+ *
+ * @param  {Array<djs.model.Base>} elements
+ *
+ * @return {Array<djs.model.Base>} filtered
+ */
+function removeNested(elements) {
+
+  var ids = groupBy(elements, 'id');
+
+  return filter(elements, function(element) {
+    while ((element = element.parent)) {
+
+      // parent in selection
+      if (ids[element.id]) {
+        return false;
+      }
+    }
+
+    return true;
+  });
+}
+
+},{"../../util/Event":778,"lodash/collection/filter":830,"lodash/collection/groupBy":834,"lodash/object/assign":964}],735:[function(require,module,exports){
+'use strict';
+
+var flatten = require('lodash/array/flatten'),
+    forEach = require('lodash/collection/forEach'),
+    filter = require('lodash/collection/filter'),
+    find = require('lodash/collection/find'),
+    size = require('lodash/collection/size'),
+    groupBy = require('lodash/collection/groupBy'),
+    map = require('lodash/collection/map');
+
+var Elements = require('../../util/Elements');
+
+var svgAppend = require('tiny-svg/lib/append'),
+    svgAttr = require('tiny-svg/lib/attr'),
+    svgClear = require('tiny-svg/lib/clear'),
+    svgCreate = require('tiny-svg/lib/create');
+
+var translate = require('../../util/SvgTransformUtil').translate;
+
+var LOW_PRIORITY = 500;
+
+var MARKER_DRAGGING = 'djs-dragging',
+    MARKER_OK = 'drop-ok',
+    MARKER_NOT_OK = 'drop-not-ok',
+    MARKER_NEW_PARENT = 'new-parent',
+    MARKER_ATTACH = 'attach-ok';
+
+/**
+ * Provides previews for moving shapes when moving.
+ *
+ * @param {EventBus} eventBus
+ * @param {ElementRegistry} elementRegistry
+ * @param {Canvas} canvas
+ * @param {Styles} styles
+ */
+function MovePreview(eventBus, elementRegistry, canvas, styles, previewSupport) {
+
+  function getVisualDragShapes(shapes) {
+    var elements = getAllDraggedElements(shapes);
+
+    var filteredElements = removeEdges(elements);
+
+    return filteredElements;
+  }
+
+  function getAllDraggedElements(shapes) {
+    var allShapes = Elements.selfAndAllChildren(shapes, true);
+
+    var allConnections = map(allShapes, function(shape) {
+      return (shape.incoming || []).concat(shape.outgoing || []);
+    });
+
+    return flatten(allShapes.concat(allConnections), true);
+  }
+
+  /**
+   * Sets drop marker on an element.
+   */
+  function setMarker(element, marker) {
+
+    [ MARKER_ATTACH, MARKER_OK, MARKER_NOT_OK, MARKER_NEW_PARENT ].forEach(function(m) {
+
+      if (m === marker) {
+        canvas.addMarker(element, m);
+      } else {
+        canvas.removeMarker(element, m);
+      }
+    });
+  }
+
+  function makeDraggable(context, element, addMarker) {
+
+    previewSupport.addDragger(element, context.dragGroup);
+
+    if (addMarker) {
+      canvas.addMarker(element, MARKER_DRAGGING);
+    }
+
+    if (context.allDraggedElements) {
+      context.allDraggedElements.push(element);
+    } else {
+      context.allDraggedElements = [ element ];
+    }
+  }
+
+  // expose to other components
+  // that plug into the drag behavior
+  this.makeDraggable = makeDraggable;
+
+  // add previews
+  eventBus.on('shape.move.start', LOW_PRIORITY, function(event) {
+
+    var context = event.context,
+        dragShapes = context.shapes,
+        allDraggedElements = context.allDraggedElements;
+
+    var visuallyDraggedShapes = getVisualDragShapes(dragShapes);
+
+    if (!context.dragGroup) {
+      var dragGroup = svgCreate('g');
+      svgAttr(dragGroup, styles.cls('djs-drag-group', [ 'no-events' ]));
+
+      var defaultLayer = canvas.getDefaultLayer();
+
+      svgAppend(defaultLayer, dragGroup);
+
+      context.dragGroup = dragGroup;
+    }
+
+    // add previews
+    visuallyDraggedShapes.forEach(function(shape) {
+      previewSupport.addDragger(shape, context.dragGroup);
+    });
+
+    // cache all dragged elements / gfx
+    // so that we can quickly undo their state changes later
+    if (!allDraggedElements) {
+      allDraggedElements = getAllDraggedElements(dragShapes);
+    } else {
+      allDraggedElements = flatten(allDraggedElements, getAllDraggedElements(dragShapes));
+    }
+
+    // add dragging marker
+    forEach(allDraggedElements, function(e) {
+      canvas.addMarker(e, MARKER_DRAGGING);
+    });
+
+    context.allDraggedElements = allDraggedElements;
+
+    // determine, if any of the dragged elements have different parents
+    context.differentParents = haveDifferentParents(dragShapes);
+  });
+
+  // update previews
+  eventBus.on('shape.move.move', LOW_PRIORITY, function(event) {
+
+    var context = event.context,
+        dragGroup = context.dragGroup,
+        target = context.target,
+        parent = context.shape.parent,
+        canExecute = context.canExecute;
+
+    if (target) {
+      if (canExecute === 'attach') {
+        setMarker(target, MARKER_ATTACH);
+      } else if (context.canExecute && target && target.id !== parent.id) {
+        setMarker(target, MARKER_NEW_PARENT);
+      } else {
+        setMarker(target, context.canExecute ? MARKER_OK : MARKER_NOT_OK);
+      }
+    }
+
+    translate(dragGroup, event.dx, event.dy);
+  });
+
+  eventBus.on([ 'shape.move.out', 'shape.move.cleanup' ], function(event) {
+    var context = event.context,
+        target = context.target;
+
+    if (target) {
+      setMarker(target, null);
+    }
+  });
+
+  // remove previews
+  eventBus.on('shape.move.cleanup', function(event) {
+
+    var context = event.context,
+        allDraggedElements = context.allDraggedElements,
+        dragGroup = context.dragGroup;
+
+
+    // remove dragging marker
+    forEach(allDraggedElements, function(e) {
+      canvas.removeMarker(e, MARKER_DRAGGING);
+    });
+
+    if (dragGroup) {
+      svgClear(dragGroup);
+    }
+  });
+}
+
+MovePreview.$inject = [ 'eventBus', 'elementRegistry', 'canvas', 'styles', 'previewSupport' ];
+
+module.exports = MovePreview;
+
+////////// helpers //////////
+
+// returns elements minus all connections
+// where source or target is not elements
+function removeEdges(elements) {
+
+  var filteredElements = filter(elements, function(element) {
+
+    if (!isConnection(element)) {
+      return true;
+    } else {
+      var srcFound = find(elements, element.source);
+      var targetFound = find(elements, element.target);
+
+      return srcFound && targetFound;
+    }
+  });
+
+  return filteredElements;
+}
+
+function haveDifferentParents(elements) {
+  return size(groupBy(elements, function(e) { return e.parent && e.parent.id; })) !== 1;
+}
+
+/**
+ * Checks if an element is a connection.
+ */
+function isConnection(element) {
+  return element.waypoints;
+}
+
+},{"../../util/Elements":777,"../../util/SvgTransformUtil":790,"lodash/array/flatten":822,"lodash/collection/filter":830,"lodash/collection/find":831,"lodash/collection/forEach":832,"lodash/collection/groupBy":834,"lodash/collection/map":835,"lodash/collection/size":837,"tiny-svg/lib/append":1067,"tiny-svg/lib/attr":1069,"tiny-svg/lib/clear":1071,"tiny-svg/lib/create":1073}],736:[function(require,module,exports){
+module.exports = {
+  __depends__: [
+    require('../interaction-events'),
+    require('../selection'),
+    require('../outline'),
+    require('../rules'),
+    require('../dragging'),
+    require('../preview-support')
+  ],
+  __init__: [ 'move', 'movePreview' ],
+  move: [ 'type', require('./Move') ],
+  movePreview: [ 'type', require('./MovePreview') ]
+};
+
+},{"../dragging":698,"../interaction-events":702,"../outline":738,"../preview-support":746,"../rules":751,"../selection":755,"./Move":734,"./MovePreview":735}],737:[function(require,module,exports){
+'use strict';
+
+var getBBox = require('../../util/Elements').getBBox;
+
+var LOW_PRIORITY = 500;
+
+var svgAppend = require('tiny-svg/lib/append'),
+    svgAttr = require('tiny-svg/lib/attr'),
+    svgCreate = require('tiny-svg/lib/create');
+
+var domQuery = require('min-dom/lib/query');
+
+var assign = require('lodash/object/assign');
+
+
+/**
+ * @class
+ *
+ * A plugin that adds an outline to shapes and connections that may be activated and styled
+ * via CSS classes.
+ *
+ * @param {EventBus} eventBus
+ * @param {Styles} styles
+ * @param {ElementRegistry} elementRegistry
+ */
+function Outline(eventBus, styles, elementRegistry) {
+
+  this.offset = 6;
+
+  var OUTLINE_STYLE = styles.cls('djs-outline', [ 'no-fill' ]);
+
+  var self = this;
+
+  function createOutline(gfx, bounds) {
+    var outline = svgCreate('rect');
+
+    svgAttr(outline, assign({
+      x: 10,
+      y: 10,
+      width: 100,
+      height: 100
+    }, OUTLINE_STYLE));
+
+    svgAppend(gfx, outline);
+
+    return outline;
+  }
+
+  // A low priortity is necessary, because outlines of labels have to be updated
+  // after the label bounds have been updated in the renderer.
+  eventBus.on([ 'shape.added', 'shape.changed' ], LOW_PRIORITY, function(event) {
+    var element = event.element,
+        gfx     = event.gfx;
+
+    var outline = domQuery('.djs-outline', gfx);
+
+    if (!outline) {
+      outline = createOutline(gfx, element);
+    }
+
+    self.updateShapeOutline(outline, element);
+  });
+
+  eventBus.on([ 'connection.added', 'connection.changed' ], function(event) {
+    var element = event.element,
+        gfx     = event.gfx;
+
+    var outline = domQuery('.djs-outline', gfx);
+
+    if (!outline) {
+      outline = createOutline(gfx, element);
+    }
+
+    self.updateConnectionOutline(outline, element);
+  });
+}
+
+
+/**
+ * Updates the outline of a shape respecting the dimension of the
+ * element and an outline offset.
+ *
+ * @param  {SVGElement} outline
+ * @param  {djs.model.Base} element
+ */
+Outline.prototype.updateShapeOutline = function(outline, element) {
+
+  svgAttr(outline, {
+    x: -this.offset,
+    y: -this.offset,
+    width: element.width + this.offset * 2,
+    height: element.height + this.offset * 2
+  });
+
+};
+
+
+/**
+ * Updates the outline of a connection respecting the bounding box of
+ * the connection and an outline offset.
+ *
+ * @param  {SVGElement} outline
+ * @param  {djs.model.Base} element
+ */
+Outline.prototype.updateConnectionOutline = function(outline, connection) {
+
+  var bbox = getBBox(connection);
+
+  svgAttr(outline, {
+    x: bbox.x - this.offset,
+    y: bbox.y - this.offset,
+    width: bbox.width + this.offset * 2,
+    height: bbox.height + this.offset * 2
+  });
+
+};
+
+
+Outline.$inject = ['eventBus', 'styles', 'elementRegistry'];
+
+module.exports = Outline;
+
+},{"../../util/Elements":777,"lodash/object/assign":964,"min-dom/lib/query":984,"tiny-svg/lib/append":1067,"tiny-svg/lib/attr":1069,"tiny-svg/lib/create":1073}],738:[function(require,module,exports){
 arguments[4][92][0].apply(exports,arguments)
-},{"./Outline":638,"dup":92}],640:[function(require,module,exports){
+},{"./Outline":737,"dup":92}],739:[function(require,module,exports){
 arguments[4][341][0].apply(exports,arguments)
-},{"../../util/Elements":660,"../../util/IdGenerator":663,"dup":341,"lodash/collection/filter":706,"lodash/collection/find":707,"lodash/collection/forEach":708,"lodash/lang/isArray":816,"lodash/lang/isObject":820,"lodash/lang/isString":822,"lodash/object/assign":825,"min-dom/lib/attr":835,"min-dom/lib/classes":836,"min-dom/lib/clear":837,"min-dom/lib/domify":840,"min-dom/lib/remove":844}],641:[function(require,module,exports){
+},{"../../util/Elements":777,"../../util/IdGenerator":781,"dup":341,"lodash/collection/filter":830,"lodash/collection/find":831,"lodash/collection/forEach":832,"lodash/lang/isArray":955,"lodash/lang/isObject":959,"lodash/lang/isString":961,"lodash/object/assign":964,"min-dom/lib/attr":976,"min-dom/lib/classes":977,"min-dom/lib/clear":978,"min-dom/lib/domify":981,"min-dom/lib/remove":985}],740:[function(require,module,exports){
 arguments[4][94][0].apply(exports,arguments)
-},{"./Overlays":640,"dup":94}],642:[function(require,module,exports){
+},{"./Overlays":739,"dup":94}],741:[function(require,module,exports){
+'use strict';
+
+var isFunction = require('lodash/lang/isFunction'),
+    isArray = require('lodash/lang/isArray'),
+    forEach = require('lodash/collection/forEach');
+
+var domify = require('min-dom/lib/domify'),
+    domQuery = require('min-dom/lib/query'),
+    domAttr = require('min-dom/lib/attr'),
+    domClear = require('min-dom/lib/clear'),
+    domClasses = require('min-dom/lib/classes'),
+    domMatches = require('min-dom/lib/matches'),
+    domDelegate = require('min-dom/lib/delegate'),
+    domEvent = require('min-dom/lib/event');
+
+
+var toggleSelector = '.djs-palette-toggle',
+    entrySelector = '.entry',
+    elementSelector = toggleSelector + ', ' + entrySelector;
+
+
+/**
+ * A palette containing modeling elements.
+ */
+function Palette(eventBus, canvas, dragging) {
+
+  this._eventBus = eventBus;
+  this._canvas = canvas;
+  this._dragging = dragging;
+
+  this._providers = [];
+
+  var self = this;
+
+  eventBus.on('tool-manager.update', function(event) {
+    var tool = event.tool;
+
+    self.updateToolHighlight(tool);
+  });
+
+  eventBus.on('i18n.changed', function() {
+    self._update();
+  });
+}
+
+Palette.$inject = [ 'eventBus', 'canvas', 'dragging' ];
+
+module.exports = Palette;
+
+
+/**
+ * Register a provider with the palette
+ *
+ * @param  {PaletteProvider} provider
+ */
+Palette.prototype.registerProvider = function(provider) {
+  this._providers.push(provider);
+
+  if (!this._container) {
+    this._init();
+  }
+
+  this._update();
+};
+
+
+/**
+ * Returns the palette entries for a given element
+ *
+ * @return {Array<PaletteEntryDescriptor>} list of entries
+ */
+Palette.prototype.getEntries = function() {
+
+  var entries = {};
+
+  // loop through all providers and their entries.
+  // group entries by id so that overriding an entry is possible
+  forEach(this._providers, function(provider) {
+    var e = provider.getPaletteEntries();
+
+    forEach(e, function(entry, id) {
+      entries[id] = entry;
+    });
+  });
+
+  return entries;
+};
+
+
+/**
+ * Initialize
+ */
+Palette.prototype._init = function() {
+  var canvas = this._canvas,
+      eventBus = this._eventBus;
+
+  var parent = canvas.getContainer(),
+      container = this._container = domify(Palette.HTML_MARKUP),
+      self = this;
+
+  parent.appendChild(container);
+
+  domDelegate.bind(container, elementSelector, 'click', function(event) {
+
+    var target = event.delegateTarget;
+
+    if (domMatches(target, toggleSelector)) {
+      return self.toggle();
+    }
+
+    self.trigger('click', event);
+  });
+
+  // prevent drag propagation
+  domEvent.bind(container, 'mousedown', function(event) {
+    event.stopPropagation();
+  });
+
+  // prevent drag propagation
+  domDelegate.bind(container, entrySelector, 'dragstart', function(event) {
+    self.trigger('dragstart', event);
+  });
+
+  eventBus.fire('palette.create', {
+    html: container
+  });
+
+  eventBus.on('canvas.resized', function() {
+    if (parent.clientHeight < 650) {
+      domClasses(container).add('two-column');
+    } else {
+      domClasses(container).remove('two-column');
+    }
+  });
+};
+
+
+Palette.prototype._update = function() {
+
+  var entriesContainer = domQuery('.djs-palette-entries', this._container),
+      entries = this._entries = this.getEntries();
+
+  domClear(entriesContainer);
+
+  forEach(entries, function(entry, id) {
+
+    var grouping = entry.group || 'default';
+
+    var container = domQuery('[data-group=' + grouping + ']', entriesContainer);
+    if (!container) {
+      container = domify('<div class="group" data-group="' + grouping + '"></div>');
+      entriesContainer.appendChild(container);
+    }
+
+    var html = entry.html || (
+      entry.separator ?
+        '<hr class="separator" />' :
+        '<div class="entry" draggable="true"></div>');
+
+
+    var control = domify(html);
+    container.appendChild(control);
+
+    if (!entry.separator) {
+      domAttr(control, 'data-action', id);
+
+      if (entry.title) {
+        domAttr(control, 'title', entry.title);
+      }
+
+      if (entry.className) {
+        addClasses(control, entry.className);
+      }
+
+      if (entry.imageUrl) {
+        control.appendChild(domify('<img src="' + entry.imageUrl + '">'));
+      }
+    }
+  });
+
+  // open after update
+  this.open(true);
+};
+
+
+/**
+ * Trigger an action available on the palette
+ *
+ * @param  {String} action
+ * @param  {Event} event
+ */
+Palette.prototype.trigger = function(action, event, autoActivate) {
+  var entries = this._entries,
+      entry,
+      handler,
+      originalEvent,
+      button = event.delegateTarget || event.target;
+
+  if (!button) {
+    return event.preventDefault();
+  }
+
+  entry = entries[domAttr(button, 'data-action')];
+
+  // when user clicks on the palette and not on an action
+  if (!entry) {
+    return;
+  }
+
+  handler = entry.action;
+
+  originalEvent = event.originalEvent || event;
+
+  // simple action (via callback function)
+  if (isFunction(handler)) {
+    if (action === 'click') {
+      handler(originalEvent, autoActivate);
+    }
+  } else {
+    if (handler[action]) {
+      handler[action](originalEvent, autoActivate);
+    }
+  }
+
+  // silence other actions
+  event.preventDefault();
+};
+
+
+/**
+ * Close the palette
+ */
+Palette.prototype.close = function() {
+  domClasses(this._container).remove('open');
+};
+
+
+/**
+ * Open the palette
+ */
+Palette.prototype.open = function() {
+  domClasses(this._container).add('open');
+};
+
+
+Palette.prototype.toggle = function(open) {
+  if (this.isOpen()) {
+    this.close();
+  } else {
+    this.open();
+  }
+};
+
+Palette.prototype.isActiveTool = function(tool) {
+  return tool && this._activeTool === tool;
+};
+
+Palette.prototype.updateToolHighlight = function(name) {
+  var entriesContainer,
+      toolsContainer;
+
+  if (!this._toolsContainer) {
+    entriesContainer = domQuery('.djs-palette-entries', this._container);
+
+    this._toolsContainer = domQuery('[data-group=tools]', entriesContainer);
+  }
+
+  toolsContainer = this._toolsContainer;
+
+  forEach(toolsContainer.children, function(tool) {
+    var actionName = tool.getAttribute('data-action');
+
+    if (!actionName) {
+      return;
+    }
+
+    actionName = actionName.replace('-tool', '');
+
+    if (tool.classList.contains('entry') && actionName === name) {
+      domClasses(tool).add('highlighted-entry');
+    } else {
+      domClasses(tool).remove('highlighted-entry');
+    }
+  });
+};
+
+
+/**
+ * Return true if the palette is opened.
+ *
+ * @example
+ *
+ * palette.open();
+ *
+ * if (palette.isOpen()) {
+ *   // yes, we are open
+ * }
+ *
+ * @return {boolean} true if palette is opened
+ */
+Palette.prototype.isOpen = function() {
+  return this._container && domClasses(this._container).has('open');
+};
+
+
+/* markup definition */
+
+Palette.HTML_MARKUP =
+  '<div class="djs-palette">' +
+    '<div class="djs-palette-entries"></div>' +
+    '<div class="djs-palette-toggle"></div>' +
+  '</div>';
+
+
+////////// helpers /////////////////////////////
+
+function addClasses(element, classNames) {
+
+  var classes = domClasses(element);
+
+  var actualClassNames = isArray(classNames) ? classNames : classNames.split(/\s+/g);
+  actualClassNames.forEach(function(cls) {
+    classes.add(cls);
+  });
+}
+},{"lodash/collection/forEach":832,"lodash/lang/isArray":955,"lodash/lang/isFunction":956,"min-dom/lib/attr":976,"min-dom/lib/classes":977,"min-dom/lib/clear":978,"min-dom/lib/delegate":980,"min-dom/lib/domify":981,"min-dom/lib/event":982,"min-dom/lib/matches":983,"min-dom/lib/query":984}],742:[function(require,module,exports){
+'use strict';
+
+module.exports = {
+  __depends__: [ require('../tool-manager') ],
+  __init__: [ 'palette' ],
+  palette: [ 'type', require('./Palette') ]
+};
+
+},{"../tool-manager":758,"./Palette":741}],743:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach'),
+    assign = require('lodash/object/assign'),
+    find = require('lodash/collection/find');
+
+var domDelegate = require('min-dom/lib/delegate'),
+    domify = require('min-dom/lib/domify'),
+    domClasses = require('min-dom/lib/classes'),
+    domAttr = require('min-dom/lib/attr'),
+    domRemove = require('min-dom/lib/remove');
+
+var DATA_REF = 'data-id';
+
+/**
+ * A popup menu that can be used to display a list of actions anywhere in the canvas.
+ *
+ * @param {EventBus} eventBus
+ * @param {Canvas} canvas
+ *
+ * @class
+ * @constructor
+ */
+function PopupMenu(eventBus, canvas) {
+
+  this._eventBus = eventBus;
+  this._canvas  = canvas;
+  this._providers = {};
+}
+
+PopupMenu.$inject = [ 'eventBus', 'canvas' ];
+
+/**
+ * Registers a popup menu provider
+ *
+ * @param  {String} id
+ * @param  {Object} provider
+ *
+ * @example
+ * popupMenu.registerProvider('myMenuID', {
+ *   getEntries: function(element) {
+ *     return [
+ *       {
+ *          id: 'entry-1',
+ *          label: 'My Entry',
+ *          action: 'alert("I have been clicked!")'
+ *        }
+ *      ];
+ *    }
+ *  });
+ * })
+ */
+PopupMenu.prototype.registerProvider = function(id, provider) {
+  this._providers[id] = provider;
+};
+
+
+/**
+ * Create a popup menu according to a given element. The id refers to the ID
+ * of the provider that must be registered before.
+ *
+ * @param  {String} id provider id
+ * @param  {Object} element
+ *
+ * @return {PopupMenu} popup menu instance
+ */
+PopupMenu.prototype.create = function(id, element) {
+
+  var provider = this._providers[id];
+
+  if (!provider) {
+    throw new Error('Provider is not registered: ' + id);
+  }
+
+  if (!element) {
+    throw new Error('Element is missing');
+  }
+
+  var current = this._current = {
+    provider: provider,
+    className: id,
+    element: element
+  };
+
+  if (provider.getHeaderEntries) {
+    current.headerEntries = provider.getHeaderEntries(element);
+  }
+
+  current.entries = provider.getEntries(element);
+
+  return this;
+};
+
+
+/**
+ * Determine if the popup menu has entries.
+ *
+ * @return {Boolean} true if empty
+ */
+PopupMenu.prototype.isEmpty = function() {
+
+  var current = this._current;
+
+  return current.entries.length === 0 && current.headerEntries && current.headerEntries.length === 0;
+};
+
+
+/**
+ * Open popup menu at given position
+ *
+ * @param {Object} position
+ *
+ * @return {Object} popup menu instance
+ */
+PopupMenu.prototype.open = function(position) {
+
+  if (!position) {
+    throw new Error('the position argument is missing');
+  }
+
+  // make sure, only one popup menu is open at a time
+  if (this.isOpen()) {
+    this.close();
+  }
+
+  var current = this._current,
+      canvas = this._canvas,
+      parent = canvas.getContainer();
+
+  current.position = position;
+
+  current.container = this._createContainer();
+
+  if (current.headerEntries) {
+    var headerEntriesContainer = this._createEntries(current.headerEntries, 'djs-popup-header');
+
+    current.container.appendChild(headerEntriesContainer);
+  }
+
+  if (current.entries) {
+    var entriesContainer = this._createEntries(current.entries, 'djs-popup-body');
+
+    current.container.appendChild(entriesContainer);
+  }
+
+  this._attachContainer(current.container, parent, position.cursor);
+
+  return this;
+};
+
+
+/**
+ * Removes the popup menu and unbinds the event handlers.
+ */
+PopupMenu.prototype.close = function() {
+
+  if (!this.isOpen()) {
+    return;
+  }
+
+  this._unbindHandlers();
+  domRemove(this._current.container);
+  this._current.container = null;
+};
+
+
+/**
+ * Determine if an open popup menu exist.
+ *
+ * @return {Boolean} true if open
+ */
+PopupMenu.prototype.isOpen = function() {
+  return !!this._current.container;
+};
+
+
+/**
+ * Trigger an action associated with an entry.
+ *
+ * @param {Object} event
+ *
+ * @return the result of the action callback, if any
+ */
+PopupMenu.prototype.trigger = function(event) {
+
+  // silence other actions
+  event.preventDefault();
+
+  var element = event.delegateTarget || event.target,
+      entryId = domAttr(element, DATA_REF);
+
+  var entry = this._getEntry(entryId);
+
+  if (entry.action) {
+    return entry.action.call(null, event, entry);
+  }
+};
+
+/**
+ * Gets an entry instance (either entry or headerEntry) by id.
+ *
+ * @param  {String} entryId
+ *
+ * @return {Object} entry instance
+ */
+PopupMenu.prototype._getEntry = function(entryId) {
+
+  var search = { id: entryId };
+
+  var entry = find(this._current.entries, search) || find(this._current.headerEntries, search);
+
+  if (!entry) {
+    throw new Error('entry not found');
+  }
+
+  return entry;
+};
+
+
+/**
+ * Creates the popup menu container.
+ *
+ * @return {Object} a DOM container
+ */
+PopupMenu.prototype._createContainer = function() {
+  var container = domify('<div class="djs-popup">'),
+      position = this._current.position,
+      className = this._current.className;
+
+  assign(container.style, {
+    position: 'absolute',
+    left: position.x + 'px',
+    top: position.y + 'px',
+    visibility: 'hidden'
+  });
+
+  domClasses(container).add(className);
+
+  return container;
+};
+
+
+/**
+ * Attaches the container to the DOM and binds the event handlers.
+ *
+ * @param {Object} container
+ * @param {Object} parent
+ */
+PopupMenu.prototype._attachContainer = function(container, parent, cursor) {
+  var self = this;
+
+   // Event handler
+  domDelegate.bind(container, '.entry' ,'click', function(event) {
+    self.trigger(event);
+  });
+
+  // apply canvas zoom level
+  var zoom = this._canvas.zoom();
+
+  container.style.transformOrigin = 'top left';
+  container.style.transform = 'scale(' + zoom + ')';
+
+  // Attach to DOM
+  parent.appendChild(container);
+
+  if (cursor) {
+    this._assureIsInbounds(container, cursor);
+  }
+
+  // Add Handler
+  this._bindHandlers();
+};
+
+
+/**
+ * Make sure that the menu is always fully shown
+ *
+ * @method function
+ *
+ * @param  {Object} container
+ * @param  {Position} cursor {x, y}
+ */
+PopupMenu.prototype._assureIsInbounds = function(container, cursor) {
+  var canvas = this._canvas,
+      clientRect = canvas._container.getBoundingClientRect();
+
+  var containerX = container.offsetLeft,
+      containerY = container.offsetTop,
+      containerWidth = container.scrollWidth,
+      containerHeight = container.scrollHeight,
+      overAxis = {},
+      left, top;
+
+  var cursorPosition = {
+    x: cursor.x - clientRect.left,
+    y: cursor.y - clientRect.top
+  };
+
+  if (containerX + containerWidth > clientRect.width) {
+    overAxis.x = true;
+  }
+
+  if (containerY + containerHeight > clientRect.height) {
+    overAxis.y = true;
+  }
+
+  if (overAxis.x && overAxis.y) {
+    left = cursorPosition.x - containerWidth + 'px';
+    top = cursorPosition.y - containerHeight + 'px';
+  } else if (overAxis.x) {
+    left = cursorPosition.x - containerWidth + 'px';
+    top = cursorPosition.y + 'px';
+  } else if (overAxis.y && cursorPosition.y < containerHeight) {
+    left = cursorPosition.x + 'px';
+    top = 10 + 'px';
+  } else if (overAxis.y) {
+    left = cursorPosition.x + 'px';
+    top = cursorPosition.y - containerHeight + 'px';
+  }
+
+  assign(container.style, { left: left, top: top }, { visibility: 'visible', 'z-index': 1000 });
+};
+
+
+/**
+ * Creates a list of entries and returns them as a DOM container.
+ *
+ * @param {Array<Object>} entries an array of entry objects
+ * @param {String} className the class name of the entry container
+ *
+ * @return {Object} a DOM container
+ */
+PopupMenu.prototype._createEntries = function(entries, className) {
+
+  var entriesContainer = domify('<div>'),
+      self = this;
+
+  domClasses(entriesContainer).add(className);
+
+  forEach(entries, function(entry) {
+    var entryContainer = self._createEntry(entry, entriesContainer);
+    entriesContainer.appendChild(entryContainer);
+  });
+
+  return entriesContainer;
+};
+
+
+/**
+ * Creates a single entry and returns it as a DOM container.
+ *
+ * @param  {Object} entry
+ *
+ * @return {Object} a DOM container
+ */
+PopupMenu.prototype._createEntry = function(entry) {
+
+  if (!entry.id) {
+    throw new Error ('every entry must have the id property set');
+  }
+
+  var entryContainer = domify('<div>'),
+      entryClasses = domClasses(entryContainer);
+
+  entryClasses.add('entry');
+
+  if (entry.className) {
+    entryClasses.add(entry.className);
+  }
+
+  domAttr(entryContainer, DATA_REF, entry.id);
+
+  if (entry.label) {
+    var label = domify('<span>');
+    label.textContent = entry.label;
+    entryContainer.appendChild(label);
+  }
+
+  if (entry.imageUrl) {
+    entryContainer.appendChild(domify('<img src="' + entry.imageUrl + '" />'));
+  }
+
+  if (entry.active === true) {
+    entryClasses.add('active');
+  }
+
+  if (entry.disabled === true) {
+    entryClasses.add('disabled');
+  }
+
+  if (entry.title) {
+    entryContainer.title = entry.title;
+  }
+
+  return entryContainer;
+};
+
+
+/**
+ * Binds the `close` method to 'contextPad.close' & 'canvas.viewbox.changed'.
+ */
+PopupMenu.prototype._bindHandlers = function() {
+
+  var eventBus = this._eventBus,
+      self = this;
+
+  function close() {
+    self.close();
+  }
+
+  eventBus.once('contextPad.close', close);
+  eventBus.once('canvas.viewbox.changing', close);
+  eventBus.once('commandStack.changed', close);
+};
+
+
+/**
+ * Unbinds the `close` method to 'contextPad.close' & 'canvas.viewbox.changing'.
+ */
+PopupMenu.prototype._unbindHandlers = function() {
+
+  var eventBus = this._eventBus,
+      self = this;
+
+  function close() {
+    self.close();
+  }
+
+  eventBus.off('contextPad.close', close);
+  eventBus.off('canvas.viewbox.changed', close);
+  eventBus.off('commandStack.changed', close);
+};
+
+module.exports = PopupMenu;
+
+},{"lodash/collection/find":831,"lodash/collection/forEach":832,"lodash/object/assign":964,"min-dom/lib/attr":976,"min-dom/lib/classes":977,"min-dom/lib/delegate":980,"min-dom/lib/domify":981,"min-dom/lib/remove":985}],744:[function(require,module,exports){
+'use strict';
+
+module.exports = {
+  __init__: [ 'popupMenu' ],
+  popupMenu: [ 'type', require('./PopupMenu') ]
+};
+
+},{"./PopupMenu":743}],745:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach');
+
+var svgAppend = require('tiny-svg/lib/append'),
+    svgAttr = require('tiny-svg/lib/attr'),
+    svgClone = require('tiny-svg/lib/clone'),
+    svgCreate = require('tiny-svg/lib/create');
+
+/**
+ * Adds support for previews of moving/resizing elements.
+ */
+function PreviewSupport(elementRegistry, canvas, styles) {
+  this._elementRegistry = elementRegistry;
+  this._canvas = canvas;
+  this._styles = styles;
+}
+
+module.exports = PreviewSupport;
+
+PreviewSupport.$inject = [ 'elementRegistry', 'canvas', 'styles' ];
+
+
+/**
+ * Returns graphics of an element.
+ *
+ * @param {djs.model.Base} element
+ *
+ * @return {SVGElement}
+ */
+PreviewSupport.prototype.getGfx = function(element) {
+  return this._elementRegistry.getGraphics(element);
+};
+
+/**
+ * Adds a move preview of a given shape to a given svg group.
+ *
+ * @param {djs.model.Base} element
+ * @param {SVGElement} group
+ *
+ * @return {SVGElement} dragger
+ */
+PreviewSupport.prototype.addDragger = function(shape, group) {
+  var gfx = this.getGfx(shape);
+
+  // clone is not included in tsvg for some reason
+  var dragger = svgClone(gfx);
+  var bbox = gfx.getBoundingClientRect();
+
+  // remove markers from connections
+  if (isConnection(shape)) {
+    removeMarkers(dragger);
+  }
+
+  svgAttr(dragger, this._styles.cls('djs-dragger', [], {
+    x: bbox.top,
+    y: bbox.left
+  }));
+
+  svgAppend(group, dragger);
+
+  return dragger;
+};
+
+/**
+ * Adds a resize preview of a given shape to a given svg group.
+ *
+ * @param {djs.model.Base} element
+ * @param {SVGElement} group
+ *
+ * @return {SVGElement} frame
+ */
+PreviewSupport.prototype.addFrame = function(shape, group) {
+
+  var frame = svgCreate('rect', {
+    class: 'djs-resize-overlay',
+    width:  shape.width,
+    height: shape.height,
+    x: shape.x,
+    y: shape.y
+  });
+
+  svgAppend(group, frame);
+
+  return frame;
+};
+
+////////// helpers //////////
+
+/**
+ * Removes all svg marker references from an SVG.
+ *
+ * @param {SVGElement} gfx
+ */
+function removeMarkers(gfx) {
+
+  if (gfx.children) {
+
+    forEach(gfx.children, function(child) {
+
+      // recursion
+      removeMarkers(child);
+
+    });
+
+  }
+
+  gfx.style.markerStart = '';
+  gfx.style.markerEnd = '';
+
+}
+
+/**
+ * Checks if an element is a connection.
+ */
+function isConnection(element) {
+  return element.waypoints;
+}
+
+},{"lodash/collection/forEach":832,"tiny-svg/lib/append":1067,"tiny-svg/lib/attr":1069,"tiny-svg/lib/clone":1072,"tiny-svg/lib/create":1073}],746:[function(require,module,exports){
+'use strict';
+
+module.exports = {
+  __init__: [ 'previewSupport' ],
+  previewSupport: [ 'type', require('./PreviewSupport') ]
+};
+
+},{"./PreviewSupport":745}],747:[function(require,module,exports){
+'use strict';
+
+
+/**
+ * Service that allow replacing of elements.
+ *
+ *
+ * @class
+ * @constructor
+ */
+function Replace(modeling) {
+
+  this._modeling = modeling;
+}
+
+module.exports = Replace;
+
+Replace.$inject = [ 'modeling' ];
+
+/**
+ * @param {Element} oldElement - Element to be replaced
+ * @param {Object}  newElementData - Containing information about the new Element, for example height, width, type.
+ * @param {Object}  options - Custom options that will be attached to the context. It can be used to inject data
+ *                            that is needed in the command chain. For example it could be used in
+ *                            eventbus.on('commandStack.shape.replace.postExecute') to change shape attributes after
+ *                            shape creation.
+ */
+Replace.prototype.replaceElement = function(oldElement, newElementData, options) {
+
+  var modeling = this._modeling;
+
+  var newElement = null;
+
+  if (oldElement.waypoints) {
+    // TODO
+    // modeling.replaceConnection
+  } else {
+    // set center of element for modeling API
+    // if no new width / height is given use old elements size
+    newElementData.x = Math.ceil(oldElement.x + (newElementData.width || oldElement.width) / 2);
+    newElementData.y = Math.ceil(oldElement.y + (newElementData.height || oldElement.height) / 2);
+
+    newElement = modeling.replaceShape(oldElement, newElementData, options);
+  }
+
+  return newElement;
+};
+
+},{}],748:[function(require,module,exports){
+'use strict';
+
+module.exports = {
+  __init__: [ 'replace' ],
+  replace: [ 'type', require('./Replace') ]
+};
+
+},{"./Replace":747}],749:[function(require,module,exports){
 
 'use strict';
 
@@ -78686,7 +91940,7 @@ RuleProvider.prototype.addRule = function(actions, priority, fn) {
  * Implement this method to add new rules during provider initialization.
  */
 RuleProvider.prototype.init = function() {};
-},{"../../command/CommandInterceptor":623,"inherits":699}],643:[function(require,module,exports){
+},{"../../command/CommandInterceptor":665,"inherits":820}],750:[function(require,module,exports){
 'use strict';
 
 /**
@@ -78737,77 +91991,6015 @@ Rules.prototype.allowed = function(action, context) {
   // map undefined to true, i.e. no rules
   return allowed === undefined ? true : allowed;
 };
-},{}],644:[function(require,module,exports){
+},{}],751:[function(require,module,exports){
 module.exports = {
   __init__: [ 'rules' ],
   rules: [ 'type', require('./Rules') ]
 };
 
-},{"./Rules":643}],645:[function(require,module,exports){
+},{"./Rules":750}],752:[function(require,module,exports){
 arguments[4][95][0].apply(exports,arguments)
-},{"dup":95,"lodash/collection/forEach":708,"lodash/lang/isArray":816}],646:[function(require,module,exports){
+},{"dup":95,"lodash/collection/forEach":832,"lodash/lang/isArray":955}],753:[function(require,module,exports){
 arguments[4][344][0].apply(exports,arguments)
-},{"../../util/Mouse":665,"dup":344,"lodash/collection/find":707}],647:[function(require,module,exports){
-arguments[4][97][0].apply(exports,arguments)
-},{"dup":97,"lodash/collection/forEach":708}],648:[function(require,module,exports){
+},{"../../util/Mouse":785,"dup":344,"lodash/collection/find":831}],754:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach');
+
+var MARKER_HOVER = 'hover',
+    MARKER_SELECTED = 'selected';
+
+
+/**
+ * A plugin that adds a visible selection UI to shapes and connections
+ * by appending the <code>hover</code> and <code>selected</code> classes to them.
+ *
+ * @class
+ *
+ * Makes elements selectable, too.
+ *
+ * @param {EventBus} events
+ * @param {SelectionService} selection
+ * @param {Canvas} canvas
+ */
+function SelectionVisuals(events, canvas, selection, styles) {
+
+  this._multiSelectionBox = null;
+
+  function addMarker(e, cls) {
+    canvas.addMarker(e, cls);
+  }
+
+  function removeMarker(e, cls) {
+    canvas.removeMarker(e, cls);
+  }
+
+  events.on('element.hover', function(event) {
+    addMarker(event.element, MARKER_HOVER);
+  });
+
+  events.on('element.out', function(event) {
+    removeMarker(event.element, MARKER_HOVER);
+  });
+
+  events.on('selection.changed', function(event) {
+
+    function deselect(s) {
+      removeMarker(s, MARKER_SELECTED);
+    }
+
+    function select(s) {
+      addMarker(s, MARKER_SELECTED);
+    }
+
+    var oldSelection = event.oldSelection,
+        newSelection = event.newSelection;
+
+    forEach(oldSelection, function(e) {
+      if (newSelection.indexOf(e) === -1) {
+        deselect(e);
+      }
+    });
+
+    forEach(newSelection, function(e) {
+      if (oldSelection.indexOf(e) === -1) {
+        select(e);
+      }
+    });
+  });
+}
+
+SelectionVisuals.$inject = [
+  'eventBus',
+  'canvas',
+  'selection',
+  'styles'
+];
+
+module.exports = SelectionVisuals;
+
+},{"lodash/collection/forEach":832}],755:[function(require,module,exports){
 arguments[4][98][0].apply(exports,arguments)
-},{"../interaction-events":637,"../outline":639,"./Selection":645,"./SelectionBehavior":646,"./SelectionVisuals":647,"dup":98}],649:[function(require,module,exports){
-arguments[4][99][0].apply(exports,arguments)
-},{"./translate":650,"dup":99}],650:[function(require,module,exports){
-arguments[4][100][0].apply(exports,arguments)
-},{"dup":100}],651:[function(require,module,exports){
+},{"../interaction-events":702,"../outline":738,"./Selection":752,"./SelectionBehavior":753,"./SelectionVisuals":754,"dup":98}],756:[function(require,module,exports){
+'use strict';
+
+/**
+ * Get Resize direction given axis + offset
+ *
+ * @param {String} axis (x|y)
+ * @param {Number} offset
+ *
+ * @return {String} (e|w|n|s)
+ */
+function getDirection(axis, offset) {
+
+  if (axis === 'x') {
+    if (offset > 0) {
+      return 'e';
+    }
+
+    if (offset < 0) {
+      return 'w';
+    }
+  }
+
+  if (axis === 'y') {
+    if (offset > 0) {
+      return 's';
+    }
+
+    if (offset < 0) {
+      return 'n';
+    }
+  }
+
+  return null;
+}
+
+module.exports.getDirection = getDirection;
+
+/**
+ * Resize the given bounds by the specified delta from a given anchor point.
+ *
+ * @param {Bounds} bounds the bounding box that should be resized
+ * @param {String} direction in which the element is resized (n, s, e, w)
+ * @param {Point} delta of the resize operation
+ *
+ * @return {Bounds} resized bounding box
+ */
+module.exports.resizeBounds = function(bounds, direction, delta) {
+
+  var dx = delta.x,
+      dy = delta.y;
+
+  switch (direction) {
+
+  case 'n':
+    return {
+      x: bounds.x,
+      y: bounds.y + dy,
+      width: bounds.width,
+      height: bounds.height - dy
+    };
+
+  case 's':
+    return {
+      x: bounds.x,
+      y: bounds.y,
+      width: bounds.width,
+      height: bounds.height + dy
+    };
+
+  case 'w':
+    return {
+      x: bounds.x + dx,
+      y: bounds.y,
+      width: bounds.width - dx,
+      height: bounds.height
+    };
+
+  case 'e':
+    return {
+      x: bounds.x,
+      y: bounds.y,
+      width: bounds.width + dx,
+      height: bounds.height
+    };
+
+  default:
+    throw new Error('unrecognized direction: ' + direction);
+  }
+};
+},{}],757:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach');
+
+var LOW_PRIORITY = 250;
+
+/**
+ * The tool manager acts as middle-man between the available tool's and the Palette,
+ * it takes care of making sure that the correct active state is set.
+ *
+ * @param  {Object}    eventBus
+ * @param  {Object}    dragging
+ */
+function ToolManager(eventBus, dragging) {
+  this._eventBus = eventBus;
+  this._dragging = dragging;
+
+  this._tools = [];
+  this._active = null;
+}
+
+ToolManager.$inject = [ 'eventBus', 'dragging' ];
+
+module.exports = ToolManager;
+
+ToolManager.prototype.registerTool = function(name, events) {
+  var tools = this._tools;
+
+  if (!events) {
+    throw new Error('A tool has to be registered with it\'s "events"');
+  }
+
+  tools.push(name);
+
+  this.bindEvents(name, events);
+};
+
+ToolManager.prototype.isActive = function(tool) {
+  return tool && this._active === tool;
+};
+
+ToolManager.prototype.length = function(tool) {
+  return this._tools.length;
+};
+
+ToolManager.prototype.setActive = function(tool) {
+  var eventBus = this._eventBus;
+
+  if (this._active !== tool) {
+    this._active = tool;
+
+    eventBus.fire('tool-manager.update', { tool: tool });
+  }
+};
+
+ToolManager.prototype.bindEvents = function(name, events) {
+  var eventBus = this._eventBus,
+      dragging = this._dragging;
+
+  var eventsToRegister = [];
+
+  eventBus.on(events.tool + '.init', function(event) {
+    var context = event.context;
+
+    // Active tools that want to reactivate themselves must do this explicitly
+    if (!context.reactivate && this.isActive(name)) {
+      this.setActive(null);
+
+      dragging.cancel();
+      return;
+    }
+
+    this.setActive(name);
+
+  }, this);
+
+  // Todo[ricardo]: add test cases
+  forEach(events, function(event) {
+    eventsToRegister.push(event + '.ended');
+    eventsToRegister.push(event + '.canceled');
+  });
+
+  eventBus.on(eventsToRegister, LOW_PRIORITY, function(event) {
+    var originalEvent = event.originalEvent;
+
+    // We defer the de-activation of the tool to the .activate phase,
+    // so we're able to check if we want to toggle off the current active tool or switch to a new one
+    if (!this._active ||
+        (originalEvent && originalEvent.target.parentNode.getAttribute('data-group') === 'tools')) {
+      return;
+    }
+
+    this.setActive(null);
+  }, this);
+};
+
+},{"lodash/collection/forEach":832}],758:[function(require,module,exports){
+'use strict';
+
+module.exports = {
+  __depends__: [ require('../dragging') ],
+  __init__: [ 'toolManager' ],
+  toolManager: [ 'type', require('./ToolManager') ]
+};
+
+},{"../dragging":698,"./ToolManager":757}],759:[function(require,module,exports){
+'use strict';
+
+var svgAppend = require('tiny-svg/lib/append'),
+    svgAttr = require('tiny-svg/lib/attr'),
+    svgCreate = require('tiny-svg/lib/create');
+
+
+function TouchFix(canvas, eventBus) {
+
+  var self = this;
+
+  eventBus.on('canvas.init', function(e) {
+    self.addBBoxMarker(e.svg);
+  });
+}
+
+TouchFix.$inject = [ 'canvas', 'eventBus' ];
+
+module.exports = TouchFix;
+
+
+/**
+ * Safari mobile (iOS 7) does not fire touchstart event in <SVG> element
+ * if there is no shape between 0,0 and viewport elements origin.
+ *
+ * So touchstart event is only fired when the <g class="viewport"> element was hit.
+ * Putting an element over and below the 'viewport' fixes that behavior.
+ */
+TouchFix.prototype.addBBoxMarker = function(svg) {
+
+  var markerStyle = {
+    fill: 'none',
+    class: 'outer-bound-marker'
+  };
+
+  var rect1 = svgCreate('rect');
+  svgAttr(rect1, {
+    x: -10000,
+    y: 10000,
+    width: 10,
+    height: 10
+  });
+  svgAttr(rect1, markerStyle);
+
+  svgAppend(svg, rect1);
+
+  var rect2 = svgCreate('rect');
+  svgAttr(rect2, {
+    x: 10000,
+    y: 10000,
+    width: 10,
+    height: 10
+  });
+  svgAttr(rect2, markerStyle);
+
+  svgAppend(svg, rect2);
+};
+
+},{"tiny-svg/lib/append":1067,"tiny-svg/lib/attr":1069,"tiny-svg/lib/create":1073}],760:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach'),
+    domEvent = require('min-dom/lib/event'),
+    domClosest = require('min-dom/lib/closest'),
+    Hammer = require('hammerjs'),
+    Event = require('../../util/Event');
+
+var MIN_ZOOM = 0.2,
+    MAX_ZOOM = 4;
+
+var mouseEvents = [
+  'mousedown',
+  'mouseup',
+  'mouseover',
+  'mouseout',
+  'click',
+  'dblclick'
+];
+
+function log() {
+  // console.log.apply(console, arguments);
+}
+
+function get(service, injector) {
+  return injector.get(service, false);
+}
+
+function createTouchRecognizer(node) {
+
+  function stopEvent(event) {
+    Event.stopEvent(event, true);
+  }
+
+  function stopMouse(event) {
+
+    forEach(mouseEvents, function(e) {
+      domEvent.bind(node, e, stopEvent, true);
+    });
+  }
+
+  function allowMouse(event) {
+    setTimeout(function() {
+      forEach(mouseEvents, function(e) {
+        domEvent.unbind(node, e, stopEvent, true);
+      });
+    }, 500);
+  }
+
+  domEvent.bind(node, 'touchstart', stopMouse, true);
+  domEvent.bind(node, 'touchend', allowMouse, true);
+  domEvent.bind(node, 'touchcancel', allowMouse, true);
+
+  // A touch event recognizer that handles
+  // touch events only (we know, we can already handle
+  // mouse events out of the box)
+
+  var recognizer = new Hammer.Manager(node, {
+    inputClass: Hammer.TouchInput,
+    recognizers: []
+  });
+
+
+  var tap = new Hammer.Tap();
+  var pan = new Hammer.Pan({ threshold: 10 });
+  var press = new Hammer.Press();
+  var pinch = new Hammer.Pinch();
+
+  var doubleTap = new Hammer.Tap({ event: 'doubletap', taps: 2 });
+
+  pinch.requireFailure(pan);
+  pinch.requireFailure(press);
+
+  recognizer.add([ pan, press, pinch, doubleTap, tap ]);
+
+  recognizer.reset = function(force) {
+    var recognizers = this.recognizers,
+        session = this.session;
+
+    if (session.stopped) {
+      return;
+    }
+
+    log('recognizer', 'stop');
+
+    recognizer.stop(force);
+
+    setTimeout(function() {
+      var i, r;
+
+      log('recognizer', 'reset');
+      for (i = 0; (r = recognizers[i]); i++) {
+        r.reset();
+        r.state = 8; // FAILED STATE
+      }
+
+      session.curRecognizer = null;
+    }, 0);
+  };
+
+  recognizer.on('hammer.input', function(event) {
+    if (event.srcEvent.defaultPrevented) {
+      recognizer.reset(true);
+    }
+  });
+
+  return recognizer;
+}
+
+/**
+ * A plugin that provides touch events for elements.
+ *
+ * @param {EventBus} eventBus
+ * @param {InteractionEvents} interactionEvents
+ */
+function TouchInteractionEvents(injector, canvas, eventBus, elementRegistry, interactionEvents) {
+
+  // optional integrations
+  var dragging = get('dragging', injector),
+      move = get('move', injector),
+      contextPad = get('contextPad', injector),
+      palette = get('palette', injector);
+
+  // the touch recognizer
+  var recognizer;
+
+  function handler(type) {
+
+    return function(event) {
+      log('element', type, event);
+
+      interactionEvents.fire(type, event);
+    };
+  }
+
+  function getGfx(target) {
+    var node = domClosest(target, 'svg, .djs-element', true);
+    return node;
+  }
+
+  function initEvents(svg) {
+
+    // touch recognizer
+    recognizer = createTouchRecognizer(svg);
+
+    recognizer.on('doubletap', handler('element.dblclick'));
+
+    recognizer.on('tap', handler('element.click'));
+
+    function startGrabCanvas(event) {
+
+      log('canvas', 'grab start');
+
+      var lx = 0, ly = 0;
+
+      function update(e) {
+
+        var dx = e.deltaX - lx,
+            dy = e.deltaY - ly;
+
+        canvas.scroll({ dx: dx, dy: dy });
+
+        lx = e.deltaX;
+        ly = e.deltaY;
+      }
+
+      function end(e) {
+        recognizer.off('panmove', update);
+        recognizer.off('panend', end);
+        recognizer.off('pancancel', end);
+
+        log('canvas', 'grab end');
+      }
+
+      recognizer.on('panmove', update);
+      recognizer.on('panend', end);
+      recognizer.on('pancancel', end);
+    }
+
+    function startGrab(event) {
+
+      var gfx = getGfx(event.target),
+          element = gfx && elementRegistry.get(gfx);
+
+      // recognizer
+      if (move && canvas.getRootElement() !== element) {
+        log('element', 'move start', element, event, true);
+        return move.start(event, element, true);
+      } else {
+        startGrabCanvas(event);
+      }
+    }
+
+    function startZoom(e) {
+
+      log('canvas', 'zoom start');
+
+      var zoom = canvas.zoom(),
+          mid = e.center;
+
+      function update(e) {
+
+        var ratio = 1 - (1 - e.scale) / 1.50,
+            newZoom = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, ratio * zoom));
+
+        canvas.zoom(newZoom, mid);
+
+        Event.stopEvent(e, true);
+      }
+
+      function end(e) {
+        recognizer.off('pinchmove', update);
+        recognizer.off('pinchend', end);
+        recognizer.off('pinchcancel', end);
+
+        recognizer.reset(true);
+
+        log('canvas', 'zoom end');
+      }
+
+      recognizer.on('pinchmove', update);
+      recognizer.on('pinchend', end);
+      recognizer.on('pinchcancel', end);
+    }
+
+    recognizer.on('panstart', startGrab);
+    recognizer.on('press', startGrab);
+
+    recognizer.on('pinchstart', startZoom);
+  }
+
+  if (dragging) {
+
+    // simulate hover during dragging
+    eventBus.on('drag.move', function(event) {
+
+      var originalEvent = event.originalEvent;
+
+      if (!originalEvent || originalEvent instanceof MouseEvent) {
+        return;
+      }
+
+      var position = Event.toPoint(originalEvent);
+
+      // this gets really expensive ...
+      var node = document.elementFromPoint(position.x, position.y),
+          gfx = getGfx(node),
+          element = gfx && elementRegistry.get(gfx);
+
+      if (element !== event.hover) {
+        if (event.hover) {
+          dragging.out(event);
+        }
+
+        if (element) {
+          dragging.hover({ element: element, gfx: gfx });
+
+          event.hover = element;
+          event.hoverGfx = gfx;
+        }
+      }
+    });
+  }
+
+  if (contextPad) {
+
+    eventBus.on('contextPad.create', function(event) {
+      var node = event.pad.html;
+
+      // touch recognizer
+      var padRecognizer = createTouchRecognizer(node);
+
+      padRecognizer.on('panstart', function(event) {
+        log('context-pad', 'panstart', event);
+        contextPad.trigger('dragstart', event, true);
+      });
+
+      padRecognizer.on('press', function(event) {
+        log('context-pad', 'press', event);
+        contextPad.trigger('dragstart', event, true);
+      });
+
+      padRecognizer.on('tap', function(event) {
+        log('context-pad', 'tap', event);
+        contextPad.trigger('click', event);
+      });
+    });
+  }
+
+  if (palette) {
+    eventBus.on('palette.create', function(event) {
+      var node = event.html;
+
+      // touch recognizer
+      var padRecognizer = createTouchRecognizer(node);
+
+      padRecognizer.on('panstart', function(event) {
+        log('palette', 'panstart', event);
+        palette.trigger('dragstart', event, true);
+      });
+
+      padRecognizer.on('press', function(event) {
+        log('palette', 'press', event);
+        palette.trigger('dragstart', event, true);
+      });
+
+      padRecognizer.on('tap', function(event) {
+        log('palette', 'tap', event);
+        palette.trigger('click', event);
+      });
+    });
+  }
+
+  eventBus.on('canvas.init', function(event) {
+    initEvents(event.svg);
+  });
+}
+
+
+TouchInteractionEvents.$inject = [
+  'injector',
+  'canvas',
+  'eventBus',
+  'elementRegistry',
+  'interactionEvents',
+  'touchFix'
+];
+
+module.exports = TouchInteractionEvents;
+
+},{"../../util/Event":778,"hammerjs":796,"lodash/collection/forEach":832,"min-dom/lib/closest":979,"min-dom/lib/event":982}],761:[function(require,module,exports){
+module.exports = {
+  __depends__: [ require('../interaction-events') ],
+  __init__: [ 'touchInteractionEvents' ],
+  touchInteractionEvents: [ 'type', require('./TouchInteractionEvents') ],
+  touchFix: [ 'type', require('./TouchFix') ]
+};
+},{"../interaction-events":702,"./TouchFix":759,"./TouchInteractionEvents":760}],762:[function(require,module,exports){
+'use strict';
+
+var getMid = require('./LayoutUtil').getMid;
+
+
+/**
+ * A base connection layouter implementation
+ * that layouts the connection by directly connecting
+ * mid(source) + mid(target).
+ */
+function BaseLayouter() {}
+
+module.exports = BaseLayouter;
+
+
+/**
+ * Return the new layouted waypoints for the given connection.
+ *
+ * The connection passed is still unchanged; you may figure out about
+ * the new connection start / end via the layout hints provided.
+ *
+ * @param {djs.model.Connection} connection
+ * @param {Object} [hints]
+ * @param {Point} [hints.connectionStart]
+ * @param {Point} [hints.connectionEnd]
+ *
+ * @return {Array<Point>} the layouted connection waypoints
+ */
+BaseLayouter.prototype.layoutConnection = function(connection, hints) {
+
+  hints = hints || {};
+
+  return [
+    hints.connectionStart || getMid(connection.source),
+    hints.connectionEnd || getMid(connection.target)
+  ];
+};
+
+},{"./LayoutUtil":764}],763:[function(require,module,exports){
+'use strict';
+
+var assign = require('lodash/object/assign');
+
+var LayoutUtil = require('./LayoutUtil');
+
+
+function dockingToPoint(docking) {
+  // use the dockings actual point and
+  // retain the original docking
+  return assign({ original: docking.point.original || docking.point }, docking.actual);
+}
+
+
+/**
+ * A {@link ConnectionDocking} that crops connection waypoints based on
+ * the path(s) of the connection source and target.
+ *
+ * @param {djs.core.ElementRegistry} elementRegistry
+ */
+function CroppingConnectionDocking(elementRegistry, graphicsFactory) {
+  this._elementRegistry = elementRegistry;
+  this._graphicsFactory = graphicsFactory;
+}
+
+CroppingConnectionDocking.$inject = [ 'elementRegistry', 'graphicsFactory' ];
+
+module.exports = CroppingConnectionDocking;
+
+
+/**
+ * @inheritDoc ConnectionDocking#getCroppedWaypoints
+ */
+CroppingConnectionDocking.prototype.getCroppedWaypoints = function(connection, source, target) {
+
+  source = source || connection.source;
+  target = target || connection.target;
+
+  var sourceDocking = this.getDockingPoint(connection, source, true),
+      targetDocking = this.getDockingPoint(connection, target);
+
+  var croppedWaypoints = connection.waypoints.slice(sourceDocking.idx + 1, targetDocking.idx);
+
+  croppedWaypoints.unshift(dockingToPoint(sourceDocking));
+  croppedWaypoints.push(dockingToPoint(targetDocking));
+
+  return croppedWaypoints;
+};
+
+/**
+ * Return the connection docking point on the specified shape
+ *
+ * @inheritDoc ConnectionDocking#getDockingPoint
+ */
+CroppingConnectionDocking.prototype.getDockingPoint = function(connection, shape, dockStart) {
+
+  var waypoints = connection.waypoints,
+      dockingIdx,
+      dockingPoint,
+      croppedPoint;
+
+  dockingIdx = dockStart ? 0 : waypoints.length - 1;
+  dockingPoint = waypoints[dockingIdx];
+
+  croppedPoint = this._getIntersection(shape, connection, dockStart);
+
+  return {
+    point: dockingPoint,
+    actual: croppedPoint || dockingPoint,
+    idx: dockingIdx
+  };
+};
+
+
+////// helper methods ///////////////////////////////////////////////////
+
+CroppingConnectionDocking.prototype._getIntersection = function(shape, connection, takeFirst) {
+
+  var shapePath = this._getShapePath(shape),
+      connectionPath = this._getConnectionPath(connection);
+
+  return LayoutUtil.getElementLineIntersection(shapePath, connectionPath, takeFirst);
+};
+
+CroppingConnectionDocking.prototype._getConnectionPath = function(connection) {
+  return this._graphicsFactory.getConnectionPath(connection);
+};
+
+CroppingConnectionDocking.prototype._getShapePath = function(shape) {
+  return this._graphicsFactory.getShapePath(shape);
+};
+
+CroppingConnectionDocking.prototype._getGfx = function(element) {
+  return this._elementRegistry.getGraphics(element);
+};
+
+},{"./LayoutUtil":764,"lodash/object/assign":964}],764:[function(require,module,exports){
+'use strict';
+
+var isObject = require('lodash/lang/isObject'),
+    sortBy = require('lodash/collection/sortBy'),
+    pointDistance = require('../util/Geometry').pointDistance;
+
+var intersection = require('../util/Intersection').intersection;
+
+
+function roundBounds(bounds) {
+  return {
+    x: Math.round(bounds.x),
+    y: Math.round(bounds.y),
+    width: Math.round(bounds.width),
+    height: Math.round(bounds.height)
+  };
+}
+
+module.exports.roundBounds = roundBounds;
+
+
+function roundPoint(point) {
+
+  return {
+    x: Math.round(point.x),
+    y: Math.round(point.y)
+  };
+}
+
+module.exports.roundPoint = roundPoint;
+
+
+/**
+ * Convert the given bounds to a { top, left, bottom, right } descriptor.
+ *
+ * @param {Bounds|Point} bounds
+ *
+ * @return {Object}
+ */
+function asTRBL(bounds) {
+  return {
+    top: bounds.y,
+    right: bounds.x + (bounds.width || 0),
+    bottom: bounds.y + (bounds.height || 0),
+    left: bounds.x
+  };
+}
+
+module.exports.asTRBL = asTRBL;
+
+/**
+ * Convert a { top, left, bottom, right } to an objects bounds.
+ *
+ * @param {Object} trbl
+ *
+ * @return {Bounds}
+ */
+function asBounds(trbl) {
+  return {
+    x: trbl.left,
+    y: trbl.top,
+    width: trbl.right - trbl.left,
+    height: trbl.bottom - trbl.top
+  };
+}
+
+module.exports.asBounds = asBounds;
+
+
+/**
+ * Get the mid of the given bounds or point.
+ *
+ * @param {Bounds|Point} bounds
+ *
+ * @return {Point}
+ */
+function getMid(bounds) {
+  return roundPoint({
+    x: bounds.x + (bounds.width || 0) / 2,
+    y: bounds.y + (bounds.height || 0) / 2
+  });
+}
+
+module.exports.getMid = getMid;
+
+
+////// orientation utils //////////////////////////////
+
+/**
+ * Get orientation of the given rectangle with respect to
+ * the reference rectangle.
+ *
+ * A padding (positive or negative) may be passed to influence
+ * horizontal / vertical orientation and intersection.
+ *
+ * @param {Bounds} rect
+ * @param {Bounds} reference
+ * @param {Point|Number} padding
+ *
+ * @return {String} the orientation; one of top, top-left, left, ..., bottom, right or intersect.
+ */
+function getOrientation(rect, reference, padding) {
+
+  padding = padding || 0;
+
+  // make sure we can use an object, too
+  // for individual { x, y } padding
+  if (!isObject(padding)) {
+    padding = { x: padding, y: padding };
+  }
+
+
+  var rectOrientation = asTRBL(rect),
+      referenceOrientation = asTRBL(reference);
+
+  var top = rectOrientation.bottom + padding.y <= referenceOrientation.top,
+      right = rectOrientation.left - padding.x >= referenceOrientation.right,
+      bottom = rectOrientation.top - padding.y >= referenceOrientation.bottom,
+      left = rectOrientation.right + padding.x <= referenceOrientation.left;
+
+  var vertical = top ? 'top' : (bottom ? 'bottom' : null),
+      horizontal = left ? 'left' : (right ? 'right' : null);
+
+  if (horizontal && vertical) {
+    return vertical + '-' + horizontal;
+  } else {
+    return horizontal || vertical || 'intersect';
+  }
+}
+
+module.exports.getOrientation = getOrientation;
+
+
+////// intersection utils //////////////////////////////
+
+/**
+ * Get intersection between an element and a line path.
+ *
+ * @param {PathDef} elementPath
+ * @param {PathDef} linePath
+ * @param {Boolean} cropStart crop from start or end
+ *
+ * @return {Point}
+ */
+function getElementLineIntersection(elementPath, linePath, cropStart) {
+
+  var intersections = getIntersections(elementPath, linePath);
+
+  // recognize intersections
+  // only one -> choose
+  // two close together -> choose first
+  // two or more distinct -> pull out appropriate one
+  // none -> ok (fallback to point itself)
+  if (intersections.length === 1) {
+    return roundPoint(intersections[0]);
+  } else if (intersections.length === 2 && pointDistance(intersections[0], intersections[1]) < 1) {
+    return roundPoint(intersections[0]);
+  } else if (intersections.length > 1) {
+
+    // sort by intersections based on connection segment +
+    // distance from start
+    intersections = sortBy(intersections, function(i) {
+      var distance = Math.floor(i.t2 * 100) || 1;
+
+      distance = 100 - distance;
+
+      distance = (distance < 10 ? '0' : '') + distance;
+
+      // create a sort string that makes sure we sort
+      // line segment ASC + line segment position DESC (for cropStart)
+      // line segment ASC + line segment position ASC (for cropEnd)
+      return i.segment2 + '#' + distance;
+    });
+
+    return roundPoint(intersections[cropStart ? 0 : intersections.length - 1]);
+  }
+
+  return null;
+}
+
+module.exports.getElementLineIntersection = getElementLineIntersection;
+
+
+function getIntersections(a, b) {
+  return intersection(a, b);
+}
+
+module.exports.getIntersections = getIntersections;
+
+},{"../util/Geometry":779,"../util/Intersection":782,"lodash/collection/sortBy":839,"lodash/lang/isObject":959}],765:[function(require,module,exports){
 arguments[4][101][0].apply(exports,arguments)
-},{"dup":101,"inherits":699,"lodash/object/assign":825,"object-refs":853}],652:[function(require,module,exports){
-arguments[4][348][0].apply(exports,arguments)
-},{"../../util/ClickTrap":657,"../../util/Cursor":659,"../../util/Event":661,"../../util/Math":664,"dup":348,"min-dom/lib/closest":838,"min-dom/lib/event":841}],653:[function(require,module,exports){
+},{"dup":101,"inherits":820,"lodash/object/assign":964,"object-refs":994}],766:[function(require,module,exports){
+'use strict';
+
+var Cursor = require('../../util/Cursor'),
+    ClickTrap = require('../../util/ClickTrap'),
+    substract = require('../../util/Math').substract,
+    domEvent = require('min-dom/lib/event'),
+    domClosest = require('min-dom/lib/closest'),
+    EventUtil = require('../../util/Event');
+
+
+function length(point) {
+  return Math.sqrt(Math.pow(point.x, 2) + Math.pow(point.y, 2));
+}
+
+
+var THRESHOLD = 15;
+
+
+function MoveCanvas(eventBus, canvas) {
+
+  var container = canvas._container,
+      context;
+
+
+  function handleMove(event) {
+
+    var start = context.start,
+        position = EventUtil.toPoint(event),
+        delta = substract(position, start);
+
+    if (!context.dragging && length(delta) > THRESHOLD) {
+      context.dragging = true;
+
+      // prevent mouse click in this
+      // interaction sequence
+      ClickTrap.install();
+
+      Cursor.set('grab');
+    }
+
+    if (context.dragging) {
+
+      var lastPosition = context.last || context.start;
+
+      delta = substract(position, lastPosition);
+
+      canvas.scroll({
+        dx: delta.x,
+        dy: delta.y
+      });
+
+      context.last = position;
+    }
+
+    // prevent select
+    event.preventDefault();
+  }
+
+
+  function handleEnd(event) {
+    domEvent.unbind(document, 'mousemove', handleMove);
+    domEvent.unbind(document, 'mouseup', handleEnd);
+
+    context = null;
+
+    Cursor.unset();
+  }
+
+  function handleStart(event) {
+    // event is already handled by '.djs-draggable'
+    if (domClosest(event.target, '.djs-draggable')) {
+      return;
+    }
+
+
+    // reject non-left left mouse button or modifier key
+    if (event.button || event.ctrlKey || event.shiftKey || event.altKey) {
+      return;
+    }
+
+    context = {
+      start: EventUtil.toPoint(event)
+    };
+
+    domEvent.bind(document, 'mousemove', handleMove);
+    domEvent.bind(document, 'mouseup', handleEnd);
+  }
+
+  domEvent.bind(container, 'mousedown', handleStart);
+}
+
+
+MoveCanvas.$inject = [ 'eventBus', 'canvas' ];
+
+module.exports = MoveCanvas;
+
+},{"../../util/ClickTrap":773,"../../util/Cursor":776,"../../util/Event":778,"../../util/Math":784,"min-dom/lib/closest":979,"min-dom/lib/event":982}],767:[function(require,module,exports){
 arguments[4][103][0].apply(exports,arguments)
-},{"./MoveCanvas":652,"dup":103}],654:[function(require,module,exports){
+},{"./MoveCanvas":766,"dup":103}],768:[function(require,module,exports){
+module.exports = {
+  __depends__: [ require('../../features/touch') ]
+};
+},{"../../features/touch":761}],769:[function(require,module,exports){
 arguments[4][350][0].apply(exports,arguments)
-},{"../../util/Math":664,"../../util/Mouse":665,"../../util/Platform":666,"./ZoomUtil":655,"dup":350,"lodash/function/bind":714,"min-dom/lib/closest":838,"min-dom/lib/event":841}],655:[function(require,module,exports){
+},{"../../util/Math":784,"../../util/Mouse":785,"../../util/Platform":786,"./ZoomUtil":770,"dup":350,"lodash/function/bind":841,"min-dom/lib/closest":979,"min-dom/lib/event":982}],770:[function(require,module,exports){
 arguments[4][105][0].apply(exports,arguments)
-},{"../../util/Math":664,"dup":105}],656:[function(require,module,exports){
+},{"../../util/Math":784,"dup":105}],771:[function(require,module,exports){
 arguments[4][106][0].apply(exports,arguments)
-},{"./ZoomScroll":654,"dup":106}],657:[function(require,module,exports){
+},{"./ZoomScroll":769,"dup":106}],772:[function(require,module,exports){
+'use strict';
+
+var roundPoint = require('../layout/LayoutUtil').roundPoint;
+
+var center = require('./PositionUtil').center,
+    delta = require('./PositionUtil').delta;
+
+
+/**
+ * Calculates the absolute point relative to the new element's position
+ *
+ * @param {point} point [absolute]
+ * @param {bounds} oldBounds
+ * @param {bounds} newBounds
+ *
+ * @return {point} point [absolute]
+ */
+function getNewAttachPoint(point, oldBounds, newBounds) {
+  var oldCenter = center(oldBounds),
+      newCenter = center(newBounds),
+      oldDelta = delta(point, oldCenter);
+
+  var newDelta = {
+    x: oldDelta.x * (newBounds.width / oldBounds.width),
+    y: oldDelta.y * (newBounds.height / oldBounds.height)
+  };
+
+  return roundPoint({
+    x: newCenter.x + newDelta.x,
+    y: newCenter.y + newDelta.y
+  });
+}
+
+module.exports.getNewAttachPoint = getNewAttachPoint;
+
+
+/**
+ * Calculates the shape's delta relative to a new position
+ * of a certain element's bounds
+ *
+ * @param {djs.model.Shape} point [absolute]
+ * @param {bounds} oldBounds
+ * @param {bounds} newBounds
+ *
+ * @return {delta} delta
+ */
+function getNewAttachShapeDelta(shape, oldBounds, newBounds) {
+  var shapeCenter = center(shape),
+      oldCenter = center(oldBounds),
+      newCenter = center(newBounds),
+      shapeDelta = delta(shape, shapeCenter),
+      oldCenterDelta = delta(shapeCenter, oldCenter);
+
+  var newCenterDelta = {
+    x: oldCenterDelta.x * (newBounds.width / oldBounds.width),
+    y: oldCenterDelta.y * (newBounds.height / oldBounds.height)
+  };
+
+  var newShapeCenter = {
+    x: newCenter.x + newCenterDelta.x,
+    y: newCenter.y + newCenterDelta.y
+  };
+
+  return roundPoint({
+    x: newShapeCenter.x + shapeDelta.x - shape.x,
+    y: newShapeCenter.y + shapeDelta.y - shape.y
+  });
+}
+
+module.exports.getNewAttachShapeDelta = getNewAttachShapeDelta;
+
+},{"../layout/LayoutUtil":764,"./PositionUtil":787}],773:[function(require,module,exports){
 arguments[4][107][0].apply(exports,arguments)
-},{"./Event":661,"dup":107,"min-dom/lib/event":841}],658:[function(require,module,exports){
+},{"./Event":778,"dup":107,"min-dom/lib/event":982}],774:[function(require,module,exports){
 arguments[4][108][0].apply(exports,arguments)
-},{"dup":108}],659:[function(require,module,exports){
+},{"dup":108}],775:[function(require,module,exports){
+'use strict';
+
+var forEach = require('lodash/collection/forEach');
+
+function getTopLevel(elements) {
+  var topLevel = {},
+      parents = [],
+      result = [],
+      clearedParents = [];
+
+  forEach(elements, function(element) {
+    var parent = element.parent;
+
+    if (!topLevel[parent.id]) {
+      topLevel[parent.id] = [];
+    }
+
+    if (parents.indexOf(parent.id) === -1) {
+      parents.push(parent.id);
+    }
+
+    topLevel[parent.id].push(element);
+  });
+
+  forEach(parents, function(parent) {
+    forEach(topLevel[parent], function(element) {
+      if (topLevel[element.id]) {
+        clearedParents.push(element.id);
+      }
+    });
+  });
+
+  forEach(parents, function(parent) {
+    var idx = clearedParents.indexOf(parent);
+
+    if (idx === -1) {
+      result = result.concat(topLevel[parent]);
+    }
+  });
+
+  return result;
+}
+
+module.exports.getTopLevel = getTopLevel;
+
+},{"lodash/collection/forEach":832}],776:[function(require,module,exports){
 arguments[4][109][0].apply(exports,arguments)
-},{"dup":109,"min-dom/lib/classes":836}],660:[function(require,module,exports){
+},{"dup":109,"min-dom/lib/classes":977}],777:[function(require,module,exports){
 arguments[4][356][0].apply(exports,arguments)
-},{"dup":356,"lodash/collection/forEach":708,"lodash/collection/groupBy":710,"lodash/lang/isArray":816,"lodash/lang/isNumber":819}],661:[function(require,module,exports){
+},{"dup":356,"lodash/collection/forEach":832,"lodash/collection/groupBy":834,"lodash/lang/isArray":955,"lodash/lang/isNumber":958}],778:[function(require,module,exports){
 arguments[4][111][0].apply(exports,arguments)
-},{"dup":111}],662:[function(require,module,exports){
-arguments[4][112][0].apply(exports,arguments)
-},{"dup":112}],663:[function(require,module,exports){
+},{"dup":111}],779:[function(require,module,exports){
+'use strict';
+
+/**
+ * Computes the distance between two points
+ *
+ * @param  {Point}  p
+ * @param  {Point}  q
+ *
+ * @return {Number}  distance
+ */
+function pointDistance(a, b) {
+  if (!a || !b) {
+    return -1;
+  }
+
+  return Math.sqrt(Math.pow(a.x - b.x, 2) + Math.pow(a.y - b.y, 2));
+}
+
+module.exports.pointDistance = pointDistance;
+
+
+/**
+ * Returns true if the point r is on the line between p and y
+ *
+ * @param  {Point}  p
+ * @param  {Point}  q
+ * @param  {Point}  r
+ *
+ * @return {Boolean}
+ */
+module.exports.pointsOnLine = function(p, q, r) {
+
+  if (!p || !q || !r) {
+    return false;
+  }
+
+  var val = (q.x - p.x) * (r.y - p.y) - (q.y - p.y) * (r.x - p.x),
+      dist = pointDistance(p, q);
+
+  // @see http://stackoverflow.com/a/907491/412190
+  return Math.abs(val / dist) < 5;
+};
+
+
+var ALIGNED_THRESHOLD = 2;
+
+/**
+ * Returns whether two points are in a horizontal or vertical line.
+ *
+ * @param {Point} a
+ * @param {Point} b
+ *
+ * @return {String|Boolean} returns false if the points are not
+ *                          aligned or 'h|v' if they are aligned
+ *                          horizontally / vertically.
+ */
+function pointsAligned(a, b) {
+  if (Math.abs(a.x - b.x) <= ALIGNED_THRESHOLD) {
+    return 'h';
+  }
+
+  if (Math.abs(a.y - b.y) <= ALIGNED_THRESHOLD) {
+    return 'v';
+  }
+
+  return false;
+}
+
+module.exports.pointsAligned = pointsAligned;
+
+
+/**
+ * Returns true if the point p is inside the rectangle rect
+ *
+ * @param  {Point}  p
+ * @param  {Rect}   rect
+ * @param  {Number} tolerance
+ *
+ * @return {Boolean}
+ */
+module.exports.pointInRect = function(p, rect, tolerance) {
+  tolerance = tolerance || 0;
+
+  return p.x > rect.x - tolerance &&
+         p.y > rect.y - tolerance &&
+         p.x < rect.x + rect.width + tolerance &&
+         p.y < rect.y + rect.height + tolerance;
+};
+
+/**
+ * Returns a point in the middle of points p and q
+ *
+ * @param  {Point}  p
+ * @param  {Point}  q
+ *
+ * @return {Point} middle point
+ */
+module.exports.getMidPoint = function(p, q) {
+  return {
+    x: Math.round(p.x + ((q.x - p.x) / 2.0)),
+    y: Math.round(p.y + ((q.y - p.y) / 2.0))
+  };
+};
+
+},{}],780:[function(require,module,exports){
+'use strict';
+
+var domQuery = require('min-dom/lib/query');
+
+/**
+ * SVGs for elements are generated by the {@link GraphicsFactory}.
+ *
+ * This utility gives quick access to the important semantic
+ * parts of an element.
+ */
+
+/**
+ * Returns the visual part of a diagram element
+ *
+ * @param {Snap<SVGElement>} gfx
+ *
+ * @return {Snap<SVGElement>}
+ */
+function getVisual(gfx) {
+  return domQuery('.djs-visual', gfx);
+}
+
+/**
+ * Returns the children for a given diagram element.
+ *
+ * @param {Snap<SVGElement>} gfx
+ * @return {Snap<SVGElement>}
+ */
+function getChildren(gfx) {
+  return gfx.parentNode.childNodes[1];
+}
+
+module.exports.getVisual = getVisual;
+module.exports.getChildren = getChildren;
+
+},{"min-dom/lib/query":984}],781:[function(require,module,exports){
 arguments[4][113][0].apply(exports,arguments)
-},{"dup":113}],664:[function(require,module,exports){
+},{"dup":113}],782:[function(require,module,exports){
+/* eslint no-fallthrough: "off" */
+
+'use strict';
+
+var has = 'hasOwnProperty',
+    p2s = /,?([a-z]),?/gi,
+    toFloat = parseFloat,
+    math = Math,
+    PI = math.PI,
+    mmin = math.min,
+    mmax = math.max,
+    pow = math.pow,
+    abs = math.abs,
+    pathCommand = /([a-z])[\s,]*((-?\d*\.?\d*(?:e[\-+]?\d+)?[\s]*,?[\s]*)+)/ig,
+    pathValues = /(-?\d*\.?\d*(?:e[\-+]?\\d+)?)[\s]*,?[\s]*/ig;
+
+function is(o, type) {
+  type = String.prototype.toLowerCase.call(type);
+
+  if (type == 'finite') {
+    return isFinite(o);
+  }
+
+  if (type == 'array' && (o instanceof Array || Array.isArray && Array.isArray(o))) {
+    return true;
+  }
+
+  return  (type == 'null' && o === null) ||
+          (type == typeof o && o !== null) ||
+          (type == 'object' && o === Object(o)) ||
+          Object.prototype.toString.call(o).slice(8, -1).toLowerCase() == type;
+}
+
+function clone(obj) {
+
+  if (typeof obj == 'function' || Object(obj) !== obj) {
+    return obj;
+  }
+
+  var res = new obj.constructor;
+
+  for (var key in obj) if (obj[has](key)) {
+    res[key] = clone(obj[key]);
+  }
+
+  return res;
+}
+
+function repush(array, item) {
+  for (var i = 0, ii = array.length; i < ii; i++) if (array[i] === item) {
+    return array.push(array.splice(i, 1)[0]);
+  }
+}
+
+function cacher(f, scope, postprocessor) {
+
+  function newf() {
+
+    var arg = Array.prototype.slice.call(arguments, 0),
+        args = arg.join('\u2400'),
+        cache = newf.cache = newf.cache || {},
+        count = newf.count = newf.count || [];
+
+    if (cache[has](args)) {
+      repush(count, args);
+      return postprocessor ? postprocessor(cache[args]) : cache[args];
+    }
+
+    count.length >= 1e3 && delete cache[count.shift()];
+    count.push(args);
+    cache[args] = f.apply(scope, arg);
+
+    return postprocessor ? postprocessor(cache[args]) : cache[args];
+  }
+  return newf;
+}
+
+function parsePathString(pathString) {
+
+  if (!pathString) {
+    return null;
+  }
+
+  var pth = paths(pathString);
+
+  if (pth.arr) {
+    return clone(pth.arr);
+  }
+
+  var paramCounts = { a: 7, c: 6, o: 2, h: 1, l: 2, m: 2, r: 4, q: 4, s: 4, t: 2, v: 1, u: 3, z: 0 },
+      data = [];
+
+  if (is(pathString, 'array') && is(pathString[0], 'array')) { // rough assumption
+    data = clone(pathString);
+  }
+
+  if (!data.length) {
+
+    String(pathString).replace(pathCommand, function(a, b, c) {
+      var params = [],
+          name = b.toLowerCase();
+
+      c.replace(pathValues, function(a, b) {
+        b && params.push(+b);
+      });
+
+      if (name == 'm' && params.length > 2) {
+        data.push([b].concat(params.splice(0, 2)));
+        name = 'l';
+        b = b == 'm' ? 'l' : 'L';
+      }
+
+      if (name == 'o' && params.length == 1) {
+        data.push([b, params[0]]);
+      }
+
+      if (name == 'r') {
+        data.push([b].concat(params));
+      } else while (params.length >= paramCounts[name]) {
+        data.push([b].concat(params.splice(0, paramCounts[name])));
+        if (!paramCounts[name]) {
+          break;
+        }
+      }
+    });
+  }
+
+  data.toString = paths.toString;
+  pth.arr = clone(data);
+
+  return data;
+}
+
+function paths(ps) {
+  var p = paths.ps = paths.ps || {};
+
+  if (p[ps]) {
+    p[ps].sleep = 100;
+  } else {
+    p[ps] = {
+      sleep: 100
+    };
+  }
+
+  setTimeout(function() {
+    for (var key in p) if (p[has](key) && key != ps) {
+      p[key].sleep--;
+      !p[key].sleep && delete p[key];
+    }
+  });
+
+  return p[ps];
+}
+
+function box(x, y, width, height) {
+  if (x == null) {
+    x = y = width = height = 0;
+  }
+
+  if (y == null) {
+    y = x.y;
+    width = x.width;
+    height = x.height;
+    x = x.x;
+  }
+
+  return {
+    x: x,
+    y: y,
+    width: width,
+    w: width,
+    height: height,
+    h: height,
+    x2: x + width,
+    y2: y + height,
+    cx: x + width / 2,
+    cy: y + height / 2,
+    r1: math.min(width, height) / 2,
+    r2: math.max(width, height) / 2,
+    r0: math.sqrt(width * width + height * height) / 2,
+    path: rectPath(x, y, width, height),
+    vb: [x, y, width, height].join(' ')
+  };
+}
+
+function toString() {
+  return this.join(',').replace(p2s, '$1');
+}
+
+function pathClone(pathArray) {
+  var res = clone(pathArray);
+  res.toString = toString;
+  return res;
+}
+
+function getPointAtSegmentLength(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, length) {
+  if (length == null) {
+    return bezlen(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y);
+  } else {
+    return findDotsAtSegment(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y,
+      getTotLen(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, length));
+  }
+}
+
+function getLengthFactory(istotal, subpath) {
+  function O(val) {
+    return +(+val).toFixed(3);
+  }
+
+  return cacher(function(path, length, onlystart) {
+
+    if (path instanceof Element) {
+      path = path.attr('d');
+    }
+
+    path = path2curve(path);
+
+    var x, y, p, l, sp = '', subpaths = {}, point,
+        len = 0;
+
+    for (var i = 0, ii = path.length; i < ii; i++) {
+      p = path[i];
+
+      if (p[0] == 'M') {
+        x = +p[1];
+        y = +p[2];
+      } else {
+        l = getPointAtSegmentLength(x, y, p[1], p[2], p[3], p[4], p[5], p[6]);
+
+        if (len + l > length) {
+
+          if (subpath && !subpaths.start) {
+            point = getPointAtSegmentLength(x, y, p[1], p[2], p[3], p[4], p[5], p[6], length - len);
+
+            sp += [
+              'C' + O(point.start.x),
+              O(point.start.y),
+              O(point.m.x),
+              O(point.m.y),
+              O(point.x),
+              O(point.y)
+            ];
+
+            if (onlystart) {
+              return sp;
+            }
+
+            subpaths.start = sp;
+            sp = [
+              'M' + O(point.x),
+              O(point.y) + 'C' + O(point.n.x),
+              O(point.n.y),
+              O(point.end.x),
+              O(point.end.y),
+              O(p[5]),
+              O(p[6])
+            ].join();
+            len += l;
+            x = +p[5];
+            y = +p[6];
+            continue;
+          }
+
+          if (!istotal && !subpath) {
+            point = getPointAtSegmentLength(x, y, p[1], p[2], p[3], p[4], p[5], p[6], length - len);
+            return point;
+          }
+        }
+
+        len += l;
+        x = +p[5];
+        y = +p[6];
+      }
+
+      sp += p.shift() + p;
+    }
+
+    subpaths.end = sp;
+    point = istotal ? len : subpath ? subpaths : findDotsAtSegment(x, y, p[0], p[1], p[2], p[3], p[4], p[5], 1);
+    return point;
+  }, null, clone);
+}
+
+var getTotalLength = getLengthFactory(1),
+    getPointAtLength = getLengthFactory();
+
+function findDotsAtSegment(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, t) {
+  var t1 = 1 - t,
+      t13 = pow(t1, 3),
+      t12 = pow(t1, 2),
+      t2 = t * t,
+      t3 = t2 * t,
+      x = t13 * p1x + t12 * 3 * t * c1x + t1 * 3 * t * t * c2x + t3 * p2x,
+      y = t13 * p1y + t12 * 3 * t * c1y + t1 * 3 * t * t * c2y + t3 * p2y,
+      mx = p1x + 2 * t * (c1x - p1x) + t2 * (c2x - 2 * c1x + p1x),
+      my = p1y + 2 * t * (c1y - p1y) + t2 * (c2y - 2 * c1y + p1y),
+      nx = c1x + 2 * t * (c2x - c1x) + t2 * (p2x - 2 * c2x + c1x),
+      ny = c1y + 2 * t * (c2y - c1y) + t2 * (p2y - 2 * c2y + c1y),
+      ax = t1 * p1x + t * c1x,
+      ay = t1 * p1y + t * c1y,
+      cx = t1 * c2x + t * p2x,
+      cy = t1 * c2y + t * p2y,
+      alpha = (90 - math.atan2(mx - nx, my - ny) * 180 / PI);
+
+  // (mx > nx || my < ny) && (alpha += 180);
+
+  return {
+    x: x,
+    y: y,
+    m: { x: mx, y: my },
+    n: { x: nx, y: ny },
+    start: { x: ax, y: ay },
+    end: { x: cx, y: cy },
+    alpha: alpha
+  };
+}
+
+function bezierBBox(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y) {
+
+  if (!is(p1x, 'array')) {
+    p1x = [p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y];
+  }
+
+  var bbox = curveDim.apply(null, p1x);
+
+  return box(
+    bbox.min.x,
+    bbox.min.y,
+    bbox.max.x - bbox.min.x,
+    bbox.max.y - bbox.min.y
+  );
+}
+
+function isPointInsideBBox(bbox, x, y) {
+  return x >= bbox.x &&
+    x <= bbox.x + bbox.width &&
+    y >= bbox.y &&
+    y <= bbox.y + bbox.height;
+}
+
+function isBBoxIntersect(bbox1, bbox2) {
+  bbox1 = box(bbox1);
+  bbox2 = box(bbox2);
+  return isPointInsideBBox(bbox2, bbox1.x, bbox1.y)
+    || isPointInsideBBox(bbox2, bbox1.x2, bbox1.y)
+    || isPointInsideBBox(bbox2, bbox1.x, bbox1.y2)
+    || isPointInsideBBox(bbox2, bbox1.x2, bbox1.y2)
+    || isPointInsideBBox(bbox1, bbox2.x, bbox2.y)
+    || isPointInsideBBox(bbox1, bbox2.x2, bbox2.y)
+    || isPointInsideBBox(bbox1, bbox2.x, bbox2.y2)
+    || isPointInsideBBox(bbox1, bbox2.x2, bbox2.y2)
+    || (bbox1.x < bbox2.x2 && bbox1.x > bbox2.x
+        || bbox2.x < bbox1.x2 && bbox2.x > bbox1.x)
+    && (bbox1.y < bbox2.y2 && bbox1.y > bbox2.y
+        || bbox2.y < bbox1.y2 && bbox2.y > bbox1.y);
+}
+
+function base3(t, p1, p2, p3, p4) {
+  var t1 = -3 * p1 + 9 * p2 - 9 * p3 + 3 * p4,
+      t2 = t * t1 + 6 * p1 - 12 * p2 + 6 * p3;
+  return t * t2 - 3 * p1 + 3 * p2;
+}
+
+function bezlen(x1, y1, x2, y2, x3, y3, x4, y4, z) {
+
+  if (z == null) {
+    z = 1;
+  }
+
+  z = z > 1 ? 1 : z < 0 ? 0 : z;
+
+  var z2 = z / 2,
+      n = 12,
+      Tvalues = [-.1252,.1252,-.3678,.3678,-.5873,.5873,-.7699,.7699,-.9041,.9041,-.9816,.9816],
+      Cvalues = [0.2491,0.2491,0.2335,0.2335,0.2032,0.2032,0.1601,0.1601,0.1069,0.1069,0.0472,0.0472],
+      sum = 0;
+
+  for (var i = 0; i < n; i++) {
+    var ct = z2 * Tvalues[i] + z2,
+        xbase = base3(ct, x1, x2, x3, x4),
+        ybase = base3(ct, y1, y2, y3, y4),
+        comb = xbase * xbase + ybase * ybase;
+
+    sum += Cvalues[i] * math.sqrt(comb);
+  }
+
+  return z2 * sum;
+}
+
+function getTotLen(x1, y1, x2, y2, x3, y3, x4, y4, ll) {
+
+  if (ll < 0 || bezlen(x1, y1, x2, y2, x3, y3, x4, y4) < ll) {
+    return;
+  }
+
+  var t = 1,
+      step = t / 2,
+      t2 = t - step,
+      l,
+      e = .01;
+
+  l = bezlen(x1, y1, x2, y2, x3, y3, x4, y4, t2);
+
+  while (abs(l - ll) > e) {
+    step /= 2;
+    t2 += (l < ll ? 1 : -1) * step;
+    l = bezlen(x1, y1, x2, y2, x3, y3, x4, y4, t2);
+  }
+
+  return t2;
+}
+
+function intersect(x1, y1, x2, y2, x3, y3, x4, y4) {
+
+  if (
+      mmax(x1, x2) < mmin(x3, x4) ||
+      mmin(x1, x2) > mmax(x3, x4) ||
+      mmax(y1, y2) < mmin(y3, y4) ||
+      mmin(y1, y2) > mmax(y3, y4)
+  ) {
+    return;
+  }
+
+  var nx = (x1 * y2 - y1 * x2) * (x3 - x4) - (x1 - x2) * (x3 * y4 - y3 * x4),
+      ny = (x1 * y2 - y1 * x2) * (y3 - y4) - (y1 - y2) * (x3 * y4 - y3 * x4),
+      denominator = (x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4);
+
+  if (!denominator) {
+    return;
+  }
+
+  var px = nx / denominator,
+      py = ny / denominator,
+      px2 = +px.toFixed(2),
+      py2 = +py.toFixed(2);
+
+  if (
+      px2 < +mmin(x1, x2).toFixed(2) ||
+      px2 > +mmax(x1, x2).toFixed(2) ||
+      px2 < +mmin(x3, x4).toFixed(2) ||
+      px2 > +mmax(x3, x4).toFixed(2) ||
+      py2 < +mmin(y1, y2).toFixed(2) ||
+      py2 > +mmax(y1, y2).toFixed(2) ||
+      py2 < +mmin(y3, y4).toFixed(2) ||
+      py2 > +mmax(y3, y4).toFixed(2)
+  ) {
+    return;
+  }
+
+  return { x: px, y: py };
+}
+
+function interHelper(bez1, bez2, justCount) {
+  var bbox1 = bezierBBox(bez1),
+      bbox2 = bezierBBox(bez2);
+
+  if (!isBBoxIntersect(bbox1, bbox2)) {
+    return justCount ? 0 : [];
+  }
+
+  var l1 = bezlen.apply(0, bez1),
+      l2 = bezlen.apply(0, bez2),
+      n1 = ~~(l1 / 8),
+      n2 = ~~(l2 / 8),
+      dots1 = [],
+      dots2 = [],
+      xy = {},
+      res = justCount ? 0 : [];
+
+  for (var i = 0; i < n1 + 1; i++) {
+    var p = findDotsAtSegment.apply(0, bez1.concat(i / n1));
+    dots1.push({ x: p.x, y: p.y, t: i / n1 });
+  }
+
+  for (i = 0; i < n2 + 1; i++) {
+    p = findDotsAtSegment.apply(0, bez2.concat(i / n2));
+    dots2.push({ x: p.x, y: p.y, t: i / n2 });
+  }
+
+  for (i = 0; i < n1; i++) {
+
+    for (var j = 0; j < n2; j++) {
+      var di = dots1[i],
+          di1 = dots1[i + 1],
+          dj = dots2[j],
+          dj1 = dots2[j + 1],
+          ci = abs(di1.x - di.x) < .001 ? 'y' : 'x',
+          cj = abs(dj1.x - dj.x) < .001 ? 'y' : 'x',
+          is = intersect(di.x, di.y, di1.x, di1.y, dj.x, dj.y, dj1.x, dj1.y);
+
+      if (is) {
+
+        if (xy[is.x.toFixed(4)] == is.y.toFixed(4)) {
+          continue;
+        }
+
+        xy[is.x.toFixed(4)] = is.y.toFixed(4);
+
+        var t1 = di.t + abs((is[ci] - di[ci]) / (di1[ci] - di[ci])) * (di1.t - di.t),
+            t2 = dj.t + abs((is[cj] - dj[cj]) / (dj1[cj] - dj[cj])) * (dj1.t - dj.t);
+
+        if (t1 >= 0 && t1 <= 1 && t2 >= 0 && t2 <= 1) {
+
+          if (justCount) {
+            res++;
+          } else {
+            res.push({
+              x: is.x,
+              y: is.y,
+              t1: t1,
+              t2: t2
+            });
+          }
+        }
+      }
+    }
+  }
+
+  return res;
+}
+
+function pathIntersection(path1, path2) {
+  return interPathHelper(path1, path2);
+}
+
+function pathIntersectionNumber(path1, path2) {
+  return interPathHelper(path1, path2, 1);
+}
+
+function interPathHelper(path1, path2, justCount) {
+  path1 = path2curve(path1);
+  path2 = path2curve(path2);
+
+  var x1, y1, x2, y2, x1m, y1m, x2m, y2m, bez1, bez2,
+      res = justCount ? 0 : [];
+
+  for (var i = 0, ii = path1.length; i < ii; i++) {
+    var pi = path1[i];
+
+    if (pi[0] == 'M') {
+      x1 = x1m = pi[1];
+      y1 = y1m = pi[2];
+    } else {
+
+      if (pi[0] == 'C') {
+        bez1 = [x1, y1].concat(pi.slice(1));
+        x1 = bez1[6];
+        y1 = bez1[7];
+      } else {
+        bez1 = [x1, y1, x1, y1, x1m, y1m, x1m, y1m];
+        x1 = x1m;
+        y1 = y1m;
+      }
+
+      for (var j = 0, jj = path2.length; j < jj; j++) {
+        var pj = path2[j];
+
+        if (pj[0] == 'M') {
+          x2 = x2m = pj[1];
+          y2 = y2m = pj[2];
+        } else {
+
+          if (pj[0] == 'C') {
+            bez2 = [x2, y2].concat(pj.slice(1));
+            x2 = bez2[6];
+            y2 = bez2[7];
+          } else {
+            bez2 = [x2, y2, x2, y2, x2m, y2m, x2m, y2m];
+            x2 = x2m;
+            y2 = y2m;
+          }
+
+          var intr = interHelper(bez1, bez2, justCount);
+
+          if (justCount) {
+            res += intr;
+          } else {
+
+            for (var k = 0, kk = intr.length; k < kk; k++) {
+              intr[k].segment1 = i;
+              intr[k].segment2 = j;
+              intr[k].bez1 = bez1;
+              intr[k].bez2 = bez2;
+            }
+
+            res = res.concat(intr);
+          }
+        }
+      }
+    }
+  }
+
+  return res;
+}
+
+function isPointInsidePath(path, x, y) {
+  var bbox = pathBBox(path);
+
+  return isPointInsideBBox(bbox, x, y) &&
+         interPathHelper(path, [['M', x, y], ['H', bbox.x2 + 10]], 1) % 2 == 1;
+}
+
+function pathBBox(path) {
+  var pth = paths(path);
+
+  if (pth.bbox) {
+    return clone(pth.bbox);
+  }
+
+  if (!path) {
+    return box();
+  }
+
+  path = path2curve(path);
+
+  var x = 0,
+      y = 0,
+      X = [],
+      Y = [],
+      p;
+
+  for (var i = 0, ii = path.length; i < ii; i++) {
+    p = path[i];
+
+    if (p[0] == 'M') {
+      x = p[1];
+      y = p[2];
+      X.push(x);
+      Y.push(y);
+    } else {
+      var dim = curveDim(x, y, p[1], p[2], p[3], p[4], p[5], p[6]);
+      X = X.concat(dim.min.x, dim.max.x);
+      Y = Y.concat(dim.min.y, dim.max.y);
+      x = p[5];
+      y = p[6];
+    }
+  }
+
+  var xmin = mmin.apply(0, X),
+      ymin = mmin.apply(0, Y),
+      xmax = mmax.apply(0, X),
+      ymax = mmax.apply(0, Y),
+      bb = box(xmin, ymin, xmax - xmin, ymax - ymin);
+
+  pth.bbox = clone(bb);
+
+  return bb;
+}
+
+function rectPath(x, y, w, h, r) {
+  if (r) {
+    return [
+      ['M', +x + (+r), y],
+      ['l', w - r * 2, 0],
+      ['a', r, r, 0, 0, 1, r, r],
+      ['l', 0, h - r * 2],
+      ['a', r, r, 0, 0, 1, -r, r],
+      ['l', r * 2 - w, 0],
+      ['a', r, r, 0, 0, 1, -r, -r],
+      ['l', 0, r * 2 - h],
+      ['a', r, r, 0, 0, 1, r, -r],
+      ['z']
+    ];
+  }
+
+  var res = [['M', x, y], ['l', w, 0], ['l', 0, h], ['l', -w, 0], ['z']];
+  res.toString = toString;
+
+  return res;
+}
+
+function ellipsePath(x, y, rx, ry, a) {
+  if (a == null && ry == null) {
+    ry = rx;
+  }
+
+  x = +x;
+  y = +y;
+  rx = +rx;
+  ry = +ry;
+
+  if (a != null) {
+    var rad = Math.PI / 180,
+        x1 = x + rx * Math.cos(-ry * rad),
+        x2 = x + rx * Math.cos(-a * rad),
+        y1 = y + rx * Math.sin(-ry * rad),
+        y2 = y + rx * Math.sin(-a * rad),
+        res = [['M', x1, y1], ['A', rx, rx, 0, +(a - ry > 180), 0, x2, y2]];
+  } else {
+    res = [
+      ['M', x, y],
+      ['m', 0, -ry],
+      ['a', rx, ry, 0, 1, 1, 0, 2 * ry],
+      ['a', rx, ry, 0, 1, 1, 0, -2 * ry],
+      ['z']
+    ];
+  }
+
+  res.toString = toString;
+
+  return res;
+}
+
+function pathToRelative(pathArray) {
+  var pth = paths(pathArray),
+      lowerCase = String.prototype.toLowerCase;
+
+  if (pth.rel) {
+    return pathClone(pth.rel);
+  }
+
+  if (!is(pathArray, 'array') || !is(pathArray && pathArray[0], 'array')) {
+    pathArray = parsePathString(pathArray);
+  }
+
+  var res = [],
+      x = 0,
+      y = 0,
+      mx = 0,
+      my = 0,
+      start = 0;
+
+  if (pathArray[0][0] == 'M') {
+    x = pathArray[0][1];
+    y = pathArray[0][2];
+    mx = x;
+    my = y;
+    start++;
+    res.push(['M', x, y]);
+  }
+
+  for (var i = start, ii = pathArray.length; i < ii; i++) {
+    var r = res[i] = [],
+        pa = pathArray[i];
+
+    if (pa[0] != lowerCase.call(pa[0])) {
+      r[0] = lowerCase.call(pa[0]);
+
+      switch (r[0]) {
+      case 'a':
+        r[1] = pa[1];
+        r[2] = pa[2];
+        r[3] = pa[3];
+        r[4] = pa[4];
+        r[5] = pa[5];
+        r[6] = +(pa[6] - x).toFixed(3);
+        r[7] = +(pa[7] - y).toFixed(3);
+        break;
+      case 'v':
+        r[1] = +(pa[1] - y).toFixed(3);
+        break;
+      case 'm':
+        mx = pa[1];
+        my = pa[2];
+      default:
+        for (var j = 1, jj = pa.length; j < jj; j++) {
+          r[j] = +(pa[j] - ((j % 2) ? x : y)).toFixed(3);
+        }
+      }
+    } else {
+      r = res[i] = [];
+
+      if (pa[0] == 'm') {
+        mx = pa[1] + x;
+        my = pa[2] + y;
+      }
+
+      for (var k = 0, kk = pa.length; k < kk; k++) {
+        res[i][k] = pa[k];
+      }
+    }
+
+    var len = res[i].length;
+
+    switch (res[i][0]) {
+    case 'z':
+      x = mx;
+      y = my;
+      break;
+    case 'h':
+      x += +res[i][len - 1];
+      break;
+    case 'v':
+      y += +res[i][len - 1];
+      break;
+    default:
+      x += +res[i][len - 2];
+      y += +res[i][len - 1];
+    }
+  }
+
+  res.toString = toString;
+  pth.rel = pathClone(res);
+
+  return res;
+}
+
+function pathToAbsolute(pathArray) {
+  var pth = paths(pathArray);
+
+  if (pth.abs) {
+    return pathClone(pth.abs);
+  }
+
+  if (!is(pathArray, 'array') || !is(pathArray && pathArray[0], 'array')) { // rough assumption
+    pathArray = parsePathString(pathArray);
+  }
+
+  if (!pathArray || !pathArray.length) {
+    return [['M', 0, 0]];
+  }
+
+  var res = [],
+      x = 0,
+      y = 0,
+      mx = 0,
+      my = 0,
+      start = 0,
+      pa0;
+
+  if (pathArray[0][0] == 'M') {
+    x = +pathArray[0][1];
+    y = +pathArray[0][2];
+    mx = x;
+    my = y;
+    start++;
+    res[0] = ['M', x, y];
+  }
+
+  var crz = pathArray.length == 3 &&
+      pathArray[0][0] == 'M' &&
+      pathArray[1][0].toUpperCase() == 'R' &&
+      pathArray[2][0].toUpperCase() == 'Z';
+
+  for (var r, pa, i = start, ii = pathArray.length; i < ii; i++) {
+    res.push(r = []);
+    pa = pathArray[i];
+    pa0 = pa[0];
+
+    if (pa0 != pa0.toUpperCase()) {
+      r[0] = pa0.toUpperCase();
+
+      switch (r[0]) {
+      case 'A':
+        r[1] = pa[1];
+        r[2] = pa[2];
+        r[3] = pa[3];
+        r[4] = pa[4];
+        r[5] = pa[5];
+        r[6] = +pa[6] + x;
+        r[7] = +pa[7] + y;
+        break;
+      case 'V':
+        r[1] = +pa[1] + y;
+        break;
+      case 'H':
+        r[1] = +pa[1] + x;
+        break;
+      case 'R':
+        var dots = [x, y].concat(pa.slice(1));
+
+        for (var j = 2, jj = dots.length; j < jj; j++) {
+          dots[j] = +dots[j] + x;
+          dots[++j] = +dots[j] + y;
+        }
+
+        res.pop();
+        res = res.concat(catmullRom2bezier(dots, crz));
+        break;
+      case 'O':
+        res.pop();
+        dots = ellipsePath(x, y, pa[1], pa[2]);
+        dots.push(dots[0]);
+        res = res.concat(dots);
+        break;
+      case 'U':
+        res.pop();
+        res = res.concat(ellipsePath(x, y, pa[1], pa[2], pa[3]));
+        r = ['U'].concat(res[res.length - 1].slice(-2));
+        break;
+      case 'M':
+        mx = +pa[1] + x;
+        my = +pa[2] + y;
+      default:
+
+        for (j = 1, jj = pa.length; j < jj; j++) {
+          r[j] = +pa[j] + ((j % 2) ? x : y);
+        }
+      }
+    } else if (pa0 == 'R') {
+      dots = [x, y].concat(pa.slice(1));
+      res.pop();
+      res = res.concat(catmullRom2bezier(dots, crz));
+      r = ['R'].concat(pa.slice(-2));
+    } else if (pa0 == 'O') {
+      res.pop();
+      dots = ellipsePath(x, y, pa[1], pa[2]);
+      dots.push(dots[0]);
+      res = res.concat(dots);
+    } else if (pa0 == 'U') {
+      res.pop();
+      res = res.concat(ellipsePath(x, y, pa[1], pa[2], pa[3]));
+      r = ['U'].concat(res[res.length - 1].slice(-2));
+    } else {
+
+      for (var k = 0, kk = pa.length; k < kk; k++) {
+        r[k] = pa[k];
+      }
+    }
+    pa0 = pa0.toUpperCase();
+
+    if (pa0 != 'O') {
+      switch (r[0]) {
+      case 'Z':
+        x = +mx;
+        y = +my;
+        break;
+      case 'H':
+        x = r[1];
+        break;
+      case 'V':
+        y = r[1];
+        break;
+      case 'M':
+        mx = r[r.length - 2];
+        my = r[r.length - 1];
+      default:
+        x = r[r.length - 2];
+        y = r[r.length - 1];
+      }
+    }
+  }
+
+  res.toString = toString;
+  pth.abs = pathClone(res);
+
+  return res;
+}
+
+function l2c(x1, y1, x2, y2) {
+  return [x1, y1, x2, y2, x2, y2];
+}
+
+function q2c(x1, y1, ax, ay, x2, y2) {
+  var _13 = 1 / 3,
+      _23 = 2 / 3;
+
+  return [
+    _13 * x1 + _23 * ax,
+    _13 * y1 + _23 * ay,
+    _13 * x2 + _23 * ax,
+    _13 * y2 + _23 * ay,
+    x2,
+    y2
+  ];
+}
+
+function a2c(x1, y1, rx, ry, angle, large_arc_flag, sweep_flag, x2, y2, recursive) {
+
+  // for more information of where this math came from visit:
+  // http://www.w3.org/TR/SVG11/implnote.html#ArcImplementationNotes
+  var _120 = PI * 120 / 180,
+      rad = PI / 180 * (+angle || 0),
+      res = [],
+      xy,
+      rotate = cacher(function(x, y, rad) {
+        var X = x * math.cos(rad) - y * math.sin(rad),
+            Y = x * math.sin(rad) + y * math.cos(rad);
+
+        return { x: X, y: Y };
+      });
+
+  if (!recursive) {
+    xy = rotate(x1, y1, -rad);
+    x1 = xy.x;
+    y1 = xy.y;
+    xy = rotate(x2, y2, -rad);
+    x2 = xy.x;
+    y2 = xy.y;
+
+    var x = (x1 - x2) / 2,
+        y = (y1 - y2) / 2;
+
+    var h = (x * x) / (rx * rx) + (y * y) / (ry * ry);
+
+    if (h > 1) {
+      h = math.sqrt(h);
+      rx = h * rx;
+      ry = h * ry;
+    }
+
+    var rx2 = rx * rx,
+        ry2 = ry * ry,
+        k = (large_arc_flag == sweep_flag ? -1 : 1) *
+            math.sqrt(abs((rx2 * ry2 - rx2 * y * y - ry2 * x * x) / (rx2 * y * y + ry2 * x * x))),
+        cx = k * rx * y / ry + (x1 + x2) / 2,
+        cy = k * -ry * x / rx + (y1 + y2) / 2,
+        f1 = math.asin(((y1 - cy) / ry).toFixed(9)),
+        f2 = math.asin(((y2 - cy) / ry).toFixed(9));
+
+    f1 = x1 < cx ? PI - f1 : f1;
+    f2 = x2 < cx ? PI - f2 : f2;
+    f1 < 0 && (f1 = PI * 2 + f1);
+    f2 < 0 && (f2 = PI * 2 + f2);
+
+    if (sweep_flag && f1 > f2) {
+      f1 = f1 - PI * 2;
+    }
+    if (!sweep_flag && f2 > f1) {
+      f2 = f2 - PI * 2;
+    }
+  } else {
+    f1 = recursive[0];
+    f2 = recursive[1];
+    cx = recursive[2];
+    cy = recursive[3];
+  }
+
+  var df = f2 - f1;
+
+  if (abs(df) > _120) {
+    var f2old = f2,
+        x2old = x2,
+        y2old = y2;
+
+    f2 = f1 + _120 * (sweep_flag && f2 > f1 ? 1 : -1);
+    x2 = cx + rx * math.cos(f2);
+    y2 = cy + ry * math.sin(f2);
+    res = a2c(x2, y2, rx, ry, angle, 0, sweep_flag, x2old, y2old, [f2, f2old, cx, cy]);
+  }
+
+  df = f2 - f1;
+
+  var c1 = math.cos(f1),
+      s1 = math.sin(f1),
+      c2 = math.cos(f2),
+      s2 = math.sin(f2),
+      t = math.tan(df / 4),
+      hx = 4 / 3 * rx * t,
+      hy = 4 / 3 * ry * t,
+      m1 = [x1, y1],
+      m2 = [x1 + hx * s1, y1 - hy * c1],
+      m3 = [x2 + hx * s2, y2 - hy * c2],
+      m4 = [x2, y2];
+
+  m2[0] = 2 * m1[0] - m2[0];
+  m2[1] = 2 * m1[1] - m2[1];
+
+  if (recursive) {
+    return [m2, m3, m4].concat(res);
+  } else {
+    res = [m2, m3, m4].concat(res).join().split(',');
+    var newres = [];
+
+    for (var i = 0, ii = res.length; i < ii; i++) {
+      newres[i] = i % 2 ? rotate(res[i - 1], res[i], rad).y : rotate(res[i], res[i + 1], rad).x;
+    }
+
+    return newres;
+  }
+}
+
+// Returns bounding box of cubic bezier curve.
+// Source: http://blog.hackers-cafe.net/2009/06/how-to-calculate-bezier-curves-bounding.html
+// Original version: NISHIO Hirokazu
+// Modifications: https://github.com/timo22345
+function curveDim(x0, y0, x1, y1, x2, y2, x3, y3) {
+  var tvalues = [],
+      bounds = [[], []],
+      a, b, c, t, t1, t2, b2ac, sqrtb2ac;
+
+  for (var i = 0; i < 2; ++i) {
+
+    if (i == 0) {
+      b = 6 * x0 - 12 * x1 + 6 * x2;
+      a = -3 * x0 + 9 * x1 - 9 * x2 + 3 * x3;
+      c = 3 * x1 - 3 * x0;
+    } else {
+      b = 6 * y0 - 12 * y1 + 6 * y2;
+      a = -3 * y0 + 9 * y1 - 9 * y2 + 3 * y3;
+      c = 3 * y1 - 3 * y0;
+    }
+
+    if (abs(a) < 1e-12) {
+
+      if (abs(b) < 1e-12) {
+        continue;
+      }
+
+      t = -c / b;
+
+      if (0 < t && t < 1) {
+        tvalues.push(t);
+      }
+
+      continue;
+    }
+
+    b2ac = b * b - 4 * c * a;
+    sqrtb2ac = math.sqrt(b2ac);
+
+    if (b2ac < 0) {
+      continue;
+    }
+
+    t1 = (-b + sqrtb2ac) / (2 * a);
+
+    if (0 < t1 && t1 < 1) {
+      tvalues.push(t1);
+    }
+
+    t2 = (-b - sqrtb2ac) / (2 * a);
+
+    if (0 < t2 && t2 < 1) {
+      tvalues.push(t2);
+    }
+  }
+
+  var j = tvalues.length,
+      jlen = j,
+      mt;
+
+  while (j--) {
+    t = tvalues[j];
+    mt = 1 - t;
+    bounds[0][j] = (mt * mt * mt * x0) + (3 * mt * mt * t * x1) + (3 * mt * t * t * x2) + (t * t * t * x3);
+    bounds[1][j] = (mt * mt * mt * y0) + (3 * mt * mt * t * y1) + (3 * mt * t * t * y2) + (t * t * t * y3);
+  }
+
+  bounds[0][jlen] = x0;
+  bounds[1][jlen] = y0;
+  bounds[0][jlen + 1] = x3;
+  bounds[1][jlen + 1] = y3;
+  bounds[0].length = bounds[1].length = jlen + 2;
+
+  return {
+    min: { x: mmin.apply(0, bounds[0]), y: mmin.apply(0, bounds[1]) },
+    max: { x: mmax.apply(0, bounds[0]), y: mmax.apply(0, bounds[1]) }
+  };
+}
+
+function path2curve(path, path2) {
+  var pth = !path2 && paths(path);
+
+  if (!path2 && pth.curve) {
+    return pathClone(pth.curve);
+  }
+
+  var p = pathToAbsolute(path),
+      p2 = path2 && pathToAbsolute(path2),
+      attrs = { x: 0, y: 0, bx: 0, by: 0, X: 0, Y: 0, qx: null, qy: null },
+      attrs2 = { x: 0, y: 0, bx: 0, by: 0, X: 0, Y: 0, qx: null, qy: null },
+      processPath = function(path, d, pcom) {
+        var nx, ny;
+
+        if (!path) {
+          return ['C', d.x, d.y, d.x, d.y, d.x, d.y];
+        }
+
+        !(path[0] in { T: 1, Q: 1 }) && (d.qx = d.qy = null);
+
+        switch (path[0]) {
+        case 'M':
+          d.X = path[1];
+          d.Y = path[2];
+          break;
+        case 'A':
+          path = ['C'].concat(a2c.apply(0, [d.x, d.y].concat(path.slice(1))));
+          break;
+        case 'S':
+          if (pcom == 'C' || pcom == 'S') { // In 'S' case we have to take into account, if the previous command is C/S.
+            nx = d.x * 2 - d.bx;          // And reflect the previous
+            ny = d.y * 2 - d.by;          // command's control point relative to the current point.
+          }
+          else {                            // or some else or nothing
+            nx = d.x;
+            ny = d.y;
+          }
+          path = ['C', nx, ny].concat(path.slice(1));
+          break;
+        case 'T':
+          if (pcom == 'Q' || pcom == 'T') { // In 'T' case we have to take into account, if the previous command is Q/T.
+            d.qx = d.x * 2 - d.qx;        // And make a reflection similar
+            d.qy = d.y * 2 - d.qy;        // to case 'S'.
+          }
+          else {                            // or something else or nothing
+            d.qx = d.x;
+            d.qy = d.y;
+          }
+          path = ['C'].concat(q2c(d.x, d.y, d.qx, d.qy, path[1], path[2]));
+          break;
+        case 'Q':
+          d.qx = path[1];
+          d.qy = path[2];
+          path = ['C'].concat(q2c(d.x, d.y, path[1], path[2], path[3], path[4]));
+          break;
+        case 'L':
+          path = ['C'].concat(l2c(d.x, d.y, path[1], path[2]));
+          break;
+        case 'H':
+          path = ['C'].concat(l2c(d.x, d.y, path[1], d.y));
+          break;
+        case 'V':
+          path = ['C'].concat(l2c(d.x, d.y, d.x, path[1]));
+          break;
+        case 'Z':
+          path = ['C'].concat(l2c(d.x, d.y, d.X, d.Y));
+          break;
+        }
+
+        return path;
+      },
+
+      fixArc = function(pp, i) {
+
+        if (pp[i].length > 7) {
+          pp[i].shift();
+          var pi = pp[i];
+
+          while (pi.length) {
+            pcoms1[i] = 'A'; // if created multiple C:s, their original seg is saved
+            p2 && (pcoms2[i] = 'A'); // the same as above
+            pp.splice(i++, 0, ['C'].concat(pi.splice(0, 6)));
+          }
+
+          pp.splice(i, 1);
+          ii = mmax(p.length, p2 && p2.length || 0);
+        }
+      },
+
+      fixM = function(path1, path2, a1, a2, i) {
+
+        if (path1 && path2 && path1[i][0] == 'M' && path2[i][0] != 'M') {
+          path2.splice(i, 0, ['M', a2.x, a2.y]);
+          a1.bx = 0;
+          a1.by = 0;
+          a1.x = path1[i][1];
+          a1.y = path1[i][2];
+          ii = mmax(p.length, p2 && p2.length || 0);
+        }
+      },
+
+      pcoms1 = [], // path commands of original path p
+      pcoms2 = [], // path commands of original path p2
+      pfirst = '', // temporary holder for original path command
+      pcom = ''; // holder for previous path command of original path
+
+  for (var i = 0, ii = mmax(p.length, p2 && p2.length || 0); i < ii; i++) {
+    p[i] && (pfirst = p[i][0]); // save current path command
+
+    if (pfirst != 'C') // C is not saved yet, because it may be result of conversion
+    {
+      pcoms1[i] = pfirst; // Save current path command
+      i && ( pcom = pcoms1[i - 1]); // Get previous path command pcom
+    }
+    p[i] = processPath(p[i], attrs, pcom); // Previous path command is inputted to processPath
+
+    if (pcoms1[i] != 'A' && pfirst == 'C') pcoms1[i] = 'C'; // A is the only command
+    // which may produce multiple C:s
+    // so we have to make sure that C is also C in original path
+
+    fixArc(p, i); // fixArc adds also the right amount of A:s to pcoms1
+
+    if (p2) { // the same procedures is done to p2
+      p2[i] && (pfirst = p2[i][0]);
+
+      if (pfirst != 'C') {
+        pcoms2[i] = pfirst;
+        i && (pcom = pcoms2[i - 1]);
+      }
+
+      p2[i] = processPath(p2[i], attrs2, pcom);
+
+      if (pcoms2[i] != 'A' && pfirst == 'C') {
+        pcoms2[i] = 'C';
+      }
+
+      fixArc(p2, i);
+    }
+
+    fixM(p, p2, attrs, attrs2, i);
+    fixM(p2, p, attrs2, attrs, i);
+
+    var seg = p[i],
+        seg2 = p2 && p2[i],
+        seglen = seg.length,
+        seg2len = p2 && seg2.length;
+
+    attrs.x = seg[seglen - 2];
+    attrs.y = seg[seglen - 1];
+    attrs.bx = toFloat(seg[seglen - 4]) || attrs.x;
+    attrs.by = toFloat(seg[seglen - 3]) || attrs.y;
+    attrs2.bx = p2 && (toFloat(seg2[seg2len - 4]) || attrs2.x);
+    attrs2.by = p2 && (toFloat(seg2[seg2len - 3]) || attrs2.y);
+    attrs2.x = p2 && seg2[seg2len - 2];
+    attrs2.y = p2 && seg2[seg2len - 1];
+  }
+
+  if (!p2) {
+    pth.curve = pathClone(p);
+  }
+
+  return p2 ? [p, p2] : p;
+}
+
+function mapPath(path, matrix) {
+
+  if (!matrix) {
+    return path;
+  }
+
+  var x, y, i, j, ii, jj, pathi;
+  path = path2curve(path);
+
+  for (i = 0, ii = path.length; i < ii; i++) {
+    pathi = path[i];
+
+    for (j = 1, jj = pathi.length; j < jj; j += 2) {
+      x = matrix.x(pathi[j], pathi[j + 1]);
+      y = matrix.y(pathi[j], pathi[j + 1]);
+      pathi[j] = x;
+      pathi[j + 1] = y;
+    }
+  }
+
+  return path;
+}
+
+// http://schepers.cc/getting-to-the-point
+function catmullRom2bezier(crp, z) {
+  var d = [];
+
+  for (var i = 0, iLen = crp.length; iLen - 2 * !z > i; i += 2) {
+    var p = [
+      { x: +crp[i - 2], y: +crp[i - 1] },
+      { x: +crp[i],     y: +crp[i + 1] },
+      { x: +crp[i + 2], y: +crp[i + 3] },
+      { x: +crp[i + 4], y: +crp[i + 5] }
+    ];
+
+    if (z) {
+
+      if (!i) {
+        p[0] = { x: +crp[iLen - 2], y: +crp[iLen - 1] };
+      } else if (iLen - 4 == i) {
+        p[3] = { x: +crp[0], y: +crp[1] };
+      } else if (iLen - 2 == i) {
+        p[2] = { x: +crp[0], y: +crp[1] };
+        p[3] = { x: +crp[2], y: +crp[3] };
+      }
+
+    } else {
+
+      if (iLen - 4 == i) {
+        p[3] = p[2];
+      } else if (!i) {
+        p[0] = { x: +crp[i], y: +crp[i + 1] };
+      }
+
+    }
+
+    d.push(['C',
+      (-p[0].x + 6 * p[1].x + p[2].x) / 6,
+      (-p[0].y + 6 * p[1].y + p[2].y) / 6,
+      (p[1].x + 6 * p[2].x - p[3].x) / 6,
+      (p[1].y + 6*p[2].y - p[3].y) / 6,
+      p[2].x,
+      p[2].y
+    ]);
+  }
+
+  return d;
+}
+
+paths.getTotalLength = getTotalLength;
+paths.getPointAtLength = getPointAtLength;
+paths.findDotsAtSegment = findDotsAtSegment;
+paths.bezierBBox = bezierBBox;
+paths.isPointInsideBBox = isPointInsideBBox;
+paths.isBBoxIntersect = isBBoxIntersect;
+paths.intersection = pathIntersection;
+paths.intersectionNumber = pathIntersectionNumber;
+paths.isPointInside = isPointInsidePath;
+paths.getBBox = pathBBox;
+paths.toRelative = pathToRelative;
+paths.toAbsolute = pathToAbsolute;
+paths.toCubic = path2curve;
+paths.map = mapPath;
+paths.toString = toString;
+paths.clone = pathClone;
+
+module.exports.intersection = pathIntersection;
+
+},{}],783:[function(require,module,exports){
+'use strict';
+
+var pointDistance = require('./Geometry').pointDistance;
+
+var intersection = require('./Intersection').intersection;
+
+var round = Math.round,
+    max = Math.max;
+
+
+function circlePath(center, r) {
+  var x = center.x,
+      y = center.y;
+
+  return [
+    ['M', x, y],
+    ['m', 0, -r],
+    ['a', r, r, 0, 1, 1, 0, 2 * r],
+    ['a', r, r, 0, 1, 1, 0, -2 * r],
+    ['z']
+  ];
+}
+
+function linePath(points) {
+  var segments = [];
+
+  points.forEach(function(p, idx) {
+    segments.push([ idx === 0 ? 'M' : 'L', p.x, p.y ]);
+  });
+
+  return segments;
+}
+
+
+var INTERSECTION_THRESHOLD = 10;
+
+function getBendpointIntersection(waypoints, reference) {
+
+  var i, w;
+
+  for (i = 0; (w = waypoints[i]); i++) {
+
+    if (pointDistance(w, reference) <= INTERSECTION_THRESHOLD) {
+      return {
+        point: waypoints[i],
+        bendpoint: true,
+        index: i
+      };
+    }
+  }
+
+  return null;
+}
+
+function getPathIntersection(waypoints, reference) {
+
+  var intersections = intersection(circlePath(reference, INTERSECTION_THRESHOLD), linePath(waypoints));
+
+  var a = intersections[0],
+      b = intersections[intersections.length - 1],
+      idx;
+
+  if (!a) {
+    // no intersection
+    return null;
+  }
+
+  if (a !== b) {
+
+    if (a.segment2 !== b.segment2) {
+      // we use the bendpoint in between both segments
+      // as the intersection point
+
+      idx = max(a.segment2, b.segment2) - 1;
+
+      return {
+        point: waypoints[idx],
+        bendpoint: true,
+        index: idx
+      };
+    }
+
+    return {
+      point: {
+        x: (round(a.x + b.x) / 2),
+        y: (round(a.y + b.y) / 2)
+      },
+      index: a.segment2
+    };
+  }
+
+  return {
+    point: {
+      x: round(a.x),
+      y: round(a.y)
+    },
+    index: a.segment2
+  };
+}
+
+/**
+ * Returns the closest point on the connection towards a given reference point.
+ *
+ * @param  {Array<Point>} waypoints
+ * @param  {Point} reference
+ *
+ * @return {Object} intersection data (segment, point)
+ */
+module.exports.getApproxIntersection = function(waypoints, reference) {
+  return getBendpointIntersection(waypoints, reference) || getPathIntersection(waypoints, reference);
+};
+
+},{"./Geometry":779,"./Intersection":782}],784:[function(require,module,exports){
 arguments[4][114][0].apply(exports,arguments)
-},{"dup":114}],665:[function(require,module,exports){
+},{"dup":114}],785:[function(require,module,exports){
 arguments[4][361][0].apply(exports,arguments)
-},{"./Event":661,"./Platform":666,"dup":361}],666:[function(require,module,exports){
+},{"./Event":778,"./Platform":786,"dup":361}],786:[function(require,module,exports){
 arguments[4][116][0].apply(exports,arguments)
-},{"dup":116}],667:[function(require,module,exports){
-arguments[4][363][0].apply(exports,arguments)
-},{"../../vendor/snapsvg":675,"dup":363}],668:[function(require,module,exports){
-arguments[4][364][0].apply(exports,arguments)
-},{"../../vendor/snapsvg":675,"dup":364,"lodash/collection/forEach":708,"lodash/collection/reduce":712,"lodash/lang/isObject":820,"lodash/object/assign":825,"lodash/object/merge":828,"lodash/object/pick":831}],669:[function(require,module,exports){
+},{"dup":116}],787:[function(require,module,exports){
+'use strict';
+
+function center(bounds) {
+  return {
+    x: bounds.x + (bounds.width / 2),
+    y: bounds.y + (bounds.height / 2)
+  };
+}
+
+module.exports.center = center;
+
+
+function delta(a, b) {
+  return {
+    x: a.x - b.x,
+    y: a.y - b.y
+  };
+}
+
+module.exports.delta = delta;
+
+},{}],788:[function(require,module,exports){
+'use strict';
+
+
+/**
+ * Remove from the beginning of a collection until it is empty.
+ *
+ * This is a null-safe operation that ensures elements
+ * are being removed from the given collection until the
+ * collection is empty.
+ *
+ * The implementation deals with the fact that a remove operation
+ * may touch, i.e. remove multiple elements in the collection
+ * at a time.
+ *
+ * @param {Array<Object>} [collection]
+ * @param {Function} removeFn
+ *
+ * @return {Array<Object>} the cleared collection
+ */
+module.exports.saveClear = function(collection, removeFn) {
+
+  if (typeof removeFn !== 'function') {
+    throw new Error('removeFn iterator must be a function');
+  }
+
+  if (!collection) {
+    return;
+  }
+
+  var e;
+
+  while ((e = collection[0])) {
+    removeFn(e);
+  }
+
+  return collection;
+};
+
+},{}],789:[function(require,module,exports){
+'use strict';
+
+var svgAttr = require('tiny-svg/lib/attr'),
+    svgCreate = require('tiny-svg/lib/create');
+
+
+module.exports.componentsToPath = function(elements) {
+  return elements.join(',').replace(/,?([A-z]),?/g, '$1');
+};
+
+function toSVGPoints(points) {
+  var result = '';
+
+  for (var i = 0, p; (p = points[i]); i++) {
+    result += p.x + ',' + p.y + ' ';
+  }
+
+  return result;
+}
+
+module.exports.toSVGPoints = toSVGPoints;
+
+module.exports.createLine = function(points, attrs) {
+
+  var line = svgCreate('polyline');
+  svgAttr(line, { points: toSVGPoints(points) });
+
+  if (attrs) {
+    svgAttr(line, attrs);
+  }
+
+  return line;
+};
+
+module.exports.updateLine = function(gfx, points) {
+  svgAttr(gfx, { points: toSVGPoints(points) });
+
+  return gfx;
+};
+
+},{"tiny-svg/lib/attr":1069,"tiny-svg/lib/create":1073}],790:[function(require,module,exports){
+'use strict';
+
+var svgTransform = require('tiny-svg/lib/transform');
+
+var createTransform = require('tiny-svg/lib/geometry').createTransform;
+
+
+/**
+ * @param {<SVGElement>} element
+ * @param {Number} x
+ * @param {Number} y
+ * @param {Number} angle
+ * @param {Number} amount
+ */
+module.exports.transform = function(gfx, x, y, angle, amount) {
+  var translate = createTransform();
+  translate.setTranslate(x, y);
+
+  var rotate = createTransform();
+  rotate.setRotate(angle, 0, 0);
+
+  var scale = createTransform();
+  scale.setScale(amount || 1, amount || 1);
+
+  svgTransform(gfx, [ translate, rotate, scale ]);
+};
+
+
+/**
+ * @param {SVGElement} element
+ * @param {Number} x
+ * @param {Number} y
+ */
+module.exports.translate = function(gfx, x, y) {
+  var translate = createTransform();
+  translate.setTranslate(x, y);
+
+  svgTransform(gfx, translate);
+};
+
+
+/**
+ * @param {SVGElement} element
+ * @param {Number} angle
+ */
+module.exports.rotate = function(gfx, angle) {
+  var rotate = createTransform();
+  rotate.setRotate(angle, 0, 0);
+
+  svgTransform(gfx, rotate);
+};
+
+
+/**
+ * @param {SVGElement} element
+ * @param {Number} amount
+ */
+module.exports.scale = function(gfx, amount) {
+  var scale = createTransform();
+  scale.setScale(amount, amount);
+
+  svgTransform(gfx, scale);
+};
+
+},{"tiny-svg/lib/geometry":1074,"tiny-svg/lib/transform":1076}],791:[function(require,module,exports){
+'use strict';
+
+var isObject = require('lodash/lang/isObject'),
+    assign = require('lodash/object/assign'),
+    pick = require('lodash/object/pick'),
+    forEach = require('lodash/collection/forEach'),
+    reduce = require('lodash/collection/reduce'),
+    merge = require('lodash/object/merge');
+
+var svgAppend = require('tiny-svg/lib/append'),
+    svgAttr = require('tiny-svg/lib/attr'),
+    svgCreate = require('tiny-svg/lib/create'),
+    svgRemove = require('tiny-svg/lib/remove');
+
+var DEFAULT_BOX_PADDING = 0;
+
+var DEFAULT_LABEL_SIZE = {
+  width: 150,
+  height: 50
+};
+
+
+function parseAlign(align) {
+
+  var parts = align.split('-');
+
+  return {
+    horizontal: parts[0] || 'center',
+    vertical: parts[1] || 'top'
+  };
+}
+
+function parsePadding(padding) {
+
+  if (isObject(padding)) {
+    return assign({ top: 0, left: 0, right: 0, bottom: 0 }, padding);
+  } else {
+    return {
+      top: padding,
+      left: padding,
+      right: padding,
+      bottom: padding
+    };
+  }
+}
+
+function getTextBBox(text, fakeText) {
+
+  fakeText.textContent = text;
+
+  try {
+    var bbox,
+        emptyLine = text === '';
+
+    // add dummy text, when line is empty to determine correct height
+    fakeText.textContent = emptyLine ? 'dummy' : text;
+
+    bbox = pick(fakeText.getBBox(), [ 'width', 'height' ]);
+
+    if (emptyLine) {
+      // correct width
+      bbox.width = 0;
+    }
+
+    return bbox;
+  } catch (e) {
+    return { width: 0, height: 0 };
+  }
+}
+
+
+/**
+ * Layout the next line and return the layouted element.
+ *
+ * Alters the lines passed.
+ *
+ * @param  {Array<String>} lines
+ * @return {Object} the line descriptor, an object { width, height, text }
+ */
+function layoutNext(lines, maxWidth, fakeText) {
+
+  var originalLine = lines.shift(),
+      fitLine = originalLine;
+
+  var textBBox;
+
+  for (;;) {
+    textBBox = getTextBBox(fitLine, fakeText);
+
+    textBBox.width = fitLine ? textBBox.width : 0;
+
+    // try to fit
+    if (fitLine === ' ' || fitLine === '' || textBBox.width < Math.round(maxWidth) || fitLine.length < 4) {
+      return fit(lines, fitLine, originalLine, textBBox);
+    }
+
+    fitLine = shortenLine(fitLine, textBBox.width, maxWidth);
+  }
+}
+
+function fit(lines, fitLine, originalLine, textBBox) {
+  if (fitLine.length < originalLine.length) {
+    var nextLine = lines[0] || '',
+        remainder = originalLine.slice(fitLine.length).trim();
+
+    if (/-\s*$/.test(remainder)) {
+      nextLine = remainder + nextLine.replace(/^\s+/, '');
+    } else {
+      nextLine = remainder + ' ' + nextLine;
+    }
+
+    lines[0] = nextLine;
+  }
+  return { width: textBBox.width, height: textBBox.height, text: fitLine };
+}
+
+
+/**
+ * Shortens a line based on spacing and hyphens.
+ * Returns the shortened result on success.
+ *
+ * @param  {String} line
+ * @param  {Number} maxLength the maximum characters of the string
+ * @return {String} the shortened string
+ */
+function semanticShorten(line, maxLength) {
+  var parts = line.split(/(\s|-)/g),
+      part,
+      shortenedParts = [],
+      length = 0;
+
+  // try to shorten via spaces + hyphens
+  if (parts.length > 1) {
+    while ((part = parts.shift())) {
+      if (part.length + length < maxLength) {
+        shortenedParts.push(part);
+        length += part.length;
+      } else {
+        // remove previous part, too if hyphen does not fit anymore
+        if (part === '-') {
+          shortenedParts.pop();
+        }
+
+        break;
+      }
+    }
+  }
+
+  return shortenedParts.join('');
+}
+
+
+function shortenLine(line, width, maxWidth) {
+  var length = Math.max(line.length * (maxWidth / width), 1);
+
+  // try to shorten semantically (i.e. based on spaces and hyphens)
+  var shortenedLine = semanticShorten(line, length);
+
+  if (!shortenedLine) {
+
+    // force shorten by cutting the long word
+    shortenedLine = line.slice(0, Math.max(Math.round(length - 1), 1));
+  }
+
+  return shortenedLine;
+}
+
+
+/**
+ * Creates a new label utility
+ *
+ * @param {Object} config
+ * @param {Dimensions} config.size
+ * @param {Number} config.padding
+ * @param {Object} config.style
+ * @param {String} config.align
+ */
+function Text(config) {
+
+  this._config = assign({}, {
+    size: DEFAULT_LABEL_SIZE,
+    padding: DEFAULT_BOX_PADDING,
+    style: {},
+    align: 'center-top'
+  }, config || {});
+}
+
+
+/**
+ * Create a label in the parent node.
+ *
+ * @method Text#createText
+ *
+ * @param {SVGElement} parent the parent to draw the label on
+ * @param {String} text the text to render on the label
+ * @param {Object} options
+ * @param {String} options.align how to align in the bounding box.
+ *                             Any of { 'center-middle', 'center-top' }, defaults to 'center-top'.
+ * @param {String} options.style style to be applied to the text
+ *
+ * @return {SVGText} the text element created
+ */
+Text.prototype.createText = function(parent, text, options) {
+
+  var box = merge({}, this._config.size, options.box || {}),
+      style = merge({}, this._config.style, options.style || {}),
+      align = parseAlign(options.align || this._config.align),
+      padding = parsePadding(options.padding !== undefined ? options.padding : this._config.padding);
+
+  var lines = text.split(/\r?\n/g),
+      layouted = [];
+
+  var maxWidth = box.width - padding.left - padding.right;
+
+  // FF regression: ensure text is shown during rendering
+  // by attaching it directly to the body
+  var fakeText = svgCreate('text');
+  svgAttr(fakeText, { x: 0, y: 0 });
+  svgAttr(fakeText, style);
+
+  svgAppend(parent, fakeText);
+
+  while (lines.length) {
+    layouted.push(layoutNext(lines, maxWidth, fakeText));
+  }
+
+  var totalHeight = reduce(layouted, function(sum, line, idx) {
+    return sum + line.height;
+  }, 0);
+
+  // the y position of the next line
+  var y, x;
+
+  switch (align.vertical) {
+  case 'middle':
+    y = (box.height - totalHeight) / 2 - layouted[0].height / 4;
+    break;
+
+  default:
+    y = padding.top;
+  }
+
+  var textElement = svgCreate('text');
+
+  svgAttr(textElement, style);
+
+  svgAppend(parent, textElement);
+
+  forEach(layouted, function(line) {
+    y += line.height;
+
+    switch (align.horizontal) {
+    case 'left':
+      x = padding.left;
+      break;
+
+    case 'right':
+      x = (maxWidth - padding.right - line.width);
+      break;
+
+    default:
+        // aka center
+      x = Math.max(((maxWidth - line.width) / 2 + padding.left), 0);
+    }
+
+    var tspan = svgCreate('tspan');
+    svgAttr(tspan, { x: x, y: y });
+
+    tspan.textContent = line.text;
+
+    svgAppend(textElement, tspan);
+  });
+
+  // remove fake text
+  svgRemove(fakeText);
+
+  return textElement;
+};
+
+
+module.exports = Text;
+
+},{"lodash/collection/forEach":832,"lodash/collection/reduce":836,"lodash/lang/isObject":959,"lodash/object/assign":964,"lodash/object/merge":967,"lodash/object/pick":970,"tiny-svg/lib/append":1067,"tiny-svg/lib/attr":1069,"tiny-svg/lib/create":1073,"tiny-svg/lib/remove":1075}],792:[function(require,module,exports){
 arguments[4][119][0].apply(exports,arguments)
-},{"dup":119}],670:[function(require,module,exports){
+},{"dup":119}],793:[function(require,module,exports){
 arguments[4][120][0].apply(exports,arguments)
-},{"./annotation":669,"./injector":671,"./module":672,"dup":120}],671:[function(require,module,exports){
+},{"./annotation":792,"./injector":794,"./module":795,"dup":120}],794:[function(require,module,exports){
 arguments[4][121][0].apply(exports,arguments)
-},{"./annotation":669,"./module":672,"dup":121}],672:[function(require,module,exports){
+},{"./annotation":792,"./module":795,"dup":121}],795:[function(require,module,exports){
 arguments[4][122][0].apply(exports,arguments)
-},{"dup":122}],673:[function(require,module,exports){
-arguments[4][123][0].apply(exports,arguments)
-},{"dup":123}],674:[function(require,module,exports){
-arguments[4][124][0].apply(exports,arguments)
-},{"dup":124,"eve":673}],675:[function(require,module,exports){
-arguments[4][125][0].apply(exports,arguments)
-},{"dup":125,"snapsvg":674}],676:[function(require,module,exports){
+},{"dup":122}],796:[function(require,module,exports){
+/*! Hammer.JS - v2.0.7 - 2016-04-22
+ * http://hammerjs.github.io/
+ *
+ * Copyright (c) 2016 Jorik Tangelder;
+ * Licensed under the MIT license */
+(function(window, document, exportName, undefined) {
+  'use strict';
+
+var VENDOR_PREFIXES = ['', 'webkit', 'Moz', 'MS', 'ms', 'o'];
+var TEST_ELEMENT = document.createElement('div');
+
+var TYPE_FUNCTION = 'function';
+
+var round = Math.round;
+var abs = Math.abs;
+var now = Date.now;
+
+/**
+ * set a timeout with a given scope
+ * @param {Function} fn
+ * @param {Number} timeout
+ * @param {Object} context
+ * @returns {number}
+ */
+function setTimeoutContext(fn, timeout, context) {
+    return setTimeout(bindFn(fn, context), timeout);
+}
+
+/**
+ * if the argument is an array, we want to execute the fn on each entry
+ * if it aint an array we don't want to do a thing.
+ * this is used by all the methods that accept a single and array argument.
+ * @param {*|Array} arg
+ * @param {String} fn
+ * @param {Object} [context]
+ * @returns {Boolean}
+ */
+function invokeArrayArg(arg, fn, context) {
+    if (Array.isArray(arg)) {
+        each(arg, context[fn], context);
+        return true;
+    }
+    return false;
+}
+
+/**
+ * walk objects and arrays
+ * @param {Object} obj
+ * @param {Function} iterator
+ * @param {Object} context
+ */
+function each(obj, iterator, context) {
+    var i;
+
+    if (!obj) {
+        return;
+    }
+
+    if (obj.forEach) {
+        obj.forEach(iterator, context);
+    } else if (obj.length !== undefined) {
+        i = 0;
+        while (i < obj.length) {
+            iterator.call(context, obj[i], i, obj);
+            i++;
+        }
+    } else {
+        for (i in obj) {
+            obj.hasOwnProperty(i) && iterator.call(context, obj[i], i, obj);
+        }
+    }
+}
+
+/**
+ * wrap a method with a deprecation warning and stack trace
+ * @param {Function} method
+ * @param {String} name
+ * @param {String} message
+ * @returns {Function} A new function wrapping the supplied method.
+ */
+function deprecate(method, name, message) {
+    var deprecationMessage = 'DEPRECATED METHOD: ' + name + '\n' + message + ' AT \n';
+    return function() {
+        var e = new Error('get-stack-trace');
+        var stack = e && e.stack ? e.stack.replace(/^[^\(]+?[\n$]/gm, '')
+            .replace(/^\s+at\s+/gm, '')
+            .replace(/^Object.<anonymous>\s*\(/gm, '{anonymous}()@') : 'Unknown Stack Trace';
+
+        var log = window.console && (window.console.warn || window.console.log);
+        if (log) {
+            log.call(window.console, deprecationMessage, stack);
+        }
+        return method.apply(this, arguments);
+    };
+}
+
+/**
+ * extend object.
+ * means that properties in dest will be overwritten by the ones in src.
+ * @param {Object} target
+ * @param {...Object} objects_to_assign
+ * @returns {Object} target
+ */
+var assign;
+if (typeof Object.assign !== 'function') {
+    assign = function assign(target) {
+        if (target === undefined || target === null) {
+            throw new TypeError('Cannot convert undefined or null to object');
+        }
+
+        var output = Object(target);
+        for (var index = 1; index < arguments.length; index++) {
+            var source = arguments[index];
+            if (source !== undefined && source !== null) {
+                for (var nextKey in source) {
+                    if (source.hasOwnProperty(nextKey)) {
+                        output[nextKey] = source[nextKey];
+                    }
+                }
+            }
+        }
+        return output;
+    };
+} else {
+    assign = Object.assign;
+}
+
+/**
+ * extend object.
+ * means that properties in dest will be overwritten by the ones in src.
+ * @param {Object} dest
+ * @param {Object} src
+ * @param {Boolean} [merge=false]
+ * @returns {Object} dest
+ */
+var extend = deprecate(function extend(dest, src, merge) {
+    var keys = Object.keys(src);
+    var i = 0;
+    while (i < keys.length) {
+        if (!merge || (merge && dest[keys[i]] === undefined)) {
+            dest[keys[i]] = src[keys[i]];
+        }
+        i++;
+    }
+    return dest;
+}, 'extend', 'Use `assign`.');
+
+/**
+ * merge the values from src in the dest.
+ * means that properties that exist in dest will not be overwritten by src
+ * @param {Object} dest
+ * @param {Object} src
+ * @returns {Object} dest
+ */
+var merge = deprecate(function merge(dest, src) {
+    return extend(dest, src, true);
+}, 'merge', 'Use `assign`.');
+
+/**
+ * simple class inheritance
+ * @param {Function} child
+ * @param {Function} base
+ * @param {Object} [properties]
+ */
+function inherit(child, base, properties) {
+    var baseP = base.prototype,
+        childP;
+
+    childP = child.prototype = Object.create(baseP);
+    childP.constructor = child;
+    childP._super = baseP;
+
+    if (properties) {
+        assign(childP, properties);
+    }
+}
+
+/**
+ * simple function bind
+ * @param {Function} fn
+ * @param {Object} context
+ * @returns {Function}
+ */
+function bindFn(fn, context) {
+    return function boundFn() {
+        return fn.apply(context, arguments);
+    };
+}
+
+/**
+ * let a boolean value also be a function that must return a boolean
+ * this first item in args will be used as the context
+ * @param {Boolean|Function} val
+ * @param {Array} [args]
+ * @returns {Boolean}
+ */
+function boolOrFn(val, args) {
+    if (typeof val == TYPE_FUNCTION) {
+        return val.apply(args ? args[0] || undefined : undefined, args);
+    }
+    return val;
+}
+
+/**
+ * use the val2 when val1 is undefined
+ * @param {*} val1
+ * @param {*} val2
+ * @returns {*}
+ */
+function ifUndefined(val1, val2) {
+    return (val1 === undefined) ? val2 : val1;
+}
+
+/**
+ * addEventListener with multiple events at once
+ * @param {EventTarget} target
+ * @param {String} types
+ * @param {Function} handler
+ */
+function addEventListeners(target, types, handler) {
+    each(splitStr(types), function(type) {
+        target.addEventListener(type, handler, false);
+    });
+}
+
+/**
+ * removeEventListener with multiple events at once
+ * @param {EventTarget} target
+ * @param {String} types
+ * @param {Function} handler
+ */
+function removeEventListeners(target, types, handler) {
+    each(splitStr(types), function(type) {
+        target.removeEventListener(type, handler, false);
+    });
+}
+
+/**
+ * find if a node is in the given parent
+ * @method hasParent
+ * @param {HTMLElement} node
+ * @param {HTMLElement} parent
+ * @return {Boolean} found
+ */
+function hasParent(node, parent) {
+    while (node) {
+        if (node == parent) {
+            return true;
+        }
+        node = node.parentNode;
+    }
+    return false;
+}
+
+/**
+ * small indexOf wrapper
+ * @param {String} str
+ * @param {String} find
+ * @returns {Boolean} found
+ */
+function inStr(str, find) {
+    return str.indexOf(find) > -1;
+}
+
+/**
+ * split string on whitespace
+ * @param {String} str
+ * @returns {Array} words
+ */
+function splitStr(str) {
+    return str.trim().split(/\s+/g);
+}
+
+/**
+ * find if a array contains the object using indexOf or a simple polyFill
+ * @param {Array} src
+ * @param {String} find
+ * @param {String} [findByKey]
+ * @return {Boolean|Number} false when not found, or the index
+ */
+function inArray(src, find, findByKey) {
+    if (src.indexOf && !findByKey) {
+        return src.indexOf(find);
+    } else {
+        var i = 0;
+        while (i < src.length) {
+            if ((findByKey && src[i][findByKey] == find) || (!findByKey && src[i] === find)) {
+                return i;
+            }
+            i++;
+        }
+        return -1;
+    }
+}
+
+/**
+ * convert array-like objects to real arrays
+ * @param {Object} obj
+ * @returns {Array}
+ */
+function toArray(obj) {
+    return Array.prototype.slice.call(obj, 0);
+}
+
+/**
+ * unique array with objects based on a key (like 'id') or just by the array's value
+ * @param {Array} src [{id:1},{id:2},{id:1}]
+ * @param {String} [key]
+ * @param {Boolean} [sort=False]
+ * @returns {Array} [{id:1},{id:2}]
+ */
+function uniqueArray(src, key, sort) {
+    var results = [];
+    var values = [];
+    var i = 0;
+
+    while (i < src.length) {
+        var val = key ? src[i][key] : src[i];
+        if (inArray(values, val) < 0) {
+            results.push(src[i]);
+        }
+        values[i] = val;
+        i++;
+    }
+
+    if (sort) {
+        if (!key) {
+            results = results.sort();
+        } else {
+            results = results.sort(function sortUniqueArray(a, b) {
+                return a[key] > b[key];
+            });
+        }
+    }
+
+    return results;
+}
+
+/**
+ * get the prefixed property
+ * @param {Object} obj
+ * @param {String} property
+ * @returns {String|Undefined} prefixed
+ */
+function prefixed(obj, property) {
+    var prefix, prop;
+    var camelProp = property[0].toUpperCase() + property.slice(1);
+
+    var i = 0;
+    while (i < VENDOR_PREFIXES.length) {
+        prefix = VENDOR_PREFIXES[i];
+        prop = (prefix) ? prefix + camelProp : property;
+
+        if (prop in obj) {
+            return prop;
+        }
+        i++;
+    }
+    return undefined;
+}
+
+/**
+ * get a unique id
+ * @returns {number} uniqueId
+ */
+var _uniqueId = 1;
+function uniqueId() {
+    return _uniqueId++;
+}
+
+/**
+ * get the window object of an element
+ * @param {HTMLElement} element
+ * @returns {DocumentView|Window}
+ */
+function getWindowForElement(element) {
+    var doc = element.ownerDocument || element;
+    return (doc.defaultView || doc.parentWindow || window);
+}
+
+var MOBILE_REGEX = /mobile|tablet|ip(ad|hone|od)|android/i;
+
+var SUPPORT_TOUCH = ('ontouchstart' in window);
+var SUPPORT_POINTER_EVENTS = prefixed(window, 'PointerEvent') !== undefined;
+var SUPPORT_ONLY_TOUCH = SUPPORT_TOUCH && MOBILE_REGEX.test(navigator.userAgent);
+
+var INPUT_TYPE_TOUCH = 'touch';
+var INPUT_TYPE_PEN = 'pen';
+var INPUT_TYPE_MOUSE = 'mouse';
+var INPUT_TYPE_KINECT = 'kinect';
+
+var COMPUTE_INTERVAL = 25;
+
+var INPUT_START = 1;
+var INPUT_MOVE = 2;
+var INPUT_END = 4;
+var INPUT_CANCEL = 8;
+
+var DIRECTION_NONE = 1;
+var DIRECTION_LEFT = 2;
+var DIRECTION_RIGHT = 4;
+var DIRECTION_UP = 8;
+var DIRECTION_DOWN = 16;
+
+var DIRECTION_HORIZONTAL = DIRECTION_LEFT | DIRECTION_RIGHT;
+var DIRECTION_VERTICAL = DIRECTION_UP | DIRECTION_DOWN;
+var DIRECTION_ALL = DIRECTION_HORIZONTAL | DIRECTION_VERTICAL;
+
+var PROPS_XY = ['x', 'y'];
+var PROPS_CLIENT_XY = ['clientX', 'clientY'];
+
+/**
+ * create new input type manager
+ * @param {Manager} manager
+ * @param {Function} callback
+ * @returns {Input}
+ * @constructor
+ */
+function Input(manager, callback) {
+    var self = this;
+    this.manager = manager;
+    this.callback = callback;
+    this.element = manager.element;
+    this.target = manager.options.inputTarget;
+
+    // smaller wrapper around the handler, for the scope and the enabled state of the manager,
+    // so when disabled the input events are completely bypassed.
+    this.domHandler = function(ev) {
+        if (boolOrFn(manager.options.enable, [manager])) {
+            self.handler(ev);
+        }
+    };
+
+    this.init();
+
+}
+
+Input.prototype = {
+    /**
+     * should handle the inputEvent data and trigger the callback
+     * @virtual
+     */
+    handler: function() { },
+
+    /**
+     * bind the events
+     */
+    init: function() {
+        this.evEl && addEventListeners(this.element, this.evEl, this.domHandler);
+        this.evTarget && addEventListeners(this.target, this.evTarget, this.domHandler);
+        this.evWin && addEventListeners(getWindowForElement(this.element), this.evWin, this.domHandler);
+    },
+
+    /**
+     * unbind the events
+     */
+    destroy: function() {
+        this.evEl && removeEventListeners(this.element, this.evEl, this.domHandler);
+        this.evTarget && removeEventListeners(this.target, this.evTarget, this.domHandler);
+        this.evWin && removeEventListeners(getWindowForElement(this.element), this.evWin, this.domHandler);
+    }
+};
+
+/**
+ * create new input type manager
+ * called by the Manager constructor
+ * @param {Hammer} manager
+ * @returns {Input}
+ */
+function createInputInstance(manager) {
+    var Type;
+    var inputClass = manager.options.inputClass;
+
+    if (inputClass) {
+        Type = inputClass;
+    } else if (SUPPORT_POINTER_EVENTS) {
+        Type = PointerEventInput;
+    } else if (SUPPORT_ONLY_TOUCH) {
+        Type = TouchInput;
+    } else if (!SUPPORT_TOUCH) {
+        Type = MouseInput;
+    } else {
+        Type = TouchMouseInput;
+    }
+    return new (Type)(manager, inputHandler);
+}
+
+/**
+ * handle input events
+ * @param {Manager} manager
+ * @param {String} eventType
+ * @param {Object} input
+ */
+function inputHandler(manager, eventType, input) {
+    var pointersLen = input.pointers.length;
+    var changedPointersLen = input.changedPointers.length;
+    var isFirst = (eventType & INPUT_START && (pointersLen - changedPointersLen === 0));
+    var isFinal = (eventType & (INPUT_END | INPUT_CANCEL) && (pointersLen - changedPointersLen === 0));
+
+    input.isFirst = !!isFirst;
+    input.isFinal = !!isFinal;
+
+    if (isFirst) {
+        manager.session = {};
+    }
+
+    // source event is the normalized value of the domEvents
+    // like 'touchstart, mouseup, pointerdown'
+    input.eventType = eventType;
+
+    // compute scale, rotation etc
+    computeInputData(manager, input);
+
+    // emit secret event
+    manager.emit('hammer.input', input);
+
+    manager.recognize(input);
+    manager.session.prevInput = input;
+}
+
+/**
+ * extend the data with some usable properties like scale, rotate, velocity etc
+ * @param {Object} manager
+ * @param {Object} input
+ */
+function computeInputData(manager, input) {
+    var session = manager.session;
+    var pointers = input.pointers;
+    var pointersLength = pointers.length;
+
+    // store the first input to calculate the distance and direction
+    if (!session.firstInput) {
+        session.firstInput = simpleCloneInputData(input);
+    }
+
+    // to compute scale and rotation we need to store the multiple touches
+    if (pointersLength > 1 && !session.firstMultiple) {
+        session.firstMultiple = simpleCloneInputData(input);
+    } else if (pointersLength === 1) {
+        session.firstMultiple = false;
+    }
+
+    var firstInput = session.firstInput;
+    var firstMultiple = session.firstMultiple;
+    var offsetCenter = firstMultiple ? firstMultiple.center : firstInput.center;
+
+    var center = input.center = getCenter(pointers);
+    input.timeStamp = now();
+    input.deltaTime = input.timeStamp - firstInput.timeStamp;
+
+    input.angle = getAngle(offsetCenter, center);
+    input.distance = getDistance(offsetCenter, center);
+
+    computeDeltaXY(session, input);
+    input.offsetDirection = getDirection(input.deltaX, input.deltaY);
+
+    var overallVelocity = getVelocity(input.deltaTime, input.deltaX, input.deltaY);
+    input.overallVelocityX = overallVelocity.x;
+    input.overallVelocityY = overallVelocity.y;
+    input.overallVelocity = (abs(overallVelocity.x) > abs(overallVelocity.y)) ? overallVelocity.x : overallVelocity.y;
+
+    input.scale = firstMultiple ? getScale(firstMultiple.pointers, pointers) : 1;
+    input.rotation = firstMultiple ? getRotation(firstMultiple.pointers, pointers) : 0;
+
+    input.maxPointers = !session.prevInput ? input.pointers.length : ((input.pointers.length >
+        session.prevInput.maxPointers) ? input.pointers.length : session.prevInput.maxPointers);
+
+    computeIntervalInputData(session, input);
+
+    // find the correct target
+    var target = manager.element;
+    if (hasParent(input.srcEvent.target, target)) {
+        target = input.srcEvent.target;
+    }
+    input.target = target;
+}
+
+function computeDeltaXY(session, input) {
+    var center = input.center;
+    var offset = session.offsetDelta || {};
+    var prevDelta = session.prevDelta || {};
+    var prevInput = session.prevInput || {};
+
+    if (input.eventType === INPUT_START || prevInput.eventType === INPUT_END) {
+        prevDelta = session.prevDelta = {
+            x: prevInput.deltaX || 0,
+            y: prevInput.deltaY || 0
+        };
+
+        offset = session.offsetDelta = {
+            x: center.x,
+            y: center.y
+        };
+    }
+
+    input.deltaX = prevDelta.x + (center.x - offset.x);
+    input.deltaY = prevDelta.y + (center.y - offset.y);
+}
+
+/**
+ * velocity is calculated every x ms
+ * @param {Object} session
+ * @param {Object} input
+ */
+function computeIntervalInputData(session, input) {
+    var last = session.lastInterval || input,
+        deltaTime = input.timeStamp - last.timeStamp,
+        velocity, velocityX, velocityY, direction;
+
+    if (input.eventType != INPUT_CANCEL && (deltaTime > COMPUTE_INTERVAL || last.velocity === undefined)) {
+        var deltaX = input.deltaX - last.deltaX;
+        var deltaY = input.deltaY - last.deltaY;
+
+        var v = getVelocity(deltaTime, deltaX, deltaY);
+        velocityX = v.x;
+        velocityY = v.y;
+        velocity = (abs(v.x) > abs(v.y)) ? v.x : v.y;
+        direction = getDirection(deltaX, deltaY);
+
+        session.lastInterval = input;
+    } else {
+        // use latest velocity info if it doesn't overtake a minimum period
+        velocity = last.velocity;
+        velocityX = last.velocityX;
+        velocityY = last.velocityY;
+        direction = last.direction;
+    }
+
+    input.velocity = velocity;
+    input.velocityX = velocityX;
+    input.velocityY = velocityY;
+    input.direction = direction;
+}
+
+/**
+ * create a simple clone from the input used for storage of firstInput and firstMultiple
+ * @param {Object} input
+ * @returns {Object} clonedInputData
+ */
+function simpleCloneInputData(input) {
+    // make a simple copy of the pointers because we will get a reference if we don't
+    // we only need clientXY for the calculations
+    var pointers = [];
+    var i = 0;
+    while (i < input.pointers.length) {
+        pointers[i] = {
+            clientX: round(input.pointers[i].clientX),
+            clientY: round(input.pointers[i].clientY)
+        };
+        i++;
+    }
+
+    return {
+        timeStamp: now(),
+        pointers: pointers,
+        center: getCenter(pointers),
+        deltaX: input.deltaX,
+        deltaY: input.deltaY
+    };
+}
+
+/**
+ * get the center of all the pointers
+ * @param {Array} pointers
+ * @return {Object} center contains `x` and `y` properties
+ */
+function getCenter(pointers) {
+    var pointersLength = pointers.length;
+
+    // no need to loop when only one touch
+    if (pointersLength === 1) {
+        return {
+            x: round(pointers[0].clientX),
+            y: round(pointers[0].clientY)
+        };
+    }
+
+    var x = 0, y = 0, i = 0;
+    while (i < pointersLength) {
+        x += pointers[i].clientX;
+        y += pointers[i].clientY;
+        i++;
+    }
+
+    return {
+        x: round(x / pointersLength),
+        y: round(y / pointersLength)
+    };
+}
+
+/**
+ * calculate the velocity between two points. unit is in px per ms.
+ * @param {Number} deltaTime
+ * @param {Number} x
+ * @param {Number} y
+ * @return {Object} velocity `x` and `y`
+ */
+function getVelocity(deltaTime, x, y) {
+    return {
+        x: x / deltaTime || 0,
+        y: y / deltaTime || 0
+    };
+}
+
+/**
+ * get the direction between two points
+ * @param {Number} x
+ * @param {Number} y
+ * @return {Number} direction
+ */
+function getDirection(x, y) {
+    if (x === y) {
+        return DIRECTION_NONE;
+    }
+
+    if (abs(x) >= abs(y)) {
+        return x < 0 ? DIRECTION_LEFT : DIRECTION_RIGHT;
+    }
+    return y < 0 ? DIRECTION_UP : DIRECTION_DOWN;
+}
+
+/**
+ * calculate the absolute distance between two points
+ * @param {Object} p1 {x, y}
+ * @param {Object} p2 {x, y}
+ * @param {Array} [props] containing x and y keys
+ * @return {Number} distance
+ */
+function getDistance(p1, p2, props) {
+    if (!props) {
+        props = PROPS_XY;
+    }
+    var x = p2[props[0]] - p1[props[0]],
+        y = p2[props[1]] - p1[props[1]];
+
+    return Math.sqrt((x * x) + (y * y));
+}
+
+/**
+ * calculate the angle between two coordinates
+ * @param {Object} p1
+ * @param {Object} p2
+ * @param {Array} [props] containing x and y keys
+ * @return {Number} angle
+ */
+function getAngle(p1, p2, props) {
+    if (!props) {
+        props = PROPS_XY;
+    }
+    var x = p2[props[0]] - p1[props[0]],
+        y = p2[props[1]] - p1[props[1]];
+    return Math.atan2(y, x) * 180 / Math.PI;
+}
+
+/**
+ * calculate the rotation degrees between two pointersets
+ * @param {Array} start array of pointers
+ * @param {Array} end array of pointers
+ * @return {Number} rotation
+ */
+function getRotation(start, end) {
+    return getAngle(end[1], end[0], PROPS_CLIENT_XY) + getAngle(start[1], start[0], PROPS_CLIENT_XY);
+}
+
+/**
+ * calculate the scale factor between two pointersets
+ * no scale is 1, and goes down to 0 when pinched together, and bigger when pinched out
+ * @param {Array} start array of pointers
+ * @param {Array} end array of pointers
+ * @return {Number} scale
+ */
+function getScale(start, end) {
+    return getDistance(end[0], end[1], PROPS_CLIENT_XY) / getDistance(start[0], start[1], PROPS_CLIENT_XY);
+}
+
+var MOUSE_INPUT_MAP = {
+    mousedown: INPUT_START,
+    mousemove: INPUT_MOVE,
+    mouseup: INPUT_END
+};
+
+var MOUSE_ELEMENT_EVENTS = 'mousedown';
+var MOUSE_WINDOW_EVENTS = 'mousemove mouseup';
+
+/**
+ * Mouse events input
+ * @constructor
+ * @extends Input
+ */
+function MouseInput() {
+    this.evEl = MOUSE_ELEMENT_EVENTS;
+    this.evWin = MOUSE_WINDOW_EVENTS;
+
+    this.pressed = false; // mousedown state
+
+    Input.apply(this, arguments);
+}
+
+inherit(MouseInput, Input, {
+    /**
+     * handle mouse events
+     * @param {Object} ev
+     */
+    handler: function MEhandler(ev) {
+        var eventType = MOUSE_INPUT_MAP[ev.type];
+
+        // on start we want to have the left mouse button down
+        if (eventType & INPUT_START && ev.button === 0) {
+            this.pressed = true;
+        }
+
+        if (eventType & INPUT_MOVE && ev.which !== 1) {
+            eventType = INPUT_END;
+        }
+
+        // mouse must be down
+        if (!this.pressed) {
+            return;
+        }
+
+        if (eventType & INPUT_END) {
+            this.pressed = false;
+        }
+
+        this.callback(this.manager, eventType, {
+            pointers: [ev],
+            changedPointers: [ev],
+            pointerType: INPUT_TYPE_MOUSE,
+            srcEvent: ev
+        });
+    }
+});
+
+var POINTER_INPUT_MAP = {
+    pointerdown: INPUT_START,
+    pointermove: INPUT_MOVE,
+    pointerup: INPUT_END,
+    pointercancel: INPUT_CANCEL,
+    pointerout: INPUT_CANCEL
+};
+
+// in IE10 the pointer types is defined as an enum
+var IE10_POINTER_TYPE_ENUM = {
+    2: INPUT_TYPE_TOUCH,
+    3: INPUT_TYPE_PEN,
+    4: INPUT_TYPE_MOUSE,
+    5: INPUT_TYPE_KINECT // see https://twitter.com/jacobrossi/status/480596438489890816
+};
+
+var POINTER_ELEMENT_EVENTS = 'pointerdown';
+var POINTER_WINDOW_EVENTS = 'pointermove pointerup pointercancel';
+
+// IE10 has prefixed support, and case-sensitive
+if (window.MSPointerEvent && !window.PointerEvent) {
+    POINTER_ELEMENT_EVENTS = 'MSPointerDown';
+    POINTER_WINDOW_EVENTS = 'MSPointerMove MSPointerUp MSPointerCancel';
+}
+
+/**
+ * Pointer events input
+ * @constructor
+ * @extends Input
+ */
+function PointerEventInput() {
+    this.evEl = POINTER_ELEMENT_EVENTS;
+    this.evWin = POINTER_WINDOW_EVENTS;
+
+    Input.apply(this, arguments);
+
+    this.store = (this.manager.session.pointerEvents = []);
+}
+
+inherit(PointerEventInput, Input, {
+    /**
+     * handle mouse events
+     * @param {Object} ev
+     */
+    handler: function PEhandler(ev) {
+        var store = this.store;
+        var removePointer = false;
+
+        var eventTypeNormalized = ev.type.toLowerCase().replace('ms', '');
+        var eventType = POINTER_INPUT_MAP[eventTypeNormalized];
+        var pointerType = IE10_POINTER_TYPE_ENUM[ev.pointerType] || ev.pointerType;
+
+        var isTouch = (pointerType == INPUT_TYPE_TOUCH);
+
+        // get index of the event in the store
+        var storeIndex = inArray(store, ev.pointerId, 'pointerId');
+
+        // start and mouse must be down
+        if (eventType & INPUT_START && (ev.button === 0 || isTouch)) {
+            if (storeIndex < 0) {
+                store.push(ev);
+                storeIndex = store.length - 1;
+            }
+        } else if (eventType & (INPUT_END | INPUT_CANCEL)) {
+            removePointer = true;
+        }
+
+        // it not found, so the pointer hasn't been down (so it's probably a hover)
+        if (storeIndex < 0) {
+            return;
+        }
+
+        // update the event in the store
+        store[storeIndex] = ev;
+
+        this.callback(this.manager, eventType, {
+            pointers: store,
+            changedPointers: [ev],
+            pointerType: pointerType,
+            srcEvent: ev
+        });
+
+        if (removePointer) {
+            // remove from the store
+            store.splice(storeIndex, 1);
+        }
+    }
+});
+
+var SINGLE_TOUCH_INPUT_MAP = {
+    touchstart: INPUT_START,
+    touchmove: INPUT_MOVE,
+    touchend: INPUT_END,
+    touchcancel: INPUT_CANCEL
+};
+
+var SINGLE_TOUCH_TARGET_EVENTS = 'touchstart';
+var SINGLE_TOUCH_WINDOW_EVENTS = 'touchstart touchmove touchend touchcancel';
+
+/**
+ * Touch events input
+ * @constructor
+ * @extends Input
+ */
+function SingleTouchInput() {
+    this.evTarget = SINGLE_TOUCH_TARGET_EVENTS;
+    this.evWin = SINGLE_TOUCH_WINDOW_EVENTS;
+    this.started = false;
+
+    Input.apply(this, arguments);
+}
+
+inherit(SingleTouchInput, Input, {
+    handler: function TEhandler(ev) {
+        var type = SINGLE_TOUCH_INPUT_MAP[ev.type];
+
+        // should we handle the touch events?
+        if (type === INPUT_START) {
+            this.started = true;
+        }
+
+        if (!this.started) {
+            return;
+        }
+
+        var touches = normalizeSingleTouches.call(this, ev, type);
+
+        // when done, reset the started state
+        if (type & (INPUT_END | INPUT_CANCEL) && touches[0].length - touches[1].length === 0) {
+            this.started = false;
+        }
+
+        this.callback(this.manager, type, {
+            pointers: touches[0],
+            changedPointers: touches[1],
+            pointerType: INPUT_TYPE_TOUCH,
+            srcEvent: ev
+        });
+    }
+});
+
+/**
+ * @this {TouchInput}
+ * @param {Object} ev
+ * @param {Number} type flag
+ * @returns {undefined|Array} [all, changed]
+ */
+function normalizeSingleTouches(ev, type) {
+    var all = toArray(ev.touches);
+    var changed = toArray(ev.changedTouches);
+
+    if (type & (INPUT_END | INPUT_CANCEL)) {
+        all = uniqueArray(all.concat(changed), 'identifier', true);
+    }
+
+    return [all, changed];
+}
+
+var TOUCH_INPUT_MAP = {
+    touchstart: INPUT_START,
+    touchmove: INPUT_MOVE,
+    touchend: INPUT_END,
+    touchcancel: INPUT_CANCEL
+};
+
+var TOUCH_TARGET_EVENTS = 'touchstart touchmove touchend touchcancel';
+
+/**
+ * Multi-user touch events input
+ * @constructor
+ * @extends Input
+ */
+function TouchInput() {
+    this.evTarget = TOUCH_TARGET_EVENTS;
+    this.targetIds = {};
+
+    Input.apply(this, arguments);
+}
+
+inherit(TouchInput, Input, {
+    handler: function MTEhandler(ev) {
+        var type = TOUCH_INPUT_MAP[ev.type];
+        var touches = getTouches.call(this, ev, type);
+        if (!touches) {
+            return;
+        }
+
+        this.callback(this.manager, type, {
+            pointers: touches[0],
+            changedPointers: touches[1],
+            pointerType: INPUT_TYPE_TOUCH,
+            srcEvent: ev
+        });
+    }
+});
+
+/**
+ * @this {TouchInput}
+ * @param {Object} ev
+ * @param {Number} type flag
+ * @returns {undefined|Array} [all, changed]
+ */
+function getTouches(ev, type) {
+    var allTouches = toArray(ev.touches);
+    var targetIds = this.targetIds;
+
+    // when there is only one touch, the process can be simplified
+    if (type & (INPUT_START | INPUT_MOVE) && allTouches.length === 1) {
+        targetIds[allTouches[0].identifier] = true;
+        return [allTouches, allTouches];
+    }
+
+    var i,
+        targetTouches,
+        changedTouches = toArray(ev.changedTouches),
+        changedTargetTouches = [],
+        target = this.target;
+
+    // get target touches from touches
+    targetTouches = allTouches.filter(function(touch) {
+        return hasParent(touch.target, target);
+    });
+
+    // collect touches
+    if (type === INPUT_START) {
+        i = 0;
+        while (i < targetTouches.length) {
+            targetIds[targetTouches[i].identifier] = true;
+            i++;
+        }
+    }
+
+    // filter changed touches to only contain touches that exist in the collected target ids
+    i = 0;
+    while (i < changedTouches.length) {
+        if (targetIds[changedTouches[i].identifier]) {
+            changedTargetTouches.push(changedTouches[i]);
+        }
+
+        // cleanup removed touches
+        if (type & (INPUT_END | INPUT_CANCEL)) {
+            delete targetIds[changedTouches[i].identifier];
+        }
+        i++;
+    }
+
+    if (!changedTargetTouches.length) {
+        return;
+    }
+
+    return [
+        // merge targetTouches with changedTargetTouches so it contains ALL touches, including 'end' and 'cancel'
+        uniqueArray(targetTouches.concat(changedTargetTouches), 'identifier', true),
+        changedTargetTouches
+    ];
+}
+
+/**
+ * Combined touch and mouse input
+ *
+ * Touch has a higher priority then mouse, and while touching no mouse events are allowed.
+ * This because touch devices also emit mouse events while doing a touch.
+ *
+ * @constructor
+ * @extends Input
+ */
+
+var DEDUP_TIMEOUT = 2500;
+var DEDUP_DISTANCE = 25;
+
+function TouchMouseInput() {
+    Input.apply(this, arguments);
+
+    var handler = bindFn(this.handler, this);
+    this.touch = new TouchInput(this.manager, handler);
+    this.mouse = new MouseInput(this.manager, handler);
+
+    this.primaryTouch = null;
+    this.lastTouches = [];
+}
+
+inherit(TouchMouseInput, Input, {
+    /**
+     * handle mouse and touch events
+     * @param {Hammer} manager
+     * @param {String} inputEvent
+     * @param {Object} inputData
+     */
+    handler: function TMEhandler(manager, inputEvent, inputData) {
+        var isTouch = (inputData.pointerType == INPUT_TYPE_TOUCH),
+            isMouse = (inputData.pointerType == INPUT_TYPE_MOUSE);
+
+        if (isMouse && inputData.sourceCapabilities && inputData.sourceCapabilities.firesTouchEvents) {
+            return;
+        }
+
+        // when we're in a touch event, record touches to  de-dupe synthetic mouse event
+        if (isTouch) {
+            recordTouches.call(this, inputEvent, inputData);
+        } else if (isMouse && isSyntheticEvent.call(this, inputData)) {
+            return;
+        }
+
+        this.callback(manager, inputEvent, inputData);
+    },
+
+    /**
+     * remove the event listeners
+     */
+    destroy: function destroy() {
+        this.touch.destroy();
+        this.mouse.destroy();
+    }
+});
+
+function recordTouches(eventType, eventData) {
+    if (eventType & INPUT_START) {
+        this.primaryTouch = eventData.changedPointers[0].identifier;
+        setLastTouch.call(this, eventData);
+    } else if (eventType & (INPUT_END | INPUT_CANCEL)) {
+        setLastTouch.call(this, eventData);
+    }
+}
+
+function setLastTouch(eventData) {
+    var touch = eventData.changedPointers[0];
+
+    if (touch.identifier === this.primaryTouch) {
+        var lastTouch = {x: touch.clientX, y: touch.clientY};
+        this.lastTouches.push(lastTouch);
+        var lts = this.lastTouches;
+        var removeLastTouch = function() {
+            var i = lts.indexOf(lastTouch);
+            if (i > -1) {
+                lts.splice(i, 1);
+            }
+        };
+        setTimeout(removeLastTouch, DEDUP_TIMEOUT);
+    }
+}
+
+function isSyntheticEvent(eventData) {
+    var x = eventData.srcEvent.clientX, y = eventData.srcEvent.clientY;
+    for (var i = 0; i < this.lastTouches.length; i++) {
+        var t = this.lastTouches[i];
+        var dx = Math.abs(x - t.x), dy = Math.abs(y - t.y);
+        if (dx <= DEDUP_DISTANCE && dy <= DEDUP_DISTANCE) {
+            return true;
+        }
+    }
+    return false;
+}
+
+var PREFIXED_TOUCH_ACTION = prefixed(TEST_ELEMENT.style, 'touchAction');
+var NATIVE_TOUCH_ACTION = PREFIXED_TOUCH_ACTION !== undefined;
+
+// magical touchAction value
+var TOUCH_ACTION_COMPUTE = 'compute';
+var TOUCH_ACTION_AUTO = 'auto';
+var TOUCH_ACTION_MANIPULATION = 'manipulation'; // not implemented
+var TOUCH_ACTION_NONE = 'none';
+var TOUCH_ACTION_PAN_X = 'pan-x';
+var TOUCH_ACTION_PAN_Y = 'pan-y';
+var TOUCH_ACTION_MAP = getTouchActionProps();
+
+/**
+ * Touch Action
+ * sets the touchAction property or uses the js alternative
+ * @param {Manager} manager
+ * @param {String} value
+ * @constructor
+ */
+function TouchAction(manager, value) {
+    this.manager = manager;
+    this.set(value);
+}
+
+TouchAction.prototype = {
+    /**
+     * set the touchAction value on the element or enable the polyfill
+     * @param {String} value
+     */
+    set: function(value) {
+        // find out the touch-action by the event handlers
+        if (value == TOUCH_ACTION_COMPUTE) {
+            value = this.compute();
+        }
+
+        if (NATIVE_TOUCH_ACTION && this.manager.element.style && TOUCH_ACTION_MAP[value]) {
+            this.manager.element.style[PREFIXED_TOUCH_ACTION] = value;
+        }
+        this.actions = value.toLowerCase().trim();
+    },
+
+    /**
+     * just re-set the touchAction value
+     */
+    update: function() {
+        this.set(this.manager.options.touchAction);
+    },
+
+    /**
+     * compute the value for the touchAction property based on the recognizer's settings
+     * @returns {String} value
+     */
+    compute: function() {
+        var actions = [];
+        each(this.manager.recognizers, function(recognizer) {
+            if (boolOrFn(recognizer.options.enable, [recognizer])) {
+                actions = actions.concat(recognizer.getTouchAction());
+            }
+        });
+        return cleanTouchActions(actions.join(' '));
+    },
+
+    /**
+     * this method is called on each input cycle and provides the preventing of the browser behavior
+     * @param {Object} input
+     */
+    preventDefaults: function(input) {
+        var srcEvent = input.srcEvent;
+        var direction = input.offsetDirection;
+
+        // if the touch action did prevented once this session
+        if (this.manager.session.prevented) {
+            srcEvent.preventDefault();
+            return;
+        }
+
+        var actions = this.actions;
+        var hasNone = inStr(actions, TOUCH_ACTION_NONE) && !TOUCH_ACTION_MAP[TOUCH_ACTION_NONE];
+        var hasPanY = inStr(actions, TOUCH_ACTION_PAN_Y) && !TOUCH_ACTION_MAP[TOUCH_ACTION_PAN_Y];
+        var hasPanX = inStr(actions, TOUCH_ACTION_PAN_X) && !TOUCH_ACTION_MAP[TOUCH_ACTION_PAN_X];
+
+        if (hasNone) {
+            //do not prevent defaults if this is a tap gesture
+
+            var isTapPointer = input.pointers.length === 1;
+            var isTapMovement = input.distance < 2;
+            var isTapTouchTime = input.deltaTime < 250;
+
+            if (isTapPointer && isTapMovement && isTapTouchTime) {
+                return;
+            }
+        }
+
+        if (hasPanX && hasPanY) {
+            // `pan-x pan-y` means browser handles all scrolling/panning, do not prevent
+            return;
+        }
+
+        if (hasNone ||
+            (hasPanY && direction & DIRECTION_HORIZONTAL) ||
+            (hasPanX && direction & DIRECTION_VERTICAL)) {
+            return this.preventSrc(srcEvent);
+        }
+    },
+
+    /**
+     * call preventDefault to prevent the browser's default behavior (scrolling in most cases)
+     * @param {Object} srcEvent
+     */
+    preventSrc: function(srcEvent) {
+        this.manager.session.prevented = true;
+        srcEvent.preventDefault();
+    }
+};
+
+/**
+ * when the touchActions are collected they are not a valid value, so we need to clean things up. *
+ * @param {String} actions
+ * @returns {*}
+ */
+function cleanTouchActions(actions) {
+    // none
+    if (inStr(actions, TOUCH_ACTION_NONE)) {
+        return TOUCH_ACTION_NONE;
+    }
+
+    var hasPanX = inStr(actions, TOUCH_ACTION_PAN_X);
+    var hasPanY = inStr(actions, TOUCH_ACTION_PAN_Y);
+
+    // if both pan-x and pan-y are set (different recognizers
+    // for different directions, e.g. horizontal pan but vertical swipe?)
+    // we need none (as otherwise with pan-x pan-y combined none of these
+    // recognizers will work, since the browser would handle all panning
+    if (hasPanX && hasPanY) {
+        return TOUCH_ACTION_NONE;
+    }
+
+    // pan-x OR pan-y
+    if (hasPanX || hasPanY) {
+        return hasPanX ? TOUCH_ACTION_PAN_X : TOUCH_ACTION_PAN_Y;
+    }
+
+    // manipulation
+    if (inStr(actions, TOUCH_ACTION_MANIPULATION)) {
+        return TOUCH_ACTION_MANIPULATION;
+    }
+
+    return TOUCH_ACTION_AUTO;
+}
+
+function getTouchActionProps() {
+    if (!NATIVE_TOUCH_ACTION) {
+        return false;
+    }
+    var touchMap = {};
+    var cssSupports = window.CSS && window.CSS.supports;
+    ['auto', 'manipulation', 'pan-y', 'pan-x', 'pan-x pan-y', 'none'].forEach(function(val) {
+
+        // If css.supports is not supported but there is native touch-action assume it supports
+        // all values. This is the case for IE 10 and 11.
+        touchMap[val] = cssSupports ? window.CSS.supports('touch-action', val) : true;
+    });
+    return touchMap;
+}
+
+/**
+ * Recognizer flow explained; *
+ * All recognizers have the initial state of POSSIBLE when a input session starts.
+ * The definition of a input session is from the first input until the last input, with all it's movement in it. *
+ * Example session for mouse-input: mousedown -> mousemove -> mouseup
+ *
+ * On each recognizing cycle (see Manager.recognize) the .recognize() method is executed
+ * which determines with state it should be.
+ *
+ * If the recognizer has the state FAILED, CANCELLED or RECOGNIZED (equals ENDED), it is reset to
+ * POSSIBLE to give it another change on the next cycle.
+ *
+ *               Possible
+ *                  |
+ *            +-----+---------------+
+ *            |                     |
+ *      +-----+-----+               |
+ *      |           |               |
+ *   Failed      Cancelled          |
+ *                          +-------+------+
+ *                          |              |
+ *                      Recognized       Began
+ *                                         |
+ *                                      Changed
+ *                                         |
+ *                                  Ended/Recognized
+ */
+var STATE_POSSIBLE = 1;
+var STATE_BEGAN = 2;
+var STATE_CHANGED = 4;
+var STATE_ENDED = 8;
+var STATE_RECOGNIZED = STATE_ENDED;
+var STATE_CANCELLED = 16;
+var STATE_FAILED = 32;
+
+/**
+ * Recognizer
+ * Every recognizer needs to extend from this class.
+ * @constructor
+ * @param {Object} options
+ */
+function Recognizer(options) {
+    this.options = assign({}, this.defaults, options || {});
+
+    this.id = uniqueId();
+
+    this.manager = null;
+
+    // default is enable true
+    this.options.enable = ifUndefined(this.options.enable, true);
+
+    this.state = STATE_POSSIBLE;
+
+    this.simultaneous = {};
+    this.requireFail = [];
+}
+
+Recognizer.prototype = {
+    /**
+     * @virtual
+     * @type {Object}
+     */
+    defaults: {},
+
+    /**
+     * set options
+     * @param {Object} options
+     * @return {Recognizer}
+     */
+    set: function(options) {
+        assign(this.options, options);
+
+        // also update the touchAction, in case something changed about the directions/enabled state
+        this.manager && this.manager.touchAction.update();
+        return this;
+    },
+
+    /**
+     * recognize simultaneous with an other recognizer.
+     * @param {Recognizer} otherRecognizer
+     * @returns {Recognizer} this
+     */
+    recognizeWith: function(otherRecognizer) {
+        if (invokeArrayArg(otherRecognizer, 'recognizeWith', this)) {
+            return this;
+        }
+
+        var simultaneous = this.simultaneous;
+        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
+        if (!simultaneous[otherRecognizer.id]) {
+            simultaneous[otherRecognizer.id] = otherRecognizer;
+            otherRecognizer.recognizeWith(this);
+        }
+        return this;
+    },
+
+    /**
+     * drop the simultaneous link. it doesnt remove the link on the other recognizer.
+     * @param {Recognizer} otherRecognizer
+     * @returns {Recognizer} this
+     */
+    dropRecognizeWith: function(otherRecognizer) {
+        if (invokeArrayArg(otherRecognizer, 'dropRecognizeWith', this)) {
+            return this;
+        }
+
+        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
+        delete this.simultaneous[otherRecognizer.id];
+        return this;
+    },
+
+    /**
+     * recognizer can only run when an other is failing
+     * @param {Recognizer} otherRecognizer
+     * @returns {Recognizer} this
+     */
+    requireFailure: function(otherRecognizer) {
+        if (invokeArrayArg(otherRecognizer, 'requireFailure', this)) {
+            return this;
+        }
+
+        var requireFail = this.requireFail;
+        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
+        if (inArray(requireFail, otherRecognizer) === -1) {
+            requireFail.push(otherRecognizer);
+            otherRecognizer.requireFailure(this);
+        }
+        return this;
+    },
+
+    /**
+     * drop the requireFailure link. it does not remove the link on the other recognizer.
+     * @param {Recognizer} otherRecognizer
+     * @returns {Recognizer} this
+     */
+    dropRequireFailure: function(otherRecognizer) {
+        if (invokeArrayArg(otherRecognizer, 'dropRequireFailure', this)) {
+            return this;
+        }
+
+        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
+        var index = inArray(this.requireFail, otherRecognizer);
+        if (index > -1) {
+            this.requireFail.splice(index, 1);
+        }
+        return this;
+    },
+
+    /**
+     * has require failures boolean
+     * @returns {boolean}
+     */
+    hasRequireFailures: function() {
+        return this.requireFail.length > 0;
+    },
+
+    /**
+     * if the recognizer can recognize simultaneous with an other recognizer
+     * @param {Recognizer} otherRecognizer
+     * @returns {Boolean}
+     */
+    canRecognizeWith: function(otherRecognizer) {
+        return !!this.simultaneous[otherRecognizer.id];
+    },
+
+    /**
+     * You should use `tryEmit` instead of `emit` directly to check
+     * that all the needed recognizers has failed before emitting.
+     * @param {Object} input
+     */
+    emit: function(input) {
+        var self = this;
+        var state = this.state;
+
+        function emit(event) {
+            self.manager.emit(event, input);
+        }
+
+        // 'panstart' and 'panmove'
+        if (state < STATE_ENDED) {
+            emit(self.options.event + stateStr(state));
+        }
+
+        emit(self.options.event); // simple 'eventName' events
+
+        if (input.additionalEvent) { // additional event(panleft, panright, pinchin, pinchout...)
+            emit(input.additionalEvent);
+        }
+
+        // panend and pancancel
+        if (state >= STATE_ENDED) {
+            emit(self.options.event + stateStr(state));
+        }
+    },
+
+    /**
+     * Check that all the require failure recognizers has failed,
+     * if true, it emits a gesture event,
+     * otherwise, setup the state to FAILED.
+     * @param {Object} input
+     */
+    tryEmit: function(input) {
+        if (this.canEmit()) {
+            return this.emit(input);
+        }
+        // it's failing anyway
+        this.state = STATE_FAILED;
+    },
+
+    /**
+     * can we emit?
+     * @returns {boolean}
+     */
+    canEmit: function() {
+        var i = 0;
+        while (i < this.requireFail.length) {
+            if (!(this.requireFail[i].state & (STATE_FAILED | STATE_POSSIBLE))) {
+                return false;
+            }
+            i++;
+        }
+        return true;
+    },
+
+    /**
+     * update the recognizer
+     * @param {Object} inputData
+     */
+    recognize: function(inputData) {
+        // make a new copy of the inputData
+        // so we can change the inputData without messing up the other recognizers
+        var inputDataClone = assign({}, inputData);
+
+        // is is enabled and allow recognizing?
+        if (!boolOrFn(this.options.enable, [this, inputDataClone])) {
+            this.reset();
+            this.state = STATE_FAILED;
+            return;
+        }
+
+        // reset when we've reached the end
+        if (this.state & (STATE_RECOGNIZED | STATE_CANCELLED | STATE_FAILED)) {
+            this.state = STATE_POSSIBLE;
+        }
+
+        this.state = this.process(inputDataClone);
+
+        // the recognizer has recognized a gesture
+        // so trigger an event
+        if (this.state & (STATE_BEGAN | STATE_CHANGED | STATE_ENDED | STATE_CANCELLED)) {
+            this.tryEmit(inputDataClone);
+        }
+    },
+
+    /**
+     * return the state of the recognizer
+     * the actual recognizing happens in this method
+     * @virtual
+     * @param {Object} inputData
+     * @returns {Const} STATE
+     */
+    process: function(inputData) { }, // jshint ignore:line
+
+    /**
+     * return the preferred touch-action
+     * @virtual
+     * @returns {Array}
+     */
+    getTouchAction: function() { },
+
+    /**
+     * called when the gesture isn't allowed to recognize
+     * like when another is being recognized or it is disabled
+     * @virtual
+     */
+    reset: function() { }
+};
+
+/**
+ * get a usable string, used as event postfix
+ * @param {Const} state
+ * @returns {String} state
+ */
+function stateStr(state) {
+    if (state & STATE_CANCELLED) {
+        return 'cancel';
+    } else if (state & STATE_ENDED) {
+        return 'end';
+    } else if (state & STATE_CHANGED) {
+        return 'move';
+    } else if (state & STATE_BEGAN) {
+        return 'start';
+    }
+    return '';
+}
+
+/**
+ * direction cons to string
+ * @param {Const} direction
+ * @returns {String}
+ */
+function directionStr(direction) {
+    if (direction == DIRECTION_DOWN) {
+        return 'down';
+    } else if (direction == DIRECTION_UP) {
+        return 'up';
+    } else if (direction == DIRECTION_LEFT) {
+        return 'left';
+    } else if (direction == DIRECTION_RIGHT) {
+        return 'right';
+    }
+    return '';
+}
+
+/**
+ * get a recognizer by name if it is bound to a manager
+ * @param {Recognizer|String} otherRecognizer
+ * @param {Recognizer} recognizer
+ * @returns {Recognizer}
+ */
+function getRecognizerByNameIfManager(otherRecognizer, recognizer) {
+    var manager = recognizer.manager;
+    if (manager) {
+        return manager.get(otherRecognizer);
+    }
+    return otherRecognizer;
+}
+
+/**
+ * This recognizer is just used as a base for the simple attribute recognizers.
+ * @constructor
+ * @extends Recognizer
+ */
+function AttrRecognizer() {
+    Recognizer.apply(this, arguments);
+}
+
+inherit(AttrRecognizer, Recognizer, {
+    /**
+     * @namespace
+     * @memberof AttrRecognizer
+     */
+    defaults: {
+        /**
+         * @type {Number}
+         * @default 1
+         */
+        pointers: 1
+    },
+
+    /**
+     * Used to check if it the recognizer receives valid input, like input.distance > 10.
+     * @memberof AttrRecognizer
+     * @param {Object} input
+     * @returns {Boolean} recognized
+     */
+    attrTest: function(input) {
+        var optionPointers = this.options.pointers;
+        return optionPointers === 0 || input.pointers.length === optionPointers;
+    },
+
+    /**
+     * Process the input and return the state for the recognizer
+     * @memberof AttrRecognizer
+     * @param {Object} input
+     * @returns {*} State
+     */
+    process: function(input) {
+        var state = this.state;
+        var eventType = input.eventType;
+
+        var isRecognized = state & (STATE_BEGAN | STATE_CHANGED);
+        var isValid = this.attrTest(input);
+
+        // on cancel input and we've recognized before, return STATE_CANCELLED
+        if (isRecognized && (eventType & INPUT_CANCEL || !isValid)) {
+            return state | STATE_CANCELLED;
+        } else if (isRecognized || isValid) {
+            if (eventType & INPUT_END) {
+                return state | STATE_ENDED;
+            } else if (!(state & STATE_BEGAN)) {
+                return STATE_BEGAN;
+            }
+            return state | STATE_CHANGED;
+        }
+        return STATE_FAILED;
+    }
+});
+
+/**
+ * Pan
+ * Recognized when the pointer is down and moved in the allowed direction.
+ * @constructor
+ * @extends AttrRecognizer
+ */
+function PanRecognizer() {
+    AttrRecognizer.apply(this, arguments);
+
+    this.pX = null;
+    this.pY = null;
+}
+
+inherit(PanRecognizer, AttrRecognizer, {
+    /**
+     * @namespace
+     * @memberof PanRecognizer
+     */
+    defaults: {
+        event: 'pan',
+        threshold: 10,
+        pointers: 1,
+        direction: DIRECTION_ALL
+    },
+
+    getTouchAction: function() {
+        var direction = this.options.direction;
+        var actions = [];
+        if (direction & DIRECTION_HORIZONTAL) {
+            actions.push(TOUCH_ACTION_PAN_Y);
+        }
+        if (direction & DIRECTION_VERTICAL) {
+            actions.push(TOUCH_ACTION_PAN_X);
+        }
+        return actions;
+    },
+
+    directionTest: function(input) {
+        var options = this.options;
+        var hasMoved = true;
+        var distance = input.distance;
+        var direction = input.direction;
+        var x = input.deltaX;
+        var y = input.deltaY;
+
+        // lock to axis?
+        if (!(direction & options.direction)) {
+            if (options.direction & DIRECTION_HORIZONTAL) {
+                direction = (x === 0) ? DIRECTION_NONE : (x < 0) ? DIRECTION_LEFT : DIRECTION_RIGHT;
+                hasMoved = x != this.pX;
+                distance = Math.abs(input.deltaX);
+            } else {
+                direction = (y === 0) ? DIRECTION_NONE : (y < 0) ? DIRECTION_UP : DIRECTION_DOWN;
+                hasMoved = y != this.pY;
+                distance = Math.abs(input.deltaY);
+            }
+        }
+        input.direction = direction;
+        return hasMoved && distance > options.threshold && direction & options.direction;
+    },
+
+    attrTest: function(input) {
+        return AttrRecognizer.prototype.attrTest.call(this, input) &&
+            (this.state & STATE_BEGAN || (!(this.state & STATE_BEGAN) && this.directionTest(input)));
+    },
+
+    emit: function(input) {
+
+        this.pX = input.deltaX;
+        this.pY = input.deltaY;
+
+        var direction = directionStr(input.direction);
+
+        if (direction) {
+            input.additionalEvent = this.options.event + direction;
+        }
+        this._super.emit.call(this, input);
+    }
+});
+
+/**
+ * Pinch
+ * Recognized when two or more pointers are moving toward (zoom-in) or away from each other (zoom-out).
+ * @constructor
+ * @extends AttrRecognizer
+ */
+function PinchRecognizer() {
+    AttrRecognizer.apply(this, arguments);
+}
+
+inherit(PinchRecognizer, AttrRecognizer, {
+    /**
+     * @namespace
+     * @memberof PinchRecognizer
+     */
+    defaults: {
+        event: 'pinch',
+        threshold: 0,
+        pointers: 2
+    },
+
+    getTouchAction: function() {
+        return [TOUCH_ACTION_NONE];
+    },
+
+    attrTest: function(input) {
+        return this._super.attrTest.call(this, input) &&
+            (Math.abs(input.scale - 1) > this.options.threshold || this.state & STATE_BEGAN);
+    },
+
+    emit: function(input) {
+        if (input.scale !== 1) {
+            var inOut = input.scale < 1 ? 'in' : 'out';
+            input.additionalEvent = this.options.event + inOut;
+        }
+        this._super.emit.call(this, input);
+    }
+});
+
+/**
+ * Press
+ * Recognized when the pointer is down for x ms without any movement.
+ * @constructor
+ * @extends Recognizer
+ */
+function PressRecognizer() {
+    Recognizer.apply(this, arguments);
+
+    this._timer = null;
+    this._input = null;
+}
+
+inherit(PressRecognizer, Recognizer, {
+    /**
+     * @namespace
+     * @memberof PressRecognizer
+     */
+    defaults: {
+        event: 'press',
+        pointers: 1,
+        time: 251, // minimal time of the pointer to be pressed
+        threshold: 9 // a minimal movement is ok, but keep it low
+    },
+
+    getTouchAction: function() {
+        return [TOUCH_ACTION_AUTO];
+    },
+
+    process: function(input) {
+        var options = this.options;
+        var validPointers = input.pointers.length === options.pointers;
+        var validMovement = input.distance < options.threshold;
+        var validTime = input.deltaTime > options.time;
+
+        this._input = input;
+
+        // we only allow little movement
+        // and we've reached an end event, so a tap is possible
+        if (!validMovement || !validPointers || (input.eventType & (INPUT_END | INPUT_CANCEL) && !validTime)) {
+            this.reset();
+        } else if (input.eventType & INPUT_START) {
+            this.reset();
+            this._timer = setTimeoutContext(function() {
+                this.state = STATE_RECOGNIZED;
+                this.tryEmit();
+            }, options.time, this);
+        } else if (input.eventType & INPUT_END) {
+            return STATE_RECOGNIZED;
+        }
+        return STATE_FAILED;
+    },
+
+    reset: function() {
+        clearTimeout(this._timer);
+    },
+
+    emit: function(input) {
+        if (this.state !== STATE_RECOGNIZED) {
+            return;
+        }
+
+        if (input && (input.eventType & INPUT_END)) {
+            this.manager.emit(this.options.event + 'up', input);
+        } else {
+            this._input.timeStamp = now();
+            this.manager.emit(this.options.event, this._input);
+        }
+    }
+});
+
+/**
+ * Rotate
+ * Recognized when two or more pointer are moving in a circular motion.
+ * @constructor
+ * @extends AttrRecognizer
+ */
+function RotateRecognizer() {
+    AttrRecognizer.apply(this, arguments);
+}
+
+inherit(RotateRecognizer, AttrRecognizer, {
+    /**
+     * @namespace
+     * @memberof RotateRecognizer
+     */
+    defaults: {
+        event: 'rotate',
+        threshold: 0,
+        pointers: 2
+    },
+
+    getTouchAction: function() {
+        return [TOUCH_ACTION_NONE];
+    },
+
+    attrTest: function(input) {
+        return this._super.attrTest.call(this, input) &&
+            (Math.abs(input.rotation) > this.options.threshold || this.state & STATE_BEGAN);
+    }
+});
+
+/**
+ * Swipe
+ * Recognized when the pointer is moving fast (velocity), with enough distance in the allowed direction.
+ * @constructor
+ * @extends AttrRecognizer
+ */
+function SwipeRecognizer() {
+    AttrRecognizer.apply(this, arguments);
+}
+
+inherit(SwipeRecognizer, AttrRecognizer, {
+    /**
+     * @namespace
+     * @memberof SwipeRecognizer
+     */
+    defaults: {
+        event: 'swipe',
+        threshold: 10,
+        velocity: 0.3,
+        direction: DIRECTION_HORIZONTAL | DIRECTION_VERTICAL,
+        pointers: 1
+    },
+
+    getTouchAction: function() {
+        return PanRecognizer.prototype.getTouchAction.call(this);
+    },
+
+    attrTest: function(input) {
+        var direction = this.options.direction;
+        var velocity;
+
+        if (direction & (DIRECTION_HORIZONTAL | DIRECTION_VERTICAL)) {
+            velocity = input.overallVelocity;
+        } else if (direction & DIRECTION_HORIZONTAL) {
+            velocity = input.overallVelocityX;
+        } else if (direction & DIRECTION_VERTICAL) {
+            velocity = input.overallVelocityY;
+        }
+
+        return this._super.attrTest.call(this, input) &&
+            direction & input.offsetDirection &&
+            input.distance > this.options.threshold &&
+            input.maxPointers == this.options.pointers &&
+            abs(velocity) > this.options.velocity && input.eventType & INPUT_END;
+    },
+
+    emit: function(input) {
+        var direction = directionStr(input.offsetDirection);
+        if (direction) {
+            this.manager.emit(this.options.event + direction, input);
+        }
+
+        this.manager.emit(this.options.event, input);
+    }
+});
+
+/**
+ * A tap is ecognized when the pointer is doing a small tap/click. Multiple taps are recognized if they occur
+ * between the given interval and position. The delay option can be used to recognize multi-taps without firing
+ * a single tap.
+ *
+ * The eventData from the emitted event contains the property `tapCount`, which contains the amount of
+ * multi-taps being recognized.
+ * @constructor
+ * @extends Recognizer
+ */
+function TapRecognizer() {
+    Recognizer.apply(this, arguments);
+
+    // previous time and center,
+    // used for tap counting
+    this.pTime = false;
+    this.pCenter = false;
+
+    this._timer = null;
+    this._input = null;
+    this.count = 0;
+}
+
+inherit(TapRecognizer, Recognizer, {
+    /**
+     * @namespace
+     * @memberof PinchRecognizer
+     */
+    defaults: {
+        event: 'tap',
+        pointers: 1,
+        taps: 1,
+        interval: 300, // max time between the multi-tap taps
+        time: 250, // max time of the pointer to be down (like finger on the screen)
+        threshold: 9, // a minimal movement is ok, but keep it low
+        posThreshold: 10 // a multi-tap can be a bit off the initial position
+    },
+
+    getTouchAction: function() {
+        return [TOUCH_ACTION_MANIPULATION];
+    },
+
+    process: function(input) {
+        var options = this.options;
+
+        var validPointers = input.pointers.length === options.pointers;
+        var validMovement = input.distance < options.threshold;
+        var validTouchTime = input.deltaTime < options.time;
+
+        this.reset();
+
+        if ((input.eventType & INPUT_START) && (this.count === 0)) {
+            return this.failTimeout();
+        }
+
+        // we only allow little movement
+        // and we've reached an end event, so a tap is possible
+        if (validMovement && validTouchTime && validPointers) {
+            if (input.eventType != INPUT_END) {
+                return this.failTimeout();
+            }
+
+            var validInterval = this.pTime ? (input.timeStamp - this.pTime < options.interval) : true;
+            var validMultiTap = !this.pCenter || getDistance(this.pCenter, input.center) < options.posThreshold;
+
+            this.pTime = input.timeStamp;
+            this.pCenter = input.center;
+
+            if (!validMultiTap || !validInterval) {
+                this.count = 1;
+            } else {
+                this.count += 1;
+            }
+
+            this._input = input;
+
+            // if tap count matches we have recognized it,
+            // else it has began recognizing...
+            var tapCount = this.count % options.taps;
+            if (tapCount === 0) {
+                // no failing requirements, immediately trigger the tap event
+                // or wait as long as the multitap interval to trigger
+                if (!this.hasRequireFailures()) {
+                    return STATE_RECOGNIZED;
+                } else {
+                    this._timer = setTimeoutContext(function() {
+                        this.state = STATE_RECOGNIZED;
+                        this.tryEmit();
+                    }, options.interval, this);
+                    return STATE_BEGAN;
+                }
+            }
+        }
+        return STATE_FAILED;
+    },
+
+    failTimeout: function() {
+        this._timer = setTimeoutContext(function() {
+            this.state = STATE_FAILED;
+        }, this.options.interval, this);
+        return STATE_FAILED;
+    },
+
+    reset: function() {
+        clearTimeout(this._timer);
+    },
+
+    emit: function() {
+        if (this.state == STATE_RECOGNIZED) {
+            this._input.tapCount = this.count;
+            this.manager.emit(this.options.event, this._input);
+        }
+    }
+});
+
+/**
+ * Simple way to create a manager with a default set of recognizers.
+ * @param {HTMLElement} element
+ * @param {Object} [options]
+ * @constructor
+ */
+function Hammer(element, options) {
+    options = options || {};
+    options.recognizers = ifUndefined(options.recognizers, Hammer.defaults.preset);
+    return new Manager(element, options);
+}
+
+/**
+ * @const {string}
+ */
+Hammer.VERSION = '2.0.7';
+
+/**
+ * default settings
+ * @namespace
+ */
+Hammer.defaults = {
+    /**
+     * set if DOM events are being triggered.
+     * But this is slower and unused by simple implementations, so disabled by default.
+     * @type {Boolean}
+     * @default false
+     */
+    domEvents: false,
+
+    /**
+     * The value for the touchAction property/fallback.
+     * When set to `compute` it will magically set the correct value based on the added recognizers.
+     * @type {String}
+     * @default compute
+     */
+    touchAction: TOUCH_ACTION_COMPUTE,
+
+    /**
+     * @type {Boolean}
+     * @default true
+     */
+    enable: true,
+
+    /**
+     * EXPERIMENTAL FEATURE -- can be removed/changed
+     * Change the parent input target element.
+     * If Null, then it is being set the to main element.
+     * @type {Null|EventTarget}
+     * @default null
+     */
+    inputTarget: null,
+
+    /**
+     * force an input class
+     * @type {Null|Function}
+     * @default null
+     */
+    inputClass: null,
+
+    /**
+     * Default recognizer setup when calling `Hammer()`
+     * When creating a new Manager these will be skipped.
+     * @type {Array}
+     */
+    preset: [
+        // RecognizerClass, options, [recognizeWith, ...], [requireFailure, ...]
+        [RotateRecognizer, {enable: false}],
+        [PinchRecognizer, {enable: false}, ['rotate']],
+        [SwipeRecognizer, {direction: DIRECTION_HORIZONTAL}],
+        [PanRecognizer, {direction: DIRECTION_HORIZONTAL}, ['swipe']],
+        [TapRecognizer],
+        [TapRecognizer, {event: 'doubletap', taps: 2}, ['tap']],
+        [PressRecognizer]
+    ],
+
+    /**
+     * Some CSS properties can be used to improve the working of Hammer.
+     * Add them to this method and they will be set when creating a new Manager.
+     * @namespace
+     */
+    cssProps: {
+        /**
+         * Disables text selection to improve the dragging gesture. Mainly for desktop browsers.
+         * @type {String}
+         * @default 'none'
+         */
+        userSelect: 'none',
+
+        /**
+         * Disable the Windows Phone grippers when pressing an element.
+         * @type {String}
+         * @default 'none'
+         */
+        touchSelect: 'none',
+
+        /**
+         * Disables the default callout shown when you touch and hold a touch target.
+         * On iOS, when you touch and hold a touch target such as a link, Safari displays
+         * a callout containing information about the link. This property allows you to disable that callout.
+         * @type {String}
+         * @default 'none'
+         */
+        touchCallout: 'none',
+
+        /**
+         * Specifies whether zooming is enabled. Used by IE10>
+         * @type {String}
+         * @default 'none'
+         */
+        contentZooming: 'none',
+
+        /**
+         * Specifies that an entire element should be draggable instead of its contents. Mainly for desktop browsers.
+         * @type {String}
+         * @default 'none'
+         */
+        userDrag: 'none',
+
+        /**
+         * Overrides the highlight color shown when the user taps a link or a JavaScript
+         * clickable element in iOS. This property obeys the alpha value, if specified.
+         * @type {String}
+         * @default 'rgba(0,0,0,0)'
+         */
+        tapHighlightColor: 'rgba(0,0,0,0)'
+    }
+};
+
+var STOP = 1;
+var FORCED_STOP = 2;
+
+/**
+ * Manager
+ * @param {HTMLElement} element
+ * @param {Object} [options]
+ * @constructor
+ */
+function Manager(element, options) {
+    this.options = assign({}, Hammer.defaults, options || {});
+
+    this.options.inputTarget = this.options.inputTarget || element;
+
+    this.handlers = {};
+    this.session = {};
+    this.recognizers = [];
+    this.oldCssProps = {};
+
+    this.element = element;
+    this.input = createInputInstance(this);
+    this.touchAction = new TouchAction(this, this.options.touchAction);
+
+    toggleCssProps(this, true);
+
+    each(this.options.recognizers, function(item) {
+        var recognizer = this.add(new (item[0])(item[1]));
+        item[2] && recognizer.recognizeWith(item[2]);
+        item[3] && recognizer.requireFailure(item[3]);
+    }, this);
+}
+
+Manager.prototype = {
+    /**
+     * set options
+     * @param {Object} options
+     * @returns {Manager}
+     */
+    set: function(options) {
+        assign(this.options, options);
+
+        // Options that need a little more setup
+        if (options.touchAction) {
+            this.touchAction.update();
+        }
+        if (options.inputTarget) {
+            // Clean up existing event listeners and reinitialize
+            this.input.destroy();
+            this.input.target = options.inputTarget;
+            this.input.init();
+        }
+        return this;
+    },
+
+    /**
+     * stop recognizing for this session.
+     * This session will be discarded, when a new [input]start event is fired.
+     * When forced, the recognizer cycle is stopped immediately.
+     * @param {Boolean} [force]
+     */
+    stop: function(force) {
+        this.session.stopped = force ? FORCED_STOP : STOP;
+    },
+
+    /**
+     * run the recognizers!
+     * called by the inputHandler function on every movement of the pointers (touches)
+     * it walks through all the recognizers and tries to detect the gesture that is being made
+     * @param {Object} inputData
+     */
+    recognize: function(inputData) {
+        var session = this.session;
+        if (session.stopped) {
+            return;
+        }
+
+        // run the touch-action polyfill
+        this.touchAction.preventDefaults(inputData);
+
+        var recognizer;
+        var recognizers = this.recognizers;
+
+        // this holds the recognizer that is being recognized.
+        // so the recognizer's state needs to be BEGAN, CHANGED, ENDED or RECOGNIZED
+        // if no recognizer is detecting a thing, it is set to `null`
+        var curRecognizer = session.curRecognizer;
+
+        // reset when the last recognizer is recognized
+        // or when we're in a new session
+        if (!curRecognizer || (curRecognizer && curRecognizer.state & STATE_RECOGNIZED)) {
+            curRecognizer = session.curRecognizer = null;
+        }
+
+        var i = 0;
+        while (i < recognizers.length) {
+            recognizer = recognizers[i];
+
+            // find out if we are allowed try to recognize the input for this one.
+            // 1.   allow if the session is NOT forced stopped (see the .stop() method)
+            // 2.   allow if we still haven't recognized a gesture in this session, or the this recognizer is the one
+            //      that is being recognized.
+            // 3.   allow if the recognizer is allowed to run simultaneous with the current recognized recognizer.
+            //      this can be setup with the `recognizeWith()` method on the recognizer.
+            if (session.stopped !== FORCED_STOP && ( // 1
+                    !curRecognizer || recognizer == curRecognizer || // 2
+                    recognizer.canRecognizeWith(curRecognizer))) { // 3
+                recognizer.recognize(inputData);
+            } else {
+                recognizer.reset();
+            }
+
+            // if the recognizer has been recognizing the input as a valid gesture, we want to store this one as the
+            // current active recognizer. but only if we don't already have an active recognizer
+            if (!curRecognizer && recognizer.state & (STATE_BEGAN | STATE_CHANGED | STATE_ENDED)) {
+                curRecognizer = session.curRecognizer = recognizer;
+            }
+            i++;
+        }
+    },
+
+    /**
+     * get a recognizer by its event name.
+     * @param {Recognizer|String} recognizer
+     * @returns {Recognizer|Null}
+     */
+    get: function(recognizer) {
+        if (recognizer instanceof Recognizer) {
+            return recognizer;
+        }
+
+        var recognizers = this.recognizers;
+        for (var i = 0; i < recognizers.length; i++) {
+            if (recognizers[i].options.event == recognizer) {
+                return recognizers[i];
+            }
+        }
+        return null;
+    },
+
+    /**
+     * add a recognizer to the manager
+     * existing recognizers with the same event name will be removed
+     * @param {Recognizer} recognizer
+     * @returns {Recognizer|Manager}
+     */
+    add: function(recognizer) {
+        if (invokeArrayArg(recognizer, 'add', this)) {
+            return this;
+        }
+
+        // remove existing
+        var existing = this.get(recognizer.options.event);
+        if (existing) {
+            this.remove(existing);
+        }
+
+        this.recognizers.push(recognizer);
+        recognizer.manager = this;
+
+        this.touchAction.update();
+        return recognizer;
+    },
+
+    /**
+     * remove a recognizer by name or instance
+     * @param {Recognizer|String} recognizer
+     * @returns {Manager}
+     */
+    remove: function(recognizer) {
+        if (invokeArrayArg(recognizer, 'remove', this)) {
+            return this;
+        }
+
+        recognizer = this.get(recognizer);
+
+        // let's make sure this recognizer exists
+        if (recognizer) {
+            var recognizers = this.recognizers;
+            var index = inArray(recognizers, recognizer);
+
+            if (index !== -1) {
+                recognizers.splice(index, 1);
+                this.touchAction.update();
+            }
+        }
+
+        return this;
+    },
+
+    /**
+     * bind event
+     * @param {String} events
+     * @param {Function} handler
+     * @returns {EventEmitter} this
+     */
+    on: function(events, handler) {
+        if (events === undefined) {
+            return;
+        }
+        if (handler === undefined) {
+            return;
+        }
+
+        var handlers = this.handlers;
+        each(splitStr(events), function(event) {
+            handlers[event] = handlers[event] || [];
+            handlers[event].push(handler);
+        });
+        return this;
+    },
+
+    /**
+     * unbind event, leave emit blank to remove all handlers
+     * @param {String} events
+     * @param {Function} [handler]
+     * @returns {EventEmitter} this
+     */
+    off: function(events, handler) {
+        if (events === undefined) {
+            return;
+        }
+
+        var handlers = this.handlers;
+        each(splitStr(events), function(event) {
+            if (!handler) {
+                delete handlers[event];
+            } else {
+                handlers[event] && handlers[event].splice(inArray(handlers[event], handler), 1);
+            }
+        });
+        return this;
+    },
+
+    /**
+     * emit event to the listeners
+     * @param {String} event
+     * @param {Object} data
+     */
+    emit: function(event, data) {
+        // we also want to trigger dom events
+        if (this.options.domEvents) {
+            triggerDomEvent(event, data);
+        }
+
+        // no handlers, so skip it all
+        var handlers = this.handlers[event] && this.handlers[event].slice();
+        if (!handlers || !handlers.length) {
+            return;
+        }
+
+        data.type = event;
+        data.preventDefault = function() {
+            data.srcEvent.preventDefault();
+        };
+
+        var i = 0;
+        while (i < handlers.length) {
+            handlers[i](data);
+            i++;
+        }
+    },
+
+    /**
+     * destroy the manager and unbinds all events
+     * it doesn't unbind dom events, that is the user own responsibility
+     */
+    destroy: function() {
+        this.element && toggleCssProps(this, false);
+
+        this.handlers = {};
+        this.session = {};
+        this.input.destroy();
+        this.element = null;
+    }
+};
+
+/**
+ * add/remove the css properties as defined in manager.options.cssProps
+ * @param {Manager} manager
+ * @param {Boolean} add
+ */
+function toggleCssProps(manager, add) {
+    var element = manager.element;
+    if (!element.style) {
+        return;
+    }
+    var prop;
+    each(manager.options.cssProps, function(value, name) {
+        prop = prefixed(element.style, name);
+        if (add) {
+            manager.oldCssProps[prop] = element.style[prop];
+            element.style[prop] = value;
+        } else {
+            element.style[prop] = manager.oldCssProps[prop] || '';
+        }
+    });
+    if (!add) {
+        manager.oldCssProps = {};
+    }
+}
+
+/**
+ * trigger dom event
+ * @param {String} event
+ * @param {Object} data
+ */
+function triggerDomEvent(event, data) {
+    var gestureEvent = document.createEvent('Event');
+    gestureEvent.initEvent(event, true, true);
+    gestureEvent.gesture = data;
+    data.target.dispatchEvent(gestureEvent);
+}
+
+assign(Hammer, {
+    INPUT_START: INPUT_START,
+    INPUT_MOVE: INPUT_MOVE,
+    INPUT_END: INPUT_END,
+    INPUT_CANCEL: INPUT_CANCEL,
+
+    STATE_POSSIBLE: STATE_POSSIBLE,
+    STATE_BEGAN: STATE_BEGAN,
+    STATE_CHANGED: STATE_CHANGED,
+    STATE_ENDED: STATE_ENDED,
+    STATE_RECOGNIZED: STATE_RECOGNIZED,
+    STATE_CANCELLED: STATE_CANCELLED,
+    STATE_FAILED: STATE_FAILED,
+
+    DIRECTION_NONE: DIRECTION_NONE,
+    DIRECTION_LEFT: DIRECTION_LEFT,
+    DIRECTION_RIGHT: DIRECTION_RIGHT,
+    DIRECTION_UP: DIRECTION_UP,
+    DIRECTION_DOWN: DIRECTION_DOWN,
+    DIRECTION_HORIZONTAL: DIRECTION_HORIZONTAL,
+    DIRECTION_VERTICAL: DIRECTION_VERTICAL,
+    DIRECTION_ALL: DIRECTION_ALL,
+
+    Manager: Manager,
+    Input: Input,
+    TouchAction: TouchAction,
+
+    TouchInput: TouchInput,
+    MouseInput: MouseInput,
+    PointerEventInput: PointerEventInput,
+    TouchMouseInput: TouchMouseInput,
+    SingleTouchInput: SingleTouchInput,
+
+    Recognizer: Recognizer,
+    AttrRecognizer: AttrRecognizer,
+    Tap: TapRecognizer,
+    Pan: PanRecognizer,
+    Swipe: SwipeRecognizer,
+    Pinch: PinchRecognizer,
+    Rotate: RotateRecognizer,
+    Press: PressRecognizer,
+
+    on: addEventListeners,
+    off: removeEventListeners,
+    each: each,
+    merge: merge,
+    extend: extend,
+    assign: assign,
+    inherit: inherit,
+    bindFn: bindFn,
+    prefixed: prefixed
+});
+
+// this prevents errors when Hammer is loaded in the presence of an AMD
+//  style loader but by script tag, not by the loader.
+var freeGlobal = (typeof window !== 'undefined' ? window : (typeof self !== 'undefined' ? self : {})); // jshint ignore:line
+freeGlobal.Hammer = Hammer;
+
+if (typeof define === 'function' && define.amd) {
+    define(function() {
+        return Hammer;
+    });
+} else if (typeof module != 'undefined' && module.exports) {
+    module.exports = Hammer;
+} else {
+    window[exportName] = Hammer;
+}
+
+})(window, document, 'Hammer');
+
+},{}],797:[function(require,module,exports){
 arguments[4][56][0].apply(exports,arguments)
-},{"./lib/simple":678,"dup":56}],677:[function(require,module,exports){
+},{"./lib/simple":799,"dup":56}],798:[function(require,module,exports){
 'use strict';
 
 var isString = require('lodash/lang/isString'),
@@ -78888,7 +98080,7 @@ DmnModdle.prototype.toXML = function(element, options, done) {
   }
 };
 
-},{"lodash/lang/isFunction":817,"lodash/lang/isString":822,"lodash/object/assign":825,"moddle":684,"moddle-xml/lib/reader":680,"moddle-xml/lib/writer":681}],678:[function(require,module,exports){
+},{"lodash/lang/isFunction":956,"lodash/lang/isString":961,"lodash/object/assign":964,"moddle":805,"moddle-xml/lib/reader":801,"moddle-xml/lib/writer":802}],799:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign');
@@ -78906,35 +98098,35 @@ module.exports = function(additionalPackages, options) {
   return new DmnModdle(assign({}, packages, additionalPackages), options);
 };
 
-},{"../resources/dmn/bpmn-io/biodi.json":693,"../resources/dmn/bpmn-io/dc.json":694,"../resources/dmn/camunda/camunda.json":695,"../resources/dmn/json/dmn.json":696,"./dmn-moddle":677,"lodash/object/assign":825}],679:[function(require,module,exports){
+},{"../resources/dmn/bpmn-io/biodi.json":814,"../resources/dmn/bpmn-io/dc.json":815,"../resources/dmn/camunda/camunda.json":816,"../resources/dmn/json/dmn.json":817,"./dmn-moddle":798,"lodash/object/assign":964}],800:[function(require,module,exports){
 arguments[4][59][0].apply(exports,arguments)
-},{"dup":59}],680:[function(require,module,exports){
+},{"dup":59}],801:[function(require,module,exports){
 arguments[4][308][0].apply(exports,arguments)
-},{"./common":679,"dup":308,"lodash/collection/find":707,"lodash/collection/forEach":708,"lodash/collection/reduce":712,"lodash/function/defer":716,"lodash/object/assign":825,"moddle":684,"moddle/lib/ns":689,"moddle/lib/types":692,"sax":682,"tiny-stack":683}],681:[function(require,module,exports){
+},{"./common":800,"dup":308,"lodash/collection/find":831,"lodash/collection/forEach":832,"lodash/collection/reduce":836,"lodash/function/defer":843,"lodash/object/assign":964,"moddle":805,"moddle/lib/ns":810,"moddle/lib/types":813,"sax":803,"tiny-stack":804}],802:[function(require,module,exports){
 arguments[4][309][0].apply(exports,arguments)
-},{"./common":679,"dup":309,"lodash/collection/filter":706,"lodash/collection/forEach":708,"lodash/collection/map":711,"lodash/lang/isString":822,"lodash/object/assign":825,"moddle/lib/ns":689,"moddle/lib/types":692}],682:[function(require,module,exports){
+},{"./common":800,"dup":309,"lodash/collection/filter":830,"lodash/collection/forEach":832,"lodash/collection/map":835,"lodash/lang/isString":961,"lodash/object/assign":964,"moddle/lib/ns":810,"moddle/lib/types":813}],803:[function(require,module,exports){
 arguments[4][62][0].apply(exports,arguments)
-},{"buffer":916,"dup":62,"stream":940,"string_decoder":941}],683:[function(require,module,exports){
+},{"buffer":1081,"dup":62,"stream":1105,"string_decoder":1106}],804:[function(require,module,exports){
 arguments[4][63][0].apply(exports,arguments)
-},{"dup":63}],684:[function(require,module,exports){
+},{"dup":63}],805:[function(require,module,exports){
 arguments[4][64][0].apply(exports,arguments)
-},{"./lib/moddle":688,"dup":64}],685:[function(require,module,exports){
+},{"./lib/moddle":809,"dup":64}],806:[function(require,module,exports){
 arguments[4][65][0].apply(exports,arguments)
-},{"dup":65}],686:[function(require,module,exports){
+},{"dup":65}],807:[function(require,module,exports){
 arguments[4][66][0].apply(exports,arguments)
-},{"./ns":689,"dup":66,"lodash/collection/forEach":708,"lodash/object/assign":825,"lodash/object/pick":831}],687:[function(require,module,exports){
+},{"./ns":810,"dup":66,"lodash/collection/forEach":832,"lodash/object/assign":964,"lodash/object/pick":970}],808:[function(require,module,exports){
 arguments[4][67][0].apply(exports,arguments)
-},{"./base":685,"dup":67,"lodash/collection/forEach":708}],688:[function(require,module,exports){
+},{"./base":806,"dup":67,"lodash/collection/forEach":832}],809:[function(require,module,exports){
 arguments[4][68][0].apply(exports,arguments)
-},{"./factory":687,"./ns":689,"./properties":690,"./registry":691,"dup":68,"lodash/collection/find":707,"lodash/collection/forEach":708,"lodash/lang/isObject":820,"lodash/lang/isString":822}],689:[function(require,module,exports){
+},{"./factory":808,"./ns":810,"./properties":811,"./registry":812,"dup":68,"lodash/collection/find":831,"lodash/collection/forEach":832,"lodash/lang/isObject":959,"lodash/lang/isString":961}],810:[function(require,module,exports){
 arguments[4][69][0].apply(exports,arguments)
-},{"dup":69}],690:[function(require,module,exports){
+},{"dup":69}],811:[function(require,module,exports){
 arguments[4][70][0].apply(exports,arguments)
-},{"dup":70}],691:[function(require,module,exports){
+},{"dup":70}],812:[function(require,module,exports){
 arguments[4][71][0].apply(exports,arguments)
-},{"./descriptor-builder":686,"./ns":689,"./types":692,"dup":71,"lodash/collection/forEach":708,"lodash/object/assign":825}],692:[function(require,module,exports){
+},{"./descriptor-builder":807,"./ns":810,"./types":813,"dup":71,"lodash/collection/forEach":832,"lodash/object/assign":964}],813:[function(require,module,exports){
 arguments[4][72][0].apply(exports,arguments)
-},{"dup":72}],693:[function(require,module,exports){
+},{"dup":72}],814:[function(require,module,exports){
 module.exports={
   "name": "bpmn.io DI for DMN",
   "uri": "http://bpmn.io/schema/dmn/biodi/1.0",
@@ -78976,7 +98168,7 @@ module.exports={
   ]
 }
 
-},{}],694:[function(require,module,exports){
+},{}],815:[function(require,module,exports){
 module.exports={
   "name": "DC",
   "uri": "http://www.omg.org/spec/DD/20100524/DC",
@@ -79077,7 +98269,7 @@ module.exports={
   "associations": []
 }
 
-},{}],695:[function(require,module,exports){
+},{}],816:[function(require,module,exports){
 module.exports={
   "name": "Camunda",
   "uri": "http://camunda.org/schema/1.0/dmn",
@@ -79102,7 +98294,7 @@ module.exports={
   ]
 }
 
-},{}],696:[function(require,module,exports){
+},{}],817:[function(require,module,exports){
 module.exports={
   "name": "DMN",
   "uri": "http://www.omg.org/spec/DMN/20151101/dmn.xsd",
@@ -79429,7 +98621,7 @@ module.exports={
   ]
 }
 
-},{}],697:[function(require,module,exports){
+},{}],818:[function(require,module,exports){
 'use strict';
 
 var hat = require('hat');
@@ -79528,7 +98720,7 @@ Ids.prototype.clear = function() {
     this.unclaim(id);
   }
 };
-},{"hat":698}],698:[function(require,module,exports){
+},{"hat":819}],819:[function(require,module,exports){
 var hat = module.exports = function (bits, base) {
     if (!base) base = 16;
     if (bits === undefined) bits = 128;
@@ -79592,11 +98784,100 @@ hat.rack = function (bits, base, expandBy) {
     return fn;
 };
 
-},{}],699:[function(require,module,exports){
+},{}],820:[function(require,module,exports){
 arguments[4][126][0].apply(exports,arguments)
-},{"dup":126}],700:[function(require,module,exports){
+},{"dup":126}],821:[function(require,module,exports){
+var createFindIndex = require('../internal/createFindIndex');
+
+/**
+ * This method is like `_.find` except that it returns the index of the first
+ * element `predicate` returns truthy for instead of the element itself.
+ *
+ * If a property name is provided for `predicate` the created `_.property`
+ * style callback returns the property value of the given element.
+ *
+ * If a value is also provided for `thisArg` the created `_.matchesProperty`
+ * style callback returns `true` for elements that have a matching property
+ * value, else `false`.
+ *
+ * If an object is provided for `predicate` the created `_.matches` style
+ * callback returns `true` for elements that have the properties of the given
+ * object, else `false`.
+ *
+ * @static
+ * @memberOf _
+ * @category Array
+ * @param {Array} array The array to search.
+ * @param {Function|Object|string} [predicate=_.identity] The function invoked
+ *  per iteration.
+ * @param {*} [thisArg] The `this` binding of `predicate`.
+ * @returns {number} Returns the index of the found element, else `-1`.
+ * @example
+ *
+ * var users = [
+ *   { 'user': 'barney',  'active': false },
+ *   { 'user': 'fred',    'active': false },
+ *   { 'user': 'pebbles', 'active': true }
+ * ];
+ *
+ * _.findIndex(users, function(chr) {
+ *   return chr.user == 'barney';
+ * });
+ * // => 0
+ *
+ * // using the `_.matches` callback shorthand
+ * _.findIndex(users, { 'user': 'fred', 'active': false });
+ * // => 1
+ *
+ * // using the `_.matchesProperty` callback shorthand
+ * _.findIndex(users, 'active', false);
+ * // => 0
+ *
+ * // using the `_.property` callback shorthand
+ * _.findIndex(users, 'active');
+ * // => 2
+ */
+var findIndex = createFindIndex();
+
+module.exports = findIndex;
+
+},{"../internal/createFindIndex":914}],822:[function(require,module,exports){
+var baseFlatten = require('../internal/baseFlatten'),
+    isIterateeCall = require('../internal/isIterateeCall');
+
+/**
+ * Flattens a nested array. If `isDeep` is `true` the array is recursively
+ * flattened, otherwise it's only flattened a single level.
+ *
+ * @static
+ * @memberOf _
+ * @category Array
+ * @param {Array} array The array to flatten.
+ * @param {boolean} [isDeep] Specify a deep flatten.
+ * @param- {Object} [guard] Enables use as a callback for functions like `_.map`.
+ * @returns {Array} Returns the new flattened array.
+ * @example
+ *
+ * _.flatten([1, [2, 3, [4]]]);
+ * // => [1, 2, 3, [4]]
+ *
+ * // using `isDeep`
+ * _.flatten([1, [2, 3, [4]]], true);
+ * // => [1, 2, 3, 4]
+ */
+function flatten(array, isDeep, guard) {
+  var length = array ? array.length : 0;
+  if (guard && isIterateeCall(array, isDeep, guard)) {
+    isDeep = false;
+  }
+  return length ? baseFlatten(array, isDeep) : [];
+}
+
+module.exports = flatten;
+
+},{"../internal/baseFlatten":872,"../internal/isIterateeCall":934}],823:[function(require,module,exports){
 arguments[4][127][0].apply(exports,arguments)
-},{"dup":127}],701:[function(require,module,exports){
+},{"dup":127}],824:[function(require,module,exports){
 var baseFlatten = require('../internal/baseFlatten'),
     baseUniq = require('../internal/baseUniq'),
     restParam = require('../function/restParam');
@@ -79622,7 +98903,7 @@ var union = restParam(function(arrays) {
 
 module.exports = union;
 
-},{"../function/restParam":717,"../internal/baseFlatten":743,"../internal/baseUniq":766}],702:[function(require,module,exports){
+},{"../function/restParam":844,"../internal/baseFlatten":872,"../internal/baseUniq":897}],825:[function(require,module,exports){
 var baseCallback = require('../internal/baseCallback'),
     baseUniq = require('../internal/baseUniq'),
     isIterateeCall = require('../internal/isIterateeCall'),
@@ -79695,20 +98976,22 @@ function uniq(array, isSorted, iteratee, thisArg) {
 
 module.exports = uniq;
 
-},{"../internal/baseCallback":732,"../internal/baseUniq":766,"../internal/isIterateeCall":796,"../internal/sortedUniq":811}],703:[function(require,module,exports){
+},{"../internal/baseCallback":859,"../internal/baseUniq":897,"../internal/isIterateeCall":934,"../internal/sortedUniq":949}],826:[function(require,module,exports){
 module.exports = require('./uniq');
 
-},{"./uniq":702}],704:[function(require,module,exports){
+},{"./uniq":825}],827:[function(require,module,exports){
 arguments[4][128][0].apply(exports,arguments)
-},{"../internal/LazyWrapper":718,"../internal/LodashWrapper":719,"../internal/baseLodash":754,"../internal/isObjectLike":800,"../internal/wrapperClone":814,"../lang/isArray":816,"dup":128}],705:[function(require,module,exports){
+},{"../internal/LazyWrapper":845,"../internal/LodashWrapper":846,"../internal/baseLodash":883,"../internal/isObjectLike":938,"../internal/wrapperClone":952,"../lang/isArray":955,"dup":128}],828:[function(require,module,exports){
+arguments[4][375][0].apply(exports,arguments)
+},{"./some":838,"dup":375}],829:[function(require,module,exports){
 arguments[4][129][0].apply(exports,arguments)
-},{"../internal/arrayEvery":724,"../internal/baseCallback":732,"../internal/baseEvery":739,"../internal/isIterateeCall":796,"../lang/isArray":816,"dup":129}],706:[function(require,module,exports){
+},{"../internal/arrayEvery":851,"../internal/baseCallback":859,"../internal/baseEvery":868,"../internal/isIterateeCall":934,"../lang/isArray":955,"dup":129}],830:[function(require,module,exports){
 arguments[4][130][0].apply(exports,arguments)
-},{"../internal/arrayFilter":725,"../internal/baseCallback":732,"../internal/baseFilter":740,"../lang/isArray":816,"dup":130}],707:[function(require,module,exports){
+},{"../internal/arrayFilter":852,"../internal/baseCallback":859,"../internal/baseFilter":869,"../lang/isArray":955,"dup":130}],831:[function(require,module,exports){
 arguments[4][131][0].apply(exports,arguments)
-},{"../internal/baseEach":737,"../internal/createFind":779,"dup":131}],708:[function(require,module,exports){
+},{"../internal/baseEach":866,"../internal/createFind":913,"dup":131}],832:[function(require,module,exports){
 arguments[4][132][0].apply(exports,arguments)
-},{"../internal/arrayEach":722,"../internal/baseEach":737,"../internal/createForEach":780,"dup":132}],709:[function(require,module,exports){
+},{"../internal/arrayEach":849,"../internal/baseEach":866,"../internal/createForEach":915,"dup":132}],833:[function(require,module,exports){
 var arrayEachRight = require('../internal/arrayEachRight'),
     baseEachRight = require('../internal/baseEachRight'),
     createForEach = require('../internal/createForEach');
@@ -79736,33 +99019,140 @@ var forEachRight = createForEach(arrayEachRight, baseEachRight);
 
 module.exports = forEachRight;
 
-},{"../internal/arrayEachRight":723,"../internal/baseEachRight":738,"../internal/createForEach":780}],710:[function(require,module,exports){
+},{"../internal/arrayEachRight":850,"../internal/baseEachRight":867,"../internal/createForEach":915}],834:[function(require,module,exports){
 arguments[4][133][0].apply(exports,arguments)
-},{"../internal/createAggregator":772,"dup":133}],711:[function(require,module,exports){
+},{"../internal/createAggregator":906,"dup":133}],835:[function(require,module,exports){
 arguments[4][135][0].apply(exports,arguments)
-},{"../internal/arrayMap":726,"../internal/baseCallback":732,"../internal/baseMap":755,"../lang/isArray":816,"dup":135}],712:[function(require,module,exports){
+},{"../internal/arrayMap":853,"../internal/baseCallback":859,"../internal/baseMap":884,"../lang/isArray":955,"dup":135}],836:[function(require,module,exports){
 arguments[4][136][0].apply(exports,arguments)
-},{"../internal/arrayReduce":728,"../internal/baseEach":737,"../internal/createReduce":783,"dup":136}],713:[function(require,module,exports){
+},{"../internal/arrayReduce":855,"../internal/baseEach":866,"../internal/createReduce":918,"dup":136}],837:[function(require,module,exports){
+var getLength = require('../internal/getLength'),
+    isLength = require('../internal/isLength'),
+    keys = require('../object/keys');
+
+/**
+ * Gets the size of `collection` by returning its length for array-like
+ * values or the number of own enumerable properties for objects.
+ *
+ * @static
+ * @memberOf _
+ * @category Collection
+ * @param {Array|Object|string} collection The collection to inspect.
+ * @returns {number} Returns the size of `collection`.
+ * @example
+ *
+ * _.size([1, 2, 3]);
+ * // => 3
+ *
+ * _.size({ 'a': 1, 'b': 2 });
+ * // => 2
+ *
+ * _.size('pebbles');
+ * // => 7
+ */
+function size(collection) {
+  var length = collection ? getLength(collection) : 0;
+  return isLength(length) ? length : keys(collection).length;
+}
+
+module.exports = size;
+
+},{"../internal/getLength":925,"../internal/isLength":937,"../object/keys":965}],838:[function(require,module,exports){
+arguments[4][137][0].apply(exports,arguments)
+},{"../internal/arraySome":856,"../internal/baseCallback":859,"../internal/baseSome":894,"../internal/isIterateeCall":934,"../lang/isArray":955,"dup":137}],839:[function(require,module,exports){
+var baseCallback = require('../internal/baseCallback'),
+    baseMap = require('../internal/baseMap'),
+    baseSortBy = require('../internal/baseSortBy'),
+    compareAscending = require('../internal/compareAscending'),
+    isIterateeCall = require('../internal/isIterateeCall');
+
+/**
+ * Creates an array of elements, sorted in ascending order by the results of
+ * running each element in a collection through `iteratee`. This method performs
+ * a stable sort, that is, it preserves the original sort order of equal elements.
+ * The `iteratee` is bound to `thisArg` and invoked with three arguments:
+ * (value, index|key, collection).
+ *
+ * If a property name is provided for `iteratee` the created `_.property`
+ * style callback returns the property value of the given element.
+ *
+ * If a value is also provided for `thisArg` the created `_.matchesProperty`
+ * style callback returns `true` for elements that have a matching property
+ * value, else `false`.
+ *
+ * If an object is provided for `iteratee` the created `_.matches` style
+ * callback returns `true` for elements that have the properties of the given
+ * object, else `false`.
+ *
+ * @static
+ * @memberOf _
+ * @category Collection
+ * @param {Array|Object|string} collection The collection to iterate over.
+ * @param {Function|Object|string} [iteratee=_.identity] The function invoked
+ *  per iteration.
+ * @param {*} [thisArg] The `this` binding of `iteratee`.
+ * @returns {Array} Returns the new sorted array.
+ * @example
+ *
+ * _.sortBy([1, 2, 3], function(n) {
+ *   return Math.sin(n);
+ * });
+ * // => [3, 1, 2]
+ *
+ * _.sortBy([1, 2, 3], function(n) {
+ *   return this.sin(n);
+ * }, Math);
+ * // => [3, 1, 2]
+ *
+ * var users = [
+ *   { 'user': 'fred' },
+ *   { 'user': 'pebbles' },
+ *   { 'user': 'barney' }
+ * ];
+ *
+ * // using the `_.property` callback shorthand
+ * _.pluck(_.sortBy(users, 'user'), 'user');
+ * // => ['barney', 'fred', 'pebbles']
+ */
+function sortBy(collection, iteratee, thisArg) {
+  if (collection == null) {
+    return [];
+  }
+  if (thisArg && isIterateeCall(collection, iteratee, thisArg)) {
+    iteratee = undefined;
+  }
+  var index = -1;
+  iteratee = baseCallback(iteratee, thisArg, 3);
+
+  var result = baseMap(collection, function(value, key, collection) {
+    return { 'criteria': iteratee(value, key, collection), 'index': ++index, 'value': value };
+  });
+  return baseSortBy(result, compareAscending);
+}
+
+module.exports = sortBy;
+
+},{"../internal/baseCallback":859,"../internal/baseMap":884,"../internal/baseSortBy":895,"../internal/compareAscending":903,"../internal/isIterateeCall":934}],840:[function(require,module,exports){
 arguments[4][138][0].apply(exports,arguments)
-},{"../internal/getNative":792,"dup":138}],714:[function(require,module,exports){
+},{"../internal/getNative":927,"dup":138}],841:[function(require,module,exports){
 arguments[4][139][0].apply(exports,arguments)
-},{"../internal/createWrapper":784,"../internal/replaceHolders":808,"./restParam":717,"dup":139}],715:[function(require,module,exports){
+},{"../internal/createWrapper":919,"../internal/replaceHolders":946,"./restParam":844,"dup":139}],842:[function(require,module,exports){
 arguments[4][140][0].apply(exports,arguments)
-},{"../date/now":713,"../lang/isObject":820,"dup":140}],716:[function(require,module,exports){
+},{"../date/now":840,"../lang/isObject":959,"dup":140}],843:[function(require,module,exports){
 arguments[4][141][0].apply(exports,arguments)
-},{"../internal/baseDelay":735,"./restParam":717,"dup":141}],717:[function(require,module,exports){
+},{"../internal/baseDelay":864,"./restParam":844,"dup":141}],844:[function(require,module,exports){
 arguments[4][142][0].apply(exports,arguments)
-},{"dup":142}],718:[function(require,module,exports){
+},{"dup":142}],845:[function(require,module,exports){
 arguments[4][143][0].apply(exports,arguments)
-},{"./baseCreate":734,"./baseLodash":754,"dup":143}],719:[function(require,module,exports){
+},{"./baseCreate":863,"./baseLodash":883,"dup":143}],846:[function(require,module,exports){
 arguments[4][144][0].apply(exports,arguments)
-},{"./baseCreate":734,"./baseLodash":754,"dup":144}],720:[function(require,module,exports){
+},{"./baseCreate":863,"./baseLodash":883,"dup":144}],847:[function(require,module,exports){
 arguments[4][145][0].apply(exports,arguments)
-},{"./cachePush":769,"./getNative":792,"dup":145}],721:[function(require,module,exports){
+},{"./cachePush":902,"./getNative":927,"dup":145}],848:[function(require,module,exports){
 arguments[4][146][0].apply(exports,arguments)
-},{"dup":146}],722:[function(require,module,exports){
+},{"dup":146}],849:[function(require,module,exports){
 arguments[4][147][0].apply(exports,arguments)
-},{"dup":147}],723:[function(require,module,exports){
+},{"dup":147}],850:[function(require,module,exports){
 /**
  * A specialized version of `_.forEachRight` for arrays without support for
  * callback shorthands and `this` binding.
@@ -79785,35 +99175,201 @@ function arrayEachRight(array, iteratee) {
 
 module.exports = arrayEachRight;
 
-},{}],724:[function(require,module,exports){
+},{}],851:[function(require,module,exports){
 arguments[4][148][0].apply(exports,arguments)
-},{"dup":148}],725:[function(require,module,exports){
+},{"dup":148}],852:[function(require,module,exports){
 arguments[4][149][0].apply(exports,arguments)
-},{"dup":149}],726:[function(require,module,exports){
+},{"dup":149}],853:[function(require,module,exports){
 arguments[4][150][0].apply(exports,arguments)
-},{"dup":150}],727:[function(require,module,exports){
+},{"dup":150}],854:[function(require,module,exports){
 arguments[4][151][0].apply(exports,arguments)
-},{"dup":151}],728:[function(require,module,exports){
+},{"dup":151}],855:[function(require,module,exports){
 arguments[4][152][0].apply(exports,arguments)
-},{"dup":152}],729:[function(require,module,exports){
+},{"dup":152}],856:[function(require,module,exports){
 arguments[4][153][0].apply(exports,arguments)
-},{"dup":153}],730:[function(require,module,exports){
+},{"dup":153}],857:[function(require,module,exports){
 arguments[4][154][0].apply(exports,arguments)
-},{"../object/keys":826,"dup":154}],731:[function(require,module,exports){
+},{"../object/keys":965,"dup":154}],858:[function(require,module,exports){
 arguments[4][155][0].apply(exports,arguments)
-},{"../object/keys":826,"./baseCopy":733,"dup":155}],732:[function(require,module,exports){
+},{"../object/keys":965,"./baseCopy":862,"dup":155}],859:[function(require,module,exports){
 arguments[4][156][0].apply(exports,arguments)
-},{"../utility/identity":832,"../utility/property":834,"./baseMatches":756,"./baseMatchesProperty":757,"./bindCallback":767,"dup":156}],733:[function(require,module,exports){
+},{"../utility/identity":973,"../utility/property":975,"./baseMatches":885,"./baseMatchesProperty":886,"./bindCallback":899,"dup":156}],860:[function(require,module,exports){
+var arrayCopy = require('./arrayCopy'),
+    arrayEach = require('./arrayEach'),
+    baseAssign = require('./baseAssign'),
+    baseForOwn = require('./baseForOwn'),
+    initCloneArray = require('./initCloneArray'),
+    initCloneByTag = require('./initCloneByTag'),
+    initCloneObject = require('./initCloneObject'),
+    isArray = require('../lang/isArray'),
+    isObject = require('../lang/isObject');
+
+/** `Object#toString` result references. */
+var argsTag = '[object Arguments]',
+    arrayTag = '[object Array]',
+    boolTag = '[object Boolean]',
+    dateTag = '[object Date]',
+    errorTag = '[object Error]',
+    funcTag = '[object Function]',
+    mapTag = '[object Map]',
+    numberTag = '[object Number]',
+    objectTag = '[object Object]',
+    regexpTag = '[object RegExp]',
+    setTag = '[object Set]',
+    stringTag = '[object String]',
+    weakMapTag = '[object WeakMap]';
+
+var arrayBufferTag = '[object ArrayBuffer]',
+    float32Tag = '[object Float32Array]',
+    float64Tag = '[object Float64Array]',
+    int8Tag = '[object Int8Array]',
+    int16Tag = '[object Int16Array]',
+    int32Tag = '[object Int32Array]',
+    uint8Tag = '[object Uint8Array]',
+    uint8ClampedTag = '[object Uint8ClampedArray]',
+    uint16Tag = '[object Uint16Array]',
+    uint32Tag = '[object Uint32Array]';
+
+/** Used to identify `toStringTag` values supported by `_.clone`. */
+var cloneableTags = {};
+cloneableTags[argsTag] = cloneableTags[arrayTag] =
+cloneableTags[arrayBufferTag] = cloneableTags[boolTag] =
+cloneableTags[dateTag] = cloneableTags[float32Tag] =
+cloneableTags[float64Tag] = cloneableTags[int8Tag] =
+cloneableTags[int16Tag] = cloneableTags[int32Tag] =
+cloneableTags[numberTag] = cloneableTags[objectTag] =
+cloneableTags[regexpTag] = cloneableTags[stringTag] =
+cloneableTags[uint8Tag] = cloneableTags[uint8ClampedTag] =
+cloneableTags[uint16Tag] = cloneableTags[uint32Tag] = true;
+cloneableTags[errorTag] = cloneableTags[funcTag] =
+cloneableTags[mapTag] = cloneableTags[setTag] =
+cloneableTags[weakMapTag] = false;
+
+/** Used for native method references. */
+var objectProto = Object.prototype;
+
+/**
+ * Used to resolve the [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objToString = objectProto.toString;
+
+/**
+ * The base implementation of `_.clone` without support for argument juggling
+ * and `this` binding `customizer` functions.
+ *
+ * @private
+ * @param {*} value The value to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @param {Function} [customizer] The function to customize cloning values.
+ * @param {string} [key] The key of `value`.
+ * @param {Object} [object] The object `value` belongs to.
+ * @param {Array} [stackA=[]] Tracks traversed source objects.
+ * @param {Array} [stackB=[]] Associates clones with source counterparts.
+ * @returns {*} Returns the cloned value.
+ */
+function baseClone(value, isDeep, customizer, key, object, stackA, stackB) {
+  var result;
+  if (customizer) {
+    result = object ? customizer(value, key, object) : customizer(value);
+  }
+  if (result !== undefined) {
+    return result;
+  }
+  if (!isObject(value)) {
+    return value;
+  }
+  var isArr = isArray(value);
+  if (isArr) {
+    result = initCloneArray(value);
+    if (!isDeep) {
+      return arrayCopy(value, result);
+    }
+  } else {
+    var tag = objToString.call(value),
+        isFunc = tag == funcTag;
+
+    if (tag == objectTag || tag == argsTag || (isFunc && !object)) {
+      result = initCloneObject(isFunc ? {} : value);
+      if (!isDeep) {
+        return baseAssign(result, value);
+      }
+    } else {
+      return cloneableTags[tag]
+        ? initCloneByTag(value, tag, isDeep)
+        : (object ? value : {});
+    }
+  }
+  // Check for circular references and return its corresponding clone.
+  stackA || (stackA = []);
+  stackB || (stackB = []);
+
+  var length = stackA.length;
+  while (length--) {
+    if (stackA[length] == value) {
+      return stackB[length];
+    }
+  }
+  // Add the source value to the stack of traversed objects and associate it with its clone.
+  stackA.push(value);
+  stackB.push(result);
+
+  // Recursively populate clone (susceptible to call stack limits).
+  (isArr ? arrayEach : baseForOwn)(value, function(subValue, key) {
+    result[key] = baseClone(subValue, isDeep, customizer, key, value, stackA, stackB);
+  });
+  return result;
+}
+
+module.exports = baseClone;
+
+},{"../lang/isArray":955,"../lang/isObject":959,"./arrayCopy":848,"./arrayEach":849,"./baseAssign":858,"./baseForOwn":875,"./initCloneArray":929,"./initCloneByTag":930,"./initCloneObject":931}],861:[function(require,module,exports){
+/**
+ * The base implementation of `compareAscending` which compares values and
+ * sorts them in ascending order without guaranteeing a stable sort.
+ *
+ * @private
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @returns {number} Returns the sort order indicator for `value`.
+ */
+function baseCompareAscending(value, other) {
+  if (value !== other) {
+    var valIsNull = value === null,
+        valIsUndef = value === undefined,
+        valIsReflexive = value === value;
+
+    var othIsNull = other === null,
+        othIsUndef = other === undefined,
+        othIsReflexive = other === other;
+
+    if ((value > other && !othIsNull) || !valIsReflexive ||
+        (valIsNull && !othIsUndef && othIsReflexive) ||
+        (valIsUndef && othIsReflexive)) {
+      return 1;
+    }
+    if ((value < other && !valIsNull) || !othIsReflexive ||
+        (othIsNull && !valIsUndef && valIsReflexive) ||
+        (othIsUndef && valIsReflexive)) {
+      return -1;
+    }
+  }
+  return 0;
+}
+
+module.exports = baseCompareAscending;
+
+},{}],862:[function(require,module,exports){
 arguments[4][157][0].apply(exports,arguments)
-},{"dup":157}],734:[function(require,module,exports){
+},{"dup":157}],863:[function(require,module,exports){
 arguments[4][158][0].apply(exports,arguments)
-},{"../lang/isObject":820,"dup":158}],735:[function(require,module,exports){
+},{"../lang/isObject":959,"dup":158}],864:[function(require,module,exports){
 arguments[4][159][0].apply(exports,arguments)
-},{"dup":159}],736:[function(require,module,exports){
+},{"dup":159}],865:[function(require,module,exports){
 arguments[4][160][0].apply(exports,arguments)
-},{"./baseIndexOf":750,"./cacheIndexOf":768,"./createCache":777,"dup":160}],737:[function(require,module,exports){
+},{"./baseIndexOf":879,"./cacheIndexOf":901,"./createCache":911,"dup":160}],866:[function(require,module,exports){
 arguments[4][161][0].apply(exports,arguments)
-},{"./baseForOwn":746,"./createBaseEach":774,"dup":161}],738:[function(require,module,exports){
+},{"./baseForOwn":875,"./createBaseEach":908,"dup":161}],867:[function(require,module,exports){
 var baseForOwnRight = require('./baseForOwnRight'),
     createBaseEach = require('./createBaseEach');
 
@@ -79830,23 +99386,23 @@ var baseEachRight = createBaseEach(baseForOwnRight, true);
 
 module.exports = baseEachRight;
 
-},{"./baseForOwnRight":747,"./createBaseEach":774}],739:[function(require,module,exports){
+},{"./baseForOwnRight":876,"./createBaseEach":908}],868:[function(require,module,exports){
 arguments[4][162][0].apply(exports,arguments)
-},{"./baseEach":737,"dup":162}],740:[function(require,module,exports){
+},{"./baseEach":866,"dup":162}],869:[function(require,module,exports){
 arguments[4][163][0].apply(exports,arguments)
-},{"./baseEach":737,"dup":163}],741:[function(require,module,exports){
+},{"./baseEach":866,"dup":163}],870:[function(require,module,exports){
 arguments[4][164][0].apply(exports,arguments)
-},{"dup":164}],742:[function(require,module,exports){
+},{"dup":164}],871:[function(require,module,exports){
 arguments[4][165][0].apply(exports,arguments)
-},{"dup":165}],743:[function(require,module,exports){
+},{"dup":165}],872:[function(require,module,exports){
 arguments[4][166][0].apply(exports,arguments)
-},{"../lang/isArguments":815,"../lang/isArray":816,"./arrayPush":727,"./isArrayLike":794,"./isObjectLike":800,"dup":166}],744:[function(require,module,exports){
+},{"../lang/isArguments":954,"../lang/isArray":955,"./arrayPush":854,"./isArrayLike":932,"./isObjectLike":938,"dup":166}],873:[function(require,module,exports){
 arguments[4][167][0].apply(exports,arguments)
-},{"./createBaseFor":775,"dup":167}],745:[function(require,module,exports){
+},{"./createBaseFor":909,"dup":167}],874:[function(require,module,exports){
 arguments[4][168][0].apply(exports,arguments)
-},{"../object/keysIn":827,"./baseFor":744,"dup":168}],746:[function(require,module,exports){
+},{"../object/keysIn":966,"./baseFor":873,"dup":168}],875:[function(require,module,exports){
 arguments[4][169][0].apply(exports,arguments)
-},{"../object/keys":826,"./baseFor":744,"dup":169}],747:[function(require,module,exports){
+},{"../object/keys":965,"./baseFor":873,"dup":169}],876:[function(require,module,exports){
 var baseForRight = require('./baseForRight'),
     keys = require('../object/keys');
 
@@ -79865,7 +99421,7 @@ function baseForOwnRight(object, iteratee) {
 
 module.exports = baseForOwnRight;
 
-},{"../object/keys":826,"./baseForRight":748}],748:[function(require,module,exports){
+},{"../object/keys":965,"./baseForRight":877}],877:[function(require,module,exports){
 var createBaseFor = require('./createBaseFor');
 
 /**
@@ -79882,41 +99438,66 @@ var baseForRight = createBaseFor(true);
 
 module.exports = baseForRight;
 
-},{"./createBaseFor":775}],749:[function(require,module,exports){
+},{"./createBaseFor":909}],878:[function(require,module,exports){
 arguments[4][170][0].apply(exports,arguments)
-},{"./toObject":812,"dup":170}],750:[function(require,module,exports){
+},{"./toObject":950,"dup":170}],879:[function(require,module,exports){
 arguments[4][171][0].apply(exports,arguments)
-},{"./indexOfNaN":793,"dup":171}],751:[function(require,module,exports){
+},{"./indexOfNaN":928,"dup":171}],880:[function(require,module,exports){
 arguments[4][172][0].apply(exports,arguments)
-},{"../lang/isObject":820,"./baseIsEqualDeep":752,"./isObjectLike":800,"dup":172}],752:[function(require,module,exports){
+},{"../lang/isObject":959,"./baseIsEqualDeep":881,"./isObjectLike":938,"dup":172}],881:[function(require,module,exports){
 arguments[4][173][0].apply(exports,arguments)
-},{"../lang/isArray":816,"../lang/isTypedArray":823,"./equalArrays":785,"./equalByTag":786,"./equalObjects":787,"dup":173}],753:[function(require,module,exports){
+},{"../lang/isArray":955,"../lang/isTypedArray":962,"./equalArrays":920,"./equalByTag":921,"./equalObjects":922,"dup":173}],882:[function(require,module,exports){
 arguments[4][174][0].apply(exports,arguments)
-},{"./baseIsEqual":751,"./toObject":812,"dup":174}],754:[function(require,module,exports){
+},{"./baseIsEqual":880,"./toObject":950,"dup":174}],883:[function(require,module,exports){
 arguments[4][175][0].apply(exports,arguments)
-},{"dup":175}],755:[function(require,module,exports){
+},{"dup":175}],884:[function(require,module,exports){
 arguments[4][176][0].apply(exports,arguments)
-},{"./baseEach":737,"./isArrayLike":794,"dup":176}],756:[function(require,module,exports){
+},{"./baseEach":866,"./isArrayLike":932,"dup":176}],885:[function(require,module,exports){
 arguments[4][177][0].apply(exports,arguments)
-},{"./baseIsMatch":753,"./getMatchData":791,"./toObject":812,"dup":177}],757:[function(require,module,exports){
+},{"./baseIsMatch":882,"./getMatchData":926,"./toObject":950,"dup":177}],886:[function(require,module,exports){
 arguments[4][178][0].apply(exports,arguments)
-},{"../array/last":700,"../lang/isArray":816,"./baseGet":749,"./baseIsEqual":751,"./baseSlice":764,"./isKey":797,"./isStrictComparable":801,"./toObject":812,"./toPath":813,"dup":178}],758:[function(require,module,exports){
+},{"../array/last":823,"../lang/isArray":955,"./baseGet":878,"./baseIsEqual":880,"./baseSlice":893,"./isKey":935,"./isStrictComparable":939,"./toObject":950,"./toPath":951,"dup":178}],887:[function(require,module,exports){
 arguments[4][179][0].apply(exports,arguments)
-},{"../lang/isArray":816,"../lang/isObject":820,"../lang/isTypedArray":823,"../object/keys":826,"./arrayEach":722,"./baseMergeDeep":759,"./isArrayLike":794,"./isObjectLike":800,"dup":179}],759:[function(require,module,exports){
+},{"../lang/isArray":955,"../lang/isObject":959,"../lang/isTypedArray":962,"../object/keys":965,"./arrayEach":849,"./baseMergeDeep":888,"./isArrayLike":932,"./isObjectLike":938,"dup":179}],888:[function(require,module,exports){
 arguments[4][180][0].apply(exports,arguments)
-},{"../lang/isArguments":815,"../lang/isArray":816,"../lang/isPlainObject":821,"../lang/isTypedArray":823,"../lang/toPlainObject":824,"./arrayCopy":721,"./isArrayLike":794,"dup":180}],760:[function(require,module,exports){
+},{"../lang/isArguments":954,"../lang/isArray":955,"../lang/isPlainObject":960,"../lang/isTypedArray":962,"../lang/toPlainObject":963,"./arrayCopy":848,"./isArrayLike":932,"dup":180}],889:[function(require,module,exports){
 arguments[4][181][0].apply(exports,arguments)
-},{"dup":181}],761:[function(require,module,exports){
+},{"dup":181}],890:[function(require,module,exports){
 arguments[4][182][0].apply(exports,arguments)
-},{"./baseGet":749,"./toPath":813,"dup":182}],762:[function(require,module,exports){
+},{"./baseGet":878,"./toPath":951,"dup":182}],891:[function(require,module,exports){
 arguments[4][183][0].apply(exports,arguments)
-},{"dup":183}],763:[function(require,module,exports){
+},{"dup":183}],892:[function(require,module,exports){
 arguments[4][184][0].apply(exports,arguments)
-},{"../utility/identity":832,"./metaMap":803,"dup":184}],764:[function(require,module,exports){
+},{"../utility/identity":973,"./metaMap":941,"dup":184}],893:[function(require,module,exports){
 arguments[4][185][0].apply(exports,arguments)
-},{"dup":185}],765:[function(require,module,exports){
+},{"dup":185}],894:[function(require,module,exports){
+arguments[4][186][0].apply(exports,arguments)
+},{"./baseEach":866,"dup":186}],895:[function(require,module,exports){
+/**
+ * The base implementation of `_.sortBy` which uses `comparer` to define
+ * the sort order of `array` and replaces criteria objects with their
+ * corresponding values.
+ *
+ * @private
+ * @param {Array} array The array to sort.
+ * @param {Function} comparer The function to define sort order.
+ * @returns {Array} Returns `array`.
+ */
+function baseSortBy(array, comparer) {
+  var length = array.length;
+
+  array.sort(comparer);
+  while (length--) {
+    array[length] = array[length].value;
+  }
+  return array;
+}
+
+module.exports = baseSortBy;
+
+},{}],896:[function(require,module,exports){
 arguments[4][187][0].apply(exports,arguments)
-},{"dup":187}],766:[function(require,module,exports){
+},{"dup":187}],897:[function(require,module,exports){
 var baseIndexOf = require('./baseIndexOf'),
     cacheIndexOf = require('./cacheIndexOf'),
     createCache = require('./createCache');
@@ -79978,95 +99559,273 @@ function baseUniq(array, iteratee) {
 
 module.exports = baseUniq;
 
-},{"./baseIndexOf":750,"./cacheIndexOf":768,"./createCache":777}],767:[function(require,module,exports){
+},{"./baseIndexOf":879,"./cacheIndexOf":901,"./createCache":911}],898:[function(require,module,exports){
+arguments[4][188][0].apply(exports,arguments)
+},{"dup":188}],899:[function(require,module,exports){
 arguments[4][189][0].apply(exports,arguments)
-},{"../utility/identity":832,"dup":189}],768:[function(require,module,exports){
+},{"../utility/identity":973,"dup":189}],900:[function(require,module,exports){
+(function (global){
+/** Native method references. */
+var ArrayBuffer = global.ArrayBuffer,
+    Uint8Array = global.Uint8Array;
+
+/**
+ * Creates a clone of the given array buffer.
+ *
+ * @private
+ * @param {ArrayBuffer} buffer The array buffer to clone.
+ * @returns {ArrayBuffer} Returns the cloned array buffer.
+ */
+function bufferClone(buffer) {
+  var result = new ArrayBuffer(buffer.byteLength),
+      view = new Uint8Array(result);
+
+  view.set(new Uint8Array(buffer));
+  return result;
+}
+
+module.exports = bufferClone;
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}],901:[function(require,module,exports){
 arguments[4][190][0].apply(exports,arguments)
-},{"../lang/isObject":820,"dup":190}],769:[function(require,module,exports){
+},{"../lang/isObject":959,"dup":190}],902:[function(require,module,exports){
 arguments[4][191][0].apply(exports,arguments)
-},{"../lang/isObject":820,"dup":191}],770:[function(require,module,exports){
+},{"../lang/isObject":959,"dup":191}],903:[function(require,module,exports){
+var baseCompareAscending = require('./baseCompareAscending');
+
+/**
+ * Used by `_.sortBy` to compare transformed elements of a collection and stable
+ * sort them in ascending order.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @returns {number} Returns the sort order indicator for `object`.
+ */
+function compareAscending(object, other) {
+  return baseCompareAscending(object.criteria, other.criteria) || (object.index - other.index);
+}
+
+module.exports = compareAscending;
+
+},{"./baseCompareAscending":861}],904:[function(require,module,exports){
 arguments[4][192][0].apply(exports,arguments)
-},{"dup":192}],771:[function(require,module,exports){
+},{"dup":192}],905:[function(require,module,exports){
 arguments[4][193][0].apply(exports,arguments)
-},{"dup":193}],772:[function(require,module,exports){
+},{"dup":193}],906:[function(require,module,exports){
 arguments[4][194][0].apply(exports,arguments)
-},{"../lang/isArray":816,"./baseCallback":732,"./baseEach":737,"dup":194}],773:[function(require,module,exports){
+},{"../lang/isArray":955,"./baseCallback":859,"./baseEach":866,"dup":194}],907:[function(require,module,exports){
 arguments[4][195][0].apply(exports,arguments)
-},{"../function/restParam":717,"./bindCallback":767,"./isIterateeCall":796,"dup":195}],774:[function(require,module,exports){
+},{"../function/restParam":844,"./bindCallback":899,"./isIterateeCall":934,"dup":195}],908:[function(require,module,exports){
 arguments[4][196][0].apply(exports,arguments)
-},{"./getLength":790,"./isLength":799,"./toObject":812,"dup":196}],775:[function(require,module,exports){
+},{"./getLength":925,"./isLength":937,"./toObject":950,"dup":196}],909:[function(require,module,exports){
 arguments[4][197][0].apply(exports,arguments)
-},{"./toObject":812,"dup":197}],776:[function(require,module,exports){
+},{"./toObject":950,"dup":197}],910:[function(require,module,exports){
 arguments[4][198][0].apply(exports,arguments)
-},{"./createCtorWrapper":778,"dup":198}],777:[function(require,module,exports){
+},{"./createCtorWrapper":912,"dup":198}],911:[function(require,module,exports){
 arguments[4][199][0].apply(exports,arguments)
-},{"./SetCache":720,"./getNative":792,"dup":199}],778:[function(require,module,exports){
+},{"./SetCache":847,"./getNative":927,"dup":199}],912:[function(require,module,exports){
 arguments[4][200][0].apply(exports,arguments)
-},{"../lang/isObject":820,"./baseCreate":734,"dup":200}],779:[function(require,module,exports){
+},{"../lang/isObject":959,"./baseCreate":863,"dup":200}],913:[function(require,module,exports){
 arguments[4][201][0].apply(exports,arguments)
-},{"../lang/isArray":816,"./baseCallback":732,"./baseFind":741,"./baseFindIndex":742,"dup":201}],780:[function(require,module,exports){
+},{"../lang/isArray":955,"./baseCallback":859,"./baseFind":870,"./baseFindIndex":871,"dup":201}],914:[function(require,module,exports){
+var baseCallback = require('./baseCallback'),
+    baseFindIndex = require('./baseFindIndex');
+
+/**
+ * Creates a `_.findIndex` or `_.findLastIndex` function.
+ *
+ * @private
+ * @param {boolean} [fromRight] Specify iterating from right to left.
+ * @returns {Function} Returns the new find function.
+ */
+function createFindIndex(fromRight) {
+  return function(array, predicate, thisArg) {
+    if (!(array && array.length)) {
+      return -1;
+    }
+    predicate = baseCallback(predicate, thisArg, 3);
+    return baseFindIndex(array, predicate, fromRight);
+  };
+}
+
+module.exports = createFindIndex;
+
+},{"./baseCallback":859,"./baseFindIndex":871}],915:[function(require,module,exports){
 arguments[4][202][0].apply(exports,arguments)
-},{"../lang/isArray":816,"./bindCallback":767,"dup":202}],781:[function(require,module,exports){
+},{"../lang/isArray":955,"./bindCallback":899,"dup":202}],916:[function(require,module,exports){
 arguments[4][203][0].apply(exports,arguments)
-},{"./arrayCopy":721,"./composeArgs":770,"./composeArgsRight":771,"./createCtorWrapper":778,"./isLaziable":798,"./reorder":807,"./replaceHolders":808,"./setData":809,"dup":203}],782:[function(require,module,exports){
+},{"./arrayCopy":848,"./composeArgs":904,"./composeArgsRight":905,"./createCtorWrapper":912,"./isLaziable":936,"./reorder":945,"./replaceHolders":946,"./setData":947,"dup":203}],917:[function(require,module,exports){
 arguments[4][204][0].apply(exports,arguments)
-},{"./createCtorWrapper":778,"dup":204}],783:[function(require,module,exports){
+},{"./createCtorWrapper":912,"dup":204}],918:[function(require,module,exports){
 arguments[4][205][0].apply(exports,arguments)
-},{"../lang/isArray":816,"./baseCallback":732,"./baseReduce":762,"dup":205}],784:[function(require,module,exports){
+},{"../lang/isArray":955,"./baseCallback":859,"./baseReduce":891,"dup":205}],919:[function(require,module,exports){
 arguments[4][206][0].apply(exports,arguments)
-},{"./baseSetData":763,"./createBindWrapper":776,"./createHybridWrapper":781,"./createPartialWrapper":782,"./getData":788,"./mergeData":802,"./setData":809,"dup":206}],785:[function(require,module,exports){
+},{"./baseSetData":892,"./createBindWrapper":910,"./createHybridWrapper":916,"./createPartialWrapper":917,"./getData":923,"./mergeData":940,"./setData":947,"dup":206}],920:[function(require,module,exports){
 arguments[4][207][0].apply(exports,arguments)
-},{"./arraySome":729,"dup":207}],786:[function(require,module,exports){
+},{"./arraySome":856,"dup":207}],921:[function(require,module,exports){
 arguments[4][208][0].apply(exports,arguments)
-},{"dup":208}],787:[function(require,module,exports){
+},{"dup":208}],922:[function(require,module,exports){
 arguments[4][209][0].apply(exports,arguments)
-},{"../object/keys":826,"dup":209}],788:[function(require,module,exports){
+},{"../object/keys":965,"dup":209}],923:[function(require,module,exports){
 arguments[4][210][0].apply(exports,arguments)
-},{"../utility/noop":833,"./metaMap":803,"dup":210}],789:[function(require,module,exports){
+},{"../utility/noop":974,"./metaMap":941,"dup":210}],924:[function(require,module,exports){
 arguments[4][211][0].apply(exports,arguments)
-},{"./realNames":806,"dup":211}],790:[function(require,module,exports){
+},{"./realNames":944,"dup":211}],925:[function(require,module,exports){
 arguments[4][212][0].apply(exports,arguments)
-},{"./baseProperty":760,"dup":212}],791:[function(require,module,exports){
+},{"./baseProperty":889,"dup":212}],926:[function(require,module,exports){
 arguments[4][213][0].apply(exports,arguments)
-},{"../object/pairs":830,"./isStrictComparable":801,"dup":213}],792:[function(require,module,exports){
+},{"../object/pairs":969,"./isStrictComparable":939,"dup":213}],927:[function(require,module,exports){
 arguments[4][214][0].apply(exports,arguments)
-},{"../lang/isNative":818,"dup":214}],793:[function(require,module,exports){
+},{"../lang/isNative":957,"dup":214}],928:[function(require,module,exports){
 arguments[4][215][0].apply(exports,arguments)
-},{"dup":215}],794:[function(require,module,exports){
+},{"dup":215}],929:[function(require,module,exports){
+/** Used for native method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Initializes an array clone.
+ *
+ * @private
+ * @param {Array} array The array to clone.
+ * @returns {Array} Returns the initialized clone.
+ */
+function initCloneArray(array) {
+  var length = array.length,
+      result = new array.constructor(length);
+
+  // Add array properties assigned by `RegExp#exec`.
+  if (length && typeof array[0] == 'string' && hasOwnProperty.call(array, 'index')) {
+    result.index = array.index;
+    result.input = array.input;
+  }
+  return result;
+}
+
+module.exports = initCloneArray;
+
+},{}],930:[function(require,module,exports){
+var bufferClone = require('./bufferClone');
+
+/** `Object#toString` result references. */
+var boolTag = '[object Boolean]',
+    dateTag = '[object Date]',
+    numberTag = '[object Number]',
+    regexpTag = '[object RegExp]',
+    stringTag = '[object String]';
+
+var arrayBufferTag = '[object ArrayBuffer]',
+    float32Tag = '[object Float32Array]',
+    float64Tag = '[object Float64Array]',
+    int8Tag = '[object Int8Array]',
+    int16Tag = '[object Int16Array]',
+    int32Tag = '[object Int32Array]',
+    uint8Tag = '[object Uint8Array]',
+    uint8ClampedTag = '[object Uint8ClampedArray]',
+    uint16Tag = '[object Uint16Array]',
+    uint32Tag = '[object Uint32Array]';
+
+/** Used to match `RegExp` flags from their coerced string values. */
+var reFlags = /\w*$/;
+
+/**
+ * Initializes an object clone based on its `toStringTag`.
+ *
+ * **Note:** This function only supports cloning values with tags of
+ * `Boolean`, `Date`, `Error`, `Number`, `RegExp`, or `String`.
+ *
+ * @private
+ * @param {Object} object The object to clone.
+ * @param {string} tag The `toStringTag` of the object to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the initialized clone.
+ */
+function initCloneByTag(object, tag, isDeep) {
+  var Ctor = object.constructor;
+  switch (tag) {
+    case arrayBufferTag:
+      return bufferClone(object);
+
+    case boolTag:
+    case dateTag:
+      return new Ctor(+object);
+
+    case float32Tag: case float64Tag:
+    case int8Tag: case int16Tag: case int32Tag:
+    case uint8Tag: case uint8ClampedTag: case uint16Tag: case uint32Tag:
+      var buffer = object.buffer;
+      return new Ctor(isDeep ? bufferClone(buffer) : buffer, object.byteOffset, object.length);
+
+    case numberTag:
+    case stringTag:
+      return new Ctor(object);
+
+    case regexpTag:
+      var result = new Ctor(object.source, reFlags.exec(object));
+      result.lastIndex = object.lastIndex;
+  }
+  return result;
+}
+
+module.exports = initCloneByTag;
+
+},{"./bufferClone":900}],931:[function(require,module,exports){
+/**
+ * Initializes an object clone.
+ *
+ * @private
+ * @param {Object} object The object to clone.
+ * @returns {Object} Returns the initialized clone.
+ */
+function initCloneObject(object) {
+  var Ctor = object.constructor;
+  if (!(typeof Ctor == 'function' && Ctor instanceof Ctor)) {
+    Ctor = Object;
+  }
+  return new Ctor;
+}
+
+module.exports = initCloneObject;
+
+},{}],932:[function(require,module,exports){
 arguments[4][216][0].apply(exports,arguments)
-},{"./getLength":790,"./isLength":799,"dup":216}],795:[function(require,module,exports){
+},{"./getLength":925,"./isLength":937,"dup":216}],933:[function(require,module,exports){
 arguments[4][217][0].apply(exports,arguments)
-},{"dup":217}],796:[function(require,module,exports){
+},{"dup":217}],934:[function(require,module,exports){
 arguments[4][218][0].apply(exports,arguments)
-},{"../lang/isObject":820,"./isArrayLike":794,"./isIndex":795,"dup":218}],797:[function(require,module,exports){
+},{"../lang/isObject":959,"./isArrayLike":932,"./isIndex":933,"dup":218}],935:[function(require,module,exports){
 arguments[4][219][0].apply(exports,arguments)
-},{"../lang/isArray":816,"./toObject":812,"dup":219}],798:[function(require,module,exports){
+},{"../lang/isArray":955,"./toObject":950,"dup":219}],936:[function(require,module,exports){
 arguments[4][220][0].apply(exports,arguments)
-},{"../chain/lodash":704,"./LazyWrapper":718,"./getData":788,"./getFuncName":789,"dup":220}],799:[function(require,module,exports){
+},{"../chain/lodash":827,"./LazyWrapper":845,"./getData":923,"./getFuncName":924,"dup":220}],937:[function(require,module,exports){
 arguments[4][221][0].apply(exports,arguments)
-},{"dup":221}],800:[function(require,module,exports){
+},{"dup":221}],938:[function(require,module,exports){
 arguments[4][222][0].apply(exports,arguments)
-},{"dup":222}],801:[function(require,module,exports){
+},{"dup":222}],939:[function(require,module,exports){
 arguments[4][223][0].apply(exports,arguments)
-},{"../lang/isObject":820,"dup":223}],802:[function(require,module,exports){
+},{"../lang/isObject":959,"dup":223}],940:[function(require,module,exports){
 arguments[4][224][0].apply(exports,arguments)
-},{"./arrayCopy":721,"./composeArgs":770,"./composeArgsRight":771,"./replaceHolders":808,"dup":224}],803:[function(require,module,exports){
+},{"./arrayCopy":848,"./composeArgs":904,"./composeArgsRight":905,"./replaceHolders":946,"dup":224}],941:[function(require,module,exports){
 arguments[4][225][0].apply(exports,arguments)
-},{"./getNative":792,"dup":225}],804:[function(require,module,exports){
+},{"./getNative":927,"dup":225}],942:[function(require,module,exports){
 arguments[4][226][0].apply(exports,arguments)
-},{"./toObject":812,"dup":226}],805:[function(require,module,exports){
+},{"./toObject":950,"dup":226}],943:[function(require,module,exports){
 arguments[4][227][0].apply(exports,arguments)
-},{"./baseForIn":745,"dup":227}],806:[function(require,module,exports){
+},{"./baseForIn":874,"dup":227}],944:[function(require,module,exports){
 arguments[4][228][0].apply(exports,arguments)
-},{"dup":228}],807:[function(require,module,exports){
+},{"dup":228}],945:[function(require,module,exports){
 arguments[4][229][0].apply(exports,arguments)
-},{"./arrayCopy":721,"./isIndex":795,"dup":229}],808:[function(require,module,exports){
+},{"./arrayCopy":848,"./isIndex":933,"dup":229}],946:[function(require,module,exports){
 arguments[4][230][0].apply(exports,arguments)
-},{"dup":230}],809:[function(require,module,exports){
+},{"dup":230}],947:[function(require,module,exports){
 arguments[4][231][0].apply(exports,arguments)
-},{"../date/now":713,"./baseSetData":763,"dup":231}],810:[function(require,module,exports){
+},{"../date/now":840,"./baseSetData":892,"dup":231}],948:[function(require,module,exports){
 arguments[4][232][0].apply(exports,arguments)
-},{"../lang/isArguments":815,"../lang/isArray":816,"../object/keysIn":827,"./isIndex":795,"./isLength":799,"dup":232}],811:[function(require,module,exports){
+},{"../lang/isArguments":954,"../lang/isArray":955,"../object/keysIn":966,"./isIndex":933,"./isLength":937,"dup":232}],949:[function(require,module,exports){
 /**
  * An implementation of `_.uniq` optimized for sorted arrays without support
  * for callback shorthands and `this` binding.
@@ -80097,95 +99856,232 @@ function sortedUniq(array, iteratee) {
 
 module.exports = sortedUniq;
 
-},{}],812:[function(require,module,exports){
+},{}],950:[function(require,module,exports){
 arguments[4][233][0].apply(exports,arguments)
-},{"../lang/isObject":820,"dup":233}],813:[function(require,module,exports){
+},{"../lang/isObject":959,"dup":233}],951:[function(require,module,exports){
 arguments[4][234][0].apply(exports,arguments)
-},{"../lang/isArray":816,"./baseToString":765,"dup":234}],814:[function(require,module,exports){
+},{"../lang/isArray":955,"./baseToString":896,"dup":234}],952:[function(require,module,exports){
 arguments[4][235][0].apply(exports,arguments)
-},{"./LazyWrapper":718,"./LodashWrapper":719,"./arrayCopy":721,"dup":235}],815:[function(require,module,exports){
+},{"./LazyWrapper":845,"./LodashWrapper":846,"./arrayCopy":848,"dup":235}],953:[function(require,module,exports){
+var baseClone = require('../internal/baseClone'),
+    bindCallback = require('../internal/bindCallback'),
+    isIterateeCall = require('../internal/isIterateeCall');
+
+/**
+ * Creates a clone of `value`. If `isDeep` is `true` nested objects are cloned,
+ * otherwise they are assigned by reference. If `customizer` is provided it's
+ * invoked to produce the cloned values. If `customizer` returns `undefined`
+ * cloning is handled by the method instead. The `customizer` is bound to
+ * `thisArg` and invoked with up to three argument; (value [, index|key, object]).
+ *
+ * **Note:** This method is loosely based on the
+ * [structured clone algorithm](http://www.w3.org/TR/html5/infrastructure.html#internal-structured-cloning-algorithm).
+ * The enumerable properties of `arguments` objects and objects created by
+ * constructors other than `Object` are cloned to plain `Object` objects. An
+ * empty object is returned for uncloneable values such as functions, DOM nodes,
+ * Maps, Sets, and WeakMaps.
+ *
+ * @static
+ * @memberOf _
+ * @category Lang
+ * @param {*} value The value to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @param {Function} [customizer] The function to customize cloning values.
+ * @param {*} [thisArg] The `this` binding of `customizer`.
+ * @returns {*} Returns the cloned value.
+ * @example
+ *
+ * var users = [
+ *   { 'user': 'barney' },
+ *   { 'user': 'fred' }
+ * ];
+ *
+ * var shallow = _.clone(users);
+ * shallow[0] === users[0];
+ * // => true
+ *
+ * var deep = _.clone(users, true);
+ * deep[0] === users[0];
+ * // => false
+ *
+ * // using a customizer callback
+ * var el = _.clone(document.body, function(value) {
+ *   if (_.isElement(value)) {
+ *     return value.cloneNode(false);
+ *   }
+ * });
+ *
+ * el === document.body
+ * // => false
+ * el.nodeName
+ * // => BODY
+ * el.childNodes.length;
+ * // => 0
+ */
+function clone(value, isDeep, customizer, thisArg) {
+  if (isDeep && typeof isDeep != 'boolean' && isIterateeCall(value, isDeep, customizer)) {
+    isDeep = false;
+  }
+  else if (typeof isDeep == 'function') {
+    thisArg = customizer;
+    customizer = isDeep;
+    isDeep = false;
+  }
+  return typeof customizer == 'function'
+    ? baseClone(value, isDeep, bindCallback(customizer, thisArg, 3))
+    : baseClone(value, isDeep);
+}
+
+module.exports = clone;
+
+},{"../internal/baseClone":860,"../internal/bindCallback":899,"../internal/isIterateeCall":934}],954:[function(require,module,exports){
 arguments[4][236][0].apply(exports,arguments)
-},{"../internal/isArrayLike":794,"../internal/isObjectLike":800,"dup":236}],816:[function(require,module,exports){
+},{"../internal/isArrayLike":932,"../internal/isObjectLike":938,"dup":236}],955:[function(require,module,exports){
 arguments[4][237][0].apply(exports,arguments)
-},{"../internal/getNative":792,"../internal/isLength":799,"../internal/isObjectLike":800,"dup":237}],817:[function(require,module,exports){
+},{"../internal/getNative":927,"../internal/isLength":937,"../internal/isObjectLike":938,"dup":237}],956:[function(require,module,exports){
 arguments[4][238][0].apply(exports,arguments)
-},{"./isObject":820,"dup":238}],818:[function(require,module,exports){
+},{"./isObject":959,"dup":238}],957:[function(require,module,exports){
 arguments[4][239][0].apply(exports,arguments)
-},{"../internal/isObjectLike":800,"./isFunction":817,"dup":239}],819:[function(require,module,exports){
+},{"../internal/isObjectLike":938,"./isFunction":956,"dup":239}],958:[function(require,module,exports){
 arguments[4][240][0].apply(exports,arguments)
-},{"../internal/isObjectLike":800,"dup":240}],820:[function(require,module,exports){
+},{"../internal/isObjectLike":938,"dup":240}],959:[function(require,module,exports){
 arguments[4][241][0].apply(exports,arguments)
-},{"dup":241}],821:[function(require,module,exports){
+},{"dup":241}],960:[function(require,module,exports){
 arguments[4][242][0].apply(exports,arguments)
-},{"../internal/baseForIn":745,"../internal/isObjectLike":800,"./isArguments":815,"dup":242}],822:[function(require,module,exports){
+},{"../internal/baseForIn":874,"../internal/isObjectLike":938,"./isArguments":954,"dup":242}],961:[function(require,module,exports){
 arguments[4][243][0].apply(exports,arguments)
-},{"../internal/isObjectLike":800,"dup":243}],823:[function(require,module,exports){
+},{"../internal/isObjectLike":938,"dup":243}],962:[function(require,module,exports){
 arguments[4][244][0].apply(exports,arguments)
-},{"../internal/isLength":799,"../internal/isObjectLike":800,"dup":244}],824:[function(require,module,exports){
+},{"../internal/isLength":937,"../internal/isObjectLike":938,"dup":244}],963:[function(require,module,exports){
 arguments[4][245][0].apply(exports,arguments)
-},{"../internal/baseCopy":733,"../object/keysIn":827,"dup":245}],825:[function(require,module,exports){
+},{"../internal/baseCopy":862,"../object/keysIn":966,"dup":245}],964:[function(require,module,exports){
 arguments[4][246][0].apply(exports,arguments)
-},{"../internal/assignWith":730,"../internal/baseAssign":731,"../internal/createAssigner":773,"dup":246}],826:[function(require,module,exports){
+},{"../internal/assignWith":857,"../internal/baseAssign":858,"../internal/createAssigner":907,"dup":246}],965:[function(require,module,exports){
 arguments[4][247][0].apply(exports,arguments)
-},{"../internal/getNative":792,"../internal/isArrayLike":794,"../internal/shimKeys":810,"../lang/isObject":820,"dup":247}],827:[function(require,module,exports){
+},{"../internal/getNative":927,"../internal/isArrayLike":932,"../internal/shimKeys":948,"../lang/isObject":959,"dup":247}],966:[function(require,module,exports){
 arguments[4][248][0].apply(exports,arguments)
-},{"../internal/isIndex":795,"../internal/isLength":799,"../lang/isArguments":815,"../lang/isArray":816,"../lang/isObject":820,"dup":248}],828:[function(require,module,exports){
+},{"../internal/isIndex":933,"../internal/isLength":937,"../lang/isArguments":954,"../lang/isArray":955,"../lang/isObject":959,"dup":248}],967:[function(require,module,exports){
 arguments[4][249][0].apply(exports,arguments)
-},{"../internal/baseMerge":758,"../internal/createAssigner":773,"dup":249}],829:[function(require,module,exports){
+},{"../internal/baseMerge":887,"../internal/createAssigner":907,"dup":249}],968:[function(require,module,exports){
 arguments[4][250][0].apply(exports,arguments)
-},{"../function/restParam":717,"../internal/arrayMap":726,"../internal/baseDifference":736,"../internal/baseFlatten":743,"../internal/bindCallback":767,"../internal/pickByArray":804,"../internal/pickByCallback":805,"./keysIn":827,"dup":250}],830:[function(require,module,exports){
+},{"../function/restParam":844,"../internal/arrayMap":853,"../internal/baseDifference":865,"../internal/baseFlatten":872,"../internal/bindCallback":899,"../internal/pickByArray":942,"../internal/pickByCallback":943,"./keysIn":966,"dup":250}],969:[function(require,module,exports){
 arguments[4][251][0].apply(exports,arguments)
-},{"../internal/toObject":812,"./keys":826,"dup":251}],831:[function(require,module,exports){
+},{"../internal/toObject":950,"./keys":965,"dup":251}],970:[function(require,module,exports){
 arguments[4][252][0].apply(exports,arguments)
-},{"../function/restParam":717,"../internal/baseFlatten":743,"../internal/bindCallback":767,"../internal/pickByArray":804,"../internal/pickByCallback":805,"dup":252}],832:[function(require,module,exports){
+},{"../function/restParam":844,"../internal/baseFlatten":872,"../internal/bindCallback":899,"../internal/pickByArray":942,"../internal/pickByCallback":943,"dup":252}],971:[function(require,module,exports){
+var arrayEach = require('../internal/arrayEach'),
+    baseCallback = require('../internal/baseCallback'),
+    baseCreate = require('../internal/baseCreate'),
+    baseForOwn = require('../internal/baseForOwn'),
+    isArray = require('../lang/isArray'),
+    isFunction = require('../lang/isFunction'),
+    isObject = require('../lang/isObject'),
+    isTypedArray = require('../lang/isTypedArray');
+
+/**
+ * An alternative to `_.reduce`; this method transforms `object` to a new
+ * `accumulator` object which is the result of running each of its own enumerable
+ * properties through `iteratee`, with each invocation potentially mutating
+ * the `accumulator` object. The `iteratee` is bound to `thisArg` and invoked
+ * with four arguments: (accumulator, value, key, object). Iteratee functions
+ * may exit iteration early by explicitly returning `false`.
+ *
+ * @static
+ * @memberOf _
+ * @category Object
+ * @param {Array|Object} object The object to iterate over.
+ * @param {Function} [iteratee=_.identity] The function invoked per iteration.
+ * @param {*} [accumulator] The custom accumulator value.
+ * @param {*} [thisArg] The `this` binding of `iteratee`.
+ * @returns {*} Returns the accumulated value.
+ * @example
+ *
+ * _.transform([2, 3, 4], function(result, n) {
+ *   result.push(n *= n);
+ *   return n % 2 == 0;
+ * });
+ * // => [4, 9]
+ *
+ * _.transform({ 'a': 1, 'b': 2 }, function(result, n, key) {
+ *   result[key] = n * 3;
+ * });
+ * // => { 'a': 3, 'b': 6 }
+ */
+function transform(object, iteratee, accumulator, thisArg) {
+  var isArr = isArray(object) || isTypedArray(object);
+  iteratee = baseCallback(iteratee, thisArg, 4);
+
+  if (accumulator == null) {
+    if (isArr || isObject(object)) {
+      var Ctor = object.constructor;
+      if (isArr) {
+        accumulator = isArray(object) ? new Ctor : [];
+      } else {
+        accumulator = baseCreate(isFunction(Ctor) ? Ctor.prototype : undefined);
+      }
+    } else {
+      accumulator = {};
+    }
+  }
+  (isArr ? arrayEach : baseForOwn)(object, function(value, index, object) {
+    return iteratee(accumulator, value, index, object);
+  });
+  return accumulator;
+}
+
+module.exports = transform;
+
+},{"../internal/arrayEach":849,"../internal/baseCallback":859,"../internal/baseCreate":863,"../internal/baseForOwn":875,"../lang/isArray":955,"../lang/isFunction":956,"../lang/isObject":959,"../lang/isTypedArray":962}],972:[function(require,module,exports){
+arguments[4][253][0].apply(exports,arguments)
+},{"../internal/baseValues":898,"./keys":965,"dup":253}],973:[function(require,module,exports){
 arguments[4][254][0].apply(exports,arguments)
-},{"dup":254}],833:[function(require,module,exports){
+},{"dup":254}],974:[function(require,module,exports){
 arguments[4][255][0].apply(exports,arguments)
-},{"dup":255}],834:[function(require,module,exports){
+},{"dup":255}],975:[function(require,module,exports){
 arguments[4][256][0].apply(exports,arguments)
-},{"../internal/baseProperty":760,"../internal/basePropertyDeep":761,"../internal/isKey":797,"dup":256}],835:[function(require,module,exports){
+},{"../internal/baseProperty":889,"../internal/basePropertyDeep":890,"../internal/isKey":935,"dup":256}],976:[function(require,module,exports){
 arguments[4][501][0].apply(exports,arguments)
-},{"dup":501}],836:[function(require,module,exports){
+},{"dup":501}],977:[function(require,module,exports){
 arguments[4][257][0].apply(exports,arguments)
-},{"component-classes":845,"dup":257}],837:[function(require,module,exports){
+},{"component-classes":986,"dup":257}],978:[function(require,module,exports){
 arguments[4][258][0].apply(exports,arguments)
-},{"dup":258}],838:[function(require,module,exports){
+},{"dup":258}],979:[function(require,module,exports){
 arguments[4][504][0].apply(exports,arguments)
-},{"component-closest":847,"dup":504}],839:[function(require,module,exports){
+},{"component-closest":988,"dup":504}],980:[function(require,module,exports){
 arguments[4][259][0].apply(exports,arguments)
-},{"component-delegate":848,"dup":259}],840:[function(require,module,exports){
+},{"component-delegate":989,"dup":259}],981:[function(require,module,exports){
 arguments[4][260][0].apply(exports,arguments)
-},{"domify":852,"dup":260}],841:[function(require,module,exports){
+},{"domify":993,"dup":260}],982:[function(require,module,exports){
 arguments[4][261][0].apply(exports,arguments)
-},{"component-event":849,"dup":261}],842:[function(require,module,exports){
+},{"component-event":990,"dup":261}],983:[function(require,module,exports){
 module.exports = require('component-matches-selector');
-},{"component-matches-selector":850}],843:[function(require,module,exports){
+},{"component-matches-selector":991}],984:[function(require,module,exports){
 arguments[4][262][0].apply(exports,arguments)
-},{"component-query":851,"dup":262}],844:[function(require,module,exports){
+},{"component-query":992,"dup":262}],985:[function(require,module,exports){
 arguments[4][263][0].apply(exports,arguments)
-},{"dup":263}],845:[function(require,module,exports){
+},{"dup":263}],986:[function(require,module,exports){
 arguments[4][264][0].apply(exports,arguments)
-},{"component-indexof":846,"dup":264,"indexof":846}],846:[function(require,module,exports){
+},{"component-indexof":987,"dup":264,"indexof":987}],987:[function(require,module,exports){
 arguments[4][265][0].apply(exports,arguments)
-},{"dup":265}],847:[function(require,module,exports){
+},{"dup":265}],988:[function(require,module,exports){
 arguments[4][266][0].apply(exports,arguments)
-},{"dup":266,"matches-selector":850}],848:[function(require,module,exports){
+},{"dup":266,"matches-selector":991}],989:[function(require,module,exports){
 arguments[4][267][0].apply(exports,arguments)
-},{"closest":847,"component-closest":847,"component-event":849,"dup":267,"event":849}],849:[function(require,module,exports){
+},{"closest":988,"component-closest":988,"component-event":990,"dup":267,"event":990}],990:[function(require,module,exports){
 arguments[4][268][0].apply(exports,arguments)
-},{"dup":268}],850:[function(require,module,exports){
+},{"dup":268}],991:[function(require,module,exports){
 arguments[4][269][0].apply(exports,arguments)
-},{"component-query":851,"dup":269,"query":851}],851:[function(require,module,exports){
+},{"component-query":992,"dup":269,"query":992}],992:[function(require,module,exports){
 arguments[4][270][0].apply(exports,arguments)
-},{"dup":270}],852:[function(require,module,exports){
+},{"dup":270}],993:[function(require,module,exports){
 arguments[4][271][0].apply(exports,arguments)
-},{"dup":271}],853:[function(require,module,exports){
+},{"dup":271}],994:[function(require,module,exports){
 arguments[4][272][0].apply(exports,arguments)
-},{"./lib/collection":854,"./lib/refs":855,"dup":272}],854:[function(require,module,exports){
+},{"./lib/collection":995,"./lib/refs":996,"dup":272}],995:[function(require,module,exports){
 arguments[4][273][0].apply(exports,arguments)
-},{"dup":273}],855:[function(require,module,exports){
+},{"dup":273}],996:[function(require,module,exports){
 arguments[4][274][0].apply(exports,arguments)
-},{"./collection":854,"dup":274}],856:[function(require,module,exports){
+},{"./collection":995,"dup":274}],997:[function(require,module,exports){
 'use strict';
 
 /**
@@ -80337,10 +100233,10 @@ function splitStr(str, position) {
     after: str.substring(position)
   };
 }
-},{}],857:[function(require,module,exports){
+},{}],998:[function(require,module,exports){
 module.exports = require('./lib/Table');
 
-},{"./lib/Table":858}],858:[function(require,module,exports){
+},{"./lib/Table":999}],999:[function(require,module,exports){
 'use strict';
 
 var di = require('didi');
@@ -80520,7 +100416,7 @@ Table.prototype.clear = function() {
   this.get('eventBus').fire('diagram.clear');
 };
 
-},{"./core":863,"didi":912}],859:[function(require,module,exports){
+},{"./core":1004,"didi":1064}],1000:[function(require,module,exports){
 'use strict';
 
 var Model = require('../model');
@@ -80568,7 +100464,7 @@ ElementFactory.prototype.create = function(type, attrs) {
   return Model.create(type, attrs);
 };
 
-},{"../model":910}],860:[function(require,module,exports){
+},{"../model":1051}],1001:[function(require,module,exports){
 'use strict';
 
 var ELEMENT_ID = 'data-element-id';
@@ -80769,7 +100665,7 @@ ElementRegistry.prototype._validateId = function(id) {
   }
 };
 
-},{}],861:[function(require,module,exports){
+},{}],1002:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -80912,7 +100808,7 @@ GraphicsFactory.prototype.remove = function(element) {
   gfx.parentNode && gfx.parentNode.removeChild(gfx);
 };
 
-},{"lodash/collection/forEach":708}],862:[function(require,module,exports){
+},{"lodash/collection/forEach":832}],1003:[function(require,module,exports){
 'use strict';
 
 var isNumber = require('lodash/lang/isNumber'),
@@ -81690,7 +101586,7 @@ Sheet.prototype.resized = function() {
   eventBus.fire('sheet.resized');
 };
 
-},{"lodash/collection/every":705,"lodash/collection/forEach":708,"lodash/lang/isNumber":819,"lodash/object/assign":825}],863:[function(require,module,exports){
+},{"lodash/collection/every":829,"lodash/collection/forEach":832,"lodash/lang/isNumber":958,"lodash/object/assign":964}],1004:[function(require,module,exports){
 module.exports = {
   __depends__: [ require('../draw') ],
   __init__: [ 'sheet' ],
@@ -81701,7 +101597,7 @@ module.exports = {
   eventBus: [ 'type', require('diagram-js/lib/core/EventBus') ]
 };
 
-},{"../draw":865,"./ElementFactory":859,"./ElementRegistry":860,"./GraphicsFactory":861,"./Sheet":862,"diagram-js/lib/core/EventBus":629}],864:[function(require,module,exports){
+},{"../draw":1006,"./ElementFactory":1000,"./ElementRegistry":1001,"./GraphicsFactory":1002,"./Sheet":1003,"diagram-js/lib/core/EventBus":1055}],1005:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -81805,12 +101701,12 @@ Renderer.prototype.drawCell = function drawCell(gfx, data) {
   return gfx;
 };
 
-},{"lodash/collection/forEach":708}],865:[function(require,module,exports){
+},{"lodash/collection/forEach":832}],1006:[function(require,module,exports){
 module.exports = {
   renderer: [ 'type', require('./Renderer') ]
 };
 
-},{"./Renderer":864}],866:[function(require,module,exports){
+},{"./Renderer":1005}],1007:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -81859,7 +101755,7 @@ AddRow.prototype.getRow = function() {
   return this.row;
 };
 
-},{"diagram-js/lib/util/IdGenerator":663,"min-dom/lib/domify":840}],867:[function(require,module,exports){
+},{"diagram-js/lib/util/IdGenerator":1060,"min-dom/lib/domify":981}],1008:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -81890,7 +101786,7 @@ AddRowRenderer.$inject = [
 
 module.exports = AddRowRenderer;
 
-},{"min-dom/lib/classes":836}],868:[function(require,module,exports){
+},{"min-dom/lib/classes":977}],1009:[function(require,module,exports){
 module.exports = {
   __init__: [ 'addRow', 'addRowRenderer'],
   __depends__: [
@@ -81901,7 +101797,7 @@ module.exports = {
   addRowRenderer: [ 'type', require('./AddRowRenderer') ]
 };
 
-},{"../modeling":899,"../utility-column":909,"./AddRow":866,"./AddRowRenderer":867}],869:[function(require,module,exports){
+},{"../modeling":1040,"../utility-column":1050,"./AddRow":1007,"./AddRowRenderer":1008}],1010:[function(require,module,exports){
 'use strict';
 
 /**
@@ -81966,16 +101862,16 @@ ChangeSupport.$inject = [ 'eventBus', 'elementRegistry', 'graphicsFactory' ];
 
 module.exports = ChangeSupport;
 
-},{}],870:[function(require,module,exports){
+},{}],1011:[function(require,module,exports){
 module.exports = {
   __init__: [ 'changeSupport'],
   changeSupport: [ 'type', require('./ChangeSupport') ]
 };
 
-},{"./ChangeSupport":869}],871:[function(require,module,exports){
+},{"./ChangeSupport":1010}],1012:[function(require,module,exports){
 module.exports = "<div>\n  <label></label>\n  <input tabindex=\"0\" />\n  <span class=\"cb-caret\"></span>\n</div>\n";
 
-},{}],872:[function(require,module,exports){
+},{}],1013:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify'),
@@ -82277,7 +102173,7 @@ ComboBox.prototype.enable = function() {
 
 module.exports = ComboBox;
 
-},{"./ComboBoxTemplate.html":871,"lodash/collection/forEach":708,"lodash/object/assign":825,"min-dom/lib/classes":836,"min-dom/lib/domify":840}],873:[function(require,module,exports){
+},{"./ComboBoxTemplate.html":1012,"lodash/collection/forEach":832,"lodash/object/assign":964,"min-dom/lib/classes":977,"min-dom/lib/domify":981}],1014:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -82487,7 +102383,7 @@ ComplexCell.$inject = [ 'eventBus', 'elementRegistry', 'sheet' ];
 
 module.exports = ComplexCell;
 
-},{"lodash/object/assign":825,"min-dom/lib/classes":836,"min-dom/lib/remove":844}],874:[function(require,module,exports){
+},{"lodash/object/assign":964,"min-dom/lib/classes":977,"min-dom/lib/remove":985}],1015:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -82495,7 +102391,7 @@ module.exports = {
   complexCell: [ 'type', require('./ComplexCell') ]
 };
 
-},{"./ComplexCell":873}],875:[function(require,module,exports){
+},{"./ComplexCell":1014}],1016:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -82560,7 +102456,7 @@ Controls.$inject = [ 'eventBus' ];
 
 module.exports = Controls;
 
-},{"min-dom/lib/classes":836}],876:[function(require,module,exports){
+},{"min-dom/lib/classes":977}],1017:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -82568,7 +102464,7 @@ module.exports = {
   controls: [ 'type', require('./Controls') ]
 };
 
-},{"./Controls":875}],877:[function(require,module,exports){
+},{"./Controls":1016}],1018:[function(require,module,exports){
 'use strict';
 
 var debounce = require('lodash/function/debounce');
@@ -82768,7 +102664,7 @@ EditBehavior.$inject = [
 
 module.exports = EditBehavior;
 
-},{"lodash/function/debounce":715}],878:[function(require,module,exports){
+},{"lodash/function/debounce":842}],1019:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -82830,7 +102726,7 @@ EditRenderer.$inject = [
 
 module.exports = EditRenderer;
 
-},{"min-dom/lib/classes":836}],879:[function(require,module,exports){
+},{"min-dom/lib/classes":977}],1020:[function(require,module,exports){
 'use strict';
 
 /**
@@ -82963,7 +102859,7 @@ Selection.prototype.selectBelow = function() {
   }
 };
 
-},{}],880:[function(require,module,exports){
+},{}],1021:[function(require,module,exports){
 module.exports = {
   __init__: [ 'editBehavior', 'editRenderer' ],
   __depends__: [
@@ -82977,7 +102873,7 @@ module.exports = {
   editRenderer: [ 'type', require('./EditRenderer') ]
 };
 
-},{"../interaction-events":884,"../keyboard":886,"../modeling":899,"./EditBehavior":877,"./EditRenderer":878,"./Selection":879,"diagram-js/lib/features/rules":644}],881:[function(require,module,exports){
+},{"../interaction-events":1025,"../keyboard":1027,"../modeling":1040,"./EditBehavior":1018,"./EditRenderer":1019,"./Selection":1020,"diagram-js/lib/features/rules":1058}],1022:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -83111,13 +103007,13 @@ function error(action, message) {
   return new Error(action + ' ' + message);
 }
 
-},{"lodash/collection/forEach":708}],882:[function(require,module,exports){
+},{"lodash/collection/forEach":832}],1023:[function(require,module,exports){
 module.exports = {
   __init__: [ 'editorActions' ],
   editorActions: [ 'type', require('./EditorActions') ]
 };
 
-},{"./EditorActions":881}],883:[function(require,module,exports){
+},{"./EditorActions":1022}],1024:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -83364,13 +103260,13 @@ module.exports = InteractionEvents;
  * @property {Event} originalEvent
  */
 
-},{"diagram-js/lib/util/Mouse":665,"lodash/collection/forEach":708,"min-dom/lib/delegate":839}],884:[function(require,module,exports){
+},{"diagram-js/lib/util/Mouse":1061,"lodash/collection/forEach":832,"min-dom/lib/delegate":980}],1025:[function(require,module,exports){
 module.exports = {
   __init__: [ 'interactionEvents' ],
   interactionEvents: [ 'type', require('./InteractionEvents') ]
 };
 
-},{"./InteractionEvents":883}],885:[function(require,module,exports){
+},{"./InteractionEvents":1024}],1026:[function(require,module,exports){
 'use strict';
 
 var domEvent = require('min-dom/lib/event'),
@@ -83397,7 +103293,7 @@ var domEvent = require('min-dom/lib/event'),
  * @param {EventBus} eventBus
  * @param {CommandStack} commandStack
  */
-function Keyboard(config, eventBus, editorActions) {
+function Keyboard(config, eventBus, editorActions, sheet) {
   var self = this;
 
   this._eventBus = eventBus;
@@ -83417,6 +103313,10 @@ function Keyboard(config, eventBus, editorActions) {
         target = event.target,
         listeners = self._listeners,
         code = event.keyCode || event.charCode || -1;
+
+    if (!document.body.contains(sheet.getContainer())) {
+      return;
+    }
 
     if (domMatches(target, 'input, textarea')) {
       return;
@@ -83449,7 +103349,7 @@ function Keyboard(config, eventBus, editorActions) {
   this._init();
 }
 
-Keyboard.$inject = [ 'config.keyboard', 'eventBus', 'editorActions' ];
+Keyboard.$inject = [ 'config.keyboard', 'eventBus', 'editorActions', 'sheet' ];
 
 module.exports = Keyboard;
 
@@ -83578,7 +103478,7 @@ function isShift(modifiers) {
   return modifiers.shiftKey;
 }
 
-},{"min-dom/lib/event":841,"min-dom/lib/matches":842}],886:[function(require,module,exports){
+},{"min-dom/lib/event":982,"min-dom/lib/matches":983}],1027:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../editor-actions')
@@ -83587,7 +103487,7 @@ module.exports = {
   keyboard: [ 'type', require('./Keyboard') ]
 };
 
-},{"../editor-actions":882,"./Keyboard":885}],887:[function(require,module,exports){
+},{"../editor-actions":1023,"./Keyboard":1026}],1028:[function(require,module,exports){
 'use strict';
 
 var debounce = require('lodash/function/debounce');
@@ -83650,7 +103550,7 @@ LineNumbers.prototype.updateLineNumbers = function() {
   }
 };
 
-},{"lodash/function/debounce":715}],888:[function(require,module,exports){
+},{"lodash/function/debounce":842}],1029:[function(require,module,exports){
 module.exports = {
   __init__: [ 'lineNumbers' ],
   __depends__: [
@@ -83659,7 +103559,7 @@ module.exports = {
   lineNumbers: [ 'type', require('./LineNumbers') ]
 };
 
-},{"../utility-column":909,"./LineNumbers":887}],889:[function(require,module,exports){
+},{"../utility-column":1050,"./LineNumbers":1028}],1030:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -83832,7 +103732,7 @@ Modeling.prototype.editName = function(newName) {
   return context;
 };
 
-},{"./cmd/ClearRowHandler":890,"./cmd/CreateColumnHandler":891,"./cmd/CreateRowHandler":892,"./cmd/DeleteColumnHandler":893,"./cmd/DeleteRowHandler":894,"./cmd/EditCellHandler":895,"./cmd/EditNameHandler":896,"./cmd/MoveColumnHandler":897,"./cmd/MoveRowHandler":898,"lodash/collection/forEach":708}],890:[function(require,module,exports){
+},{"./cmd/ClearRowHandler":1031,"./cmd/CreateColumnHandler":1032,"./cmd/CreateRowHandler":1033,"./cmd/DeleteColumnHandler":1034,"./cmd/DeleteRowHandler":1035,"./cmd/EditCellHandler":1036,"./cmd/EditNameHandler":1037,"./cmd/MoveColumnHandler":1038,"./cmd/MoveRowHandler":1039,"lodash/collection/forEach":832}],1031:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -83899,7 +103799,7 @@ DeleteRowHandler.prototype.revert = function(context) {
   });
 };
 
-},{"lodash/collection/forEach":708}],891:[function(require,module,exports){
+},{"lodash/collection/forEach":832}],1032:[function(require,module,exports){
 'use strict';
 
 /**
@@ -83949,7 +103849,7 @@ CreateColumnHandler.prototype.revert = function(context) {
   this._sheet.removeColumn(context.column);
 };
 
-},{}],892:[function(require,module,exports){
+},{}],1033:[function(require,module,exports){
 'use strict';
 
 /**
@@ -83999,7 +103899,7 @@ CreateRowHandler.prototype.revert = function(context) {
   this._sheet.removeRow(context.row);
 };
 
-},{}],893:[function(require,module,exports){
+},{}],1034:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -84061,7 +103961,7 @@ DeleteColumnHandler.prototype.revert = function(context) {
   });
 };
 
-},{"lodash/collection/forEach":708}],894:[function(require,module,exports){
+},{"lodash/collection/forEach":832}],1035:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -84123,7 +104023,7 @@ DeleteRowHandler.prototype.revert = function(context) {
   });
 };
 
-},{"lodash/collection/forEach":708}],895:[function(require,module,exports){
+},{"lodash/collection/forEach":832}],1036:[function(require,module,exports){
 'use strict';
 
 /**
@@ -84164,7 +104064,7 @@ EditCellHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],896:[function(require,module,exports){
+},{}],1037:[function(require,module,exports){
 'use strict';
 
 /**
@@ -84205,7 +104105,7 @@ EditNameHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],897:[function(require,module,exports){
+},{}],1038:[function(require,module,exports){
 'use strict';
 
 /**
@@ -84254,7 +104154,7 @@ MoveColumnHandler.prototype.revert = function(context) {
   }
 };
 
-},{}],898:[function(require,module,exports){
+},{}],1039:[function(require,module,exports){
 'use strict';
 
 /**
@@ -84303,7 +104203,7 @@ MoveRowHandler.prototype.revert = function(context) {
   }
 };
 
-},{}],899:[function(require,module,exports){
+},{}],1040:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('diagram-js/lib/command'),
@@ -84315,7 +104215,7 @@ module.exports = {
   modeling: [ 'type', require('./Modeling') ]
 };
 
-},{"../change-support":870,"../utility-column":909,"./Modeling":889,"diagram-js/lib/command":625,"diagram-js/lib/features/rules":644}],900:[function(require,module,exports){
+},{"../change-support":1011,"../utility-column":1050,"./Modeling":1030,"diagram-js/lib/command":1054,"diagram-js/lib/features/rules":1058}],1041:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -84725,15 +104625,9 @@ PopupMenu.prototype._createEntry = function(entry, container) {
 
 module.exports = PopupMenu;
 
-},{"lodash/collection/forEach":708,"lodash/object/assign":825,"min-dom/lib/attr":835,"min-dom/lib/classes":836,"min-dom/lib/delegate":839,"min-dom/lib/domify":840,"min-dom/lib/remove":844}],901:[function(require,module,exports){
-'use strict';
-
-module.exports = {
-  __init__: [ 'popupMenu' ],
-  popupMenu: [ 'type', require('./PopupMenu') ]
-};
-
-},{"./PopupMenu":900}],902:[function(require,module,exports){
+},{"lodash/collection/forEach":832,"lodash/object/assign":964,"min-dom/lib/attr":976,"min-dom/lib/classes":977,"min-dom/lib/delegate":980,"min-dom/lib/domify":981,"min-dom/lib/remove":985}],1042:[function(require,module,exports){
+arguments[4][744][0].apply(exports,arguments)
+},{"./PopupMenu":1041,"dup":744}],1043:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -84756,7 +104650,7 @@ DragRenderer.$inject = [
 
 module.exports = DragRenderer;
 
-},{"min-dom/lib/classes":836}],903:[function(require,module,exports){
+},{"min-dom/lib/classes":977}],1044:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -84933,7 +104827,7 @@ RowDrag.prototype.isDragging = function() {
   return !!this.draggedElement;
 };
 
-},{"min-dom/lib/classes":836,"min-dom/lib/domify":840}],904:[function(require,module,exports){
+},{"min-dom/lib/classes":977,"min-dom/lib/domify":981}],1045:[function(require,module,exports){
 module.exports = {
   __init__: [ 'rowDrag', 'dragRenderer' ],
   __depends__: [
@@ -84943,7 +104837,7 @@ module.exports = {
   dragRenderer: [ 'type', require('./DragRenderer') ]
 };
 
-},{"../utility-column":909,"./DragRenderer":902,"./RowDrag":903}],905:[function(require,module,exports){
+},{"../utility-column":1050,"./DragRenderer":1043,"./RowDrag":1044}],1046:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -84989,7 +104883,7 @@ TableName.prototype.getNode = function() {
   return this.node.querySelector('h3');
 };
 
-},{"min-dom/lib/domify":840}],906:[function(require,module,exports){
+},{"min-dom/lib/domify":981}],1047:[function(require,module,exports){
 'use strict';
 
 /**
@@ -85036,7 +104930,7 @@ UtilityColumn.prototype.getColumn = function() {
   return this.column;
 };
 
-},{}],907:[function(require,module,exports){
+},{}],1048:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -85060,7 +104954,7 @@ UtilityColumnRenderer.$inject = [
 
 module.exports = UtilityColumnRenderer;
 
-},{"min-dom/lib/classes":836}],908:[function(require,module,exports){
+},{"min-dom/lib/classes":977}],1049:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -85092,7 +104986,7 @@ UtilityColumnRules.prototype.init = function() {
 
 };
 
-},{"diagram-js/lib/features/rules/RuleProvider":642,"inherits":699}],909:[function(require,module,exports){
+},{"diagram-js/lib/features/rules/RuleProvider":1056,"inherits":820}],1050:[function(require,module,exports){
 module.exports = {
   __init__: [ 'utilityColumn', 'utilityColumnRules', 'utilityColumnRenderer' ],
   __depends__: [
@@ -85104,7 +104998,7 @@ module.exports = {
   utilityColumnRenderer: [ 'type', require('./UtilityColumnRenderer') ]
 };
 
-},{"./UtilityColumn":906,"./UtilityColumnRenderer":907,"./UtilityColumnRules":908,"diagram-js/lib/command":625,"diagram-js/lib/features/rules":644}],910:[function(require,module,exports){
+},{"./UtilityColumn":1047,"./UtilityColumnRenderer":1048,"./UtilityColumnRules":1049,"diagram-js/lib/command":1054,"diagram-js/lib/features/rules":1058}],1051:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -85171,17 +105065,1151 @@ module.exports.Table = Table;
 module.exports.Row = Row;
 module.exports.Column = Column;
 
-},{"inherits":699,"lodash/object/assign":825}],911:[function(require,module,exports){
-arguments[4][119][0].apply(exports,arguments)
-},{"dup":119}],912:[function(require,module,exports){
-arguments[4][120][0].apply(exports,arguments)
-},{"./annotation":911,"./injector":913,"./module":914,"dup":120}],913:[function(require,module,exports){
-arguments[4][121][0].apply(exports,arguments)
-},{"./annotation":911,"./module":914,"dup":121}],914:[function(require,module,exports){
-arguments[4][122][0].apply(exports,arguments)
-},{"dup":122}],915:[function(require,module,exports){
+},{"inherits":820,"lodash/object/assign":964}],1052:[function(require,module,exports){
+arguments[4][665][0].apply(exports,arguments)
+},{"dup":665,"lodash/collection/forEach":832,"lodash/lang/isArray":955,"lodash/lang/isFunction":956,"lodash/lang/isNumber":958}],1053:[function(require,module,exports){
+'use strict';
 
-},{}],916:[function(require,module,exports){
+var unique = require('lodash/array/unique'),
+    isArray = require('lodash/lang/isArray'),
+    assign = require('lodash/object/assign');
+
+var InternalEvent = require('../core/EventBus').Event;
+
+
+/**
+ * A service that offers un- and redoable execution of commands.
+ *
+ * The command stack is responsible for executing modeling actions
+ * in a un- and redoable manner. To do this it delegates the actual
+ * command execution to {@link CommandHandler}s.
+ *
+ * Command handlers provide {@link CommandHandler#execute(ctx)} and
+ * {@link CommandHandler#revert(ctx)} methods to un- and redo a command
+ * identified by a command context.
+ *
+ *
+ * ## Life-Cycle events
+ *
+ * In the process the command stack fires a number of life-cycle events
+ * that other components to participate in the command execution.
+ *
+ *    * preExecute
+ *    * preExecuted
+ *    * execute
+ *    * executed
+ *    * postExecute
+ *    * postExecuted
+ *    * revert
+ *    * reverted
+ *
+ * A special event is used for validating, whether a command can be
+ * performed prior to its execution.
+ *
+ *    * canExecute
+ *
+ * Each of the events is fired as `commandStack.{eventName}` and
+ * `commandStack.{commandName}.{eventName}`, respectively. This gives
+ * components fine grained control on where to hook into.
+ *
+ * The event object fired transports `command`, the name of the
+ * command and `context`, the command context.
+ *
+ *
+ * ## Creating Command Handlers
+ *
+ * Command handlers should provide the {@link CommandHandler#execute(ctx)}
+ * and {@link CommandHandler#revert(ctx)} methods to implement
+ * redoing and undoing of a command. They must ensure undo is performed
+ * properly in order not to break the undo chain.
+ *
+ * Command handlers may execute other modeling operations (and thus
+ * commands) in their `preExecute` and `postExecute` phases. The command
+ * stack will properly group all commands together into a logical unit
+ * that may be re- and undone atomically.
+ *
+ * Command handlers must not execute other commands from within their
+ * core implementation (`execute`, `revert`).
+ *
+ *
+ * ## Change Tracking
+ *
+ * During the execution of the CommandStack it will keep track of all
+ * elements that have been touched during the command's execution.
+ *
+ * At the end of the CommandStack execution it will notify interested
+ * components via an 'elements.changed' event with all the dirty
+ * elements.
+ *
+ * The event can be picked up by components that are interested in the fact
+ * that elements have been changed. One use case for this is updating
+ * their graphical representation after moving / resizing or deletion.
+ *
+ *
+ * @param {EventBus} eventBus
+ * @param {Injector} injector
+ */
+function CommandStack(eventBus, injector) {
+
+  /**
+   * A map of all registered command handlers.
+   *
+   * @type {Object}
+   */
+  this._handlerMap = {};
+
+  /**
+   * A stack containing all re/undoable actions on the diagram
+   *
+   * @type {Array<Object>}
+   */
+  this._stack = [];
+
+  /**
+   * The current index on the stack
+   *
+   * @type {Number}
+   */
+  this._stackIdx = -1;
+
+  /**
+   * Current active commandStack execution
+   *
+   * @type {Object}
+   */
+  this._currentExecution = {
+    actions: [],
+    dirty: []
+  };
+
+
+  this._injector = injector;
+  this._eventBus = eventBus;
+
+  this._uid = 1;
+
+  eventBus.on([ 'diagram.destroy', 'diagram.clear' ], this.clear, this);
+}
+
+CommandStack.$inject = [ 'eventBus', 'injector' ];
+
+module.exports = CommandStack;
+
+
+/**
+ * Execute a command
+ *
+ * @param {String} command the command to execute
+ * @param {Object} context the environment to execute the command in
+ */
+CommandStack.prototype.execute = function(command, context) {
+  if (!command) {
+    throw new Error('command required');
+  }
+
+  var action = { command: command, context: context };
+
+  this._pushAction(action);
+  this._internalExecute(action);
+  this._popAction(action);
+};
+
+
+/**
+ * Ask whether a given command can be executed.
+ *
+ * Implementors may hook into the mechanism on two ways:
+ *
+ *   * in event listeners:
+ *
+ *     Users may prevent the execution via an event listener.
+ *     It must prevent the default action for `commandStack.(<command>.)canExecute` events.
+ *
+ *   * in command handlers:
+ *
+ *     If the method {@link CommandHandler#canExecute} is implemented in a handler
+ *     it will be called to figure out whether the execution is allowed.
+ *
+ * @param  {String} command the command to execute
+ * @param  {Object} context the environment to execute the command in
+ *
+ * @return {Boolean} true if the command can be executed
+ */
+CommandStack.prototype.canExecute = function(command, context) {
+
+  var action = { command: command, context: context };
+
+  var handler = this._getHandler(command);
+
+  var result = this._fire(command, 'canExecute', action);
+
+  // handler#canExecute will only be called if no listener
+  // decided on a result already
+  if (result === undefined) {
+    if (!handler) {
+      return false;
+    }
+
+    if (handler.canExecute) {
+      result = handler.canExecute(context);
+    }
+  }
+
+  return result;
+};
+
+
+/**
+ * Clear the command stack, erasing all undo / redo history
+ */
+CommandStack.prototype.clear = function() {
+  this._stack.length = 0;
+  this._stackIdx = -1;
+
+  this._fire('changed');
+};
+
+
+/**
+ * Undo last command(s)
+ */
+CommandStack.prototype.undo = function() {
+  var action = this._getUndoAction(),
+      next;
+
+  if (action) {
+    this._pushAction(action);
+
+    while (action) {
+      this._internalUndo(action);
+      next = this._getUndoAction();
+
+      if (!next || next.id !== action.id) {
+        break;
+      }
+
+      action = next;
+    }
+
+    this._popAction();
+  }
+};
+
+
+/**
+ * Redo last command(s)
+ */
+CommandStack.prototype.redo = function() {
+  var action = this._getRedoAction(),
+      next;
+
+  if (action) {
+    this._pushAction(action);
+
+    while (action) {
+      this._internalExecute(action, true);
+      next = this._getRedoAction();
+
+      if (!next || next.id !== action.id) {
+        break;
+      }
+
+      action = next;
+    }
+
+    this._popAction();
+  }
+};
+
+
+/**
+ * Register a handler instance with the command stack
+ *
+ * @param {String} command
+ * @param {CommandHandler} handler
+ */
+CommandStack.prototype.register = function(command, handler) {
+  this._setHandler(command, handler);
+};
+
+
+/**
+ * Register a handler type with the command stack
+ * by instantiating it and injecting its dependencies.
+ *
+ * @param {String} command
+ * @param {Function} a constructor for a {@link CommandHandler}
+ */
+CommandStack.prototype.registerHandler = function(command, handlerCls) {
+
+  if (!command || !handlerCls) {
+    throw new Error('command and handlerCls must be defined');
+  }
+
+  var handler = this._injector.instantiate(handlerCls);
+  this.register(command, handler);
+};
+
+CommandStack.prototype.canUndo = function() {
+  return !!this._getUndoAction();
+};
+
+CommandStack.prototype.canRedo = function() {
+  return !!this._getRedoAction();
+};
+
+////// stack access  //////////////////////////////////////
+
+CommandStack.prototype._getRedoAction = function() {
+  return this._stack[this._stackIdx + 1];
+};
+
+
+CommandStack.prototype._getUndoAction = function() {
+  return this._stack[this._stackIdx];
+};
+
+
+////// internal functionality /////////////////////////////
+
+CommandStack.prototype._internalUndo = function(action) {
+  var self = this;
+
+  var command = action.command,
+      context = action.context;
+
+  var handler = this._getHandler(command);
+
+  // guard against illegal nested command stack invocations
+  this._atomicDo(function() {
+    self._fire(command, 'revert', action);
+
+    if (handler.revert) {
+      self._markDirty(handler.revert(context));
+    }
+
+    self._revertedAction(action);
+
+    self._fire(command, 'reverted', action);
+  });
+};
+
+
+CommandStack.prototype._fire = function(command, qualifier, event) {
+  if (arguments.length < 3) {
+    event = qualifier;
+    qualifier = null;
+  }
+
+  var names = qualifier ? [ command + '.' + qualifier, qualifier ] : [ command ],
+      i, name, result;
+
+  event = assign(new InternalEvent(), event);
+
+  for (i = 0; (name = names[i]); i++) {
+    result = this._eventBus.fire('commandStack.' + name, event);
+
+    if (event.cancelBubble) {
+      break;
+    }
+  }
+
+  return result;
+};
+
+CommandStack.prototype._createId = function() {
+  return this._uid++;
+};
+
+CommandStack.prototype._atomicDo = function(fn) {
+
+  var execution = this._currentExecution;
+
+  execution.atomic = true;
+
+  try {
+    fn();
+  } finally {
+    execution.atomic = false;
+  }
+};
+
+CommandStack.prototype._internalExecute = function(action, redo) {
+  var self = this;
+
+  var command = action.command,
+      context = action.context;
+
+  var handler = this._getHandler(command);
+
+  if (!handler) {
+    throw new Error('no command handler registered for <' + command + '>');
+  }
+
+  this._pushAction(action);
+
+  if (!redo) {
+    this._fire(command, 'preExecute', action);
+
+    if (handler.preExecute) {
+      handler.preExecute(context);
+    }
+
+    this._fire(command, 'preExecuted', action);
+  }
+
+  // guard against illegal nested command stack invocations
+  this._atomicDo(function() {
+
+    self._fire(command, 'execute', action);
+
+    if (handler.execute) {
+      // actual execute + mark return results as dirty
+      self._markDirty(handler.execute(context));
+    }
+
+    // log to stack
+    self._executedAction(action, redo);
+
+    self._fire(command, 'executed', action);
+  });
+
+  if (!redo) {
+    this._fire(command, 'postExecute', action);
+
+    if (handler.postExecute) {
+      handler.postExecute(context);
+    }
+
+    this._fire(command, 'postExecuted', action);
+  }
+
+  this._popAction(action);
+};
+
+
+CommandStack.prototype._pushAction = function(action) {
+
+  var execution = this._currentExecution,
+      actions = execution.actions;
+
+  var baseAction = actions[0];
+
+  if (execution.atomic) {
+    throw new Error('illegal invocation in <execute> or <revert> phase (action: ' + action.command + ')');
+  }
+
+  if (!action.id) {
+    action.id = (baseAction && baseAction.id) || this._createId();
+  }
+
+  actions.push(action);
+};
+
+
+CommandStack.prototype._popAction = function() {
+  var execution = this._currentExecution,
+      actions = execution.actions,
+      dirty = execution.dirty;
+
+  actions.pop();
+
+  if (!actions.length) {
+    this._eventBus.fire('elements.changed', { elements: unique(dirty) });
+
+    dirty.length = 0;
+
+    this._fire('changed');
+  }
+};
+
+
+CommandStack.prototype._markDirty = function(elements) {
+  var execution = this._currentExecution;
+
+  if (!elements) {
+    return;
+  }
+
+  elements = isArray(elements) ? elements : [ elements ];
+
+  execution.dirty = execution.dirty.concat(elements);
+};
+
+
+CommandStack.prototype._executedAction = function(action, redo) {
+  var stackIdx = ++this._stackIdx;
+
+  if (!redo) {
+    this._stack.splice(stackIdx, this._stack.length, action);
+  }
+};
+
+
+CommandStack.prototype._revertedAction = function(action) {
+  this._stackIdx--;
+};
+
+
+CommandStack.prototype._getHandler = function(command) {
+  return this._handlerMap[command];
+};
+
+CommandStack.prototype._setHandler = function(command, handler) {
+  if (!command || !handler) {
+    throw new Error('command and handler required');
+  }
+
+  if (this._handlerMap[command]) {
+    throw new Error('overriding handler for command <' + command + '>');
+  }
+
+  this._handlerMap[command] = handler;
+};
+
+},{"../core/EventBus":1055,"lodash/array/unique":826,"lodash/lang/isArray":955,"lodash/object/assign":964}],1054:[function(require,module,exports){
+arguments[4][667][0].apply(exports,arguments)
+},{"./CommandStack":1053,"dup":667}],1055:[function(require,module,exports){
+arguments[4][330][0].apply(exports,arguments)
+},{"dup":330,"lodash/function/bind":841,"lodash/lang/isArray":955,"lodash/lang/isFunction":956,"lodash/lang/isNumber":958,"lodash/object/assign":964}],1056:[function(require,module,exports){
+arguments[4][749][0].apply(exports,arguments)
+},{"../../command/CommandInterceptor":1052,"dup":749,"inherits":820}],1057:[function(require,module,exports){
+arguments[4][750][0].apply(exports,arguments)
+},{"dup":750}],1058:[function(require,module,exports){
+arguments[4][751][0].apply(exports,arguments)
+},{"./Rules":1057,"dup":751}],1059:[function(require,module,exports){
+arguments[4][111][0].apply(exports,arguments)
+},{"dup":111}],1060:[function(require,module,exports){
+arguments[4][113][0].apply(exports,arguments)
+},{"dup":113}],1061:[function(require,module,exports){
+arguments[4][361][0].apply(exports,arguments)
+},{"./Event":1059,"./Platform":1062,"dup":361}],1062:[function(require,module,exports){
+arguments[4][116][0].apply(exports,arguments)
+},{"dup":116}],1063:[function(require,module,exports){
+arguments[4][119][0].apply(exports,arguments)
+},{"dup":119}],1064:[function(require,module,exports){
+arguments[4][120][0].apply(exports,arguments)
+},{"./annotation":1063,"./injector":1065,"./module":1066,"dup":120}],1065:[function(require,module,exports){
+arguments[4][121][0].apply(exports,arguments)
+},{"./annotation":1063,"./module":1066,"dup":121}],1066:[function(require,module,exports){
+arguments[4][122][0].apply(exports,arguments)
+},{"dup":122}],1067:[function(require,module,exports){
+/**
+ * append utility
+ */
+
+module.exports = append;
+
+var appendTo = require('./appendTo');
+
+/**
+ * Append a node to an element
+ *
+ * @param  {SVGElement} element
+ * @param  {SVGElement} node
+ *
+ * @return {SVGElement} the element
+ */
+function append(element, node) {
+  appendTo(node, element);
+  return element;
+}
+},{"./appendTo":1068}],1068:[function(require,module,exports){
+/**
+ * appendTo utility
+ */
+module.exports = appendTo;
+
+var ensureImported = require('./util/ensureImported');
+
+/**
+ * Append a node to a target element and return the appended node.
+ *
+ * @param  {SVGElement} element
+ * @param  {SVGElement} node
+ *
+ * @return {SVGElement} the appended node
+ */
+function appendTo(element, target) {
+  target.appendChild(ensureImported(element, target));
+  return element;
+}
+},{"./util/ensureImported":1077}],1069:[function(require,module,exports){
+/**
+ * attribute accessor utility
+ */
+
+module.exports = attr;
+
+
+var LENGTH_ATTR = 2;
+
+var CSS_PROPERTIES = {
+  'alignment-baseline': 1,
+  'baseline-shift': 1,
+  'clip': 1,
+  'clip-path': 1,
+  'clip-rule': 1,
+  'color': 1,
+  'color-interpolation': 1,
+  'color-interpolation-filters': 1,
+  'color-profile': 1,
+  'color-rendering': 1,
+  'cursor': 1,
+  'direction': 1,
+  'display': 1,
+  'dominant-baseline': 1,
+  'enable-background': 1,
+  'fill': 1,
+  'fill-opacity': 1,
+  'fill-rule': 1,
+  'filter': 1,
+  'flood-color': 1,
+  'flood-opacity': 1,
+  'font': 1,
+  'font-family': 1,
+  'font-size': LENGTH_ATTR,
+  'font-size-adjust': 1,
+  'font-stretch': 1,
+  'font-style': 1,
+  'font-variant': 1,
+  'font-weight': 1,
+  'glyph-orientation-horizontal': 1,
+  'glyph-orientation-vertical': 1,
+  'image-rendering': 1,
+  'kerning': 1,
+  'letter-spacing': 1,
+  'lighting-color': 1,
+  'marker': 1,
+  'marker-end': 1,
+  'marker-mid': 1,
+  'marker-start': 1,
+  'mask': 1,
+  'opacity': 1,
+  'overflow': 1,
+  'pointer-events': 1,
+  'shape-rendering': 1,
+  'stop-color': 1,
+  'stop-opacity': 1,
+  'stroke': 1,
+  'stroke-dasharray': 1,
+  'stroke-dashoffset': 1,
+  'stroke-linecap': 1,
+  'stroke-linejoin': 1,
+  'stroke-miterlimit': 1,
+  'stroke-opacity': 1,
+  'stroke-width': LENGTH_ATTR,
+  'text-anchor': 1,
+  'text-decoration': 1,
+  'text-rendering': 1,
+  'unicode-bidi': 1,
+  'visibility': 1,
+  'word-spacing': 1,
+  'writing-mode': 1
+};
+
+
+function getAttribute(node, name) {
+  if (CSS_PROPERTIES[name]) {
+    return node.style[name];
+  } else {
+    return node.getAttributeNS(null, name);
+  }
+}
+
+function setAttribute(node, name, value) {
+  var hyphenated = name.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+
+  var type = CSS_PROPERTIES[hyphenated];
+
+  if (type) {
+    // append pixel unit, unless present
+    if (type === LENGTH_ATTR && typeof value === 'number') {
+      value = String(value) + 'px';
+    }
+
+    node.style[hyphenated] = value;
+  } else {
+    node.setAttributeNS(null, name, value);
+  }
+}
+
+function setAttributes(node, attrs) {
+
+  var names = Object.keys(attrs), i, name;
+
+  for (i = 0, name; !!(name = names[i]); i++) {
+    setAttribute(node, name, attrs[name]);
+  }
+}
+
+/**
+ * Gets or sets raw attributes on a node.
+ *
+ * @param  {SVGElement} node
+ * @param  {Object} [attrs]
+ * @param  {String} [name]
+ * @param  {String} [value]
+ *
+ * @return {String}
+ */
+function attr(node, name, value) {
+  if (typeof name === 'string') {
+    if (value !== undefined) {
+      setAttribute(node, name, value);
+    } else {
+      return getAttribute(node, name);
+    }
+  } else {
+    setAttributes(node, name);
+  }
+
+  return node;
+}
+
+},{}],1070:[function(require,module,exports){
+/**
+ * Clear utility
+ */
+module.exports = classes;
+
+var index = function(arr, obj) {
+  if (arr.indexOf) {
+     return arr.indexOf(obj);
+  }
+
+
+  for (var i = 0; i < arr.length; ++i) {
+    if (arr[i] === obj) {
+      return i;
+    }
+  }
+
+  return -1;
+};
+
+var re = /\s+/;
+
+var toString = Object.prototype.toString;
+
+/**
+ * Wrap `el` in a `ClassList`.
+ *
+ * @param {Element} el
+ * @return {ClassList}
+ * @api public
+ */
+
+function classes(el) {
+  return new ClassList(el);
+};
+
+function ClassList(el) {
+  if (!el || !el.nodeType) {
+    throw new Error('A DOM element reference is required');
+  }
+  this.el = el;
+  this.list = el.classList;
+}
+
+/**
+ * Add class `name` if not already present.
+ *
+ * @param {String} name
+ * @return {ClassList}
+ * @api public
+ */
+
+ClassList.prototype.add = function(name) {
+
+  // classList
+  if (this.list) {
+    this.list.add(name);
+    return this;
+  }
+
+  // fallback
+  var arr = this.array();
+  var i = index(arr, name);
+  if (!~i) arr.push(name);
+
+  if (this.el.className.baseVal !== undefined) {
+    this.el.className.baseVal = arr.join(' ');
+  } else {
+    this.el.className = arr.join(' ');
+  }
+
+  return this;
+};
+
+/**
+ * Remove class `name` when present, or
+ * pass a regular expression to remove
+ * any which match.
+ *
+ * @param {String|RegExp} name
+ * @return {ClassList}
+ * @api public
+ */
+
+ClassList.prototype.remove = function(name) {
+  if ('[object RegExp]' == toString.call(name)) {
+    return this.removeMatching(name);
+  }
+
+  // classList
+  if (this.list) {
+    this.list.remove(name);
+    return this;
+  }
+
+  // fallback
+  var arr = this.array();
+  var i = index(arr, name);
+  if (~i) arr.splice(i, 1);
+  this.el.className.baseVal = arr.join(' ');
+  return this;
+};
+
+/**
+ * Remove all classes matching `re`.
+ *
+ * @param {RegExp} re
+ * @return {ClassList}
+ * @api private
+ */
+
+ClassList.prototype.removeMatching = function(re) {
+  var arr = this.array();
+  for (var i = 0; i < arr.length; i++) {
+    if (re.test(arr[i])) {
+      this.remove(arr[i]);
+    }
+  }
+  return this;
+};
+
+/**
+ * Toggle class `name`, can force state via `force`.
+ *
+ * For browsers that support classList, but do not support `force` yet,
+ * the mistake will be detected and corrected.
+ *
+ * @param {String} name
+ * @param {Boolean} force
+ * @return {ClassList}
+ * @api public
+ */
+
+ClassList.prototype.toggle = function(name, force) {
+  // classList
+  if (this.list) {
+    if ("undefined" !== typeof force) {
+      if (force !== this.list.toggle(name, force)) {
+        this.list.toggle(name); // toggle again to correct
+      }
+    } else {
+      this.list.toggle(name);
+    }
+    return this;
+  }
+
+  // fallback
+  if ("undefined" !== typeof force) {
+    if (!force) {
+      this.remove(name);
+    } else {
+      this.add(name);
+    }
+  } else {
+    if (this.has(name)) {
+      this.remove(name);
+    } else {
+      this.add(name);
+    }
+  }
+
+  return this;
+};
+
+/**
+ * Return an array of classes.
+ *
+ * @return {Array}
+ * @api public
+ */
+
+ClassList.prototype.array = function() {
+  var className = this.el.getAttribute('class') || '';
+  var str = className.replace(/^\s+|\s+$/g, '');
+  var arr = str.split(re);
+  if ('' === arr[0]) arr.shift();
+  return arr;
+};
+
+/**
+ * Check if class `name` is present.
+ *
+ * @param {String} name
+ * @return {ClassList}
+ * @api public
+ */
+
+ClassList.prototype.has =
+ClassList.prototype.contains = function(name) {
+  return this.list
+    ? this.list.contains(name)
+    : !! ~index(this.array(), name);
+};
+
+},{}],1071:[function(require,module,exports){
+/**
+ * Clear utility
+ */
+
+module.exports = clear;
+
+
+var remove = require('./remove');
+
+/**
+ * Removes all children from the given element
+ *
+ * @param  {DOMElement} element
+ * @return {DOMElement} the element (for chaining)
+ */
+function clear(element) {
+  var child;
+
+  while (!!(child = element.firstChild)) {
+    remove(child);
+  }
+
+  return element;
+}
+},{"./remove":1075}],1072:[function(require,module,exports){
+module.exports = clone;
+
+function clone(element) {
+  return element.cloneNode(true);
+}
+},{}],1073:[function(require,module,exports){
+/**
+ * Create utility for SVG elements
+ */
+
+module.exports = create;
+
+
+var attr = require('./attr');
+var parse = require('./util/parse');
+var ns = require('./util/ns');
+
+
+/**
+ * Create a specific type from name or SVG markup.
+ *
+ * @param {String} name the name or markup of the element
+ * @param {Object} [attrs] attributes to set on the element
+ *
+ * @returns {SVGElement}
+ */
+function create(name, attrs) {
+  var element;
+
+  if (name.charAt(0) === '<') {
+    element = parse(name).firstChild;
+    element = document.importNode(element, true);
+  } else {
+    element = document.createElementNS(ns.svg, name);
+  }
+
+  if (attrs) {
+    attr(element, attrs);
+  }
+
+  return element;
+}
+},{"./attr":1069,"./util/ns":1078,"./util/parse":1079}],1074:[function(require,module,exports){
+/**
+ * Geometry helpers
+ */
+
+module.exports = { createPoint: createPoint, createMatrix: createMatrix, createTransform: createTransform };
+
+
+var create = require('./create');
+
+// fake node used to instantiate svg geometry elements
+var node = create('svg');
+
+function extend(object, props) {
+  var i, k, keys = Object.keys(props);
+
+  for (i = 0; !!(k = keys[i]); i++) {
+    object[k] = props[k];
+  }
+
+  return object;
+}
+
+
+function createPoint(x, y) {
+  var point = node.createSVGPoint();
+
+  switch (arguments.length) {
+    case 0:
+      return point;
+    case 2:
+      x = {
+        x: x,
+        y: y
+      };
+      break;
+  }
+
+  return extend(point, x);
+}
+
+function createMatrix(a, b, c, d, e, f) {
+  var matrix = node.createSVGMatrix();
+
+  switch (arguments.length) {
+    case 0:
+      return matrix;
+    case 6:
+      a = {
+        a: a,
+        b: b,
+        c: c,
+        d: d,
+        e: e,
+        f: f
+      };
+      break;
+  }
+
+  return extend(matrix, a);
+}
+
+function createTransform(matrix) {
+  if (matrix) {
+    return node.createSVGTransformFromMatrix(matrix);
+  } else {
+    return node.createSVGTransform();
+  }
+}
+},{"./create":1073}],1075:[function(require,module,exports){
+module.exports = remove;
+
+function remove(element) {
+  element.parentNode.removeChild(element);
+  return element;
+}
+},{}],1076:[function(require,module,exports){
+/**
+ * transform accessor utility
+ */
+
+module.exports = transform;
+
+function wrapMatrix(transformList, transform) {
+  if (transform instanceof SVGMatrix) {
+    return transformList.createSVGTransformFromMatrix(transform);
+  } else {
+    return transform;
+  }
+}
+
+function setTransforms(transformList, transforms) {
+  var i, t;
+
+  transformList.clear();
+
+  for (i = 0; !!(t = transforms[i]); i++) {
+    transformList.appendItem(wrapMatrix(transformList, t));
+  }
+
+  transformList.consolidate();
+}
+
+function transform(node, transforms) {
+  var transformList = node.transform.baseVal;
+
+  if (arguments.length === 1) {
+    return transformList.consolidate();
+  } else {
+    if (transforms.length) {
+      setTransforms(transformList, transforms);
+    } else {
+      transformList.initialize(wrapMatrix(transformList, transforms));
+    }
+  }
+}
+},{}],1077:[function(require,module,exports){
+module.exports = ensureImported;
+
+function ensureImported(element, target) {
+
+  if (element.ownerDocument !== target.ownerDocument) {
+    try {
+      // may fail on webkit
+      return target.ownerDocument.importNode(element, true);
+    } catch (e) { }
+  }
+
+  return element;
+}
+},{}],1078:[function(require,module,exports){
+var ns = {
+  svg: 'http://www.w3.org/2000/svg'
+};
+
+module.exports = ns;
+},{}],1079:[function(require,module,exports){
+/**
+ * DOM parsing utility
+ */
+
+module.exports = parse;
+
+
+var ns = require('./ns');
+
+var SVG_START = '<svg xmlns="' + ns.svg + '"';
+
+function parse(svg) {
+
+  var doc;
+
+  // ensure we import a valid svg document
+  if (svg.substring(0, 4) === '<svg') {
+    doc = true;
+
+    if (svg.indexOf(ns.svg) === -1) {
+      svg = SVG_START + svg.substring(4);
+    }
+  } else {
+    // namespace svg
+    svg = SVG_START + '>' + svg + '</svg>';
+  }
+
+  return parseDocument(svg);
+}
+
+function parseDocument(svg) {
+
+  var parser;
+
+  // parse
+  parser = new DOMParser();
+  parser.async = false;
+
+  return parser.parseFromString(svg, 'text/xml');
+}
+},{"./ns":1078}],1080:[function(require,module,exports){
+
+},{}],1081:[function(require,module,exports){
 (function (global){
 /*!
  * The buffer module from node.js, for the browser.
@@ -86733,7 +107761,7 @@ function blitBuffer (src, dst, offset, length) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"base64-js":917,"ieee754":918,"isarray":919}],917:[function(require,module,exports){
+},{"base64-js":1082,"ieee754":1083,"isarray":1084}],1082:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
 ;(function (exports) {
@@ -86859,7 +107887,7 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 	exports.fromByteArray = uint8ToBase64
 }(typeof exports === 'undefined' ? (this.base64js = {}) : exports))
 
-},{}],918:[function(require,module,exports){
+},{}],1083:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = nBytes * 8 - mLen - 1
@@ -86945,14 +107973,14 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],919:[function(require,module,exports){
+},{}],1084:[function(require,module,exports){
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
-},{}],920:[function(require,module,exports){
+},{}],1085:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -87255,9 +108283,9 @@ function isUndefined(arg) {
   return arg === void 0;
 }
 
-},{}],921:[function(require,module,exports){
+},{}],1086:[function(require,module,exports){
 arguments[4][126][0].apply(exports,arguments)
-},{"dup":126}],922:[function(require,module,exports){
+},{"dup":126}],1087:[function(require,module,exports){
 /*!
  * Determine if an object is a Buffer
  *
@@ -87280,7 +108308,7 @@ function isSlowBuffer (obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
 }
 
-},{}],923:[function(require,module,exports){
+},{}],1088:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -87462,10 +108490,10 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],924:[function(require,module,exports){
+},{}],1089:[function(require,module,exports){
 module.exports = require("./lib/_stream_duplex.js")
 
-},{"./lib/_stream_duplex.js":925}],925:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":1090}],1090:[function(require,module,exports){
 // a duplex stream is just a stream that is both readable and writable.
 // Since JS doesn't have multiple prototypal inheritance, this class
 // prototypally inherits from Readable, and then parasitically from
@@ -87541,7 +108569,7 @@ function forEach(xs, f) {
     f(xs[i], i);
   }
 }
-},{"./_stream_readable":927,"./_stream_writable":929,"core-util-is":932,"inherits":921,"process-nextick-args":934}],926:[function(require,module,exports){
+},{"./_stream_readable":1092,"./_stream_writable":1094,"core-util-is":1097,"inherits":1086,"process-nextick-args":1099}],1091:[function(require,module,exports){
 // a passthrough stream.
 // basically just the most minimal sort of Transform stream.
 // Every written chunk gets output as-is.
@@ -87568,7 +108596,7 @@ function PassThrough(options) {
 PassThrough.prototype._transform = function (chunk, encoding, cb) {
   cb(null, chunk);
 };
-},{"./_stream_transform":928,"core-util-is":932,"inherits":921}],927:[function(require,module,exports){
+},{"./_stream_transform":1093,"core-util-is":1097,"inherits":1086}],1092:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -87580,6 +108608,10 @@ var processNextTick = require('process-nextick-args');
 
 /*<replacement>*/
 var isArray = require('isarray');
+/*</replacement>*/
+
+/*<replacement>*/
+var Duplex;
 /*</replacement>*/
 
 Readable.ReadableState = ReadableState;
@@ -87629,6 +108661,8 @@ var StringDecoder;
 util.inherits(Readable, Stream);
 
 function prependListener(emitter, event, fn) {
+  // Sadly this is not cacheable as some libraries bundle their own
+  // event emitter implementation with them.
   if (typeof emitter.prependListener === 'function') {
     return emitter.prependListener(event, fn);
   } else {
@@ -87640,7 +108674,6 @@ function prependListener(emitter, event, fn) {
   }
 }
 
-var Duplex;
 function ReadableState(options, stream) {
   Duplex = Duplex || require('./_stream_duplex');
 
@@ -87710,7 +108743,6 @@ function ReadableState(options, stream) {
   }
 }
 
-var Duplex;
 function Readable(options) {
   Duplex = Duplex || require('./_stream_duplex');
 
@@ -88033,7 +109065,7 @@ function maybeReadMore_(stream, state) {
 // for virtual (non-string, non-buffer) streams, "length" is somewhat
 // arbitrary, and perhaps not very meaningful.
 Readable.prototype._read = function (n) {
-  this.emit('error', new Error('not implemented'));
+  this.emit('error', new Error('_read() is not implemented'));
 };
 
 Readable.prototype.pipe = function (dest, pipeOpts) {
@@ -88211,16 +109243,16 @@ Readable.prototype.unpipe = function (dest) {
     state.pipesCount = 0;
     state.flowing = false;
 
-    for (var _i = 0; _i < len; _i++) {
-      dests[_i].emit('unpipe', this);
+    for (var i = 0; i < len; i++) {
+      dests[i].emit('unpipe', this);
     }return this;
   }
 
   // try to find the right one.
-  var i = indexOf(state.pipes, dest);
-  if (i === -1) return this;
+  var index = indexOf(state.pipes, dest);
+  if (index === -1) return this;
 
-  state.pipes.splice(i, 1);
+  state.pipes.splice(index, 1);
   state.pipesCount -= 1;
   if (state.pipesCount === 1) state.pipes = state.pipes[0];
 
@@ -88508,7 +109540,7 @@ function indexOf(xs, x) {
   return -1;
 }
 }).call(this,require('_process'))
-},{"./_stream_duplex":925,"./internal/streams/BufferList":930,"_process":923,"buffer":916,"buffer-shims":931,"core-util-is":932,"events":920,"inherits":921,"isarray":933,"process-nextick-args":934,"string_decoder/":941,"util":915}],928:[function(require,module,exports){
+},{"./_stream_duplex":1090,"./internal/streams/BufferList":1095,"_process":1088,"buffer":1081,"buffer-shims":1096,"core-util-is":1097,"events":1085,"inherits":1086,"isarray":1098,"process-nextick-args":1099,"string_decoder/":1106,"util":1080}],1093:[function(require,module,exports){
 // a transform stream is a readable/writable stream where you do
 // something with the data.  Sometimes it's called a "filter",
 // but that's not a great name for it, since that implies a thing where
@@ -88605,7 +109637,6 @@ function Transform(options) {
 
   this._transformState = new TransformState(this);
 
-  // when the writable side finishes, then flush out anything remaining.
   var stream = this;
 
   // start out asking for a readable event once data is transformed.
@@ -88622,9 +109653,10 @@ function Transform(options) {
     if (typeof options.flush === 'function') this._flush = options.flush;
   }
 
+  // When the writable side finishes, then flush out anything remaining.
   this.once('prefinish', function () {
-    if (typeof this._flush === 'function') this._flush(function (er) {
-      done(stream, er);
+    if (typeof this._flush === 'function') this._flush(function (er, data) {
+      done(stream, er, data);
     });else done(stream);
   });
 }
@@ -88645,7 +109677,7 @@ Transform.prototype.push = function (chunk, encoding) {
 // an error, then that'll put the hurt on the whole operation.  If you
 // never call cb(), then you'll never get another chunk.
 Transform.prototype._transform = function (chunk, encoding, cb) {
-  throw new Error('Not implemented');
+  throw new Error('_transform() is not implemented');
 };
 
 Transform.prototype._write = function (chunk, encoding, cb) {
@@ -88675,8 +109707,10 @@ Transform.prototype._read = function (n) {
   }
 };
 
-function done(stream, er) {
+function done(stream, er, data) {
   if (er) return stream.emit('error', er);
+
+  if (data !== null && data !== undefined) stream.push(data);
 
   // if there's nothing in the write buffer, then that means
   // that nothing more will ever be provided
@@ -88689,7 +109723,7 @@ function done(stream, er) {
 
   return stream.push(null);
 }
-},{"./_stream_duplex":925,"core-util-is":932,"inherits":921}],929:[function(require,module,exports){
+},{"./_stream_duplex":1090,"core-util-is":1097,"inherits":1086}],1094:[function(require,module,exports){
 (function (process){
 // A bit simpler than readable streams.
 // Implement an async ._write(chunk, encoding, cb), and it'll handle all
@@ -88705,6 +109739,10 @@ var processNextTick = require('process-nextick-args');
 
 /*<replacement>*/
 var asyncWrite = !process.browser && ['v0.10', 'v0.9.'].indexOf(process.version.slice(0, 5)) > -1 ? setImmediate : processNextTick;
+/*</replacement>*/
+
+/*<replacement>*/
+var Duplex;
 /*</replacement>*/
 
 Writable.WritableState = WritableState;
@@ -88747,7 +109785,6 @@ function WriteReq(chunk, encoding, cb) {
   this.next = null;
 }
 
-var Duplex;
 function WritableState(options, stream) {
   Duplex = Duplex || require('./_stream_duplex');
 
@@ -88769,6 +109806,7 @@ function WritableState(options, stream) {
   // cast to ints.
   this.highWaterMark = ~ ~this.highWaterMark;
 
+  // drain event flag.
   this.needDrain = false;
   // at the start of calling end()
   this.ending = false;
@@ -88843,7 +109881,7 @@ function WritableState(options, stream) {
   this.corkedRequestsFree = new CorkedRequest(this);
 }
 
-WritableState.prototype.getBuffer = function writableStateGetBuffer() {
+WritableState.prototype.getBuffer = function getBuffer() {
   var current = this.bufferedRequest;
   var out = [];
   while (current) {
@@ -88863,13 +109901,37 @@ WritableState.prototype.getBuffer = function writableStateGetBuffer() {
   } catch (_) {}
 })();
 
-var Duplex;
+// Test _writableState for inheritance to account for Duplex streams,
+// whose prototype chain only points to Readable.
+var realHasInstance;
+if (typeof Symbol === 'function' && Symbol.hasInstance && typeof Function.prototype[Symbol.hasInstance] === 'function') {
+  realHasInstance = Function.prototype[Symbol.hasInstance];
+  Object.defineProperty(Writable, Symbol.hasInstance, {
+    value: function (object) {
+      if (realHasInstance.call(this, object)) return true;
+
+      return object && object._writableState instanceof WritableState;
+    }
+  });
+} else {
+  realHasInstance = function (object) {
+    return object instanceof this;
+  };
+}
+
 function Writable(options) {
   Duplex = Duplex || require('./_stream_duplex');
 
-  // Writable ctor is applied to Duplexes, though they're not
-  // instanceof Writable, they're instanceof Readable.
-  if (!(this instanceof Writable) && !(this instanceof Duplex)) return new Writable(options);
+  // Writable ctor is applied to Duplexes, too.
+  // `realHasInstance` is necessary because using plain `instanceof`
+  // would return false, as no `_writableState` property is attached.
+
+  // Trying to use the custom `instanceof` for Writable here will also break the
+  // Node.js LazyTransform implementation, which has a non-trivial getter for
+  // `_writableState` that would lead to infinite recursion.
+  if (!realHasInstance.call(Writable, this) && !(this instanceof Duplex)) {
+    return new Writable(options);
+  }
 
   this._writableState = new WritableState(options, this);
 
@@ -89129,7 +110191,7 @@ function clearBuffer(stream, state) {
 }
 
 Writable.prototype._write = function (chunk, encoding, cb) {
-  cb(new Error('not implemented'));
+  cb(new Error('_write() is not implemented'));
 };
 
 Writable.prototype._writev = null;
@@ -89218,7 +110280,7 @@ function CorkedRequest(state) {
   };
 }
 }).call(this,require('_process'))
-},{"./_stream_duplex":925,"_process":923,"buffer":916,"buffer-shims":931,"core-util-is":932,"events":920,"inherits":921,"process-nextick-args":934,"util-deprecate":935}],930:[function(require,module,exports){
+},{"./_stream_duplex":1090,"_process":1088,"buffer":1081,"buffer-shims":1096,"core-util-is":1097,"events":1085,"inherits":1086,"process-nextick-args":1099,"util-deprecate":1100}],1095:[function(require,module,exports){
 'use strict';
 
 var Buffer = require('buffer').Buffer;
@@ -89283,7 +110345,7 @@ BufferList.prototype.concat = function (n) {
   }
   return ret;
 };
-},{"buffer":916,"buffer-shims":931}],931:[function(require,module,exports){
+},{"buffer":1081,"buffer-shims":1096}],1096:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -89395,7 +110457,7 @@ exports.allocUnsafeSlow = function allocUnsafeSlow(size) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"buffer":916}],932:[function(require,module,exports){
+},{"buffer":1081}],1097:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -89506,9 +110568,9 @@ function objectToString(o) {
 }
 
 }).call(this,{"isBuffer":require("../../../../insert-module-globals/node_modules/is-buffer/index.js")})
-},{"../../../../insert-module-globals/node_modules/is-buffer/index.js":922}],933:[function(require,module,exports){
-arguments[4][919][0].apply(exports,arguments)
-},{"dup":919}],934:[function(require,module,exports){
+},{"../../../../insert-module-globals/node_modules/is-buffer/index.js":1087}],1098:[function(require,module,exports){
+arguments[4][1084][0].apply(exports,arguments)
+},{"dup":1084}],1099:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -89555,7 +110617,7 @@ function nextTick(fn, arg1, arg2, arg3) {
 }
 
 }).call(this,require('_process'))
-},{"_process":923}],935:[function(require,module,exports){
+},{"_process":1088}],1100:[function(require,module,exports){
 (function (global){
 
 /**
@@ -89626,10 +110688,10 @@ function config (name) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],936:[function(require,module,exports){
+},{}],1101:[function(require,module,exports){
 module.exports = require("./lib/_stream_passthrough.js")
 
-},{"./lib/_stream_passthrough.js":926}],937:[function(require,module,exports){
+},{"./lib/_stream_passthrough.js":1091}],1102:[function(require,module,exports){
 (function (process){
 var Stream = (function (){
   try {
@@ -89649,13 +110711,13 @@ if (!process.browser && process.env.READABLE_STREAM === 'disable' && Stream) {
 }
 
 }).call(this,require('_process'))
-},{"./lib/_stream_duplex.js":925,"./lib/_stream_passthrough.js":926,"./lib/_stream_readable.js":927,"./lib/_stream_transform.js":928,"./lib/_stream_writable.js":929,"_process":923}],938:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":1090,"./lib/_stream_passthrough.js":1091,"./lib/_stream_readable.js":1092,"./lib/_stream_transform.js":1093,"./lib/_stream_writable.js":1094,"_process":1088}],1103:[function(require,module,exports){
 module.exports = require("./lib/_stream_transform.js")
 
-},{"./lib/_stream_transform.js":928}],939:[function(require,module,exports){
+},{"./lib/_stream_transform.js":1093}],1104:[function(require,module,exports){
 module.exports = require("./lib/_stream_writable.js")
 
-},{"./lib/_stream_writable.js":929}],940:[function(require,module,exports){
+},{"./lib/_stream_writable.js":1094}],1105:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -89784,7 +110846,7 @@ Stream.prototype.pipe = function(dest, options) {
   return dest;
 };
 
-},{"events":920,"inherits":921,"readable-stream/duplex.js":924,"readable-stream/passthrough.js":936,"readable-stream/readable.js":937,"readable-stream/transform.js":938,"readable-stream/writable.js":939}],941:[function(require,module,exports){
+},{"events":1085,"inherits":1086,"readable-stream/duplex.js":1089,"readable-stream/passthrough.js":1101,"readable-stream/readable.js":1102,"readable-stream/transform.js":1103,"readable-stream/writable.js":1104}],1106:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -90007,7 +111069,7 @@ function base64DetectIncompleteChar(buffer) {
   this.charLength = this.charReceived ? 3 : 0;
 }
 
-},{"buffer":916}],942:[function(require,module,exports){
+},{"buffer":1081}],1107:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.1
  * http://jquery.com/
@@ -99199,7 +120261,7 @@ return jQuery;
 
 }));
 
-},{}],943:[function(require,module,exports){
+},{}],1108:[function(require,module,exports){
 (function (global){
 //! moment.js
 //! version : 2.9.0
@@ -102246,7 +123308,7 @@ return jQuery;
 }).call(this);
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],944:[function(require,module,exports){
+},{}],1109:[function(require,module,exports){
 /*
  * angular-ui-bootstrap
  * http://angular-ui.github.io/bootstrap/
