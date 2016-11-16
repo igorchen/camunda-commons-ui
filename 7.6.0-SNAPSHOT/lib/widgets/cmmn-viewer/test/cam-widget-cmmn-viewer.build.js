@@ -146,7 +146,7 @@ module.exports = function() {
   };
 };
 
-},{"camunda-bpm-sdk-js/vendor/angular":279,"jquery":1108}],5:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":279,"jquery":1110}],5:[function(require,module,exports){
 'use strict';
 
 
@@ -303,7 +303,7 @@ directivesModule.config([
 
 module.exports = directivesModule;
 
-},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":1110,"../util/index":16,"./autoFill":1,"./compileTemplate":2,"./email":3,"./engineSelect":4,"./inPlaceTextField":5,"./instantTypeahead":7,"./nl2br":8,"./notificationsPanel":9,"./passwordRepeat":10,"./showIfAuthorized":11,"camunda-bpm-sdk-js/vendor/angular":279}],7:[function(require,module,exports){
+},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":1112,"../util/index":16,"./autoFill":1,"./compileTemplate":2,"./email":3,"./engineSelect":4,"./inPlaceTextField":5,"./instantTypeahead":7,"./nl2br":8,"./notificationsPanel":9,"./passwordRepeat":10,"./showIfAuthorized":11,"camunda-bpm-sdk-js/vendor/angular":279}],7:[function(require,module,exports){
   'use strict';
 
   var secretEmptyKey = '[$empty$]';
@@ -669,7 +669,7 @@ filtersModule.config([
 
 module.exports = filtersModule;
 
-},{"angular-translate":41,"camunda-bpm-sdk-js/vendor/angular":279,"moment":1109}],13:[function(require,module,exports){
+},{"angular-translate":41,"camunda-bpm-sdk-js/vendor/angular":279,"moment":1111}],13:[function(require,module,exports){
 'use strict';
 
 var angular = require('camunda-bpm-sdk-js/vendor/angular');
@@ -2251,7 +2251,7 @@ widgetModule.filter('camQueryComponent', camQueryComponent);
 
 module.exports = widgetModule;
 
-},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":1110,"../directives/index":6,"../filter/date/index":12,"../search/index":13,"./bpmn-viewer/cam-widget-bpmn-viewer":20,"./clipboard/cam-widget-clipboard":21,"./cmmn-viewer/cam-widget-cmmn-viewer":22,"./debug/cam-widget-debug":24,"./dmn-viewer/cam-widget-dmn-viewer":25,"./footer/cam-widget-footer":26,"./header/cam-widget-header":27,"./inline-field/cam-widget-inline-field":29,"./loader/cam-widget-loader":30,"./search-pill/cam-query-component":31,"./search-pill/cam-widget-search-pill":32,"./search/cam-widget-search":33,"./variable/cam-variable-validator":35,"./variable/cam-widget-variable":36,"./variables-table/cam-render-var-template":37,"./variables-table/cam-widget-variables-table":38,"camunda-bpm-sdk-js/vendor/angular":279}],29:[function(require,module,exports){
+},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":1112,"../directives/index":6,"../filter/date/index":12,"../search/index":13,"./bpmn-viewer/cam-widget-bpmn-viewer":20,"./clipboard/cam-widget-clipboard":21,"./cmmn-viewer/cam-widget-cmmn-viewer":22,"./debug/cam-widget-debug":24,"./dmn-viewer/cam-widget-dmn-viewer":25,"./footer/cam-widget-footer":26,"./header/cam-widget-header":27,"./inline-field/cam-widget-inline-field":29,"./loader/cam-widget-loader":30,"./search-pill/cam-query-component":31,"./search-pill/cam-widget-search-pill":32,"./search/cam-widget-search":33,"./variable/cam-variable-validator":35,"./variable/cam-widget-variable":36,"./variables-table/cam-render-var-template":37,"./variables-table/cam-widget-variables-table":38,"camunda-bpm-sdk-js/vendor/angular":279}],29:[function(require,module,exports){
 'use strict';
 
 
@@ -2676,7 +2676,7 @@ module.exports = [
     };
   }];
 
-},{"camunda-bpm-sdk-js/vendor/angular":279,"jquery":1108}],30:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":279,"jquery":1110}],30:[function(require,module,exports){
 'use strict';
 
 
@@ -2842,7 +2842,7 @@ module.exports = ['$timeout',
     };
   }];
 
-},{"jquery":1108}],33:[function(require,module,exports){
+},{"jquery":1110}],33:[function(require,module,exports){
 'use strict';
 
 
@@ -3348,7 +3348,7 @@ module.exports = ['$timeout', '$location', 'search',
     };
   }];
 
-},{"camunda-bpm-sdk-js/vendor/angular":279,"jquery":1108}],34:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":279,"jquery":1110}],34:[function(require,module,exports){
 'use strict';
 
 
@@ -3740,7 +3740,7 @@ module.exports = [
     };
   }];
 
-},{"jquery":1108}],38:[function(require,module,exports){
+},{"jquery":1110}],38:[function(require,module,exports){
 'use strict';
 
 
@@ -12306,7 +12306,7 @@ if (!String.fromCodePoint) {
 })(typeof exports === "undefined" ? sax = {} : exports);
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1082,"stream":1106,"string_decoder":1107}],64:[function(require,module,exports){
+},{"buffer":1084,"stream":1108,"string_decoder":1109}],64:[function(require,module,exports){
 /**
  * Tiny stack for browser or server
  *
@@ -63146,7 +63146,7 @@ module.exports = XMLWriter;
 
 },{"./common":308,"lodash/collection/filter":378,"lodash/collection/forEach":380,"lodash/collection/map":382,"lodash/lang/isString":489,"lodash/object/assign":492,"moddle/lib/ns":318,"moddle/lib/types":321}],311:[function(require,module,exports){
 arguments[4][63][0].apply(exports,arguments)
-},{"buffer":1082,"dup":63,"stream":1106,"string_decoder":1107}],312:[function(require,module,exports){
+},{"buffer":1084,"dup":63,"stream":1108,"string_decoder":1109}],312:[function(require,module,exports){
 arguments[4][64][0].apply(exports,arguments)
 },{"dup":64}],313:[function(require,module,exports){
 arguments[4][65][0].apply(exports,arguments)
@@ -69490,11 +69490,11 @@ Modeler.prototype.createDecisionDi = function(decision) {
   var decisionShape = elementFactory.createShape({ type: 'dmn:Decision', businessObject: decision }),
       bounds;
 
-  decisionShape = assign(decisionShape, { x: 0, y: 0 });
+  decisionShape = assign(decisionShape, { x: 200, y: 200 });
 
   bounds = drdFactory.createDiBounds({
-    x: 0,
-    y: 0,
+    x: 200,
+    y: 200,
     width: decisionShape.width,
     height: decisionShape.height
   });
@@ -69601,6 +69601,10 @@ var inherits = require('inherits');
 var Importer = require('./import/Importer');
 
 var is = require('./util/ModelUtil').is;
+
+var innerSVG = require('tiny-svg/lib/innerSVG');
+
+function noop() {}
 
 function lengthOne(arr) {
   return arr && arr.length === 1;
@@ -69753,7 +69757,7 @@ Viewer.prototype.importXML = function(xml, done) {
   var loadDiagram = this._loadDiagram;
 
   // done is optional
-  done = done || function() {};
+  done = done || noop;
 
   var self = this;
 
@@ -69801,6 +69805,9 @@ Viewer.prototype.importXML = function(xml, done) {
           lengthOne(decisions) &&
           loadDiagram === false) {
         self.showDecision(decisions[0]);
+      } else {
+        // set the DRD Editor as the current active editor
+        self._activeEditor = self;
       }
 
       done(err, allWarnings);
@@ -69851,10 +69858,10 @@ Viewer.prototype.saveSVG = function(options, done) {
   var canvas = this.get('canvas');
 
   var contentNode = canvas.getDefaultLayer(),
-      defsNode = canvas._svg.select('defs');
+      defsNode = domQuery('defs', canvas._svg);
 
-  var contents = contentNode.innerSVG(),
-      defs = (defsNode && defsNode.outerSVG()) || '';
+  var contents = innerSVG(contentNode),
+      defs = (defsNode && defsNode.outerHTML) || '';
 
   var bbox = contentNode.getBBox();
 
@@ -69918,6 +69925,10 @@ Viewer.prototype.attach = function(container, oldContainer) {
   parent.appendChild(container);
 };
 
+Viewer.prototype.getActiveEditor = function() {
+  return this._activeEditor;
+};
+
 Viewer.prototype.showDecision = function(decision, attrs, done) {
   var table = this.table,
       self = this;
@@ -69927,11 +69938,11 @@ Viewer.prototype.showDecision = function(decision, attrs, done) {
     attrs = {};
   }
 
-  done = done || function(err, warnings) {
-    console.log(err, warnings);
-  };
+  done = done || noop;
 
   this.attach(table.container, this.container);
+
+  this._activeEditor = table;
 
   return table.showDecision(decision, function(err, warnings) {
     self._emit('view.switch', assign({ decision: decision }, attrs));
@@ -69946,6 +69957,8 @@ Viewer.prototype.showDRD = function(attrs) {
   attrs = attrs || {};
 
   this.attach(this.container, this.table.container);
+
+  this._activeEditor = this;
 
   this._emit('view.switch', assign({ decision: decision }, attrs));
 };
@@ -70139,7 +70152,7 @@ function addProjectLogo(container) {
 
 /* </project-logo> */
 
-},{"./core":525,"./features/definition-id/viewer":535,"./features/drill-down":537,"./features/rules":566,"./import/Importer":569,"./table/Viewer":572,"./util/ModelUtil":659,"./util/PoweredByUtil":660,"diagram-js":664,"diagram-js/lib/features/overlays":741,"diagram-js/lib/features/selection":756,"dmn-moddle":798,"inherits":821,"lodash/collection/filter":831,"lodash/lang/isNumber":959,"lodash/lang/isString":962,"lodash/object/assign":965,"lodash/object/omit":969,"min-dom/lib/domify":982,"min-dom/lib/event":983,"min-dom/lib/query":985,"min-dom/lib/remove":986}],525:[function(require,module,exports){
+},{"./core":525,"./features/definition-id/viewer":535,"./features/drill-down":537,"./features/rules":566,"./import/Importer":569,"./table/Viewer":572,"./util/ModelUtil":659,"./util/PoweredByUtil":660,"diagram-js":664,"diagram-js/lib/features/overlays":741,"diagram-js/lib/features/selection":756,"dmn-moddle":798,"inherits":821,"lodash/collection/filter":831,"lodash/lang/isNumber":959,"lodash/lang/isString":962,"lodash/object/assign":965,"lodash/object/omit":969,"min-dom/lib/domify":982,"min-dom/lib/event":983,"min-dom/lib/query":985,"min-dom/lib/remove":986,"tiny-svg/lib/innerSVG":1076}],525:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -71662,7 +71675,8 @@ DrdFactory.$inject = [ 'moddle' ];
 
 DrdFactory.prototype._needsId = function(element) {
   return element.$instanceOf('dmn:DRGElement') ||
-         element.$instanceOf('dmn:Artifact');
+         element.$instanceOf('dmn:Artifact') ||
+         element.$instanceOf('dmn:DMNElement');
 };
 
 DrdFactory.prototype._ensureId = function(element) {
@@ -75291,10 +75305,10 @@ module.exports = {
 
 
 },{"./DateEdit":584}],587:[function(require,module,exports){
-module.exports = "<div>\n  <h4>Edit Date Condition</h4>\n  <select class=\"dateEdit-type-dropdown\">\n    <option value=\"exact\">Exactly</option>\n    <option value=\"before\">Before</option>\n    <option value=\"after\">After</option>\n    <option value=\"between\">Between</option>\n  </select>\n  <div class=\"date-1\">\n    <input type=\"text\" placeholder=\"yyyy-mm-dd'T'hh:mm:ss\" spellcheck=\"false\"><button>Today</button>\n    <div class=\"helptext\">yyyy-mm-dd'T'hh:mm:ss</div>\n  </div>\n  <div class=\"date-2\" style=\"display: none;\">\n    <div>and</div>\n    <input type=\"text\" placeholder=\"yyyy-mm-dd'T'hh:mm:ss\" spellcheck=\"false\"><button>Today</button>\n    <div class=\"helptext\">yyyy-mm-dd'T'hh:mm:ss</div>\n  </div>\n</div>\n";
+module.exports = "<div>\r\n  <h4>Edit Date Condition</h4>\r\n  <select class=\"dateEdit-type-dropdown\">\r\n    <option value=\"exact\">Exactly</option>\r\n    <option value=\"before\">Before</option>\r\n    <option value=\"after\">After</option>\r\n    <option value=\"between\">Between</option>\r\n  </select>\r\n  <div class=\"date-1\">\r\n    <input type=\"text\" placeholder=\"yyyy-mm-dd'T'hh:mm:ss\" spellcheck=\"false\"><button>Today</button>\r\n    <div class=\"helptext\">yyyy-mm-dd'T'hh:mm:ss</div>\r\n  </div>\r\n  <div class=\"date-2\" style=\"display: none;\">\r\n    <div>and</div>\r\n    <input type=\"text\" placeholder=\"yyyy-mm-dd'T'hh:mm:ss\" spellcheck=\"false\"><button>Today</button>\r\n    <div class=\"helptext\">yyyy-mm-dd'T'hh:mm:ss</div>\r\n  </div>\r\n</div>\r\n";
 
 },{}],588:[function(require,module,exports){
-module.exports = "<div>\n  <h4>Edit Date Result</h4>\n  <div class=\"date-1\">\n    <input type=\"text\" placeholder=\"yyyy-mm-dd'T'hh:mm:ss\" spellcheck=\"false\"><button>Today</button>\n    <div class=\"helptext\">yyyy-mm-dd'T'hh:mm:ss</div>\n  </div>\n</div>\n";
+module.exports = "<div>\r\n  <h4>Edit Date Result</h4>\r\n  <div class=\"date-1\">\r\n    <input type=\"text\" placeholder=\"yyyy-mm-dd'T'hh:mm:ss\" spellcheck=\"false\"><button>Today</button>\r\n    <div class=\"helptext\">yyyy-mm-dd'T'hh:mm:ss</div>\r\n  </div>\r\n</div>\r\n";
 
 },{}],589:[function(require,module,exports){
 'use strict';
@@ -76463,7 +76477,7 @@ module.exports = {
 };
 
 },{"./IoLabel":605,"./IoLabelRenderer":606,"./IoLabelRules":607}],609:[function(require,module,exports){
-module.exports = "<div class=\"literal-expression-editor\">\n  <textarea placeholder=\"return obj.propertyName;\"></textarea>\n\n  <div>\n    <div class=\"literal-expression-field\">\n      <div class=\"dmn-combobox\">\n        <label>Variable Name:</label>\n        <input class=\"variable-name\" placeholder=\"varName\">\n      </div>\n    </div>\n    <div class=\"literal-expression-field variable-type\">\n    </div>\n  </div>\n  <div>\n    <div class=\"literal-expression-field expression-language\">\n    </div>\n  </div>\n</div>\n";
+module.exports = "<div class=\"literal-expression-editor\">\r\n  <textarea placeholder=\"return obj.propertyName;\"></textarea>\r\n\r\n  <div>\r\n    <div class=\"literal-expression-field\">\r\n      <div class=\"dmn-combobox\">\r\n        <label>Variable Name:</label>\r\n        <input class=\"variable-name\" placeholder=\"varName\">\r\n      </div>\r\n    </div>\r\n    <div class=\"literal-expression-field variable-type\">\r\n    </div>\r\n  </div>\r\n  <div>\r\n    <div class=\"literal-expression-field expression-language\">\r\n    </div>\r\n  </div>\r\n</div>\r\n";
 
 },{}],610:[function(require,module,exports){
 'use strict';
@@ -76580,7 +76594,7 @@ module.exports = {
 };
 
 },{"./LiteralExpressionEditor":610}],612:[function(require,module,exports){
-module.exports = "<div>\n  <div class=\"links\">\n    <div class=\"toggle-type\">\n      <label>Use:</label>\n      <a class=\"expression\">Expression</a>\n      /\n      <a class=\"script\">Script</a>\n    </div>\n    <a class=\"dmn-icon-clear\"></a>\n  </div>\n  <div class=\"expression region\">\n    <div class=\"input-expression\">\n      <label>Expression:</label>\n      <input placeholder=\"propertyName\">\n    </div>\n    <div class=\"input-expression\">\n      <label>Input Variable Name:</label>\n      <input placeholder=\"cellInput\">\n    </div>\n  </div>\n  <div class=\"script region\">\n    <textarea placeholder=\"return obj.propertyName;\"></textarea>\n    <div class=\"input-expression\">\n      <label>Input Variable Name:</label>\n      <input placeholder=\"cellInput\">\n    </div>\n  </div>\n</div>\n";
+module.exports = "<div>\r\n  <div class=\"links\">\r\n    <div class=\"toggle-type\">\r\n      <label>Use:</label>\r\n      <a class=\"expression\">Expression</a>\r\n      /\r\n      <a class=\"script\">Script</a>\r\n    </div>\r\n    <a class=\"dmn-icon-clear\"></a>\r\n  </div>\r\n  <div class=\"expression region\">\r\n    <div class=\"input-expression\">\r\n      <label>Expression:</label>\r\n      <input placeholder=\"propertyName\">\r\n    </div>\r\n    <div class=\"input-expression\">\r\n      <label>Input Variable Name:</label>\r\n      <input placeholder=\"cellInput\">\r\n    </div>\r\n  </div>\r\n  <div class=\"script region\">\r\n    <textarea placeholder=\"return obj.propertyName;\"></textarea>\r\n    <div class=\"input-expression\">\r\n      <label>Input Variable Name:</label>\r\n      <input placeholder=\"cellInput\">\r\n    </div>\r\n  </div>\r\n</div>\r\n";
 
 },{}],613:[function(require,module,exports){
 'use strict';
@@ -78825,10 +78839,10 @@ module.exports = {
 };
 
 },{"./NumberEdit":631}],633:[function(require,module,exports){
-module.exports = "<div>\n  <h4>Edit Number Condition</h4>\n  <div class=\"links\">\n    <div class=\"toggle-type\">\n      <a class=\"comparison\">Comparison</a>\n      /\n      <a class=\"range\">Range</a>\n    </div>\n  </div>\n  <div class=\"comparison region\">\n    <select class=\"comparison-dropdown\">\n      <option value=\"equals\">= (Equals)</option>\n      <option value=\"less\">&lt; (Less than)</option>\n      <option value=\"less-equal\">&lt;= (Less than or equal)</option>\n      <option value=\"greater\">&gt; (Greater than)</option>\n      <option value=\"greater-equal\">&gt;= (Greater than or equal)</option>\n    </select>\n    <input type=\"number\" class=\"comparison-number\" placeholder=\"number\" />\n  </div>\n  <div class=\"range region\">\n    <label>Include</label>\n    <div class=\"include-inputs\">\n      <input type=\"number\" placeholder=\"start\" />\n      <input type=\"checkbox\" placeholder=\"include-start\" />\n    </div>\n    <div class=\"include-inputs\">\n      <input type=\"number\" placeholder=\"end\" />\n      <input type=\"checkbox\" placeholder=\"include-end\" />\n    </div>\n  </div>\n</div>\n";
+module.exports = "<div>\r\n  <h4>Edit Number Condition</h4>\r\n  <div class=\"links\">\r\n    <div class=\"toggle-type\">\r\n      <a class=\"comparison\">Comparison</a>\r\n      /\r\n      <a class=\"range\">Range</a>\r\n    </div>\r\n  </div>\r\n  <div class=\"comparison region\">\r\n    <select class=\"comparison-dropdown\">\r\n      <option value=\"equals\">= (Equals)</option>\r\n      <option value=\"less\">&lt; (Less than)</option>\r\n      <option value=\"less-equal\">&lt;= (Less than or equal)</option>\r\n      <option value=\"greater\">&gt; (Greater than)</option>\r\n      <option value=\"greater-equal\">&gt;= (Greater than or equal)</option>\r\n    </select>\r\n    <input type=\"number\" class=\"comparison-number\" placeholder=\"number\" />\r\n  </div>\r\n  <div class=\"range region\">\r\n    <label>Include</label>\r\n    <div class=\"include-inputs\">\r\n      <input type=\"number\" placeholder=\"start\" />\r\n      <input type=\"checkbox\" placeholder=\"include-start\" />\r\n    </div>\r\n    <div class=\"include-inputs\">\r\n      <input type=\"number\" placeholder=\"end\" />\r\n      <input type=\"checkbox\" placeholder=\"include-end\" />\r\n    </div>\r\n  </div>\r\n</div>\r\n";
 
 },{}],634:[function(require,module,exports){
-module.exports = "<div>\n  <h4>Edit Number Result</h4>\n  <div class=\"comparison region\">\n    <input type=\"number\" class=\"comparison-number\" placeholder=\"number\" style=\"width: 100%\" />\n  </div>\n</div>\n";
+module.exports = "<div>\r\n  <h4>Edit Number Result</h4>\r\n  <div class=\"comparison region\">\r\n    <input type=\"number\" class=\"comparison-number\" placeholder=\"number\" style=\"width: 100%\" />\r\n  </div>\r\n</div>\r\n";
 
 },{}],635:[function(require,module,exports){
 var types = [
@@ -79618,10 +79632,10 @@ module.exports = {
 };
 
 },{"./StringEdit":640}],643:[function(require,module,exports){
-module.exports = "<div>\n  <h4>Edit String Expression</h4>\n  <select class=\"string-type-dropdown\">\n    <option value=\"disjunction\">Match one of</option>\n    <option value=\"negation\">Match anything except</option>\n  </select>\n  <div class=\"free-input\">\n    <ul>\n    </ul>\n    <input type=\"text\" placeholder=\"new Value\" class=\"free-input-value-field\" />\n    <div class=\"helptext\">Enter value without quotes</div>\n  </div>\n  <div class=\"input-values\">\n    <ul>\n    </ul>\n  </div>\n</div>\n";
+module.exports = "<div>\r\n  <h4>Edit String Expression</h4>\r\n  <select class=\"string-type-dropdown\">\r\n    <option value=\"disjunction\">Match one of</option>\r\n    <option value=\"negation\">Match anything except</option>\r\n  </select>\r\n  <div class=\"free-input\">\r\n    <ul>\r\n    </ul>\r\n    <input type=\"text\" placeholder=\"new Value\" class=\"free-input-value-field\" />\r\n    <div class=\"helptext\">Enter value without quotes</div>\r\n  </div>\r\n  <div class=\"input-values\">\r\n    <ul>\r\n    </ul>\r\n  </div>\r\n</div>\r\n";
 
 },{}],644:[function(require,module,exports){
-module.exports = "<div>\n  <h4>Edit String Result</h4>\n  <div class=\"free-input\">\n    <textarea type=\"text\" placeholder=\"new Value\" class=\"free-input-value-field\"></textarea>\n    <div class=\"helptext\">Enter value without quotes</div>\n  </div>\n  <div class=\"input-values\">\n    <ul>\n    </ul>\n  </div>\n</div>\n";
+module.exports = "<div>\r\n  <h4>Edit String Result</h4>\r\n  <div class=\"free-input\">\r\n    <textarea type=\"text\" placeholder=\"new Value\" class=\"free-input-value-field\"></textarea>\r\n    <div class=\"helptext\">Enter value without quotes</div>\r\n  </div>\r\n  <div class=\"input-values\">\r\n    <ul>\r\n    </ul>\r\n  </div>\r\n</div>\r\n";
 
 },{}],645:[function(require,module,exports){
 'use strict';
@@ -80094,7 +80108,7 @@ TypeRowRenderer.$inject = [
 module.exports = TypeRowRenderer;
 
 },{"min-dom/lib/classes":978}],651:[function(require,module,exports){
-module.exports = "<div>\n  <div class=\"allowed-values\">\n    <label>Input Values:</label>\n    <ul></ul>\n    <input type=\"text\" placeholder=\"value1, value2, otherValue\">\n  </div>\n</div>\n";
+module.exports = "<div>\r\n  <div class=\"allowed-values\">\r\n    <label>Input Values:</label>\r\n    <ul></ul>\r\n    <input type=\"text\" placeholder=\"value1, value2, otherValue\">\r\n  </div>\r\n</div>\r\n";
 
 },{}],652:[function(require,module,exports){
 module.exports = {
@@ -80510,8 +80524,16 @@ function TableTreeWalker(handler, options) {
 module.exports = TableTreeWalker;
 
 },{"./Util":656,"lodash/collection/forEach":833}],656:[function(require,module,exports){
-arguments[4][51][0].apply(exports,arguments)
-},{"dup":51}],657:[function(require,module,exports){
+'use strict';
+
+module.exports.elementToString = function(e) {
+  if (!e) {
+    return '<null>';
+  }
+
+  return '<' + e.$type + (e.id ? ' id="' + e.id : '') + '" />';
+};
+},{}],657:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../features/factory')
@@ -82879,7 +82901,7 @@ Canvas.prototype.resized = function() {
   this._eventBus.fire('canvas.resized');
 };
 
-},{"../util/Collections":775,"../util/Elements":778,"lodash/collection/every":830,"lodash/collection/forEach":833,"lodash/function/debounce":843,"lodash/lang/isNumber":959,"lodash/object/assign":965,"tiny-svg/lib/append":1068,"tiny-svg/lib/attr":1070,"tiny-svg/lib/classes":1071,"tiny-svg/lib/create":1074,"tiny-svg/lib/geometry":1075,"tiny-svg/lib/transform":1077}],670:[function(require,module,exports){
+},{"../util/Collections":775,"../util/Elements":778,"lodash/collection/every":830,"lodash/collection/forEach":833,"lodash/function/debounce":843,"lodash/lang/isNumber":959,"lodash/object/assign":965,"tiny-svg/lib/append":1068,"tiny-svg/lib/attr":1070,"tiny-svg/lib/classes":1071,"tiny-svg/lib/create":1074,"tiny-svg/lib/geometry":1075,"tiny-svg/lib/transform":1078}],670:[function(require,module,exports){
 arguments[4][329][0].apply(exports,arguments)
 },{"../model":766,"dup":329,"lodash/object/assign":965}],671:[function(require,module,exports){
 'use strict';
@@ -83302,7 +83324,7 @@ function prependTo(newNode, parentNode) {
   parentNode.insertBefore(newNode, parentNode.firstChild);
 }
 
-},{"../util/GraphicsUtil":781,"../util/SvgTransformUtil":791,"lodash/collection/forEach":833,"lodash/collection/reduce":837,"min-dom/lib/clear":979,"tiny-svg/lib/append":1068,"tiny-svg/lib/attr":1070,"tiny-svg/lib/classes":1071,"tiny-svg/lib/create":1074,"tiny-svg/lib/remove":1076}],674:[function(require,module,exports){
+},{"../util/GraphicsUtil":781,"../util/SvgTransformUtil":791,"lodash/collection/forEach":833,"lodash/collection/reduce":837,"min-dom/lib/clear":979,"tiny-svg/lib/append":1068,"tiny-svg/lib/attr":1070,"tiny-svg/lib/classes":1071,"tiny-svg/lib/create":1074,"tiny-svg/lib/remove":1077}],674:[function(require,module,exports){
 arguments[4][85][0].apply(exports,arguments)
 },{"../draw":678,"./Canvas":669,"./ElementFactory":670,"./ElementRegistry":671,"./EventBus":672,"./GraphicsFactory":673,"dup":85}],675:[function(require,module,exports){
 arguments[4][86][0].apply(exports,arguments)
@@ -83685,7 +83707,7 @@ BendpointMove.$inject = [ 'injector', 'eventBus', 'canvas', 'dragging', 'graphic
 
 module.exports = BendpointMove;
 
-},{"../../util/Geometry":780,"../../util/SvgTransformUtil":791,"./BendpointUtil":681,"tiny-svg/lib/classes":1071,"tiny-svg/lib/remove":1076}],680:[function(require,module,exports){
+},{"../../util/Geometry":780,"../../util/SvgTransformUtil":791,"./BendpointUtil":681,"tiny-svg/lib/classes":1071,"tiny-svg/lib/remove":1077}],680:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -84289,7 +84311,7 @@ Bendpoints.$inject = [
 
 module.exports = Bendpoints;
 
-},{"../../util/Geometry":780,"../../util/LineIntersection":784,"../../util/SvgTransformUtil":791,"./BendpointUtil":681,"lodash/collection/forEach":833,"min-dom/lib/event":983,"min-dom/lib/query":985,"tiny-svg/lib/append":1068,"tiny-svg/lib/attr":1070,"tiny-svg/lib/classes":1071,"tiny-svg/lib/create":1074,"tiny-svg/lib/remove":1076}],683:[function(require,module,exports){
+},{"../../util/Geometry":780,"../../util/LineIntersection":784,"../../util/SvgTransformUtil":791,"./BendpointUtil":681,"lodash/collection/forEach":833,"min-dom/lib/event":983,"min-dom/lib/query":985,"tiny-svg/lib/append":1068,"tiny-svg/lib/attr":1070,"tiny-svg/lib/classes":1071,"tiny-svg/lib/create":1074,"tiny-svg/lib/remove":1077}],683:[function(require,module,exports){
 'use strict';
 
 var Geometry = require('../../util/Geometry'),
@@ -84692,7 +84714,7 @@ ConnectionSegmentMove.$inject = [
 
 module.exports = ConnectionSegmentMove;
 
-},{"../../layout/LayoutUtil":765,"../../util/Geometry":780,"../../util/SvgTransformUtil":791,"./BendpointUtil":681,"tiny-svg/lib/classes":1071,"tiny-svg/lib/remove":1076}],684:[function(require,module,exports){
+},{"../../layout/LayoutUtil":765,"../../util/Geometry":780,"../../util/SvgTransformUtil":791,"./BendpointUtil":681,"tiny-svg/lib/classes":1071,"tiny-svg/lib/remove":1077}],684:[function(require,module,exports){
 module.exports = {
   __depends__: [ require('../dragging'), require('../rules') ],
   __init__: [ 'bendpoints', 'bendpointSnapping' ],
@@ -84989,7 +85011,7 @@ Connect.$inject = [ 'eventBus', 'dragging', 'modeling', 'rules', 'canvas', 'grap
 
 module.exports = Connect;
 
-},{"../../layout/LayoutUtil":765,"tiny-svg/lib/append":1068,"tiny-svg/lib/attr":1070,"tiny-svg/lib/create":1074,"tiny-svg/lib/remove":1076}],690:[function(require,module,exports){
+},{"../../layout/LayoutUtil":765,"tiny-svg/lib/append":1068,"tiny-svg/lib/attr":1070,"tiny-svg/lib/create":1074,"tiny-svg/lib/remove":1077}],690:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../selection'),
@@ -85985,7 +86007,7 @@ Create.$inject = [ 'eventBus', 'dragging', 'rules', 'modeling', 'canvas', 'style
 
 module.exports = Create;
 
-},{"../../util/SvgTransformUtil":791,"tiny-svg/lib/append":1068,"tiny-svg/lib/attr":1070,"tiny-svg/lib/classes":1071,"tiny-svg/lib/create":1074,"tiny-svg/lib/remove":1076}],696:[function(require,module,exports){
+},{"../../util/SvgTransformUtil":791,"tiny-svg/lib/append":1068,"tiny-svg/lib/attr":1070,"tiny-svg/lib/classes":1071,"tiny-svg/lib/create":1074,"tiny-svg/lib/remove":1077}],696:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../dragging'),
@@ -87709,7 +87731,7 @@ function toBBox(event) {
   return bbox;
 }
 
-},{"../../util/Elements":778,"../../util/Mouse":786,"lodash/object/values":973,"tiny-svg/lib/append":1068,"tiny-svg/lib/attr":1070,"tiny-svg/lib/create":1074,"tiny-svg/lib/remove":1076}],707:[function(require,module,exports){
+},{"../../util/Elements":778,"../../util/Mouse":786,"lodash/object/values":973,"tiny-svg/lib/append":1068,"tiny-svg/lib/attr":1070,"tiny-svg/lib/create":1074,"tiny-svg/lib/remove":1077}],707:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -95629,7 +95651,7 @@ module.exports.scale = function(gfx, amount) {
   svgTransform(gfx, scale);
 };
 
-},{"tiny-svg/lib/geometry":1075,"tiny-svg/lib/transform":1077}],792:[function(require,module,exports){
+},{"tiny-svg/lib/geometry":1075,"tiny-svg/lib/transform":1078}],792:[function(require,module,exports){
 'use strict';
 
 var isObject = require('lodash/lang/isObject'),
@@ -95912,7 +95934,7 @@ Text.prototype.createText = function(parent, text, options) {
 
 module.exports = Text;
 
-},{"lodash/collection/forEach":833,"lodash/collection/reduce":837,"lodash/lang/isObject":960,"lodash/object/assign":965,"lodash/object/merge":968,"lodash/object/pick":971,"tiny-svg/lib/append":1068,"tiny-svg/lib/attr":1070,"tiny-svg/lib/create":1074,"tiny-svg/lib/remove":1076}],793:[function(require,module,exports){
+},{"lodash/collection/forEach":833,"lodash/collection/reduce":837,"lodash/lang/isObject":960,"lodash/object/assign":965,"lodash/object/merge":968,"lodash/object/pick":971,"tiny-svg/lib/append":1068,"tiny-svg/lib/attr":1070,"tiny-svg/lib/create":1074,"tiny-svg/lib/remove":1077}],793:[function(require,module,exports){
 arguments[4][120][0].apply(exports,arguments)
 },{"dup":120}],794:[function(require,module,exports){
 arguments[4][121][0].apply(exports,arguments)
@@ -98674,7 +98696,7 @@ arguments[4][309][0].apply(exports,arguments)
 arguments[4][310][0].apply(exports,arguments)
 },{"./common":801,"dup":310,"lodash/collection/filter":831,"lodash/collection/forEach":833,"lodash/collection/map":836,"lodash/lang/isString":962,"lodash/object/assign":965,"moddle/lib/ns":811,"moddle/lib/types":814}],804:[function(require,module,exports){
 arguments[4][63][0].apply(exports,arguments)
-},{"buffer":1082,"dup":63,"stream":1106,"string_decoder":1107}],805:[function(require,module,exports){
+},{"buffer":1084,"dup":63,"stream":1108,"string_decoder":1109}],805:[function(require,module,exports){
 arguments[4][64][0].apply(exports,arguments)
 },{"dup":64}],806:[function(require,module,exports){
 arguments[4][65][0].apply(exports,arguments)
@@ -106202,7 +106224,7 @@ function appendTo(element, target) {
   target.appendChild(ensureImported(element, target));
   return element;
 }
-},{"./util/ensureImported":1078}],1070:[function(require,module,exports){
+},{"./util/ensureImported":1079}],1070:[function(require,module,exports){
 /**
  * attribute accessor utility
  */
@@ -106555,7 +106577,7 @@ function clear(element) {
 
   return element;
 }
-},{"./remove":1076}],1073:[function(require,module,exports){
+},{"./remove":1077}],1073:[function(require,module,exports){
 module.exports = clone;
 
 function clone(element) {
@@ -106598,7 +106620,7 @@ function create(name, attrs) {
 
   return element;
 }
-},{"./attr":1070,"./util/ns":1079,"./util/parse":1080}],1075:[function(require,module,exports){
+},{"./attr":1070,"./util/ns":1080,"./util/parse":1081}],1075:[function(require,module,exports){
 /**
  * Geometry helpers
  */
@@ -106668,13 +106690,76 @@ function createTransform(matrix) {
   }
 }
 },{"./create":1074}],1076:[function(require,module,exports){
+/**
+ * innerHTML like functionality for SVG elements.
+ * based on innerSVG (https://code.google.com/p/innersvg)
+ */
+
+module.exports = innerSVG;
+
+
+var clear = require('./clear');
+var appendTo = require('./appendTo');
+var parse = require('./util/parse');
+var serialize = require('./util/serialize');
+
+
+function set(element, svg) {
+
+  var node,
+      documentElement = parse(svg).documentElement;
+
+  // clear element contents
+  clear(element);
+
+  if (!svg) {
+    return;
+  }
+
+  // import + append each node
+  node = documentElement.firstChild;
+
+  while (node) {
+    appendTo(node, element);
+    node = node.nextSibling;
+  }
+}
+
+function get(element) {
+  var child = element.firstChild,
+      output = [];
+
+  while (child) {
+    serialize(child, output);
+    child = child.nextSibling;
+  }
+
+  return output.join('');
+}
+
+function innerSVG(element, svg) {
+
+  if (svg !== undefined) {
+
+    try {
+      set(element, svg);
+    } catch(e) {
+      throw new Error('error parsing SVG: ' + e.message);
+    }
+
+    return element;
+  } else {
+    return get(element);
+  }
+}
+},{"./appendTo":1069,"./clear":1072,"./util/parse":1081,"./util/serialize":1082}],1077:[function(require,module,exports){
 module.exports = remove;
 
 function remove(element) {
   element.parentNode.removeChild(element);
   return element;
 }
-},{}],1077:[function(require,module,exports){
+},{}],1078:[function(require,module,exports){
 /**
  * transform accessor utility
  */
@@ -106714,7 +106799,7 @@ function transform(node, transforms) {
     }
   }
 }
-},{}],1078:[function(require,module,exports){
+},{}],1079:[function(require,module,exports){
 module.exports = ensureImported;
 
 function ensureImported(element, target) {
@@ -106728,13 +106813,13 @@ function ensureImported(element, target) {
 
   return element;
 }
-},{}],1079:[function(require,module,exports){
+},{}],1080:[function(require,module,exports){
 var ns = {
   svg: 'http://www.w3.org/2000/svg'
 };
 
 module.exports = ns;
-},{}],1080:[function(require,module,exports){
+},{}],1081:[function(require,module,exports){
 /**
  * DOM parsing utility
  */
@@ -106775,9 +106860,86 @@ function parseDocument(svg) {
 
   return parser.parseFromString(svg, 'text/xml');
 }
-},{"./ns":1079}],1081:[function(require,module,exports){
+},{"./ns":1080}],1082:[function(require,module,exports){
+/**
+ * Serialization util
+ */
 
-},{}],1082:[function(require,module,exports){
+module.exports = serialize;
+
+
+var TEXT_ENTITIES = /([&<>]{1})/g;
+var ATTR_ENTITIES = /([\n\r]{1})/g;
+
+var ENTITY_REPLACEMENT = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;'
+};
+
+function escape(str, pattern) {
+
+  function replaceFn(match, entity) {
+    return ENTITY_REPLACEMENT[entity] || entity;
+  }
+
+  return str.replace(pattern, replaceFn);
+}
+
+function serialize(node, output) {
+
+  var i, len, attrMap, attrNode, childNodes;
+
+  switch (node.nodeType) {
+    // TEXT
+    case 3:
+      // replace special XML characters
+      output.push(escape(node.textContent, TEXT_ENTITIES));
+      break;
+
+    // ELEMENT
+    case 1:
+      output.push('<', node.tagName);
+
+      if (node.hasAttributes()) {
+        attrMap = node.attributes;
+        for (i = 0, len = attrMap.length; i < len; ++i) {
+          attrNode = attrMap.item(i);
+          output.push(' ', attrNode.name, '="', escape(attrNode.value, ATTR_ENTITIES), '"');
+        }
+      }
+
+      if (node.hasChildNodes()) {
+        output.push('>');
+        childNodes = node.childNodes;
+        for (i = 0, len = childNodes.length; i < len; ++i) {
+          serialize(childNodes.item(i), output);
+        }
+        output.push('</', node.tagName, '>');
+      } else {
+        output.push('/>');
+      }
+      break;
+
+    // COMMENT
+    case 8:
+      output.push('<!--', escape(node.nodeValue, TEXT_ENTITIES), '-->');
+      break;
+
+    // CDATA
+    case 4:
+      output.push('<![CDATA[', node.nodeValue, ']]>');
+      break;
+
+    default:
+      throw new Error('unable to handle node ' + node.nodeType);
+  }
+
+  return output;
+}
+},{}],1083:[function(require,module,exports){
+
+},{}],1084:[function(require,module,exports){
 (function (global){
 /*!
  * The buffer module from node.js, for the browser.
@@ -108329,7 +108491,7 @@ function blitBuffer (src, dst, offset, length) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"base64-js":1083,"ieee754":1084,"isarray":1085}],1083:[function(require,module,exports){
+},{"base64-js":1085,"ieee754":1086,"isarray":1087}],1085:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
 ;(function (exports) {
@@ -108455,7 +108617,7 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 	exports.fromByteArray = uint8ToBase64
 }(typeof exports === 'undefined' ? (this.base64js = {}) : exports))
 
-},{}],1084:[function(require,module,exports){
+},{}],1086:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = nBytes * 8 - mLen - 1
@@ -108541,14 +108703,14 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],1085:[function(require,module,exports){
+},{}],1087:[function(require,module,exports){
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
-},{}],1086:[function(require,module,exports){
+},{}],1088:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -108851,9 +109013,9 @@ function isUndefined(arg) {
   return arg === void 0;
 }
 
-},{}],1087:[function(require,module,exports){
+},{}],1089:[function(require,module,exports){
 arguments[4][127][0].apply(exports,arguments)
-},{"dup":127}],1088:[function(require,module,exports){
+},{"dup":127}],1090:[function(require,module,exports){
 /*!
  * Determine if an object is a Buffer
  *
@@ -108876,7 +109038,7 @@ function isSlowBuffer (obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
 }
 
-},{}],1089:[function(require,module,exports){
+},{}],1091:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -109058,10 +109220,10 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],1090:[function(require,module,exports){
+},{}],1092:[function(require,module,exports){
 module.exports = require("./lib/_stream_duplex.js")
 
-},{"./lib/_stream_duplex.js":1091}],1091:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":1093}],1093:[function(require,module,exports){
 // a duplex stream is just a stream that is both readable and writable.
 // Since JS doesn't have multiple prototypal inheritance, this class
 // prototypally inherits from Readable, and then parasitically from
@@ -109137,7 +109299,7 @@ function forEach(xs, f) {
     f(xs[i], i);
   }
 }
-},{"./_stream_readable":1093,"./_stream_writable":1095,"core-util-is":1098,"inherits":1087,"process-nextick-args":1100}],1092:[function(require,module,exports){
+},{"./_stream_readable":1095,"./_stream_writable":1097,"core-util-is":1100,"inherits":1089,"process-nextick-args":1102}],1094:[function(require,module,exports){
 // a passthrough stream.
 // basically just the most minimal sort of Transform stream.
 // Every written chunk gets output as-is.
@@ -109164,7 +109326,7 @@ function PassThrough(options) {
 PassThrough.prototype._transform = function (chunk, encoding, cb) {
   cb(null, chunk);
 };
-},{"./_stream_transform":1094,"core-util-is":1098,"inherits":1087}],1093:[function(require,module,exports){
+},{"./_stream_transform":1096,"core-util-is":1100,"inherits":1089}],1095:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -110108,7 +110270,7 @@ function indexOf(xs, x) {
   return -1;
 }
 }).call(this,require('_process'))
-},{"./_stream_duplex":1091,"./internal/streams/BufferList":1096,"_process":1089,"buffer":1082,"buffer-shims":1097,"core-util-is":1098,"events":1086,"inherits":1087,"isarray":1099,"process-nextick-args":1100,"string_decoder/":1107,"util":1081}],1094:[function(require,module,exports){
+},{"./_stream_duplex":1093,"./internal/streams/BufferList":1098,"_process":1091,"buffer":1084,"buffer-shims":1099,"core-util-is":1100,"events":1088,"inherits":1089,"isarray":1101,"process-nextick-args":1102,"string_decoder/":1109,"util":1083}],1096:[function(require,module,exports){
 // a transform stream is a readable/writable stream where you do
 // something with the data.  Sometimes it's called a "filter",
 // but that's not a great name for it, since that implies a thing where
@@ -110291,7 +110453,7 @@ function done(stream, er, data) {
 
   return stream.push(null);
 }
-},{"./_stream_duplex":1091,"core-util-is":1098,"inherits":1087}],1095:[function(require,module,exports){
+},{"./_stream_duplex":1093,"core-util-is":1100,"inherits":1089}],1097:[function(require,module,exports){
 (function (process){
 // A bit simpler than readable streams.
 // Implement an async ._write(chunk, encoding, cb), and it'll handle all
@@ -110848,7 +111010,7 @@ function CorkedRequest(state) {
   };
 }
 }).call(this,require('_process'))
-},{"./_stream_duplex":1091,"_process":1089,"buffer":1082,"buffer-shims":1097,"core-util-is":1098,"events":1086,"inherits":1087,"process-nextick-args":1100,"util-deprecate":1101}],1096:[function(require,module,exports){
+},{"./_stream_duplex":1093,"_process":1091,"buffer":1084,"buffer-shims":1099,"core-util-is":1100,"events":1088,"inherits":1089,"process-nextick-args":1102,"util-deprecate":1103}],1098:[function(require,module,exports){
 'use strict';
 
 var Buffer = require('buffer').Buffer;
@@ -110913,7 +111075,7 @@ BufferList.prototype.concat = function (n) {
   }
   return ret;
 };
-},{"buffer":1082,"buffer-shims":1097}],1097:[function(require,module,exports){
+},{"buffer":1084,"buffer-shims":1099}],1099:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -111025,7 +111187,7 @@ exports.allocUnsafeSlow = function allocUnsafeSlow(size) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"buffer":1082}],1098:[function(require,module,exports){
+},{"buffer":1084}],1100:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -111136,9 +111298,9 @@ function objectToString(o) {
 }
 
 }).call(this,{"isBuffer":require("../../../../insert-module-globals/node_modules/is-buffer/index.js")})
-},{"../../../../insert-module-globals/node_modules/is-buffer/index.js":1088}],1099:[function(require,module,exports){
-arguments[4][1085][0].apply(exports,arguments)
-},{"dup":1085}],1100:[function(require,module,exports){
+},{"../../../../insert-module-globals/node_modules/is-buffer/index.js":1090}],1101:[function(require,module,exports){
+arguments[4][1087][0].apply(exports,arguments)
+},{"dup":1087}],1102:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -111185,7 +111347,7 @@ function nextTick(fn, arg1, arg2, arg3) {
 }
 
 }).call(this,require('_process'))
-},{"_process":1089}],1101:[function(require,module,exports){
+},{"_process":1091}],1103:[function(require,module,exports){
 (function (global){
 
 /**
@@ -111256,10 +111418,10 @@ function config (name) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],1102:[function(require,module,exports){
+},{}],1104:[function(require,module,exports){
 module.exports = require("./lib/_stream_passthrough.js")
 
-},{"./lib/_stream_passthrough.js":1092}],1103:[function(require,module,exports){
+},{"./lib/_stream_passthrough.js":1094}],1105:[function(require,module,exports){
 (function (process){
 var Stream = (function (){
   try {
@@ -111279,13 +111441,13 @@ if (!process.browser && process.env.READABLE_STREAM === 'disable' && Stream) {
 }
 
 }).call(this,require('_process'))
-},{"./lib/_stream_duplex.js":1091,"./lib/_stream_passthrough.js":1092,"./lib/_stream_readable.js":1093,"./lib/_stream_transform.js":1094,"./lib/_stream_writable.js":1095,"_process":1089}],1104:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":1093,"./lib/_stream_passthrough.js":1094,"./lib/_stream_readable.js":1095,"./lib/_stream_transform.js":1096,"./lib/_stream_writable.js":1097,"_process":1091}],1106:[function(require,module,exports){
 module.exports = require("./lib/_stream_transform.js")
 
-},{"./lib/_stream_transform.js":1094}],1105:[function(require,module,exports){
+},{"./lib/_stream_transform.js":1096}],1107:[function(require,module,exports){
 module.exports = require("./lib/_stream_writable.js")
 
-},{"./lib/_stream_writable.js":1095}],1106:[function(require,module,exports){
+},{"./lib/_stream_writable.js":1097}],1108:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -111414,7 +111576,7 @@ Stream.prototype.pipe = function(dest, options) {
   return dest;
 };
 
-},{"events":1086,"inherits":1087,"readable-stream/duplex.js":1090,"readable-stream/passthrough.js":1102,"readable-stream/readable.js":1103,"readable-stream/transform.js":1104,"readable-stream/writable.js":1105}],1107:[function(require,module,exports){
+},{"events":1088,"inherits":1089,"readable-stream/duplex.js":1092,"readable-stream/passthrough.js":1104,"readable-stream/readable.js":1105,"readable-stream/transform.js":1106,"readable-stream/writable.js":1107}],1109:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -111637,7 +111799,7 @@ function base64DetectIncompleteChar(buffer) {
   this.charLength = this.charReceived ? 3 : 0;
 }
 
-},{"buffer":1082}],1108:[function(require,module,exports){
+},{"buffer":1084}],1110:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.1
  * http://jquery.com/
@@ -120829,7 +120991,7 @@ return jQuery;
 
 }));
 
-},{}],1109:[function(require,module,exports){
+},{}],1111:[function(require,module,exports){
 (function (global){
 //! moment.js
 //! version : 2.9.0
@@ -123876,7 +124038,7 @@ return jQuery;
 }).call(this);
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],1110:[function(require,module,exports){
+},{}],1112:[function(require,module,exports){
 /*
  * angular-ui-bootstrap
  * http://angular-ui.github.io/bootstrap/
