@@ -61,7 +61,7 @@ module.exports = ['$window', function($window) {
       };
 
       $scope.control.highlightElement = function(id) {
-        if (canvas) {
+        if (canvas && viewer.get('elementRegistry').get(id)) {
           canvas.addMarker(id, 'highlight');
 
           $element.find('[data-element-id="' + id + '"]>.djs-outline').attr({
@@ -97,9 +97,9 @@ module.exports = ['$window', function($window) {
         }
       };
 
-      $scope.control.getElements = function() {
+      $scope.control.getElements = function(filter) {
         if (canvas) {
-          return canvas.getRootElement().children;
+          return viewer.get('elementRegistry').filter(filter);
         }
       };
 
@@ -108,6 +108,8 @@ module.exports = ['$window', function($window) {
           addOverlay(id, config);
         }
       };
+
+      $scope.control.resetZoom = resetZoom;
 
       function addOverlay(id, config) {
         var overlays = viewer.get('overlays');
@@ -185,11 +187,7 @@ module.exports = ['$window', function($window) {
         });
       };
 
-      $scope.resetZoom = function() {
-        if (canvas) {
-          canvas.zoom('fit-viewport', 'auto');
-        }
-      };
+      $scope.resetZoom = resetZoom;
 
       $window.addEventListener('resize', $scope.resetZoom);
 
@@ -242,6 +240,13 @@ module.exports = ['$window', function($window) {
         }
 
         return $scope.table === index;
+      }
+
+      function resetZoom() {
+        if (canvas) {
+          canvas.resized();
+          canvas.zoom('fit-viewport', 'auto');
+        }
       }
     }
   };
