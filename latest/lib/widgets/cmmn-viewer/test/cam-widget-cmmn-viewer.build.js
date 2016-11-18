@@ -1344,7 +1344,13 @@ module.exports = ['$compile', '$location', '$rootScope', 'search', 'debounce',
           canvas.resized();
           canvas.zoom('fit-viewport', 'auto');
         };
+
         $scope.control.resetZoom = $scope.resetZoom;
+
+        $scope.control.refreshZoom = function() {
+          canvas.resized();
+          canvas.zoom(canvas.zoom(), 'auto');
+        };
 
       }
     };
@@ -1761,6 +1767,11 @@ module.exports = ['$compile', '$location', '$rootScope', 'search', 'debounce',
           canvas.zoom('fit-viewport', 'auto');
         };
         $scope.control.resetZoom = $scope.resetZoom;
+        
+        $scope.control.refreshZoom = function() {
+          canvas.resized();
+          canvas.zoom(canvas.zoom(), 'auto');
+        };
 
       }
     };
@@ -1960,6 +1971,11 @@ module.exports = ['$window', function($window) {
       };
 
       $scope.control.resetZoom = resetZoom;
+
+      $scope.control.refreshZoom = function() {
+        canvas.resized();
+        canvas.zoom(canvas.zoom(), 'auto');
+      };
 
       function addOverlay(id, config) {
         var overlays = viewer.get('overlays');
@@ -28625,7 +28641,7 @@ function setAttributes(node, attrs) {
 
   var names = Object.keys(attrs), i, name;
 
-  for (i = 0, name; !!(name = names[i]); i++) {
+  for (i = 0, name; (name = names[i]); i++) {
     setAttribute(node, name, attrs[name]);
   }
 }
@@ -28662,7 +28678,7 @@ module.exports = classes;
 
 var index = function(arr, obj) {
   if (arr.indexOf) {
-     return arr.indexOf(obj);
+    return arr.indexOf(obj);
   }
 
 
@@ -28679,6 +28695,10 @@ var re = /\s+/;
 
 var toString = Object.prototype.toString;
 
+function defined(o) {
+  return typeof o !== 'undefined';
+}
+
 /**
  * Wrap `el` in a `ClassList`.
  *
@@ -28689,7 +28709,7 @@ var toString = Object.prototype.toString;
 
 function classes(el) {
   return new ClassList(el);
-};
+}
 
 function ClassList(el) {
   if (!el || !el.nodeType) {
@@ -28718,9 +28738,11 @@ ClassList.prototype.add = function(name) {
   // fallback
   var arr = this.array();
   var i = index(arr, name);
-  if (!~i) arr.push(name);
+  if (!~i) {
+    arr.push(name);
+  }
 
-  if (this.el.className.baseVal !== undefined) {
+  if (defined(this.el.className.baseVal)) {
     this.el.className.baseVal = arr.join(' ');
   } else {
     this.el.className = arr.join(' ');
@@ -28740,7 +28762,7 @@ ClassList.prototype.add = function(name) {
  */
 
 ClassList.prototype.remove = function(name) {
-  if ('[object RegExp]' == toString.call(name)) {
+  if ('[object RegExp]' === toString.call(name)) {
     return this.removeMatching(name);
   }
 
@@ -28753,7 +28775,9 @@ ClassList.prototype.remove = function(name) {
   // fallback
   var arr = this.array();
   var i = index(arr, name);
-  if (~i) arr.splice(i, 1);
+  if (~i) {
+    arr.splice(i, 1);
+  }
   this.el.className.baseVal = arr.join(' ');
   return this;
 };
@@ -28791,7 +28815,7 @@ ClassList.prototype.removeMatching = function(re) {
 ClassList.prototype.toggle = function(name, force) {
   // classList
   if (this.list) {
-    if ("undefined" !== typeof force) {
+    if (defined(force)) {
       if (force !== this.list.toggle(name, force)) {
         this.list.toggle(name); // toggle again to correct
       }
@@ -28802,7 +28826,7 @@ ClassList.prototype.toggle = function(name, force) {
   }
 
   // fallback
-  if ("undefined" !== typeof force) {
+  if (defined(force)) {
     if (!force) {
       this.remove(name);
     } else {
@@ -28830,7 +28854,9 @@ ClassList.prototype.array = function() {
   var className = this.el.getAttribute('class') || '';
   var str = className.replace(/^\s+|\s+$/g, '');
   var arr = str.split(re);
-  if ('' === arr[0]) arr.shift();
+  if ('' === arr[0]) {
+    arr.shift();
+  }
   return arr;
 };
 
@@ -28844,9 +28870,11 @@ ClassList.prototype.array = function() {
 
 ClassList.prototype.has =
 ClassList.prototype.contains = function(name) {
-  return this.list
-    ? this.list.contains(name)
-    : !! ~index(this.array(), name);
+  return (
+    this.list ?
+      this.list.contains(name) :
+      !! ~index(this.array(), name)
+  );
 };
 
 },{}],280:[function(require,module,exports){
@@ -28868,7 +28896,7 @@ var remove = require('./remove');
 function clear(element) {
   var child;
 
-  while (!!(child = element.firstChild)) {
+  while ((child = element.firstChild)) {
     remove(child);
   }
 
@@ -28927,7 +28955,7 @@ var node = create('svg');
 function extend(object, props) {
   var i, k, keys = Object.keys(props);
 
-  for (i = 0; !!(k = keys[i]); i++) {
+  for (i = 0; (k = keys[i]); i++) {
     object[k] = props[k];
   }
 
@@ -28939,14 +28967,14 @@ function createPoint(x, y) {
   var point = node.createSVGPoint();
 
   switch (arguments.length) {
-    case 0:
-      return point;
-    case 2:
-      x = {
-        x: x,
-        y: y
-      };
-      break;
+  case 0:
+    return point;
+  case 2:
+    x = {
+      x: x,
+      y: y
+    };
+    break;
   }
 
   return extend(point, x);
@@ -28956,18 +28984,18 @@ function createMatrix(a, b, c, d, e, f) {
   var matrix = node.createSVGMatrix();
 
   switch (arguments.length) {
-    case 0:
-      return matrix;
-    case 6:
-      a = {
-        a: a,
-        b: b,
-        c: c,
-        d: d,
-        e: e,
-        f: f
-      };
-      break;
+  case 0:
+    return matrix;
+  case 6:
+    a = {
+      a: a,
+      b: b,
+      c: c,
+      d: d,
+      e: e,
+      f: f
+    };
+    break;
   }
 
   return extend(matrix, a);
@@ -29034,7 +29062,7 @@ function innerSVG(element, svg) {
 
     try {
       set(element, svg);
-    } catch(e) {
+    } catch (e) {
       throw new Error('error parsing SVG: ' + e.message);
     }
 
@@ -29070,7 +29098,7 @@ function setTransforms(transformList, transforms) {
 
   transformList.clear();
 
-  for (i = 0; !!(t = transforms[i]); i++) {
+  for (i = 0; (t = transforms[i]); i++) {
     transformList.appendItem(wrapMatrix(transformList, t));
   }
 
@@ -29099,7 +29127,9 @@ function ensureImported(element, target) {
     try {
       // may fail on webkit
       return target.ownerDocument.importNode(element, true);
-    } catch (e) { }
+    } catch (e) {
+      // ignore
+    }
   }
 
   return element;
@@ -29124,12 +29154,8 @@ var SVG_START = '<svg xmlns="' + ns.svg + '"';
 
 function parse(svg) {
 
-  var doc;
-
   // ensure we import a valid svg document
   if (svg.substring(0, 4) === '<svg') {
-    doc = true;
-
     if (svg.indexOf(ns.svg) === -1) {
       svg = SVG_START + svg.substring(4);
     }
@@ -29160,12 +29186,13 @@ module.exports = serialize;
 
 
 var TEXT_ENTITIES = /([&<>]{1})/g;
-var ATTR_ENTITIES = /([\n\r]{1})/g;
+var ATTR_ENTITIES = /([\n\r"]{1})/g;
 
 var ENTITY_REPLACEMENT = {
   '&': '&amp;',
   '<': '&lt;',
-  '>': '&gt;'
+  '>': '&gt;',
+  '"': '\''
 };
 
 function escape(str, pattern) {
@@ -29182,48 +29209,48 @@ function serialize(node, output) {
   var i, len, attrMap, attrNode, childNodes;
 
   switch (node.nodeType) {
-    // TEXT
-    case 3:
-      // replace special XML characters
-      output.push(escape(node.textContent, TEXT_ENTITIES));
-      break;
+  // TEXT
+  case 3:
+    // replace special XML characters
+    output.push(escape(node.textContent, TEXT_ENTITIES));
+    break;
 
-    // ELEMENT
-    case 1:
-      output.push('<', node.tagName);
+  // ELEMENT
+  case 1:
+    output.push('<', node.tagName);
 
-      if (node.hasAttributes()) {
-        attrMap = node.attributes;
-        for (i = 0, len = attrMap.length; i < len; ++i) {
-          attrNode = attrMap.item(i);
-          output.push(' ', attrNode.name, '="', escape(attrNode.value, ATTR_ENTITIES), '"');
-        }
+    if (node.hasAttributes()) {
+      attrMap = node.attributes;
+      for (i = 0, len = attrMap.length; i < len; ++i) {
+        attrNode = attrMap.item(i);
+        output.push(' ', attrNode.name, '="', escape(attrNode.value, ATTR_ENTITIES), '"');
       }
+    }
 
-      if (node.hasChildNodes()) {
-        output.push('>');
-        childNodes = node.childNodes;
-        for (i = 0, len = childNodes.length; i < len; ++i) {
-          serialize(childNodes.item(i), output);
-        }
-        output.push('</', node.tagName, '>');
-      } else {
-        output.push('/>');
+    if (node.hasChildNodes()) {
+      output.push('>');
+      childNodes = node.childNodes;
+      for (i = 0, len = childNodes.length; i < len; ++i) {
+        serialize(childNodes.item(i), output);
       }
-      break;
+      output.push('</', node.tagName, '>');
+    } else {
+      output.push('/>');
+    }
+    break;
 
-    // COMMENT
-    case 8:
-      output.push('<!--', escape(node.nodeValue, TEXT_ENTITIES), '-->');
-      break;
+  // COMMENT
+  case 8:
+    output.push('<!--', escape(node.nodeValue, TEXT_ENTITIES), '-->');
+    break;
 
-    // CDATA
-    case 4:
-      output.push('<![CDATA[', node.nodeValue, ']]>');
-      break;
+  // CDATA
+  case 4:
+    output.push('<![CDATA[', node.nodeValue, ']]>');
+    break;
 
-    default:
-      throw new Error('unable to handle node ' + node.nodeType);
+  default:
+    throw new Error('unable to handle node ' + node.nodeType);
   }
 
   return output;
