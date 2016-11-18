@@ -1772,7 +1772,7 @@ var Viewer = require('dmn-js/lib/NavigatedViewer');
 var Modeler = require('dmn-js/lib/Modeler');
 var changeDmnNamespace = require('../../util/change-dmn-namespace');
 
-var template = "<div class=\"alert alert-danger\"\n     ng-if=\"error\">\n  <strong>Could not render table:</strong><br/>\n  {{ error.message }}\n</div>\n\n<div ng-show=\"!error\"\n     ng-if=\"!loaded && !disableLoader\"\n     class=\"placeholder-container\">\n  <div class=\"placeholder-content\">\n    Loading table<br />\n    <span class=\"glyphicon glyphicon-refresh animate-spin\"></span>\n  </div>\n</div>\n\n<div ng-show=\"!error\"\n     class=\"table-holder\"></div>\n\n<div ng-if=\"!error && !disableNavigation && isDrd\">\n  <div class=\"navigation zoom\">\n    <button class=\"btn btn-default in\"\n            title=\"zoom in\"\n            ng-click=\"zoomIn()\">\n      <span class=\"glyphicon glyphicon-plus\"></span>\n    </button>\n    <button class=\"btn btn-default out\"\n            title=\"zoom out\"\n            ng-click=\"zoomOut()\">\n      <span class=\"glyphicon glyphicon-minus\"></span>\n    </button>\n  </div>\n\n  <div class=\"navigation reset\">\n    <button class=\"btn btn-default\"\n            title=\"reset zoom\"\n            ng-click=\"resetZoom()\">\n      <span class=\"glyphicon glyphicon-screenshot\"></span>\n    </button>\n  </div>\n</div>\n";
+var template = "<div class=\"alert alert-danger\"\n     ng-if=\"error\">\n  <strong>Could not render table:</strong><br/>\n  {{ error.message }}\n</div>\n\n<div ng-show=\"!error\"\n     ng-if=\"!loaded && !disableLoader\"\n     class=\"placeholder-container\">\n  <div class=\"placeholder-content\">\n    Loading table<br />\n    <span class=\"glyphicon glyphicon-refresh animate-spin\"></span>\n  </div>\n</div>\n\n<div ng-show=\"!error\"\n     ng-class=\"{\n      'grab-cursor': isDrd && !grabbing,\n      'cursor-move': isDrd && grabbing\n     }\"\n     class=\"table-holder\">\n</div>\n\n<div ng-if=\"!error && !disableNavigation && isDrd\">\n  <div class=\"navigation zoom\">\n    <button class=\"btn btn-default in\"\n            title=\"zoom in\"\n            ng-click=\"zoomIn()\">\n      <span class=\"glyphicon glyphicon-plus\"></span>\n    </button>\n    <button class=\"btn btn-default out\"\n            title=\"zoom out\"\n            ng-click=\"zoomOut()\">\n      <span class=\"glyphicon glyphicon-minus\"></span>\n    </button>\n  </div>\n\n  <div class=\"navigation reset\">\n    <button class=\"btn btn-default\"\n            title=\"reset zoom\"\n            ng-click=\"resetZoom()\">\n      <span class=\"glyphicon glyphicon-screenshot\"></span>\n    </button>\n  </div>\n</div>\n";
 
 module.exports = ['$window', function($window) {
 
@@ -1795,8 +1795,10 @@ module.exports = ['$window', function($window) {
     template: template,
     link: function($scope, $element) {
       var canvas;
+      var document = $window.document;
 
       $scope.isDrd = false;
+      $scope.grabbing = false;
 
         // --- CONTROL FUNCTIONS ---
       $scope.control = $scope.control || {};
@@ -1945,6 +1947,17 @@ module.exports = ['$window', function($window) {
         });
       });
 
+      var mouseReleaseCallback = $scope.$apply.bind($scope, function() {
+        $scope.grabbing = false;
+        document.removeEventListener('mouseup', mouseReleaseCallback);
+      });
+
+      viewer.on('element.mousedown', $scope.$apply.bind($scope, function() {
+        $scope.grabbing = true;
+
+        document.addEventListener('mouseup', mouseReleaseCallback);
+      }));
+
       $scope.zoomIn = function() {
         viewer.get('zoomScroll').zoom(1, {
           x: $element[0].offsetWidth / 2,
@@ -1965,6 +1978,7 @@ module.exports = ['$window', function($window) {
 
       $scope.$on('destroy', function() {
         $window.removeEventListener('resize', $scope.resetZoom);
+        document.removeEventListener('mouseup', mouseReleaseCallback);
       });
 
       function renderTable() {
@@ -1974,11 +1988,19 @@ module.exports = ['$window', function($window) {
           $scope.loaded = false;
 
           viewer.importXML(correctedXML, function(err) {
-            $scope.isDrd = viewer.getDecisions().length > 1 && !$scope.table && !$scope.editMode;
+            $scope.isDrd = viewer.getDecisions().length > 1 && !$scope.table;
 
             if ($scope.isDrd) {
               canvas = viewer.get('canvas');
               canvas.zoom('fit-viewport', 'auto');
+
+              $scope.control
+                .getElements(function(element) {
+                  return element.type === 'dmn:Decision';
+                })
+                .forEach(function(element) {
+                  canvas.addMarker(element.id, 'decision-element');
+                });
             }
 
             if ($scope.table) {
