@@ -1,455 +1,6 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
-
-var angular = require('camunda-bpm-sdk-js/vendor/angular'),
-    typeUtils = require('camunda-bpm-sdk-js/lib/forms/type-util'),
-
-    templateDialog = "<!-- # CE - camunda-commons-ui/lib/widgets/variable/cam-widget-variable-dialog.html -->\n<div class=\"modal-header\">\n  <h3>Inspect \"{{ variable.name }}\" variable</h3>\n</div>\n\n<div class=\"modal-body\">\n  <div ng-if=\"readonly\"\n       class=\"form-group\">\n    <label>Object type name:</label>\n    <code class=\"form-control-static\"\n          cam-widget-clipboard=\"variable.valueInfo.objectTypeName\">{{ variable.valueInfo.objectTypeName }}</code>\n  </div>\n\n  <div ng-if=\"readonly\"\n       class=\"form-group\">\n    <label>Serialization Data Format:</label>\n    <code class=\"form-control-static\"\n          cam-widget-clipboard=\"variable.valueInfo.serializationDataFormat\">{{ variable.valueInfo.serializationDataFormat }}</code>\n  </div>\n\n  <div ng-if=\"!readonly\"\n       class=\"form-group\">\n    <label for=\"object-type-name\"\n           cam-widget-clipboard=\"variable.valueInfo.objectTypeName\">Object type name</label>\n    <input type=\"text\"\n           id=\"object-type-name\"\n           class=\"form-control\"\n           ng-model=\"variable.valueInfo.objectTypeName\" />\n  </div>\n\n  <div ng-if=\"!readonly\"\n       class=\"form-group\">\n    <label for=\"serialization-data-format\"\n           cam-widget-clipboard=\"variable.valueInfo.serializationDataFormat\">Serialization data format</label>\n    <input type=\"text\"\n           id=\"serialization-data-format\"\n           class=\"form-control\"\n           ng-model=\"variable.valueInfo.serializationDataFormat\" />\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"serialized-value\"\n           cam-widget-clipboard=\"variable.value\"\n           no-tooltip\n           ng-class=\"{hovered: hovered === 'var-value'}\">Serialized value</label>\n    <textarea ng-model=\"variable.value\"\n              id=\"serialized-value\"\n              rows=\"10\"\n              class=\"form-control\"\n              ng-readonly=\"readonly\"\n              ng-mouseenter=\"toggleHover('var-value')\"\n              ng-mouseleave=\"toggleHover()\"></textarea>\n  </div>\n</div>\n\n<div class=\"modal-footer\">\n  <button class=\"btn btn-default\"\n          ng-click=\"$dismiss('close')\">\n    Close\n  </button>\n\n  <button class=\"btn btn-primary\"\n          ng-if=\"!readonly\"\n          ng-readonly=\"!hasChanged('serialized')\"\n          ng-click=\"$close(variable)\">\n    Change\n  </button>\n</div>\n<!-- / CE - camunda-commons-ui/lib/widgets/variable/cam-widget-variable-dialog.html -->\n",
-    templateStringDialog = "<!-- # CE - camunda-commons-ui/lib/widgets/variable/cam-widget-variable-dialog.html -->\n<div class=\"modal-header\">\n  <h3>Inspect \"{{ variable.name }}\" variable</h3>\n</div>\n\n<div class=\"modal-body\">\n  <div class=\"form-group\">\n    <label for=\"value\"\n           cam-widget-clipboard=\"variable.value\"\n           no-tooltip\n           ng-class=\"{hovered: hovered === 'var-value'}\">\n      Value\n    </label>\n    <textarea ng-model=\"variable.value\"\n              id=\"value\"\n              rows=\"10\"\n              class=\"form-control cam-string-variable\"\n              ng-readonly=\"readonly\"\n              ng-mouseenter=\"toggleHover('var-value')\"\n              ng-mouseleave=\"toggleHover()\"></textarea>\n  </div>\n</div>\n\n<div class=\"modal-footer\">\n  <button class=\"btn btn-default\"\n          ng-click=\"$dismiss('close')\">\n    Close\n  </button>\n</div>\n<!-- / CE - camunda-commons-ui/lib/widgets/variable/cam-widget-variable-dialog.html -->\n";
-
-var varUtils = {};
-
-function camundaFormattedDate(date) {
-  date = date || new Date();
-  return date.toISOString().slice(0, -5);
-}
-varUtils.camundaFormattedDate = camundaFormattedDate;
-
-varUtils.templateDialog = templateDialog;
-varUtils.templateStringDialog = templateStringDialog;
-
-varUtils.modalCtrl = [
-  '$scope',
-  'variable',
-  'readonly',
-  function(
-    $dialogScope,
-    variable,
-    readonly
-  ) {
-    $dialogScope.hovered = false;
-    $dialogScope.toggleHover = function(which) {
-      $dialogScope.hovered = which;
-    };
-
-    $dialogScope.variable = variable;
-    $dialogScope.readonly = readonly;
-    var original = angular.copy(variable);
-
-    $dialogScope.hasChanged = function() {
-      original.valueInfo = original.valueInfo || {};
-      variable.valueInfo = variable.valueInfo || {};
-
-      return original.value !== variable.value ||
-              original.valueInfo.serializationDataFormat !== variable.valueInfo.serializationDataFormat ||
-              original.valueInfo.objectTypeName !== variable.valueInfo.objectTypeName;
-    };
-  }];
-
-
-varUtils.typeUtils = typeUtils;
-
-
-varUtils.types = [
-  'Boolean',
-  'Bytes',
-  'File',
-  'Date',
-  'Double',
-  'Integer',
-  'Long',
-  'Null',
-  'Object',
-  'Short',
-  'String'
-];
-
-
-varUtils.defaultValues = {
-  'Boolean':    false,
-  'Bytes':      null,
-  'File':       null,
-  'Date':       camundaFormattedDate(),
-  'Double':     0,
-  'Integer':    0,
-  'Long':       0,
-  'Null':       '',
-  'Short':      0,
-  'String':     '',
-  'Object':     {}
-};
-
-
-varUtils.isPrimitive = function($scope) {
-  return function(type) {
-    if (!type && !$scope.variable) { return true; }
-    type = type || $scope.variable.type;
-    if (!type) { return true; }
-
-    return [
-      'Boolean',
-      'Date',
-      'Double',
-      'Integer',
-      'Long',
-      'Short',
-      'String'
-    ].indexOf(type) >= 0;
-  };
-};
-
-
-varUtils.isBinary = function($scope) {
-  return function(type) {
-    if (!type && !$scope.variable) { return false; }
-    type = type || $scope.variable.type;
-    if (!type) { return false; }
-
-    return [
-      'Bytes',
-      'File'
-    ].indexOf(type) >= 0;
-  };
-};
-
-
-varUtils.useCheckbox = function($scope) {
-  return function(type) {
-    if (!type && !$scope.variable) { return false; }
-    type = type || $scope.variable.type;
-    return type === 'Boolean';
-  };
-};
-
-varUtils.validate = function($scope) {
-  return function() {
-    if (!$scope.variable.name || !$scope.variable.type) {
-      $scope.valid = false;
-    }
-
-    else if ($scope.variable.value === null ||
-               ['String', 'Object', 'Null'].indexOf($scope.variable.type) > -1) {
-      $scope.valid = true;
-    }
-
-      else {
-      $scope.valid = typeUtils.isType($scope.variable.value, $scope.variable.type);
-    }
-
-    if($scope.valid) {
-        // save the variable in the appropriate type
-      if ($scope.variable.type &&
-            $scope.variable.value !== null &&
-            $scope.isPrimitive($scope.variable.type)) {
-        var newTyped;
-
-        if ($scope.variable.type !== 'Boolean') {
-          newTyped = typeUtils.convertToType($scope.variable.value, $scope.variable.type);
-        }
-        else {
-          newTyped = $scope.variable.value ?
-                        $scope.variable.value !== 'false' :
-                        false;
-        }
-
-          // only change value if newType has different type, to avoid infinite recursion
-        if(typeof $scope.variable.value !== typeof newTyped) {
-          $scope.variable.value = newTyped;
-        }
-      }
-    }
-  };
-};
-
-module.exports = varUtils;
-
-},{"camunda-bpm-sdk-js/lib/forms/type-util":5,"camunda-bpm-sdk-js/vendor/angular":8}],2:[function(require,module,exports){
-'use strict';
-
-var typeUtils = require('camunda-bpm-sdk-js/lib/forms/type-util');
-
-module.exports = [function() {
-
-  return {
-
-    require: 'ngModel',
-
-    link: function($scope, $element, $attrs, ctrl) {
-
-      var validate = function(viewValue) {
-
-        var type = $attrs.camVariableValidator;
-        if (['String', 'Object', 'Null'].indexOf(type) !== -1) {
-          ctrl.$setValidity('camVariableValidator', true);
-        } else {
-          ctrl.$setValidity('camVariableValidator', typeUtils.isType(viewValue, type));
-        }
-
-        return viewValue;
-      };
-
-      ctrl.$parsers.unshift(validate);
-      ctrl.$formatters.push(validate);
-
-      $attrs.$observe('camVariableValidator', function() {
-        return validate(ctrl.$viewValue);
-      });
-    }
-  };
-}];
-
-},{"camunda-bpm-sdk-js/lib/forms/type-util":5}],3:[function(require,module,exports){
-'use strict';
-
-
-var angular = require('camunda-bpm-sdk-js/vendor/angular'),
-    varUtils = require('./cam-variable-utils'),
-
-    template = "<div ng-if=\"display && isShown('type')\"\n     class=\"type\">{{ variable.type }}</div>\n<div ng-if=\"display && isShown('name')\"\n     class=\"name\">{{ variable.name }}</div>\n<div ng-if=\"display && isShown('value') && isPrimitive()\"\n     ng-class=\"{null: isNull()}\"\n     class=\"value\">\n  <span ng-if=\"isNull()\"\n        class=\"null-symbol\">&lt;null&gt;</span>\n  {{ (variable.value === null ? '' : variable.value.toString()) }}\n</div>\n<div ng-if=\"display && isShown('value') && variable.type === 'Object'\"\n     ng-class=\"{null: isNull()}\"\n     class=\"value\">\n  <a ng-click=\"editVariableValue()\">\n    {{ variable.valueInfo.objectTypeName }}\n  </a>\n</div>\n\n\n<div ng-if=\"!display\"\n     class=\"input-group editing\">\n  <div ng-if=\"isShown('type')\"\n       class=\"input-group-btn type\">\n    <select class=\"form-control\"\n            ng-model=\"variable.type\"\n            ng-options=\"variableType for variableType in variableTypes track by variableType\"\n            ng-disabled=\"isDisabled('type')\"\n            required>\n    </select>\n  </div><!-- /btn-group -->\n\n  <input ng-if=\"isShown('name')\"\n         type=\"text\"\n         class=\"form-control name\"\n         ng-model=\"variable.name\"\n         placeholder=\"varName\"\n         ng-disabled=\"isDisabled('name')\"\n         required />\n\n  <div ng-if=\"isShown('value') && !isNull()\"\n       class=\"value-wrapper input-group\"\n       ng-class=\"{checkbox: useCheckbox()}\">\n    <div ng-if=\"variable.type !== 'Null'\"\n         class=\"input-group-btn\">\n      <a ng-click=\"setNull()\"\n         class=\"btn btn-default set-null\"\n         ng-disabled=\"isDisabled('value')\"\n         tooltip=\"Set value to &quot;null&quot;\">\n        <span class=\"glyphicon glyphicon-remove\"></span>\n      </a>\n    </div>\n\n    <input ng-if=\"isPrimitive() && !useCheckbox()\"\n           type=\"text\"\n           class=\"form-control value\"\n           ng-model=\"variable.value\"\n           ng-disabled=\"isDisabled('value')\"\n           placeholder=\"Value of the variable\"\n           cam-variable-validator=\"{{variable.type}}\" />\n\n    <input ng-if=\"useCheckbox()\"\n           type=\"checkbox\"\n           class=\"value\"\n           ng-model=\"variable.value\"\n           ng-disabled=\"isDisabled('value')\"\n           placeholder=\"Value of the variable\"\n           cam-variable-validator=\"{{variable.type}}\" />\n\n    <div ng-if=\"variable.type === 'Object'\"\n         class=\"value form-control-static\">\n      <a ng-click=\"editVariableValue()\" ng-disabled=\"isDisabled('value')\">\n        {{ variable.valueInfo.objectTypeName || '&lt;undefined&gt;' }}\n      </a>\n    </div>\n  </div>\n\n  <div ng-if=\"variable.type !== 'Null' && isShown('value') && isNull()\"\n       ng-click=\"setNonNull()\"\n       class=\"value-wrapper value null-value btn btn-default\"\n       ng-disabled=\"isDisabled('value')\"\n       tooltip=\"Re-set to previous or default value\">\n    <span class=\"null-symbol\">&lt;null&gt;</span>\n  </div>\n\n  <div ng-if=\"variable.type === 'Null'\"\n       ng-disabled=\"isDisabled('value')\"\n       class=\"value-wrapper value btn no-click null-value\">\n    <span class=\"null-symbol\">&lt;null&gt;</span>\n  </div>\n</div>\n";
-
-
-var variableTypes = varUtils.types;
-
-var modalCtrl = varUtils.modalCtrl;
-
-module.exports = [
-  '$modal',
-  function(
-    $modal
-  ) {
-    return {
-      template: template,
-
-      scope: {
-        variable: '=camVariable',
-        // A variable HAS a the following information
-        // {
-        //   value: <Mixed>,
-        //   name: <String>,
-        //   type: <String>,
-        //
-        // A variable MAY HAVE a the following information
-        //   id: <UUID>,
-        //   valueInfo: {
-        //     objectTypeName: <String>,
-        //     serializationDataFormat: <String>
-        //   },
-        //
-        //   activitiyInstanceId: <UUID>,
-        //   caseExecutionId: <UUID>,
-        //   caseInstanceId: <UUID>,
-        //   executionId: <UUID>,
-        //   processInstanceId: <UUID>,
-        //   taskId: <UUID>
-        // }
-        display:  '@?',
-        shown:    '=?',
-        disabled: '=?'
-      },
-
-
-      link: function($scope, element) {
-        $scope.variableTypes = angular.copy(variableTypes);
-
-        var defaultValues = varUtils.defaultValues;
-
-
-        $scope.isPrimitive = varUtils.isPrimitive($scope);
-
-
-        $scope.useCheckbox = varUtils.useCheckbox($scope);
-
-
-
-        $scope.isShown = function(what) {
-          if (!Array.isArray($scope.shown) || !$scope.shown.length) { return true; }
-          return $scope.shown.indexOf(what) > -1;
-        };
-
-        $scope.isDisabled = function(what) {
-          if (!Array.isArray($scope.disabled) || !$scope.disabled.length) { return false; }
-          return $scope.disabled.indexOf(what) > -1;
-        };
-
-        $scope.shownClasses = function() {
-          if (!Array.isArray($scope.shown) || !$scope.shown.length) { return ''; }
-          return $scope.shown.map(function(part) {
-            return 'show-' + part;
-          }).join(' ');
-        };
-        $scope.$watch('shown', function() {
-          element
-            .removeClass('show-type show-name show-value')
-            .addClass($scope.shownClasses());
-        });
-
-        var validate = varUtils.validate($scope);
-        $scope.valid = true;
-        $scope.$watch('variable.value', validate);
-        $scope.$watch('variable.name', validate);
-        $scope.$watch('variable.type', validate);
-        validate();
-
-        // backup is used to recover a variable value
-        // from either type or null switch
-        var backup = $scope.variable.value;
-
-        $scope.$watch('variable.type', function(current, previous) {
-          // convert the value to boolean when the type becomes Boolean
-          if (current === 'Boolean') {
-            // we don't do anything if the value is null
-            if ($scope.variable.value !== null) {
-              backup = $scope.variable.value;
-
-              $scope.variable.value = $scope.variable.value === 'false' ?
-                                      false :
-                                      !!$scope.variable.value;
-            }
-          }
-          else if (previous === 'Boolean') {
-            $scope.variable.value = backup;
-          }
-
-          var classList = element[0].classList;
-          if (previous) {
-            classList.remove('var-type-' + previous.toLowerCase());
-          }
-          if (current) {
-            classList.add('var-type-' + current.toLowerCase());
-          }
-        });
-
-        $scope.isNull = function() {
-          return $scope.variable.value === null;
-        };
-        $scope.setNonNull = function() {
-          $scope.variable.value = backup || defaultValues[$scope.variable.type];
-        };
-        $scope.setNull = function() {
-          backup = $scope.variable.value;
-          $scope.variable.value = null;
-        };
-
-        $scope.editVariableValue = function() {
-          $modal.open({
-            template: varUtils.templateDialog,//templateDialog,
-
-            controller: modalCtrl,
-
-            windowClass: 'cam-widget-variable-dialog',
-
-            resolve: {
-              variable: function() { return angular.copy($scope.variable); },
-              readonly: function() { return $scope.display; }
-            }
-          })
-          .result.then(function(result) {
-            $scope.variable.value = result.value;
-            $scope.variable.valueInfo = result.valueInfo;
-          })
-          ;
-        };
-      }
-    };
-  }];
-
-},{"./cam-variable-utils":1,"camunda-bpm-sdk-js/vendor/angular":8}],4:[function(require,module,exports){
-'use strict';
-
-var angular = require('camunda-bpm-sdk-js/vendor/angular'),
-    variableDefinition = require('../cam-widget-variable'),
-    variableValidator = require('../cam-variable-validator');
-
-require('../../../../vendor/ui-bootstrap-tpls-0.11.2-camunda');
-
-var variableModule = angular.module('variableModule', [
-  'ui.bootstrap'
-]);
-
-variableModule.directive('camWidgetVariable', variableDefinition);
-variableModule.directive('camVariableValidator', variableValidator);
-
-
-var testModule = angular.module('testModule', [variableModule.name]);
-var vars = [
-  {
-    name:   null,
-    type:   null
-  },
-  {
-    name:   'booleanVar',
-    type:   'Boolean',
-    value:  true
-  },
-  {
-    name:   'dateVar',
-    type:   'Date',
-    value:  '2015-03-23T13:14:06.340Z'
-  },
-  {
-    name:   'doubleVar',
-    type:   'Double',
-    value:  '12.34'
-  },
-  {
-    name:   'integerVar',
-    type:   'Integer',
-    value:  '1000'
-  },
-  {
-    name:   'longVar',
-    type:   'Long',
-    value:  '-100000000'
-  },
-  {
-    name:   'nullVar',
-    type:   'Null',
-    value:  null
-  },
-  {
-    name:   'objectVar',
-    type:   'Object',
-    value:  'rO0ABXNyACpvcmcuY2FtdW5kYS5icG0ucGEuc2VydmljZS5Db2NrcGl0VmFyaWFibGUAAAAAAAAAAQIAA0wABWRhdGVzdAAQTGphdmEvdXRpbC9MaXN0O0wABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZztMAAV2YWx1ZXEAfgACeHBzcgATamF2YS51dGlsLkFycmF5TGlzdHiB0h2Zx2GdAwABSQAEc2l6ZXhwAAAAAXcEAAAAAXNyAA5qYXZhLnV0aWwuRGF0ZWhqgQFLWXQZAwAAeHB3CAAAAUyieV6meHh0AAR0ZXN0dAAUY29ja3BpdFZhcmlhYmxlVmFsdWU',
-    valueInfo: {
-      objectTypeName: 'org.camunda.bpm.pa.service.CockpitVariable',
-      serializationDataFormat: 'application/x-java-serialized-object'
-    }
-  },
-  {
-    name:   'shortVar',
-    type:   'Short',
-    value:  '-32768'
-  },
-  {
-    name:   'stringVar',
-    type:   'String',
-    value:  'Some string value'
-  }
-];
-
-testModule.controller('example1Controller', ['$scope', function($scope) {
-  $scope.vars = vars;
-}]);
-
-testModule.controller('example2Controller', ['$scope', function($scope) {
-  $scope.vars = vars;
-}]);
-
-testModule.controller('example3Controller', ['$scope', function($scope) {
-  $scope.nameValue =  ['name', 'value'];
-  $scope.typeValue =  ['type', 'value'];
-  $scope.typeName =   ['type', 'name'];
-  $scope.vars = vars;
-}]);
-
-angular.element(document).ready(function() {
-  angular.bootstrap(document.body, [testModule.name]);
-});
-
-},{"../../../../vendor/ui-bootstrap-tpls-0.11.2-camunda":9,"../cam-variable-validator":2,"../cam-widget-variable":3,"camunda-bpm-sdk-js/vendor/angular":8}],5:[function(require,module,exports){
-'use strict';
-
 var INTEGER_PATTERN = /^-?[\d]+$/;
 
 var FLOAT_PATTERN = /^(0|(-?(((0|[1-9]\d*)\.\d+)|([1-9]\d*))))([eE][-+]?[0-9]+)?$/;
@@ -535,7 +86,7 @@ module.exports = {
   dateToString : dateToString
 };
 
-},{}],6:[function(require,module,exports){
+},{}],2:[function(require,module,exports){
 /**
  * @license AngularJS v1.2.29
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -22705,16 +22256,465 @@ var styleDirective = valueFn({
 })(window, document);
 
 !window.angular.$$csp() && window.angular.element(document).find('head').prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>');
-},{}],7:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 require('./angular');
 module.exports = angular;
 
-},{"./angular":6}],8:[function(require,module,exports){
+},{"./angular":2}],4:[function(require,module,exports){
 'use strict';
 
 module.exports = require('angular');
 
-},{"angular":7}],9:[function(require,module,exports){
+},{"angular":3}],5:[function(require,module,exports){
+'use strict';
+
+
+var angular = require('camunda-bpm-sdk-js/vendor/angular'),
+    typeUtils = require('camunda-bpm-sdk-js/lib/forms/type-util'),
+
+    templateDialog = "<!-- # CE - camunda-commons-ui/lib/widgets/variable/cam-widget-variable-dialog.html -->\n<div class=\"modal-header\">\n  <h3>Inspect \"{{ variable.name }}\" variable</h3>\n</div>\n\n<div class=\"modal-body\">\n  <div ng-if=\"readonly\"\n       class=\"form-group\">\n    <label>Object type name:</label>\n    <code class=\"form-control-static\"\n          cam-widget-clipboard=\"variable.valueInfo.objectTypeName\">{{ variable.valueInfo.objectTypeName }}</code>\n  </div>\n\n  <div ng-if=\"readonly\"\n       class=\"form-group\">\n    <label>Serialization Data Format:</label>\n    <code class=\"form-control-static\"\n          cam-widget-clipboard=\"variable.valueInfo.serializationDataFormat\">{{ variable.valueInfo.serializationDataFormat }}</code>\n  </div>\n\n  <div ng-if=\"!readonly\"\n       class=\"form-group\">\n    <label for=\"object-type-name\"\n           cam-widget-clipboard=\"variable.valueInfo.objectTypeName\">Object type name</label>\n    <input type=\"text\"\n           id=\"object-type-name\"\n           class=\"form-control\"\n           ng-model=\"variable.valueInfo.objectTypeName\" />\n  </div>\n\n  <div ng-if=\"!readonly\"\n       class=\"form-group\">\n    <label for=\"serialization-data-format\"\n           cam-widget-clipboard=\"variable.valueInfo.serializationDataFormat\">Serialization data format</label>\n    <input type=\"text\"\n           id=\"serialization-data-format\"\n           class=\"form-control\"\n           ng-model=\"variable.valueInfo.serializationDataFormat\" />\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"serialized-value\"\n           cam-widget-clipboard=\"variable.value\"\n           no-tooltip\n           ng-class=\"{hovered: hovered === 'var-value'}\">Serialized value</label>\n    <textarea ng-model=\"variable.value\"\n              id=\"serialized-value\"\n              rows=\"10\"\n              class=\"form-control\"\n              ng-readonly=\"readonly\"\n              ng-mouseenter=\"toggleHover('var-value')\"\n              ng-mouseleave=\"toggleHover()\"></textarea>\n  </div>\n</div>\n\n<div class=\"modal-footer\">\n  <button class=\"btn btn-default\"\n          ng-click=\"$dismiss('close')\">\n    Close\n  </button>\n\n  <button class=\"btn btn-primary\"\n          ng-if=\"!readonly\"\n          ng-readonly=\"!hasChanged('serialized')\"\n          ng-click=\"$close(variable)\">\n    Change\n  </button>\n</div>\n<!-- / CE - camunda-commons-ui/lib/widgets/variable/cam-widget-variable-dialog.html -->\n",
+    templateStringDialog = "<!-- # CE - camunda-commons-ui/lib/widgets/variable/cam-widget-variable-dialog.html -->\n<div class=\"modal-header\">\n  <h3>Inspect \"{{ variable.name }}\" variable</h3>\n</div>\n\n<div class=\"modal-body\">\n  <div class=\"form-group\">\n    <label for=\"value\"\n           cam-widget-clipboard=\"variable.value\"\n           no-tooltip\n           ng-class=\"{hovered: hovered === 'var-value'}\">\n      Value\n    </label>\n    <textarea ng-model=\"variable.value\"\n              id=\"value\"\n              rows=\"10\"\n              class=\"form-control cam-string-variable\"\n              ng-readonly=\"readonly\"\n              ng-mouseenter=\"toggleHover('var-value')\"\n              ng-mouseleave=\"toggleHover()\"></textarea>\n  </div>\n</div>\n\n<div class=\"modal-footer\">\n  <button class=\"btn btn-default\"\n          ng-click=\"$dismiss('close')\">\n    Close\n  </button>\n</div>\n<!-- / CE - camunda-commons-ui/lib/widgets/variable/cam-widget-variable-dialog.html -->\n";
+
+var varUtils = {};
+
+function camundaFormattedDate(date) {
+  date = date || new Date();
+  return date.toISOString().slice(0, -5);
+}
+varUtils.camundaFormattedDate = camundaFormattedDate;
+
+varUtils.templateDialog = templateDialog;
+varUtils.templateStringDialog = templateStringDialog;
+
+varUtils.modalCtrl = [
+  '$scope',
+  'variable',
+  'readonly',
+  function(
+    $dialogScope,
+    variable,
+    readonly
+  ) {
+    $dialogScope.hovered = false;
+    $dialogScope.toggleHover = function(which) {
+      $dialogScope.hovered = which;
+    };
+
+    $dialogScope.variable = variable;
+    $dialogScope.readonly = readonly;
+    var original = angular.copy(variable);
+
+    $dialogScope.hasChanged = function() {
+      original.valueInfo = original.valueInfo || {};
+      variable.valueInfo = variable.valueInfo || {};
+
+      return original.value !== variable.value ||
+              original.valueInfo.serializationDataFormat !== variable.valueInfo.serializationDataFormat ||
+              original.valueInfo.objectTypeName !== variable.valueInfo.objectTypeName;
+    };
+  }];
+
+
+varUtils.typeUtils = typeUtils;
+
+
+varUtils.types = [
+  'Boolean',
+  'Bytes',
+  'File',
+  'Date',
+  'Double',
+  'Integer',
+  'Long',
+  'Null',
+  'Object',
+  'Short',
+  'String'
+];
+
+
+varUtils.defaultValues = {
+  'Boolean':    false,
+  'Bytes':      null,
+  'File':       null,
+  'Date':       camundaFormattedDate(),
+  'Double':     0,
+  'Integer':    0,
+  'Long':       0,
+  'Null':       '',
+  'Short':      0,
+  'String':     '',
+  'Object':     {}
+};
+
+
+varUtils.isPrimitive = function($scope) {
+  return function(type) {
+    if (!type && !$scope.variable) { return true; }
+    type = type || $scope.variable.type;
+    if (!type) { return true; }
+
+    return [
+      'Boolean',
+      'Date',
+      'Double',
+      'Integer',
+      'Long',
+      'Short',
+      'String'
+    ].indexOf(type) >= 0;
+  };
+};
+
+
+varUtils.isBinary = function($scope) {
+  return function(type) {
+    if (!type && !$scope.variable) { return false; }
+    type = type || $scope.variable.type;
+    if (!type) { return false; }
+
+    return [
+      'Bytes',
+      'File'
+    ].indexOf(type) >= 0;
+  };
+};
+
+
+varUtils.useCheckbox = function($scope) {
+  return function(type) {
+    if (!type && !$scope.variable) { return false; }
+    type = type || $scope.variable.type;
+    return type === 'Boolean';
+  };
+};
+
+varUtils.validate = function($scope) {
+  return function() {
+    if (!$scope.variable.name || !$scope.variable.type) {
+      $scope.valid = false;
+    }
+
+    else if ($scope.variable.value === null ||
+               ['String', 'Object', 'Null'].indexOf($scope.variable.type) > -1) {
+      $scope.valid = true;
+    }
+
+      else {
+      $scope.valid = typeUtils.isType($scope.variable.value, $scope.variable.type);
+    }
+
+    if($scope.valid) {
+        // save the variable in the appropriate type
+      if ($scope.variable.type &&
+            $scope.variable.value !== null &&
+            $scope.isPrimitive($scope.variable.type)) {
+        var newTyped;
+
+        if ($scope.variable.type !== 'Boolean') {
+          newTyped = typeUtils.convertToType($scope.variable.value, $scope.variable.type);
+        }
+        else {
+          newTyped = $scope.variable.value ?
+                        $scope.variable.value !== 'false' :
+                        false;
+        }
+
+          // only change value if newType has different type, to avoid infinite recursion
+        if(typeof $scope.variable.value !== typeof newTyped) {
+          $scope.variable.value = newTyped;
+        }
+      }
+    }
+  };
+};
+
+module.exports = varUtils;
+
+},{"camunda-bpm-sdk-js/lib/forms/type-util":1,"camunda-bpm-sdk-js/vendor/angular":4}],6:[function(require,module,exports){
+'use strict';
+
+var typeUtils = require('camunda-bpm-sdk-js/lib/forms/type-util');
+
+module.exports = [function() {
+
+  return {
+
+    require: 'ngModel',
+
+    link: function($scope, $element, $attrs, ctrl) {
+
+      var validate = function(viewValue) {
+
+        var type = $attrs.camVariableValidator;
+        if (['String', 'Object', 'Null'].indexOf(type) !== -1) {
+          ctrl.$setValidity('camVariableValidator', true);
+        } else {
+          ctrl.$setValidity('camVariableValidator', typeUtils.isType(viewValue, type));
+        }
+
+        return viewValue;
+      };
+
+      ctrl.$parsers.unshift(validate);
+      ctrl.$formatters.push(validate);
+
+      $attrs.$observe('camVariableValidator', function() {
+        return validate(ctrl.$viewValue);
+      });
+    }
+  };
+}];
+
+},{"camunda-bpm-sdk-js/lib/forms/type-util":1}],7:[function(require,module,exports){
+'use strict';
+
+
+var angular = require('camunda-bpm-sdk-js/vendor/angular'),
+    varUtils = require('./cam-variable-utils'),
+
+    template = "<div ng-if=\"display && isShown('type')\"\n     class=\"type\">{{ variable.type }}</div>\n<div ng-if=\"display && isShown('name')\"\n     class=\"name\">{{ variable.name }}</div>\n<div ng-if=\"display && isShown('value') && isPrimitive()\"\n     ng-class=\"{null: isNull()}\"\n     class=\"value\">\n  <span ng-if=\"isNull()\"\n        class=\"null-symbol\">&lt;null&gt;</span>\n  {{ (variable.value === null ? '' : variable.value.toString()) }}\n</div>\n<div ng-if=\"display && isShown('value') && variable.type === 'Object'\"\n     ng-class=\"{null: isNull()}\"\n     class=\"value\">\n  <a ng-click=\"editVariableValue()\">\n    {{ variable.valueInfo.objectTypeName }}\n  </a>\n</div>\n\n\n<div ng-if=\"!display\"\n     class=\"input-group editing\">\n  <div ng-if=\"isShown('type')\"\n       class=\"input-group-btn type\">\n    <select class=\"form-control\"\n            ng-model=\"variable.type\"\n            ng-options=\"variableType for variableType in variableTypes track by variableType\"\n            ng-disabled=\"isDisabled('type')\"\n            required>\n    </select>\n  </div><!-- /btn-group -->\n\n  <input ng-if=\"isShown('name')\"\n         type=\"text\"\n         class=\"form-control name\"\n         ng-model=\"variable.name\"\n         placeholder=\"varName\"\n         ng-disabled=\"isDisabled('name')\"\n         required />\n\n  <div ng-if=\"isShown('value') && !isNull()\"\n       class=\"value-wrapper input-group\"\n       ng-class=\"{checkbox: useCheckbox()}\">\n    <div ng-if=\"variable.type !== 'Null'\"\n         class=\"input-group-btn\">\n      <a ng-click=\"setNull()\"\n         class=\"btn btn-default set-null\"\n         ng-disabled=\"isDisabled('value')\"\n         tooltip=\"Set value to &quot;null&quot;\">\n        <span class=\"glyphicon glyphicon-remove\"></span>\n      </a>\n    </div>\n\n    <input ng-if=\"isPrimitive() && !useCheckbox()\"\n           type=\"text\"\n           class=\"form-control value\"\n           ng-model=\"variable.value\"\n           ng-disabled=\"isDisabled('value')\"\n           placeholder=\"Value of the variable\"\n           cam-variable-validator=\"{{variable.type}}\" />\n\n    <input ng-if=\"useCheckbox()\"\n           type=\"checkbox\"\n           class=\"value\"\n           ng-model=\"variable.value\"\n           ng-disabled=\"isDisabled('value')\"\n           placeholder=\"Value of the variable\"\n           cam-variable-validator=\"{{variable.type}}\" />\n\n    <div ng-if=\"variable.type === 'Object'\"\n         class=\"value form-control-static\">\n      <a ng-click=\"editVariableValue()\" ng-disabled=\"isDisabled('value')\">\n        {{ variable.valueInfo.objectTypeName || '&lt;undefined&gt;' }}\n      </a>\n    </div>\n  </div>\n\n  <div ng-if=\"variable.type !== 'Null' && isShown('value') && isNull()\"\n       ng-click=\"setNonNull()\"\n       class=\"value-wrapper value null-value btn btn-default\"\n       ng-disabled=\"isDisabled('value')\"\n       tooltip=\"Re-set to previous or default value\">\n    <span class=\"null-symbol\">&lt;null&gt;</span>\n  </div>\n\n  <div ng-if=\"variable.type === 'Null'\"\n       ng-disabled=\"isDisabled('value')\"\n       class=\"value-wrapper value btn no-click null-value\">\n    <span class=\"null-symbol\">&lt;null&gt;</span>\n  </div>\n</div>\n";
+
+
+var variableTypes = varUtils.types;
+
+var modalCtrl = varUtils.modalCtrl;
+
+module.exports = [
+  '$modal',
+  function(
+    $modal
+  ) {
+    return {
+      template: template,
+
+      scope: {
+        variable: '=camVariable',
+        // A variable HAS a the following information
+        // {
+        //   value: <Mixed>,
+        //   name: <String>,
+        //   type: <String>,
+        //
+        // A variable MAY HAVE a the following information
+        //   id: <UUID>,
+        //   valueInfo: {
+        //     objectTypeName: <String>,
+        //     serializationDataFormat: <String>
+        //   },
+        //
+        //   activitiyInstanceId: <UUID>,
+        //   caseExecutionId: <UUID>,
+        //   caseInstanceId: <UUID>,
+        //   executionId: <UUID>,
+        //   processInstanceId: <UUID>,
+        //   taskId: <UUID>
+        // }
+        display:  '@?',
+        shown:    '=?',
+        disabled: '=?'
+      },
+
+
+      link: function($scope, element) {
+        $scope.variableTypes = angular.copy(variableTypes);
+
+        var defaultValues = varUtils.defaultValues;
+
+
+        $scope.isPrimitive = varUtils.isPrimitive($scope);
+
+
+        $scope.useCheckbox = varUtils.useCheckbox($scope);
+
+
+
+        $scope.isShown = function(what) {
+          if (!Array.isArray($scope.shown) || !$scope.shown.length) { return true; }
+          return $scope.shown.indexOf(what) > -1;
+        };
+
+        $scope.isDisabled = function(what) {
+          if (!Array.isArray($scope.disabled) || !$scope.disabled.length) { return false; }
+          return $scope.disabled.indexOf(what) > -1;
+        };
+
+        $scope.shownClasses = function() {
+          if (!Array.isArray($scope.shown) || !$scope.shown.length) { return ''; }
+          return $scope.shown.map(function(part) {
+            return 'show-' + part;
+          }).join(' ');
+        };
+        $scope.$watch('shown', function() {
+          element
+            .removeClass('show-type show-name show-value')
+            .addClass($scope.shownClasses());
+        });
+
+        var validate = varUtils.validate($scope);
+        $scope.valid = true;
+        $scope.$watch('variable.value', validate);
+        $scope.$watch('variable.name', validate);
+        $scope.$watch('variable.type', validate);
+        validate();
+
+        // backup is used to recover a variable value
+        // from either type or null switch
+        var backup = $scope.variable.value;
+
+        $scope.$watch('variable.type', function(current, previous) {
+          // convert the value to boolean when the type becomes Boolean
+          if (current === 'Boolean') {
+            // we don't do anything if the value is null
+            if ($scope.variable.value !== null) {
+              backup = $scope.variable.value;
+
+              $scope.variable.value = $scope.variable.value === 'false' ?
+                                      false :
+                                      !!$scope.variable.value;
+            }
+          }
+          else if (previous === 'Boolean') {
+            $scope.variable.value = backup;
+          }
+
+          var classList = element[0].classList;
+          if (previous) {
+            classList.remove('var-type-' + previous.toLowerCase());
+          }
+          if (current) {
+            classList.add('var-type-' + current.toLowerCase());
+          }
+        });
+
+        $scope.isNull = function() {
+          return $scope.variable.value === null;
+        };
+        $scope.setNonNull = function() {
+          $scope.variable.value = backup || defaultValues[$scope.variable.type];
+        };
+        $scope.setNull = function() {
+          backup = $scope.variable.value;
+          $scope.variable.value = null;
+        };
+
+        $scope.editVariableValue = function() {
+          $modal.open({
+            template: varUtils.templateDialog,//templateDialog,
+
+            controller: modalCtrl,
+
+            windowClass: 'cam-widget-variable-dialog',
+
+            resolve: {
+              variable: function() { return angular.copy($scope.variable); },
+              readonly: function() { return $scope.display; }
+            }
+          })
+          .result.then(function(result) {
+            $scope.variable.value = result.value;
+            $scope.variable.valueInfo = result.valueInfo;
+          })
+          ;
+        };
+      }
+    };
+  }];
+
+},{"./cam-variable-utils":5,"camunda-bpm-sdk-js/vendor/angular":4}],8:[function(require,module,exports){
+'use strict';
+
+var angular = require('camunda-bpm-sdk-js/vendor/angular'),
+    variableDefinition = require('../cam-widget-variable'),
+    variableValidator = require('../cam-variable-validator');
+
+require('../../../../vendor/ui-bootstrap-tpls-0.11.2-camunda');
+
+var variableModule = angular.module('variableModule', [
+  'ui.bootstrap'
+]);
+
+variableModule.directive('camWidgetVariable', variableDefinition);
+variableModule.directive('camVariableValidator', variableValidator);
+
+
+var testModule = angular.module('testModule', [variableModule.name]);
+var vars = [
+  {
+    name:   null,
+    type:   null
+  },
+  {
+    name:   'booleanVar',
+    type:   'Boolean',
+    value:  true
+  },
+  {
+    name:   'dateVar',
+    type:   'Date',
+    value:  '2015-03-23T13:14:06.340Z'
+  },
+  {
+    name:   'doubleVar',
+    type:   'Double',
+    value:  '12.34'
+  },
+  {
+    name:   'integerVar',
+    type:   'Integer',
+    value:  '1000'
+  },
+  {
+    name:   'longVar',
+    type:   'Long',
+    value:  '-100000000'
+  },
+  {
+    name:   'nullVar',
+    type:   'Null',
+    value:  null
+  },
+  {
+    name:   'objectVar',
+    type:   'Object',
+    value:  'rO0ABXNyACpvcmcuY2FtdW5kYS5icG0ucGEuc2VydmljZS5Db2NrcGl0VmFyaWFibGUAAAAAAAAAAQIAA0wABWRhdGVzdAAQTGphdmEvdXRpbC9MaXN0O0wABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZztMAAV2YWx1ZXEAfgACeHBzcgATamF2YS51dGlsLkFycmF5TGlzdHiB0h2Zx2GdAwABSQAEc2l6ZXhwAAAAAXcEAAAAAXNyAA5qYXZhLnV0aWwuRGF0ZWhqgQFLWXQZAwAAeHB3CAAAAUyieV6meHh0AAR0ZXN0dAAUY29ja3BpdFZhcmlhYmxlVmFsdWU',
+    valueInfo: {
+      objectTypeName: 'org.camunda.bpm.pa.service.CockpitVariable',
+      serializationDataFormat: 'application/x-java-serialized-object'
+    }
+  },
+  {
+    name:   'shortVar',
+    type:   'Short',
+    value:  '-32768'
+  },
+  {
+    name:   'stringVar',
+    type:   'String',
+    value:  'Some string value'
+  }
+];
+
+testModule.controller('example1Controller', ['$scope', function($scope) {
+  $scope.vars = vars;
+}]);
+
+testModule.controller('example2Controller', ['$scope', function($scope) {
+  $scope.vars = vars;
+}]);
+
+testModule.controller('example3Controller', ['$scope', function($scope) {
+  $scope.nameValue =  ['name', 'value'];
+  $scope.typeValue =  ['type', 'value'];
+  $scope.typeName =   ['type', 'name'];
+  $scope.vars = vars;
+}]);
+
+angular.element(document).ready(function() {
+  angular.bootstrap(document.body, [testModule.name]);
+});
+
+},{"../../../../vendor/ui-bootstrap-tpls-0.11.2-camunda":9,"../cam-variable-validator":6,"../cam-widget-variable":7,"camunda-bpm-sdk-js/vendor/angular":4}],9:[function(require,module,exports){
 /*
  * angular-ui-bootstrap
  * http://angular-ui.github.io/bootstrap/
@@ -26986,4 +26986,4 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
     "");
 }]);
 
-},{}]},{},[4]);
+},{}]},{},[8]);
