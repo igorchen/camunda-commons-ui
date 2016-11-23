@@ -70968,9 +70968,16 @@ function DrdUpdater(eventBus, drdFactory, connectionDocking, drillDown, drdRules
 
   // update parent
   function updateParent(e) {
-    var context = e.context;
+    var context = e.context,
+        element = context.shape || context.connection,
+        oldParent = context.oldParent;
 
-    self.updateParent(context.shape || context.connection, context.oldParent);
+    // for all requirements the semantic parent is the target
+    if (context.connection && !is(element, 'dmn:Association')) {
+      oldParent = element.target;
+    }
+
+    self.updateParent(element, oldParent);
   }
 
   function reverseUpdateParent(e) {
@@ -71341,7 +71348,7 @@ ElementFactory.prototype.createDrdElement = function(elementType, attrs) {
 ElementFactory.prototype._getDefaultSize = function(semantic) {
 
   if (is(semantic, 'dmn:Decision')) {
-    return { width: 100, height: 55 };
+    return { width: 180, height: 80 };
   }
 
   if (is(semantic, 'dmn:InputData')) {
@@ -74437,10 +74444,10 @@ module.exports = {
 
 
 },{"./DateEdit":597}],600:[function(require,module,exports){
-module.exports = "<div>\r\n  <h4>Edit Date Condition</h4>\r\n  <select class=\"dateEdit-type-dropdown\">\r\n    <option value=\"exact\">Exactly</option>\r\n    <option value=\"before\">Before</option>\r\n    <option value=\"after\">After</option>\r\n    <option value=\"between\">Between</option>\r\n  </select>\r\n  <div class=\"date-1\">\r\n    <input type=\"text\" placeholder=\"yyyy-mm-dd'T'hh:mm:ss\" spellcheck=\"false\"><button>Today</button>\r\n    <div class=\"helptext\">yyyy-mm-dd'T'hh:mm:ss</div>\r\n  </div>\r\n  <div class=\"date-2\" style=\"display: none;\">\r\n    <div>and</div>\r\n    <input type=\"text\" placeholder=\"yyyy-mm-dd'T'hh:mm:ss\" spellcheck=\"false\"><button>Today</button>\r\n    <div class=\"helptext\">yyyy-mm-dd'T'hh:mm:ss</div>\r\n  </div>\r\n</div>\r\n";
+module.exports = "<div>\n  <h4>Edit Date Condition</h4>\n  <select class=\"dateEdit-type-dropdown\">\n    <option value=\"exact\">Exactly</option>\n    <option value=\"before\">Before</option>\n    <option value=\"after\">After</option>\n    <option value=\"between\">Between</option>\n  </select>\n  <div class=\"date-1\">\n    <input type=\"text\" placeholder=\"yyyy-mm-dd'T'hh:mm:ss\" spellcheck=\"false\"><button>Today</button>\n    <div class=\"helptext\">yyyy-mm-dd'T'hh:mm:ss</div>\n  </div>\n  <div class=\"date-2\" style=\"display: none;\">\n    <div>and</div>\n    <input type=\"text\" placeholder=\"yyyy-mm-dd'T'hh:mm:ss\" spellcheck=\"false\"><button>Today</button>\n    <div class=\"helptext\">yyyy-mm-dd'T'hh:mm:ss</div>\n  </div>\n</div>\n";
 
 },{}],601:[function(require,module,exports){
-module.exports = "<div>\r\n  <h4>Edit Date Result</h4>\r\n  <div class=\"date-1\">\r\n    <input type=\"text\" placeholder=\"yyyy-mm-dd'T'hh:mm:ss\" spellcheck=\"false\"><button>Today</button>\r\n    <div class=\"helptext\">yyyy-mm-dd'T'hh:mm:ss</div>\r\n  </div>\r\n</div>\r\n";
+module.exports = "<div>\n  <h4>Edit Date Result</h4>\n  <div class=\"date-1\">\n    <input type=\"text\" placeholder=\"yyyy-mm-dd'T'hh:mm:ss\" spellcheck=\"false\"><button>Today</button>\n    <div class=\"helptext\">yyyy-mm-dd'T'hh:mm:ss</div>\n  </div>\n</div>\n";
 
 },{}],602:[function(require,module,exports){
 'use strict';
@@ -75609,7 +75616,7 @@ module.exports = {
 };
 
 },{"./IoLabel":618,"./IoLabelRenderer":619,"./IoLabelRules":620}],622:[function(require,module,exports){
-module.exports = "<div class=\"literal-expression-editor\">\r\n  <textarea placeholder=\"return obj.propertyName;\"></textarea>\r\n\r\n  <div>\r\n    <div class=\"literal-expression-field\">\r\n      <div class=\"dmn-combobox\">\r\n        <label>Variable Name:</label>\r\n        <input class=\"variable-name\" placeholder=\"varName\">\r\n      </div>\r\n    </div>\r\n    <div class=\"literal-expression-field variable-type\">\r\n    </div>\r\n  </div>\r\n  <div>\r\n    <div class=\"literal-expression-field expression-language\">\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+module.exports = "<div class=\"literal-expression-editor\">\n  <textarea placeholder=\"return obj.propertyName;\"></textarea>\n\n  <div>\n    <div class=\"literal-expression-field\">\n      <div class=\"dmn-combobox\">\n        <label>Variable Name:</label>\n        <input class=\"variable-name\" placeholder=\"varName\">\n      </div>\n    </div>\n    <div class=\"literal-expression-field variable-type\">\n    </div>\n  </div>\n  <div>\n    <div class=\"literal-expression-field expression-language\">\n    </div>\n  </div>\n</div>\n";
 
 },{}],623:[function(require,module,exports){
 'use strict';
@@ -75726,7 +75733,7 @@ module.exports = {
 };
 
 },{"./LiteralExpressionEditor":623}],625:[function(require,module,exports){
-module.exports = "<div>\r\n  <div class=\"links\">\r\n    <div class=\"toggle-type\">\r\n      <label>Use:</label>\r\n      <a class=\"expression\">Expression</a>\r\n      /\r\n      <a class=\"script\">Script</a>\r\n    </div>\r\n    <a class=\"dmn-icon-clear\"></a>\r\n  </div>\r\n  <div class=\"expression region\">\r\n    <div class=\"input-expression\">\r\n      <label>Expression:</label>\r\n      <input placeholder=\"propertyName\">\r\n    </div>\r\n    <div class=\"input-expression\">\r\n      <label>Input Variable Name:</label>\r\n      <input placeholder=\"cellInput\">\r\n    </div>\r\n  </div>\r\n  <div class=\"script region\">\r\n    <textarea placeholder=\"return obj.propertyName;\"></textarea>\r\n    <div class=\"input-expression\">\r\n      <label>Input Variable Name:</label>\r\n      <input placeholder=\"cellInput\">\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+module.exports = "<div>\n  <div class=\"links\">\n    <div class=\"toggle-type\">\n      <label>Use:</label>\n      <a class=\"expression\">Expression</a>\n      /\n      <a class=\"script\">Script</a>\n    </div>\n    <a class=\"dmn-icon-clear\"></a>\n  </div>\n  <div class=\"expression region\">\n    <div class=\"input-expression\">\n      <label>Expression:</label>\n      <input placeholder=\"propertyName\">\n    </div>\n    <div class=\"input-expression\">\n      <label>Input Variable Name:</label>\n      <input placeholder=\"cellInput\">\n    </div>\n  </div>\n  <div class=\"script region\">\n    <textarea placeholder=\"return obj.propertyName;\"></textarea>\n    <div class=\"input-expression\">\n      <label>Input Variable Name:</label>\n      <input placeholder=\"cellInput\">\n    </div>\n  </div>\n</div>\n";
 
 },{}],626:[function(require,module,exports){
 'use strict';
@@ -77971,10 +77978,10 @@ module.exports = {
 };
 
 },{"./NumberEdit":644}],646:[function(require,module,exports){
-module.exports = "<div>\r\n  <h4>Edit Number Condition</h4>\r\n  <div class=\"links\">\r\n    <div class=\"toggle-type\">\r\n      <a class=\"comparison\">Comparison</a>\r\n      /\r\n      <a class=\"range\">Range</a>\r\n    </div>\r\n  </div>\r\n  <div class=\"comparison region\">\r\n    <select class=\"comparison-dropdown\">\r\n      <option value=\"equals\">= (Equals)</option>\r\n      <option value=\"less\">&lt; (Less than)</option>\r\n      <option value=\"less-equal\">&lt;= (Less than or equal)</option>\r\n      <option value=\"greater\">&gt; (Greater than)</option>\r\n      <option value=\"greater-equal\">&gt;= (Greater than or equal)</option>\r\n    </select>\r\n    <input type=\"number\" class=\"comparison-number\" placeholder=\"number\" />\r\n  </div>\r\n  <div class=\"range region\">\r\n    <label>Include</label>\r\n    <div class=\"include-inputs\">\r\n      <input type=\"number\" placeholder=\"start\" />\r\n      <input type=\"checkbox\" placeholder=\"include-start\" />\r\n    </div>\r\n    <div class=\"include-inputs\">\r\n      <input type=\"number\" placeholder=\"end\" />\r\n      <input type=\"checkbox\" placeholder=\"include-end\" />\r\n    </div>\r\n  </div>\r\n</div>\r\n";
+module.exports = "<div>\n  <h4>Edit Number Condition</h4>\n  <div class=\"links\">\n    <div class=\"toggle-type\">\n      <a class=\"comparison\">Comparison</a>\n      /\n      <a class=\"range\">Range</a>\n    </div>\n  </div>\n  <div class=\"comparison region\">\n    <select class=\"comparison-dropdown\">\n      <option value=\"equals\">= (Equals)</option>\n      <option value=\"less\">&lt; (Less than)</option>\n      <option value=\"less-equal\">&lt;= (Less than or equal)</option>\n      <option value=\"greater\">&gt; (Greater than)</option>\n      <option value=\"greater-equal\">&gt;= (Greater than or equal)</option>\n    </select>\n    <input type=\"number\" class=\"comparison-number\" placeholder=\"number\" />\n  </div>\n  <div class=\"range region\">\n    <label>Include</label>\n    <div class=\"include-inputs\">\n      <input type=\"number\" placeholder=\"start\" />\n      <input type=\"checkbox\" placeholder=\"include-start\" />\n    </div>\n    <div class=\"include-inputs\">\n      <input type=\"number\" placeholder=\"end\" />\n      <input type=\"checkbox\" placeholder=\"include-end\" />\n    </div>\n  </div>\n</div>\n";
 
 },{}],647:[function(require,module,exports){
-module.exports = "<div>\r\n  <h4>Edit Number Result</h4>\r\n  <div class=\"comparison region\">\r\n    <input type=\"number\" class=\"comparison-number\" placeholder=\"number\" style=\"width: 100%\" />\r\n  </div>\r\n</div>\r\n";
+module.exports = "<div>\n  <h4>Edit Number Result</h4>\n  <div class=\"comparison region\">\n    <input type=\"number\" class=\"comparison-number\" placeholder=\"number\" style=\"width: 100%\" />\n  </div>\n</div>\n";
 
 },{}],648:[function(require,module,exports){
 var types = [
@@ -78764,10 +78771,10 @@ module.exports = {
 };
 
 },{"./StringEdit":653}],656:[function(require,module,exports){
-module.exports = "<div>\r\n  <h4>Edit String Expression</h4>\r\n  <select class=\"string-type-dropdown\">\r\n    <option value=\"disjunction\">Match one of</option>\r\n    <option value=\"negation\">Match anything except</option>\r\n  </select>\r\n  <div class=\"free-input\">\r\n    <ul>\r\n    </ul>\r\n    <input type=\"text\" placeholder=\"new Value\" class=\"free-input-value-field\" />\r\n    <div class=\"helptext\">Enter value without quotes</div>\r\n  </div>\r\n  <div class=\"input-values\">\r\n    <ul>\r\n    </ul>\r\n  </div>\r\n</div>\r\n";
+module.exports = "<div>\n  <h4>Edit String Expression</h4>\n  <select class=\"string-type-dropdown\">\n    <option value=\"disjunction\">Match one of</option>\n    <option value=\"negation\">Match anything except</option>\n  </select>\n  <div class=\"free-input\">\n    <ul>\n    </ul>\n    <input type=\"text\" placeholder=\"new Value\" class=\"free-input-value-field\" />\n    <div class=\"helptext\">Enter value without quotes</div>\n  </div>\n  <div class=\"input-values\">\n    <ul>\n    </ul>\n  </div>\n</div>\n";
 
 },{}],657:[function(require,module,exports){
-module.exports = "<div>\r\n  <h4>Edit String Result</h4>\r\n  <div class=\"free-input\">\r\n    <textarea type=\"text\" placeholder=\"new Value\" class=\"free-input-value-field\"></textarea>\r\n    <div class=\"helptext\">Enter value without quotes</div>\r\n  </div>\r\n  <div class=\"input-values\">\r\n    <ul>\r\n    </ul>\r\n  </div>\r\n</div>\r\n";
+module.exports = "<div>\n  <h4>Edit String Result</h4>\n  <div class=\"free-input\">\n    <textarea type=\"text\" placeholder=\"new Value\" class=\"free-input-value-field\"></textarea>\n    <div class=\"helptext\">Enter value without quotes</div>\n  </div>\n  <div class=\"input-values\">\n    <ul>\n    </ul>\n  </div>\n</div>\n";
 
 },{}],658:[function(require,module,exports){
 'use strict';
@@ -79240,7 +79247,7 @@ TypeRowRenderer.$inject = [
 module.exports = TypeRowRenderer;
 
 },{"min-dom/lib/classes":991}],664:[function(require,module,exports){
-module.exports = "<div>\r\n  <div class=\"allowed-values\">\r\n    <label>Input Values:</label>\r\n    <ul></ul>\r\n    <input type=\"text\" placeholder=\"value1, value2, otherValue\">\r\n  </div>\r\n</div>\r\n";
+module.exports = "<div>\n  <div class=\"allowed-values\">\n    <label>Input Values:</label>\n    <ul></ul>\n    <input type=\"text\" placeholder=\"value1, value2, otherValue\">\n  </div>\n</div>\n";
 
 },{}],665:[function(require,module,exports){
 module.exports = {
@@ -79656,16 +79663,8 @@ function TableTreeWalker(handler, options) {
 module.exports = TableTreeWalker;
 
 },{"./Util":669,"lodash/collection/forEach":846}],669:[function(require,module,exports){
-'use strict';
-
-module.exports.elementToString = function(e) {
-  if (!e) {
-    return '<null>';
-  }
-
-  return '<' + e.$type + (e.id ? ' id="' + e.id : '') + '" />';
-};
-},{}],670:[function(require,module,exports){
+arguments[4][50][0].apply(exports,arguments)
+},{"dup":50}],670:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../features/factory')
