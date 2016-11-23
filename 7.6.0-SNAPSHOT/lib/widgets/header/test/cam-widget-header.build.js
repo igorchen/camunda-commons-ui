@@ -1,4 +1,169 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+'use strict';
+
+
+var angular = require('camunda-bpm-sdk-js/vendor/angular'),
+
+    template = "<div class=\"navbar-header\">\n  <button type=\"button\"\n          class=\"navbar-toggle\"\n          ng-class=\"{open: !!navbarOpen}\"\n          ng-click=\"navbarOpen = !navbarOpen\">\n    <em class=\"sr-only\">{{ toggleNavigation }}</em>\n    <span></span>\n    <span></span>\n    <span></span>\n  </button>\n\n  <a class=\"navbar-brand\"\n     href=\"#/\"\n     title=\"{{ brandName }} {{ appName }}\">\n    <span class=\"brand-logo\"></span>\n    <span class=\"brand-name\" ng-cloak>{{ brandName }}</span>\n  </a>\n\n  <div class=\"small-screen-warning\">\n    <span class=\"glyphicon glyphicon-exclamation-sign\"\n          tooltip=\"{{ smallScreenWarning }}\"\n          tooltip-placement=\"bottom\"></span>\n  </div>\n</div>\n\n<nav class=\"cam-nav app-menu\">\n  <ul ng-class=\"{collapse: !navbarOpen}\">\n\n    <li engine-select></li>\n\n    <li class=\"account dropdown\"\n        ng-if=\"authentication.name\"\n        ng-cloak>\n      <a href\n         class=\"dropdown-toggle\">\n        <span class=\"glyphicon glyphicon-user \"></span>\n        {{ (userName || authentication.name) }}\n      </a>\n\n      <ul class=\"dropdown-menu dropdown-menu-right\">\n        <li class=\"profile\"\n            ng-if=\"currentApp !== 'welcome'\">\n          <a ng-href=\"{{ '../../welcome/:engine/' | uri }}\">\n            {{ myProfile }}\n          </a>\n        </li>\n\n        <li class=\"divider\"\n            ng-if=\"currentApp !== 'welcome'\"></li>\n\n        <li class=\"logout\">\n          <a href\n             ng-click=\"logout()\">\n            {{ signOut }}\n          </a>\n        </li>\n      </ul>\n    </li>\n\n    <li class=\"divider-vertical\"\n        ng-if=\"authentication.name\"\n        ng-cloak></li>\n\n    <li class=\"app-switch dropdown\"\n        ng-if=\"showAppDropDown\">\n      <a href\n         class=\"dropdown-toggle\">\n        <span class=\"glyphicon glyphicon-home\"></span>\n        <span class=\"caret\"></span>\n      </a>\n\n      <ul class=\"dropdown-menu dropdown-menu-right\">\n        <li ng-repeat=\"(appName, app) in apps\"\n            ng-class=\"appName\">\n          <a ng-href=\"{{ '../../' + appName + '/:engine/' | uri }}\">\n            {{ app.label }}\n          </a>\n        </li>\n      </ul>\n    </li>\n  </ul>\n</nav>\n\n<div ng-transclude\n     class=\"sections-menu\"\n     ng-class=\"{collapse: !navbarOpen}\"></div>\n";
+
+var apps = {
+  welcome:{
+    label: 'Welcome'
+  },
+  admin: {
+    label: 'Admin'
+  },
+  cockpit: {
+    label: 'Cockpit'
+  },
+  tasklist: {
+    label: 'Tasklist'
+  }
+};
+
+
+module.exports = [function() {
+  return {
+    transclude: true,
+
+    template: template,
+
+    scope: {
+      authentication: '=',
+      userName: '=?',
+      currentApp: '@',
+      signOut: '@?',
+      toggleNavigation: '@?',
+      myProfile: '@?',
+      smallScreenWarning: '@?',
+      brandName: '@'
+    },
+
+    compile: function(el, attrs) {
+      if (!attrs.toggleNavigation) { attrs.toggleNavigation = 'Toggle navigation'; }
+      if (!attrs.myProfile) { attrs.myProfile = 'My profile'; }
+      if (!attrs.signOut) { attrs.signOut = 'Sign out'; }
+      if (!attrs.brandName) { attrs.brandName = 'Camunda'; }
+      if (!attrs.smallScreenWarning) {
+        attrs.smallScreenWarning = 'This application is conceived for larger screens.';
+      }
+    },
+
+    controller: [
+      '$scope',
+      'AuthenticationService',
+      function(
+        $scope,
+        AuthenticationService
+      ) {
+        $scope.logout = AuthenticationService.logout;
+
+        function setApps() {
+          var kept = angular.copy(apps);
+
+          if ($scope.currentApp) {
+            if ($scope.currentApp === 'welcome' && $scope.authentication) {
+              kept = {};
+            }
+            else {
+              delete kept[$scope.currentApp];
+            }
+          }
+
+          if ($scope.authentication && $scope.authentication.name) {
+            delete kept.welcome;
+
+            Object.keys(kept).forEach(function(appName) {
+              if ($scope.authentication.authorizedApps.indexOf(appName) < 0) {
+                delete kept[appName];
+              }
+            });
+          }
+
+          $scope.showAppDropDown = Object.keys(kept).length > 0;
+
+          $scope.apps = kept;
+        }
+
+        $scope.$watch('currentApp', setApps);
+        $scope.$watch('authentication', setApps);
+      }]
+  };
+}];
+
+},{"camunda-bpm-sdk-js/vendor/angular":5}],2:[function(require,module,exports){
+'use strict';
+
+var angular = require('camunda-bpm-sdk-js/vendor/angular'),
+    headerDefinition = require('../cam-widget-header');
+
+require('../../../../vendor/ui-bootstrap-tpls-0.11.2-camunda');
+
+// naive auth object for test purposes
+function Authentication(username, accesses) {
+  this.name = username || '';
+  this.authorizedApps = accesses || [];
+}
+Authentication.prototype.canAccess = function(appName) {
+  return !this.authorizedApps.length || this.authorizedApps.indexOf(appName) > -1;
+};
+
+
+var mockedDependenciesModule = angular.module('mockedDependencies', []);
+
+mockedDependenciesModule.service('AuthenticationService', [function() {
+  this.logout = function() {
+    // logging out
+  };
+}]);
+
+mockedDependenciesModule.provider('uriFilter', [function() {
+  return { $get: function() {} };
+}]);
+mockedDependenciesModule.filter('uri', [function() {
+  return function() { return '#uri-filter-replaced'; };
+}]);
+
+
+
+var headerModule = angular.module('headerModule', [
+  'ui.bootstrap',
+  mockedDependenciesModule.name
+]);
+headerModule.directive('camWidgetHeader', headerDefinition);
+
+
+
+var testModule = angular.module('testModule', [headerModule.name]);
+
+testModule.controller('testAnonymousController', ['$scope', function($scope) {
+  $scope.ctrlCurrentApp = 'admin';
+  $scope.auth = new Authentication();
+}]);
+
+testModule.controller('testAuthenticatedController', ['$scope', '$timeout', function($scope, $timeout) {
+  $scope.ctrlCurrentApp = 'tasklist';
+
+  $scope.auth = new Authentication('mustermann', ['tasklist', 'admin']);
+
+  $timeout(function() {
+    $scope.fullName = 'Max Mustermann';
+  }, 400);
+}]);
+
+testModule.controller('testAuthenticatedSingleController', ['$scope', '$timeout', function($scope, $timeout) {
+  $scope.auth = new Authentication('mustermann', ['tasklist']);
+
+  $timeout(function() {
+    $scope.fullName = 'Max Mustermann';
+  }, 400);
+}]);
+
+angular.element(document).ready(function() {
+  angular.bootstrap(document.body, [testModule.name]);
+});
+
+},{"../../../../vendor/ui-bootstrap-tpls-0.11.2-camunda":6,"../cam-widget-header":1,"camunda-bpm-sdk-js/vendor/angular":5}],3:[function(require,module,exports){
 /**
  * @license AngularJS v1.2.29
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -22168,181 +22333,16 @@ var styleDirective = valueFn({
 })(window, document);
 
 !window.angular.$$csp() && window.angular.element(document).find('head').prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>');
-},{}],2:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 require('./angular');
 module.exports = angular;
 
-},{"./angular":1}],3:[function(require,module,exports){
+},{"./angular":3}],5:[function(require,module,exports){
 'use strict';
 
 module.exports = require('angular');
 
-},{"angular":2}],4:[function(require,module,exports){
-'use strict';
-
-
-var angular = require('camunda-bpm-sdk-js/vendor/angular'),
-
-    template = "<div class=\"navbar-header\">\n  <button type=\"button\"\n          class=\"navbar-toggle\"\n          ng-class=\"{open: !!navbarOpen}\"\n          ng-click=\"navbarOpen = !navbarOpen\">\n    <em class=\"sr-only\">{{ toggleNavigation }}</em>\n    <span></span>\n    <span></span>\n    <span></span>\n  </button>\n\n  <a class=\"navbar-brand\"\n     href=\"#/\"\n     title=\"{{ brandName }} {{ appName }}\">\n    <span class=\"brand-logo\"></span>\n    <span class=\"brand-name\" ng-cloak>{{ brandName }}</span>\n  </a>\n\n  <div class=\"small-screen-warning\">\n    <span class=\"glyphicon glyphicon-exclamation-sign\"\n          tooltip=\"{{ smallScreenWarning }}\"\n          tooltip-placement=\"bottom\"></span>\n  </div>\n</div>\n\n<nav class=\"cam-nav app-menu\">\n  <ul ng-class=\"{collapse: !navbarOpen}\">\n\n    <li engine-select></li>\n\n    <li class=\"account dropdown\"\n        ng-if=\"authentication.name\"\n        ng-cloak>\n      <a href\n         class=\"dropdown-toggle\">\n        <span class=\"glyphicon glyphicon-user \"></span>\n        {{ (userName || authentication.name) }}\n      </a>\n\n      <ul class=\"dropdown-menu dropdown-menu-right\">\n        <li class=\"profile\"\n            ng-if=\"currentApp !== 'welcome'\">\n          <a ng-href=\"{{ '../../welcome/:engine/' | uri }}\">\n            {{ myProfile }}\n          </a>\n        </li>\n\n        <li class=\"divider\"\n            ng-if=\"currentApp !== 'welcome'\"></li>\n\n        <li class=\"logout\">\n          <a href\n             ng-click=\"logout()\">\n            {{ signOut }}\n          </a>\n        </li>\n      </ul>\n    </li>\n\n    <li class=\"divider-vertical\"\n        ng-if=\"authentication.name\"\n        ng-cloak></li>\n\n    <li class=\"app-switch dropdown\"\n        ng-if=\"showAppDropDown\">\n      <a href\n         class=\"dropdown-toggle\">\n        <span class=\"glyphicon glyphicon-home\"></span>\n        <span class=\"caret\"></span>\n      </a>\n\n      <ul class=\"dropdown-menu dropdown-menu-right\">\n        <li ng-repeat=\"(appName, app) in apps\"\n            ng-class=\"appName\">\n          <a ng-href=\"{{ '../../' + appName + '/:engine/' | uri }}\">\n            {{ app.label }}\n          </a>\n        </li>\n      </ul>\n    </li>\n  </ul>\n</nav>\n\n<div ng-transclude\n     class=\"sections-menu\"\n     ng-class=\"{collapse: !navbarOpen}\"></div>\n";
-
-var apps = {
-  welcome:{
-    label: 'Welcome'
-  },
-  admin: {
-    label: 'Admin'
-  },
-  cockpit: {
-    label: 'Cockpit'
-  },
-  tasklist: {
-    label: 'Tasklist'
-  }
-};
-
-
-module.exports = [function() {
-  return {
-    transclude: true,
-
-    template: template,
-
-    scope: {
-      authentication: '=',
-      userName: '=?',
-      currentApp: '@',
-      signOut: '@?',
-      toggleNavigation: '@?',
-      myProfile: '@?',
-      smallScreenWarning: '@?',
-      brandName: '@'
-    },
-
-    compile: function(el, attrs) {
-      if (!attrs.toggleNavigation) { attrs.toggleNavigation = 'Toggle navigation'; }
-      if (!attrs.myProfile) { attrs.myProfile = 'My profile'; }
-      if (!attrs.signOut) { attrs.signOut = 'Sign out'; }
-      if (!attrs.brandName) { attrs.brandName = 'Camunda'; }
-      if (!attrs.smallScreenWarning) {
-        attrs.smallScreenWarning = 'This application is conceived for larger screens.';
-      }
-    },
-
-    controller: [
-      '$scope',
-      'AuthenticationService',
-      function(
-        $scope,
-        AuthenticationService
-      ) {
-        $scope.logout = AuthenticationService.logout;
-
-        function setApps() {
-          var kept = angular.copy(apps);
-
-          if ($scope.currentApp) {
-            if ($scope.currentApp === 'welcome' && $scope.authentication) {
-              kept = {};
-            }
-            else {
-              delete kept[$scope.currentApp];
-            }
-          }
-
-          if ($scope.authentication && $scope.authentication.name) {
-            delete kept.welcome;
-
-            Object.keys(kept).forEach(function(appName) {
-              if ($scope.authentication.authorizedApps.indexOf(appName) < 0) {
-                delete kept[appName];
-              }
-            });
-          }
-
-          $scope.showAppDropDown = Object.keys(kept).length > 0;
-
-          $scope.apps = kept;
-        }
-
-        $scope.$watch('currentApp', setApps);
-        $scope.$watch('authentication', setApps);
-      }]
-  };
-}];
-
-},{"camunda-bpm-sdk-js/vendor/angular":3}],5:[function(require,module,exports){
-'use strict';
-
-var angular = require('camunda-bpm-sdk-js/vendor/angular'),
-    headerDefinition = require('../cam-widget-header');
-
-require('../../../../vendor/ui-bootstrap-tpls-0.11.2-camunda');
-
-// naive auth object for test purposes
-function Authentication(username, accesses) {
-  this.name = username || '';
-  this.authorizedApps = accesses || [];
-}
-Authentication.prototype.canAccess = function(appName) {
-  return !this.authorizedApps.length || this.authorizedApps.indexOf(appName) > -1;
-};
-
-
-var mockedDependenciesModule = angular.module('mockedDependencies', []);
-
-mockedDependenciesModule.service('AuthenticationService', [function() {
-  this.logout = function() {
-    // logging out
-  };
-}]);
-
-mockedDependenciesModule.provider('uriFilter', [function() {
-  return { $get: function() {} };
-}]);
-mockedDependenciesModule.filter('uri', [function() {
-  return function() { return '#uri-filter-replaced'; };
-}]);
-
-
-
-var headerModule = angular.module('headerModule', [
-  'ui.bootstrap',
-  mockedDependenciesModule.name
-]);
-headerModule.directive('camWidgetHeader', headerDefinition);
-
-
-
-var testModule = angular.module('testModule', [headerModule.name]);
-
-testModule.controller('testAnonymousController', ['$scope', function($scope) {
-  $scope.ctrlCurrentApp = 'admin';
-  $scope.auth = new Authentication();
-}]);
-
-testModule.controller('testAuthenticatedController', ['$scope', '$timeout', function($scope, $timeout) {
-  $scope.ctrlCurrentApp = 'tasklist';
-
-  $scope.auth = new Authentication('mustermann', ['tasklist', 'admin']);
-
-  $timeout(function() {
-    $scope.fullName = 'Max Mustermann';
-  }, 400);
-}]);
-
-testModule.controller('testAuthenticatedSingleController', ['$scope', '$timeout', function($scope, $timeout) {
-  $scope.auth = new Authentication('mustermann', ['tasklist']);
-
-  $timeout(function() {
-    $scope.fullName = 'Max Mustermann';
-  }, 400);
-}]);
-
-angular.element(document).ready(function() {
-  angular.bootstrap(document.body, [testModule.name]);
-});
-
-},{"../../../../vendor/ui-bootstrap-tpls-0.11.2-camunda":6,"../cam-widget-header":4,"camunda-bpm-sdk-js/vendor/angular":3}],6:[function(require,module,exports){
+},{"angular":4}],6:[function(require,module,exports){
 /*
  * angular-ui-bootstrap
  * http://angular-ui.github.io/bootstrap/
@@ -26614,4 +26614,4 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
     "");
 }]);
 
-},{}]},{},[5]);
+},{}]},{},[2]);
