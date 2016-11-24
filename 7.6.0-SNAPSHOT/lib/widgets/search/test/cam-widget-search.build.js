@@ -982,12 +982,14 @@ module.exports = function() {
 'use strict';
 
 
-var Viewer = require('bpmn-js/lib/NavigatedViewer'),
+var angular = require('camunda-bpm-sdk-js/vendor/angular'),
+
+    Viewer = require('bpmn-js/lib/NavigatedViewer'),
 
     template = "<div class=\"alert alert-danger\"\n     ng-if=\"error\">\n  <span>\n    <strong>Could not render diagram:</strong>\n  </span>\n  <span>\n   {{ error.message }}\n  </span>\n</div>\n\n<div ng-show=\"!error\">\n\n  <div ng-if=\"!loaded\" class=\"placeholder-container\">\n    <div class=\"placeholder-content\">\n      <span class=\"glyphicon glyphicon-refresh animate-spin\"></span>\n      <span class=\"loading-text\">Loading diagram</span>\n    </div>\n  </div>\n\n  <div class=\"diagram-holder\" ng-class='{\"diagram-holder\": true, \"grab-cursor\": !disableNavigation && !grabbing, \"djs-cursor-move\": !disableNavigation && grabbing}'></div>\n\n  <div class=\"actions\"></div>\n\n  <div ng-if=\"!disableNavigation\"\n       class=\"navigation zoom\">\n    <button class=\"btn btn-default in\"\n            title=\"zoom in\"\n            ng-click=\"zoomIn()\">\n      <span class=\"glyphicon glyphicon-plus\"></span>\n    </button>\n    <button class=\"btn btn-default out\"\n            title=\"zoom out\"\n            ng-click=\"zoomOut()\">\n      <span class=\"glyphicon glyphicon-minus\"></span>\n    </button>\n  </div>\n\n  <div ng-if=\"!disableNavigation\"\n       class=\"navigation reset\">\n    <button class=\"btn btn-default\"\n            title=\"reset zoom\"\n            ng-click=\"resetZoom()\">\n      <span class=\"glyphicon glyphicon-screenshot\"></span>\n    </button>\n  </div>\n</div>\n";
 
-module.exports = ['$compile', '$location', '$rootScope', 'search', 'debounce',
-  function($compile,   $location,   $rootScope,   search, debounce) {
+module.exports = ['$q', '$document', '$compile', '$location', '$rootScope', 'search', 'debounce',
+  function($q, $document, $compile,   $location,   $rootScope,   search, debounce) {
 
     return {
       scope: {
@@ -1124,9 +1126,51 @@ module.exports = ['$compile', '$location', '$rootScope', 'search', 'debounce',
         };
 
         $scope.control.addImage = function(image, x, y) {
-          var addedImage = canvas._viewport.image(image, x, y);
-          return addedImage;
+          return preloadImage(image)
+            .then(
+              function(preloadedElement) {
+                var width = preloadedElement.offsetWidth;
+                var height = preloadedElement.offsetHeight;
+                var imageElement = $document[0].createElementNS('http://www.w3.org/2000/svg', 'image');
+
+                imageElement.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', image);
+                imageElement.setAttributeNS(null, 'width', width);
+                imageElement.setAttributeNS(null, 'height', height);
+                imageElement.setAttributeNS(null, 'x', x);
+                imageElement.setAttributeNS(null, 'y', y);
+
+                $document[0].body.removeChild(preloadedElement);
+                canvas._viewport.appendChild(imageElement);
+
+                return angular.element(imageElement);
+              },
+              function(preloadedElement) {
+                $document[0].body.removeChild(preloadedElement);
+              }
+            );
         };
+
+        function preloadImage(img) {
+          var body = $document[0].body;
+          var deferred = $q.defer();
+          var imageElement = angular.element('<img>')
+            .css('position', 'absolute')
+            .css('left', '-9999em')
+            .css('top', '-9999em')
+            .attr('src', img)[0];
+
+          imageElement.onload = function() {
+            deferred.resolve(imageElement);
+          };
+
+          imageElement.onerror = function() {
+            deferred.reject(imageElement);
+          };
+
+          body.appendChild(imageElement);
+
+          return deferred.promise;
+        }
 
         var BpmnViewer = Viewer;
         if($scope.disableNavigation) {
@@ -1313,7 +1357,7 @@ module.exports = ['$compile', '$location', '$rootScope', 'search', 'debounce',
     };
   }];
 
-},{"bpmn-js/lib/NavigatedViewer":41}],20:[function(require,module,exports){
+},{"bpmn-js/lib/NavigatedViewer":41,"camunda-bpm-sdk-js/vendor/angular":292}],20:[function(require,module,exports){
 'use strict';
 
 var Clipboard = require('clipboard');
