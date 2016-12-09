@@ -2259,7 +2259,7 @@ module.exports = [function() {
       ) {
         $scope.logout = AuthenticationService.logout;
         $scope.getTargetRoute = function() {
-          return $scope. authentication ? '' : '#/login';
+          return $scope.authentication ? '' : '#/login';
         };
 
         function setApps() {
