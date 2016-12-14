@@ -47,20 +47,13 @@ testModule.config(function($routeProvider) {
   });
 });
 
+
 describe('camunda-commons-ui/auth', function() {
 
 
   describe('AuthenticationService', function() {
 
     beforeEach(window.module(authModule.name));
-
-    beforeEach(window.module(function($provide) {
-      $provide.service('$translate', function($q) {
-        return function(id) {
-          return $q.reject(id);
-        }
-      });
-    }));
 
     afterEach(inject(function($httpBackend) {
       $httpBackend.verifyNoOutstandingExpectation();
@@ -328,14 +321,6 @@ describe('camunda-commons-ui/auth', function() {
 
     beforeEach(window.module(testModule.name));
 
-    beforeEach(window.module(function($provide) {
-      $provide.service('$translate', function($q) {
-        return function(id) {
-          return $q.reject(id);
-        }
-      });
-    }));
-
     afterEach(inject(function($httpBackend) {
       $httpBackend.verifyNoOutstandingExpectation();
       $httpBackend.verifyNoOutstandingRequest();
@@ -515,14 +500,6 @@ describe('camunda-commons-ui/auth', function() {
   describe('ng-view integration', function() {
 
     beforeEach(window.module(testModule.name));
-
-    beforeEach(window.module(function($provide) {
-      $provide.service('$translate', function($q) {
-        return function(id) {
-          return $q.reject(id);
-        }
-      });
-    }));
 
     var doc, element;
 

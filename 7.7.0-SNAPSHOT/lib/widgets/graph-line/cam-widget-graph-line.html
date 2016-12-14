@@ -1,0 +1,19 @@
+<div class="graph-line-state loaded"
+     ng-show="loadingState === 'LOADED'"
+     ng-transclude></div>
+
+<div class="graph-line-state loading"
+     ng-if="loadingState === 'LOADING'">
+  <span class="glyphicon glyphicon-refresh animate-spin"></span>
+  {{ textLoading }}
+</div>
+
+<div class="graph-line-state empty"
+     ng-if="loadingState === 'EMPTY'">
+  {{ textEmpty }}
+</div>
+
+<div class="graph-line-state alert alert-danger"
+     ng-if="loadingState === 'ERROR'">
+  {{ textError }}
+</div>

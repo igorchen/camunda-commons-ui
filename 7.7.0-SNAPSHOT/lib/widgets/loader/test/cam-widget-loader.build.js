@@ -1,82 +1,4 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-'use strict';
-
-
-var angular = require('camunda-bpm-sdk-js/vendor/angular'),
-
-    template = "<div class=\"loader-state loaded\"\n     ng-show=\"loadingState === 'LOADED'\"\n     ng-transclude></div>\n\n<div class=\"loader-state loading\"\n     ng-if=\"loadingState === 'LOADING'\">\n  <span class=\"glyphicon glyphicon-refresh animate-spin\"></span>\n  {{ textLoading }}\n</div>\n\n<div class=\"loader-state empty\"\n     ng-if=\"loadingState === 'EMPTY'\">\n  {{ textEmpty }}\n</div>\n\n<div class=\"loader-state alert alert-danger\"\n     ng-if=\"loadingState === 'ERROR'\">\n  {{ textError }}\n</div>\n";
-
-module.exports = [function() {
-  return {
-    transclude: true,
-
-    template: template,
-
-    scope: {
-      loadingState: '@',
-      textEmpty:    '@',
-      textError:    '@',
-      textLoading:  '@'
-    },
-
-    compile: function(element, attrs) {
-      if (!angular.isDefined(attrs.textLoading)) {
-        attrs.textLoading = 'Loading…';
-      }
-
-      if (!angular.isDefined(attrs.loadingState)) {
-        attrs.loadingState = 'INITIAL';
-      }
-    }
-  };
-}];
-
-},{"camunda-bpm-sdk-js/vendor/angular":5}],2:[function(require,module,exports){
-'use strict';
-
-var angular = require('camunda-bpm-sdk-js/vendor/angular'),
-    loaderDefinition = require('../cam-widget-loader');
-
-require('../../../../vendor/ui-bootstrap-tpls-0.11.2-camunda');
-
-var loaderModule = angular.module('loaderModule', ['ui.bootstrap']);
-loaderModule.directive('camWidgetLoader', loaderDefinition);
-
-var testModule = angular.module('testModule', [loaderModule.name]);
-testModule.controller('testInteractiveController', [
-  '$scope',
-  '$timeout',
-  function(
-  $scope,
-  $timeout
-) {
-    $scope.ctrlState = 'INITIAL';
-    $scope.timeoutPromise = null;
-
-    $scope.reload = function(simulateEmpty) {
-      $scope.ctrlState = 'LOADING';
-
-      $scope.timeoutPromise = $timeout(function() {
-        $scope.ctrlVar1 = 'Control variable';
-        $scope.ctrlState = simulateEmpty ? 'EMPTY' : 'LOADED';
-      }, 1000);
-    };
-
-    $scope.fail = function() {
-      $scope.ctrlState = 'ERROR';
-      $scope.ctrlError = 'Something wen really wrong';
-
-      if ($scope.timeoutPromise) {
-        $timeout.cancel($scope.timeoutPromise);
-      }
-    };
-  }]);
-
-angular.element(document).ready(function() {
-  angular.bootstrap(document.body, [testModule.name]);
-});
-
-},{"../../../../vendor/ui-bootstrap-tpls-0.11.2-camunda":6,"../cam-widget-loader":1,"camunda-bpm-sdk-js/vendor/angular":5}],3:[function(require,module,exports){
 /**
  * @license AngularJS v1.2.29
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -22246,16 +22168,94 @@ var styleDirective = valueFn({
 })(window, document);
 
 !window.angular.$$csp() && window.angular.element(document).find('head').prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>');
-},{}],4:[function(require,module,exports){
+},{}],2:[function(require,module,exports){
 require('./angular');
 module.exports = angular;
 
-},{"./angular":3}],5:[function(require,module,exports){
+},{"./angular":1}],3:[function(require,module,exports){
 'use strict';
 
 module.exports = require('angular');
 
-},{"angular":4}],6:[function(require,module,exports){
+},{"angular":2}],4:[function(require,module,exports){
+'use strict';
+
+
+var angular = require('camunda-bpm-sdk-js/vendor/angular'),
+
+    template = "<div class=\"loader-state loaded\"\n     ng-show=\"loadingState === 'LOADED'\"\n     ng-transclude></div>\n\n<div class=\"loader-state loading\"\n     ng-if=\"loadingState === 'LOADING'\">\n  <span class=\"glyphicon glyphicon-refresh animate-spin\"></span>\n  {{ textLoading }}\n</div>\n\n<div class=\"loader-state empty\"\n     ng-if=\"loadingState === 'EMPTY'\">\n  {{ textEmpty }}\n</div>\n\n<div class=\"loader-state alert alert-danger\"\n     ng-if=\"loadingState === 'ERROR'\">\n  {{ textError }}\n</div>\n";
+
+module.exports = [function() {
+  return {
+    transclude: true,
+
+    template: template,
+
+    scope: {
+      loadingState: '@',
+      textEmpty:    '@',
+      textError:    '@',
+      textLoading:  '@'
+    },
+
+    compile: function(element, attrs) {
+      if (!angular.isDefined(attrs.textLoading)) {
+        attrs.textLoading = 'Loading…';
+      }
+
+      if (!angular.isDefined(attrs.loadingState)) {
+        attrs.loadingState = 'INITIAL';
+      }
+    }
+  };
+}];
+
+},{"camunda-bpm-sdk-js/vendor/angular":3}],5:[function(require,module,exports){
+'use strict';
+
+var angular = require('camunda-bpm-sdk-js/vendor/angular'),
+    loaderDefinition = require('../cam-widget-loader');
+
+require('../../../../vendor/ui-bootstrap-tpls-0.11.2-camunda');
+
+var loaderModule = angular.module('loaderModule', ['ui.bootstrap']);
+loaderModule.directive('camWidgetLoader', loaderDefinition);
+
+var testModule = angular.module('testModule', [loaderModule.name]);
+testModule.controller('testInteractiveController', [
+  '$scope',
+  '$timeout',
+  function(
+  $scope,
+  $timeout
+) {
+    $scope.ctrlState = 'INITIAL';
+    $scope.timeoutPromise = null;
+
+    $scope.reload = function(simulateEmpty) {
+      $scope.ctrlState = 'LOADING';
+
+      $scope.timeoutPromise = $timeout(function() {
+        $scope.ctrlVar1 = 'Control variable';
+        $scope.ctrlState = simulateEmpty ? 'EMPTY' : 'LOADED';
+      }, 1000);
+    };
+
+    $scope.fail = function() {
+      $scope.ctrlState = 'ERROR';
+      $scope.ctrlError = 'Something wen really wrong';
+
+      if ($scope.timeoutPromise) {
+        $timeout.cancel($scope.timeoutPromise);
+      }
+    };
+  }]);
+
+angular.element(document).ready(function() {
+  angular.bootstrap(document.body, [testModule.name]);
+});
+
+},{"../../../../vendor/ui-bootstrap-tpls-0.11.2-camunda":6,"../cam-widget-loader":4,"camunda-bpm-sdk-js/vendor/angular":3}],6:[function(require,module,exports){
 /*
  * angular-ui-bootstrap
  * http://angular-ui.github.io/bootstrap/
@@ -26527,4 +26527,4 @@ angular.module("template/typeahead/typeahead-popup.html", []).run(["$templateCac
     "");
 }]);
 
-},{}]},{},[2]);
+},{}]},{},[5]);
