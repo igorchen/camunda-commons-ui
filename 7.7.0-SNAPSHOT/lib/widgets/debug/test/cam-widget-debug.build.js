@@ -1,144 +1,4 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-'use strict';
-
-var Clipboard = require('clipboard');
-
-var template = "<span ng-transclude></span>\n<a ng-if=\"!noTooltip\"\n   tooltip=\"{{ tooltipText }}\"\n   tooltip-append-to-body=\"true\"\n   ng-class=\"{'copy-ok': copyStatus === true, 'copy-error': copyStatus === false}\"\n   class=\"glyphicon glyphicon-copy\"\n   ng-click=\"copy()\"></a>\n<a ng-if=\"noTooltip\"\n   ng-class=\"{'copy-ok': copyStatus === true, 'copy-error': copyStatus === false}\"\n   class=\"glyphicon glyphicon-copy\"\n   ng-click=\"copy()\"></a>\n";
-
-module.exports = ['$timeout', function($timeout) {
-  return {
-    transclude: true,
-
-    template: template,
-
-    scope: {
-      value: '=camWidgetClipboard'
-    },
-
-    link: function($scope, element, attrs) {
-      var cb;
-
-      $scope.noTooltip = typeof attrs.noTooltip !== 'undefined';
-      $scope.copyStatus = null;
-
-      $scope.$watch('value', function() {
-        $scope.tooltipText = 'Click to copy \'' + $scope.value + '\'';
-      });
-
-
-      var _top;
-      function restore() {
-        $scope.$apply();
-        _top = $timeout(function() {
-          $scope.copyStatus = null;
-        }, 1200, true);
-      }
-
-      // needed because otherwise the content of `element` is not rendered yet
-      // and `querySelector` is then not available
-      $timeout(function() {
-        var link = element[0].querySelector('a.glyphicon-copy');
-        if (!link) { return; }
-
-        cb = new Clipboard(link, {
-          text: function() {
-            return $scope.value;
-          }
-        });
-
-        cb.on('success', function() {
-          $scope.copyStatus = true;
-          restore();
-        });
-
-
-        cb.on('error', function() {
-          $scope.copyStatus = false;
-          restore();
-        });
-      });
-
-
-      $scope.$on('$destroy', function() {
-        if (cb && cb.destroy) {
-          cb.destroy();
-        }
-
-        if (_top) {
-          $timeout.cancel(top);
-        }
-      });
-    }
-  };
-}];
-
-},{"clipboard":8}],2:[function(require,module,exports){
-'use strict';
-
-
-var template = "<div class=\"debug\">\n  <div class=\"col-xs-2\">\n    <button class=\"btn btn-default btn-round\"\n            ng-click=\"toggleOpen()\"\n            tooltip=\"{{tooltip}}\">\n      <span class=\"glyphicon\"\n            ng-class=\"{'glyphicon-eye-open': !open, 'glyphicon-eye-close': open}\"></span>\n    </button>\n  </div>\n  <div class=\"col-xs-10\"\n       ng-show=\"open\">\n    <span ng-show=\"extended\" cam-widget-clipboard=\"extendedInfo\"\n          no-tooltip>\n      <code>{{ extensionName }}</code>\n    </span>\n    <pre ng-show=\"extended\">{{ extendedInfo }}</pre>\n    <span cam-widget-clipboard=\"debugged | json \"\n          no-tooltip>\n      <code>{{ varName }}</code>\n    </span>\n    <pre>{{ debugged | json }}</pre>\n  </div>\n</div>\n";
-
-module.exports = [function() {
-  return {
-    template: template,
-
-    scope: {
-      debugged:       '=',
-      displayName:    '=?',
-      extensionName:  '@extensionName',
-      open:           '@',
-      extendedInfo:   '=',
-      tooltip:        '@camWidgetDebugTooltip'
-    },
-
-    link: function(scope, element, attrs) {
-      scope.varName = attrs.displayName || attrs.debugged;
-      scope.extended = attrs.extended !== undefined;
-
-      scope.toggleOpen = function() {
-        scope.open = !scope.open;
-      };
-    }
-  };
-}];
-
-},{}],3:[function(require,module,exports){
-'use strict';
-
-var angular = require('camunda-bpm-sdk-js/vendor/angular');
-var debugDefinition = require('../cam-widget-debug');
-
-var debugModule = angular.module('debugModule', []);
-debugModule.directive('camWidgetDebug', debugDefinition);
-
-var clipboardWidget = require('../../clipboard/cam-widget-clipboard');
-debugModule.directive('camWidgetClipboard', clipboardWidget);
-
-
-var testModule = angular.module('testModule', [debugModule.name]);
-testModule.controller('testController', [
-  '$scope',
-  function(
-  $scope
-) {
-    $scope.varToDebug = {
-      something: {
-        to: {
-          debug: new Date()
-        }
-      },
-      array: 'abcdef'.split('')
-    };
-
-    $scope.info = 'testInfo';
-  }]);
-
-
-angular.element(document).ready(function() {
-  angular.bootstrap(document.body, [testModule.name]);
-});
-
-},{"../../clipboard/cam-widget-clipboard":1,"../cam-widget-debug":2,"camunda-bpm-sdk-js/vendor/angular":6}],4:[function(require,module,exports){
 /**
  * @license AngularJS v1.2.29
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -22308,16 +22168,156 @@ var styleDirective = valueFn({
 })(window, document);
 
 !window.angular.$$csp() && window.angular.element(document).find('head').prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>');
-},{}],5:[function(require,module,exports){
+},{}],2:[function(require,module,exports){
 require('./angular');
 module.exports = angular;
 
-},{"./angular":4}],6:[function(require,module,exports){
+},{"./angular":1}],3:[function(require,module,exports){
 'use strict';
 
 module.exports = require('angular');
 
-},{"angular":5}],7:[function(require,module,exports){
+},{"angular":2}],4:[function(require,module,exports){
+'use strict';
+
+var Clipboard = require('clipboard');
+
+var template = "<span ng-transclude></span>\n<a ng-if=\"!noTooltip\"\n   tooltip=\"{{ tooltipText }}\"\n   tooltip-append-to-body=\"true\"\n   ng-class=\"{'copy-ok': copyStatus === true, 'copy-error': copyStatus === false}\"\n   class=\"glyphicon glyphicon-copy\"\n   ng-click=\"copy()\"></a>\n<a ng-if=\"noTooltip\"\n   ng-class=\"{'copy-ok': copyStatus === true, 'copy-error': copyStatus === false}\"\n   class=\"glyphicon glyphicon-copy\"\n   ng-click=\"copy()\"></a>\n";
+
+module.exports = ['$timeout', function($timeout) {
+  return {
+    transclude: true,
+
+    template: template,
+
+    scope: {
+      value: '=camWidgetClipboard'
+    },
+
+    link: function($scope, element, attrs) {
+      var cb;
+
+      $scope.noTooltip = typeof attrs.noTooltip !== 'undefined';
+      $scope.copyStatus = null;
+
+      $scope.$watch('value', function() {
+        $scope.tooltipText = 'Click to copy \'' + $scope.value + '\'';
+      });
+
+
+      var _top;
+      function restore() {
+        $scope.$apply();
+        _top = $timeout(function() {
+          $scope.copyStatus = null;
+        }, 1200, true);
+      }
+
+      // needed because otherwise the content of `element` is not rendered yet
+      // and `querySelector` is then not available
+      $timeout(function() {
+        var link = element[0].querySelector('a.glyphicon-copy');
+        if (!link) { return; }
+
+        cb = new Clipboard(link, {
+          text: function() {
+            return $scope.value;
+          }
+        });
+
+        cb.on('success', function() {
+          $scope.copyStatus = true;
+          restore();
+        });
+
+
+        cb.on('error', function() {
+          $scope.copyStatus = false;
+          restore();
+        });
+      });
+
+
+      $scope.$on('$destroy', function() {
+        if (cb && cb.destroy) {
+          cb.destroy();
+        }
+
+        if (_top) {
+          $timeout.cancel(top);
+        }
+      });
+    }
+  };
+}];
+
+},{"clipboard":8}],5:[function(require,module,exports){
+'use strict';
+
+
+var template = "<div class=\"debug\">\n  <div class=\"col-xs-2\">\n    <button class=\"btn btn-default btn-round\"\n            ng-click=\"toggleOpen()\"\n            tooltip=\"{{tooltip}}\">\n      <span class=\"glyphicon\"\n            ng-class=\"{'glyphicon-eye-open': !open, 'glyphicon-eye-close': open}\"></span>\n    </button>\n  </div>\n  <div class=\"col-xs-10\"\n       ng-show=\"open\">\n    <span ng-show=\"extended\" cam-widget-clipboard=\"extendedInfo\"\n          no-tooltip>\n      <code>{{ extensionName }}</code>\n    </span>\n    <pre ng-show=\"extended\">{{ extendedInfo }}</pre>\n    <span cam-widget-clipboard=\"debugged | json \"\n          no-tooltip>\n      <code>{{ varName }}</code>\n    </span>\n    <pre>{{ debugged | json }}</pre>\n  </div>\n</div>\n";
+
+module.exports = [function() {
+  return {
+    template: template,
+
+    scope: {
+      debugged:       '=',
+      displayName:    '=?',
+      extensionName:  '@extensionName',
+      open:           '@',
+      extendedInfo:   '=',
+      tooltip:        '@camWidgetDebugTooltip'
+    },
+
+    link: function(scope, element, attrs) {
+      scope.varName = attrs.displayName || attrs.debugged;
+      scope.extended = attrs.extended !== undefined;
+
+      scope.toggleOpen = function() {
+        scope.open = !scope.open;
+      };
+    }
+  };
+}];
+
+},{}],6:[function(require,module,exports){
+'use strict';
+
+var angular = require('camunda-bpm-sdk-js/vendor/angular');
+var debugDefinition = require('../cam-widget-debug');
+
+var debugModule = angular.module('debugModule', []);
+debugModule.directive('camWidgetDebug', debugDefinition);
+
+var clipboardWidget = require('../../clipboard/cam-widget-clipboard');
+debugModule.directive('camWidgetClipboard', clipboardWidget);
+
+
+var testModule = angular.module('testModule', [debugModule.name]);
+testModule.controller('testController', [
+  '$scope',
+  function(
+  $scope
+) {
+    $scope.varToDebug = {
+      something: {
+        to: {
+          debug: new Date()
+        }
+      },
+      array: 'abcdef'.split('')
+    };
+
+    $scope.info = 'testInfo';
+  }]);
+
+
+angular.element(document).ready(function() {
+  angular.bootstrap(document.body, [testModule.name]);
+});
+
+},{"../../clipboard/cam-widget-clipboard":4,"../cam-widget-debug":5,"camunda-bpm-sdk-js/vendor/angular":3}],7:[function(require,module,exports){
 (function (global, factory) {
     if (typeof define === "function" && define.amd) {
         define(['module', 'select'], factory);
@@ -23031,4 +23031,4 @@ E.prototype = {
 
 module.exports = E;
 
-},{}]},{},[3]);
+},{}]},{},[6]);

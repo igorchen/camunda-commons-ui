@@ -11,8 +11,7 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     RequestLogger = require('./RequestLogger'),
     ResourceResolver = require('./ResourceResolver'),
     HttpClient = require('./HttpClient'),
-    unescape = require('./unescape'),
-    shouldDisplayAuthenticationError = require('./shouldDisplayAuthenticationError');
+    unescape = require('./unescape');
 
 var ngModule = angular.module('camunda.common.services', [
     // `ResourceResolver` relies on cam.commons.util for Notifications
@@ -27,7 +26,6 @@ ngModule.factory('RequestLogger',     RequestLogger);
 ngModule.factory('ResourceResolver',  ResourceResolver);
 ngModule.factory('camAPIHttpClient',  HttpClient);
 ngModule.factory('unescape',          unescape);
-ngModule.factory('shouldDisplayAuthenticationError', shouldDisplayAuthenticationError);
 
 
   /**

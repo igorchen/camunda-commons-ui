@@ -30,8 +30,8 @@
 
 
   var ResponseErrorHandlerInitializer = [
-    '$rootScope', '$location', 'Notifications',   'AuthenticationService', 'shouldDisplayAuthenticationError',
-    function($rootScope, $location, Notifications, AuthenticationService, shouldDisplayAuthenticationError) {
+    '$rootScope', '$location', 'Notifications',   'AuthenticationService',
+    function($rootScope, $location, Notifications, AuthenticationService) {
 
       function addError(error) {
         error.http = true;
@@ -73,7 +73,9 @@
 
           if ($location.absUrl().indexOf('/setup/#') !== -1) {
             $location.path('/setup');
-          } else {
+          } else if ($location.url().indexOf('/login') === -1) {
+            addError({ type: 'warning', status: 'Session ended', message: 'Your session timed out or was ended from another browser window. Please signin again.' });
+
             setHeadTitle($location.absUrl());
 
             AuthenticationService.updateAuthentication(null);
@@ -99,9 +101,7 @@
           break;
 
         case 404:
-          if (shouldDisplayAuthenticationError()) {
-            addError({ status: 'Not found', message: 'A resource you requested could not be found.' });
-          }
+          addError({ status: 'Not found', message: 'A resource you requested could not be found.' });
           break;
         default:
           addError({

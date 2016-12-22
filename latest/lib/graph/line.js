@@ -1,8 +1,5 @@
 'use strict';
 
-var moment = require('moment');
-var abbreviateNumber = require('./../filter/abbreviateNumber')();
-
 function roundUp(v, x) {
   var stepWidth = Math.ceil(v / x);
   var stepWidthStr = '' + stepWidth;
@@ -10,17 +7,29 @@ function roundUp(v, x) {
   return stepWidth * x;
 }
 
-
 function noop() {}
 
 function LineGraph(options) {
+  this.moment = options.moment;
+  this.abbreviateNumber = options.abbreviateNumber;
+
   this.resize(options.width, options.height);
 
   this.lineColors = options.lineColors;
 
   this.rulersColor = options.rulersColor || '#666';
 
+  this.selectingColor = options.selectingColor || 'rgba(0,0,64,0.1)';
+
+  this.unselectedColor = options.unselectedColor || 'rgba(0,0,0,0.1)';
+
+  this.handleColorHover = options.handleColorHover || '#999';
+
+  this.handleColor = options.handleColor || '#aaa';
+
   this.fontSize = options.fontSize || 12;
+
+  this.fontFamily = options.fontFamily || 'Arial';
 
   this.lineWidth = options.lineWidth || 1;
 
@@ -30,7 +39,7 @@ function LineGraph(options) {
 
   this.interval = options.interval || 900;
 
-  this.handleWidth = options.handleWidth || 6;
+  this.handleWidth = options.handleWidth || 4;
 
   this.timestampFormat = options.timestampFormat || 'YYYY-MM-DDTHH:mm:ss';
 
@@ -45,9 +54,9 @@ function LineGraph(options) {
   this.textPadding = options.textPadding || 3;
 
   this.onselection = options.onselection || noop;
-
-  this.onmousemove = options.onmousemove || noop;
 }
+
+module.exports = LineGraph;
 
 var proto = LineGraph.prototype;
 
@@ -60,8 +69,6 @@ proto._selectedOut = null;
 
 
 proto._eventHandlers = {
-  captured: {},
-  uncaptured: {}
 };
 
 
@@ -70,7 +77,7 @@ proto._eventHandlers = {
 
 
 
-proto._eventHandlers.uncaptured.mouseout = function(evt) {
+proto._eventHandlers.mouseout = function(evt) {
   this.drawMouseHint().drawSelection(evt);
 };
 
@@ -81,7 +88,7 @@ proto._eventHandlers.uncaptured.mouseout = function(evt) {
 
 
 
-proto._eventHandlers.uncaptured.mousemove = function(evt) {
+proto._eventHandlers.mousemove = function(evt) {
   var offset = this.cursorPosition(evt);
 
   this._hoveredSelectionHandle = this.hoveredSelectionHandle(evt);
@@ -96,8 +103,6 @@ proto._eventHandlers.uncaptured.mousemove = function(evt) {
   }
 
   this.drawMouseHint(offset.left, offset.top).drawSelection(evt);
-
-  this.onmousemove(offset);
 };
 
 
@@ -107,8 +112,10 @@ proto._eventHandlers.uncaptured.mousemove = function(evt) {
 
 
 
-proto._eventHandlers.uncaptured.mousedown = function(evt) {
+proto._eventHandlers.mousedown = function(evt) {
   var pos = this.cursorPosition(evt);
+  var verticalScaleX = this.verticalScaleX();
+  var innerW = this.innerW();
 
   this._hoveredSelectionHandle = this.hoveredSelectionHandle(evt);
 
@@ -116,7 +123,7 @@ proto._eventHandlers.uncaptured.mousedown = function(evt) {
 
   if (!this._hoveredSelectionHandle) {
     if (!this._mouseIsDown) {
-      this._selectedIn = pos.left;
+      this._selectedIn = Math.min(Math.max(pos.left, verticalScaleX), verticalScaleX + innerW);
       this._selectedOut = null;
     }
     this._mouseIsDown = true;
@@ -135,27 +142,34 @@ proto._eventHandlers.uncaptured.mousedown = function(evt) {
 
 
 
-proto._eventHandlers.uncaptured.mouseup = function(evt) {
+proto._eventHandlers.mouseup = function(evt) {
   var pos = this.cursorPosition(evt);
+  var verticalScaleX = this.verticalScaleX();
+  var innerW = this.innerW();
 
   if (this._grabbedSelectionHandle) {
     this._grabbedSelectionHandle = false;
   }
 
-  var trigger = false;
   if (this._mouseIsDown) {
-    trigger = true;
-    this._selectedOut = pos.left;
+    this._selectedOut = Math.max(Math.min(pos.left, verticalScaleX + innerW), verticalScaleX);
   }
   this._mouseIsDown = false;
 
   if (Math.abs(this._selectedIn - this._selectedOut) <= 1) {
     this._selectedIn = this._selectedOut = null;
+
+    this.onselection({
+      start: null,
+      end: null,
+      in: null,
+      out: null
+    });
   }
 
   this.drawMouseHint(pos.left, pos.top).drawSelection(evt);
 
-  if (this._selectedIn && this._selectedOut && trigger) {
+  if (this._selectedIn && this._selectedOut) {
     this.onselection({
       start: this.momentAtX(this._selectedIn),
       end: this.momentAtX(this._selectedOut),
@@ -172,11 +186,12 @@ proto._eventHandlers.uncaptured.mouseup = function(evt) {
 
 
 
-proto._eventHandlers.captured.wheel = function(evt) {
+proto._eventHandlers.wheel = function(evt) {
   evt.preventDefault();
   if (!this._selectedIn || !this._selectedOut) {
     return;
   }
+  var pos = this.cursorPosition(evt);
 
   var ctx = this.ctx;
   ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -191,7 +206,7 @@ proto._eventHandlers.captured.wheel = function(evt) {
     this._selectedOut += speed;
   }
 
-  this.draw().drawSelection(evt);
+  this.drawMouseHint(pos.left, pos.top).drawSelection(evt);
 
   this.onselection({
     start: this.momentAtX(this._selectedIn),
@@ -227,14 +242,9 @@ proto.cursorPosition = function(evt) {
 
 
 proto.bindEvents = function() {
-  Object.keys(proto._eventHandlers.captured).forEach(function(evtName) {
-    this.canvas.addEventListener(evtName, proto._eventHandlers.captured[evtName].bind(this));
+  Object.keys(proto._eventHandlers).forEach(function(evtName) {
+    this.canvas.addEventListener(evtName, proto._eventHandlers[evtName].bind(this), false);
   }, this);
-
-  Object.keys(proto._eventHandlers.uncaptured).forEach(function(evtName) {
-    this.canvas.addEventListener(evtName, proto._eventHandlers.uncaptured[evtName].bind(this), false);
-  }, this);
-
   return this;
 };
 
@@ -246,14 +256,9 @@ proto.bindEvents = function() {
 
 
 proto.unbindEvents = function() {
-  Object.keys(proto._eventHandlers.captured).forEach(function(evtName) {
-    this.canvas.removeEventListener(evtName, proto._eventHandlers.captured[evtName].bind(this));
+  Object.keys(proto._eventHandlers).forEach(function(evtName) {
+    this.canvas.removeEventListener(evtName, proto._eventHandlers[evtName].bind(this), false);
   }, this);
-
-  Object.keys(proto._eventHandlers.uncaptured).forEach(function(evtName) {
-    this.canvas.removeEventListener(evtName, proto._eventHandlers.uncaptured[evtName].bind(this), false);
-  }, this);
-
   return this;
 };
 
@@ -357,6 +362,7 @@ proto.min = function(index) {
 
 
 proto.momentAtX = function(x) {
+  var moment = this.moment;
   var labelFrom = this.labelFrom;
   var labelTo = this.labelTo;
   var labelDiff = labelTo - labelFrom;
@@ -384,6 +390,8 @@ proto.valueAtY = function(y) {
 
 proto.setData = function(data, newTimespan, newInterval) {
   this._clearCache();
+  var moment = this.moment;
+  var abbreviateNumber = this.abbreviateNumber;
   this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
   this.offCtx.clearRect(0, 0, this.offCanvas.width, this.offCanvas.height);
 
@@ -656,14 +664,13 @@ proto.drawMouseHint = function(x, y) {
   ctx.lineWidth = 1;
   ctx.lineCap = 'round';
   ctx.lineJoin = 'round';
-  ctx.font = this.fontSize + 'px Arial';
+  ctx.font = this.fontSize + 'px ' + this.fontFamily;
 
   ctx.clearRect(0, 0, width, height);
   ctx.drawImage(this.offCanvas, 0, 0, width, height, 0, 0, width, height);
 
   if (x && x > verticalScaleX && x <= verticalScaleX + innerW) {
     var text = this.momentAtX(x).format(this.timestampFormat);
-
     var tw = ctx.measureText(text).width + (padding * 2);
     var tx = x + tw > (width - padding) ? width - (padding + tw) : x;
     var ty = y > padding ? y : padding;
@@ -684,20 +691,42 @@ proto.drawMouseHint = function(x, y) {
 
 
 
+
 proto.drawSelection = function(evt) {
   var ctx = this.ctx;
   var innerH = this.innerH();
   var innerW = this.innerW();
   var verticalScaleX = this.verticalScaleX();
   var padding = Math.max(2 * this.lineWidth, 10);
-  var handleWidth = this.handleWidth;
   var offset = this.cursorPosition(evt);
+  var handleWidth = this.handleWidth;
+  var selectingColor = this.selectingColor;
+  var unselectedColor = this.unselectedColor;
 
   var _fillStyle = ctx.fillStyle;
 
   if (this._mouseIsDown) {
-    ctx.fillStyle = 'rgba(0,0,64,0.1)';
-    ctx.fillRect(this._selectedIn, padding, offset.left - this._selectedIn, innerH);
+    ctx.fillStyle = selectingColor;
+
+    // selecting from left to right
+    if (this._selectedIn < offset.left) {
+      ctx.fillRect(
+        this._selectedIn,
+        padding,
+        Math.min(offset.left - this._selectedIn, verticalScaleX + innerW - this._selectedIn),
+        innerH
+      );
+    }
+
+    // selecting from right to left
+    else {
+      ctx.fillRect(
+        Math.max(offset.left, verticalScaleX),
+        padding,
+        Math.min(this._selectedIn - offset.left, innerW),
+        innerH
+      );
+    }
 
     ctx.fillStyle = _fillStyle;
     return this;
@@ -715,7 +744,7 @@ proto.drawSelection = function(evt) {
       this._selectedOut = (verticalScaleX + innerW);
     }
 
-    ctx.fillStyle = 'rgba(0,0,0,0.1)';
+    ctx.fillStyle = unselectedColor;
 
     if (this._selectedOut && this._selectedIn > this._selectedOut) {
       var s = this._selectedOut;
@@ -736,38 +765,33 @@ proto.drawSelection = function(evt) {
     ctx.stroke();
 
 
-    if (this._hoveredSelectionHandle === 'in') {
-      ctx.lineWidth = handleWidth + 2;
-      ctx.strokeStyle = '#333';
-      ctx.beginPath();
-      ctx.moveTo(this._selectedIn, padding + 5);
-      ctx.lineTo(this._selectedIn, 80);
-      ctx.stroke();
-      ctx.closePath();
-    }
+    ctx.lineWidth = handleWidth + 2;
+    ctx.strokeStyle = this.rulersColor;
+    ctx.beginPath();
+    ctx.moveTo(this._selectedIn, padding + 10);
+    ctx.lineTo(this._selectedIn, 80);
+    ctx.stroke();
+    ctx.closePath();
 
     ctx.lineWidth = handleWidth;
-    ctx.strokeStyle = '#aaa';
+    ctx.strokeStyle = this._hoveredSelectionHandle === 'in' ? this.handleColorHover : this.handleColor;
     ctx.beginPath();
-    ctx.moveTo(this._selectedIn, padding + 5);
+    ctx.moveTo(this._selectedIn, padding + 10);
     ctx.lineTo(this._selectedIn, 80);
     ctx.stroke();
 
-
-    if (this._hoveredSelectionHandle === 'out') {
-      ctx.lineWidth = handleWidth + 2;
-      ctx.strokeStyle = '#333';
-      ctx.beginPath();
-      ctx.moveTo(this._selectedOut, padding + 5);
-      ctx.lineTo(this._selectedOut, 80);
-      ctx.stroke();
-      ctx.closePath();
-    }
+    ctx.lineWidth = handleWidth + 2;
+    ctx.strokeStyle = '#333';
+    ctx.beginPath();
+    ctx.moveTo(this._selectedOut, padding + 10);
+    ctx.lineTo(this._selectedOut, 80);
+    ctx.stroke();
+    ctx.closePath();
 
     ctx.lineWidth = handleWidth;
-    ctx.strokeStyle = '#aaa';
+    ctx.strokeStyle = this._hoveredSelectionHandle === 'out' ? this.handleColorHover : this.handleColor;
     ctx.beginPath();
-    ctx.moveTo(this._selectedOut, padding + 5);
+    ctx.moveTo(this._selectedOut, padding + 10);
     ctx.lineTo(this._selectedOut, 80);
     ctx.stroke();
 
@@ -789,7 +813,7 @@ proto.hoveredSelectionHandle = function(evt) {
   var ctx = this.ctx;
   var padding = Math.max(2 * this.lineWidth, 10);
   var returned = false;
-  var handleWidth = this.handleWidth + 5;
+  var handleWidth = this.handleWidth + 4;
 
   var _lineWidth = ctx.lineWidth;
   var _strokeStyle = ctx.strokeStyle;
@@ -797,7 +821,7 @@ proto.hoveredSelectionHandle = function(evt) {
   ctx.strokeStyle = 'rgba(0,0,0,0)';
 
   ctx.beginPath();
-  ctx.rect(this._selectedIn - (handleWidth / 2), padding + 5, handleWidth, 80);
+  ctx.rect(this._selectedIn - (handleWidth / 2), padding + 10, handleWidth, 80);
   ctx.stroke();
   ctx.closePath();
   if (ctx.isPointInPath(offset.left, offset.top)) {
@@ -805,7 +829,7 @@ proto.hoveredSelectionHandle = function(evt) {
   }
 
   ctx.beginPath();
-  ctx.rect(this._selectedOut - (handleWidth / 2), padding + 5, handleWidth, 80);
+  ctx.rect(this._selectedOut - (handleWidth / 2), padding + 10, handleWidth, 80);
   ctx.stroke();
   ctx.closePath();
   if (ctx.isPointInPath(offset.left, offset.top)) {
@@ -825,6 +849,7 @@ proto.drawRulers = function() {
   var ctx = this.offCtx; // for compositing with mouse interaction, draw on the canvas which is not in the DOM
   var lineWidth = this.lineWidth;
   var padding = Math.max(2 * lineWidth, 10);
+  var abbreviateNumber = this.abbreviateNumber;
 
   var timeLabels = this.timeLabels;
   var valueLabels = this.valueLabels;
@@ -846,7 +871,7 @@ proto.drawRulers = function() {
   ctx.lineWidth = 1;
   ctx.lineCap = 'round';
   ctx.lineJoin = 'round';
-  ctx.font = this.fontSize + 'px Arial';
+  ctx.font = this.fontSize + 'px ' + this.fontFamily;
 
 
   // draw horizontal (time) scale
@@ -957,6 +982,7 @@ proto.draw = function() {
     var top;
     var mom;
     var skipped;
+    var moment = this.moment;
     var color = this.lineColors[index];
 
     ctx.lineWidth = lineWidth;

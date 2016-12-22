@@ -12,22 +12,26 @@ var Controller = [
   'AuthenticationService',
   'Notifications',
   '$location',
-  'translateWithDefault',
+  '$translate',
+  '$q',
   function(
     $scope,
     $rootScope,
     AuthenticationService,
     Notifications,
     $location,
-    translateWithDefault
+    $translate,
+    $q
   ) {
     if ($rootScope.authentication) {
       return $location.path('/');
     }
 
-    var loginErrorsTranslation = translateWithDefault({
-      LOGIN_ERROR_MSG: 'Wrong credentials or missing access rights to application',
-      LOGIN_FAILED: 'Login Failed'
+    var loginErrorsTranslation = $q.all({
+      LOGIN_ERROR_MSG:
+        translateWithDefault('LOGIN_ERROR_MSG', 'Wrong credentials or missing access rights to application'),
+      LOGIN_FAILED:
+        translateWithDefault('LOGIN_FAILED', 'Login Failed')
     });
 
     $rootScope.showBreadcrumbs = false;
@@ -59,6 +63,13 @@ var Controller = [
             });
         });
     };
+
+    function translateWithDefault(translationId, defaultValue) {
+      return $translate(translationId)
+        .catch(function() {
+          return defaultValue;
+        });
+    }
   }];
 
 module.exports = [

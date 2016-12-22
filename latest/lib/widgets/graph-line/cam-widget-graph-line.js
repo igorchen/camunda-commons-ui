@@ -2,29 +2,77 @@
 
 var throttle = require('lodash').throttle;
 var LineGraph = require('./../../graph/line');
+var moment = require('moment'); // this should be left as-is to support development with `line.html`
+var abbreviateNumber = require('./../../filter/abbreviateNumber')();
 
-module.exports = [function() {
+
+module.exports = ['$window', function($window) {
   return {
     restrict: 'A',
 
     scope: {
-      values: '=',
-      colors: '=?',
+      fontFamily: '=?',
+      fontSize: '=?',
+      handleColor: '=?',
+      handleColorHover: '=?',
+      handleWidth: '=?',
+      interval: '=?',
+      lineColors: '=?',
+      lineWidth: '=?',
+      rulersColor: '=?',
+      selectingColor: '=?',
+      selection: '&onSelection',
+      textPadding: '=?',
+      tickSize: '=?',
+      timeLabelFormats: '=?',
       timespan: '=?',
-      interval: '=?'
+      timestampFormat: '=?',
+      unselectedColor: '=?',
+      valueLabelsCount: '=?',
+      values: '='
     },
 
     link: function($scope, $element) {
+      var container = $element[0];
+      var computedStyles = $window.getComputedStyle(container);
+
       $scope.timespan = $scope.timespan || 'day';
       $scope.interval = $scope.interval || 900;
 
-      var container = $element[0];
-      var win = container.ownerDocument.defaultView;
+      function height() {
+        return Math.min(Math.max(container.clientWidth * 0.75, 180), 300);
+      }
 
-      var sparkline = $scope.sparkline = new LineGraph({
+      var graph = $scope.graph = new LineGraph({
+        moment: moment,
+        abbreviateNumber: abbreviateNumber,
+
+        onselection: function onselection(info) {
+          $scope.$apply(function() {
+            $scope.selection({
+              info: info
+            });
+          });
+        },
+
         width: container.clientWidth,
-        height: container.clientHeight,
-        lineColors: $scope.colors
+        height: height(),
+
+        fontFamily: $scope.fontFamily || computedStyles.fontFamily,
+        fontSize: $scope.fontSize,
+        handleColor: $scope.handleColor,
+        handleColorHover: $scope.handleColorHover,
+        handleWidth: $scope.handleWidth,
+        lineColors: $scope.lineColors,
+        lineWidth: $scope.lineWidth,
+        rulersColor: $scope.rulersColor || computedStyles.color,
+        selectingColor: $scope.selectingColor,
+        textPadding: $scope.textPadding,
+        tickSize: $scope.tickSize,
+        timeLabelFormats: $scope.timeLabelFormats,
+        timestampFormat: $scope.timestampFormat,
+        unselectedColor: $scope.unselectedColor,
+        valueLabelsCount: $scope.valueLabelsCount
       });
 
       $scope.$watch('values', function() {
@@ -33,19 +81,19 @@ module.exports = [function() {
           cn += ' no-data';
         }
         container.className = cn;
-        sparkline.setData($scope.values, $scope.timespan, $scope.interval);
+        graph.setData($scope.values, $scope.timespan, $scope.interval);
       });
 
-      container.appendChild(sparkline.canvas);
+      container.appendChild(graph.canvas);
 
       var resize = throttle(function() {
-        sparkline.resize(container.clientWidth, Math.min(Math.max(container.clientWidth * 0.75, 180), 300)).draw();
+        graph.resize(container.clientWidth, height()).draw();
       }, 100);
 
-      win.addEventListener('resize', resize);
+      $window.addEventListener('resize', resize);
 
       $scope.$on('$destroy', function() {
-        win.removeEventListener('resize', resize);
+        $window.removeEventListener('resize', resize);
       });
     },
 
