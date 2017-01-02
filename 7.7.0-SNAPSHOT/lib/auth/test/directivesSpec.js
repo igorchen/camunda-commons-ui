@@ -11,6 +11,18 @@ describe('camunda-commons-ui/auth/directives', function() {
 
   beforeEach(window.module(authModule.name));
 
+  beforeEach(window.module(function($provide) {
+    $provide.service('$translate', function($q) {
+      return function(id) {
+        return $q.reject(id);
+      }
+    });
+
+    $provide.value('shouldDisplayAuthenticationError', function() {
+      return true;
+    });
+  }));
+
 
   describe('<cam-if-logged-in>', function() {
 

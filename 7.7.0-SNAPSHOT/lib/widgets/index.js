@@ -7,7 +7,6 @@ var angular = require('camunda-bpm-sdk-js/vendor/angular'),
     header = require('./header/cam-widget-header'),
     footer = require('./footer/cam-widget-footer'),
     loader = require('./loader/cam-widget-loader'),
-    graphLine = require('./graph-line/cam-widget-graph-line'),
     debug = require('./debug/cam-widget-debug'),
     clipboard = require('./clipboard/cam-widget-clipboard'),
     variable = require('./variable/cam-widget-variable'),
@@ -31,7 +30,6 @@ widgetModule.directive('camWidgetSearchPill', searchPill);
 widgetModule.directive('camWidgetHeader', header);
 widgetModule.directive('camWidgetFooter', footer);
 widgetModule.directive('camWidgetLoader', loader);
-widgetModule.directive('camWidgetGraphLine', graphLine);
 widgetModule.directive('camWidgetDebug', debug);
 widgetModule.directive('camWidgetClipboard', clipboard);
 widgetModule.directive('camWidgetVariable', variable);
