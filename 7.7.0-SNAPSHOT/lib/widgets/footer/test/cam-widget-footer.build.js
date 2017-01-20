@@ -1,4 +1,31 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+'use strict';
+
+
+var template = "<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-xs-12\">\n      Powered by <a href=\"http://camunda.org\">camunda BPM</a> /\n      <span class=\"version\">{{version}}</span>\n    </div>\n  </div>\n</div>\n";
+
+module.exports = [function() {
+  return {
+    template: template,
+    scope: {
+      version: '@'
+    }
+  };
+}];
+
+},{}],2:[function(require,module,exports){
+'use strict';
+
+var angular = require('camunda-bpm-sdk-js/vendor/angular'),
+    footerDefinition = require('../cam-widget-footer');
+
+var footerModule = angular.module('footerModule', []);
+
+footerModule.directive('camWidgetFooter', footerDefinition);
+
+angular.bootstrap(document.body, [footerModule.name]);
+
+},{"../cam-widget-footer":1,"camunda-bpm-sdk-js/vendor/angular":5}],3:[function(require,module,exports){
 /**
  * @license AngularJS v1.2.29
  * (c) 2010-2014 Google, Inc. http://angularjs.org
@@ -22168,40 +22195,13 @@ var styleDirective = valueFn({
 })(window, document);
 
 !window.angular.$$csp() && window.angular.element(document).find('head').prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>');
-},{}],2:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 require('./angular');
 module.exports = angular;
 
-},{"./angular":1}],3:[function(require,module,exports){
+},{"./angular":3}],5:[function(require,module,exports){
 'use strict';
 
 module.exports = require('angular');
 
-},{"angular":2}],4:[function(require,module,exports){
-'use strict';
-
-
-var template = "<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-xs-12\">\n      Powered by <a href=\"http://camunda.org\">camunda BPM</a> /\n      <span class=\"version\">{{version}}</span>\n    </div>\n  </div>\n</div>\n";
-
-module.exports = [function() {
-  return {
-    template: template,
-    scope: {
-      version: '@'
-    }
-  };
-}];
-
-},{}],5:[function(require,module,exports){
-'use strict';
-
-var angular = require('camunda-bpm-sdk-js/vendor/angular'),
-    footerDefinition = require('../cam-widget-footer');
-
-var footerModule = angular.module('footerModule', []);
-
-footerModule.directive('camWidgetFooter', footerDefinition);
-
-angular.bootstrap(document.body, [footerModule.name]);
-
-},{"../cam-widget-footer":4,"camunda-bpm-sdk-js/vendor/angular":3}]},{},[5]);
+},{"angular":4}]},{},[2]);
