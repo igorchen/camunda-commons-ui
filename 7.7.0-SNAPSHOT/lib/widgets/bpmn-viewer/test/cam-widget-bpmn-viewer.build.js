@@ -1931,6 +1931,13 @@ module.exports = angular.module('cam.commons.util', [])
 
 var angular = require('camunda-bpm-sdk-js/vendor/angular');
 
+function escapeHtml(html) {
+  var text = document.createTextNode(html);
+  var div = document.createElement('div');
+  div.appendChild(text);
+  return div.innerHTML;
+}
+
 module.exports = [
   '$filter', '$timeout',
   function($filter,   $timeout) {
@@ -1960,6 +1967,7 @@ module.exports = [
        *   type: type of the notification (info, warning, danger, success)
        *   status: main status line
        *   message: detail message
+       *   unsafe: boolean, indicates that status and message should not be sanitized
        *   duration: time duration in ms the notification should be shown to the user
        *   exclusive: boolean || array of attribute names that notification should be exclusive with
        *   scope: notification will be removed when the specified scope is destroyed
@@ -1973,6 +1981,11 @@ module.exports = [
             notifications = this.notifications,
             consumers = this.consumers,
             exclusive = notification.exclusive;
+
+        if(!notification.unsafe) {
+          notification.status = escapeHtml(notification.status);
+          notification.message = escapeHtml(notification.message);
+        }
 
         if (exclusive) {
           if (typeof exclusive == 'boolean') {
