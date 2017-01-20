@@ -31,5 +31,49 @@
            typeahead="type as type.value for type in dropdownTypes | filter:$viewValue:instantTypeahead"
            typeahead-on-select="createSearch($item)"
            instant-typeahead />
+
+    <span class="dropdown stored-criteria">
+      <button ng-disabled="!searches.length && !hasCriteriaSets()"
+              class="dropdown-toggle btn btn-default">
+        <span class="glyphicon glyphicon-floppy-disk"></span>
+        <span class="caret"></span>
+      </button>
+
+      <ul class="dropdown-menu dropdown-menu-right">
+        <li ng-if="searchCriteriaStorage.group">
+          <div class="input-group input-group-sm">
+            <input type="text"
+                   class="form-control"
+                   ng-model="searchCriteriaStorage.nameInput"
+                   ng-click="storedCriteriaInputClick($event)"
+                   placeholder="My criteria set" />
+            <span class="input-group-btn">
+              <button ng-disabled="!searchCriteriaStorage.nameInput"
+                      ng-click="storedCriteriaSaveClick($event)"
+                      class="btn btn-default"
+                      type="button">
+                <span class="glyphicon glyphicon-floppy-disk"></span>
+              </button>
+            </span>
+          </div>
+        </li>
+
+        <li role="separator"
+            class="divider"
+            ng-if="searchCriteriaStorage.group && hasCriteriaSets()"></li>
+
+        <li class="stored-criteria-set"
+            ng-repeat="(key, value) in searchCriteriaStorage.available">
+          <div>
+            <a class="glyphicon glyphicon-remove-sign"
+               ng-click="dropCriteriaSet($event, key)"
+               href></a>
+
+            <a href
+               ng-click="loadCriteriaSet($event, key)">{{ key }}</a>
+          </div>
+        </li>
+      </ul>
+    </span>
   </div>
 </form>
