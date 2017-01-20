@@ -39,14 +39,14 @@
         <span class="caret"></span>
       </button>
 
-      <ul class="dropdown-menu dropdown-menu-right">
+      <ul class="dropdown-menu dropdown-menu-right"
+          ng-if="searchCriteriaStorage.group || hasCriteriaSets()">
         <li ng-if="searchCriteriaStorage.group">
           <div class="input-group input-group-sm">
             <input type="text"
                    class="form-control"
                    ng-model="searchCriteriaStorage.nameInput"
-                   ng-click="storedCriteriaInputClick($event)"
-                   placeholder="My criteria set" />
+                   ng-click="storedCriteriaInputClick($event)" />
             <span class="input-group-btn">
               <button ng-disabled="!searchCriteriaStorage.nameInput"
                       ng-click="storedCriteriaSaveClick($event)"
@@ -63,6 +63,7 @@
             ng-if="searchCriteriaStorage.group && hasCriteriaSets()"></li>
 
         <li class="stored-criteria-set"
+            ng-if="hasCriteriaSets()"
             ng-repeat="(key, value) in searchCriteriaStorage.available">
           <div>
             <a class="glyphicon glyphicon-remove-sign"
