@@ -1213,7 +1213,7 @@ module.exports = function() {
   };
 };
 
-},{"camunda-bpm-sdk-js/vendor/angular":207,"jquery":1187}],6:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":207,"jquery":1108}],6:[function(require,module,exports){
 'use strict';
 
 
@@ -1370,7 +1370,7 @@ directivesModule.config([
 
 module.exports = directivesModule;
 
-},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":1190,"../util/index":19,"./autoFill":2,"./compileTemplate":3,"./email":4,"./engineSelect":5,"./inPlaceTextField":6,"./instantTypeahead":8,"./nl2br":9,"./notificationsPanel":10,"./passwordRepeat":11,"./showIfAuthorized":12,"camunda-bpm-sdk-js/vendor/angular":207}],8:[function(require,module,exports){
+},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":1111,"../util/index":19,"./autoFill":2,"./compileTemplate":3,"./email":4,"./engineSelect":5,"./inPlaceTextField":6,"./instantTypeahead":8,"./nl2br":9,"./notificationsPanel":10,"./passwordRepeat":11,"./showIfAuthorized":12,"camunda-bpm-sdk-js/vendor/angular":207}],8:[function(require,module,exports){
   'use strict';
 
   var secretEmptyKey = '[$empty$]';
@@ -1793,7 +1793,7 @@ filtersModule.config([
 
 module.exports = filtersModule;
 
-},{"angular-translate":45,"camunda-bpm-sdk-js/vendor/angular":207,"moment":1189}],15:[function(require,module,exports){
+},{"angular-translate":45,"camunda-bpm-sdk-js/vendor/angular":207,"moment":1110}],15:[function(require,module,exports){
 'use strict';
 
 var angular = require('camunda-bpm-sdk-js/vendor/angular');
@@ -2713,7 +2713,7 @@ module.exports = ['$window', function($window) {
     template: '<!-- keule!! pech jehabt! -->'
   };
 }];
-},{"./../../chart/line":1,"./../../filter/abbreviateNumber":13,"lodash":1188,"moment":1189}],26:[function(require,module,exports){
+},{"./../../chart/line":1,"./../../filter/abbreviateNumber":13,"lodash":1109,"moment":1110}],26:[function(require,module,exports){
 'use strict';
 
 var Clipboard = require('clipboard');
@@ -3446,7 +3446,7 @@ module.exports = ['$window', function($window) {
   };
 }];
 
-},{"../../util/change-dmn-namespace":18,"camunda-bpm-sdk-js/vendor/angular":207,"dmn-js/lib/Modeler":765,"dmn-js/lib/NavigatedViewer":766}],30:[function(require,module,exports){
+},{"../../util/change-dmn-namespace":18,"camunda-bpm-sdk-js/vendor/angular":207,"dmn-js/lib/Modeler":686,"dmn-js/lib/NavigatedViewer":687}],30:[function(require,module,exports){
 'use strict';
 
 
@@ -3610,7 +3610,7 @@ widgetModule.filter('camQueryComponent', camQueryComponent);
 
 module.exports = widgetModule;
 
-},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":1190,"../directives/index":7,"../filter/date/index":14,"../search/index":15,"./../services/cam-local-configuration":16,"./bpmn-viewer/cam-widget-bpmn-viewer":23,"./chart-line/cam-widget-chart-line":25,"./clipboard/cam-widget-clipboard":26,"./cmmn-viewer/cam-widget-cmmn-viewer":27,"./debug/cam-widget-debug":28,"./dmn-viewer/cam-widget-dmn-viewer":29,"./footer/cam-widget-footer":30,"./header/cam-widget-header":31,"./inline-field/cam-widget-inline-field":33,"./loader/cam-widget-loader":34,"./search-pill/cam-query-component":35,"./search-pill/cam-widget-search-pill":36,"./search/cam-widget-search":37,"./variable/cam-variable-validator":39,"./variable/cam-widget-variable":40,"./variables-table/cam-render-var-template":41,"./variables-table/cam-widget-variables-table":42,"camunda-bpm-sdk-js/vendor/angular":207}],33:[function(require,module,exports){
+},{"../../vendor/ui-bootstrap-tpls-0.11.2-camunda":1111,"../directives/index":7,"../filter/date/index":14,"../search/index":15,"./../services/cam-local-configuration":16,"./bpmn-viewer/cam-widget-bpmn-viewer":23,"./chart-line/cam-widget-chart-line":25,"./clipboard/cam-widget-clipboard":26,"./cmmn-viewer/cam-widget-cmmn-viewer":27,"./debug/cam-widget-debug":28,"./dmn-viewer/cam-widget-dmn-viewer":29,"./footer/cam-widget-footer":30,"./header/cam-widget-header":31,"./inline-field/cam-widget-inline-field":33,"./loader/cam-widget-loader":34,"./search-pill/cam-query-component":35,"./search-pill/cam-widget-search-pill":36,"./search/cam-widget-search":37,"./variable/cam-variable-validator":39,"./variable/cam-widget-variable":40,"./variables-table/cam-render-var-template":41,"./variables-table/cam-widget-variables-table":42,"camunda-bpm-sdk-js/vendor/angular":207}],33:[function(require,module,exports){
 'use strict';
 
 
@@ -4035,7 +4035,7 @@ module.exports = [
     };
   }];
 
-},{"camunda-bpm-sdk-js/vendor/angular":207,"jquery":1187}],34:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":207,"jquery":1108}],34:[function(require,module,exports){
 'use strict';
 
 
@@ -4201,7 +4201,7 @@ module.exports = ['$timeout',
     };
   }];
 
-},{"jquery":1187}],37:[function(require,module,exports){
+},{"jquery":1108}],37:[function(require,module,exports){
 'use strict';
 
 
@@ -4867,7 +4867,7 @@ module.exports = ['$timeout', '$location', 'search', 'widgetLocalConf',
     };
   }];
 
-},{"camunda-bpm-sdk-js/vendor/angular":207,"jquery":1187}],38:[function(require,module,exports){
+},{"camunda-bpm-sdk-js/vendor/angular":207,"jquery":1108}],38:[function(require,module,exports){
 'use strict';
 
 
@@ -5259,7 +5259,7 @@ module.exports = [
     };
   }];
 
-},{"jquery":1187}],42:[function(require,module,exports){
+},{"jquery":1108}],42:[function(require,module,exports){
 'use strict';
 
 
@@ -7225,7 +7225,7 @@ NavigatedViewer.prototype._navigationModules = [
 NavigatedViewer.prototype._modules = [].concat(
   NavigatedViewer.prototype._modules,
   NavigatedViewer.prototype._navigationModules);
-},{"./Viewer":47,"diagram-js/lib/navigation/movecanvas":556,"diagram-js/lib/navigation/zoomscroll":560,"inherits":82}],47:[function(require,module,exports){
+},{"./Viewer":47,"diagram-js/lib/navigation/movecanvas":477,"diagram-js/lib/navigation/zoomscroll":481,"inherits":82}],47:[function(require,module,exports){
 /**
  * The code in the <project-logo></project-logo> area
  * must not be changed.
@@ -7704,7 +7704,7 @@ function addProjectLogo(container) {
 
 /* </project-logo> */
 
-},{"./core":48,"./import/Importer":54,"./util/PoweredByUtil":60,"bpmn-moddle":61,"diagram-js":450,"diagram-js/lib/features/overlays":527,"diagram-js/lib/features/selection":542,"diagram-js/lib/i18n/translate":549,"inherits":82,"lodash/lang/isNumber":165,"lodash/lang/isString":167,"lodash/object/assign":169,"lodash/object/omit":172,"min-dom/lib/domify":179,"min-dom/lib/event":180,"min-dom/lib/query":181,"min-dom/lib/remove":182,"tiny-svg/lib/innerSVG":198}],48:[function(require,module,exports){
+},{"./core":48,"./import/Importer":54,"./util/PoweredByUtil":60,"bpmn-moddle":61,"diagram-js":371,"diagram-js/lib/features/overlays":448,"diagram-js/lib/features/selection":463,"diagram-js/lib/i18n/translate":470,"inherits":82,"lodash/lang/isNumber":165,"lodash/lang/isString":167,"lodash/object/assign":169,"lodash/object/omit":172,"min-dom/lib/domify":179,"min-dom/lib/event":180,"min-dom/lib/query":181,"min-dom/lib/remove":182,"tiny-svg/lib/innerSVG":198}],48:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../draw'),
@@ -9501,7 +9501,7 @@ function getRectPath(shape) {
   return componentsToPath(rectPath);
 }
 
-},{"../util/DiUtil":57,"../util/ModelUtil":59,"diagram-js/lib/draw/BaseRenderer":461,"diagram-js/lib/util/RenderUtil":578,"diagram-js/lib/util/SvgTransformUtil":579,"diagram-js/lib/util/Text":580,"inherits":82,"lodash/collection/every":84,"lodash/collection/forEach":87,"lodash/collection/includes":88,"lodash/collection/some":91,"lodash/lang/isObject":166,"lodash/object/assign":169,"min-dom/lib/query":181,"tiny-svg/lib/append":192,"tiny-svg/lib/attr":194,"tiny-svg/lib/classes":195,"tiny-svg/lib/create":197}],50:[function(require,module,exports){
+},{"../util/DiUtil":57,"../util/ModelUtil":59,"diagram-js/lib/draw/BaseRenderer":382,"diagram-js/lib/util/RenderUtil":499,"diagram-js/lib/util/SvgTransformUtil":500,"diagram-js/lib/util/Text":501,"inherits":82,"lodash/collection/every":84,"lodash/collection/forEach":87,"lodash/collection/includes":88,"lodash/collection/some":91,"lodash/lang/isObject":166,"lodash/object/assign":169,"min-dom/lib/query":181,"tiny-svg/lib/append":192,"tiny-svg/lib/attr":194,"tiny-svg/lib/classes":195,"tiny-svg/lib/create":197}],50:[function(require,module,exports){
 'use strict';
 
 /**
@@ -10779,7 +10779,7 @@ module.exports = {
   ],
   bpmnImporter: [ 'type', require('./BpmnImporter') ]
 };
-},{"./BpmnImporter":52,"diagram-js/lib/i18n/translate":549}],57:[function(require,module,exports){
+},{"./BpmnImporter":52,"diagram-js/lib/i18n/translate":470}],57:[function(require,module,exports){
 'use strict';
 
 var is = require('./ModelUtil').is,
@@ -14076,7 +14076,7 @@ if (!String.fromCodePoint) {
 })(typeof exports === "undefined" ? sax = {} : exports);
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":1161,"stream":1185,"string_decoder":1186}],68:[function(require,module,exports){
+},{"buffer":1082,"stream":1106,"string_decoder":1107}],68:[function(require,module,exports){
 /**
  * Tiny stack for browser or server
  *
@@ -46138,7 +46138,7 @@ module.exports = E;
 
 },{}],216:[function(require,module,exports){
 arguments[4][46][0].apply(exports,arguments)
-},{"./Viewer":217,"diagram-js/lib/navigation/movecanvas":278,"diagram-js/lib/navigation/zoomscroll":281,"dup":46,"inherits":301}],217:[function(require,module,exports){
+},{"./Viewer":217,"diagram-js/lib/navigation/movecanvas":477,"diagram-js/lib/navigation/zoomscroll":481,"dup":46,"inherits":254}],217:[function(require,module,exports){
 /**
  * The code in the <project-logo></project-logo> area
  * must not be changed.
@@ -46157,6 +46157,8 @@ var inherits = require('inherits');
 var domify = require('min-dom/lib/domify'),
     domQuery = require('min-dom/lib/query'),
     domRemove = require('min-dom/lib/remove');
+
+var innerSVG = require('tiny-svg/lib/innerSVG');
 
 var Diagram = require('diagram-js'),
     CmmnModdle = require('cmmn-moddle');
@@ -46363,10 +46365,10 @@ Viewer.prototype.saveSVG = function(options, done) {
   var canvas = this.get('canvas');
 
   var contentNode = canvas.getDefaultLayer(),
-      defsNode = canvas._svg.select('defs');
+      defsNode = domQuery('defs', canvas._svg);
 
-  var contents = contentNode.innerSVG(),
-      defs = (defsNode && defsNode.outerSVG()) || '';
+  var contents = innerSVG(contentNode),
+      defs = (defsNode && defsNode.outerHTML) || '';
 
   var bbox = contentNode.getBBox();
 
@@ -46564,7 +46566,7 @@ function addProjectLogo(container) {
 
 /* </project-logo> */
 
-},{"./core":219,"./import/Importer":226,"./util/PoweredByUtil":232,"cmmn-moddle":233,"diagram-js":254,"diagram-js/lib/features/overlays":271,"diagram-js/lib/features/selection":275,"inherits":301,"lodash/lang/isNumber":414,"lodash/lang/isString":417,"lodash/object/assign":420,"lodash/object/omit":424,"min-dom/lib/domify":435,"min-dom/lib/event":436,"min-dom/lib/query":437,"min-dom/lib/remove":438}],218:[function(require,module,exports){
+},{"./core":219,"./import/Importer":226,"./util/PoweredByUtil":232,"cmmn-moddle":233,"diagram-js":371,"diagram-js/lib/features/overlays":448,"diagram-js/lib/features/selection":463,"inherits":254,"lodash/lang/isNumber":333,"lodash/lang/isString":335,"lodash/object/assign":337,"lodash/object/omit":340,"min-dom/lib/domify":346,"min-dom/lib/event":347,"min-dom/lib/query":348,"min-dom/lib/remove":349,"tiny-svg/lib/innerSVG":365}],218:[function(require,module,exports){
 'use strict';
 
 var ModelUtil = require('../util/ModelUtil'),
@@ -46881,7 +46883,7 @@ function isDefinition(item) {
     'cmmn:CaseFileItemDefinition'
   ]);
 }
-},{"../features/modeling/util/ModelingUtil":223,"../util/ModelUtil":231,"lodash/collection/forEach":308,"lodash/lang/isArray":411}],219:[function(require,module,exports){
+},{"../features/modeling/util/ModelingUtil":223,"../util/ModelUtil":231,"lodash/collection/forEach":259,"lodash/lang/isArray":330}],219:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../draw'),
@@ -46918,7 +46920,17 @@ var getName = ModelUtil.getName;
 var is = ModelUtil.is;
 var getStandardEvent = ModelUtil.getStandardEvent;
 
+var domQuery = require('min-dom/lib/query');
+
+var svgAppend = require('tiny-svg/lib/append'),
+    svgAttr = require('tiny-svg/lib/attr'),
+    svgClasses = require('tiny-svg/lib/classes'),
+    svgCreate = require('tiny-svg/lib/create');
+
+var translate = require('diagram-js/lib/util/SvgTransformUtil').translate;
+
 var createLine = require('diagram-js/lib/util/RenderUtil').createLine;
+
 
 function CmmnRenderer(eventBus, styles, pathMap) {
 
@@ -46968,19 +46980,40 @@ function CmmnRenderer(eventBus, styles, pathMap) {
         attrs.strokeDasharray = [10000, 1];
       }
 
-      var marker = options.element
-                     .attr(attrs)
-                     .marker(0, 0, 20, 20, ref.x, ref.y)
-                     .attr({
-                       markerWidth: 20 * scale,
-                       markerHeight: 20 * scale
-                     });
+      var marker = svgCreate('marker');
+
+      svgAttr(options.element, attrs);
+
+      svgAppend(marker, options.element);
+
+      svgAttr(marker, {
+        id: id,
+        viewBox: '0 0 20 20',
+        refX: ref.x,
+        refY: ref.y,
+        markerWidth: 20 * scale,
+        markerHeight: 20 * scale,
+        orient: 'auto'
+      });
+
+      var defs = domQuery('defs', svg);
+
+      if (!defs) {
+        defs = svgCreate('defs');
+
+        svgAppend(svg, defs);
+      }
+
+      svgAppend(defs, marker);
 
       return addMarker(id, marker);
     }
 
+    var associationStart = svgCreate('path');
+    svgAttr(associationStart, { d: 'M 11 5 L 1 10 L 11 15' });
+
     createMarker('association-start', {
-      element: svg.path('M 11 5 L 1 10 L 11 15'),
+      element: associationStart,
       attrs: {
         fill: 'none',
         stroke: 'black',
@@ -46990,8 +47023,11 @@ function CmmnRenderer(eventBus, styles, pathMap) {
       scale: 0.5
     });
 
+    var associationEnd = svgCreate('path');
+    svgAttr(associationEnd, { d: 'M 1 5 L 11 10 L 1 15' });
+
     createMarker('association-end', {
-      element: svg.path('M 1 5 L 11 10 L 1 15'),
+      element: associationEnd,
       attrs: {
         fill: 'none',
         stroke: 'black',
@@ -47014,7 +47050,7 @@ function CmmnRenderer(eventBus, styles, pathMap) {
     return styles.style(traits || [], assign(defaultStyles, custom || {}));
   }
 
-  function drawCircle(p, width, height, offset, attrs) {
+  function drawCircle(parentGfx, width, height, offset, attrs) {
 
     if (isObject(offset)) {
       attrs = offset;
@@ -47032,10 +47068,20 @@ function CmmnRenderer(eventBus, styles, pathMap) {
     var cx = width / 2,
         cy = height / 2;
 
-    return p.circle(cx, cy, Math.round((width + height) / 4 - offset)).attr(attrs);
+    var circle = svgCreate('circle');
+    svgAttr(circle, {
+      cx: cx,
+      cy: cy,
+      r: Math.round((width + height) / 4 - offset)
+    });
+    svgAttr(circle, attrs);
+
+    svgAppend(parentGfx, circle);
+
+    return circle;
   }
 
-  function drawRect(p, width, height, r, offset, attrs) {
+  function drawRect(parentGfx, width, height, r, offset, attrs) {
 
     if (isObject(offset)) {
       attrs = offset;
@@ -47050,15 +47096,37 @@ function CmmnRenderer(eventBus, styles, pathMap) {
       fill: 'white'
     });
 
-    return p.rect(offset, offset, width - offset * 2, height - offset * 2, r).attr(attrs);
+    var rect = svgCreate('rect');
+    svgAttr(rect, {
+      x: offset,
+      y: offset,
+      width: width - offset * 2,
+      height: height - offset * 2,
+      rx: r,
+      ry: r
+    });
+    svgAttr(rect, attrs);
+
+    svgAppend(parentGfx, rect);
+
+    return rect;
   }
 
-  function drawDiamond(p, width, height, attrs) {
+  function drawDiamond(parentGfx, width, height, attrs) {
 
     var x_2 = width / 2;
     var y_2 = height / 2;
 
-    var points = [x_2, 0, width, y_2, x_2, height, 0, y_2 ];
+    var points = [
+      { x: x_2, y: 0 },
+      { x: width, y: y_2 },
+      { x: x_2, y: height },
+      { x: 0, y: y_2 }
+    ];
+
+    var pointsString = points.map(function(point) {
+      return point.x + ',' + point.y;
+    }).join(' ');
 
     attrs = computeStyle(attrs, {
       stroke: 'black',
@@ -47066,20 +47134,34 @@ function CmmnRenderer(eventBus, styles, pathMap) {
       fill: 'white'
     });
 
-    return p.polygon(points).attr(attrs);
+    var polygon = svgCreate('polygon');
+    svgAttr(polygon, {
+      points: pointsString
+    });
+    svgAttr(polygon, attrs);
+
+    svgAppend(parentGfx, polygon);
+
+    return polygon;
   }
 
-  function drawPath(p, d, attrs) {
+  function drawPath(parentGfx, d, attrs) {
 
     attrs = computeStyle(attrs, [ 'no-fill' ], {
       strokeWidth: 2,
       stroke: 'black'
     });
 
-    return p.path(d).attr(attrs);
+    var path = svgCreate('path');
+    svgAttr(path, { d: d });
+    svgAttr(path, attrs);
+
+    svgAppend(parentGfx, path);
+
+    return path;
   }
 
-  function drawOctagon(p, width, height, offset, attrs) {
+  function drawOctagon(parentGfx, width, height, offset, attrs) {
     offset = offset || 20;
 
     var x1 = offset;
@@ -47106,30 +47188,56 @@ function CmmnRenderer(eventBus, styles, pathMap) {
     var x8 = width - offset;
     var y8 = height;
 
-    var points = [ x1, y1, x2, y2, x3, y3, x4, y4, x5, y5, x6, y6, x7, y7, x8, y8 ];
+    var points = [
+      { x: x1, y: y1 },
+      { x: x2, y: y2 },
+      { x: x3, y: y3 },
+      { x: x4, y: y4 },
+      { x: x5, y: y5 },
+      { x: x6, y: y6 },
+      { x: x7, y: y7 },
+      { x: x8, y: y8 }
+    ];
 
     attrs = attrs || {};
     attrs.fill = 'white';
     attrs.stroke = 'black';
     attrs.strokeWidth = 2;
 
-    return drawPolygon(p, points, attrs);
+    return drawPolygon(parentGfx, points, attrs);
   }
 
-  function drawPolygon(p, points, attrs) {
-    return p.polygon(points).attr(attrs);
+  function drawPolygon(parentGfx, points, attrs) {
+    var pointsString = points.map(function(point) {
+      return point.x + ',' + point.y;
+    }).join(' ');
+
+    var polygon = svgCreate('polygon');
+
+    svgAttr(polygon, {
+      points: pointsString
+    });
+    svgAttr(polygon, attrs);
+
+    svgAppend(parentGfx, polygon);
+
+    return polygon;
   }
 
   // draw connection ////////////////////////////////////////////
 
-  function drawLine(p, waypoints, attrs) {
+  function drawLine(parentGfx, waypoints, attrs) {
     attrs = computeStyle(attrs, [ 'no-fill' ], {
       stroke: 'black',
       strokeWidth: 2,
       fill: 'none'
     });
 
-    return createLine(waypoints, attrs).appendTo(p);
+    var line = createLine(waypoints, attrs);
+
+    svgAppend(parentGfx, line);
+
+    return line;
   }
 
   function createPathFromConnection(connection) {
@@ -47144,8 +47252,11 @@ function CmmnRenderer(eventBus, styles, pathMap) {
 
   // render label //////////////////////////////////////////////
 
-  function renderLabel(p, label, options) {
-    return textUtil.createText(p, label || '', options).addClass('djs-label');
+  function renderLabel(parentGfx, label, options) {
+    var text = textUtil.createText(parentGfx, label || '', options);
+    svgClasses(text).add('djs-label');
+
+    return text;
   }
 
   function renderEmbeddedLabel(p, element, align) {
@@ -47158,9 +47269,7 @@ function CmmnRenderer(eventBus, styles, pathMap) {
     var textbox = renderLabel(p, name, { box: element, align: align, padding: 5 });
 
     // reset the position of the text box
-    textbox.transform(
-      'translate(' + STAGE_EDGE_OFFSET + ',' + 0 + ')'
-    );
+    translate(textbox, STAGE_EDGE_OFFSET, 0);
 
     return textbox;
   }
@@ -47191,7 +47300,12 @@ function CmmnRenderer(eventBus, styles, pathMap) {
       polygonWidth = minWidth + padding;
     }
 
-    var polygonPoints = [ 10, 0, 20, -height, polygonWidth, -height, (polygonWidth + 10), 0 ];
+    var polygonPoints = [
+      { x: 10, y: 0 },
+      { x: 20, y: -height },
+      { x: polygonWidth, y: -height },
+      { x: polygonWidth + 10, y: 0 }
+    ];
 
     // The pointer-events attribute is needed to allow clicks on the polygon
     // which otherwise would be prevented by the parent node ('djs-visual').
@@ -47204,17 +47318,15 @@ function CmmnRenderer(eventBus, styles, pathMap) {
     });
 
     // make sure the textbox is visually on top of the polygon
-    textBox.before(polygon);
+    textBox.parentNode.insertBefore(polygon, textBox);
 
     // reset the position of the text box
-    textBox.transform(
-      'translate(' + 25 + ',' + (-height - 1)   + ')'
-    );
+    translate(textBox, 25, -height - 1);
 
     return textBox;
   }
 
-  function renderExternalLabel(p, element, align) {
+  function renderExternalLabel(parentGfx, element) {
     var name = getName(element),
         hide = false;
 
@@ -47237,9 +47349,16 @@ function CmmnRenderer(eventBus, styles, pathMap) {
 
     }
 
+    var box = {
+      width: 90,
+      height: 30,
+      x: element.width / 2 + element.x,
+      y: element.height / 2 + element.y
+    };
+
     element.hidden = element.labelTarget.hidden || hide || !name;
 
-    return renderLabel(p, name, { box: element, align: align, style: { fontSize: '11px' } });
+    return renderLabel(parentGfx, name, { box: box, style: { fontSize: '11px' } });
   }
 
   // render elements //////////////////////////////////////////
@@ -47310,7 +47429,7 @@ function CmmnRenderer(eventBus, styles, pathMap) {
     },
 
     'cmmn:CasePlanModel': function(p, element) {
-      var rect = drawRect(p, element.width, element.height, null, {
+      var rect = drawRect(p, element.width, element.height, 0, {
         fillOpacity: 0.95
       });
       renderCasePlanModelLabel(p, element);
@@ -47554,10 +47673,9 @@ function CmmnRenderer(eventBus, styles, pathMap) {
         }
       });
 
-      var businessHeaderPath = drawPath(p, headerPathData);
-      businessHeaderPath.attr({
+      drawPath(p, headerPathData, {
         strokeWidth: 1,
-        fill: 'AAA'
+        fill: '000'
       });
 
       var headerData = pathMap.getScaledPath('TASK_TYPE_BUSINESS_RULE_MAIN', {
@@ -47567,8 +47685,7 @@ function CmmnRenderer(eventBus, styles, pathMap) {
         }
       });
 
-      var businessPath = drawPath(p, headerData);
-      businessPath.attr({
+      drawPath(p, headerData, {
         strokeWidth: 1
       });
 
@@ -47644,7 +47761,7 @@ function CmmnRenderer(eventBus, styles, pathMap) {
         stroke: 'black'
       });
 
-      markerRect.transform('translate(' + (element.width / 2 - 7) + ',' + (element.height - 17) + ')');
+      translate(markerRect, element.width / 2 - 7, element.height - 17);
 
       var path = isCollapsed(element) ? 'MARKER_STAGE_COLLAPSED' : 'MARKER_STAGE_EXPANDED';
 
@@ -47683,7 +47800,8 @@ function CmmnRenderer(eventBus, styles, pathMap) {
         stroke: 'black',
         fill: 'black'
       });
-      markerRect.transform('translate(' + (element.width / 2 + position + 2) + ',' + (element.height - 17) + ')');
+
+      translate(markerRect, element.width / 2 + position + 2, element.height - 17);
     },
 
     'ManualActivationMarker': function(p, element, position) {
@@ -47722,7 +47840,7 @@ function CmmnRenderer(eventBus, styles, pathMap) {
         stroke: 'black'
       });
 
-      planningTableRect.transform('translate(' + (element.width / 2 - 15) + ',' + (- 17) + ')');
+      translate(planningTableRect, element.width / 2 - 15, -17);
 
       var isCollapsed = isPlanningTableCollapsed(element);
 
@@ -47789,8 +47907,34 @@ function CmmnRenderer(eventBus, styles, pathMap) {
       return path;
     },
 
-    'label': function(p, element) {
-      return renderExternalLabel(p, element, '');
+    'label': function(parentGfx, element) {
+      // Update external label size and bounds during rendering when
+      // we have the actual rendered bounds anyway.
+
+      var textElement = renderExternalLabel(parentGfx, element);
+
+      var textBBox;
+
+      try {
+        textBBox = textElement.getBBox();
+      } catch (e) {
+        textBBox = { width: 0, height: 0, x: 0 };
+      }
+
+      // update element.x so that the layouted text is still
+      // center alligned (newX = oldMidX - newWidth / 2)
+      element.x = Math.ceil(element.x + element.width / 2) - Math.ceil((textBBox.width / 2));
+
+      // take element width, height from actual bounds
+      element.width = Math.ceil(textBBox.width);
+      element.height = Math.ceil(textBBox.height);
+
+      // compensate bounding box x
+      svgAttr(textElement, {
+        transform: 'translate(' + (-1 * textBBox.x) + ',0)'
+      });
+
+      return textElement;
     }
   };
 
@@ -47979,10 +48123,8 @@ CmmnRenderer.$inject = [ 'eventBus', 'styles', 'pathMap' ];
 
 module.exports = CmmnRenderer;
 
-},{"../util/DiUtil":229,"../util/ModelUtil":231,"diagram-js/lib/draw/BaseRenderer":262,"diagram-js/lib/util/RenderUtil":292,"diagram-js/lib/util/Text":293,"inherits":301,"lodash/lang/isArray":411,"lodash/lang/isObject":415,"lodash/object/assign":420}],221:[function(require,module,exports){
+},{"../util/DiUtil":229,"../util/ModelUtil":231,"diagram-js/lib/draw/BaseRenderer":382,"diagram-js/lib/util/RenderUtil":499,"diagram-js/lib/util/SvgTransformUtil":500,"diagram-js/lib/util/Text":501,"inherits":254,"lodash/lang/isArray":330,"lodash/lang/isObject":334,"lodash/object/assign":337,"min-dom/lib/query":348,"tiny-svg/lib/append":359,"tiny-svg/lib/attr":361,"tiny-svg/lib/classes":362,"tiny-svg/lib/create":364}],221:[function(require,module,exports){
 'use strict';
-
-var Snap = require('diagram-js/vendor/snapsvg');
 
 /**
  * Map containing SVG paths needed by CmmnRenderer.
@@ -48277,7 +48419,7 @@ function PathMap() {
     }
 
     //Apply value to raw path
-    var path = Snap.format(
+    var path = format(
       rawPath.d, {
         mx: mx,
         my: my,
@@ -48290,7 +48432,35 @@ function PathMap() {
 
 module.exports = PathMap;
 
-},{"diagram-js/vendor/snapsvg":300}],222:[function(require,module,exports){
+////////// helpers //////////
+
+// copied from https://github.com/adobe-webplatform/Snap.svg/blob/master/src/svg.js
+var tokenRegex = /\{([^\}]+)\}/g,
+    objNotationRegex = /(?:(?:^|\.)(.+?)(?=\[|\.|$|\()|\[('|")(.+?)\2\])(\(\))?/g; // matches .xxxxx or ["xxxxx"] to run over object properties
+
+function replacer(all, key, obj) {
+  var res = obj;
+  key.replace(objNotationRegex, function(all, name, quote, quotedName, isFunc) {
+    name = name || quotedName;
+    if (res) {
+      if (name in res) {
+        res = res[name];
+      }
+      typeof res == 'function' && isFunc && (res = res());
+    }
+  });
+  res = (res == null || res == obj ? all : res) + '';
+
+  return res;
+}
+
+function format(str, obj) {
+  return String(str).replace(tokenRegex, function(all, key) {
+    return replacer(all, key, obj);
+  });
+}
+
+},{}],222:[function(require,module,exports){
 module.exports = {
   __init__: [ 'cmmnRenderer' ],
   cmmnRenderer: [ 'type', require('./CmmnRenderer') ],
@@ -48435,7 +48605,7 @@ function isLabel(element) {
 }
 
 module.exports.isLabel = isLabel;
-},{"../../../util/ModelUtil":231,"diagram-js/lib/model":276,"lodash/collection/any":304}],224:[function(require,module,exports){
+},{"../../../util/ModelUtil":231,"diagram-js/lib/model":475,"lodash/collection/any":256}],224:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -48687,7 +48857,7 @@ CmmnImporter.prototype._getEnd = function(semantic, side) {
 CmmnImporter.prototype._getElement = function(semantic) {
   return this._elementRegistry.get(semantic.id);
 };
-},{"../util/DiUtil":229,"../util/LabelUtil":230,"../util/ModelUtil":231,"./Util":227,"lodash/collection/map":310,"lodash/object/assign":420}],225:[function(require,module,exports){
+},{"../util/DiUtil":229,"../util/LabelUtil":230,"../util/ModelUtil":231,"./Util":227,"lodash/collection/map":260,"lodash/object/assign":337}],225:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -49080,7 +49250,7 @@ function CmmnTreeWalker(handler) {
 }
 
 module.exports = CmmnTreeWalker;
-},{"../util/ModelUtil":231,"./Util":227,"diagram-js/lib/util/Collections":283,"lodash/collection/filter":306,"lodash/collection/forEach":308,"object-refs":447}],226:[function(require,module,exports){
+},{"../util/ModelUtil":231,"./Util":227,"diagram-js/lib/util/Collections":484,"lodash/collection/filter":257,"lodash/collection/forEach":259,"object-refs":356}],226:[function(require,module,exports){
 'use strict';
 
 var CmmnTreeWalker = require('./CmmnTreeWalker');
@@ -49325,7 +49495,7 @@ module.exports.getLabelBounds = function(semantic) {
     return semantic.di.label.bounds;
   }
 };
-},{"../util/ModelUtil":231,"lodash/object/assign":420}],231:[function(require,module,exports){
+},{"../util/ModelUtil":231,"lodash/object/assign":337}],231:[function(require,module,exports){
 'use strict';
 
 function isInstanceOf(bo, type) {
@@ -49667,7 +49837,7 @@ function open() {
 }
 
 module.exports.open = open;
-},{"min-dom/lib/delegate":434,"min-dom/lib/domify":435}],233:[function(require,module,exports){
+},{"min-dom/lib/delegate":345,"min-dom/lib/domify":346}],233:[function(require,module,exports){
 arguments[4][61][0].apply(exports,arguments)
 },{"./lib/simple":235,"dup":61}],234:[function(require,module,exports){
 'use strict';
@@ -49750,7 +49920,7 @@ CmmnModdle.prototype.toXML = function(element, options, done) {
   }
 };
 
-},{"lodash/lang/isFunction":412,"lodash/lang/isString":417,"lodash/object/assign":420,"moddle":241,"moddle-xml/lib/reader":237,"moddle-xml/lib/writer":238}],235:[function(require,module,exports){
+},{"lodash/lang/isFunction":331,"lodash/lang/isString":335,"lodash/object/assign":337,"moddle":241,"moddle-xml/lib/reader":237,"moddle-xml/lib/writer":238}],235:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign');
@@ -49767,15 +49937,15 @@ var packages = {
 module.exports = function(additionalPackages, options) {
   return new CmmnModdle(assign({}, packages, additionalPackages), options);
 };
-},{"../resources/cmmn/json/cmmn.json":250,"../resources/cmmn/json/cmmndi.json":251,"../resources/cmmn/json/dc.json":252,"../resources/cmmn/json/di.json":253,"./cmmn-moddle":234,"lodash/object/assign":420}],236:[function(require,module,exports){
+},{"../resources/cmmn/json/cmmn.json":250,"../resources/cmmn/json/cmmndi.json":251,"../resources/cmmn/json/dc.json":252,"../resources/cmmn/json/di.json":253,"./cmmn-moddle":234,"lodash/object/assign":337}],236:[function(require,module,exports){
 arguments[4][64][0].apply(exports,arguments)
 },{"dup":64}],237:[function(require,module,exports){
 arguments[4][65][0].apply(exports,arguments)
-},{"./common":236,"dup":65,"lodash/collection/find":307,"lodash/collection/forEach":308,"lodash/collection/reduce":311,"lodash/function/defer":316,"lodash/object/assign":420,"moddle":241,"moddle/lib/ns":246,"moddle/lib/types":249,"sax":239,"tiny-stack":240}],238:[function(require,module,exports){
+},{"./common":236,"dup":65,"lodash/collection/find":258,"lodash/collection/forEach":259,"lodash/collection/reduce":261,"lodash/function/defer":263,"lodash/object/assign":337,"moddle":241,"moddle/lib/ns":246,"moddle/lib/types":249,"sax":239,"tiny-stack":240}],238:[function(require,module,exports){
 arguments[4][66][0].apply(exports,arguments)
-},{"./common":236,"dup":66,"lodash/collection/filter":306,"lodash/collection/forEach":308,"lodash/collection/map":310,"lodash/lang/isString":417,"lodash/object/assign":420,"moddle/lib/ns":246,"moddle/lib/types":249}],239:[function(require,module,exports){
+},{"./common":236,"dup":66,"lodash/collection/filter":257,"lodash/collection/forEach":259,"lodash/collection/map":260,"lodash/lang/isString":335,"lodash/object/assign":337,"moddle/lib/ns":246,"moddle/lib/types":249}],239:[function(require,module,exports){
 arguments[4][67][0].apply(exports,arguments)
-},{"buffer":1161,"dup":67,"stream":1185,"string_decoder":1186}],240:[function(require,module,exports){
+},{"buffer":1082,"dup":67,"stream":1106,"string_decoder":1107}],240:[function(require,module,exports){
 arguments[4][68][0].apply(exports,arguments)
 },{"dup":68}],241:[function(require,module,exports){
 arguments[4][69][0].apply(exports,arguments)
@@ -49783,17 +49953,17 @@ arguments[4][69][0].apply(exports,arguments)
 arguments[4][70][0].apply(exports,arguments)
 },{"dup":70}],243:[function(require,module,exports){
 arguments[4][71][0].apply(exports,arguments)
-},{"./ns":246,"dup":71,"lodash/collection/forEach":308,"lodash/object/assign":420,"lodash/object/pick":426}],244:[function(require,module,exports){
+},{"./ns":246,"dup":71,"lodash/collection/forEach":259,"lodash/object/assign":337,"lodash/object/pick":342}],244:[function(require,module,exports){
 arguments[4][72][0].apply(exports,arguments)
-},{"./base":242,"dup":72,"lodash/collection/forEach":308}],245:[function(require,module,exports){
+},{"./base":242,"dup":72,"lodash/collection/forEach":259}],245:[function(require,module,exports){
 arguments[4][73][0].apply(exports,arguments)
-},{"./factory":244,"./ns":246,"./properties":247,"./registry":248,"dup":73,"lodash/collection/find":307,"lodash/collection/forEach":308,"lodash/lang/isObject":415,"lodash/lang/isString":417}],246:[function(require,module,exports){
+},{"./factory":244,"./ns":246,"./properties":247,"./registry":248,"dup":73,"lodash/collection/find":258,"lodash/collection/forEach":259,"lodash/lang/isObject":334,"lodash/lang/isString":335}],246:[function(require,module,exports){
 arguments[4][74][0].apply(exports,arguments)
 },{"dup":74}],247:[function(require,module,exports){
 arguments[4][75][0].apply(exports,arguments)
 },{"dup":75}],248:[function(require,module,exports){
 arguments[4][76][0].apply(exports,arguments)
-},{"./descriptor-builder":243,"./ns":246,"./types":249,"dup":76,"lodash/collection/forEach":308,"lodash/object/assign":420}],249:[function(require,module,exports){
+},{"./descriptor-builder":243,"./ns":246,"./types":249,"dup":76,"lodash/collection/forEach":259,"lodash/object/assign":337}],249:[function(require,module,exports){
 arguments[4][77][0].apply(exports,arguments)
 },{"dup":77}],250:[function(require,module,exports){
 module.exports={
@@ -51679,14715 +51849,243 @@ module.exports={
   }
 }
 },{}],254:[function(require,module,exports){
-module.exports = require('./lib/Diagram');
-},{"./lib/Diagram":255}],255:[function(require,module,exports){
-'use strict';
-
-var di = require('didi');
-
-
-/**
- * Bootstrap an injector from a list of modules, instantiating a number of default components
- *
- * @ignore
- * @param {Array<didi.Module>} bootstrapModules
- *
- * @return {didi.Injector} a injector to use to access the components
- */
-function bootstrap(bootstrapModules) {
-
-  var modules = [],
-      components = [];
-
-  function hasModule(m) {
-    return modules.indexOf(m) >= 0;
-  }
-
-  function addModule(m) {
-    modules.push(m);
-  }
-
-  function visit(m) {
-    if (hasModule(m)) {
-      return;
-    }
-
-    (m.__depends__ || []).forEach(visit);
-
-    if (hasModule(m)) {
-      return;
-    }
-
-    addModule(m);
-
-    (m.__init__ || []).forEach(function(c) {
-      components.push(c);
-    });
-  }
-
-  bootstrapModules.forEach(visit);
-
-  var injector = new di.Injector(modules);
-
-  components.forEach(function(c) {
-
-    try {
-      // eagerly resolve component (fn or string)
-      injector[typeof c === 'string' ? 'get' : 'invoke'](c);
-    } catch (e) {
-      console.error('Failed to instantiate component');
-      console.error(e.stack);
-
-      throw e;
-    }
-  });
-
-  return injector;
-}
-
-/**
- * Creates an injector from passed options.
- *
- * @ignore
- * @param  {Object} options
- * @return {didi.Injector}
- */
-function createInjector(options) {
-
-  options = options || {};
-
-  var configModule = {
-    'config': ['value', options]
-  };
-
-  var coreModule = require('./core');
-
-  var modules = [ configModule, coreModule ].concat(options.modules || []);
-
-  return bootstrap(modules);
-}
-
-
-/**
- * The main diagram-js entry point that bootstraps the diagram with the given
- * configuration.
- *
- * To register extensions with the diagram, pass them as Array<didi.Module> to the constructor.
- *
- * @class djs.Diagram
- * @memberOf djs
- * @constructor
- *
- * @example
- *
- * <caption>Creating a plug-in that logs whenever a shape is added to the canvas.</caption>
- *
- * // plug-in implemenentation
- * function MyLoggingPlugin(eventBus) {
- *   eventBus.on('shape.added', function(event) {
- *     console.log('shape ', event.shape, ' was added to the diagram');
- *   });
- * }
- *
- * // export as module
- * module.exports = {
- *   __init__: [ 'myLoggingPlugin' ],
- *     myLoggingPlugin: [ 'type', MyLoggingPlugin ]
- * };
- *
- *
- * // instantiate the diagram with the new plug-in
- *
- * var diagram = new Diagram({ modules: [ require('path-to-my-logging-plugin') ] });
- *
- * diagram.invoke([ 'canvas', function(canvas) {
- *   // add shape to drawing canvas
- *   canvas.addShape({ x: 10, y: 10 });
- * });
- *
- * // 'shape ... was added to the diagram' logged to console
- *
- * @param {Object} options
- * @param {Array<didi.Module>} [options.modules] external modules to instantiate with the diagram
- * @param {didi.Injector} [injector] an (optional) injector to bootstrap the diagram with
- */
-function Diagram(options, injector) {
-
-  // create injector unless explicitly specified
-  this.injector = injector = injector || createInjector(options);
-
-  // API
-
-  /**
-   * Resolves a diagram service
-   *
-   * @method Diagram#get
-   *
-   * @param {String} name the name of the diagram service to be retrieved
-   * @param {Boolean} [strict=true] if false, resolve missing services to null
-   */
-  this.get = injector.get;
-
-  /**
-   * Executes a function into which diagram services are injected
-   *
-   * @method Diagram#invoke
-   *
-   * @param {Function|Object[]} fn the function to resolve
-   * @param {Object} locals a number of locals to use to resolve certain dependencies
-   */
-  this.invoke = injector.invoke;
-
-  // init
-
-  // indicate via event
-
-
-  /**
-   * An event indicating that all plug-ins are loaded.
-   *
-   * Use this event to fire other events to interested plug-ins
-   *
-   * @memberOf Diagram
-   *
-   * @event diagram.init
-   *
-   * @example
-   *
-   * eventBus.on('diagram.init', function() {
-   *   eventBus.fire('my-custom-event', { foo: 'BAR' });
-   * });
-   *
-   * @type {Object}
-   */
-  this.get('eventBus').fire('diagram.init');
-}
-
-module.exports = Diagram;
-
-
-/**
- * Destroys the diagram
- *
- * @method  Diagram#destroy
- */
-Diagram.prototype.destroy = function() {
-  this.get('eventBus').fire('diagram.destroy');
-};
-
-/**
- * Clear the diagram, removing all contents.
- */
-Diagram.prototype.clear = function() {
-  this.get('eventBus').fire('diagram.clear');
-};
-},{"./core":261,"didi":295}],256:[function(require,module,exports){
-'use strict';
-
-var isNumber = require('lodash/lang/isNumber'),
-    assign = require('lodash/object/assign'),
-    forEach = require('lodash/collection/forEach'),
-    every = require('lodash/collection/every'),
-    debounce = require('lodash/function/debounce');
-
-var Collections = require('../util/Collections'),
-    Elements = require('../util/Elements');
-
-var Snap = require('../../vendor/snapsvg');
-
-function round(number, resolution) {
-  return Math.round(number * resolution) / resolution;
-}
-
-function ensurePx(number) {
-  return isNumber(number) ? number + 'px' : number;
-}
-
-/**
- * Creates a HTML container element for a SVG element with
- * the given configuration
- *
- * @param  {Object} options
- * @return {HTMLElement} the container element
- */
-function createContainer(options) {
-
-  options = assign({}, { width: '100%', height: '100%' }, options);
-
-  var container = options.container || document.body;
-
-  // create a <div> around the svg element with the respective size
-  // this way we can always get the correct container size
-  // (this is impossible for <svg> elements at the moment)
-  var parent = document.createElement('div');
-  parent.setAttribute('class', 'djs-container');
-
-  assign(parent.style, {
-    position: 'relative',
-    overflow: 'hidden',
-    width: ensurePx(options.width),
-    height: ensurePx(options.height)
-  });
-
-  container.appendChild(parent);
-
-  return parent;
-}
-
-function createGroup(parent, cls) {
-  return parent.group().attr({ 'class' : cls });
-}
-
-var BASE_LAYER = 'base';
-
-
-var REQUIRED_MODEL_ATTRS = {
-  shape: [ 'x', 'y', 'width', 'height' ],
-  connection: [ 'waypoints' ]
-};
-
-/**
- * The main drawing canvas.
- *
- * @class
- * @constructor
- *
- * @emits Canvas#canvas.init
- *
- * @param {Object} config
- * @param {EventBus} eventBus
- * @param {GraphicsFactory} graphicsFactory
- * @param {ElementRegistry} elementRegistry
- */
-function Canvas(config, eventBus, graphicsFactory, elementRegistry) {
-
-  this._eventBus = eventBus;
-  this._elementRegistry = elementRegistry;
-  this._graphicsFactory = graphicsFactory;
-
-  this._init(config || {});
-}
-
-Canvas.$inject = [ 'config.canvas', 'eventBus', 'graphicsFactory', 'elementRegistry' ];
-
-module.exports = Canvas;
-
-
-Canvas.prototype._init = function(config) {
-
-  var eventBus = this._eventBus;
-
-  // Creates a <svg> element that is wrapped into a <div>.
-  // This way we are always able to correctly figure out the size of the svg element
-  // by querying the parent node.
-  //
-  // (It is not possible to get the size of a svg element cross browser @ 2014-04-01)
-  //
-  // <div class="djs-container" style="width: {desired-width}, height: {desired-height}">
-  //   <svg width="100%" height="100%">
-  //    ...
-  //   </svg>
-  // </div>
-
-  // html container
-  var container = this._container = createContainer(config),
-      svg = this._svg = Snap.createSnapAt('100%', '100%', container),
-      viewport = this._viewport = createGroup(svg, 'viewport');
-
-  this._layers = {};
-
-  // debounce canvas.viewbox.changed events
-  // for smoother diagram interaction
-  if (config.deferUpdate !== false) {
-    this._viewboxChanged = debounce(this._viewboxChanged, 300);
-  }
-
-  eventBus.on('diagram.init', function() {
-
-    /**
-     * An event indicating that the canvas is ready to be drawn on.
-     *
-     * @memberOf Canvas
-     *
-     * @event canvas.init
-     *
-     * @type {Object}
-     * @property {Snap<SVGSVGElement>} svg the created svg element
-     * @property {Snap<SVGGroup>} viewport the direct parent of diagram elements and shapes
-     */
-    eventBus.fire('canvas.init', {
-      svg: svg,
-      viewport: viewport
-    });
-
-    // fire this in order for certain components to check
-    // if they need to be adjusted due the canvas size
-    this.resized();
-
-  }, this);
-
-  eventBus.on('diagram.destroy', 500, this._destroy, this);
-  eventBus.on('diagram.clear', 500, this._clear, this);
-};
-
-Canvas.prototype._destroy = function(emit) {
-  this._eventBus.fire('canvas.destroy', {
-    svg: this._svg,
-    viewport: this._viewport
-  });
-
-  var parent = this._container.parentNode;
-
-  if (parent) {
-    parent.removeChild(this._container);
-  }
-
-  delete this._svg;
-  delete this._container;
-  delete this._layers;
-  delete this._rootElement;
-  delete this._viewport;
-};
-
-Canvas.prototype._clear = function() {
-
-  var self = this;
-
-  var allElements = this._elementRegistry.getAll();
-
-  // remove all elements
-  allElements.forEach(function(element) {
-    var type = Elements.getType(element);
-
-    if (type === 'root') {
-      self.setRootElement(null, true);
-    } else {
-      self._removeElement(element, type);
-    }
-  });
-
-  // force recomputation of view box
-  delete this._cachedViewbox;
-};
-
-/**
- * Returns the default layer on which
- * all elements are drawn.
- *
- * @returns {Snap<SVGGroup>}
- */
-Canvas.prototype.getDefaultLayer = function() {
-  return this.getLayer(BASE_LAYER);
-};
-
-/**
- * Returns a layer that is used to draw elements
- * or annotations on it.
- *
- * @param  {String} name
- *
- * @returns {Snap<SVGGroup>}
- */
-Canvas.prototype.getLayer = function(name) {
-
-  if (!name) {
-    throw new Error('must specify a name');
-  }
-
-  var layer = this._layers[name];
-  if (!layer) {
-    layer = this._layers[name] = createGroup(this._viewport, 'layer-' + name);
-  }
-
-  return layer;
-};
-
-
-/**
- * Returns the html element that encloses the
- * drawing canvas.
- *
- * @return {DOMNode}
- */
-Canvas.prototype.getContainer = function() {
-  return this._container;
-};
-
-
-/////////////// markers ///////////////////////////////////
-
-Canvas.prototype._updateMarker = function(element, marker, add) {
-  var container;
-
-  if (!element.id) {
-    element = this._elementRegistry.get(element);
-  }
-
-  // we need to access all
-  container = this._elementRegistry._elements[element.id];
-
-  if (!container) {
-    return;
-  }
-
-  forEach([ container.gfx, container.secondaryGfx ], function(gfx) {
-    if (gfx) {
-      // invoke either addClass or removeClass based on mode
-      gfx[add ? 'addClass' : 'removeClass'](marker);
-    }
-  });
-
-  /**
-   * An event indicating that a marker has been updated for an element
-   *
-   * @event element.marker.update
-   * @type {Object}
-   * @property {djs.model.Element} element the shape
-   * @property {Object} gfx the graphical representation of the shape
-   * @property {String} marker
-   * @property {Boolean} add true if the marker was added, false if it got removed
-   */
-  this._eventBus.fire('element.marker.update', { element: element, gfx: container.gfx, marker: marker, add: !!add });
-};
-
-
-/**
- * Adds a marker to an element (basically a css class).
- *
- * Fires the element.marker.update event, making it possible to
- * integrate extension into the marker life-cycle, too.
- *
- * @example
- * canvas.addMarker('foo', 'some-marker');
- *
- * var fooGfx = canvas.getGraphics('foo');
- *
- * fooGfx; // <g class="... some-marker"> ... </g>
- *
- * @param {String|djs.model.Base} element
- * @param {String} marker
- */
-Canvas.prototype.addMarker = function(element, marker) {
-  this._updateMarker(element, marker, true);
-};
-
-
-/**
- * Remove a marker from an element.
- *
- * Fires the element.marker.update event, making it possible to
- * integrate extension into the marker life-cycle, too.
- *
- * @param  {String|djs.model.Base} element
- * @param  {String} marker
- */
-Canvas.prototype.removeMarker = function(element, marker) {
-  this._updateMarker(element, marker, false);
-};
-
-/**
- * Check the existence of a marker on element.
- *
- * @param  {String|djs.model.Base} element
- * @param  {String} marker
- */
-Canvas.prototype.hasMarker = function(element, marker) {
-  if (!element.id) {
-    element = this._elementRegistry.get(element);
-  }
-
-  var gfx = this.getGraphics(element);
-
-  return gfx && gfx.hasClass(marker);
-};
-
-/**
- * Toggles a marker on an element.
- *
- * Fires the element.marker.update event, making it possible to
- * integrate extension into the marker life-cycle, too.
- *
- * @param  {String|djs.model.Base} element
- * @param  {String} marker
- */
-Canvas.prototype.toggleMarker = function(element, marker) {
-  if (this.hasMarker(element, marker)) {
-    this.removeMarker(element, marker);
-  } else {
-    this.addMarker(element, marker);
-  }
-};
-
-Canvas.prototype.getRootElement = function() {
-  if (!this._rootElement) {
-    this.setRootElement({ id: '__implicitroot', children: [] });
-  }
-
-  return this._rootElement;
-};
-
-
-
-//////////////// root element handling ///////////////////////////
-
-/**
- * Sets a given element as the new root element for the canvas
- * and returns the new root element.
- *
- * @param {Object|djs.model.Root} element
- * @param {Boolean} [override] whether to override the current root element, if any
- *
- * @return {Object|djs.model.Root} new root element
- */
-Canvas.prototype.setRootElement = function(element, override) {
-
-  if (element) {
-    this._ensureValid('root', element);
-  }
-
-  var currentRoot = this._rootElement,
-      elementRegistry = this._elementRegistry,
-      eventBus = this._eventBus;
-
-  if (currentRoot) {
-    if (!override) {
-      throw new Error('rootElement already set, need to specify override');
-    }
-
-    // simulate element remove event sequence
-    eventBus.fire('root.remove', { element: currentRoot });
-    eventBus.fire('root.removed', { element: currentRoot });
-
-    elementRegistry.remove(currentRoot);
-  }
-
-  if (element) {
-    var gfx = this.getDefaultLayer();
-
-    // resemble element add event sequence
-    eventBus.fire('root.add', { element: element });
-
-    elementRegistry.add(element, gfx, this._svg);
-
-    eventBus.fire('root.added', { element: element, gfx: gfx });
-  }
-
-  this._rootElement = element;
-
-  return element;
-};
-
-
-
-///////////// add functionality ///////////////////////////////
-
-Canvas.prototype._ensureValid = function(type, element) {
-  if (!element.id) {
-    throw new Error('element must have an id');
-  }
-
-  if (this._elementRegistry.get(element.id)) {
-    throw new Error('element with id ' + element.id + ' already exists');
-  }
-
-  var requiredAttrs = REQUIRED_MODEL_ATTRS[type];
-
-  var valid = every(requiredAttrs, function(attr) {
-    return typeof element[attr] !== 'undefined';
-  });
-
-  if (!valid) {
-    throw new Error(
-      'must supply { ' + requiredAttrs.join(', ') + ' } with ' + type);
-  }
-};
-
-Canvas.prototype._setParent = function(element, parent, parentIndex) {
-  Collections.add(parent.children, element, parentIndex);
-  element.parent = parent;
-};
-
-/**
- * Adds an element to the canvas.
- *
- * This wires the parent <-> child relationship between the element and
- * a explicitly specified parent or an implicit root element.
- *
- * During add it emits the events
- *
- *  * <{type}.add> (element, parent)
- *  * <{type}.added> (element, gfx)
- *
- * Extensions may hook into these events to perform their magic.
- *
- * @param {String} type
- * @param {Object|djs.model.Base} element
- * @param {Object|djs.model.Base} [parent]
- * @param {Number} [parentIndex]
- *
- * @return {Object|djs.model.Base} the added element
- */
-Canvas.prototype._addElement = function(type, element, parent, parentIndex) {
-
-  parent = parent || this.getRootElement();
-
-  var eventBus = this._eventBus,
-      graphicsFactory = this._graphicsFactory;
-
-  this._ensureValid(type, element);
-
-  eventBus.fire(type + '.add', { element: element, parent: parent });
-
-  this._setParent(element, parent, parentIndex);
-
-  // create graphics
-  var gfx = graphicsFactory.create(type, element);
-
-  this._elementRegistry.add(element, gfx);
-
-  // update its visual
-  graphicsFactory.update(type, element, gfx);
-
-  eventBus.fire(type + '.added', { element: element, gfx: gfx });
-
-  return element;
-};
-
-/**
- * Adds a shape to the canvas
- *
- * @param {Object|djs.model.Shape} shape to add to the diagram
- * @param {djs.model.Base} [parent]
- * @param {Number} [parentIndex]
- *
- * @return {djs.model.Shape} the added shape
- */
-Canvas.prototype.addShape = function(shape, parent, parentIndex) {
-  return this._addElement('shape', shape, parent, parentIndex);
-};
-
-/**
- * Adds a connection to the canvas
- *
- * @param {Object|djs.model.Connection} connection to add to the diagram
- * @param {djs.model.Base} [parent]
- * @param {Number} [parentIndex]
- *
- * @return {djs.model.Connection} the added connection
- */
-Canvas.prototype.addConnection = function(connection, parent, parentIndex) {
-  return this._addElement('connection', connection, parent, parentIndex);
-};
-
-
-/**
- * Internal remove element
- */
-Canvas.prototype._removeElement = function(element, type) {
-
-  var elementRegistry = this._elementRegistry,
-      graphicsFactory = this._graphicsFactory,
-      eventBus = this._eventBus;
-
-  element = elementRegistry.get(element.id || element);
-
-  if (!element) {
-    // element was removed already
-    return;
-  }
-
-  eventBus.fire(type + '.remove', { element: element });
-
-  graphicsFactory.remove(element);
-
-  // unset parent <-> child relationship
-  Collections.remove(element.parent && element.parent.children, element);
-  element.parent = null;
-
-  eventBus.fire(type + '.removed', { element: element });
-
-  elementRegistry.remove(element);
-
-  return element;
-};
-
-
-/**
- * Removes a shape from the canvas
- *
- * @param {String|djs.model.Shape} shape or shape id to be removed
- *
- * @return {djs.model.Shape} the removed shape
- */
-Canvas.prototype.removeShape = function(shape) {
-
-  /**
-   * An event indicating that a shape is about to be removed from the canvas.
-   *
-   * @memberOf Canvas
-   *
-   * @event shape.remove
-   * @type {Object}
-   * @property {djs.model.Shape} element the shape descriptor
-   * @property {Object} gfx the graphical representation of the shape
-   */
-
-  /**
-   * An event indicating that a shape has been removed from the canvas.
-   *
-   * @memberOf Canvas
-   *
-   * @event shape.removed
-   * @type {Object}
-   * @property {djs.model.Shape} element the shape descriptor
-   * @property {Object} gfx the graphical representation of the shape
-   */
-  return this._removeElement(shape, 'shape');
-};
-
-
-/**
- * Removes a connection from the canvas
- *
- * @param {String|djs.model.Connection} connection or connection id to be removed
- *
- * @return {djs.model.Connection} the removed connection
- */
-Canvas.prototype.removeConnection = function(connection) {
-
-  /**
-   * An event indicating that a connection is about to be removed from the canvas.
-   *
-   * @memberOf Canvas
-   *
-   * @event connection.remove
-   * @type {Object}
-   * @property {djs.model.Connection} element the connection descriptor
-   * @property {Object} gfx the graphical representation of the connection
-   */
-
-  /**
-   * An event indicating that a connection has been removed from the canvas.
-   *
-   * @memberOf Canvas
-   *
-   * @event connection.removed
-   * @type {Object}
-   * @property {djs.model.Connection} element the connection descriptor
-   * @property {Object} gfx the graphical representation of the connection
-   */
-  return this._removeElement(connection, 'connection');
-};
-
-
-/**
- * Return the graphical object underlaying a certain diagram element
- *
- * @param {String|djs.model.Base} element descriptor of the element
- * @param {Boolean} [secondary=false] whether to return the secondary connected element
- *
- * @return {SVGElement}
- */
-Canvas.prototype.getGraphics = function(element, secondary) {
-  return this._elementRegistry.getGraphics(element, secondary);
-};
-
-
-/**
- * Perform a viewbox update via a given change function.
- *
- * @param {Function} changeFn
- */
-Canvas.prototype._changeViewbox = function(changeFn) {
-
-  // notify others of the upcoming viewbox change
-  this._eventBus.fire('canvas.viewbox.changing');
-
-  // perform actual change
-  changeFn.apply(this);
-
-  // reset the cached viewbox so that
-  // a new get operation on viewbox or zoom
-  // triggers a viewbox re-computation
-  this._cachedViewbox = null;
-
-  // notify others of the change; this step
-  // may or may not be debounced
-  this._viewboxChanged();
-};
-
-Canvas.prototype._viewboxChanged = function() {
-  this._eventBus.fire('canvas.viewbox.changed', { viewbox: this.viewbox() });
-};
-
-
-/**
- * Gets or sets the view box of the canvas, i.e. the
- * area that is currently displayed.
- *
- * The getter may return a cached viewbox (if it is currently
- * changing). To force a recomputation, pass `false` as the first argument.
- *
- * @example
- *
- * canvas.viewbox({ x: 100, y: 100, width: 500, height: 500 })
- *
- * // sets the visible area of the diagram to (100|100) -> (600|100)
- * // and and scales it according to the diagram width
- *
- * var viewbox = canvas.viewbox(); // pass `false` to force recomputing the box.
- *
- * console.log(viewbox);
- * // {
- * //   inner: Dimensions,
- * //   outer: Dimensions,
- * //   scale,
- * //   x, y,
- * //   width, height
- * // }
- *
- * @param  {Object} [box] the new view box to set
- * @param  {Number} box.x the top left X coordinate of the canvas visible in view box
- * @param  {Number} box.y the top left Y coordinate of the canvas visible in view box
- * @param  {Number} box.width the visible width
- * @param  {Number} box.height
- *
- * @return {Object} the current view box
- */
-Canvas.prototype.viewbox = function(box) {
-
-  if (box === undefined && this._cachedViewbox) {
-    return this._cachedViewbox;
-  }
-
-  var viewport = this._viewport,
-      innerBox,
-      outerBox = this.getSize(),
-      matrix,
-      scale,
-      x, y;
-
-  if (!box) {
-    // compute the inner box based on the
-    // diagrams default layer. This allows us to exclude
-    // external components, such as overlays
-    innerBox = this.getDefaultLayer().getBBox(true);
-
-    matrix = viewport.transform().localMatrix;
-    scale = round(matrix.a, 1000);
-
-    x = round(-matrix.e || 0, 1000);
-    y = round(-matrix.f || 0, 1000);
-
-    box = this._cachedViewbox = {
-      x: x ? x / scale : 0,
-      y: y ? y / scale : 0,
-      width: outerBox.width / scale,
-      height: outerBox.height / scale,
-      scale: scale,
-      inner: {
-        width: innerBox.width,
-        height: innerBox.height,
-        x: innerBox.x,
-        y: innerBox.y
-      },
-      outer: outerBox
-    };
-
-    return box;
-  } else {
-
-    this._changeViewbox(function() {
-      scale = Math.min(outerBox.width / box.width, outerBox.height / box.height);
-
-      matrix = new Snap.Matrix().scale(scale).translate(-box.x, -box.y);
-      viewport.transform(matrix);
-    });
-  }
-
-  return box;
-};
-
-
-/**
- * Gets or sets the scroll of the canvas.
- *
- * @param {Object} [delta] the new scroll to apply.
- *
- * @param {Number} [delta.dx]
- * @param {Number} [delta.dy]
- */
-Canvas.prototype.scroll = function(delta) {
-
-  var node = this._viewport.node;
-  var matrix = node.getCTM();
-
-  if (delta) {
-    this._changeViewbox(function() {
-      delta = assign({ dx: 0, dy: 0 }, delta || {});
-
-      matrix = this._svg.node.createSVGMatrix().translate(delta.dx, delta.dy).multiply(matrix);
-
-      setCTM(node, matrix);
-    });
-  }
-
-  return { x: matrix.e, y: matrix.f };
-};
-
-
-/**
- * Gets or sets the current zoom of the canvas, optionally zooming
- * to the specified position.
- *
- * The getter may return a cached zoom level. Call it with `false` as
- * the first argument to force recomputation of the current level.
- *
- * @param {String|Number} [newScale] the new zoom level, either a number, i.e. 0.9,
- *                                   or `fit-viewport` to adjust the size to fit the current viewport
- * @param {String|Point} [center] the reference point { x: .., y: ..} to zoom to, 'auto' to zoom into mid or null
- *
- * @return {Number} the current scale
- */
-Canvas.prototype.zoom = function(newScale, center) {
-
-  if (!newScale) {
-    return this.viewbox(newScale).scale;
-  }
-
-  if (newScale === 'fit-viewport') {
-    return this._fitViewport(center);
-  }
-
-  var outer,
-      matrix;
-
-  this._changeViewbox(function() {
-
-    if (typeof center !== 'object') {
-      outer = this.viewbox().outer;
-
-      center = {
-        x: outer.width / 2,
-        y: outer.height / 2
-      };
-    }
-
-    matrix = this._setZoom(newScale, center);
-  });
-
-  return round(matrix.a, 1000);
-};
-
-function setCTM(node, m) {
-  var mstr = 'matrix(' + m.a + ',' + m.b + ',' + m.c + ',' + m.d + ',' + m.e + ',' + m.f + ')';
-  node.setAttribute('transform', mstr);
-}
-
-Canvas.prototype._fitViewport = function(center) {
-
-  var vbox = this.viewbox(),
-      outer = vbox.outer,
-      inner = vbox.inner,
-      newScale,
-      newViewbox;
-
-  // display the complete diagram without zooming in.
-  // instead of relying on internal zoom, we perform a
-  // hard reset on the canvas viewbox to realize this
-  //
-  // if diagram does not need to be zoomed in, we focus it around
-  // the diagram origin instead
-
-  if (inner.x >= 0 &&
-      inner.y >= 0 &&
-      inner.x + inner.width <= outer.width &&
-      inner.y + inner.height <= outer.height &&
-      !center) {
-
-    newViewbox = {
-      x: 0,
-      y: 0,
-      width: Math.max(inner.width + inner.x, outer.width),
-      height: Math.max(inner.height + inner.y, outer.height)
-    };
-  } else {
-
-    newScale = Math.min(1, outer.width / inner.width, outer.height / inner.height);
-    newViewbox = {
-      x: inner.x + (center ? inner.width / 2 - outer.width / newScale / 2 : 0),
-      y: inner.y + (center ? inner.height / 2 - outer.height / newScale / 2 : 0),
-      width: outer.width / newScale,
-      height: outer.height / newScale
-    };
-  }
-
-  this.viewbox(newViewbox);
-
-  return this.viewbox(false).scale;
-};
-
-
-Canvas.prototype._setZoom = function(scale, center) {
-
-  var svg = this._svg.node,
-      viewport = this._viewport.node;
-
-  var matrix = svg.createSVGMatrix();
-  var point = svg.createSVGPoint();
-
-  var centerPoint,
-      originalPoint,
-      currentMatrix,
-      scaleMatrix,
-      newMatrix;
-
-  currentMatrix = viewport.getCTM();
-
-
-  var currentScale = currentMatrix.a;
-
-  if (center) {
-    centerPoint = assign(point, center);
-
-    // revert applied viewport transformations
-    originalPoint = centerPoint.matrixTransform(currentMatrix.inverse());
-
-    // create scale matrix
-    scaleMatrix = matrix
-                    .translate(originalPoint.x, originalPoint.y)
-                    .scale(1 / currentScale * scale)
-                    .translate(-originalPoint.x, -originalPoint.y);
-
-    newMatrix = currentMatrix.multiply(scaleMatrix);
-  } else {
-    newMatrix = matrix.scale(scale);
-  }
-
-  setCTM(this._viewport.node, newMatrix);
-
-  return newMatrix;
-};
-
-
-/**
- * Returns the size of the canvas
- *
- * @return {Dimensions}
- */
-Canvas.prototype.getSize = function() {
-  return {
-    width: this._container.clientWidth,
-    height: this._container.clientHeight
-  };
-};
-
-
-/**
- * Return the absolute bounding box for the given element
- *
- * The absolute bounding box may be used to display overlays in the
- * callers (browser) coordinate system rather than the zoomed in/out
- * canvas coordinates.
- *
- * @param  {ElementDescriptor} element
- * @return {Bounds} the absolute bounding box
- */
-Canvas.prototype.getAbsoluteBBox = function(element) {
-  var vbox = this.viewbox();
-  var bbox;
-
-  // connection
-  // use svg bbox
-  if (element.waypoints) {
-    var gfx = this.getGraphics(element);
-
-    var transformBBox = gfx.getBBox(true);
-    bbox = gfx.getBBox();
-
-    bbox.x -= transformBBox.x;
-    bbox.y -= transformBBox.y;
-
-    bbox.width += 2 * transformBBox.x;
-    bbox.height +=  2 * transformBBox.y;
-  }
-  // shapes
-  // use data
-  else {
-    bbox = element;
-  }
-
-  var x = bbox.x * vbox.scale - vbox.x * vbox.scale;
-  var y = bbox.y * vbox.scale - vbox.y * vbox.scale;
-
-  var width = bbox.width * vbox.scale;
-  var height = bbox.height * vbox.scale;
-
-  return {
-    x: x,
-    y: y,
-    width: width,
-    height: height
-  };
-};
-
-/**
- * Fires an event in order other modules can react to the
- * canvas resizing
- */
-Canvas.prototype.resized = function() {
-
-  // force recomputation of view box
-  delete this._cachedViewbox;
-
-  this._eventBus.fire('canvas.resized');
-};
-
-},{"../../vendor/snapsvg":300,"../util/Collections":283,"../util/Elements":285,"lodash/collection/every":305,"lodash/collection/forEach":308,"lodash/function/debounce":315,"lodash/lang/isNumber":414,"lodash/object/assign":420}],257:[function(require,module,exports){
-'use strict';
-
-var Model = require('../model');
-
-var assign = require('lodash/object/assign');
-
-/**
- * A factory for diagram-js shapes
- */
-function ElementFactory() {
-  this._uid = 12;
-}
-
-module.exports = ElementFactory;
-
-
-ElementFactory.prototype.createRoot = function(attrs) {
-  return this.create('root', attrs);
-};
-
-ElementFactory.prototype.createLabel = function(attrs) {
-  return this.create('label', attrs);
-};
-
-ElementFactory.prototype.createShape = function(attrs) {
-  return this.create('shape', attrs);
-};
-
-ElementFactory.prototype.createConnection = function(attrs) {
-  return this.create('connection', attrs);
-};
-
-/**
- * Create a model element with the given type and
- * a number of pre-set attributes.
- *
- * @param  {String} type
- * @param  {Object} attrs
- * @return {djs.model.Base} the newly created model instance
- */
-ElementFactory.prototype.create = function(type, attrs) {
-
-  attrs = assign({}, attrs || {});
-
-  if (!attrs.id) {
-    attrs.id = type + '_' + (this._uid++);
-  }
-
-  return Model.create(type, attrs);
-};
-},{"../model":276,"lodash/object/assign":420}],258:[function(require,module,exports){
-'use strict';
-
-var ELEMENT_ID = 'data-element-id';
-
-
-/**
- * @class
- *
- * A registry that keeps track of all shapes in the diagram.
- */
-function ElementRegistry() {
-  this._elements = {};
-}
-
-module.exports = ElementRegistry;
-
-/**
- * Register a pair of (element, gfx, (secondaryGfx)).
- *
- * @param {djs.model.Base} element
- * @param {Snap<SVGElement>} gfx
- * @param {Snap<SVGElement>} [secondaryGfx] optional other element to register, too
- */
-ElementRegistry.prototype.add = function(element, gfx, secondaryGfx) {
-
-  var id = element.id;
-
-  this._validateId(id);
-
-  // associate dom node with element
-  gfx.attr(ELEMENT_ID, id);
-
-  if (secondaryGfx) {
-    secondaryGfx.attr(ELEMENT_ID, id);
-  }
-
-  this._elements[id] = { element: element, gfx: gfx, secondaryGfx: secondaryGfx };
-};
-
-/**
- * Removes an element from the registry.
- *
- * @param {djs.model.Base} element
- */
-ElementRegistry.prototype.remove = function(element) {
-  var elements = this._elements,
-      id = element.id || element,
-      container = id && elements[id];
-
-  if (container) {
-
-    // unset element id on gfx
-    container.gfx.attr(ELEMENT_ID, '');
-
-    if (container.secondaryGfx) {
-      container.secondaryGfx.attr(ELEMENT_ID, '');
-    }
-
-    delete elements[id];
-  }
-};
-
-/**
- * Update the id of an element
- *
- * @param {djs.model.Base} element
- * @param {String} newId
- */
-ElementRegistry.prototype.updateId = function(element, newId) {
-
-  this._validateId(newId);
-
-  if (typeof element === 'string') {
-    element = this.get(element);
-  }
-
-  var gfx = this.getGraphics(element),
-      secondaryGfx = this.getGraphics(element, true);
-
-  this.remove(element);
-
-  element.id = newId;
-
-  this.add(element, gfx, secondaryGfx);
-};
-
-/**
- * Return the model element for a given id or graphics.
- *
- * @example
- *
- * elementRegistry.get('SomeElementId_1');
- * elementRegistry.get(gfx);
- *
- *
- * @param {String|SVGElement} filter for selecting the element
- *
- * @return {djs.model.Base}
- */
-ElementRegistry.prototype.get = function(filter) {
-  var id;
-
-  if (typeof filter === 'string') {
-    id = filter;
-  } else {
-    id = filter && filter.attr(ELEMENT_ID);
-  }
-
-  var container = this._elements[id];
-  return container && container.element;
-};
-
-/**
- * Return all elements that match a given filter function.
- *
- * @param {Function} fn
- *
- * @return {Array<djs.model.Base>}
- */
-ElementRegistry.prototype.filter = function(fn) {
-
-  var filtered = [];
-
-  this.forEach(function(element, gfx) {
-    if (fn(element, gfx)) {
-      filtered.push(element);
-    }
-  });
-
-  return filtered;
-};
-
-/**
- * Return all rendered model elements.
- *
- * @return {Array<djs.model.Base>}
- */
-ElementRegistry.prototype.getAll = function() {
-  return this.filter(function(e) { return e; });
-};
-
-/**
- * Iterate over all diagram elements.
- *
- * @param {Function} fn
- */
-ElementRegistry.prototype.forEach = function(fn) {
-
-  var map = this._elements;
-
-  Object.keys(map).forEach(function(id) {
-    var container = map[id],
-        element = container.element,
-        gfx = container.gfx;
-
-    return fn(element, gfx);
-  });
-};
-
-/**
- * Return the graphical representation of an element or its id.
- *
- * @example
- * elementRegistry.getGraphics('SomeElementId_1');
- * elementRegistry.getGraphics(rootElement); // <g ...>
- *
- * elementRegistry.getGraphics(rootElement, true); // <svg ...>
- *
- *
- * @param {String|djs.model.Base} filter
- * @param {Boolean} [secondary=false] whether to return the secondary connected element
- *
- * @return {SVGElement}
- */
-ElementRegistry.prototype.getGraphics = function(filter, secondary) {
-  var id = filter.id || filter;
-
-  var container = this._elements[id];
-  return container && (secondary ? container.secondaryGfx : container.gfx);
-};
-
-/**
- * Validate the suitability of the given id and signals a problem
- * with an exception.
- *
- * @param {String} id
- *
- * @throws {Error} if id is empty or already assigned
- */
-ElementRegistry.prototype._validateId = function(id) {
-  if (!id) {
-    throw new Error('element must have an id');
-  }
-
-  if (this._elements[id]) {
-    throw new Error('element with id ' + id + ' already added');
-  }
-};
-},{}],259:[function(require,module,exports){
-'use strict';
-
-var isFunction = require('lodash/lang/isFunction'),
-    isArray = require('lodash/lang/isArray'),
-    isNumber = require('lodash/lang/isNumber'),
-    bind = require('lodash/function/bind'),
-    assign = require('lodash/object/assign');
-
-var FN_REF = '__fn';
-
-var DEFAULT_PRIORITY = 1000;
-
-var slice = Array.prototype.slice;
-
-/**
- * A general purpose event bus.
- *
- * This component is used to communicate across a diagram instance.
- * Other parts of a diagram can use it to listen to and broadcast events.
- *
- *
- * ## Registering for Events
- *
- * The event bus provides the {@link EventBus#on} and {@link EventBus#once}
- * methods to register for events. {@link EventBus#off} can be used to
- * remove event registrations. Listeners receive an instance of {@link Event}
- * as the first argument. It allows them to hook into the event execution.
- *
- * ```javascript
- *
- * // listen for event
- * eventBus.on('foo', function(event) {
- *
- *   // access event type
- *   event.type; // 'foo'
- *
- *   // stop propagation to other listeners
- *   event.stopPropagation();
- *
- *   // prevent event default
- *   event.preventDefault();
- * });
- *
- * // listen for event with custom payload
- * eventBus.on('bar', function(event, payload) {
- *   console.log(payload);
- * });
- *
- * // listen for event returning value
- * eventBus.on('foobar', function(event) {
- *
- *   // stop event propagation + prevent default
- *   return false;
- *
- *   // stop event propagation + return custom result
- *   return {
- *     complex: 'listening result'
- *   };
- * });
- *
- *
- * // listen with custom priority (default=1000, higher is better)
- * eventBus.on('priorityfoo', 1500, function(event) {
- *   console.log('invoked first!');
- * });
- *
- *
- * // listen for event and pass the context (`this`)
- * eventBus.on('foobar', function(event) {
- *   this.foo();
- * }, this);
- * ```
- *
- *
- * ## Emitting Events
- *
- * Events can be emitted via the event bus using {@link EventBus#fire}.
- *
- * ```javascript
- *
- * // false indicates that the default action
- * // was prevented by listeners
- * if (eventBus.fire('foo') === false) {
- *   console.log('default has been prevented!');
- * };
- *
- *
- * // custom args + return value listener
- * eventBus.on('sum', function(event, a, b) {
- *   return a + b;
- * });
- *
- * // you can pass custom arguments + retrieve result values.
- * var sum = eventBus.fire('sum', 1, 2);
- * console.log(sum); // 3
- * ```
- */
-function EventBus() {
-  this._listeners = {};
-
-  // cleanup on destroy on lowest priority to allow
-  // message passing until the bitter end
-  this.on('diagram.destroy', 1, this._destroy, this);
-}
-
-module.exports = EventBus;
-
-
-/**
- * Register an event listener for events with the given name.
- *
- * The callback will be invoked with `event, ...additionalArguments`
- * that have been passed to {@link EventBus#fire}.
- *
- * Returning false from a listener will prevent the events default action
- * (if any is specified). To stop an event from being processed further in
- * other listeners execute {@link Event#stopPropagation}.
- *
- * Returning anything but `undefined` from a listener will stop the listener propagation.
- *
- * @param {String|Array<String>} events
- * @param {Number} [priority=1000] the priority in which this listener is called, larger is higher
- * @param {Function} callback
- * @param {Object} [that] Pass context (`this`) to the callback
- */
-EventBus.prototype.on = function(events, priority, callback, that) {
-
-  events = isArray(events) ? events : [ events ];
-
-  if (isFunction(priority)) {
-    that = callback;
-    callback = priority;
-    priority = DEFAULT_PRIORITY;
-  }
-
-  if (!isNumber(priority)) {
-    throw new Error('priority must be a number');
-  }
-
-  var actualCallback = callback;
-
-  if (that) {
-    actualCallback = bind(callback, that);
-
-    // make sure we remember and are able to remove
-    // bound callbacks via {@link #off} using the original
-    // callback
-    actualCallback[FN_REF] = callback[FN_REF] || callback;
-  }
-
-  var self = this,
-      listener = { priority: priority, callback: actualCallback };
-
-  events.forEach(function(e) {
-    self._addListener(e, listener);
-  });
-};
-
-
-/**
- * Register an event listener that is executed only once.
- *
- * @param {String} event the event name to register for
- * @param {Function} callback the callback to execute
- * @param {Object} [that] Pass context (`this`) to the callback
- */
-EventBus.prototype.once = function(event, priority, callback, that) {
-  var self = this;
-
-  if (isFunction(priority)) {
-    that = callback;
-    callback = priority;
-    priority = DEFAULT_PRIORITY;
-  }
-
-  if (!isNumber(priority)) {
-    throw new Error('priority must be a number');
-  }
-
-  function wrappedCallback() {
-    self.off(event, wrappedCallback);
-    return callback.apply(that, arguments);
-  }
-
-  // make sure we remember and are able to remove
-  // bound callbacks via {@link #off} using the original
-  // callback
-  wrappedCallback[FN_REF] = callback;
-
-  this.on(event, priority, wrappedCallback);
-};
-
-
-/**
- * Removes event listeners by event and callback.
- *
- * If no callback is given, all listeners for a given event name are being removed.
- *
- * @param {String} event
- * @param {Function} [callback]
- */
-EventBus.prototype.off = function(event, callback) {
-  var listeners = this._getListeners(event),
-      listener,
-      listenerCallback,
-      idx;
-
-  if (callback) {
-
-    // move through listeners from back to front
-    // and remove matching listeners
-    for (idx = listeners.length - 1; (listener = listeners[idx]); idx--) {
-      listenerCallback = listener.callback;
-
-      if (listenerCallback === callback || listenerCallback[FN_REF] === callback) {
-        listeners.splice(idx, 1);
-      }
-    }
-  } else {
-    // clear listeners
-    listeners.length = 0;
-  }
-};
-
-
-/**
- * Fires a named event.
- *
- * @example
- *
- * // fire event by name
- * events.fire('foo');
- *
- * // fire event object with nested type
- * var event = { type: 'foo' };
- * events.fire(event);
- *
- * // fire event with explicit type
- * var event = { x: 10, y: 20 };
- * events.fire('element.moved', event);
- *
- * // pass additional arguments to the event
- * events.on('foo', function(event, bar) {
- *   alert(bar);
- * });
- *
- * events.fire({ type: 'foo' }, 'I am bar!');
- *
- * @param {String} [name] the optional event name
- * @param {Object} [event] the event object
- * @param {...Object} additional arguments to be passed to the callback functions
- *
- * @return {Boolean} the events return value, if specified or false if the
- *                   default action was prevented by listeners
- */
-EventBus.prototype.fire = function(type, data) {
-
-  var event,
-      listeners,
-      returnValue,
-      args;
-
-  args = slice.call(arguments);
-
-  if (typeof type === 'object') {
-    event = type;
-    type = event.type;
-  }
-
-  if (!type) {
-    throw new Error('no event type specified');
-  }
-
-  listeners = this._listeners[type];
-
-  if (!listeners) {
-    return;
-  }
-
-  // we make sure we fire instances of our home made
-  // events here. We wrap them only once, though
-  if (data instanceof Event) {
-    // we are fine, we alread have an event
-    event = data;
-  } else {
-    event = new Event();
-    event.init(data);
-  }
-
-  // ensure we pass the event as the first parameter
-  args[0] = event;
-
-  // original event type (in case we delegate)
-  var originalType = event.type;
-
-  // update event type before delegation
-  if (type !== originalType) {
-    event.type = type;
-  }
-
-  try {
-    returnValue = this._invokeListeners(event, args, listeners);
-  } finally {
-    // reset event type after delegation
-    if (type !== originalType) {
-      event.type = originalType;
-    }
-  }
-
-  // set the return value to false if the event default
-  // got prevented and no other return value exists
-  if (returnValue === undefined && event.defaultPrevented) {
-    returnValue = false;
-  }
-
-  return returnValue;
-};
-
-
-EventBus.prototype.handleError = function(error) {
-  return this.fire('error', { error: error }) === false;
-};
-
-
-EventBus.prototype._destroy = function() {
-  this._listeners = {};
-};
-
-EventBus.prototype._invokeListeners = function(event, args, listeners) {
-
-  var idx,
-      listener,
-      returnValue;
-
-  for (idx = 0; (listener = listeners[idx]); idx++) {
-
-    // handle stopped propagation
-    if (event.cancelBubble) {
-      break;
-    }
-
-    returnValue = this._invokeListener(event, args, listener);
-  }
-
-  return returnValue;
-};
-
-EventBus.prototype._invokeListener = function(event, args, listener) {
-
-  var returnValue;
-
-  try {
-    // returning false prevents the default action
-    returnValue = invokeFunction(listener.callback, args);
-
-    // stop propagation on return value
-    if (returnValue !== undefined) {
-      event.returnValue = returnValue;
-      event.stopPropagation();
-    }
-
-    // prevent default on return false
-    if (returnValue === false) {
-      event.preventDefault();
-    }
-  } catch (e) {
-    if (!this.handleError(e)) {
-      console.error('unhandled error in event listener');
-      console.error(e.stack);
-
-      throw e;
-    }
-  }
-
-  return returnValue;
-};
-
-/*
- * Add new listener with a certain priority to the list
- * of listeners (for the given event).
- *
- * The semantics of listener registration / listener execution are
- * first register, first serve: New listeners will always be inserted
- * after existing listeners with the same priority.
- *
- * Example: Inserting two listeners with priority 1000 and 1300
- *
- *    * before: [ 1500, 1500, 1000, 1000 ]
- *    * after: [ 1500, 1500, (new=1300), 1000, 1000, (new=1000) ]
- *
- * @param {String} event
- * @param {Object} listener { priority, callback }
- */
-EventBus.prototype._addListener = function(event, newListener) {
-
-  var listeners = this._getListeners(event),
-      existingListener,
-      idx;
-
-  // ensure we order listeners by priority from
-  // 0 (high) to n > 0 (low)
-  for (idx = 0; (existingListener = listeners[idx]); idx++) {
-    if (existingListener.priority < newListener.priority) {
-
-      // prepend newListener at before existingListener
-      listeners.splice(idx, 0, newListener);
-      return;
-    }
-  }
-
-  listeners.push(newListener);
-};
-
-
-EventBus.prototype._getListeners = function(name) {
-  var listeners = this._listeners[name];
-
-  if (!listeners) {
-    this._listeners[name] = listeners = [];
-  }
-
-  return listeners;
-};
-
-
-/**
- * A event that is emitted via the event bus.
- */
-function Event() { }
-
-module.exports.Event = Event;
-
-Event.prototype.stopPropagation = function() {
-  this.cancelBubble = true;
-};
-
-Event.prototype.preventDefault = function() {
-  this.defaultPrevented = true;
-};
-
-Event.prototype.init = function(data) {
-  assign(this, data || {});
-};
-
-
-/**
- * Invoke function. Be fast...
- *
- * @param {Function} fn
- * @param {Array<Object>} args
- *
- * @return {Any}
- */
-function invokeFunction(fn, args) {
-  return fn.apply(null, args);
-}
-
-},{"lodash/function/bind":314,"lodash/lang/isArray":411,"lodash/lang/isFunction":412,"lodash/lang/isNumber":414,"lodash/object/assign":420}],260:[function(require,module,exports){
-'use strict';
-
-var forEach = require('lodash/collection/forEach'),
-    reduce = require('lodash/collection/reduce');
-
-var GraphicsUtil = require('../util/GraphicsUtil'),
-    domClear = require('min-dom/lib/clear');
-
-/**
- * A factory that creates graphical elements
- *
- * @param {EventBus} eventBus
- * @param {ElementRegistry} elementRegistry
- */
-function GraphicsFactory(eventBus, elementRegistry) {
-  this._eventBus = eventBus;
-  this._elementRegistry = elementRegistry;
-}
-
-GraphicsFactory.$inject = [ 'eventBus' , 'elementRegistry' ];
-
-module.exports = GraphicsFactory;
-
-
-GraphicsFactory.prototype._getChildren = function(element) {
-
-  var gfx = this._elementRegistry.getGraphics(element);
-
-  var childrenGfx;
-
-  // root element
-  if (!element.parent) {
-    childrenGfx = gfx;
-  } else {
-    childrenGfx = GraphicsUtil.getChildren(gfx);
-    if (!childrenGfx) {
-      childrenGfx = gfx.parent().group().attr('class', 'djs-children');
-    }
-  }
-
-  return childrenGfx;
-};
-
-/**
- * Clears the graphical representation of the element and returns the
- * cleared visual (the <g class="djs-visual" /> element).
- */
-GraphicsFactory.prototype._clear = function(gfx) {
-  var visual = GraphicsUtil.getVisual(gfx);
-
-  domClear(visual.node);
-
-  return visual;
-};
-
-/**
- * Creates a gfx container for shapes and connections
- *
- * The layout is as follows:
- *
- * <g class="djs-group">
- *
- *   <!-- the gfx -->
- *   <g class="djs-element djs-(shape|connection)">
- *     <g class="djs-visual">
- *       <!-- the renderer draws in here -->
- *     </g>
- *
- *     <!-- extensions (overlays, click box, ...) goes here
- *   </g>
- *
- *   <!-- the gfx child nodes -->
- *   <g class="djs-children"></g>
- * </g>
- *
- * @param {Object} parent
- * @param {String} type the type of the element, i.e. shape | connection
- */
-GraphicsFactory.prototype._createContainer = function(type, parentGfx) {
-  var outerGfx = parentGfx.group().attr('class', 'djs-group'),
-      gfx = outerGfx.group().attr('class', 'djs-element djs-' + type);
-
-  // create visual
-  gfx.group().attr('class', 'djs-visual');
-
-  return gfx;
-};
-
-GraphicsFactory.prototype.create = function(type, element) {
-  var childrenGfx = this._getChildren(element.parent);
-  return this._createContainer(type, childrenGfx);
-};
-
-
-GraphicsFactory.prototype.updateContainments = function(elements) {
-
-  var self = this,
-      elementRegistry = this._elementRegistry,
-      parents;
-
-
-  parents = reduce(elements, function(map, e) {
-
-    if (e.parent) {
-      map[e.parent.id] = e.parent;
-    }
-
-    return map;
-  }, {});
-
-  // update all parents of changed and reorganized their children
-  // in the correct order (as indicated in our model)
-  forEach(parents, function(parent) {
-
-    var childGfx = self._getChildren(parent),
-        children = parent.children;
-
-    if (!children) {
-      return;
-    }
-
-    forEach(children.slice().reverse(), function(c) {
-      var gfx = elementRegistry.getGraphics(c);
-      gfx.parent().prependTo(childGfx);
-    });
-  });
-};
-
-GraphicsFactory.prototype.drawShape = function(visual, element) {
-  var eventBus = this._eventBus;
-
-  return eventBus.fire('render.shape', { gfx: visual, element: element });
-};
-
-GraphicsFactory.prototype.getShapePath = function(element) {
-  var eventBus = this._eventBus;
-
-  return eventBus.fire('render.getShapePath', element);
-};
-
-GraphicsFactory.prototype.drawConnection = function(visual, element) {
-  var eventBus = this._eventBus;
-
-  return eventBus.fire('render.connection', { gfx: visual, element: element });
-};
-
-GraphicsFactory.prototype.getConnectionPath = function(waypoints) {
-  var eventBus = this._eventBus;
-
-  return eventBus.fire('render.getConnectionPath', waypoints);
-};
-
-GraphicsFactory.prototype.update = function(type, element, gfx) {
-  // Do not update root element
-  if (!element.parent) {
-    return;
-  }
-
-  var visual = this._clear(gfx);
-
-  // redraw
-  if (type === 'shape') {
-    this.drawShape(visual, element);
-
-    // update positioning
-    gfx.translate(element.x, element.y);
-  } else
-  if (type === 'connection') {
-    this.drawConnection(visual, element);
-  } else {
-    throw new Error('unknown type: ' + type);
-  }
-
-  gfx.attr('display', element.hidden ? 'none' : 'block');
-};
-
-GraphicsFactory.prototype.remove = function(element) {
-  var gfx = this._elementRegistry.getGraphics(element);
-
-  // remove
-  gfx.parent().remove();
-};
-
-},{"../util/GraphicsUtil":287,"lodash/collection/forEach":308,"lodash/collection/reduce":311,"min-dom/lib/clear":432}],261:[function(require,module,exports){
-module.exports = {
-  __depends__: [ require('../draw') ],
-  __init__: [ 'canvas' ],
-  canvas: [ 'type', require('./Canvas') ],
-  elementRegistry: [ 'type', require('./ElementRegistry') ],
-  elementFactory: [ 'type', require('./ElementFactory') ],
-  eventBus: [ 'type', require('./EventBus') ],
-  graphicsFactory: [ 'type', require('./GraphicsFactory') ]
-};
-},{"../draw":265,"./Canvas":256,"./ElementFactory":257,"./ElementRegistry":258,"./EventBus":259,"./GraphicsFactory":260}],262:[function(require,module,exports){
-'use strict';
-
-var DEFAULT_RENDER_PRIORITY = 1000;
-
-/**
- * The base implementation of shape and connection renderers.
- *
- * @param {EventBus} eventBus
- * @param {Number} [renderPriority=1000]
- */
-function BaseRenderer(eventBus, renderPriority) {
-  var self = this;
-
-  renderPriority = renderPriority || DEFAULT_RENDER_PRIORITY;
-
-  eventBus.on([ 'render.shape', 'render.connection' ], renderPriority, function(evt, context) {
-    var type = evt.type,
-        element = context.element,
-        visuals = context.gfx;
-
-    if (self.canRender(element)) {
-      if (type === 'render.shape') {
-        return self.drawShape(visuals, element);
-      } else {
-        return self.drawConnection(visuals, element);
-      }
-    }
-  });
-
-  eventBus.on([ 'render.getShapePath', 'render.getConnectionPath'], renderPriority, function(evt, element) {
-    if (self.canRender(element)) {
-      if (evt.type === 'render.getShapePath') {
-        return self.getShapePath(element);
-      } else {
-        return self.getConnectionPath(element);
-      }
-    }
-  });
-}
-
-/**
- * Should check whether *this* renderer can render
- * the element/connection.
- *
- * @param {element} element
- *
- * @returns {Boolean}
- */
-BaseRenderer.prototype.canRender = function() {};
-
-/**
- * Provides the shape's snap svg element to be drawn on the `canvas`.
- *
- * @param {djs.Graphics} visuals
- * @param {Shape} shape
- *
- * @returns {Snap.svg} [returns a Snap.svg paper element ]
- */
-BaseRenderer.prototype.drawShape = function() {};
-
-/**
- * Provides the shape's snap svg element to be drawn on the `canvas`.
- *
- * @param {djs.Graphics} visuals
- * @param {Connection} connection
- *
- * @returns {Snap.svg} [returns a Snap.svg paper element ]
- */
-BaseRenderer.prototype.drawConnection = function() {};
-
-/**
- * Gets the SVG path of a shape that represents it's visual bounds.
- *
- * @param {Shape} shape
- *
- * @return {string} svg path
- */
-BaseRenderer.prototype.getShapePath = function() {};
-
-/**
- * Gets the SVG path of a connection that represents it's visual bounds.
- *
- * @param {Connection} connection
- *
- * @return {string} svg path
- */
-BaseRenderer.prototype.getConnectionPath = function() {};
-
-module.exports = BaseRenderer;
-
-},{}],263:[function(require,module,exports){
-'use strict';
-
-var inherits = require('inherits');
-
-var BaseRenderer = require('./BaseRenderer');
-
-var renderUtil = require('../util/RenderUtil');
-
-var componentsToPath = renderUtil.componentsToPath,
-    createLine = renderUtil.createLine;
-
-// apply default renderer with lowest possible priority
-// so that it only kicks in if noone else could render
-var DEFAULT_RENDER_PRIORITY = 1;
-
-/**
- * The default renderer used for shapes and connections.
- *
- * @param {EventBus} eventBus
- * @param {Styles} styles
- */
-function DefaultRenderer(eventBus, styles) {
-  //
-  BaseRenderer.call(this, eventBus, DEFAULT_RENDER_PRIORITY);
-
-  this.CONNECTION_STYLE = styles.style([ 'no-fill' ], { strokeWidth: 5, stroke: 'fuchsia' });
-  this.SHAPE_STYLE = styles.style({ fill: 'white', stroke: 'fuchsia', strokeWidth: 2 });
-}
-
-inherits(DefaultRenderer, BaseRenderer);
-
-
-DefaultRenderer.prototype.canRender = function() {
-  return true;
-};
-
-DefaultRenderer.prototype.drawShape = function drawShape(visuals, element) {
-  return visuals.rect(0, 0, element.width || 0, element.height || 0).attr(this.SHAPE_STYLE);
-};
-
-DefaultRenderer.prototype.drawConnection = function drawConnection(visuals, connection) {
-  return createLine(connection.waypoints, this.CONNECTION_STYLE).appendTo(visuals);
-};
-
-DefaultRenderer.prototype.getShapePath = function getShapePath(shape) {
-
-  var x = shape.x,
-      y = shape.y,
-      width = shape.width,
-      height = shape.height;
-
-  var shapePath = [
-    ['M', x, y],
-    ['l', width, 0],
-    ['l', 0, height],
-    ['l', -width, 0],
-    ['z']
-  ];
-
-  return componentsToPath(shapePath);
-};
-
-DefaultRenderer.prototype.getConnectionPath = function getConnectionPath(connection) {
-  var waypoints = connection.waypoints;
-
-  var idx, point, connectionPath = [];
-
-  for (idx = 0; (point = waypoints[idx]); idx++) {
-
-    // take invisible docking into account
-    // when creating the path
-    point = point.original || point;
-
-    connectionPath.push([ idx === 0 ? 'M' : 'L', point.x, point.y ]);
-  }
-
-  return componentsToPath(connectionPath);
-};
-
-
-DefaultRenderer.$inject = [ 'eventBus', 'styles' ];
-
-module.exports = DefaultRenderer;
-
-},{"../util/RenderUtil":292,"./BaseRenderer":262,"inherits":301}],264:[function(require,module,exports){
-'use strict';
-
-var isArray = require('lodash/lang/isArray'),
-    assign = require('lodash/object/assign'),
-    reduce = require('lodash/collection/reduce');
-
-
-/**
- * A component that manages shape styles
- */
-function Styles() {
-
-  var defaultTraits = {
-
-    'no-fill': {
-      fill: 'none'
-    },
-    'no-border': {
-      strokeOpacity: 0.0
-    },
-    'no-events': {
-      pointerEvents: 'none'
-    }
-  };
-
-  var self = this;
-
-  /**
-   * Builds a style definition from a className, a list of traits and an object of additional attributes.
-   *
-   * @param  {String} className
-   * @param  {Array<String>} traits
-   * @param  {Object} additionalAttrs
-   *
-   * @return {Object} the style defintion
-   */
-  this.cls = function(className, traits, additionalAttrs) {
-    var attrs = this.style(traits, additionalAttrs);
-
-    return assign(attrs, { 'class': className });
-  };
-
-  /**
-   * Builds a style definition from a list of traits and an object of additional attributes.
-   *
-   * @param  {Array<String>} traits
-   * @param  {Object} additionalAttrs
-   *
-   * @return {Object} the style defintion
-   */
-  this.style = function(traits, additionalAttrs) {
-
-    if (!isArray(traits) && !additionalAttrs) {
-      additionalAttrs = traits;
-      traits = [];
-    }
-
-    var attrs = reduce(traits, function(attrs, t) {
-      return assign(attrs, defaultTraits[t] || {});
-    }, {});
-
-    return additionalAttrs ? assign(attrs, additionalAttrs) : attrs;
-  };
-
-  this.computeStyle = function(custom, traits, defaultStyles) {
-    if (!isArray(traits)) {
-      defaultStyles = traits;
-      traits = [];
-    }
-
-    return self.style(traits || [], assign({}, defaultStyles, custom || {}));
-  };
-}
-
-module.exports = Styles;
-
-},{"lodash/collection/reduce":311,"lodash/lang/isArray":411,"lodash/object/assign":420}],265:[function(require,module,exports){
-module.exports = {
-  __init__: [ 'defaultRenderer' ],
-  defaultRenderer: [ 'type', require('./DefaultRenderer') ],
-  styles: [ 'type', require('./Styles') ]
-};
-
-},{"./DefaultRenderer":263,"./Styles":264}],266:[function(require,module,exports){
-'use strict';
-
-var forEach = require('lodash/collection/forEach'),
-    domDelegate = require('min-dom/lib/delegate');
-
-
-var isPrimaryButton = require('../../util/Mouse').isPrimaryButton;
-
-var Snap = require('../../../vendor/snapsvg');
-
-var renderUtil = require('../../util/RenderUtil');
-
-var createLine = renderUtil.createLine,
-    updateLine = renderUtil.updateLine;
-
-/**
- * A plugin that provides interaction events for diagram elements.
- *
- * It emits the following events:
- *
- *   * element.hover
- *   * element.out
- *   * element.click
- *   * element.dblclick
- *   * element.mousedown
- *
- * Each event is a tuple { element, gfx, originalEvent }.
- *
- * Canceling the event via Event#preventDefault() prevents the original DOM operation.
- *
- * @param {EventBus} eventBus
- */
-function InteractionEvents(eventBus, elementRegistry, styles) {
-
-  var HIT_STYLE = styles.cls('djs-hit', [ 'no-fill', 'no-border' ], {
-    stroke: 'white',
-    strokeWidth: 15
-  });
-
-  /**
-   * Fire an interaction event.
-   *
-   * @param {String} type local event name, e.g. element.click.
-   * @param {DOMEvent} event native event
-   * @param {djs.model.Base} [element] the diagram element to emit the event on;
-   *                                   defaults to the event target
-   */
-  function fire(type, event, element) {
-
-    // only react on left mouse button interactions
-    // for interaction events
-    if (!isPrimaryButton(event)) {
-      return;
-    }
-
-    var target, gfx, returnValue;
-
-    if (!element) {
-      target = event.delegateTarget || event.target;
-
-      if (target) {
-        gfx = new Snap(target);
-        element = elementRegistry.get(gfx);
-      }
-    } else {
-      gfx = elementRegistry.getGraphics(element);
-    }
-
-    if (!gfx || !element) {
-      return;
-    }
-
-    returnValue = eventBus.fire(type, { element: element, gfx: gfx, originalEvent: event });
-
-    if (returnValue === false) {
-      event.stopPropagation();
-      event.preventDefault();
-    }
-  }
-
-  // TODO(nikku): document this
-  var handlers = {};
-
-  function mouseHandler(type) {
-
-    var fn = handlers[type];
-
-    if (!fn) {
-      fn = handlers[type] = function(event) {
-        fire(type, event);
-      };
-    }
-
-    return fn;
-  }
-
-  var bindings = {
-    mouseover: 'element.hover',
-    mouseout: 'element.out',
-    click: 'element.click',
-    dblclick: 'element.dblclick',
-    mousedown: 'element.mousedown',
-    mouseup: 'element.mouseup'
-  };
-
-
-  ///// manual event trigger
-
-  /**
-   * Trigger an interaction event (based on a native dom event)
-   * on the target shape or connection.
-   *
-   * @param {String} eventName the name of the triggered DOM event
-   * @param {MouseEvent} event
-   * @param {djs.model.Base} targetElement
-   */
-  function triggerMouseEvent(eventName, event, targetElement) {
-
-    // i.e. element.mousedown...
-    var localEventName = bindings[eventName];
-
-    if (!localEventName) {
-      throw new Error('unmapped DOM event name <' + eventName + '>');
-    }
-
-    return fire(localEventName, event, targetElement);
-  }
-
-
-  var elementSelector = 'svg, .djs-element';
-
-  ///// event registration
-
-  function registerEvent(node, event, localEvent) {
-    var handler = mouseHandler(localEvent);
-    handler.$delegate = domDelegate.bind(node, elementSelector, event, handler);
-  }
-
-  function unregisterEvent(node, event, localEvent) {
-    domDelegate.unbind(node, event, mouseHandler(localEvent).$delegate);
-  }
-
-  function registerEvents(svg) {
-    forEach(bindings, function(val, key) {
-      registerEvent(svg.node, key, val);
-    });
-  }
-
-  function unregisterEvents(svg) {
-    forEach(bindings, function(val, key) {
-      unregisterEvent(svg.node, key, val);
-    });
-  }
-
-  eventBus.on('canvas.destroy', function(event) {
-    unregisterEvents(event.svg);
-  });
-
-  eventBus.on('canvas.init', function(event) {
-    registerEvents(event.svg);
-  });
-
-
-  eventBus.on([ 'shape.added', 'connection.added' ], function(event) {
-    var element = event.element,
-        gfx = event.gfx,
-        hit;
-
-    if (element.waypoints) {
-      hit = createLine(element.waypoints);
-    } else {
-      hit = Snap.create('rect', { x: 0, y: 0, width: element.width, height: element.height });
-    }
-
-    hit.attr(HIT_STYLE).appendTo(gfx.node);
-  });
-
-  // update djs-hit on change
-
-  eventBus.on('shape.changed', function(event) {
-
-    var element = event.element,
-        gfx = event.gfx,
-        hit = gfx.select('.djs-hit');
-
-    hit.attr({
-      width: element.width,
-      height: element.height
-    });
-  });
-
-  eventBus.on('connection.changed', function(event) {
-
-    var element = event.element,
-        gfx = event.gfx,
-        hit = gfx.select('.djs-hit');
-
-    updateLine(hit, element.waypoints);
-  });
-
-
-  // API
-
-  this.fire = fire;
-
-  this.triggerMouseEvent = triggerMouseEvent;
-
-  this.mouseHandler = mouseHandler;
-
-  this.registerEvent = registerEvent;
-  this.unregisterEvent = unregisterEvent;
-}
-
-
-InteractionEvents.$inject = [ 'eventBus', 'elementRegistry', 'styles' ];
-
-module.exports = InteractionEvents;
-
-
-/**
- * An event indicating that the mouse hovered over an element
- *
- * @event element.hover
- *
- * @type {Object}
- * @property {djs.model.Base} element
- * @property {Snap<Element>} gfx
- * @property {Event} originalEvent
- */
-
-/**
- * An event indicating that the mouse has left an element
- *
- * @event element.out
- *
- * @type {Object}
- * @property {djs.model.Base} element
- * @property {Snap<Element>} gfx
- * @property {Event} originalEvent
- */
-
-/**
- * An event indicating that the mouse has clicked an element
- *
- * @event element.click
- *
- * @type {Object}
- * @property {djs.model.Base} element
- * @property {Snap<Element>} gfx
- * @property {Event} originalEvent
- */
-
-/**
- * An event indicating that the mouse has double clicked an element
- *
- * @event element.dblclick
- *
- * @type {Object}
- * @property {djs.model.Base} element
- * @property {Snap<Element>} gfx
- * @property {Event} originalEvent
- */
-
-/**
- * An event indicating that the mouse has gone down on an element.
- *
- * @event element.mousedown
- *
- * @type {Object}
- * @property {djs.model.Base} element
- * @property {Snap<Element>} gfx
- * @property {Event} originalEvent
- */
-
-/**
- * An event indicating that the mouse has gone up on an element.
- *
- * @event element.mouseup
- *
- * @type {Object}
- * @property {djs.model.Base} element
- * @property {Snap<Element>} gfx
- * @property {Event} originalEvent
- */
-
-},{"../../../vendor/snapsvg":300,"../../util/Mouse":290,"../../util/RenderUtil":292,"lodash/collection/forEach":308,"min-dom/lib/delegate":434}],267:[function(require,module,exports){
-module.exports = {
-  __init__: [ 'interactionEvents' ],
-  interactionEvents: [ 'type', require('./InteractionEvents') ]
-};
-},{"./InteractionEvents":266}],268:[function(require,module,exports){
-'use strict';
-
-var getBBox = require('../../util/Elements').getBBox;
-
-
-/**
- * @class
- *
- * A plugin that adds an outline to shapes and connections that may be activated and styled
- * via CSS classes.
- *
- * @param {EventBus} eventBus
- * @param {Styles} styles
- * @param {ElementRegistry} elementRegistry
- */
-function Outline(eventBus, styles, elementRegistry) {
-
-  this.offset = 6;
-
-  var OUTLINE_STYLE = styles.cls('djs-outline', [ 'no-fill' ]);
-
-  var self = this;
-
-  function createOutline(gfx, bounds) {
-    return gfx.rect(10, 10, 0, 0).attr(OUTLINE_STYLE);
-  }
-
-  eventBus.on([ 'shape.added', 'shape.changed' ], function(event) {
-    var element = event.element,
-        gfx     = event.gfx;
-
-    var outline = gfx.select('.djs-outline');
-
-    if (!outline) {
-      outline = createOutline(gfx, element);
-    }
-
-    self.updateShapeOutline(outline, element);
-  });
-
-  eventBus.on([ 'connection.added', 'connection.changed' ], function(event) {
-    var element = event.element,
-        gfx     = event.gfx;
-
-    var outline = gfx.select('.djs-outline');
-
-    if (!outline) {
-      outline = createOutline(gfx, element);
-    }
-
-    self.updateConnectionOutline(outline, element);
-  });
-}
-
-
-/**
- * Updates the outline of a shape respecting the dimension of the
- * element and an outline offset.
- *
- * @param  {SVGElement} outline
- * @param  {djs.model.Base} element
- */
-Outline.prototype.updateShapeOutline = function(outline, element) {
-
-  outline.attr({
-    x: -this.offset,
-    y: -this.offset,
-    width: element.width + this.offset * 2,
-    height: element.height + this.offset * 2
-  });
-
-};
-
-
-/**
- * Updates the outline of a connection respecting the bounding box of
- * the connection and an outline offset.
- *
- * @param  {SVGElement} outline
- * @param  {djs.model.Base} element
- */
-Outline.prototype.updateConnectionOutline = function(outline, connection) {
-
-  var bbox = getBBox(connection);
-
-  outline.attr({
-    x: bbox.x - this.offset,
-    y: bbox.y - this.offset,
-    width: bbox.width + this.offset * 2,
-    height: bbox.height + this.offset * 2
-  });
-
-};
-
-
-Outline.$inject = ['eventBus', 'styles', 'elementRegistry'];
-
-module.exports = Outline;
-
-},{"../../util/Elements":285}],269:[function(require,module,exports){
-'use strict';
-
-module.exports = {
-  __init__: [ 'outline' ],
-  outline: [ 'type', require('./Outline') ]
-};
-},{"./Outline":268}],270:[function(require,module,exports){
-'use strict';
-
-var isArray = require('lodash/lang/isArray'),
-    isString = require('lodash/lang/isString'),
-    isObject = require('lodash/lang/isObject'),
-    assign = require('lodash/object/assign'),
-    forEach = require('lodash/collection/forEach'),
-    find = require('lodash/collection/find'),
-    filter = require('lodash/collection/filter');
-
-var domify = require('min-dom/lib/domify'),
-    domClasses = require('min-dom/lib/classes'),
-    domAttr = require('min-dom/lib/attr'),
-    domRemove = require('min-dom/lib/remove'),
-    domClear = require('min-dom/lib/clear');
-
-var getBBox = require('../../util/Elements').getBBox;
-
-// document wide unique overlay ids
-var ids = new (require('../../util/IdGenerator'))('ov');
-
-
-function createRoot(parent) {
-  var root = domify('<div class="djs-overlay-container" style="position: absolute; width: 0; height: 0;" />');
-  parent.insertBefore(root, parent.firstChild);
-
-  return root;
-}
-
-
-function setPosition(el, x, y) {
-  assign(el.style, { left: x + 'px', top: y + 'px' });
-}
-
-function setVisible(el, visible) {
-  el.style.display = visible === false ? 'none' : '';
-}
-
-/**
- * A service that allows users to attach overlays to diagram elements.
- *
- * The overlay service will take care of overlay positioning during updates.
- *
- * @example
- *
- * // add a pink badge on the top left of the shape
- * overlays.add(someShape, {
- *   position: {
- *     top: -5,
- *     left: -5
- *   },
- *   html: '<div style="width: 10px; background: fuchsia; color: white;">0</div>'
- * });
- *
- * // or add via shape id
- *
- * overlays.add('some-element-id', {
- *   position: {
- *     top: -5,
- *     left: -5
- *   }
- *   html: '<div style="width: 10px; background: fuchsia; color: white;">0</div>'
- * });
- *
- * // or add with optional type
- *
- * overlays.add(someShape, 'badge', {
- *   position: {
- *     top: -5,
- *     left: -5
- *   }
- *   html: '<div style="width: 10px; background: fuchsia; color: white;">0</div>'
- * });
- *
- *
- * // remove an overlay
- *
- * var id = overlays.add(...);
- * overlays.remove(id);
- *
- * @param {EventBus} eventBus
- * @param {Canvas} canvas
- * @param {ElementRegistry} elementRegistry
- */
-function Overlays(eventBus, canvas, elementRegistry) {
-
-  this._eventBus = eventBus;
-  this._canvas = canvas;
-  this._elementRegistry = elementRegistry;
-
-  this._ids = ids;
-
-  this._overlayDefaults = {
-    show: {
-      minZoom: 0.7,
-      maxZoom: 5.0
-    }
-  };
-
-  /**
-   * Mapping overlayId -> overlay
-   */
-  this._overlays = {};
-
-  /**
-   * Mapping elementId -> overlay container
-   */
-  this._overlayContainers = [];
-
-  // root html element for all overlays
-  this._overlayRoot = createRoot(canvas.getContainer());
-
-  this._init();
-}
-
-
-Overlays.$inject = [ 'eventBus', 'canvas', 'elementRegistry' ];
-
-module.exports = Overlays;
-
-
-/**
- * Returns the overlay with the specified id or a list of overlays
- * for an element with a given type.
- *
- * @example
- *
- * // return the single overlay with the given id
- * overlays.get('some-id');
- *
- * // return all overlays for the shape
- * overlays.get({ element: someShape });
- *
- * // return all overlays on shape with type 'badge'
- * overlays.get({ element: someShape, type: 'badge' });
- *
- * // shape can also be specified as id
- * overlays.get({ element: 'element-id', type: 'badge' });
- *
- *
- * @param {Object} search
- * @param {String} [search.id]
- * @param {String|djs.model.Base} [search.element]
- * @param {String} [search.type]
- *
- * @return {Object|Array<Object>} the overlay(s)
- */
-Overlays.prototype.get = function(search) {
-
-  if (isString(search)) {
-    search = { id: search };
-  }
-
-  if (isString(search.element)) {
-    search.element = this._elementRegistry.get(search.element);
-  }
-
-  if (search.element) {
-    var container = this._getOverlayContainer(search.element, true);
-
-    // return a list of overlays when searching by element (+type)
-    if (container) {
-      return search.type ? filter(container.overlays, { type: search.type }) : container.overlays.slice();
-    } else {
-      return [];
-    }
-  } else
-  if (search.type) {
-    return filter(this._overlays, { type: search.type });
-  } else {
-    // return single element when searching by id
-    return search.id ? this._overlays[search.id] : null;
-  }
-};
-
-/**
- * Adds a HTML overlay to an element.
- *
- * @param {String|djs.model.Base}   element   attach overlay to this shape
- * @param {String}                  [type]    optional type to assign to the overlay
- * @param {Object}                  overlay   the overlay configuration
- *
- * @param {String|DOMElement}       overlay.html                 html element to use as an overlay
- * @param {Object}                  [overlay.show]               show configuration
- * @param {Number}                  [overlay.show.minZoom]       minimal zoom level to show the overlay
- * @param {Number}                  [overlay.show.maxZoom]       maximum zoom level to show the overlay
- * @param {Object}                  overlay.position             where to attach the overlay
- * @param {Number}                  [overlay.position.left]      relative to element bbox left attachment
- * @param {Number}                  [overlay.position.top]       relative to element bbox top attachment
- * @param {Number}                  [overlay.position.bottom]    relative to element bbox bottom attachment
- * @param {Number}                  [overlay.position.right]     relative to element bbox right attachment
- *
- * @return {String}                 id that may be used to reference the overlay for update or removal
- */
-Overlays.prototype.add = function(element, type, overlay) {
-
-  if (isObject(type)) {
-    overlay = type;
-    type = null;
-  }
-
-  if (!element.id) {
-    element = this._elementRegistry.get(element);
-  }
-
-  if (!overlay.position) {
-    throw new Error('must specifiy overlay position');
-  }
-
-  if (!overlay.html) {
-    throw new Error('must specifiy overlay html');
-  }
-
-  if (!element) {
-    throw new Error('invalid element specified');
-  }
-
-  var id = this._ids.next();
-
-  overlay = assign({}, this._overlayDefaults, overlay, {
-    id: id,
-    type: type,
-    element: element,
-    html: overlay.html
-  });
-
-  this._addOverlay(overlay);
-
-  return id;
-};
-
-
-/**
- * Remove an overlay with the given id or all overlays matching the given filter.
- *
- * @see Overlays#get for filter options.
- *
- * @param {String} [id]
- * @param {Object} [filter]
- */
-Overlays.prototype.remove = function(filter) {
-
-  var overlays = this.get(filter) || [];
-
-  if (!isArray(overlays)) {
-    overlays = [ overlays ];
-  }
-
-  var self = this;
-
-  forEach(overlays, function(overlay) {
-
-    var container = self._getOverlayContainer(overlay.element, true);
-
-    if (overlay) {
-      domRemove(overlay.html);
-      domRemove(overlay.htmlContainer);
-
-      delete overlay.htmlContainer;
-      delete overlay.element;
-
-      delete self._overlays[overlay.id];
-    }
-
-    if (container) {
-      var idx = container.overlays.indexOf(overlay);
-      if (idx !== -1) {
-        container.overlays.splice(idx, 1);
-      }
-    }
-  });
-
-};
-
-
-Overlays.prototype.show = function() {
-  setVisible(this._overlayRoot);
-};
-
-
-Overlays.prototype.hide = function() {
-  setVisible(this._overlayRoot, false);
-};
-
-Overlays.prototype.clear = function() {
-  this._overlays = {};
-
-  this._overlayContainers = [];
-
-  domClear(this._overlayRoot);
-};
-
-Overlays.prototype._updateOverlayContainer = function(container) {
-  var element = container.element,
-      html = container.html;
-
-  // update container left,top according to the elements x,y coordinates
-  // this ensures we can attach child elements relative to this container
-
-  var x = element.x,
-      y = element.y;
-
-  if (element.waypoints) {
-    var bbox = getBBox(element);
-    x = bbox.x;
-    y = bbox.y;
-  }
-
-  setPosition(html, x, y);
-
-  domAttr(container.html, 'data-container-id', element.id);
-};
-
-
-Overlays.prototype._updateOverlay = function(overlay) {
-
-  var position = overlay.position,
-      htmlContainer = overlay.htmlContainer,
-      element = overlay.element;
-
-  // update overlay html relative to shape because
-  // it is already positioned on the element
-
-  // update relative
-  var left = position.left,
-      top = position.top;
-
-  if (position.right !== undefined) {
-
-    var width;
-
-    if (element.waypoints) {
-      width = getBBox(element).width;
-    } else {
-      width = element.width;
-    }
-
-    left = position.right * -1 + width;
-  }
-
-  if (position.bottom !== undefined) {
-
-    var height;
-
-    if (element.waypoints) {
-      height = getBBox(element).height;
-    } else {
-      height = element.height;
-    }
-
-    top = position.bottom * -1 + height;
-  }
-
-  setPosition(htmlContainer, left || 0, top || 0);
-};
-
-Overlays.prototype._createOverlayContainer = function(element) {
-  var html = domify('<div class="djs-overlays" style="position: absolute" />');
-
-  this._overlayRoot.appendChild(html);
-
-  var container = {
-    html: html,
-    element: element,
-    overlays: []
-  };
-
-  this._updateOverlayContainer(container);
-
-  this._overlayContainers.push(container);
-
-  return container;
-};
-
-
-Overlays.prototype._updateRoot = function(viewbox) {
-  var a = viewbox.scale || 1;
-  var d = viewbox.scale || 1;
-
-  var matrix = 'matrix(' + a + ',0,0,' + d + ',' + (-1 * viewbox.x * a) + ',' + (-1 * viewbox.y * d) + ')';
-
-  this._overlayRoot.style.transform = matrix;
-  this._overlayRoot.style['-ms-transform'] = matrix;
-  this._overlayRoot.style['-webkit-transform'] = matrix;
-};
-
-
-Overlays.prototype._getOverlayContainer = function(element, raw) {
-  var container = find(this._overlayContainers, function(c) {
-    return c.element === element;
-  });
-
-
-  if (!container && !raw) {
-    return this._createOverlayContainer(element);
-  }
-
-  return container;
-};
-
-
-
-
-
-Overlays.prototype._addOverlay = function(overlay) {
-
-  var id = overlay.id,
-      element = overlay.element,
-      html = overlay.html,
-      htmlContainer,
-      overlayContainer;
-
-  // unwrap jquery (for those who need it)
-  if (html.get) {
-    html = html.get(0);
-  }
-
-  // create proper html elements from
-  // overlay HTML strings
-  if (isString(html)) {
-    html = domify(html);
-  }
-
-  overlayContainer = this._getOverlayContainer(element);
-
-  htmlContainer = domify('<div class="djs-overlay" data-overlay-id="' + id + '" style="position: absolute">');
-
-  htmlContainer.appendChild(html);
-
-  if (overlay.type) {
-    domClasses(htmlContainer).add('djs-overlay-' + overlay.type);
-  }
-
-  overlay.htmlContainer = htmlContainer;
-
-  overlayContainer.overlays.push(overlay);
-  overlayContainer.html.appendChild(htmlContainer);
-
-  this._overlays[id] = overlay;
-
-  this._updateOverlay(overlay);
-  this._updateOverlayVisibilty(overlay, this._canvas.viewbox());
-};
-
-Overlays.prototype._updateOverlayVisibilty = function(overlay, viewbox) {
-  var show = overlay.show,
-      htmlContainer = overlay.htmlContainer,
-      visible = true;
-
-  if (show) {
-    if (show.minZoom > viewbox.scale ||
-        show.maxZoom < viewbox.scale) {
-      visible = false;
-    }
-
-    setVisible(htmlContainer, visible);
-  }
-};
-
-Overlays.prototype._updateOverlaysVisibilty = function(viewbox) {
-
-  var self = this;
-
-  forEach(this._overlays, function(overlay) {
-    self._updateOverlayVisibilty(overlay, viewbox);
-  });
-};
-
-
-Overlays.prototype._init = function() {
-
-  var eventBus = this._eventBus;
-
-  var self = this;
-
-
-  // scroll/zoom integration
-
-  function updateViewbox(viewbox) {
-    self._updateRoot(viewbox);
-    self._updateOverlaysVisibilty(viewbox);
-
-    self.show();
-  }
-
-  eventBus.on('canvas.viewbox.changing', function(event) {
-    self.hide();
-  });
-
-  eventBus.on('canvas.viewbox.changed', function(event) {
-    updateViewbox(event.viewbox);
-  });
-
-
-  // remove integration
-
-  eventBus.on([ 'shape.remove', 'connection.remove' ], function(e) {
-    var element = e.element;
-    var overlays = self.get({ element: element });
-
-    forEach(overlays, function(o) {
-      self.remove(o.id);
-    });
-
-    var container = self._getOverlayContainer(element);
-
-    if (container) {
-      domRemove(container.html);
-      var i = self._overlayContainers.indexOf(container);
-      if (i !== -1) {
-        self._overlayContainers.splice(i, 1);
-      }
-    }
-  });
-
-
-  // move integration
-
-  eventBus.on([
-    'element.changed'
-  ], function(e) {
-    var element = e.element;
-
-    var container = self._getOverlayContainer(element, true);
-
-    if (container) {
-      forEach(container.overlays, function(overlay) {
-        self._updateOverlay(overlay);
-      });
-
-      self._updateOverlayContainer(container);
-    }
-  });
-
-
-  // marker integration, simply add them on the overlays as classes, too.
-
-  eventBus.on('element.marker.update', function(e) {
-    var container = self._getOverlayContainer(e.element, true);
-    if (container) {
-      domClasses(container.html)[e.add ? 'add' : 'remove'](e.marker);
-    }
-  });
-
-
-  // clear overlays with diagram
-
-  eventBus.on('diagram.clear', this.clear, this);
-};
-
-},{"../../util/Elements":285,"../../util/IdGenerator":288,"lodash/collection/filter":306,"lodash/collection/find":307,"lodash/collection/forEach":308,"lodash/lang/isArray":411,"lodash/lang/isObject":415,"lodash/lang/isString":417,"lodash/object/assign":420,"min-dom/lib/attr":430,"min-dom/lib/classes":431,"min-dom/lib/clear":432,"min-dom/lib/domify":435,"min-dom/lib/remove":438}],271:[function(require,module,exports){
-module.exports = {
-  __init__: [ 'overlays' ],
-  overlays: [ 'type', require('./Overlays') ]
-};
-},{"./Overlays":270}],272:[function(require,module,exports){
-'use strict';
-
-var isArray = require('lodash/lang/isArray'),
-    forEach = require('lodash/collection/forEach');
-
-
-/**
- * A service that offers the current selection in a diagram.
- * Offers the api to control the selection, too.
- *
- * @class
- *
- * @param {EventBus} eventBus the event bus
- */
-function Selection(eventBus) {
-
-  this._eventBus = eventBus;
-
-  this._selectedElements = [];
-
-  var self = this;
-
-  eventBus.on([ 'shape.remove', 'connection.remove' ], function(e) {
-    var element = e.element;
-    self.deselect(element);
-  });
-
-  eventBus.on([ 'diagram.clear' ], function(e) {
-    self.select(null);
-  });
-}
-
-Selection.$inject = [ 'eventBus' ];
-
-module.exports = Selection;
-
-
-Selection.prototype.deselect = function(element) {
-  var selectedElements = this._selectedElements;
-
-  var idx = selectedElements.indexOf(element);
-
-  if (idx !== -1) {
-    var oldSelection = selectedElements.slice();
-
-    selectedElements.splice(idx, 1);
-
-    this._eventBus.fire('selection.changed', { oldSelection: oldSelection, newSelection: selectedElements });
-  }
-};
-
-
-Selection.prototype.get = function() {
-  return this._selectedElements;
-};
-
-Selection.prototype.isSelected = function(element) {
-  return this._selectedElements.indexOf(element) !== -1;
-};
-
-
-/**
- * This method selects one or more elements on the diagram.
- *
- * By passing an additional add parameter you can decide whether or not the element(s)
- * should be added to the already existing selection or not.
- *
- * @method Selection#select
- *
- * @param  {Object|Object[]} elements element or array of elements to be selected
- * @param  {boolean} [add] whether the element(s) should be appended to the current selection, defaults to false
- */
-Selection.prototype.select = function(elements, add) {
-  var selectedElements = this._selectedElements,
-      oldSelection = selectedElements.slice();
-
-  if (!isArray(elements)) {
-    elements = elements ? [ elements ] : [];
-  }
-
-  // selection may be cleared by passing an empty array or null
-  // to the method
-  if (add) {
-    forEach(elements, function(element) {
-      if (selectedElements.indexOf(element) !== -1) {
-        // already selected
-        return;
-      } else {
-        selectedElements.push(element);
-      }
-    });
-  } else {
-    this._selectedElements = selectedElements = elements.slice();
-  }
-
-  this._eventBus.fire('selection.changed', { oldSelection: oldSelection, newSelection: selectedElements });
-};
-
-},{"lodash/collection/forEach":308,"lodash/lang/isArray":411}],273:[function(require,module,exports){
-'use strict';
-
-var hasPrimaryModifier = require('../../util/Mouse').hasPrimaryModifier;
-
-var find = require('lodash/collection/find');
-
-
-function SelectionBehavior(eventBus, selection, canvas, elementRegistry) {
-
-  eventBus.on('create.end', 500, function(e) {
-
-    // select the created shape after a
-    // successful create operation
-    if (e.context.canExecute) {
-      selection.select(e.context.shape);
-    }
-  });
-
-  eventBus.on('connect.end', 500, function(e) {
-
-    // select the connect end target
-    // after a connect operation
-    if (e.context.canExecute && e.context.target) {
-      selection.select(e.context.target);
-    }
-  });
-
-  eventBus.on('shape.move.end', 500, function(e) {
-    var previousSelection = e.previousSelection || [];
-
-    var shape = elementRegistry.get(e.context.shape.id);
-
-    // make sure at least the main moved element is being
-    // selected after a move operation
-    var inSelection = find(previousSelection, function(selectedShape) {
-      return shape.id === selectedShape.id;
-    });
-
-    if (!inSelection) {
-      selection.select(shape);
-    }
-  });
-
-  // Shift + click selection
-  eventBus.on('element.click', function(event) {
-
-    var element = event.element;
-
-    // do not select the root element
-    // or connections
-    if (element === canvas.getRootElement()) {
-      element = null;
-    }
-
-    var isSelected = selection.isSelected(element),
-        isMultiSelect = selection.get().length > 1;
-
-    // mouse-event: SELECTION_KEY
-    var add = hasPrimaryModifier(event);
-
-    // select OR deselect element in multi selection
-    if (isSelected && isMultiSelect) {
-      if (add) {
-        return selection.deselect(element);
-      } else {
-        return selection.select(element);
-      }
-    } else
-    if (!isSelected) {
-      selection.select(element, add);
-    } else {
-      selection.deselect(element);
-    }
-  });
-}
-
-SelectionBehavior.$inject = [ 'eventBus', 'selection', 'canvas', 'elementRegistry' ];
-module.exports = SelectionBehavior;
-
-},{"../../util/Mouse":290,"lodash/collection/find":307}],274:[function(require,module,exports){
-'use strict';
-
-var forEach = require('lodash/collection/forEach');
-
-var MARKER_HOVER = 'hover',
-    MARKER_SELECTED = 'selected';
-
-
-/**
- * A plugin that adds a visible selection UI to shapes and connections
- * by appending the <code>hover</code> and <code>selected</code> classes to them.
- *
- * @class
- *
- * Makes elements selectable, too.
- *
- * @param {EventBus} events
- * @param {SelectionService} selection
- * @param {Canvas} canvas
- */
-function SelectionVisuals(events, canvas, selection, graphicsFactory, styles) {
-
-  this._multiSelectionBox = null;
-
-  function addMarker(e, cls) {
-    canvas.addMarker(e, cls);
-  }
-
-  function removeMarker(e, cls) {
-    canvas.removeMarker(e, cls);
-  }
-
-  events.on('element.hover', function(event) {
-    addMarker(event.element, MARKER_HOVER);
-  });
-
-  events.on('element.out', function(event) {
-    removeMarker(event.element, MARKER_HOVER);
-  });
-
-  events.on('selection.changed', function(event) {
-
-    function deselect(s) {
-      removeMarker(s, MARKER_SELECTED);
-    }
-
-    function select(s) {
-      addMarker(s, MARKER_SELECTED);
-    }
-
-    var oldSelection = event.oldSelection,
-        newSelection = event.newSelection;
-
-    forEach(oldSelection, function(e) {
-      if (newSelection.indexOf(e) === -1) {
-        deselect(e);
-      }
-    });
-
-    forEach(newSelection, function(e) {
-      if (oldSelection.indexOf(e) === -1) {
-        select(e);
-      }
-    });
-  });
-}
-
-SelectionVisuals.$inject = [
-  'eventBus',
-  'canvas',
-  'selection',
-  'graphicsFactory',
-  'styles'
-];
-
-module.exports = SelectionVisuals;
-
-},{"lodash/collection/forEach":308}],275:[function(require,module,exports){
-module.exports = {
-  __init__: [ 'selectionVisuals', 'selectionBehavior' ],
-  __depends__: [
-    require('../interaction-events'),
-    require('../outline')
-  ],
-  selection: [ 'type', require('./Selection') ],
-  selectionVisuals: [ 'type', require('./SelectionVisuals') ],
-  selectionBehavior: [ 'type', require('./SelectionBehavior') ]
-};
-
-},{"../interaction-events":267,"../outline":269,"./Selection":272,"./SelectionBehavior":273,"./SelectionVisuals":274}],276:[function(require,module,exports){
-'use strict';
-
-var assign = require('lodash/object/assign'),
-    inherits = require('inherits');
-
-var Refs = require('object-refs');
-
-var parentRefs = new Refs({ name: 'children', enumerable: true, collection: true }, { name: 'parent' }),
-    labelRefs = new Refs({ name: 'label', enumerable: true }, { name: 'labelTarget' }),
-    attacherRefs = new Refs({ name: 'attachers', collection: true }, { name: 'host' }),
-    outgoingRefs = new Refs({ name: 'outgoing', collection: true }, { name: 'source' }),
-    incomingRefs = new Refs({ name: 'incoming', collection: true }, { name: 'target' });
-
-/**
- * @namespace djs.model
- */
-
-/**
- * @memberOf djs.model
- */
-
-/**
- * The basic graphical representation
- *
- * @class
- *
- * @abstract
- */
-function Base() {
-
-  /**
-   * The object that backs up the shape
-   *
-   * @name Base#businessObject
-   * @type Object
-   */
-  Object.defineProperty(this, 'businessObject', {
-    writable: true
-  });
-
-  /**
-   * The parent shape
-   *
-   * @name Base#parent
-   * @type Shape
-   */
-  parentRefs.bind(this, 'parent');
-
-  /**
-   * @name Base#label
-   * @type Label
-   */
-  labelRefs.bind(this, 'label');
-
-  /**
-   * The list of outgoing connections
-   *
-   * @name Base#outgoing
-   * @type Array<Connection>
-   */
-  outgoingRefs.bind(this, 'outgoing');
-
-  /**
-   * The list of incoming connections
-   *
-   * @name Base#incoming
-   * @type Array<Connection>
-   */
-  incomingRefs.bind(this, 'incoming');
-}
-
-
-/**
- * A graphical object
- *
- * @class
- * @constructor
- *
- * @extends Base
- */
-function Shape() {
-  Base.call(this);
-
-  /**
-   * The list of children
-   *
-   * @name Shape#children
-   * @type Array<Base>
-   */
-  parentRefs.bind(this, 'children');
-
-  /**
-   * @name Shape#host
-   * @type Shape
-   */
-  attacherRefs.bind(this, 'host');
-
-  /**
-   * @name Shape#attachers
-   * @type Shape
-   */
-  attacherRefs.bind(this, 'attachers');
-}
-
-inherits(Shape, Base);
-
-
-/**
- * A root graphical object
- *
- * @class
- * @constructor
- *
- * @extends Shape
- */
-function Root() {
-  Shape.call(this);
-}
-
-inherits(Root, Shape);
-
-
-/**
- * A label for an element
- *
- * @class
- * @constructor
- *
- * @extends Shape
- */
-function Label() {
-  Shape.call(this);
-
-  /**
-   * The labeled element
-   *
-   * @name Label#labelTarget
-   * @type Base
-   */
-  labelRefs.bind(this, 'labelTarget');
-}
-
-inherits(Label, Shape);
-
-
-/**
- * A connection between two elements
- *
- * @class
- * @constructor
- *
- * @extends Base
- */
-function Connection() {
-  Base.call(this);
-
-  /**
-   * The element this connection originates from
-   *
-   * @name Connection#source
-   * @type Base
-   */
-  outgoingRefs.bind(this, 'source');
-
-  /**
-   * The element this connection points to
-   *
-   * @name Connection#target
-   * @type Base
-   */
-  incomingRefs.bind(this, 'target');
-}
-
-inherits(Connection, Base);
-
-
-var types = {
-  connection: Connection,
-  shape: Shape,
-  label: Label,
-  root: Root
-};
-
-/**
- * Creates a new model element of the specified type
- *
- * @method create
- *
- * @example
- *
- * var shape1 = Model.create('shape', { x: 10, y: 10, width: 100, height: 100 });
- * var shape2 = Model.create('shape', { x: 210, y: 210, width: 100, height: 100 });
- *
- * var connection = Model.create('connection', { waypoints: [ { x: 110, y: 55 }, {x: 210, y: 55 } ] });
- *
- * @param  {String} type lower-cased model name
- * @param  {Object} attrs attributes to initialize the new model instance with
- *
- * @return {Base} the new model instance
- */
-module.exports.create = function(type, attrs) {
-  var Type = types[type];
-  if (!Type) {
-    throw new Error('unknown type: <' + type + '>');
-  }
-  return assign(new Type(), attrs);
-};
-
-
-module.exports.Base = Base;
-module.exports.Root = Root;
-module.exports.Shape = Shape;
-module.exports.Connection = Connection;
-module.exports.Label = Label;
-
-},{"inherits":301,"lodash/object/assign":420,"object-refs":447}],277:[function(require,module,exports){
-'use strict';
-
-var Cursor = require('../../util/Cursor'),
-    ClickTrap = require('../../util/ClickTrap'),
-    substract = require('../../util/Math').substract,
-    domEvent = require('min-dom/lib/event'),
-    domClosest = require('min-dom/lib/closest'),
-    EventUtil = require('../../util/Event');
-
-
-function length(point) {
-  return Math.sqrt(Math.pow(point.x, 2) + Math.pow(point.y, 2));
-}
-
-
-var THRESHOLD = 15;
-
-
-function MoveCanvas(eventBus, canvas) {
-
-  var container = canvas._container,
-      context;
-
-
-  function handleMove(event) {
-
-    var start = context.start,
-        position = EventUtil.toPoint(event),
-        delta = substract(position, start);
-
-    if (!context.dragging && length(delta) > THRESHOLD) {
-      context.dragging = true;
-
-      // prevent mouse click in this
-      // interaction sequence
-      ClickTrap.install();
-
-      Cursor.set('grab');
-    }
-
-    if (context.dragging) {
-
-      var lastPosition = context.last || context.start;
-
-      delta = substract(position, lastPosition);
-
-      canvas.scroll({
-        dx: delta.x,
-        dy: delta.y
-      });
-
-      context.last = position;
-    }
-
-    // prevent select
-    event.preventDefault();
-  }
-
-
-  function handleEnd(event) {
-    domEvent.unbind(document, 'mousemove', handleMove);
-    domEvent.unbind(document, 'mouseup', handleEnd);
-
-    context = null;
-
-    Cursor.unset();
-
-    // prevent select
-    EventUtil.stopEvent(event);
-  }
-
-  function handleStart(event) {
-    // event is already handled by '.djs-draggable'
-    if (domClosest(event.target, '.djs-draggable')) {
-      return;
-    }
-
-
-    // reject non-left left mouse button or modifier key
-    if (event.button || event.ctrlKey || event.shiftKey || event.altKey) {
-      return;
-    }
-
-    context = {
-      start: EventUtil.toPoint(event)
-    };
-
-    domEvent.bind(document, 'mousemove', handleMove);
-    domEvent.bind(document, 'mouseup', handleEnd);
-
-    // prevent select
-    EventUtil.stopEvent(event);
-  }
-
-  domEvent.bind(container, 'mousedown', handleStart);
-}
-
-
-MoveCanvas.$inject = [ 'eventBus', 'canvas' ];
-
-module.exports = MoveCanvas;
-
-},{"../../util/ClickTrap":282,"../../util/Cursor":284,"../../util/Event":286,"../../util/Math":289,"min-dom/lib/closest":433,"min-dom/lib/event":436}],278:[function(require,module,exports){
-module.exports = {
-  __init__: [ 'moveCanvas' ],
-  moveCanvas: [ 'type', require('./MoveCanvas') ]
-};
-},{"./MoveCanvas":277}],279:[function(require,module,exports){
-'use strict';
-
-var domEvent = require('min-dom/lib/event'),
-    domClosest = require('min-dom/lib/closest');
-
-var hasPrimaryModifier = require('../../util/Mouse').hasPrimaryModifier,
-    hasSecondaryModifier = require('../../util/Mouse').hasSecondaryModifier;
-
-var isMac = require('../../util/Platform').isMac;
-
-var getStepRange = require('./ZoomUtil').getStepRange,
-    cap = require('./ZoomUtil').cap;
-
-var log10 = require('../../util/Math').log10;
-
-var bind = require('lodash/function/bind');
-
-var RANGE = { min: 0.2, max: 4 },
-    NUM_STEPS = 10;
-
-
-/**
- * An implementation of zooming and scrolling within the
- * {@link Canvas} via the mouse wheel.
- *
- * Mouse wheel zooming / scrolling may be disabled using
- * the {@link toggle(enabled)} method.
- *
- * Additionally users can define the initial enabled state
- * by passing `{ zoomScroll: { enabled: false } }` at diagram
- * initialization.
- *
- * @param {EventBus} eventBus
- * @param {Canvas} canvas
- * @param {Object} config
- */
-function ZoomScroll(eventBus, canvas, config) {
-
-  this._enabled = false;
-
-  this._canvas = canvas;
-  this._container = canvas._container;
-
-  this._handleWheel = bind(this._handleWheel, this);
-
-  var newEnabled = !config || config.enabled !== false;
-
-  var self = this;
-
-  eventBus.on('canvas.init', function(e) {
-    self._init(newEnabled);
-  });
-}
-
-ZoomScroll.$inject = [ 'eventBus', 'canvas', 'config.zoomScroll' ];
-
-module.exports = ZoomScroll;
-
-ZoomScroll.prototype.scroll = function scroll(delta) {
-  this._canvas.scroll(delta);
-};
-
-
-ZoomScroll.prototype.reset = function reset() {
-  this._canvas.zoom('fit-viewport');
-};
-
-
-ZoomScroll.prototype.zoom = function zoom(direction, position) {
-  var canvas = this._canvas;
-  var currentZoom = canvas.zoom(false);
-
-  var factor = Math.pow(1 + Math.abs(direction) , direction > 0 ? 1 : -1);
-
-  canvas.zoom(cap(RANGE, currentZoom * factor), position);
-};
-
-
-ZoomScroll.prototype._handleWheel = function handleWheel(event) {
-  // event is already handled by '.djs-scrollable'
-  if (domClosest(event.target, '.djs-scrollable', true)) {
-    return;
-  }
-
-  var element = this._container;
-
-  event.preventDefault();
-
-  // mouse-event: SELECTION_KEY
-  // mouse-event: AND_KEY
-  var isVerticalScroll = hasPrimaryModifier(event),
-      isHorizontalScroll = hasSecondaryModifier(event);
-
-  var factor;
-
-  if (isVerticalScroll || isHorizontalScroll) {
-
-    if (isMac) {
-      factor = event.deltaMode === 0 ? 1.25 : 50;
-    } else {
-      factor = event.deltaMode === 0 ? 1/40 : 1/2;
-    }
-
-    var delta = {};
-
-    if (isHorizontalScroll) {
-      delta.dx = (factor * (event.deltaX || event.deltaY));
-    } else {
-      delta.dy = (factor * event.deltaY);
-    }
-    this.scroll(delta);
-  } else {
-    factor = (event.deltaMode === 0 ? 1/40 : 1/2);
-
-    var elementRect = element.getBoundingClientRect();
-
-    var offset =  {
-      x: event.clientX - elementRect.left,
-      y: event.clientY - elementRect.top
-    };
-
-    // zoom in relative to diagram {x,y} coordinates
-    this.zoom(event.deltaY * factor / (-5), offset);
-  }
-};
-
-/**
- * Zoom along fixed zoom steps
- *
- * @param {Integer} direction zoom direction (1 for zooming in, -1 for out)
- */
-ZoomScroll.prototype.stepZoom = function stepZoom(direction, position) {
-
-  var canvas = this._canvas,
-      stepRange = getStepRange(RANGE, NUM_STEPS);
-
-  direction = direction > 0 ? 1 : -1;
-
-  var currentLinearZoomLevel = log10(canvas.zoom());
-
-  // snap to a proximate zoom step
-  var newLinearZoomLevel = Math.round(currentLinearZoomLevel / stepRange) * stepRange;
-
-  // increase or decrease one zoom step in the given direction
-  newLinearZoomLevel += stepRange * direction;
-
-  // calculate the absolute logarithmic zoom level based on the linear zoom level
-  // (e.g. 2 for an absolute x2 zoom)
-  var newLogZoomLevel = Math.pow(10, newLinearZoomLevel);
-
-  canvas.zoom(cap(RANGE, newLogZoomLevel), position);
-};
-
-
-/**
- * Toggle the zoom scroll ability via mouse wheel.
- *
- * @param  {Boolean} [newEnabled] new enabled state
- */
-ZoomScroll.prototype.toggle = function toggle(newEnabled) {
-
-  var element = this._container;
-  var handleWheel = this._handleWheel;
-
-  var oldEnabled = this._enabled;
-
-  if (typeof newEnabled === 'undefined') {
-    newEnabled = !oldEnabled;
-  }
-
-  // only react on actual changes
-  if (oldEnabled !== newEnabled) {
-
-    // add or remove wheel listener based on
-    // changed enabled state
-    domEvent[newEnabled ? 'bind' : 'unbind'](element, 'wheel', handleWheel, false);
-  }
-
-  this._enabled = newEnabled;
-
-  return newEnabled;
-};
-
-
-ZoomScroll.prototype._init = function(newEnabled) {
-  this.toggle(newEnabled);
-};
-
-},{"../../util/Math":289,"../../util/Mouse":290,"../../util/Platform":291,"./ZoomUtil":280,"lodash/function/bind":314,"min-dom/lib/closest":433,"min-dom/lib/event":436}],280:[function(require,module,exports){
-'use strict';
-
-
-var log10 = require('../../util/Math').log10;
-
-/**
- * Get the linear range between two zoom steps based on the
- * total number of zoom steps (defined as NUM_STEPS)
- */
-module.exports.getStepRange = function(range, steps) {
-
-  var minLinearRange = log10(range.min),
-      maxLinearRange = log10(range.max);
-
-  var absoluteLinearRange = Math.abs(minLinearRange) + Math.abs(maxLinearRange);
-
-  return absoluteLinearRange / steps;
-};
-
-module.exports.cap = function(range, scale) {
-  return Math.max(range.min, Math.min(range.max, scale));
-};
-
-},{"../../util/Math":289}],281:[function(require,module,exports){
-module.exports = {
-  __init__: [ 'zoomScroll' ],
-  zoomScroll: [ 'type', require('./ZoomScroll') ]
-};
-},{"./ZoomScroll":279}],282:[function(require,module,exports){
-'use strict';
-
-var domEvent = require('min-dom/lib/event'),
-    stopEvent = require('./Event').stopEvent;
-
-function trap(event) {
-  stopEvent(event);
-
-  toggle(false);
-}
-
-function toggle(active) {
-  domEvent[active ? 'bind' : 'unbind'](document.body, 'click', trap, true);
-}
-
-/**
- * Installs a click trap that prevents a ghost click following a dragging operation.
- *
- * @return {Function} a function to immediately remove the installed trap.
- */
-function install() {
-
-  toggle(true);
-
-  return function() {
-    toggle(false);
-  };
-}
-
-module.exports.install = install;
-},{"./Event":286,"min-dom/lib/event":436}],283:[function(require,module,exports){
-'use strict';
-
-/**
- * Failsafe remove an element from a collection
- *
- * @param  {Array<Object>} [collection]
- * @param  {Object} [element]
- *
- * @return {Number} the previous index of the element
- */
-module.exports.remove = function(collection, element) {
-
-  if (!collection || !element) {
-    return -1;
-  }
-
-  var idx = collection.indexOf(element);
-
-  if (idx !== -1) {
-    collection.splice(idx, 1);
-  }
-
-  return idx;
-};
-
-/**
- * Fail save add an element to the given connection, ensuring
- * it does not yet exist.
- *
- * @param {Array<Object>} collection
- * @param {Object} element
- * @param {Number} idx
- */
-module.exports.add = function(collection, element, idx) {
-
-  if (!collection || !element) {
-    return;
-  }
-
-  if (typeof idx !== 'number') {
-    idx = -1;
-  }
-
-  var currentIdx = collection.indexOf(element);
-
-  if (currentIdx !== -1) {
-
-    if (currentIdx === idx) {
-      // nothing to do, position has not changed
-      return;
-    } else {
-
-      if (idx !== -1) {
-        // remove from current position
-        collection.splice(currentIdx, 1);
-      } else {
-        // already exists in collection
-        return;
-      }
-    }
-  }
-
-  if (idx !== -1) {
-    // insert at specified position
-    collection.splice(idx, 0, element);
-  } else {
-    // push to end
-    collection.push(element);
-  }
-};
-
-
-/**
- * Fail save get the index of an element in a collection.
- *
- * @param {Array<Object>} collection
- * @param {Object} element
- *
- * @return {Number} the index or -1 if collection or element do
- *                  not exist or the element is not contained.
- */
-module.exports.indexOf = function(collection, element) {
-
-  if (!collection || !element) {
-    return -1;
-  }
-
-  return collection.indexOf(element);
-};
-
-},{}],284:[function(require,module,exports){
-'use strict';
-
-var domClasses = require('min-dom/lib/classes');
-
-var CURSOR_CLS_PATTERN = /^djs-cursor-.*$/;
-
-
-module.exports.set = function(mode) {
-  var classes = domClasses(document.body);
-
-  classes.removeMatching(CURSOR_CLS_PATTERN);
-
-  if (mode) {
-    classes.add('djs-cursor-' + mode);
-  }
-};
-
-module.exports.unset = function() {
-  this.set(null);
-};
-
-module.exports.has = function(mode) {
-  var classes = domClasses(document.body);
-
-  return classes.has('djs-cursor-' + mode);
-};
-
-},{"min-dom/lib/classes":431}],285:[function(require,module,exports){
-'use strict';
-
-var isArray = require('lodash/lang/isArray'),
-    isNumber = require('lodash/lang/isNumber'),
-    groupBy = require('lodash/collection/groupBy'),
-    forEach = require('lodash/collection/forEach');
-
-/**
- * Adds an element to a collection and returns true if the
- * element was added.
- *
- * @param {Array<Object>} elements
- * @param {Object} e
- * @param {Boolean} unique
- */
-function add(elements, e, unique) {
-  var canAdd = !unique || elements.indexOf(e) === -1;
-
-  if (canAdd) {
-    elements.push(e);
-  }
-
-  return canAdd;
-}
-
-/**
- * Iterate over each element in a collection, calling the iterator function `fn`
- * with (element, index, recursionDepth).
- *
- * Recurse into all elements that are returned by `fn`.
- *
- * @param  {Object|Array<Object>} elements
- * @param  {Function} fn iterator function called with (element, index, recursionDepth)
- * @param  {Number} [depth] maximum recursion depth
- */
-function eachElement(elements, fn, depth) {
-
-  depth = depth || 0;
-
-  if (!isArray(elements)) {
-    elements = [ elements ];
-  }
-
-  forEach(elements, function(s, i) {
-    var filter = fn(s, i, depth);
-
-    if (isArray(filter) && filter.length) {
-      eachElement(filter, fn, depth + 1);
-    }
-  });
-}
-
-/**
- * Collects self + child elements up to a given depth from a list of elements.
- *
- * @param  {djs.model.Base|Array<djs.model.Base>} elements the elements to select the children from
- * @param  {Boolean} unique whether to return a unique result set (no duplicates)
- * @param  {Number} maxDepth the depth to search through or -1 for infinite
- *
- * @return {Array<djs.model.Base>} found elements
- */
-function selfAndChildren(elements, unique, maxDepth) {
-  var result = [],
-      processedChildren = [];
-
-  eachElement(elements, function(element, i, depth) {
-    add(result, element, unique);
-
-    var children = element.children;
-
-    // max traversal depth not reached yet
-    if (maxDepth === -1 || depth < maxDepth) {
-
-      // children exist && children not yet processed
-      if (children && add(processedChildren, children, unique)) {
-        return children;
-      }
-    }
-  });
-
-  return result;
-}
-
-/**
- * Return self + direct children for a number of elements
- *
- * @param  {Array<djs.model.Base>} elements to query
- * @param  {Boolean} allowDuplicates to allow duplicates in the result set
- *
- * @return {Array<djs.model.Base>} the collected elements
- */
-function selfAndDirectChildren(elements, allowDuplicates) {
-  return selfAndChildren(elements, !allowDuplicates, 1);
-}
-
-/**
- * Return self + ALL children for a number of elements
- *
- * @param  {Array<djs.model.Base>} elements to query
- * @param  {Boolean} allowDuplicates to allow duplicates in the result set
- *
- * @return {Array<djs.model.Base>} the collected elements
- */
-function selfAndAllChildren(elements, allowDuplicates) {
-  return selfAndChildren(elements, !allowDuplicates, -1);
-}
-
-/**
- * Gets the the closure for all selected elements,
- * their connections and their attachment's connections
- *
- * @param {Array<djs.model.Base>} elements
- * @return {Object} enclosure
- */
-function getClosure(elements) {
-
-  // original elements passed to this function
-  var topLevel = groupBy(elements, function(e) { return e.id; });
-
-  var allShapes = {},
-      allConnections = {},
-      enclosedElements = {},
-      enclosedConnections = {};
-
-  function handleConnection(c) {
-    if (topLevel[c.source.id] && topLevel[c.target.id]) {
-      topLevel[c.id] = c;
-    }
-
-    // not enclosed as a child, but maybe logically
-    // (connecting two moved elements?)
-    if (allShapes[c.source.id] && allShapes[c.target.id]) {
-      enclosedConnections[c.id] = enclosedElements[c.id] = c;
-    }
-
-    allConnections[c.id] = c;
-  }
-
-  function handleElement(element) {
-
-    enclosedElements[element.id] = element;
-
-    if (element.waypoints) {
-      // remember connection
-      enclosedConnections[element.id] = allConnections[element.id] = element;
-    } else {
-      // remember shape
-      allShapes[element.id] = element;
-
-      // remember all connections
-      forEach(element.incoming, handleConnection);
-
-      forEach(element.outgoing, handleConnection);
-
-      // recurse into children
-      return element.children;
-    }
-  }
-
-  eachElement(elements, handleElement);
-
-  return {
-    allShapes: allShapes,
-    allConnections: allConnections,
-    topLevel: topLevel,
-    enclosedConnections: enclosedConnections,
-    enclosedElements: enclosedElements
-  };
-}
-
-/**
- * Returns the surrounding bbox for all elements in
- * the array or the element primitive.
- *
- * @param {Array<djs.model.Shape>|djs.model.Shape} elements
- * @param {Boolean} stopRecursion
- */
-function getBBox(elements, stopRecursion) {
-
-  stopRecursion = !!stopRecursion;
-  if (!isArray(elements)) {
-    elements = [elements];
-  }
-
-  var minX,
-      minY,
-      maxX,
-      maxY;
-
-  forEach(elements, function(element) {
-
-    // If element is a connection the bbox must be computed first
-    var bbox = element;
-    if (element.waypoints && !stopRecursion) {
-      bbox = getBBox(element.waypoints, true);
-    }
-
-    var x = bbox.x,
-        y = bbox.y,
-        height = bbox.height || 0,
-        width  = bbox.width  || 0;
-
-    if (x < minX || minX === undefined) {
-      minX = x;
-    }
-    if (y < minY || minY === undefined) {
-      minY = y;
-    }
-
-    if ((x + width) > maxX || maxX === undefined) {
-      maxX = x + width;
-    }
-    if ((y + height) > maxY || maxY === undefined) {
-      maxY = y + height;
-    }
-  });
-
-  return {
-    x: minX,
-    y: minY,
-    height: maxY - minY,
-    width: maxX - minX
-  };
-}
-
-
-/**
- * Returns all elements that are enclosed from the bounding box.
- *
- *   * If bbox.(width|height) is not specified the method returns
- *     all elements with element.x/y > bbox.x/y
- *   * If only bbox.x or bbox.y is specified, method return all elements with
- *     e.x > bbox.x or e.y > bbox.y
- *
- * @param {Array<djs.model.Shape>} elements List of Elements to search through
- * @param {djs.model.Shape} bbox the enclosing bbox.
- *
- * @return {Array<djs.model.Shape>} enclosed elements
- */
-function getEnclosedElements(elements, bbox) {
-
-  var filteredElements = {};
-
-  forEach(elements, function(element) {
-
-    var e = element;
-
-    if (e.waypoints) {
-      e = getBBox(e);
-    }
-
-    if (!isNumber(bbox.y) && (e.x > bbox.x)) {
-      filteredElements[element.id] = element;
-    }
-    if (!isNumber(bbox.x) && (e.y > bbox.y)) {
-      filteredElements[element.id] = element;
-    }
-    if (e.x > bbox.x && e.y > bbox.y) {
-      if (isNumber(bbox.width) && isNumber(bbox.height) &&
-          e.width  + e.x < bbox.width  + bbox.x &&
-          e.height + e.y < bbox.height + bbox.y) {
-
-        filteredElements[element.id] = element;
-      } else if (!isNumber(bbox.width) || !isNumber(bbox.height)) {
-        filteredElements[element.id] = element;
-      }
-    }
-  });
-
-  return filteredElements;
-}
-
-
-module.exports.add = add;
-module.exports.eachElement = eachElement;
-module.exports.selfAndDirectChildren = selfAndDirectChildren;
-module.exports.selfAndAllChildren = selfAndAllChildren;
-module.exports.getBBox = getBBox;
-module.exports.getEnclosedElements = getEnclosedElements;
-
-module.exports.getClosure = getClosure;
-
-
-function getElementType(element) {
-
-  if ('waypoints' in element) {
-    return 'connection';
-  }
-
-  if ('x' in element) {
-    return 'shape';
-  }
-
-  return 'root';
-}
-
-module.exports.getType = getElementType;
-},{"lodash/collection/forEach":308,"lodash/collection/groupBy":309,"lodash/lang/isArray":411,"lodash/lang/isNumber":414}],286:[function(require,module,exports){
-'use strict';
-
-function __preventDefault(event) {
-  return event && event.preventDefault();
-}
-
-function __stopPropagation(event, immediate) {
-  if (!event) {
-    return;
-  }
-
-  if (event.stopPropagation) {
-    event.stopPropagation();
-  }
-
-  if (immediate && event.stopImmediatePropagation) {
-    event.stopImmediatePropagation();
-  }
-}
-
-
-function getOriginal(event) {
-  return event.originalEvent || event.srcEvent;
-}
-
-module.exports.getOriginal = getOriginal;
-
-
-function stopEvent(event, immediate) {
-  stopPropagation(event, immediate);
-  preventDefault(event);
-}
-
-module.exports.stopEvent = stopEvent;
-
-
-function preventDefault(event) {
-  __preventDefault(event);
-  __preventDefault(getOriginal(event));
-}
-
-module.exports.preventDefault = preventDefault;
-
-
-function stopPropagation(event, immediate) {
-  __stopPropagation(event, immediate);
-  __stopPropagation(getOriginal(event), immediate);
-}
-
-module.exports.stopPropagation = stopPropagation;
-
-
-function toPoint(event) {
-
-  if (event.pointers && event.pointers.length) {
-    event = event.pointers[0];
-  }
-
-  if (event.touches && event.touches.length) {
-    event = event.touches[0];
-  }
-
-  return event ? {
-    x: event.clientX,
-    y: event.clientY
-  } : null;
-}
-
-module.exports.toPoint = toPoint;
-
-},{}],287:[function(require,module,exports){
-'use strict';
-
-/**
- * SVGs for elements are generated by the {@link GraphicsFactory}.
- *
- * This utility gives quick access to the important semantic
- * parts of an element.
- */
-
-/**
- * Returns the visual part of a diagram element
- *
- * @param {Snap<SVGElement>} gfx
- *
- * @return {Snap<SVGElement>}
- */
-function getVisual(gfx) {
-  return gfx.select('.djs-visual');
-}
-
-/**
- * Returns the children for a given diagram element.
- *
- * @param {Snap<SVGElement>} gfx
- * @return {Snap<SVGElement>}
- */
-function getChildren(gfx) {
-  return gfx.parent().children()[1];
-}
-
-/**
- * Returns the visual bbox of an element
- *
- * @param {Snap<SVGElement>} gfx
- *
- * @return {Bounds}
- */
-function getBBox(gfx) {
-  return getVisual(gfx).select('*').getBBox();
-}
-
-
-module.exports.getVisual = getVisual;
-module.exports.getChildren = getChildren;
-module.exports.getBBox = getBBox;
-},{}],288:[function(require,module,exports){
-'use strict';
-
-/**
- * Util that provides unique IDs.
- *
- * @class djs.util.IdGenerator
- * @constructor
- * @memberOf djs.util
- *
- * The ids can be customized via a given prefix and contain a random value to avoid collisions.
- *
- * @param {String} prefix a prefix to prepend to generated ids (for better readability)
- */
-function IdGenerator(prefix) {
-
-  this._counter = 0;
-  this._prefix = (prefix ? prefix + '-' : '') + Math.floor(Math.random() * 1000000000) + '-';
-}
-
-module.exports = IdGenerator;
-
-/**
- * Returns a next unique ID.
- *
- * @method djs.util.IdGenerator#next
- *
- * @returns {String} the id
- */
-IdGenerator.prototype.next = function() {
-  return this._prefix + (++this._counter);
-};
-
-},{}],289:[function(require,module,exports){
-'use strict';
-
-/**
- * Get the logarithm of x with base 10
- * @param  {Integer} value
- */
-function log10(x) {
-  return Math.log(x) / Math.log(10);
-}
-
-module.exports.log10 = log10;
-
-
-function substract(p1, p2) {
-  return {
-    x: p1.x - p2.x,
-    y: p1.y - p2.y
-  };
-}
-
-module.exports.substract = substract;
-
-},{}],290:[function(require,module,exports){
-'use strict';
-
-var getOriginalEvent = require('./Event').getOriginal;
-
-var isMac = require('./Platform').isMac;
-
-
-function isPrimaryButton(event) {
-  // button === 0 -> left áka primary mouse button
-  return !(getOriginalEvent(event) || event).button;
-}
-
-module.exports.isPrimaryButton = isPrimaryButton;
-
-module.exports.isMac = isMac;
-
-module.exports.hasPrimaryModifier = function(event) {
-  var originalEvent = getOriginalEvent(event) || event;
-
-  if (!isPrimaryButton(event)) {
-    return false;
-  }
-
-  // Use alt as primary modifier key for mac OS
-  if (isMac()) {
-    return originalEvent.metaKey;
-  } else {
-    return originalEvent.ctrlKey;
-  }
-};
-
-
-module.exports.hasSecondaryModifier = function(event) {
-  var originalEvent = getOriginalEvent(event) || event;
-
-  return isPrimaryButton(event) && originalEvent.shiftKey;
-};
-
-},{"./Event":286,"./Platform":291}],291:[function(require,module,exports){
-'use strict';
-
-module.exports.isMac = function isMac() {
-  return (/mac/i).test(navigator.platform);
-};
-},{}],292:[function(require,module,exports){
-'use strict';
-
-var Snap = require('../../vendor/snapsvg');
-
-
-module.exports.componentsToPath = function(elements) {
-  return elements.join(',').replace(/,?([A-z]),?/g, '$1');
-};
-
-function toSVGPoints(points) {
-  var result = '';
-
-  for (var i = 0, p; (p = points[i]); i++) {
-    result += p.x + ',' + p.y + ' ';
-  }
-
-  return result;
-}
-
-module.exports.toSVGPoints = toSVGPoints;
-
-module.exports.createLine = function(points, attrs) {
-  return Snap.create('polyline', { points: toSVGPoints(points) }).attr(attrs || {});
-};
-
-module.exports.updateLine = function(gfx, points) {
-  return gfx.attr({ points: toSVGPoints(points) });
-};
-
-},{"../../vendor/snapsvg":300}],293:[function(require,module,exports){
-'use strict';
-
-var isObject = require('lodash/lang/isObject'),
-    assign = require('lodash/object/assign'),
-    pick = require('lodash/object/pick'),
-    forEach = require('lodash/collection/forEach'),
-    reduce = require('lodash/collection/reduce'),
-    merge = require('lodash/object/merge');
-
-var Snap = require('../../vendor/snapsvg');
-
-var DEFAULT_BOX_PADDING = 0;
-
-var DEFAULT_LABEL_SIZE = {
-  width: 150,
-  height: 50
-};
-
-
-function parseAlign(align) {
-
-  var parts = align.split('-');
-
-  return {
-    horizontal: parts[0] || 'center',
-    vertical: parts[1] || 'top'
-  };
-}
-
-function parsePadding(padding) {
-
-  if (isObject(padding)) {
-    return assign({ top: 0, left: 0, right: 0, bottom: 0 }, padding);
-  } else {
-    return {
-      top: padding,
-      left: padding,
-      right: padding,
-      bottom: padding
-    };
-  }
-}
-
-function getTextBBox(text, fakeText) {
-  fakeText.textContent = text;
-  return pick(fakeText.getBBox(), [ 'width', 'height' ]);
-}
-
-
-/**
- * Layout the next line and return the layouted element.
- *
- * Alters the lines passed.
- *
- * @param  {Array<String>} lines
- * @return {Object} the line descriptor, an object { width, height, text }
- */
-function layoutNext(lines, maxWidth, fakeText) {
-
-  var originalLine = lines.shift(),
-      fitLine = originalLine;
-
-  var textBBox;
-
-  for (;;) {
-    textBBox = getTextBBox(fitLine, fakeText);
-
-    textBBox.width = fitLine ? textBBox.width : 0;
-
-    // try to fit
-    if (fitLine === ' ' || fitLine === '' || textBBox.width < Math.round(maxWidth) || fitLine.length < 4) {
-      return fit(lines, fitLine, originalLine, textBBox);
-    }
-
-    fitLine = shortenLine(fitLine, textBBox.width, maxWidth);
-  }
-}
-
-function fit(lines, fitLine, originalLine, textBBox) {
-  if (fitLine.length < originalLine.length) {
-    var nextLine = lines[0] || '',
-        remainder = originalLine.slice(fitLine.length).trim();
-
-    if (/-\s*$/.test(remainder)) {
-      nextLine = remainder + nextLine.replace(/^\s+/, '');
-    } else {
-      nextLine = remainder + ' ' + nextLine;
-    }
-
-    lines[0] = nextLine;
-  }
-  return { width: textBBox.width, height: textBBox.height, text: fitLine };
-}
-
-
-/**
- * Shortens a line based on spacing and hyphens.
- * Returns the shortened result on success.
- *
- * @param  {String} line
- * @param  {Number} maxLength the maximum characters of the string
- * @return {String} the shortened string
- */
-function semanticShorten(line, maxLength) {
-  var parts = line.split(/(\s|-)/g),
-      part,
-      shortenedParts = [],
-      length = 0;
-
-  // try to shorten via spaces + hyphens
-  if (parts.length > 1) {
-    while ((part = parts.shift())) {
-      if (part.length + length < maxLength) {
-        shortenedParts.push(part);
-        length += part.length;
-      } else {
-        // remove previous part, too if hyphen does not fit anymore
-        if (part === '-') {
-          shortenedParts.pop();
-        }
-
-        break;
-      }
-    }
-  }
-
-  return shortenedParts.join('');
-}
-
-
-function shortenLine(line, width, maxWidth) {
-  var length = Math.max(line.length * (maxWidth / width), 1);
-
-  // try to shorten semantically (i.e. based on spaces and hyphens)
-  var shortenedLine = semanticShorten(line, length);
-
-  if (!shortenedLine) {
-
-    // force shorten by cutting the long word
-    shortenedLine = line.slice(0, Math.max(Math.round(length - 1), 1));
-  }
-
-  return shortenedLine;
-}
-
-
-/**
- * Creates a new label utility
- *
- * @param {Object} config
- * @param {Dimensions} config.size
- * @param {Number} config.padding
- * @param {Object} config.style
- * @param {String} config.align
- */
-function Text(config) {
-
-  this._config = assign({}, {
-    size: DEFAULT_LABEL_SIZE,
-    padding: DEFAULT_BOX_PADDING,
-    style: {},
-    align: 'center-top'
-  }, config || {});
-}
-
-
-/**
- * Create a label in the parent node.
- *
- * @method Text#createText
- *
- * @param {SVGElement} parent the parent to draw the label on
- * @param {String} text the text to render on the label
- * @param {Object} options
- * @param {String} options.align how to align in the bounding box.
- *                             Any of { 'center-middle', 'center-top' }, defaults to 'center-top'.
- * @param {String} options.style style to be applied to the text
- *
- * @return {SVGText} the text element created
- */
-Text.prototype.createText = function(parent, text, options) {
-
-  var box = merge({}, this._config.size, options.box || {}),
-      style = merge({}, this._config.style, options.style || {}),
-      align = parseAlign(options.align || this._config.align),
-      padding = parsePadding(options.padding !== undefined ? options.padding : this._config.padding);
-
-  var lines = text.split(/\r?\n/g),
-      layouted = [];
-
-  var maxWidth = box.width - padding.left - padding.right;
-
-  // FF regression: ensure text is shown during rendering
-  // by attaching it directly to the body
-  var fakeText = parent.paper.text(0, 0, '').attr(style).node;
-
-  while (lines.length) {
-    layouted.push(layoutNext(lines, maxWidth, fakeText));
-  }
-
-  var totalHeight = reduce(layouted, function(sum, line, idx) {
-    return sum + line.height;
-  }, 0);
-
-  // the y position of the next line
-  var y, x;
-
-  switch (align.vertical) {
-  case 'middle':
-    y = (box.height - totalHeight) / 2 - layouted[0].height / 4;
-    break;
-
-  default:
-    y = padding.top;
-  }
-
-  var textElement = parent.text().attr(style);
-
-  forEach(layouted, function(line) {
-    y += line.height;
-
-    switch (align.horizontal) {
-    case 'left':
-      x = padding.left;
-      break;
-
-    case 'right':
-      x = (maxWidth - padding.right - line.width);
-      break;
-
-    default:
-        // aka center
-      x = Math.max(((maxWidth - line.width) / 2 + padding.left), 0);
-    }
-
-
-    var tspan = Snap.create('tspan', { x: x, y: y }).node;
-    tspan.textContent = line.text;
-
-    textElement.append(tspan);
-  });
-
-  // remove fake text
-  fakeText.parentNode.removeChild(fakeText);
-
-  return textElement;
-};
-
-
-module.exports = Text;
-
-},{"../../vendor/snapsvg":300,"lodash/collection/forEach":308,"lodash/collection/reduce":311,"lodash/lang/isObject":415,"lodash/object/assign":420,"lodash/object/merge":423,"lodash/object/pick":426}],294:[function(require,module,exports){
-
-var isArray = function(obj) {
-  return Object.prototype.toString.call(obj) === '[object Array]';
-};
-
-var annotate = function() {
-  var args = Array.prototype.slice.call(arguments);
-  
-  if (args.length === 1 && isArray(args[0])) {
-    args = args[0];
-  }
-
-  var fn = args.pop();
-
-  fn.$inject = args;
-
-  return fn;
-};
-
-
-// Current limitations:
-// - can't put into "function arg" comments
-// function /* (no parenthesis like this) */ (){}
-// function abc( /* xx (no parenthesis like this) */ a, b) {}
-//
-// Just put the comment before function or inside:
-// /* (((this is fine))) */ function(a, b) {}
-// function abc(a) { /* (((this is fine))) */}
-
-var FN_ARGS = /^function\s*[^\(]*\(\s*([^\)]*)\)/m;
-var FN_ARG = /\/\*([^\*]*)\*\//m;
-
-var parse = function(fn) {
-  if (typeof fn !== 'function') {
-    throw new Error('Cannot annotate "' + fn + '". Expected a function!');
-  }
-
-  var match = fn.toString().match(FN_ARGS);
-  return match[1] && match[1].split(',').map(function(arg) {
-    match = arg.match(FN_ARG);
-    return match ? match[1].trim() : arg.trim();
-  }) || [];
-};
-
-
-exports.annotate = annotate;
-exports.parse = parse;
-exports.isArray = isArray;
-
-},{}],295:[function(require,module,exports){
-module.exports = {
-  annotate: require('./annotation').annotate,
-  Module: require('./module'),
-  Injector: require('./injector')
-};
-
-},{"./annotation":294,"./injector":296,"./module":297}],296:[function(require,module,exports){
-var Module = require('./module');
-var autoAnnotate = require('./annotation').parse;
-var annotate = require('./annotation').annotate;
-var isArray = require('./annotation').isArray;
-
-
-var Injector = function(modules, parent) {
-  parent = parent || {
-    get: function(name, strict) {
-      currentlyResolving.push(name);
-
-      if (strict === false) {
-        return null;
-      } else {
-        throw error('No provider for "' + name + '"!');
-      }
-    }
-  };
-
-  var currentlyResolving = [];
-  var providers = this._providers = Object.create(parent._providers || null);
-  var instances = this._instances = Object.create(null);
-
-  var self = instances.injector = this;
-
-  var error = function(msg) {
-    var stack = currentlyResolving.join(' -> ');
-    currentlyResolving.length = 0;
-    return new Error(stack ? msg + ' (Resolving: ' + stack + ')' : msg);
-  };
-
-  /**
-   * Return a named service.
-   *
-   * @param {String} name
-   * @param {Boolean} [strict=true] if false, resolve missing services to null
-   *
-   * @return {Object}
-   */
-  var get = function(name, strict) {
-    if (!providers[name] && name.indexOf('.') !== -1) {
-      var parts = name.split('.');
-      var pivot = get(parts.shift());
-
-      while(parts.length) {
-        pivot = pivot[parts.shift()];
-      }
-
-      return pivot;
-    }
-
-    if (Object.hasOwnProperty.call(instances, name)) {
-      return instances[name];
-    }
-
-    if (Object.hasOwnProperty.call(providers, name)) {
-      if (currentlyResolving.indexOf(name) !== -1) {
-        currentlyResolving.push(name);
-        throw error('Cannot resolve circular dependency!');
-      }
-
-      currentlyResolving.push(name);
-      instances[name] = providers[name][0](providers[name][1]);
-      currentlyResolving.pop();
-
-      return instances[name];
-    }
-
-    return parent.get(name, strict);
-  };
-
-  var instantiate = function(Type) {
-    var instance = Object.create(Type.prototype);
-    var returned = invoke(Type, instance);
-
-    return typeof returned === 'object' ? returned : instance;
-  };
-
-  var invoke = function(fn, context) {
-    if (typeof fn !== 'function') {
-      if (isArray(fn)) {
-        fn = annotate(fn.slice());
-      } else {
-        throw new Error('Cannot invoke "' + fn + '". Expected a function!');
-      }
-    }
-
-    var inject = fn.$inject && fn.$inject || autoAnnotate(fn);
-    var dependencies = inject.map(function(dep) {
-      return get(dep);
-    });
-
-    // TODO(vojta): optimize without apply
-    return fn.apply(context, dependencies);
-  };
-
-
-  var createPrivateInjectorFactory = function(privateChildInjector) {
-    return annotate(function(key) {
-      return privateChildInjector.get(key);
-    });
-  };
-
-  var createChild = function(modules, forceNewInstances) {
-    if (forceNewInstances && forceNewInstances.length) {
-      var fromParentModule = Object.create(null);
-      var matchedScopes = Object.create(null);
-
-      var privateInjectorsCache = [];
-      var privateChildInjectors = [];
-      var privateChildFactories = [];
-
-      var provider;
-      var cacheIdx;
-      var privateChildInjector;
-      var privateChildInjectorFactory;
-      for (var name in providers) {
-        provider = providers[name];
-
-        if (forceNewInstances.indexOf(name) !== -1) {
-          if (provider[2] === 'private') {
-            cacheIdx = privateInjectorsCache.indexOf(provider[3]);
-            if (cacheIdx === -1) {
-              privateChildInjector = provider[3].createChild([], forceNewInstances);
-              privateChildInjectorFactory = createPrivateInjectorFactory(privateChildInjector);
-              privateInjectorsCache.push(provider[3]);
-              privateChildInjectors.push(privateChildInjector);
-              privateChildFactories.push(privateChildInjectorFactory);
-              fromParentModule[name] = [privateChildInjectorFactory, name, 'private', privateChildInjector];
-            } else {
-              fromParentModule[name] = [privateChildFactories[cacheIdx], name, 'private', privateChildInjectors[cacheIdx]];
-            }
-          } else {
-            fromParentModule[name] = [provider[2], provider[1]];
-          }
-          matchedScopes[name] = true;
-        }
-
-        if ((provider[2] === 'factory' || provider[2] === 'type') && provider[1].$scope) {
-          /*jshint -W083 */
-          forceNewInstances.forEach(function(scope) {
-            if (provider[1].$scope.indexOf(scope) !== -1) {
-              fromParentModule[name] = [provider[2], provider[1]];
-              matchedScopes[scope] = true;
-            }
-          });
-        }
-      }
-
-      forceNewInstances.forEach(function(scope) {
-        if (!matchedScopes[scope]) {
-          throw new Error('No provider for "' + scope + '". Cannot use provider from the parent!');
-        }
-      });
-
-      modules.unshift(fromParentModule);
-    }
-
-    return new Injector(modules, self);
-  };
-
-  var factoryMap = {
-    factory: invoke,
-    type: instantiate,
-    value: function(value) {
-      return value;
-    }
-  };
-
-  modules.forEach(function(module) {
-
-    function arrayUnwrap(type, value) {
-      if (type !== 'value' && isArray(value)) {
-        value = annotate(value.slice());
-      }
-
-      return value;
-    }
-
-    // TODO(vojta): handle wrong inputs (modules)
-    if (module instanceof Module) {
-      module.forEach(function(provider) {
-        var name = provider[0];
-        var type = provider[1];
-        var value = provider[2];
-
-        providers[name] = [factoryMap[type], arrayUnwrap(type, value), type];
-      });
-    } else if (typeof module === 'object') {
-      if (module.__exports__) {
-        var clonedModule = Object.keys(module).reduce(function(m, key) {
-          if (key.substring(0, 2) !== '__') {
-            m[key] = module[key];
-          }
-          return m;
-        }, Object.create(null));
-
-        var privateInjector = new Injector((module.__modules__ || []).concat([clonedModule]), self);
-        var getFromPrivateInjector = annotate(function(key) {
-          return privateInjector.get(key);
-        });
-        module.__exports__.forEach(function(key) {
-          providers[key] = [getFromPrivateInjector, key, 'private', privateInjector];
-        });
-      } else {
-        Object.keys(module).forEach(function(name) {
-          if (module[name][2] === 'private') {
-            providers[name] = module[name];
-            return;
-          }
-
-          var type = module[name][0];
-          var value = module[name][1];
-
-          providers[name] = [factoryMap[type], arrayUnwrap(type, value), type];
-        });
-      }
-    }
-  });
-
-  // public API
-  this.get = get;
-  this.invoke = invoke;
-  this.instantiate = instantiate;
-  this.createChild = createChild;
-};
-
-module.exports = Injector;
-
-},{"./annotation":294,"./module":297}],297:[function(require,module,exports){
-var Module = function() {
-  var providers = [];
-
-  this.factory = function(name, factory) {
-    providers.push([name, 'factory', factory]);
-    return this;
-  };
-
-  this.value = function(name, value) {
-    providers.push([name, 'value', value]);
-    return this;
-  };
-
-  this.type = function(name, type) {
-    providers.push([name, 'type', type]);
-    return this;
-  };
-
-  this.forEach = function(iterator) {
-    providers.forEach(iterator);
-  };
-};
-
-module.exports = Module;
-
-},{}],298:[function(require,module,exports){
-// Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-// 
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-// http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// ┌────────────────────────────────────────────────────────────┐ \\
-// │ Eve 0.4.2 - JavaScript Events Library                      │ \\
-// ├────────────────────────────────────────────────────────────┤ \\
-// │ Author Dmitry Baranovskiy (http://dmitry.baranovskiy.com/) │ \\
-// └────────────────────────────────────────────────────────────┘ \\
-
-(function (glob) {
-    var version = "0.4.2",
-        has = "hasOwnProperty",
-        separator = /[\.\/]/,
-        comaseparator = /\s*,\s*/,
-        wildcard = "*",
-        fun = function () {},
-        numsort = function (a, b) {
-            return a - b;
-        },
-        current_event,
-        stop,
-        events = {n: {}},
-        firstDefined = function () {
-            for (var i = 0, ii = this.length; i < ii; i++) {
-                if (typeof this[i] != "undefined") {
-                    return this[i];
-                }
-            }
-        },
-        lastDefined = function () {
-            var i = this.length;
-            while (--i) {
-                if (typeof this[i] != "undefined") {
-                    return this[i];
-                }
-            }
-        },
-    /*\
-     * eve
-     [ method ]
-
-     * Fires event with given `name`, given scope and other parameters.
-
-     > Arguments
-
-     - name (string) name of the *event*, dot (`.`) or slash (`/`) separated
-     - scope (object) context for the event handlers
-     - varargs (...) the rest of arguments will be sent to event handlers
-
-     = (object) array of returned values from the listeners. Array has two methods `.firstDefined()` and `.lastDefined()` to get first or last not `undefined` value.
-    \*/
-        eve = function (name, scope) {
-            name = String(name);
-            var e = events,
-                oldstop = stop,
-                args = Array.prototype.slice.call(arguments, 2),
-                listeners = eve.listeners(name),
-                z = 0,
-                f = false,
-                l,
-                indexed = [],
-                queue = {},
-                out = [],
-                ce = current_event,
-                errors = [];
-            out.firstDefined = firstDefined;
-            out.lastDefined = lastDefined;
-            current_event = name;
-            stop = 0;
-            for (var i = 0, ii = listeners.length; i < ii; i++) if ("zIndex" in listeners[i]) {
-                indexed.push(listeners[i].zIndex);
-                if (listeners[i].zIndex < 0) {
-                    queue[listeners[i].zIndex] = listeners[i];
-                }
-            }
-            indexed.sort(numsort);
-            while (indexed[z] < 0) {
-                l = queue[indexed[z++]];
-                out.push(l.apply(scope, args));
-                if (stop) {
-                    stop = oldstop;
-                    return out;
-                }
-            }
-            for (i = 0; i < ii; i++) {
-                l = listeners[i];
-                if ("zIndex" in l) {
-                    if (l.zIndex == indexed[z]) {
-                        out.push(l.apply(scope, args));
-                        if (stop) {
-                            break;
-                        }
-                        do {
-                            z++;
-                            l = queue[indexed[z]];
-                            l && out.push(l.apply(scope, args));
-                            if (stop) {
-                                break;
-                            }
-                        } while (l)
-                    } else {
-                        queue[l.zIndex] = l;
-                    }
-                } else {
-                    out.push(l.apply(scope, args));
-                    if (stop) {
-                        break;
-                    }
-                }
-            }
-            stop = oldstop;
-            current_event = ce;
-            return out;
-        };
-        // Undocumented. Debug only.
-        eve._events = events;
-    /*\
-     * eve.listeners
-     [ method ]
-
-     * Internal method which gives you array of all event handlers that will be triggered by the given `name`.
-
-     > Arguments
-
-     - name (string) name of the event, dot (`.`) or slash (`/`) separated
-
-     = (array) array of event handlers
-    \*/
-    eve.listeners = function (name) {
-        var names = name.split(separator),
-            e = events,
-            item,
-            items,
-            k,
-            i,
-            ii,
-            j,
-            jj,
-            nes,
-            es = [e],
-            out = [];
-        for (i = 0, ii = names.length; i < ii; i++) {
-            nes = [];
-            for (j = 0, jj = es.length; j < jj; j++) {
-                e = es[j].n;
-                items = [e[names[i]], e[wildcard]];
-                k = 2;
-                while (k--) {
-                    item = items[k];
-                    if (item) {
-                        nes.push(item);
-                        out = out.concat(item.f || []);
-                    }
-                }
-            }
-            es = nes;
-        }
-        return out;
-    };
-    
-    /*\
-     * eve.on
-     [ method ]
-     **
-     * Binds given event handler with a given name. You can use wildcards “`*`” for the names:
-     | eve.on("*.under.*", f);
-     | eve("mouse.under.floor"); // triggers f
-     * Use @eve to trigger the listener.
-     **
-     > Arguments
-     **
-     - name (string) name of the event, dot (`.`) or slash (`/`) separated, with optional wildcards
-     - f (function) event handler function
-     **
-     = (function) returned function accepts a single numeric parameter that represents z-index of the handler. It is an optional feature and only used when you need to ensure that some subset of handlers will be invoked in a given order, despite of the order of assignment. 
-     > Example:
-     | eve.on("mouse", eatIt)(2);
-     | eve.on("mouse", scream);
-     | eve.on("mouse", catchIt)(1);
-     * This will ensure that `catchIt` function will be called before `eatIt`.
-     *
-     * If you want to put your handler before non-indexed handlers, specify a negative value.
-     * Note: I assume most of the time you don’t need to worry about z-index, but it’s nice to have this feature “just in case”.
-    \*/
-    eve.on = function (name, f) {
-        name = String(name);
-        if (typeof f != "function") {
-            return function () {};
-        }
-        var names = name.split(comaseparator);
-        for (var i = 0, ii = names.length; i < ii; i++) {
-            (function (name) {
-                var names = name.split(separator),
-                    e = events,
-                    exist;
-                for (var i = 0, ii = names.length; i < ii; i++) {
-                    e = e.n;
-                    e = e.hasOwnProperty(names[i]) && e[names[i]] || (e[names[i]] = {n: {}});
-                }
-                e.f = e.f || [];
-                for (i = 0, ii = e.f.length; i < ii; i++) if (e.f[i] == f) {
-                    exist = true;
-                    break;
-                }
-                !exist && e.f.push(f);
-            }(names[i]));
-        }
-        return function (zIndex) {
-            if (+zIndex == +zIndex) {
-                f.zIndex = +zIndex;
-            }
-        };
-    };
-    /*\
-     * eve.f
-     [ method ]
-     **
-     * Returns function that will fire given event with optional arguments.
-     * Arguments that will be passed to the result function will be also
-     * concated to the list of final arguments.
-     | el.onclick = eve.f("click", 1, 2);
-     | eve.on("click", function (a, b, c) {
-     |     console.log(a, b, c); // 1, 2, [event object]
-     | });
-     > Arguments
-     - event (string) event name
-     - varargs (…) and any other arguments
-     = (function) possible event handler function
-    \*/
-    eve.f = function (event) {
-        var attrs = [].slice.call(arguments, 1);
-        return function () {
-            eve.apply(null, [event, null].concat(attrs).concat([].slice.call(arguments, 0)));
-        };
-    };
-    /*\
-     * eve.stop
-     [ method ]
-     **
-     * Is used inside an event handler to stop the event, preventing any subsequent listeners from firing.
-    \*/
-    eve.stop = function () {
-        stop = 1;
-    };
-    /*\
-     * eve.nt
-     [ method ]
-     **
-     * Could be used inside event handler to figure out actual name of the event.
-     **
-     > Arguments
-     **
-     - subname (string) #optional subname of the event
-     **
-     = (string) name of the event, if `subname` is not specified
-     * or
-     = (boolean) `true`, if current event’s name contains `subname`
-    \*/
-    eve.nt = function (subname) {
-        if (subname) {
-            return new RegExp("(?:\\.|\\/|^)" + subname + "(?:\\.|\\/|$)").test(current_event);
-        }
-        return current_event;
-    };
-    /*\
-     * eve.nts
-     [ method ]
-     **
-     * Could be used inside event handler to figure out actual name of the event.
-     **
-     **
-     = (array) names of the event
-    \*/
-    eve.nts = function () {
-        return current_event.split(separator);
-    };
-    /*\
-     * eve.off
-     [ method ]
-     **
-     * Removes given function from the list of event listeners assigned to given name.
-     * If no arguments specified all the events will be cleared.
-     **
-     > Arguments
-     **
-     - name (string) name of the event, dot (`.`) or slash (`/`) separated, with optional wildcards
-     - f (function) event handler function
-    \*/
-    /*\
-     * eve.unbind
-     [ method ]
-     **
-     * See @eve.off
-    \*/
-    eve.off = eve.unbind = function (name, f) {
-        if (!name) {
-            eve._events = events = {n: {}};
-            return;
-        }
-        var names = name.split(comaseparator);
-        if (names.length > 1) {
-            for (var i = 0, ii = names.length; i < ii; i++) {
-                eve.off(names[i], f);
-            }
-            return;
-        }
-        names = name.split(separator);
-        var e,
-            key,
-            splice,
-            i, ii, j, jj,
-            cur = [events];
-        for (i = 0, ii = names.length; i < ii; i++) {
-            for (j = 0; j < cur.length; j += splice.length - 2) {
-                splice = [j, 1];
-                e = cur[j].n;
-                if (names[i] != wildcard) {
-                    if (e[names[i]]) {
-                        splice.push(e[names[i]]);
-                    }
-                } else {
-                    for (key in e) if (e[has](key)) {
-                        splice.push(e[key]);
-                    }
-                }
-                cur.splice.apply(cur, splice);
-            }
-        }
-        for (i = 0, ii = cur.length; i < ii; i++) {
-            e = cur[i];
-            while (e.n) {
-                if (f) {
-                    if (e.f) {
-                        for (j = 0, jj = e.f.length; j < jj; j++) if (e.f[j] == f) {
-                            e.f.splice(j, 1);
-                            break;
-                        }
-                        !e.f.length && delete e.f;
-                    }
-                    for (key in e.n) if (e.n[has](key) && e.n[key].f) {
-                        var funcs = e.n[key].f;
-                        for (j = 0, jj = funcs.length; j < jj; j++) if (funcs[j] == f) {
-                            funcs.splice(j, 1);
-                            break;
-                        }
-                        !funcs.length && delete e.n[key].f;
-                    }
-                } else {
-                    delete e.f;
-                    for (key in e.n) if (e.n[has](key) && e.n[key].f) {
-                        delete e.n[key].f;
-                    }
-                }
-                e = e.n;
-            }
-        }
-    };
-    /*\
-     * eve.once
-     [ method ]
-     **
-     * Binds given event handler with a given name to only run once then unbind itself.
-     | eve.once("login", f);
-     | eve("login"); // triggers f
-     | eve("login"); // no listeners
-     * Use @eve to trigger the listener.
-     **
-     > Arguments
-     **
-     - name (string) name of the event, dot (`.`) or slash (`/`) separated, with optional wildcards
-     - f (function) event handler function
-     **
-     = (function) same return function as @eve.on
-    \*/
-    eve.once = function (name, f) {
-        var f2 = function () {
-            eve.unbind(name, f2);
-            return f.apply(this, arguments);
-        };
-        return eve.on(name, f2);
-    };
-    /*\
-     * eve.version
-     [ property (string) ]
-     **
-     * Current version of the library.
-    \*/
-    eve.version = version;
-    eve.toString = function () {
-        return "You are running Eve " + version;
-    };
-    (typeof module != "undefined" && module.exports) ? (module.exports = eve) : (typeof define === "function" && define.amd ? (define("eve", [], function() { return eve; })) : (glob.eve = eve));
-})(this);
-
-},{}],299:[function(require,module,exports){
-// Snap.svg 0.3.0
-// 
-// Copyright (c) 2013 – 2014 Adobe Systems Incorporated. All rights reserved.
-// 
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-// http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-// 
-// build: 2014-09-08
-
-(function (glob, factory) {
-    // AMD support
-    if (typeof define === "function" && define.amd) {
-        // Define as an anonymous module
-        define(["eve"], function( eve ) {
-            return factory(glob, eve);
-        });
-    } else if (typeof exports !== 'undefined') {
-        // Next for Node.js or CommonJS
-        var eve = require('eve');
-        module.exports = factory(glob, eve);
-    } else {
-        // Browser globals (glob is window)
-        // Snap adds itself to window
-        factory(glob, glob.eve);
-    }
-}(window || this, function (window, eve) {
-
-// Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-// 
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-// http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-var mina = (function (eve) {
-    var animations = {},
-    requestAnimFrame = window.requestAnimationFrame       ||
-                       window.webkitRequestAnimationFrame ||
-                       window.mozRequestAnimationFrame    ||
-                       window.oRequestAnimationFrame      ||
-                       window.msRequestAnimationFrame     ||
-                       function (callback) {
-                           setTimeout(callback, 16);
-                       },
-    isArray = Array.isArray || function (a) {
-        return a instanceof Array ||
-            Object.prototype.toString.call(a) == "[object Array]";
-    },
-    idgen = 0,
-    idprefix = "M" + (+new Date).toString(36),
-    ID = function () {
-        return idprefix + (idgen++).toString(36);
-    },
-    diff = function (a, b, A, B) {
-        if (isArray(a)) {
-            res = [];
-            for (var i = 0, ii = a.length; i < ii; i++) {
-                res[i] = diff(a[i], b, A[i], B);
-            }
-            return res;
-        }
-        var dif = (A - a) / (B - b);
-        return function (bb) {
-            return a + dif * (bb - b);
-        };
-    },
-    timer = Date.now || function () {
-        return +new Date;
-    },
-    sta = function (val) {
-        var a = this;
-        if (val == null) {
-            return a.s;
-        }
-        var ds = a.s - val;
-        a.b += a.dur * ds;
-        a.B += a.dur * ds;
-        a.s = val;
-    },
-    speed = function (val) {
-        var a = this;
-        if (val == null) {
-            return a.spd;
-        }
-        a.spd = val;
-    },
-    duration = function (val) {
-        var a = this;
-        if (val == null) {
-            return a.dur;
-        }
-        a.s = a.s * val / a.dur;
-        a.dur = val;
-    },
-    stopit = function () {
-        var a = this;
-        delete animations[a.id];
-        a.update();
-        eve("mina.stop." + a.id, a);
-    },
-    pause = function () {
-        var a = this;
-        if (a.pdif) {
-            return;
-        }
-        delete animations[a.id];
-        a.update();
-        a.pdif = a.get() - a.b;
-    },
-    resume = function () {
-        var a = this;
-        if (!a.pdif) {
-            return;
-        }
-        a.b = a.get() - a.pdif;
-        delete a.pdif;
-        animations[a.id] = a;
-    },
-    update = function () {
-        var a = this,
-            res;
-        if (isArray(a.start)) {
-            res = [];
-            for (var j = 0, jj = a.start.length; j < jj; j++) {
-                res[j] = +a.start[j] +
-                    (a.end[j] - a.start[j]) * a.easing(a.s);
-            }
-        } else {
-            res = +a.start + (a.end - a.start) * a.easing(a.s);
-        }
-        a.set(res);
-    },
-    frame = function () {
-        var len = 0;
-        for (var i in animations) if (animations.hasOwnProperty(i)) {
-            var a = animations[i],
-                b = a.get(),
-                res;
-            len++;
-            a.s = (b - a.b) / (a.dur / a.spd);
-            if (a.s >= 1) {
-                delete animations[i];
-                a.s = 1;
-                len--;
-                (function (a) {
-                    setTimeout(function () {
-                        eve("mina.finish." + a.id, a);
-                    });
-                }(a));
-            }
-            a.update();
-        }
-        len && requestAnimFrame(frame);
-    },
-    /*\
-     * mina
-     [ method ]
-     **
-     * Generic animation of numbers
-     **
-     - a (number) start _slave_ number
-     - A (number) end _slave_ number
-     - b (number) start _master_ number (start time in general case)
-     - B (number) end _master_ number (end time in gereal case)
-     - get (function) getter of _master_ number (see @mina.time)
-     - set (function) setter of _slave_ number
-     - easing (function) #optional easing function, default is @mina.linear
-     = (object) animation descriptor
-     o {
-     o         id (string) animation id,
-     o         start (number) start _slave_ number,
-     o         end (number) end _slave_ number,
-     o         b (number) start _master_ number,
-     o         s (number) animation status (0..1),
-     o         dur (number) animation duration,
-     o         spd (number) animation speed,
-     o         get (function) getter of _master_ number (see @mina.time),
-     o         set (function) setter of _slave_ number,
-     o         easing (function) easing function, default is @mina.linear,
-     o         status (function) status getter/setter,
-     o         speed (function) speed getter/setter,
-     o         duration (function) duration getter/setter,
-     o         stop (function) animation stopper
-     o         pause (function) pauses the animation
-     o         resume (function) resumes the animation
-     o         update (function) calles setter with the right value of the animation
-     o }
-    \*/
-    mina = function (a, A, b, B, get, set, easing) {
-        var anim = {
-            id: ID(),
-            start: a,
-            end: A,
-            b: b,
-            s: 0,
-            dur: B - b,
-            spd: 1,
-            get: get,
-            set: set,
-            easing: easing || mina.linear,
-            status: sta,
-            speed: speed,
-            duration: duration,
-            stop: stopit,
-            pause: pause,
-            resume: resume,
-            update: update
-        };
-        animations[anim.id] = anim;
-        var len = 0, i;
-        for (i in animations) if (animations.hasOwnProperty(i)) {
-            len++;
-            if (len == 2) {
-                break;
-            }
-        }
-        len == 1 && requestAnimFrame(frame);
-        return anim;
-    };
-    /*\
-     * mina.time
-     [ method ]
-     **
-     * Returns the current time. Equivalent to:
-     | function () {
-     |     return (new Date).getTime();
-     | }
-    \*/
-    mina.time = timer;
-    /*\
-     * mina.getById
-     [ method ]
-     **
-     * Returns an animation by its id
-     - id (string) animation's id
-     = (object) See @mina
-    \*/
-    mina.getById = function (id) {
-        return animations[id] || null;
-    };
-
-    /*\
-     * mina.linear
-     [ method ]
-     **
-     * Default linear easing
-     - n (number) input 0..1
-     = (number) output 0..1
-    \*/
-    mina.linear = function (n) {
-        return n;
-    };
-    /*\
-     * mina.easeout
-     [ method ]
-     **
-     * Easeout easing
-     - n (number) input 0..1
-     = (number) output 0..1
-    \*/
-    mina.easeout = function (n) {
-        return Math.pow(n, 1.7);
-    };
-    /*\
-     * mina.easein
-     [ method ]
-     **
-     * Easein easing
-     - n (number) input 0..1
-     = (number) output 0..1
-    \*/
-    mina.easein = function (n) {
-        return Math.pow(n, .48);
-    };
-    /*\
-     * mina.easeinout
-     [ method ]
-     **
-     * Easeinout easing
-     - n (number) input 0..1
-     = (number) output 0..1
-    \*/
-    mina.easeinout = function (n) {
-        if (n == 1) {
-            return 1;
-        }
-        if (n == 0) {
-            return 0;
-        }
-        var q = .48 - n / 1.04,
-            Q = Math.sqrt(.1734 + q * q),
-            x = Q - q,
-            X = Math.pow(Math.abs(x), 1 / 3) * (x < 0 ? -1 : 1),
-            y = -Q - q,
-            Y = Math.pow(Math.abs(y), 1 / 3) * (y < 0 ? -1 : 1),
-            t = X + Y + .5;
-        return (1 - t) * 3 * t * t + t * t * t;
-    };
-    /*\
-     * mina.backin
-     [ method ]
-     **
-     * Backin easing
-     - n (number) input 0..1
-     = (number) output 0..1
-    \*/
-    mina.backin = function (n) {
-        if (n == 1) {
-            return 1;
-        }
-        var s = 1.70158;
-        return n * n * ((s + 1) * n - s);
-    };
-    /*\
-     * mina.backout
-     [ method ]
-     **
-     * Backout easing
-     - n (number) input 0..1
-     = (number) output 0..1
-    \*/
-    mina.backout = function (n) {
-        if (n == 0) {
-            return 0;
-        }
-        n = n - 1;
-        var s = 1.70158;
-        return n * n * ((s + 1) * n + s) + 1;
-    };
-    /*\
-     * mina.elastic
-     [ method ]
-     **
-     * Elastic easing
-     - n (number) input 0..1
-     = (number) output 0..1
-    \*/
-    mina.elastic = function (n) {
-        if (n == !!n) {
-            return n;
-        }
-        return Math.pow(2, -10 * n) * Math.sin((n - .075) *
-            (2 * Math.PI) / .3) + 1;
-    };
-    /*\
-     * mina.bounce
-     [ method ]
-     **
-     * Bounce easing
-     - n (number) input 0..1
-     = (number) output 0..1
-    \*/
-    mina.bounce = function (n) {
-        var s = 7.5625,
-            p = 2.75,
-            l;
-        if (n < (1 / p)) {
-            l = s * n * n;
-        } else {
-            if (n < (2 / p)) {
-                n -= (1.5 / p);
-                l = s * n * n + .75;
-            } else {
-                if (n < (2.5 / p)) {
-                    n -= (2.25 / p);
-                    l = s * n * n + .9375;
-                } else {
-                    n -= (2.625 / p);
-                    l = s * n * n + .984375;
-                }
-            }
-        }
-        return l;
-    };
-    window.mina = mina;
-    return mina;
-})(typeof eve == "undefined" ? function () {} : eve);
-// Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-var Snap = (function(root) {
-Snap.version = "0.3.0";
-/*\
- * Snap
- [ method ]
- **
- * Creates a drawing surface or wraps existing SVG element.
- **
- - width (number|string) width of surface
- - height (number|string) height of surface
- * or
- - DOM (SVGElement) element to be wrapped into Snap structure
- * or
- - array (array) array of elements (will return set of elements)
- * or
- - query (string) CSS query selector
- = (object) @Element
-\*/
-function Snap(w, h) {
-    if (w) {
-        if (w.tagName) {
-            return wrap(w);
-        }
-        if (is(w, "array") && Snap.set) {
-            return Snap.set.apply(Snap, w);
-        }
-        if (w instanceof Element) {
-            return w;
-        }
-        if (h == null) {
-            w = glob.doc.querySelector(w);
-            return wrap(w);
-        }
-    }
-    w = w == null ? "100%" : w;
-    h = h == null ? "100%" : h;
-    return new Paper(w, h);
-}
-Snap.toString = function () {
-    return "Snap v" + this.version;
-};
-Snap._ = {};
-var glob = {
-    win: root.window,
-    doc: root.window.document
-};
-Snap._.glob = glob;
-var has = "hasOwnProperty",
-    Str = String,
-    toFloat = parseFloat,
-    toInt = parseInt,
-    math = Math,
-    mmax = math.max,
-    mmin = math.min,
-    abs = math.abs,
-    pow = math.pow,
-    PI = math.PI,
-    round = math.round,
-    E = "",
-    S = " ",
-    objectToString = Object.prototype.toString,
-    ISURL = /^url\(['"]?([^\)]+?)['"]?\)$/i,
-    colourRegExp = /^\s*((#[a-f\d]{6})|(#[a-f\d]{3})|rgba?\(\s*([\d\.]+%?\s*,\s*[\d\.]+%?\s*,\s*[\d\.]+%?(?:\s*,\s*[\d\.]+%?)?)\s*\)|hsba?\(\s*([\d\.]+(?:deg|\xb0|%)?\s*,\s*[\d\.]+%?\s*,\s*[\d\.]+(?:%?\s*,\s*[\d\.]+)?%?)\s*\)|hsla?\(\s*([\d\.]+(?:deg|\xb0|%)?\s*,\s*[\d\.]+%?\s*,\s*[\d\.]+(?:%?\s*,\s*[\d\.]+)?%?)\s*\))\s*$/i,
-    bezierrg = /^(?:cubic-)?bezier\(([^,]+),([^,]+),([^,]+),([^\)]+)\)/,
-    reURLValue = /^url\(#?([^)]+)\)$/,
-    separator = Snap._.separator = /[,\s]+/,
-    whitespace = /[\s]/g,
-    commaSpaces = /[\s]*,[\s]*/,
-    hsrg = {hs: 1, rg: 1},
-    pathCommand = /([a-z])[\s,]*((-?\d*\.?\d*(?:e[\-+]?\d+)?[\s]*,?[\s]*)+)/ig,
-    tCommand = /([rstm])[\s,]*((-?\d*\.?\d*(?:e[\-+]?\d+)?[\s]*,?[\s]*)+)/ig,
-    pathValues = /(-?\d*\.?\d*(?:e[\-+]?\\d+)?)[\s]*,?[\s]*/ig,
-    idgen = 0,
-    idprefix = "S" + (+new Date).toString(36),
-    ID = function (el) {
-        return (el && el.type ? el.type : E) + idprefix + (idgen++).toString(36);
-    },
-    xlink = "http://www.w3.org/1999/xlink",
-    xmlns = "http://www.w3.org/2000/svg",
-    hub = {},
-    URL = Snap.url = function (url) {
-        return "url('#" + url + "')";
-    };
-
-function $(el, attr) {
-    if (attr) {
-        if (el == "#text") {
-            el = glob.doc.createTextNode(attr.text || "");
-        }
-        if (typeof el == "string") {
-            el = $(el);
-        }
-        if (typeof attr == "string") {
-            if (attr.substring(0, 6) == "xlink:") {
-                return el.getAttributeNS(xlink, attr.substring(6));
-            }
-            if (attr.substring(0, 4) == "xml:") {
-                return el.getAttributeNS(xmlns, attr.substring(4));
-            }
-            return el.getAttribute(attr);
-        }
-        for (var key in attr) if (attr[has](key)) {
-            var val = Str(attr[key]);
-            if (val) {
-                if (key.substring(0, 6) == "xlink:") {
-                    el.setAttributeNS(xlink, key.substring(6), val);
-                } else if (key.substring(0, 4) == "xml:") {
-                    el.setAttributeNS(xmlns, key.substring(4), val);
-                } else {
-                    el.setAttribute(key, val);
-                }
-            } else {
-                el.removeAttribute(key);
-            }
-        }
-    } else {
-        el = glob.doc.createElementNS(xmlns, el);
-    }
-    return el;
-}
-Snap._.$ = $;
-Snap._.id = ID;
-function getAttrs(el) {
-    var attrs = el.attributes,
-        name,
-        out = {};
-    for (var i = 0; i < attrs.length; i++) {
-        if (attrs[i].namespaceURI == xlink) {
-            name = "xlink:";
-        } else {
-            name = "";
-        }
-        name += attrs[i].name;
-        out[name] = attrs[i].textContent;
-    }
-    return out;
-}
-function is(o, type) {
-    type = Str.prototype.toLowerCase.call(type);
-    if (type == "finite") {
-        return isFinite(o);
-    }
-    if (type == "array" &&
-        (o instanceof Array || Array.isArray && Array.isArray(o))) {
-        return true;
-    }
-    return  (type == "null" && o === null) ||
-            (type == typeof o && o !== null) ||
-            (type == "object" && o === Object(o)) ||
-            objectToString.call(o).slice(8, -1).toLowerCase() == type;
-}
-/*\
- * Snap.format
- [ method ]
- **
- * Replaces construction of type `{<name>}` to the corresponding argument
- **
- - token (string) string to format
- - json (object) object which properties are used as a replacement
- = (string) formatted string
- > Usage
- | // this draws a rectangular shape equivalent to "M10,20h40v50h-40z"
- | paper.path(Snap.format("M{x},{y}h{dim.width}v{dim.height}h{dim['negative width']}z", {
- |     x: 10,
- |     y: 20,
- |     dim: {
- |         width: 40,
- |         height: 50,
- |         "negative width": -40
- |     }
- | }));
-\*/
-Snap.format = (function () {
-    var tokenRegex = /\{([^\}]+)\}/g,
-        objNotationRegex = /(?:(?:^|\.)(.+?)(?=\[|\.|$|\()|\[('|")(.+?)\2\])(\(\))?/g, // matches .xxxxx or ["xxxxx"] to run over object properties
-        replacer = function (all, key, obj) {
-            var res = obj;
-            key.replace(objNotationRegex, function (all, name, quote, quotedName, isFunc) {
-                name = name || quotedName;
-                if (res) {
-                    if (name in res) {
-                        res = res[name];
-                    }
-                    typeof res == "function" && isFunc && (res = res());
-                }
-            });
-            res = (res == null || res == obj ? all : res) + "";
-            return res;
-        };
-    return function (str, obj) {
-        return Str(str).replace(tokenRegex, function (all, key) {
-            return replacer(all, key, obj);
-        });
-    };
-})();
-function clone(obj) {
-    if (typeof obj == "function" || Object(obj) !== obj) {
-        return obj;
-    }
-    var res = new obj.constructor;
-    for (var key in obj) if (obj[has](key)) {
-        res[key] = clone(obj[key]);
-    }
-    return res;
-}
-Snap._.clone = clone;
-function repush(array, item) {
-    for (var i = 0, ii = array.length; i < ii; i++) if (array[i] === item) {
-        return array.push(array.splice(i, 1)[0]);
-    }
-}
-function cacher(f, scope, postprocessor) {
-    function newf() {
-        var arg = Array.prototype.slice.call(arguments, 0),
-            args = arg.join("\u2400"),
-            cache = newf.cache = newf.cache || {},
-            count = newf.count = newf.count || [];
-        if (cache[has](args)) {
-            repush(count, args);
-            return postprocessor ? postprocessor(cache[args]) : cache[args];
-        }
-        count.length >= 1e3 && delete cache[count.shift()];
-        count.push(args);
-        cache[args] = f.apply(scope, arg);
-        return postprocessor ? postprocessor(cache[args]) : cache[args];
-    }
-    return newf;
-}
-Snap._.cacher = cacher;
-function angle(x1, y1, x2, y2, x3, y3) {
-    if (x3 == null) {
-        var x = x1 - x2,
-            y = y1 - y2;
-        if (!x && !y) {
-            return 0;
-        }
-        return (180 + math.atan2(-y, -x) * 180 / PI + 360) % 360;
-    } else {
-        return angle(x1, y1, x3, y3) - angle(x2, y2, x3, y3);
-    }
-}
-function rad(deg) {
-    return deg % 360 * PI / 180;
-}
-function deg(rad) {
-    return rad * 180 / PI % 360;
-}
-function x_y() {
-    return this.x + S + this.y;
-}
-function x_y_w_h() {
-    return this.x + S + this.y + S + this.width + " \xd7 " + this.height;
-}
-
-/*\
- * Snap.rad
- [ method ]
- **
- * Transform angle to radians
- - deg (number) angle in degrees
- = (number) angle in radians
-\*/
-Snap.rad = rad;
-/*\
- * Snap.deg
- [ method ]
- **
- * Transform angle to degrees
- - rad (number) angle in radians
- = (number) angle in degrees
-\*/
-Snap.deg = deg;
-/*\
- * Snap.angle
- [ method ]
- **
- * Returns an angle between two or three points
- > Parameters
- - x1 (number) x coord of first point
- - y1 (number) y coord of first point
- - x2 (number) x coord of second point
- - y2 (number) y coord of second point
- - x3 (number) #optional x coord of third point
- - y3 (number) #optional y coord of third point
- = (number) angle in degrees
-\*/
-Snap.angle = angle;
-/*\
- * Snap.is
- [ method ]
- **
- * Handy replacement for the `typeof` operator
- - o (…) any object or primitive
- - type (string) name of the type, e.g., `string`, `function`, `number`, etc.
- = (boolean) `true` if given value is of given type
-\*/
-Snap.is = is;
-/*\
- * Snap.snapTo
- [ method ]
- **
- * Snaps given value to given grid
- - values (array|number) given array of values or step of the grid
- - value (number) value to adjust
- - tolerance (number) #optional maximum distance to the target value that would trigger the snap. Default is `10`.
- = (number) adjusted value
-\*/
-Snap.snapTo = function (values, value, tolerance) {
-    tolerance = is(tolerance, "finite") ? tolerance : 10;
-    if (is(values, "array")) {
-        var i = values.length;
-        while (i--) if (abs(values[i] - value) <= tolerance) {
-            return values[i];
-        }
-    } else {
-        values = +values;
-        var rem = value % values;
-        if (rem < tolerance) {
-            return value - rem;
-        }
-        if (rem > values - tolerance) {
-            return value - rem + values;
-        }
-    }
-    return value;
-};
-// Colour
-/*\
- * Snap.getRGB
- [ method ]
- **
- * Parses color string as RGB object
- - color (string) color string in one of the following formats:
- # <ul>
- #     <li>Color name (<code>red</code>, <code>green</code>, <code>cornflowerblue</code>, etc)</li>
- #     <li>#••• — shortened HTML color: (<code>#000</code>, <code>#fc0</code>, etc.)</li>
- #     <li>#•••••• — full length HTML color: (<code>#000000</code>, <code>#bd2300</code>)</li>
- #     <li>rgb(•••, •••, •••) — red, green and blue channels values: (<code>rgb(200,&nbsp;100,&nbsp;0)</code>)</li>
- #     <li>rgba(•••, •••, •••, •••) — also with opacity</li>
- #     <li>rgb(•••%, •••%, •••%) — same as above, but in %: (<code>rgb(100%,&nbsp;175%,&nbsp;0%)</code>)</li>
- #     <li>rgba(•••%, •••%, •••%, •••%) — also with opacity</li>
- #     <li>hsb(•••, •••, •••) — hue, saturation and brightness values: (<code>hsb(0.5,&nbsp;0.25,&nbsp;1)</code>)</li>
- #     <li>hsba(•••, •••, •••, •••) — also with opacity</li>
- #     <li>hsb(•••%, •••%, •••%) — same as above, but in %</li>
- #     <li>hsba(•••%, •••%, •••%, •••%) — also with opacity</li>
- #     <li>hsl(•••, •••, •••) — hue, saturation and luminosity values: (<code>hsb(0.5,&nbsp;0.25,&nbsp;0.5)</code>)</li>
- #     <li>hsla(•••, •••, •••, •••) — also with opacity</li>
- #     <li>hsl(•••%, •••%, •••%) — same as above, but in %</li>
- #     <li>hsla(•••%, •••%, •••%, •••%) — also with opacity</li>
- # </ul>
- * Note that `%` can be used any time: `rgb(20%, 255, 50%)`.
- = (object) RGB object in the following format:
- o {
- o     r (number) red,
- o     g (number) green,
- o     b (number) blue,
- o     hex (string) color in HTML/CSS format: #••••••,
- o     error (boolean) true if string can't be parsed
- o }
-\*/
-Snap.getRGB = cacher(function (colour) {
-    if (!colour || !!((colour = Str(colour)).indexOf("-") + 1)) {
-        return {r: -1, g: -1, b: -1, hex: "none", error: 1, toString: rgbtoString};
-    }
-    if (colour == "none") {
-        return {r: -1, g: -1, b: -1, hex: "none", toString: rgbtoString};
-    }
-    !(hsrg[has](colour.toLowerCase().substring(0, 2)) || colour.charAt() == "#") && (colour = toHex(colour));
-    if (!colour) {
-        return {r: -1, g: -1, b: -1, hex: "none", error: 1, toString: rgbtoString};
-    }
-    var res,
-        red,
-        green,
-        blue,
-        opacity,
-        t,
-        values,
-        rgb = colour.match(colourRegExp);
-    if (rgb) {
-        if (rgb[2]) {
-            blue = toInt(rgb[2].substring(5), 16);
-            green = toInt(rgb[2].substring(3, 5), 16);
-            red = toInt(rgb[2].substring(1, 3), 16);
-        }
-        if (rgb[3]) {
-            blue = toInt((t = rgb[3].charAt(3)) + t, 16);
-            green = toInt((t = rgb[3].charAt(2)) + t, 16);
-            red = toInt((t = rgb[3].charAt(1)) + t, 16);
-        }
-        if (rgb[4]) {
-            values = rgb[4].split(commaSpaces);
-            red = toFloat(values[0]);
-            values[0].slice(-1) == "%" && (red *= 2.55);
-            green = toFloat(values[1]);
-            values[1].slice(-1) == "%" && (green *= 2.55);
-            blue = toFloat(values[2]);
-            values[2].slice(-1) == "%" && (blue *= 2.55);
-            rgb[1].toLowerCase().slice(0, 4) == "rgba" && (opacity = toFloat(values[3]));
-            values[3] && values[3].slice(-1) == "%" && (opacity /= 100);
-        }
-        if (rgb[5]) {
-            values = rgb[5].split(commaSpaces);
-            red = toFloat(values[0]);
-            values[0].slice(-1) == "%" && (red /= 100);
-            green = toFloat(values[1]);
-            values[1].slice(-1) == "%" && (green /= 100);
-            blue = toFloat(values[2]);
-            values[2].slice(-1) == "%" && (blue /= 100);
-            (values[0].slice(-3) == "deg" || values[0].slice(-1) == "\xb0") && (red /= 360);
-            rgb[1].toLowerCase().slice(0, 4) == "hsba" && (opacity = toFloat(values[3]));
-            values[3] && values[3].slice(-1) == "%" && (opacity /= 100);
-            return Snap.hsb2rgb(red, green, blue, opacity);
-        }
-        if (rgb[6]) {
-            values = rgb[6].split(commaSpaces);
-            red = toFloat(values[0]);
-            values[0].slice(-1) == "%" && (red /= 100);
-            green = toFloat(values[1]);
-            values[1].slice(-1) == "%" && (green /= 100);
-            blue = toFloat(values[2]);
-            values[2].slice(-1) == "%" && (blue /= 100);
-            (values[0].slice(-3) == "deg" || values[0].slice(-1) == "\xb0") && (red /= 360);
-            rgb[1].toLowerCase().slice(0, 4) == "hsla" && (opacity = toFloat(values[3]));
-            values[3] && values[3].slice(-1) == "%" && (opacity /= 100);
-            return Snap.hsl2rgb(red, green, blue, opacity);
-        }
-        red = mmin(math.round(red), 255);
-        green = mmin(math.round(green), 255);
-        blue = mmin(math.round(blue), 255);
-        opacity = mmin(mmax(opacity, 0), 1);
-        rgb = {r: red, g: green, b: blue, toString: rgbtoString};
-        rgb.hex = "#" + (16777216 | blue | (green << 8) | (red << 16)).toString(16).slice(1);
-        rgb.opacity = is(opacity, "finite") ? opacity : 1;
-        return rgb;
-    }
-    return {r: -1, g: -1, b: -1, hex: "none", error: 1, toString: rgbtoString};
-}, Snap);
-// SIERRA It seems odd that the following 3 conversion methods are not expressed as .this2that(), like the others.
-/*\
- * Snap.hsb
- [ method ]
- **
- * Converts HSB values to a hex representation of the color
- - h (number) hue
- - s (number) saturation
- - b (number) value or brightness
- = (string) hex representation of the color
-\*/
-Snap.hsb = cacher(function (h, s, b) {
-    return Snap.hsb2rgb(h, s, b).hex;
-});
-/*\
- * Snap.hsl
- [ method ]
- **
- * Converts HSL values to a hex representation of the color
- - h (number) hue
- - s (number) saturation
- - l (number) luminosity
- = (string) hex representation of the color
-\*/
-Snap.hsl = cacher(function (h, s, l) {
-    return Snap.hsl2rgb(h, s, l).hex;
-});
-/*\
- * Snap.rgb
- [ method ]
- **
- * Converts RGB values to a hex representation of the color
- - r (number) red
- - g (number) green
- - b (number) blue
- = (string) hex representation of the color
-\*/
-Snap.rgb = cacher(function (r, g, b, o) {
-    if (is(o, "finite")) {
-        var round = math.round;
-        return "rgba(" + [round(r), round(g), round(b), +o.toFixed(2)] + ")";
-    }
-    return "#" + (16777216 | b | (g << 8) | (r << 16)).toString(16).slice(1);
-});
-var toHex = function (color) {
-    var i = glob.doc.getElementsByTagName("head")[0] || glob.doc.getElementsByTagName("svg")[0],
-        red = "rgb(255, 0, 0)";
-    toHex = cacher(function (color) {
-        if (color.toLowerCase() == "red") {
-            return red;
-        }
-        i.style.color = red;
-        i.style.color = color;
-        var out = glob.doc.defaultView.getComputedStyle(i, E).getPropertyValue("color");
-        return out == red ? null : out;
-    });
-    return toHex(color);
-},
-hsbtoString = function () {
-    return "hsb(" + [this.h, this.s, this.b] + ")";
-},
-hsltoString = function () {
-    return "hsl(" + [this.h, this.s, this.l] + ")";
-},
-rgbtoString = function () {
-    return this.opacity == 1 || this.opacity == null ?
-            this.hex :
-            "rgba(" + [this.r, this.g, this.b, this.opacity] + ")";
-},
-prepareRGB = function (r, g, b) {
-    if (g == null && is(r, "object") && "r" in r && "g" in r && "b" in r) {
-        b = r.b;
-        g = r.g;
-        r = r.r;
-    }
-    if (g == null && is(r, string)) {
-        var clr = Snap.getRGB(r);
-        r = clr.r;
-        g = clr.g;
-        b = clr.b;
-    }
-    if (r > 1 || g > 1 || b > 1) {
-        r /= 255;
-        g /= 255;
-        b /= 255;
-    }
-
-    return [r, g, b];
-},
-packageRGB = function (r, g, b, o) {
-    r = math.round(r * 255);
-    g = math.round(g * 255);
-    b = math.round(b * 255);
-    var rgb = {
-        r: r,
-        g: g,
-        b: b,
-        opacity: is(o, "finite") ? o : 1,
-        hex: Snap.rgb(r, g, b),
-        toString: rgbtoString
-    };
-    is(o, "finite") && (rgb.opacity = o);
-    return rgb;
-};
-// SIERRA Clarify if Snap does not support consolidated HSLA/RGBA colors. E.g., can you specify a semi-transparent value for Snap.filter.shadow()?
-/*\
- * Snap.color
- [ method ]
- **
- * Parses the color string and returns an object featuring the color's component values
- - clr (string) color string in one of the supported formats (see @Snap.getRGB)
- = (object) Combined RGB/HSB object in the following format:
- o {
- o     r (number) red,
- o     g (number) green,
- o     b (number) blue,
- o     hex (string) color in HTML/CSS format: #••••••,
- o     error (boolean) `true` if string can't be parsed,
- o     h (number) hue,
- o     s (number) saturation,
- o     v (number) value (brightness),
- o     l (number) lightness
- o }
-\*/
-Snap.color = function (clr) {
-    var rgb;
-    if (is(clr, "object") && "h" in clr && "s" in clr && "b" in clr) {
-        rgb = Snap.hsb2rgb(clr);
-        clr.r = rgb.r;
-        clr.g = rgb.g;
-        clr.b = rgb.b;
-        clr.opacity = 1;
-        clr.hex = rgb.hex;
-    } else if (is(clr, "object") && "h" in clr && "s" in clr && "l" in clr) {
-        rgb = Snap.hsl2rgb(clr);
-        clr.r = rgb.r;
-        clr.g = rgb.g;
-        clr.b = rgb.b;
-        clr.opacity = 1;
-        clr.hex = rgb.hex;
-    } else {
-        if (is(clr, "string")) {
-            clr = Snap.getRGB(clr);
-        }
-        if (is(clr, "object") && "r" in clr && "g" in clr && "b" in clr && !("error" in clr)) {
-            rgb = Snap.rgb2hsl(clr);
-            clr.h = rgb.h;
-            clr.s = rgb.s;
-            clr.l = rgb.l;
-            rgb = Snap.rgb2hsb(clr);
-            clr.v = rgb.b;
-        } else {
-            clr = {hex: "none"};
-            clr.r = clr.g = clr.b = clr.h = clr.s = clr.v = clr.l = -1;
-            clr.error = 1;
-        }
-    }
-    clr.toString = rgbtoString;
-    return clr;
-};
-/*\
- * Snap.hsb2rgb
- [ method ]
- **
- * Converts HSB values to an RGB object
- - h (number) hue
- - s (number) saturation
- - v (number) value or brightness
- = (object) RGB object in the following format:
- o {
- o     r (number) red,
- o     g (number) green,
- o     b (number) blue,
- o     hex (string) color in HTML/CSS format: #••••••
- o }
-\*/
-Snap.hsb2rgb = function (h, s, v, o) {
-    if (is(h, "object") && "h" in h && "s" in h && "b" in h) {
-        v = h.b;
-        s = h.s;
-        h = h.h;
-        o = h.o;
-    }
-    h *= 360;
-    var R, G, B, X, C;
-    h = (h % 360) / 60;
-    C = v * s;
-    X = C * (1 - abs(h % 2 - 1));
-    R = G = B = v - C;
-
-    h = ~~h;
-    R += [C, X, 0, 0, X, C][h];
-    G += [X, C, C, X, 0, 0][h];
-    B += [0, 0, X, C, C, X][h];
-    return packageRGB(R, G, B, o);
-};
-/*\
- * Snap.hsl2rgb
- [ method ]
- **
- * Converts HSL values to an RGB object
- - h (number) hue
- - s (number) saturation
- - l (number) luminosity
- = (object) RGB object in the following format:
- o {
- o     r (number) red,
- o     g (number) green,
- o     b (number) blue,
- o     hex (string) color in HTML/CSS format: #••••••
- o }
-\*/
-Snap.hsl2rgb = function (h, s, l, o) {
-    if (is(h, "object") && "h" in h && "s" in h && "l" in h) {
-        l = h.l;
-        s = h.s;
-        h = h.h;
-    }
-    if (h > 1 || s > 1 || l > 1) {
-        h /= 360;
-        s /= 100;
-        l /= 100;
-    }
-    h *= 360;
-    var R, G, B, X, C;
-    h = (h % 360) / 60;
-    C = 2 * s * (l < .5 ? l : 1 - l);
-    X = C * (1 - abs(h % 2 - 1));
-    R = G = B = l - C / 2;
-
-    h = ~~h;
-    R += [C, X, 0, 0, X, C][h];
-    G += [X, C, C, X, 0, 0][h];
-    B += [0, 0, X, C, C, X][h];
-    return packageRGB(R, G, B, o);
-};
-/*\
- * Snap.rgb2hsb
- [ method ]
- **
- * Converts RGB values to an HSB object
- - r (number) red
- - g (number) green
- - b (number) blue
- = (object) HSB object in the following format:
- o {
- o     h (number) hue,
- o     s (number) saturation,
- o     b (number) brightness
- o }
-\*/
-Snap.rgb2hsb = function (r, g, b) {
-    b = prepareRGB(r, g, b);
-    r = b[0];
-    g = b[1];
-    b = b[2];
-
-    var H, S, V, C;
-    V = mmax(r, g, b);
-    C = V - mmin(r, g, b);
-    H = (C == 0 ? null :
-         V == r ? (g - b) / C :
-         V == g ? (b - r) / C + 2 :
-                  (r - g) / C + 4
-        );
-    H = ((H + 360) % 6) * 60 / 360;
-    S = C == 0 ? 0 : C / V;
-    return {h: H, s: S, b: V, toString: hsbtoString};
-};
-/*\
- * Snap.rgb2hsl
- [ method ]
- **
- * Converts RGB values to an HSL object
- - r (number) red
- - g (number) green
- - b (number) blue
- = (object) HSL object in the following format:
- o {
- o     h (number) hue,
- o     s (number) saturation,
- o     l (number) luminosity
- o }
-\*/
-Snap.rgb2hsl = function (r, g, b) {
-    b = prepareRGB(r, g, b);
-    r = b[0];
-    g = b[1];
-    b = b[2];
-
-    var H, S, L, M, m, C;
-    M = mmax(r, g, b);
-    m = mmin(r, g, b);
-    C = M - m;
-    H = (C == 0 ? null :
-         M == r ? (g - b) / C :
-         M == g ? (b - r) / C + 2 :
-                  (r - g) / C + 4);
-    H = ((H + 360) % 6) * 60 / 360;
-    L = (M + m) / 2;
-    S = (C == 0 ? 0 :
-         L < .5 ? C / (2 * L) :
-                  C / (2 - 2 * L));
-    return {h: H, s: S, l: L, toString: hsltoString};
-};
-
-// Transformations
-// SIERRA Snap.parsePathString(): By _array of arrays,_ I assume you mean a format like this for two separate segments? [ ["M10,10","L90,90"], ["M90,10","L10,90"] ] Otherwise how is each command structured?
-/*\
- * Snap.parsePathString
- [ method ]
- **
- * Utility method
- **
- * Parses given path string into an array of arrays of path segments
- - pathString (string|array) path string or array of segments (in the last case it is returned straight away)
- = (array) array of segments
-\*/
-Snap.parsePathString = function (pathString) {
-    if (!pathString) {
-        return null;
-    }
-    var pth = Snap.path(pathString);
-    if (pth.arr) {
-        return Snap.path.clone(pth.arr);
-    }
-
-    var paramCounts = {a: 7, c: 6, o: 2, h: 1, l: 2, m: 2, r: 4, q: 4, s: 4, t: 2, v: 1, u: 3, z: 0},
-        data = [];
-    if (is(pathString, "array") && is(pathString[0], "array")) { // rough assumption
-        data = Snap.path.clone(pathString);
-    }
-    if (!data.length) {
-        Str(pathString).replace(pathCommand, function (a, b, c) {
-            var params = [],
-                name = b.toLowerCase();
-            c.replace(pathValues, function (a, b) {
-                b && params.push(+b);
-            });
-            if (name == "m" && params.length > 2) {
-                data.push([b].concat(params.splice(0, 2)));
-                name = "l";
-                b = b == "m" ? "l" : "L";
-            }
-            if (name == "o" && params.length == 1) {
-                data.push([b, params[0]]);
-            }
-            if (name == "r") {
-                data.push([b].concat(params));
-            } else while (params.length >= paramCounts[name]) {
-                data.push([b].concat(params.splice(0, paramCounts[name])));
-                if (!paramCounts[name]) {
-                    break;
-                }
-            }
-        });
-    }
-    data.toString = Snap.path.toString;
-    pth.arr = Snap.path.clone(data);
-    return data;
-};
-/*\
- * Snap.parseTransformString
- [ method ]
- **
- * Utility method
- **
- * Parses given transform string into an array of transformations
- - TString (string|array) transform string or array of transformations (in the last case it is returned straight away)
- = (array) array of transformations
-\*/
-var parseTransformString = Snap.parseTransformString = function (TString) {
-    if (!TString) {
-        return null;
-    }
-    var paramCounts = {r: 3, s: 4, t: 2, m: 6},
-        data = [];
-    if (is(TString, "array") && is(TString[0], "array")) { // rough assumption
-        data = Snap.path.clone(TString);
-    }
-    if (!data.length) {
-        Str(TString).replace(tCommand, function (a, b, c) {
-            var params = [],
-                name = b.toLowerCase();
-            c.replace(pathValues, function (a, b) {
-                b && params.push(+b);
-            });
-            data.push([b].concat(params));
-        });
-    }
-    data.toString = Snap.path.toString;
-    return data;
-};
-function svgTransform2string(tstr) {
-    var res = [];
-    tstr = tstr.replace(/(?:^|\s)(\w+)\(([^)]+)\)/g, function (all, name, params) {
-        params = params.split(/\s*,\s*|\s+/);
-        if (name == "rotate" && params.length == 1) {
-            params.push(0, 0);
-        }
-        if (name == "scale") {
-            if (params.length > 2) {
-                params = params.slice(0, 2);
-            } else if (params.length == 2) {
-                params.push(0, 0);
-            }
-            if (params.length == 1) {
-                params.push(params[0], 0, 0);
-            }
-        }
-        if (name == "skewX") {
-            res.push(["m", 1, 0, math.tan(rad(params[0])), 1, 0, 0]);
-        } else if (name == "skewY") {
-            res.push(["m", 1, math.tan(rad(params[0])), 0, 1, 0, 0]);
-        } else {
-            res.push([name.charAt(0)].concat(params));
-        }
-        return all;
-    });
-    return res;
-}
-Snap._.svgTransform2string = svgTransform2string;
-Snap._.rgTransform = /^[a-z][\s]*-?\.?\d/i;
-function transform2matrix(tstr, bbox) {
-    var tdata = parseTransformString(tstr),
-        m = new Snap.Matrix;
-    if (tdata) {
-        for (var i = 0, ii = tdata.length; i < ii; i++) {
-            var t = tdata[i],
-                tlen = t.length,
-                command = Str(t[0]).toLowerCase(),
-                absolute = t[0] != command,
-                inver = absolute ? m.invert() : 0,
-                x1,
-                y1,
-                x2,
-                y2,
-                bb;
-            if (command == "t" && tlen == 2){
-                m.translate(t[1], 0);
-            } else if (command == "t" && tlen == 3) {
-                if (absolute) {
-                    x1 = inver.x(0, 0);
-                    y1 = inver.y(0, 0);
-                    x2 = inver.x(t[1], t[2]);
-                    y2 = inver.y(t[1], t[2]);
-                    m.translate(x2 - x1, y2 - y1);
-                } else {
-                    m.translate(t[1], t[2]);
-                }
-            } else if (command == "r") {
-                if (tlen == 2) {
-                    bb = bb || bbox;
-                    m.rotate(t[1], bb.x + bb.width / 2, bb.y + bb.height / 2);
-                } else if (tlen == 4) {
-                    if (absolute) {
-                        x2 = inver.x(t[2], t[3]);
-                        y2 = inver.y(t[2], t[3]);
-                        m.rotate(t[1], x2, y2);
-                    } else {
-                        m.rotate(t[1], t[2], t[3]);
-                    }
-                }
-            } else if (command == "s") {
-                if (tlen == 2 || tlen == 3) {
-                    bb = bb || bbox;
-                    m.scale(t[1], t[tlen - 1], bb.x + bb.width / 2, bb.y + bb.height / 2);
-                } else if (tlen == 4) {
-                    if (absolute) {
-                        x2 = inver.x(t[2], t[3]);
-                        y2 = inver.y(t[2], t[3]);
-                        m.scale(t[1], t[1], x2, y2);
-                    } else {
-                        m.scale(t[1], t[1], t[2], t[3]);
-                    }
-                } else if (tlen == 5) {
-                    if (absolute) {
-                        x2 = inver.x(t[3], t[4]);
-                        y2 = inver.y(t[3], t[4]);
-                        m.scale(t[1], t[2], x2, y2);
-                    } else {
-                        m.scale(t[1], t[2], t[3], t[4]);
-                    }
-                }
-            } else if (command == "m" && tlen == 7) {
-                m.add(t[1], t[2], t[3], t[4], t[5], t[6]);
-            }
-        }
-    }
-    return m;
-}
-Snap._.transform2matrix = transform2matrix;
-Snap._unit2px = unit2px;
-var contains = glob.doc.contains || glob.doc.compareDocumentPosition ?
-    function (a, b) {
-        var adown = a.nodeType == 9 ? a.documentElement : a,
-            bup = b && b.parentNode;
-            return a == bup || !!(bup && bup.nodeType == 1 && (
-                adown.contains ?
-                    adown.contains(bup) :
-                    a.compareDocumentPosition && a.compareDocumentPosition(bup) & 16
-            ));
-    } :
-    function (a, b) {
-        if (b) {
-            while (b) {
-                b = b.parentNode;
-                if (b == a) {
-                    return true;
-                }
-            }
-        }
-        return false;
-    };
-function getSomeDefs(el) {
-    var p = (el.node.ownerSVGElement && wrap(el.node.ownerSVGElement)) ||
-            (el.node.parentNode && wrap(el.node.parentNode)) ||
-            Snap.select("svg") ||
-            Snap(0, 0),
-        pdefs = p.select("defs"),
-        defs  = pdefs == null ? false : pdefs.node;
-    if (!defs) {
-        defs = make("defs", p.node).node;
-    }
-    return defs;
-}
-function getSomeSVG(el) {
-    return el.node.ownerSVGElement && wrap(el.node.ownerSVGElement) || Snap.select("svg");
-}
-Snap._.getSomeDefs = getSomeDefs;
-Snap._.getSomeSVG = getSomeSVG;
-function unit2px(el, name, value) {
-    var svg = getSomeSVG(el).node,
-        out = {},
-        mgr = svg.querySelector(".svg---mgr");
-    if (!mgr) {
-        mgr = $("rect");
-        $(mgr, {x: -9e9, y: -9e9, width: 10, height: 10, "class": "svg---mgr", fill: "none"});
-        svg.appendChild(mgr);
-    }
-    function getW(val) {
-        if (val == null) {
-            return E;
-        }
-        if (val == +val) {
-            return val;
-        }
-        $(mgr, {width: val});
-        try {
-            return mgr.getBBox().width;
-        } catch (e) {
-            return 0;
-        }
-    }
-    function getH(val) {
-        if (val == null) {
-            return E;
-        }
-        if (val == +val) {
-            return val;
-        }
-        $(mgr, {height: val});
-        try {
-            return mgr.getBBox().height;
-        } catch (e) {
-            return 0;
-        }
-    }
-    function set(nam, f) {
-        if (name == null) {
-            out[nam] = f(el.attr(nam) || 0);
-        } else if (nam == name) {
-            out = f(value == null ? el.attr(nam) || 0 : value);
-        }
-    }
-    switch (el.type) {
-        case "rect":
-            set("rx", getW);
-            set("ry", getH);
-        case "image":
-            set("width", getW);
-            set("height", getH);
-        case "text":
-            set("x", getW);
-            set("y", getH);
-        break;
-        case "circle":
-            set("cx", getW);
-            set("cy", getH);
-            set("r", getW);
-        break;
-        case "ellipse":
-            set("cx", getW);
-            set("cy", getH);
-            set("rx", getW);
-            set("ry", getH);
-        break;
-        case "line":
-            set("x1", getW);
-            set("x2", getW);
-            set("y1", getH);
-            set("y2", getH);
-        break;
-        case "marker":
-            set("refX", getW);
-            set("markerWidth", getW);
-            set("refY", getH);
-            set("markerHeight", getH);
-        break;
-        case "radialGradient":
-            set("fx", getW);
-            set("fy", getH);
-        break;
-        case "tspan":
-            set("dx", getW);
-            set("dy", getH);
-        break;
-        default:
-            set(name, getW);
-    }
-    svg.removeChild(mgr);
-    return out;
-}
-/*\
- * Snap.select
- [ method ]
- **
- * Wraps a DOM element specified by CSS selector as @Element
- - query (string) CSS selector of the element
- = (Element) the current element
-\*/
-Snap.select = function (query) {
-    query = Str(query).replace(/([^\\]):/g, "$1\\:");
-    return wrap(glob.doc.querySelector(query));
-};
-/*\
- * Snap.selectAll
- [ method ]
- **
- * Wraps DOM elements specified by CSS selector as set or array of @Element
- - query (string) CSS selector of the element
- = (Element) the current element
-\*/
-Snap.selectAll = function (query) {
-    var nodelist = glob.doc.querySelectorAll(query),
-        set = (Snap.set || Array)();
-    for (var i = 0; i < nodelist.length; i++) {
-        set.push(wrap(nodelist[i]));
-    }
-    return set;
-};
-
-function add2group(list) {
-    if (!is(list, "array")) {
-        list = Array.prototype.slice.call(arguments, 0);
-    }
-    var i = 0,
-        j = 0,
-        node = this.node;
-    while (this[i]) delete this[i++];
-    for (i = 0; i < list.length; i++) {
-        if (list[i].type == "set") {
-            list[i].forEach(function (el) {
-                node.appendChild(el.node);
-            });
-        } else {
-            node.appendChild(list[i].node);
-        }
-    }
-    var children = node.childNodes;
-    for (i = 0; i < children.length; i++) {
-        this[j++] = wrap(children[i]);
-    }
-    return this;
-}
-// Hub garbage collector every 10s
-setInterval(function () {
-    for (var key in hub) if (hub[has](key)) {
-        var el = hub[key],
-            node = el.node;
-        if (el.type != "svg" && !node.ownerSVGElement || el.type == "svg" && (!node.parentNode || "ownerSVGElement" in node.parentNode && !node.ownerSVGElement)) {
-            delete hub[key];
-        }
-    }
-}, 1e4);
-function Element(el) {
-    if (el.snap in hub) {
-        return hub[el.snap];
-    }
-    var svg;
-    try {
-        svg = el.ownerSVGElement;
-    } catch(e) {}
-    /*\
-     * Element.node
-     [ property (object) ]
-     **
-     * Gives you a reference to the DOM object, so you can assign event handlers or just mess around.
-     > Usage
-     | // draw a circle at coordinate 10,10 with radius of 10
-     | var c = paper.circle(10, 10, 10);
-     | c.node.onclick = function () {
-     |     c.attr("fill", "red");
-     | };
-    \*/
-    this.node = el;
-    if (svg) {
-        this.paper = new Paper(svg);
-    }
-    /*\
-     * Element.type
-     [ property (string) ]
-     **
-     * SVG tag name of the given element.
-    \*/
-    this.type = el.tagName;
-    var id = this.id = ID(this);
-    this.anims = {};
-    this._ = {
-        transform: []
-    };
-    el.snap = id;
-    hub[id] = this;
-    if (this.type == "g") {
-        this.add = add2group;
-    }
-    if (this.type in {g: 1, mask: 1, pattern: 1, symbol: 1}) {
-        for (var method in Paper.prototype) if (Paper.prototype[has](method)) {
-            this[method] = Paper.prototype[method];
-        }
-    }
-}
-   /*\
-     * Element.attr
-     [ method ]
-     **
-     * Gets or sets given attributes of the element.
-     **
-     - params (object) contains key-value pairs of attributes you want to set
-     * or
-     - param (string) name of the attribute
-     = (Element) the current element
-     * or
-     = (string) value of attribute
-     > Usage
-     | el.attr({
-     |     fill: "#fc0",
-     |     stroke: "#000",
-     |     strokeWidth: 2, // CamelCase...
-     |     "fill-opacity": 0.5, // or dash-separated names
-     |     width: "*=2" // prefixed values
-     | });
-     | console.log(el.attr("fill")); // #fc0
-     * Prefixed values in format `"+=10"` supported. All four operations
-     * (`+`, `-`, `*` and `/`) could be used. Optionally you can use units for `+`
-     * and `-`: `"+=2em"`.
-    \*/
-    Element.prototype.attr = function (params, value) {
-        var el = this,
-            node = el.node;
-        if (!params) {
-            return el;
-        }
-        if (is(params, "string")) {
-            if (arguments.length > 1) {
-                var json = {};
-                json[params] = value;
-                params = json;
-            } else {
-                return eve("snap.util.getattr." + params, el).firstDefined();
-            }
-        }
-        for (var att in params) {
-            if (params[has](att)) {
-                eve("snap.util.attr." + att, el, params[att]);
-            }
-        }
-        return el;
-    };
-/*\
- * Snap.parse
- [ method ]
- **
- * Parses SVG fragment and converts it into a @Fragment
- **
- - svg (string) SVG string
- = (Fragment) the @Fragment
-\*/
-Snap.parse = function (svg) {
-    var f = glob.doc.createDocumentFragment(),
-        full = true,
-        div = glob.doc.createElement("div");
-    svg = Str(svg);
-    if (!svg.match(/^\s*<\s*svg(?:\s|>)/)) {
-        svg = "<svg>" + svg + "</svg>";
-        full = false;
-    }
-    div.innerHTML = svg;
-    svg = div.getElementsByTagName("svg")[0];
-    if (svg) {
-        if (full) {
-            f = svg;
-        } else {
-            while (svg.firstChild) {
-                f.appendChild(svg.firstChild);
-            }
-            div.innerHTML = E;
-        }
-    }
-    return new Fragment(f);
-};
-function Fragment(frag) {
-    this.node = frag;
-}
-// SIERRA Snap.fragment() could especially use a code example
-/*\
- * Snap.fragment
- [ method ]
- **
- * Creates a DOM fragment from a given list of elements or strings
- **
- - varargs (…) SVG string
- = (Fragment) the @Fragment
-\*/
-Snap.fragment = function () {
-    var args = Array.prototype.slice.call(arguments, 0),
-        f = glob.doc.createDocumentFragment();
-    for (var i = 0, ii = args.length; i < ii; i++) {
-        var item = args[i];
-        if (item.node && item.node.nodeType) {
-            f.appendChild(item.node);
-        }
-        if (item.nodeType) {
-            f.appendChild(item);
-        }
-        if (typeof item == "string") {
-            f.appendChild(Snap.parse(item).node);
-        }
-    }
-    return new Fragment(f);
-};
-
-function make(name, parent) {
-    var res = $(name);
-    parent.appendChild(res);
-    var el = wrap(res);
-    return el;
-}
-function Paper(w, h) {
-    var res,
-        desc,
-        defs,
-        proto = Paper.prototype;
-    if (w && w.tagName == "svg") {
-        if (w.snap in hub) {
-            return hub[w.snap];
-        }
-        var doc = w.ownerDocument;
-        res = new Element(w);
-        desc = w.getElementsByTagName("desc")[0];
-        defs = w.getElementsByTagName("defs")[0];
-        if (!desc) {
-            desc = $("desc");
-            desc.appendChild(doc.createTextNode("Created with Snap"));
-            res.node.appendChild(desc);
-        }
-        if (!defs) {
-            defs = $("defs");
-            res.node.appendChild(defs);
-        }
-        res.defs = defs;
-        for (var key in proto) if (proto[has](key)) {
-            res[key] = proto[key];
-        }
-        res.paper = res.root = res;
-    } else {
-        res = make("svg", glob.doc.body);
-        $(res.node, {
-            height: h,
-            version: 1.1,
-            width: w,
-            xmlns: xmlns
-        });
-    }
-    return res;
-}
-function wrap(dom) {
-    if (!dom) {
-        return dom;
-    }
-    if (dom instanceof Element || dom instanceof Fragment) {
-        return dom;
-    }
-    if (dom.tagName && dom.tagName.toLowerCase() == "svg") {
-        return new Paper(dom);
-    }
-    if (dom.tagName && dom.tagName.toLowerCase() == "object" && dom.type == "image/svg+xml") {
-        return new Paper(dom.contentDocument.getElementsByTagName("svg")[0]);
-    }
-    return new Element(dom);
-}
-
-Snap._.make = make;
-Snap._.wrap = wrap;
-/*\
- * Paper.el
- [ method ]
- **
- * Creates an element on paper with a given name and no attributes
- **
- - name (string) tag name
- - attr (object) attributes
- = (Element) the current element
- > Usage
- | var c = paper.circle(10, 10, 10); // is the same as...
- | var c = paper.el("circle").attr({
- |     cx: 10,
- |     cy: 10,
- |     r: 10
- | });
- | // and the same as
- | var c = paper.el("circle", {
- |     cx: 10,
- |     cy: 10,
- |     r: 10
- | });
-\*/
-Paper.prototype.el = function (name, attr) {
-    var el = make(name, this.node);
-    attr && el.attr(attr);
-    return el;
-};
-// default
-eve.on("snap.util.getattr", function () {
-    var att = eve.nt();
-    att = att.substring(att.lastIndexOf(".") + 1);
-    var css = att.replace(/[A-Z]/g, function (letter) {
-        return "-" + letter.toLowerCase();
-    });
-    if (cssAttr[has](css)) {
-        return this.node.ownerDocument.defaultView.getComputedStyle(this.node, null).getPropertyValue(css);
-    } else {
-        return $(this.node, att);
-    }
-});
-var cssAttr = {
-    "alignment-baseline": 0,
-    "baseline-shift": 0,
-    "clip": 0,
-    "clip-path": 0,
-    "clip-rule": 0,
-    "color": 0,
-    "color-interpolation": 0,
-    "color-interpolation-filters": 0,
-    "color-profile": 0,
-    "color-rendering": 0,
-    "cursor": 0,
-    "direction": 0,
-    "display": 0,
-    "dominant-baseline": 0,
-    "enable-background": 0,
-    "fill": 0,
-    "fill-opacity": 0,
-    "fill-rule": 0,
-    "filter": 0,
-    "flood-color": 0,
-    "flood-opacity": 0,
-    "font": 0,
-    "font-family": 0,
-    "font-size": 0,
-    "font-size-adjust": 0,
-    "font-stretch": 0,
-    "font-style": 0,
-    "font-variant": 0,
-    "font-weight": 0,
-    "glyph-orientation-horizontal": 0,
-    "glyph-orientation-vertical": 0,
-    "image-rendering": 0,
-    "kerning": 0,
-    "letter-spacing": 0,
-    "lighting-color": 0,
-    "marker": 0,
-    "marker-end": 0,
-    "marker-mid": 0,
-    "marker-start": 0,
-    "mask": 0,
-    "opacity": 0,
-    "overflow": 0,
-    "pointer-events": 0,
-    "shape-rendering": 0,
-    "stop-color": 0,
-    "stop-opacity": 0,
-    "stroke": 0,
-    "stroke-dasharray": 0,
-    "stroke-dashoffset": 0,
-    "stroke-linecap": 0,
-    "stroke-linejoin": 0,
-    "stroke-miterlimit": 0,
-    "stroke-opacity": 0,
-    "stroke-width": 0,
-    "text-anchor": 0,
-    "text-decoration": 0,
-    "text-rendering": 0,
-    "unicode-bidi": 0,
-    "visibility": 0,
-    "word-spacing": 0,
-    "writing-mode": 0
-};
-
-eve.on("snap.util.attr", function (value) {
-    var att = eve.nt(),
-        attr = {};
-    att = att.substring(att.lastIndexOf(".") + 1);
-    attr[att] = value;
-    var style = att.replace(/-(\w)/gi, function (all, letter) {
-            return letter.toUpperCase();
-        }),
-        css = att.replace(/[A-Z]/g, function (letter) {
-            return "-" + letter.toLowerCase();
-        });
-    if (cssAttr[has](css)) {
-        this.node.style[style] = value == null ? E : value;
-    } else {
-        $(this.node, attr);
-    }
-});
-(function (proto) {}(Paper.prototype));
-
-// simple ajax
-/*\
- * Snap.ajax
- [ method ]
- **
- * Simple implementation of Ajax
- **
- - url (string) URL
- - postData (object|string) data for post request
- - callback (function) callback
- - scope (object) #optional scope of callback
- * or
- - url (string) URL
- - callback (function) callback
- - scope (object) #optional scope of callback
- = (XMLHttpRequest) the XMLHttpRequest object, just in case
-\*/
-Snap.ajax = function (url, postData, callback, scope){
-    var req = new XMLHttpRequest,
-        id = ID();
-    if (req) {
-        if (is(postData, "function")) {
-            scope = callback;
-            callback = postData;
-            postData = null;
-        } else if (is(postData, "object")) {
-            var pd = [];
-            for (var key in postData) if (postData.hasOwnProperty(key)) {
-                pd.push(encodeURIComponent(key) + "=" + encodeURIComponent(postData[key]));
-            }
-            postData = pd.join("&");
-        }
-        req.open((postData ? "POST" : "GET"), url, true);
-        if (postData) {
-            req.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-            req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        }
-        if (callback) {
-            eve.once("snap.ajax." + id + ".0", callback);
-            eve.once("snap.ajax." + id + ".200", callback);
-            eve.once("snap.ajax." + id + ".304", callback);
-        }
-        req.onreadystatechange = function() {
-            if (req.readyState != 4) return;
-            eve("snap.ajax." + id + "." + req.status, scope, req);
-        };
-        if (req.readyState == 4) {
-            return req;
-        }
-        req.send(postData);
-        return req;
-    }
-};
-/*\
- * Snap.load
- [ method ]
- **
- * Loads external SVG file as a @Fragment (see @Snap.ajax for more advanced AJAX)
- **
- - url (string) URL
- - callback (function) callback
- - scope (object) #optional scope of callback
-\*/
-Snap.load = function (url, callback, scope) {
-    Snap.ajax(url, function (req) {
-        var f = Snap.parse(req.responseText);
-        scope ? callback.call(scope, f) : callback(f);
-    });
-};
-var getOffset = function (elem) {
-    var box = elem.getBoundingClientRect(),
-        doc = elem.ownerDocument,
-        body = doc.body,
-        docElem = doc.documentElement,
-        clientTop = docElem.clientTop || body.clientTop || 0, clientLeft = docElem.clientLeft || body.clientLeft || 0,
-        top  = box.top  + (g.win.pageYOffset || docElem.scrollTop || body.scrollTop ) - clientTop,
-        left = box.left + (g.win.pageXOffset || docElem.scrollLeft || body.scrollLeft) - clientLeft;
-    return {
-        y: top,
-        x: left
-    };
-};
-/*\
- * Snap.getElementByPoint
- [ method ]
- **
- * Returns you topmost element under given point.
- **
- = (object) Snap element object
- - x (number) x coordinate from the top left corner of the window
- - y (number) y coordinate from the top left corner of the window
- > Usage
- | Snap.getElementByPoint(mouseX, mouseY).attr({stroke: "#f00"});
-\*/
-Snap.getElementByPoint = function (x, y) {
-    var paper = this,
-        svg = paper.canvas,
-        target = glob.doc.elementFromPoint(x, y);
-    if (glob.win.opera && target.tagName == "svg") {
-        var so = getOffset(target),
-            sr = target.createSVGRect();
-        sr.x = x - so.x;
-        sr.y = y - so.y;
-        sr.width = sr.height = 1;
-        var hits = target.getIntersectionList(sr, null);
-        if (hits.length) {
-            target = hits[hits.length - 1];
-        }
-    }
-    if (!target) {
-        return null;
-    }
-    return wrap(target);
-};
-/*\
- * Snap.plugin
- [ method ]
- **
- * Let you write plugins. You pass in a function with four arguments, like this:
- | Snap.plugin(function (Snap, Element, Paper, global, Fragment) {
- |     Snap.newmethod = function () {};
- |     Element.prototype.newmethod = function () {};
- |     Paper.prototype.newmethod = function () {};
- | });
- * Inside the function you have access to all main objects (and their
- * prototypes). This allow you to extend anything you want.
- **
- - f (function) your plugin body
-\*/
-Snap.plugin = function (f) {
-    f(Snap, Element, Paper, glob, Fragment);
-};
-glob.win.Snap = Snap;
-return Snap;
-}(window || this));
-// Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-Snap.plugin(function (Snap, Element, Paper, glob, Fragment) {
-    var elproto = Element.prototype,
-        is = Snap.is,
-        Str = String,
-        unit2px = Snap._unit2px,
-        $ = Snap._.$,
-        make = Snap._.make,
-        getSomeDefs = Snap._.getSomeDefs,
-        has = "hasOwnProperty",
-        wrap = Snap._.wrap;
-    /*\
-     * Element.getBBox
-     [ method ]
-     **
-     * Returns the bounding box descriptor for the given element
-     **
-     = (object) bounding box descriptor:
-     o {
-     o     cx: (number) x of the center,
-     o     cy: (number) x of the center,
-     o     h: (number) height,
-     o     height: (number) height,
-     o     path: (string) path command for the box,
-     o     r0: (number) radius of a circle that fully encloses the box,
-     o     r1: (number) radius of the smallest circle that can be enclosed,
-     o     r2: (number) radius of the largest circle that can be enclosed,
-     o     vb: (string) box as a viewbox command,
-     o     w: (number) width,
-     o     width: (number) width,
-     o     x2: (number) x of the right side,
-     o     x: (number) x of the left side,
-     o     y2: (number) y of the bottom edge,
-     o     y: (number) y of the top edge
-     o }
-    \*/
-    elproto.getBBox = function (isWithoutTransform) {
-        if (!Snap.Matrix || !Snap.path) {
-            return this.node.getBBox();
-        }
-        var el = this,
-            m = new Snap.Matrix;
-        if (el.removed) {
-            return Snap._.box();
-        }
-        while (el.type == "use") {
-            if (!isWithoutTransform) {
-                m = m.add(el.transform().localMatrix.translate(el.attr("x") || 0, el.attr("y") || 0));
-            }
-            if (el.original) {
-                el = el.original;
-            } else {
-                var href = el.attr("xlink:href");
-                el = el.original = el.node.ownerDocument.getElementById(href.substring(href.indexOf("#") + 1));
-            }
-        }
-        var _ = el._,
-            pathfinder = Snap.path.get[el.type] || Snap.path.get.deflt;
-        try {
-            if (isWithoutTransform) {
-                _.bboxwt = pathfinder ? Snap.path.getBBox(el.realPath = pathfinder(el)) : Snap._.box(el.node.getBBox());
-                return Snap._.box(_.bboxwt);
-            } else {
-                el.realPath = pathfinder(el);
-                el.matrix = el.transform().localMatrix;
-                _.bbox = Snap.path.getBBox(Snap.path.map(el.realPath, m.add(el.matrix)));
-                return Snap._.box(_.bbox);
-            }
-        } catch (e) {
-            // Firefox doesn’t give you bbox of hidden element
-            return Snap._.box();
-        }
-    };
-    var propString = function () {
-        return this.string;
-    };
-    function extractTransform(el, tstr) {
-        if (tstr == null) {
-            var doReturn = true;
-            if (el.type == "linearGradient" || el.type == "radialGradient") {
-                tstr = el.node.getAttribute("gradientTransform");
-            } else if (el.type == "pattern") {
-                tstr = el.node.getAttribute("patternTransform");
-            } else {
-                tstr = el.node.getAttribute("transform");
-            }
-            if (!tstr) {
-                return new Snap.Matrix;
-            }
-            tstr = Snap._.svgTransform2string(tstr);
-        } else {
-            if (!Snap._.rgTransform.test(tstr)) {
-                tstr = Snap._.svgTransform2string(tstr);
-            } else {
-                tstr = Str(tstr).replace(/\.{3}|\u2026/g, el._.transform || E);
-            }
-            if (is(tstr, "array")) {
-                tstr = Snap.path ? Snap.path.toString.call(tstr) : Str(tstr);
-            }
-            el._.transform = tstr;
-        }
-        var m = Snap._.transform2matrix(tstr, el.getBBox(1));
-        if (doReturn) {
-            return m;
-        } else {
-            el.matrix = m;
-        }
-    }
-    /*\
-     * Element.transform
-     [ method ]
-     **
-     * Gets or sets transformation of the element
-     **
-     - tstr (string) transform string in Snap or SVG format
-     = (Element) the current element
-     * or
-     = (object) transformation descriptor:
-     o {
-     o     string (string) transform string,
-     o     globalMatrix (Matrix) matrix of all transformations applied to element or its parents,
-     o     localMatrix (Matrix) matrix of transformations applied only to the element,
-     o     diffMatrix (Matrix) matrix of difference between global and local transformations,
-     o     global (string) global transformation as string,
-     o     local (string) local transformation as string,
-     o     toString (function) returns `string` property
-     o }
-    \*/
-    elproto.transform = function (tstr) {
-        var _ = this._;
-        if (tstr == null) {
-            var papa = this,
-                global = new Snap.Matrix(this.node.getCTM()),
-                local = extractTransform(this),
-                ms = [local],
-                m = new Snap.Matrix,
-                i,
-                localString = local.toTransformString(),
-                string = Str(local) == Str(this.matrix) ?
-                            Str(_.transform) : localString;
-            while (papa.type != "svg" && (papa = papa.parent())) {
-                ms.push(extractTransform(papa));
-            }
-            i = ms.length;
-            while (i--) {
-                m.add(ms[i]);
-            }
-            return {
-                string: string,
-                globalMatrix: global,
-                totalMatrix: m,
-                localMatrix: local,
-                diffMatrix: global.clone().add(local.invert()),
-                global: global.toTransformString(),
-                total: m.toTransformString(),
-                local: localString,
-                toString: propString
-            };
-        }
-        if (tstr instanceof Snap.Matrix) {
-            this.matrix = tstr;
-            this._.transform = tstr.toTransformString();
-        } else {
-            extractTransform(this, tstr);
-        }
-
-        if (this.node) {
-            if (this.type == "linearGradient" || this.type == "radialGradient") {
-                $(this.node, {gradientTransform: this.matrix});
-            } else if (this.type == "pattern") {
-                $(this.node, {patternTransform: this.matrix});
-            } else {
-                $(this.node, {transform: this.matrix});
-            }
-        }
-
-        return this;
-    };
-    /*\
-     * Element.parent
-     [ method ]
-     **
-     * Returns the element's parent
-     **
-     = (Element) the parent element
-    \*/
-    elproto.parent = function () {
-        return wrap(this.node.parentNode);
-    };
-    /*\
-     * Element.append
-     [ method ]
-     **
-     * Appends the given element to current one
-     **
-     - el (Element|Set) element to append
-     = (Element) the parent element
-    \*/
-    /*\
-     * Element.add
-     [ method ]
-     **
-     * See @Element.append
-    \*/
-    elproto.append = elproto.add = function (el) {
-        if (el) {
-            if (el.type == "set") {
-                var it = this;
-                el.forEach(function (el) {
-                    it.add(el);
-                });
-                return this;
-            }
-            el = wrap(el);
-            this.node.appendChild(el.node);
-            el.paper = this.paper;
-        }
-        return this;
-    };
-    /*\
-     * Element.appendTo
-     [ method ]
-     **
-     * Appends the current element to the given one
-     **
-     - el (Element) parent element to append to
-     = (Element) the child element
-    \*/
-    elproto.appendTo = function (el) {
-        if (el) {
-            el = wrap(el);
-            el.append(this);
-        }
-        return this;
-    };
-    /*\
-     * Element.prepend
-     [ method ]
-     **
-     * Prepends the given element to the current one
-     **
-     - el (Element) element to prepend
-     = (Element) the parent element
-    \*/
-    elproto.prepend = function (el) {
-        if (el) {
-            if (el.type == "set") {
-                var it = this,
-                    first;
-                el.forEach(function (el) {
-                    if (first) {
-                        first.after(el);
-                    } else {
-                        it.prepend(el);
-                    }
-                    first = el;
-                });
-                return this;
-            }
-            el = wrap(el);
-            var parent = el.parent();
-            this.node.insertBefore(el.node, this.node.firstChild);
-            this.add && this.add();
-            el.paper = this.paper;
-            this.parent() && this.parent().add();
-            parent && parent.add();
-        }
-        return this;
-    };
-    /*\
-     * Element.prependTo
-     [ method ]
-     **
-     * Prepends the current element to the given one
-     **
-     - el (Element) parent element to prepend to
-     = (Element) the child element
-    \*/
-    elproto.prependTo = function (el) {
-        el = wrap(el);
-        el.prepend(this);
-        return this;
-    };
-    /*\
-     * Element.before
-     [ method ]
-     **
-     * Inserts given element before the current one
-     **
-     - el (Element) element to insert
-     = (Element) the parent element
-    \*/
-    elproto.before = function (el) {
-        if (el.type == "set") {
-            var it = this;
-            el.forEach(function (el) {
-                var parent = el.parent();
-                it.node.parentNode.insertBefore(el.node, it.node);
-                parent && parent.add();
-            });
-            this.parent().add();
-            return this;
-        }
-        el = wrap(el);
-        var parent = el.parent();
-        this.node.parentNode.insertBefore(el.node, this.node);
-        this.parent() && this.parent().add();
-        parent && parent.add();
-        el.paper = this.paper;
-        return this;
-    };
-    /*\
-     * Element.after
-     [ method ]
-     **
-     * Inserts given element after the current one
-     **
-     - el (Element) element to insert
-     = (Element) the parent element
-    \*/
-    elproto.after = function (el) {
-        el = wrap(el);
-        var parent = el.parent();
-        if (this.node.nextSibling) {
-            this.node.parentNode.insertBefore(el.node, this.node.nextSibling);
-        } else {
-            this.node.parentNode.appendChild(el.node);
-        }
-        this.parent() && this.parent().add();
-        parent && parent.add();
-        el.paper = this.paper;
-        return this;
-    };
-    /*\
-     * Element.insertBefore
-     [ method ]
-     **
-     * Inserts the element after the given one
-     **
-     - el (Element) element next to whom insert to
-     = (Element) the parent element
-    \*/
-    elproto.insertBefore = function (el) {
-        el = wrap(el);
-        var parent = this.parent();
-        el.node.parentNode.insertBefore(this.node, el.node);
-        this.paper = el.paper;
-        parent && parent.add();
-        el.parent() && el.parent().add();
-        return this;
-    };
-    /*\
-     * Element.insertAfter
-     [ method ]
-     **
-     * Inserts the element after the given one
-     **
-     - el (Element) element next to whom insert to
-     = (Element) the parent element
-    \*/
-    elproto.insertAfter = function (el) {
-        el = wrap(el);
-        var parent = this.parent();
-        el.node.parentNode.insertBefore(this.node, el.node.nextSibling);
-        this.paper = el.paper;
-        parent && parent.add();
-        el.parent() && el.parent().add();
-        return this;
-    };
-    /*\
-     * Element.remove
-     [ method ]
-     **
-     * Removes element from the DOM
-     = (Element) the detached element
-    \*/
-    elproto.remove = function () {
-        var parent = this.parent();
-        this.node.parentNode && this.node.parentNode.removeChild(this.node);
-        delete this.paper;
-        this.removed = true;
-        parent && parent.add();
-        return this;
-    };
-    /*\
-     * Element.select
-     [ method ]
-     **
-     * Gathers the nested @Element matching the given set of CSS selectors
-     **
-     - query (string) CSS selector
-     = (Element) result of query selection
-    \*/
-    elproto.select = function (query) {
-        query = Str(query).replace(/([^\\]):/g, "$1\\:");
-        return wrap(this.node.querySelector(query));
-    };
-    /*\
-     * Element.selectAll
-     [ method ]
-     **
-     * Gathers nested @Element objects matching the given set of CSS selectors
-     **
-     - query (string) CSS selector
-     = (Set|array) result of query selection
-    \*/
-    elproto.selectAll = function (query) {
-        var nodelist = this.node.querySelectorAll(query),
-            set = (Snap.set || Array)();
-        for (var i = 0; i < nodelist.length; i++) {
-            set.push(wrap(nodelist[i]));
-        }
-        return set;
-    };
-    /*\
-     * Element.asPX
-     [ method ]
-     **
-     * Returns given attribute of the element as a `px` value (not %, em, etc.)
-     **
-     - attr (string) attribute name
-     - value (string) #optional attribute value
-     = (Element) result of query selection
-    \*/
-    elproto.asPX = function (attr, value) {
-        if (value == null) {
-            value = this.attr(attr);
-        }
-        return +unit2px(this, attr, value);
-    };
-    // SIERRA Element.use(): I suggest adding a note about how to access the original element the returned <use> instantiates. It's a part of SVG with which ordinary web developers may be least familiar.
-    /*\
-     * Element.use
-     [ method ]
-     **
-     * Creates a `<use>` element linked to the current element
-     **
-     = (Element) the `<use>` element
-    \*/
-    elproto.use = function () {
-        var use,
-            id = this.node.id;
-        if (!id) {
-            id = this.id;
-            $(this.node, {
-                id: id
-            });
-        }
-        if (this.type == "linearGradient" || this.type == "radialGradient" ||
-            this.type == "pattern") {
-            use = make(this.type, this.node.parentNode);
-        } else {
-            use = make("use", this.node.parentNode);
-        }
-        $(use.node, {
-            "xlink:href": "#" + id
-        });
-        use.original = this;
-        return use;
-    };
-    function fixids(el) {
-        var els = el.selectAll("*"),
-            it,
-            url = /^\s*url\(("|'|)(.*)\1\)\s*$/,
-            ids = [],
-            uses = {};
-        function urltest(it, name) {
-            var val = $(it.node, name);
-            val = val && val.match(url);
-            val = val && val[2];
-            if (val && val.charAt() == "#") {
-                val = val.substring(1);
-            } else {
-                return;
-            }
-            if (val) {
-                uses[val] = (uses[val] || []).concat(function (id) {
-                    var attr = {};
-                    attr[name] = URL(id);
-                    $(it.node, attr);
-                });
-            }
-        }
-        function linktest(it) {
-            var val = $(it.node, "xlink:href");
-            if (val && val.charAt() == "#") {
-                val = val.substring(1);
-            } else {
-                return;
-            }
-            if (val) {
-                uses[val] = (uses[val] || []).concat(function (id) {
-                    it.attr("xlink:href", "#" + id);
-                });
-            }
-        }
-        for (var i = 0, ii = els.length; i < ii; i++) {
-            it = els[i];
-            urltest(it, "fill");
-            urltest(it, "stroke");
-            urltest(it, "filter");
-            urltest(it, "mask");
-            urltest(it, "clip-path");
-            linktest(it);
-            var oldid = $(it.node, "id");
-            if (oldid) {
-                $(it.node, {id: it.id});
-                ids.push({
-                    old: oldid,
-                    id: it.id
-                });
-            }
-        }
-        for (i = 0, ii = ids.length; i < ii; i++) {
-            var fs = uses[ids[i].old];
-            if (fs) {
-                for (var j = 0, jj = fs.length; j < jj; j++) {
-                    fs[j](ids[i].id);
-                }
-            }
-        }
-    }
-    /*\
-     * Element.clone
-     [ method ]
-     **
-     * Creates a clone of the element and inserts it after the element
-     **
-     = (Element) the clone
-    \*/
-    elproto.clone = function () {
-        var clone = wrap(this.node.cloneNode(true));
-        if ($(clone.node, "id")) {
-            $(clone.node, {id: clone.id});
-        }
-        fixids(clone);
-        clone.insertAfter(this);
-        return clone;
-    };
-    /*\
-     * Element.toDefs
-     [ method ]
-     **
-     * Moves element to the shared `<defs>` area
-     **
-     = (Element) the element
-    \*/
-    elproto.toDefs = function () {
-        var defs = getSomeDefs(this);
-        defs.appendChild(this.node);
-        return this;
-    };
-    /*\
-     * Element.toPattern
-     [ method ]
-     **
-     * Creates a `<pattern>` element from the current element
-     **
-     * To create a pattern you have to specify the pattern rect:
-     - x (string|number)
-     - y (string|number)
-     - width (string|number)
-     - height (string|number)
-     = (Element) the `<pattern>` element
-     * You can use pattern later on as an argument for `fill` attribute:
-     | var p = paper.path("M10-5-10,15M15,0,0,15M0-5-20,15").attr({
-     |         fill: "none",
-     |         stroke: "#bada55",
-     |         strokeWidth: 5
-     |     }).pattern(0, 0, 10, 10),
-     |     c = paper.circle(200, 200, 100);
-     | c.attr({
-     |     fill: p
-     | });
-    \*/
-    elproto.pattern = elproto.toPattern = function (x, y, width, height) {
-        var p = make("pattern", getSomeDefs(this));
-        if (x == null) {
-            x = this.getBBox();
-        }
-        if (is(x, "object") && "x" in x) {
-            y = x.y;
-            width = x.width;
-            height = x.height;
-            x = x.x;
-        }
-        $(p.node, {
-            x: x,
-            y: y,
-            width: width,
-            height: height,
-            patternUnits: "userSpaceOnUse",
-            id: p.id,
-            viewBox: [x, y, width, height].join(" ")
-        });
-        p.node.appendChild(this.node);
-        return p;
-    };
-// SIERRA Element.marker(): clarify what a reference point is. E.g., helps you offset the object from its edge such as when centering it over a path.
-// SIERRA Element.marker(): I suggest the method should accept default reference point values.  Perhaps centered with (refX = width/2) and (refY = height/2)? Also, couldn't it assume the element's current _width_ and _height_? And please specify what _x_ and _y_ mean: offsets? If so, from where?  Couldn't they also be assigned default values?
-    /*\
-     * Element.marker
-     [ method ]
-     **
-     * Creates a `<marker>` element from the current element
-     **
-     * To create a marker you have to specify the bounding rect and reference point:
-     - x (number)
-     - y (number)
-     - width (number)
-     - height (number)
-     - refX (number)
-     - refY (number)
-     = (Element) the `<marker>` element
-     * You can specify the marker later as an argument for `marker-start`, `marker-end`, `marker-mid`, and `marker` attributes. The `marker` attribute places the marker at every point along the path, and `marker-mid` places them at every point except the start and end.
-    \*/
-    // TODO add usage for markers
-    elproto.marker = function (x, y, width, height, refX, refY) {
-        var p = make("marker", getSomeDefs(this));
-        if (x == null) {
-            x = this.getBBox();
-        }
-        if (is(x, "object") && "x" in x) {
-            y = x.y;
-            width = x.width;
-            height = x.height;
-            refX = x.refX || x.cx;
-            refY = x.refY || x.cy;
-            x = x.x;
-        }
-        $(p.node, {
-            viewBox: [x, y, width, height].join(" "),
-            markerWidth: width,
-            markerHeight: height,
-            orient: "auto",
-            refX: refX || 0,
-            refY: refY || 0,
-            id: p.id
-        });
-        p.node.appendChild(this.node);
-        return p;
-    };
-    // animation
-    function slice(from, to, f) {
-        return function (arr) {
-            var res = arr.slice(from, to);
-            if (res.length == 1) {
-                res = res[0];
-            }
-            return f ? f(res) : res;
-        };
-    }
-    var Animation = function (attr, ms, easing, callback) {
-        if (typeof easing == "function" && !easing.length) {
-            callback = easing;
-            easing = mina.linear;
-        }
-        this.attr = attr;
-        this.dur = ms;
-        easing && (this.easing = easing);
-        callback && (this.callback = callback);
-    };
-    Snap._.Animation = Animation;
-    /*\
-     * Snap.animation
-     [ method ]
-     **
-     * Creates an animation object
-     **
-     - attr (object) attributes of final destination
-     - duration (number) duration of the animation, in milliseconds
-     - easing (function) #optional one of easing functions of @mina or custom one
-     - callback (function) #optional callback function that fires when animation ends
-     = (object) animation object
-    \*/
-    Snap.animation = function (attr, ms, easing, callback) {
-        return new Animation(attr, ms, easing, callback);
-    };
-    /*\
-     * Element.inAnim
-     [ method ]
-     **
-     * Returns a set of animations that may be able to manipulate the current element
-     **
-     = (object) in format:
-     o {
-     o     anim (object) animation object,
-     o     mina (object) @mina object,
-     o     curStatus (number) 0..1 — status of the animation: 0 — just started, 1 — just finished,
-     o     status (function) gets or sets the status of the animation,
-     o     stop (function) stops the animation
-     o }
-    \*/
-    elproto.inAnim = function () {
-        var el = this,
-            res = [];
-        for (var id in el.anims) if (el.anims[has](id)) {
-            (function (a) {
-                res.push({
-                    anim: new Animation(a._attrs, a.dur, a.easing, a._callback),
-                    mina: a,
-                    curStatus: a.status(),
-                    status: function (val) {
-                        return a.status(val);
-                    },
-                    stop: function () {
-                        a.stop();
-                    }
-                });
-            }(el.anims[id]));
-        }
-        return res;
-    };
-    /*\
-     * Snap.animate
-     [ method ]
-     **
-     * Runs generic animation of one number into another with a caring function
-     **
-     - from (number|array) number or array of numbers
-     - to (number|array) number or array of numbers
-     - setter (function) caring function that accepts one number argument
-     - duration (number) duration, in milliseconds
-     - easing (function) #optional easing function from @mina or custom
-     - callback (function) #optional callback function to execute when animation ends
-     = (object) animation object in @mina format
-     o {
-     o     id (string) animation id, consider it read-only,
-     o     duration (function) gets or sets the duration of the animation,
-     o     easing (function) easing,
-     o     speed (function) gets or sets the speed of the animation,
-     o     status (function) gets or sets the status of the animation,
-     o     stop (function) stops the animation
-     o }
-     | var rect = Snap().rect(0, 0, 10, 10);
-     | Snap.animate(0, 10, function (val) {
-     |     rect.attr({
-     |         x: val
-     |     });
-     | }, 1000);
-     | // in given context is equivalent to
-     | rect.animate({x: 10}, 1000);
-    \*/
-    Snap.animate = function (from, to, setter, ms, easing, callback) {
-        if (typeof easing == "function" && !easing.length) {
-            callback = easing;
-            easing = mina.linear;
-        }
-        var now = mina.time(),
-            anim = mina(from, to, now, now + ms, mina.time, setter, easing);
-        callback && eve.once("mina.finish." + anim.id, callback);
-        return anim;
-    };
-    /*\
-     * Element.stop
-     [ method ]
-     **
-     * Stops all the animations for the current element
-     **
-     = (Element) the current element
-    \*/
-    elproto.stop = function () {
-        var anims = this.inAnim();
-        for (var i = 0, ii = anims.length; i < ii; i++) {
-            anims[i].stop();
-        }
-        return this;
-    };
-    /*\
-     * Element.animate
-     [ method ]
-     **
-     * Animates the given attributes of the element
-     **
-     - attrs (object) key-value pairs of destination attributes
-     - duration (number) duration of the animation in milliseconds
-     - easing (function) #optional easing function from @mina or custom
-     - callback (function) #optional callback function that executes when the animation ends
-     = (Element) the current element
-    \*/
-    elproto.animate = function (attrs, ms, easing, callback) {
-        if (typeof easing == "function" && !easing.length) {
-            callback = easing;
-            easing = mina.linear;
-        }
-        if (attrs instanceof Animation) {
-            callback = attrs.callback;
-            easing = attrs.easing;
-            ms = easing.dur;
-            attrs = attrs.attr;
-        }
-        var fkeys = [], tkeys = [], keys = {}, from, to, f, eq,
-            el = this;
-        for (var key in attrs) if (attrs[has](key)) {
-            if (el.equal) {
-                eq = el.equal(key, Str(attrs[key]));
-                from = eq.from;
-                to = eq.to;
-                f = eq.f;
-            } else {
-                from = +el.attr(key);
-                to = +attrs[key];
-            }
-            var len = is(from, "array") ? from.length : 1;
-            keys[key] = slice(fkeys.length, fkeys.length + len, f);
-            fkeys = fkeys.concat(from);
-            tkeys = tkeys.concat(to);
-        }
-        var now = mina.time(),
-            anim = mina(fkeys, tkeys, now, now + ms, mina.time, function (val) {
-                var attr = {};
-                for (var key in keys) if (keys[has](key)) {
-                    attr[key] = keys[key](val);
-                }
-                el.attr(attr);
-            }, easing);
-        el.anims[anim.id] = anim;
-        anim._attrs = attrs;
-        anim._callback = callback;
-        eve("snap.animcreated." + el.id, anim);
-        eve.once("mina.finish." + anim.id, function () {
-            delete el.anims[anim.id];
-            callback && callback.call(el);
-        });
-        eve.once("mina.stop." + anim.id, function () {
-            delete el.anims[anim.id];
-        });
-        return el;
-    };
-    var eldata = {};
-    /*\
-     * Element.data
-     [ method ]
-     **
-     * Adds or retrieves given value associated with given key. (Don’t confuse
-     * with `data-` attributes)
-     *
-     * See also @Element.removeData
-     - key (string) key to store data
-     - value (any) #optional value to store
-     = (object) @Element
-     * or, if value is not specified:
-     = (any) value
-     > Usage
-     | for (var i = 0, i < 5, i++) {
-     |     paper.circle(10 + 15 * i, 10, 10)
-     |          .attr({fill: "#000"})
-     |          .data("i", i)
-     |          .click(function () {
-     |             alert(this.data("i"));
-     |          });
-     | }
-    \*/
-    elproto.data = function (key, value) {
-        var data = eldata[this.id] = eldata[this.id] || {};
-        if (arguments.length == 0){
-            eve("snap.data.get." + this.id, this, data, null);
-            return data;
-        }
-        if (arguments.length == 1) {
-            if (Snap.is(key, "object")) {
-                for (var i in key) if (key[has](i)) {
-                    this.data(i, key[i]);
-                }
-                return this;
-            }
-            eve("snap.data.get." + this.id, this, data[key], key);
-            return data[key];
-        }
-        data[key] = value;
-        eve("snap.data.set." + this.id, this, value, key);
-        return this;
-    };
-    /*\
-     * Element.removeData
-     [ method ]
-     **
-     * Removes value associated with an element by given key.
-     * If key is not provided, removes all the data of the element.
-     - key (string) #optional key
-     = (object) @Element
-    \*/
-    elproto.removeData = function (key) {
-        if (key == null) {
-            eldata[this.id] = {};
-        } else {
-            eldata[this.id] && delete eldata[this.id][key];
-        }
-        return this;
-    };
-    /*\
-     * Element.outerSVG
-     [ method ]
-     **
-     * Returns SVG code for the element, equivalent to HTML's `outerHTML`.
-     *
-     * See also @Element.innerSVG
-     = (string) SVG code for the element
-    \*/
-    /*\
-     * Element.toString
-     [ method ]
-     **
-     * See @Element.outerSVG
-    \*/
-    elproto.outerSVG = elproto.toString = toString(1);
-    /*\
-     * Element.innerSVG
-     [ method ]
-     **
-     * Returns SVG code for the element's contents, equivalent to HTML's `innerHTML`
-     = (string) SVG code for the element
-    \*/
-    elproto.innerSVG = toString();
-    function toString(type) {
-        return function () {
-            var res = type ? "<" + this.type : "",
-                attr = this.node.attributes,
-                chld = this.node.childNodes;
-            if (type) {
-                for (var i = 0, ii = attr.length; i < ii; i++) {
-                    res += " " + attr[i].name + '="' +
-                            attr[i].value.replace(/"/g, '\\"') + '"';
-                }
-            }
-            if (chld.length) {
-                type && (res += ">");
-                for (i = 0, ii = chld.length; i < ii; i++) {
-                    if (chld[i].nodeType == 3) {
-                        res += chld[i].nodeValue;
-                    } else if (chld[i].nodeType == 1) {
-                        res += wrap(chld[i]).toString();
-                    }
-                }
-                type && (res += "</" + this.type + ">");
-            } else {
-                type && (res += "/>");
-            }
-            return res;
-        };
-    }
-    elproto.toDataURL = function () {
-        if (window && window.btoa) {
-            var bb = this.getBBox(),
-                svg = Snap.format('<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{width}" height="{height}" viewBox="{x} {y} {width} {height}">{contents}</svg>', {
-                x: +bb.x.toFixed(3),
-                y: +bb.y.toFixed(3),
-                width: +bb.width.toFixed(3),
-                height: +bb.height.toFixed(3),
-                contents: this.outerSVG()
-            });
-            return "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(svg)));
-        }
-    };
-    /*\
-     * Fragment.select
-     [ method ]
-     **
-     * See @Element.select
-    \*/
-    Fragment.prototype.select = elproto.select;
-    /*\
-     * Fragment.selectAll
-     [ method ]
-     **
-     * See @Element.selectAll
-    \*/
-    Fragment.prototype.selectAll = elproto.selectAll;
-});
-
-// Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-// 
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-// http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-Snap.plugin(function (Snap, Element, Paper, glob, Fragment) {
-    var objectToString = Object.prototype.toString,
-        Str = String,
-        math = Math,
-        E = "";
-    function Matrix(a, b, c, d, e, f) {
-        if (b == null && objectToString.call(a) == "[object SVGMatrix]") {
-            this.a = a.a;
-            this.b = a.b;
-            this.c = a.c;
-            this.d = a.d;
-            this.e = a.e;
-            this.f = a.f;
-            return;
-        }
-        if (a != null) {
-            this.a = +a;
-            this.b = +b;
-            this.c = +c;
-            this.d = +d;
-            this.e = +e;
-            this.f = +f;
-        } else {
-            this.a = 1;
-            this.b = 0;
-            this.c = 0;
-            this.d = 1;
-            this.e = 0;
-            this.f = 0;
-        }
-    }
-    (function (matrixproto) {
-        /*\
-         * Matrix.add
-         [ method ]
-         **
-         * Adds the given matrix to existing one
-         - a (number)
-         - b (number)
-         - c (number)
-         - d (number)
-         - e (number)
-         - f (number)
-         * or
-         - matrix (object) @Matrix
-        \*/
-        matrixproto.add = function (a, b, c, d, e, f) {
-            var out = [[], [], []],
-                m = [[this.a, this.c, this.e], [this.b, this.d, this.f], [0, 0, 1]],
-                matrix = [[a, c, e], [b, d, f], [0, 0, 1]],
-                x, y, z, res;
-
-            if (a && a instanceof Matrix) {
-                matrix = [[a.a, a.c, a.e], [a.b, a.d, a.f], [0, 0, 1]];
-            }
-
-            for (x = 0; x < 3; x++) {
-                for (y = 0; y < 3; y++) {
-                    res = 0;
-                    for (z = 0; z < 3; z++) {
-                        res += m[x][z] * matrix[z][y];
-                    }
-                    out[x][y] = res;
-                }
-            }
-            this.a = out[0][0];
-            this.b = out[1][0];
-            this.c = out[0][1];
-            this.d = out[1][1];
-            this.e = out[0][2];
-            this.f = out[1][2];
-            return this;
-        };
-        /*\
-         * Matrix.invert
-         [ method ]
-         **
-         * Returns an inverted version of the matrix
-         = (object) @Matrix
-        \*/
-        matrixproto.invert = function () {
-            var me = this,
-                x = me.a * me.d - me.b * me.c;
-            return new Matrix(me.d / x, -me.b / x, -me.c / x, me.a / x, (me.c * me.f - me.d * me.e) / x, (me.b * me.e - me.a * me.f) / x);
-        };
-        /*\
-         * Matrix.clone
-         [ method ]
-         **
-         * Returns a copy of the matrix
-         = (object) @Matrix
-        \*/
-        matrixproto.clone = function () {
-            return new Matrix(this.a, this.b, this.c, this.d, this.e, this.f);
-        };
-        /*\
-         * Matrix.translate
-         [ method ]
-         **
-         * Translate the matrix
-         - x (number) horizontal offset distance
-         - y (number) vertical offset distance
-        \*/
-        matrixproto.translate = function (x, y) {
-            return this.add(1, 0, 0, 1, x, y);
-        };
-        /*\
-         * Matrix.scale
-         [ method ]
-         **
-         * Scales the matrix
-         - x (number) amount to be scaled, with `1` resulting in no change
-         - y (number) #optional amount to scale along the vertical axis. (Otherwise `x` applies to both axes.)
-         - cx (number) #optional horizontal origin point from which to scale
-         - cy (number) #optional vertical origin point from which to scale
-         * Default cx, cy is the middle point of the element.
-        \*/
-        matrixproto.scale = function (x, y, cx, cy) {
-            y == null && (y = x);
-            (cx || cy) && this.add(1, 0, 0, 1, cx, cy);
-            this.add(x, 0, 0, y, 0, 0);
-            (cx || cy) && this.add(1, 0, 0, 1, -cx, -cy);
-            return this;
-        };
-        /*\
-         * Matrix.rotate
-         [ method ]
-         **
-         * Rotates the matrix
-         - a (number) angle of rotation, in degrees
-         - x (number) horizontal origin point from which to rotate
-         - y (number) vertical origin point from which to rotate
-        \*/
-        matrixproto.rotate = function (a, x, y) {
-            a = Snap.rad(a);
-            x = x || 0;
-            y = y || 0;
-            var cos = +math.cos(a).toFixed(9),
-                sin = +math.sin(a).toFixed(9);
-            this.add(cos, sin, -sin, cos, x, y);
-            return this.add(1, 0, 0, 1, -x, -y);
-        };
-        /*\
-         * Matrix.x
-         [ method ]
-         **
-         * Returns x coordinate for given point after transformation described by the matrix. See also @Matrix.y
-         - x (number)
-         - y (number)
-         = (number) x
-        \*/
-        matrixproto.x = function (x, y) {
-            return x * this.a + y * this.c + this.e;
-        };
-        /*\
-         * Matrix.y
-         [ method ]
-         **
-         * Returns y coordinate for given point after transformation described by the matrix. See also @Matrix.x
-         - x (number)
-         - y (number)
-         = (number) y
-        \*/
-        matrixproto.y = function (x, y) {
-            return x * this.b + y * this.d + this.f;
-        };
-        matrixproto.get = function (i) {
-            return +this[Str.fromCharCode(97 + i)].toFixed(4);
-        };
-        matrixproto.toString = function () {
-            return "matrix(" + [this.get(0), this.get(1), this.get(2), this.get(3), this.get(4), this.get(5)].join() + ")";
-        };
-        matrixproto.offset = function () {
-            return [this.e.toFixed(4), this.f.toFixed(4)];
-        };
-        function norm(a) {
-            return a[0] * a[0] + a[1] * a[1];
-        }
-        function normalize(a) {
-            var mag = math.sqrt(norm(a));
-            a[0] && (a[0] /= mag);
-            a[1] && (a[1] /= mag);
-        }
-        /*\
-         * Matrix.determinant
-         [ method ]
-         **
-         * Finds determinant of the given matrix.
-         = (number) determinant
-        \*/
-        matrixproto.determinant = function () {
-            return this.a * this.d - this.b * this.c;
-        };
-        /*\
-         * Matrix.split
-         [ method ]
-         **
-         * Splits matrix into primitive transformations
-         = (object) in format:
-         o dx (number) translation by x
-         o dy (number) translation by y
-         o scalex (number) scale by x
-         o scaley (number) scale by y
-         o shear (number) shear
-         o rotate (number) rotation in deg
-         o isSimple (boolean) could it be represented via simple transformations
-        \*/
-        matrixproto.split = function () {
-            var out = {};
-            // translation
-            out.dx = this.e;
-            out.dy = this.f;
-
-            // scale and shear
-            var row = [[this.a, this.c], [this.b, this.d]];
-            out.scalex = math.sqrt(norm(row[0]));
-            normalize(row[0]);
-
-            out.shear = row[0][0] * row[1][0] + row[0][1] * row[1][1];
-            row[1] = [row[1][0] - row[0][0] * out.shear, row[1][1] - row[0][1] * out.shear];
-
-            out.scaley = math.sqrt(norm(row[1]));
-            normalize(row[1]);
-            out.shear /= out.scaley;
-
-            if (this.determinant() < 0) {
-                out.scalex = -out.scalex;
-            }
-
-            // rotation
-            var sin = -row[0][1],
-                cos = row[1][1];
-            if (cos < 0) {
-                out.rotate = Snap.deg(math.acos(cos));
-                if (sin < 0) {
-                    out.rotate = 360 - out.rotate;
-                }
-            } else {
-                out.rotate = Snap.deg(math.asin(sin));
-            }
-
-            out.isSimple = !+out.shear.toFixed(9) && (out.scalex.toFixed(9) == out.scaley.toFixed(9) || !out.rotate);
-            out.isSuperSimple = !+out.shear.toFixed(9) && out.scalex.toFixed(9) == out.scaley.toFixed(9) && !out.rotate;
-            out.noRotation = !+out.shear.toFixed(9) && !out.rotate;
-            return out;
-        };
-        /*\
-         * Matrix.toTransformString
-         [ method ]
-         **
-         * Returns transform string that represents given matrix
-         = (string) transform string
-        \*/
-        matrixproto.toTransformString = function (shorter) {
-            var s = shorter || this.split();
-            if (!+s.shear.toFixed(9)) {
-                s.scalex = +s.scalex.toFixed(4);
-                s.scaley = +s.scaley.toFixed(4);
-                s.rotate = +s.rotate.toFixed(4);
-                return  (s.dx || s.dy ? "t" + [+s.dx.toFixed(4), +s.dy.toFixed(4)] : E) + 
-                        (s.scalex != 1 || s.scaley != 1 ? "s" + [s.scalex, s.scaley, 0, 0] : E) +
-                        (s.rotate ? "r" + [+s.rotate.toFixed(4), 0, 0] : E);
-            } else {
-                return "m" + [this.get(0), this.get(1), this.get(2), this.get(3), this.get(4), this.get(5)];
-            }
-        };
-    })(Matrix.prototype);
-    /*\
-     * Snap.Matrix
-     [ method ]
-     **
-     * Matrix constructor, extend on your own risk.
-     * To create matrices use @Snap.matrix.
-    \*/
-    Snap.Matrix = Matrix;
-    /*\
-     * Snap.matrix
-     [ method ]
-     **
-     * Utility method
-     **
-     * Returns a matrix based on the given parameters
-     - a (number)
-     - b (number)
-     - c (number)
-     - d (number)
-     - e (number)
-     - f (number)
-     * or
-     - svgMatrix (SVGMatrix)
-     = (object) @Matrix
-    \*/
-    Snap.matrix = function (a, b, c, d, e, f) {
-        return new Matrix(a, b, c, d, e, f);
-    };
-});
-// Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-// 
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-// http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-Snap.plugin(function (Snap, Element, Paper, glob, Fragment) {
-    var has = "hasOwnProperty",
-        make = Snap._.make,
-        wrap = Snap._.wrap,
-        is = Snap.is,
-        getSomeDefs = Snap._.getSomeDefs,
-        reURLValue = /^url\(#?([^)]+)\)$/,
-        $ = Snap._.$,
-        URL = Snap.url,
-        Str = String,
-        separator = Snap._.separator,
-        E = "";
-    // Attributes event handlers
-    eve.on("snap.util.attr.mask", function (value) {
-        if (value instanceof Element || value instanceof Fragment) {
-            eve.stop();
-            if (value instanceof Fragment && value.node.childNodes.length == 1) {
-                value = value.node.firstChild;
-                getSomeDefs(this).appendChild(value);
-                value = wrap(value);
-            }
-            if (value.type == "mask") {
-                var mask = value;
-            } else {
-                mask = make("mask", getSomeDefs(this));
-                mask.node.appendChild(value.node);
-            }
-            !mask.node.id && $(mask.node, {
-                id: mask.id
-            });
-            $(this.node, {
-                mask: URL(mask.id)
-            });
-        }
-    });
-    (function (clipIt) {
-        eve.on("snap.util.attr.clip", clipIt);
-        eve.on("snap.util.attr.clip-path", clipIt);
-        eve.on("snap.util.attr.clipPath", clipIt);
-    }(function (value) {
-        if (value instanceof Element || value instanceof Fragment) {
-            eve.stop();
-            if (value.type == "clipPath") {
-                var clip = value;
-            } else {
-                clip = make("clipPath", getSomeDefs(this));
-                clip.node.appendChild(value.node);
-                !clip.node.id && $(clip.node, {
-                    id: clip.id
-                });
-            }
-            $(this.node, {
-                "clip-path": URL(clip.node.id || clip.id)
-            });
-        }
-    }));
-    function fillStroke(name) {
-        return function (value) {
-            eve.stop();
-            if (value instanceof Fragment && value.node.childNodes.length == 1 &&
-                (value.node.firstChild.tagName == "radialGradient" ||
-                value.node.firstChild.tagName == "linearGradient" ||
-                value.node.firstChild.tagName == "pattern")) {
-                value = value.node.firstChild;
-                getSomeDefs(this).appendChild(value);
-                value = wrap(value);
-            }
-            if (value instanceof Element) {
-                if (value.type == "radialGradient" || value.type == "linearGradient"
-                   || value.type == "pattern") {
-                    if (!value.node.id) {
-                        $(value.node, {
-                            id: value.id
-                        });
-                    }
-                    var fill = URL(value.node.id);
-                } else {
-                    fill = value.attr(name);
-                }
-            } else {
-                fill = Snap.color(value);
-                if (fill.error) {
-                    var grad = Snap(getSomeDefs(this).ownerSVGElement).gradient(value);
-                    if (grad) {
-                        if (!grad.node.id) {
-                            $(grad.node, {
-                                id: grad.id
-                            });
-                        }
-                        fill = URL(grad.node.id);
-                    } else {
-                        fill = value;
-                    }
-                } else {
-                    fill = Str(fill);
-                }
-            }
-            var attrs = {};
-            attrs[name] = fill;
-            $(this.node, attrs);
-            this.node.style[name] = E;
-        };
-    }
-    eve.on("snap.util.attr.fill", fillStroke("fill"));
-    eve.on("snap.util.attr.stroke", fillStroke("stroke"));
-    var gradrg = /^([lr])(?:\(([^)]*)\))?(.*)$/i;
-    eve.on("snap.util.grad.parse", function parseGrad(string) {
-        string = Str(string);
-        var tokens = string.match(gradrg);
-        if (!tokens) {
-            return null;
-        }
-        var type = tokens[1],
-            params = tokens[2],
-            stops = tokens[3];
-        params = params.split(/\s*,\s*/).map(function (el) {
-            return +el == el ? +el : el;
-        });
-        if (params.length == 1 && params[0] == 0) {
-            params = [];
-        }
-        stops = stops.split("-");
-        stops = stops.map(function (el) {
-            el = el.split(":");
-            var out = {
-                color: el[0]
-            };
-            if (el[1]) {
-                out.offset = parseFloat(el[1]);
-            }
-            return out;
-        });
-        return {
-            type: type,
-            params: params,
-            stops: stops
-        };
-    });
-
-    eve.on("snap.util.attr.d", function (value) {
-        eve.stop();
-        if (is(value, "array") && is(value[0], "array")) {
-            value = Snap.path.toString.call(value);
-        }
-        value = Str(value);
-        if (value.match(/[ruo]/i)) {
-            value = Snap.path.toAbsolute(value);
-        }
-        $(this.node, {d: value});
-    })(-1);
-    eve.on("snap.util.attr.#text", function (value) {
-        eve.stop();
-        value = Str(value);
-        var txt = glob.doc.createTextNode(value);
-        while (this.node.firstChild) {
-            this.node.removeChild(this.node.firstChild);
-        }
-        this.node.appendChild(txt);
-    })(-1);
-    eve.on("snap.util.attr.path", function (value) {
-        eve.stop();
-        this.attr({d: value});
-    })(-1);
-    eve.on("snap.util.attr.class", function (value) {
-        eve.stop();
-        this.node.className.baseVal = value;
-    })(-1);
-    eve.on("snap.util.attr.viewBox", function (value) {
-        var vb;
-        if (is(value, "object") && "x" in value) {
-            vb = [value.x, value.y, value.width, value.height].join(" ");
-        } else if (is(value, "array")) {
-            vb = value.join(" ");
-        } else {
-            vb = value;
-        }
-        $(this.node, {
-            viewBox: vb
-        });
-        eve.stop();
-    })(-1);
-    eve.on("snap.util.attr.transform", function (value) {
-        this.transform(value);
-        eve.stop();
-    })(-1);
-    eve.on("snap.util.attr.r", function (value) {
-        if (this.type == "rect") {
-            eve.stop();
-            $(this.node, {
-                rx: value,
-                ry: value
-            });
-        }
-    })(-1);
-    eve.on("snap.util.attr.textpath", function (value) {
-        eve.stop();
-        if (this.type == "text") {
-            var id, tp, node;
-            if (!value && this.textPath) {
-                tp = this.textPath;
-                while (tp.node.firstChild) {
-                    this.node.appendChild(tp.node.firstChild);
-                }
-                tp.remove();
-                delete this.textPath;
-                return;
-            }
-            if (is(value, "string")) {
-                var defs = getSomeDefs(this),
-                    path = wrap(defs.parentNode).path(value);
-                defs.appendChild(path.node);
-                id = path.id;
-                path.attr({id: id});
-            } else {
-                value = wrap(value);
-                if (value instanceof Element) {
-                    id = value.attr("id");
-                    if (!id) {
-                        id = value.id;
-                        value.attr({id: id});
-                    }
-                }
-            }
-            if (id) {
-                tp = this.textPath;
-                node = this.node;
-                if (tp) {
-                    tp.attr({"xlink:href": "#" + id});
-                } else {
-                    tp = $("textPath", {
-                        "xlink:href": "#" + id
-                    });
-                    while (node.firstChild) {
-                        tp.appendChild(node.firstChild);
-                    }
-                    node.appendChild(tp);
-                    this.textPath = wrap(tp);
-                }
-            }
-        }
-    })(-1);
-    eve.on("snap.util.attr.text", function (value) {
-        if (this.type == "text") {
-            var i = 0,
-                node = this.node,
-                tuner = function (chunk) {
-                    var out = $("tspan");
-                    if (is(chunk, "array")) {
-                        for (var i = 0; i < chunk.length; i++) {
-                            out.appendChild(tuner(chunk[i]));
-                        }
-                    } else {
-                        out.appendChild(glob.doc.createTextNode(chunk));
-                    }
-                    out.normalize && out.normalize();
-                    return out;
-                };
-            while (node.firstChild) {
-                node.removeChild(node.firstChild);
-            }
-            var tuned = tuner(value);
-            while (tuned.firstChild) {
-                node.appendChild(tuned.firstChild);
-            }
-        }
-        eve.stop();
-    })(-1);
-    function setFontSize(value) {
-        eve.stop();
-        if (value == +value) {
-            value += "px";
-        }
-        this.node.style.fontSize = value;
-    }
-    eve.on("snap.util.attr.fontSize", setFontSize)(-1);
-    eve.on("snap.util.attr.font-size", setFontSize)(-1);
-
-
-    eve.on("snap.util.getattr.transform", function () {
-        eve.stop();
-        return this.transform();
-    })(-1);
-    eve.on("snap.util.getattr.textpath", function () {
-        eve.stop();
-        return this.textPath;
-    })(-1);
-    // Markers
-    (function () {
-        function getter(end) {
-            return function () {
-                eve.stop();
-                var style = glob.doc.defaultView.getComputedStyle(this.node, null).getPropertyValue("marker-" + end);
-                if (style == "none") {
-                    return style;
-                } else {
-                    return Snap(glob.doc.getElementById(style.match(reURLValue)[1]));
-                }
-            };
-        }
-        function setter(end) {
-            return function (value) {
-                eve.stop();
-                var name = "marker" + end.charAt(0).toUpperCase() + end.substring(1);
-                if (value == "" || !value) {
-                    this.node.style[name] = "none";
-                    return;
-                }
-                if (value.type == "marker") {
-                    var id = value.node.id;
-                    if (!id) {
-                        $(value.node, {id: value.id});
-                    }
-                    this.node.style[name] = URL(id);
-                    return;
-                }
-            };
-        }
-        eve.on("snap.util.getattr.marker-end", getter("end"))(-1);
-        eve.on("snap.util.getattr.markerEnd", getter("end"))(-1);
-        eve.on("snap.util.getattr.marker-start", getter("start"))(-1);
-        eve.on("snap.util.getattr.markerStart", getter("start"))(-1);
-        eve.on("snap.util.getattr.marker-mid", getter("mid"))(-1);
-        eve.on("snap.util.getattr.markerMid", getter("mid"))(-1);
-        eve.on("snap.util.attr.marker-end", setter("end"))(-1);
-        eve.on("snap.util.attr.markerEnd", setter("end"))(-1);
-        eve.on("snap.util.attr.marker-start", setter("start"))(-1);
-        eve.on("snap.util.attr.markerStart", setter("start"))(-1);
-        eve.on("snap.util.attr.marker-mid", setter("mid"))(-1);
-        eve.on("snap.util.attr.markerMid", setter("mid"))(-1);
-    }());
-    eve.on("snap.util.getattr.r", function () {
-        if (this.type == "rect" && $(this.node, "rx") == $(this.node, "ry")) {
-            eve.stop();
-            return $(this.node, "rx");
-        }
-    })(-1);
-    function textExtract(node) {
-        var out = [];
-        var children = node.childNodes;
-        for (var i = 0, ii = children.length; i < ii; i++) {
-            var chi = children[i];
-            if (chi.nodeType == 3) {
-                out.push(chi.nodeValue);
-            }
-            if (chi.tagName == "tspan") {
-                if (chi.childNodes.length == 1 && chi.firstChild.nodeType == 3) {
-                    out.push(chi.firstChild.nodeValue);
-                } else {
-                    out.push(textExtract(chi));
-                }
-            }
-        }
-        return out;
-    }
-    eve.on("snap.util.getattr.text", function () {
-        if (this.type == "text" || this.type == "tspan") {
-            eve.stop();
-            var out = textExtract(this.node);
-            return out.length == 1 ? out[0] : out;
-        }
-    })(-1);
-    eve.on("snap.util.getattr.#text", function () {
-        return this.node.textContent;
-    })(-1);
-    eve.on("snap.util.getattr.viewBox", function () {
-        eve.stop();
-        var vb = $(this.node, "viewBox");
-        if (vb) {
-            vb = vb.split(separator);
-            return Snap._.box(+vb[0], +vb[1], +vb[2], +vb[3]);
-        } else {
-            return;
-        }
-    })(-1);
-    eve.on("snap.util.getattr.points", function () {
-        var p = $(this.node, "points");
-        eve.stop();
-        if (p) {
-            return p.split(separator);
-        } else {
-            return;
-        }
-    })(-1);
-    eve.on("snap.util.getattr.path", function () {
-        var p = $(this.node, "d");
-        eve.stop();
-        return p;
-    })(-1);
-    eve.on("snap.util.getattr.class", function () {
-        return this.node.className.baseVal;
-    })(-1);
-    function getFontSize() {
-        eve.stop();
-        return this.node.style.fontSize;
-    }
-    eve.on("snap.util.getattr.fontSize", getFontSize)(-1);
-    eve.on("snap.util.getattr.font-size", getFontSize)(-1);
-});
-
-// Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-// 
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-// http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-Snap.plugin(function (Snap, Element, Paper, glob, Fragment) {
-    var proto = Paper.prototype,
-        is = Snap.is;
-    /*\
-     * Paper.rect
-     [ method ]
-     *
-     * Draws a rectangle
-     **
-     - x (number) x coordinate of the top left corner
-     - y (number) y coordinate of the top left corner
-     - width (number) width
-     - height (number) height
-     - rx (number) #optional horizontal radius for rounded corners, default is 0
-     - ry (number) #optional vertical radius for rounded corners, default is rx or 0
-     = (object) the `rect` element
-     **
-     > Usage
-     | // regular rectangle
-     | var c = paper.rect(10, 10, 50, 50);
-     | // rectangle with rounded corners
-     | var c = paper.rect(40, 40, 50, 50, 10);
-    \*/
-    proto.rect = function (x, y, w, h, rx, ry) {
-        var attr;
-        if (ry == null) {
-            ry = rx;
-        }
-        if (is(x, "object") && x == "[object Object]") {
-            attr = x;
-        } else if (x != null) {
-            attr = {
-                x: x,
-                y: y,
-                width: w,
-                height: h
-            };
-            if (rx != null) {
-                attr.rx = rx;
-                attr.ry = ry;
-            }
-        }
-        return this.el("rect", attr);
-    };
-    /*\
-     * Paper.circle
-     [ method ]
-     **
-     * Draws a circle
-     **
-     - x (number) x coordinate of the centre
-     - y (number) y coordinate of the centre
-     - r (number) radius
-     = (object) the `circle` element
-     **
-     > Usage
-     | var c = paper.circle(50, 50, 40);
-    \*/
-    proto.circle = function (cx, cy, r) {
-        var attr;
-        if (is(cx, "object") && cx == "[object Object]") {
-            attr = cx;
-        } else if (cx != null) {
-            attr = {
-                cx: cx,
-                cy: cy,
-                r: r
-            };
-        }
-        return this.el("circle", attr);
-    };
-
-    var preload = (function () {
-        function onerror() {
-            this.parentNode.removeChild(this);
-        }
-        return function (src, f) {
-            var img = glob.doc.createElement("img"),
-                body = glob.doc.body;
-            img.style.cssText = "position:absolute;left:-9999em;top:-9999em";
-            img.onload = function () {
-                f.call(img);
-                img.onload = img.onerror = null;
-                body.removeChild(img);
-            };
-            img.onerror = onerror;
-            body.appendChild(img);
-            img.src = src;
-        };
-    }());
-
-    /*\
-     * Paper.image
-     [ method ]
-     **
-     * Places an image on the surface
-     **
-     - src (string) URI of the source image
-     - x (number) x offset position
-     - y (number) y offset position
-     - width (number) width of the image
-     - height (number) height of the image
-     = (object) the `image` element
-     * or
-     = (object) Snap element object with type `image`
-     **
-     > Usage
-     | var c = paper.image("apple.png", 10, 10, 80, 80);
-    \*/
-    proto.image = function (src, x, y, width, height) {
-        var el = this.el("image");
-        if (is(src, "object") && "src" in src) {
-            el.attr(src);
-        } else if (src != null) {
-            var set = {
-                "xlink:href": src,
-                preserveAspectRatio: "none"
-            };
-            if (x != null && y != null) {
-                set.x = x;
-                set.y = y;
-            }
-            if (width != null && height != null) {
-                set.width = width;
-                set.height = height;
-            } else {
-                preload(src, function () {
-                    Snap._.$(el.node, {
-                        width: this.offsetWidth,
-                        height: this.offsetHeight
-                    });
-                });
-            }
-            Snap._.$(el.node, set);
-        }
-        return el;
-    };
-    /*\
-     * Paper.ellipse
-     [ method ]
-     **
-     * Draws an ellipse
-     **
-     - x (number) x coordinate of the centre
-     - y (number) y coordinate of the centre
-     - rx (number) horizontal radius
-     - ry (number) vertical radius
-     = (object) the `ellipse` element
-     **
-     > Usage
-     | var c = paper.ellipse(50, 50, 40, 20);
-    \*/
-    proto.ellipse = function (cx, cy, rx, ry) {
-        var attr;
-        if (is(cx, "object") && cx == "[object Object]") {
-            attr = cx;
-        } else if (cx != null) {
-            attr ={
-                cx: cx,
-                cy: cy,
-                rx: rx,
-                ry: ry
-            };
-        }
-        return this.el("ellipse", attr);
-    };
-    // SIERRA Paper.path(): Unclear from the link what a Catmull-Rom curveto is, and why it would make life any easier.
-    /*\
-     * Paper.path
-     [ method ]
-     **
-     * Creates a `<path>` element using the given string as the path's definition
-     - pathString (string) #optional path string in SVG format
-     * Path string consists of one-letter commands, followed by comma seprarated arguments in numerical form. Example:
-     | "M10,20L30,40"
-     * This example features two commands: `M`, with arguments `(10, 20)` and `L` with arguments `(30, 40)`. Uppercase letter commands express coordinates in absolute terms, while lowercase commands express them in relative terms from the most recently declared coordinates.
-     *
-     # <p>Here is short list of commands available, for more details see <a href="http://www.w3.org/TR/SVG/paths.html#PathData" title="Details of a path's data attribute's format are described in the SVG specification.">SVG path string format</a> or <a href="https://developer.mozilla.org/en/SVG/Tutorial/Paths">article about path strings at MDN</a>.</p>
-     # <table><thead><tr><th>Command</th><th>Name</th><th>Parameters</th></tr></thead><tbody>
-     # <tr><td>M</td><td>moveto</td><td>(x y)+</td></tr>
-     # <tr><td>Z</td><td>closepath</td><td>(none)</td></tr>
-     # <tr><td>L</td><td>lineto</td><td>(x y)+</td></tr>
-     # <tr><td>H</td><td>horizontal lineto</td><td>x+</td></tr>
-     # <tr><td>V</td><td>vertical lineto</td><td>y+</td></tr>
-     # <tr><td>C</td><td>curveto</td><td>(x1 y1 x2 y2 x y)+</td></tr>
-     # <tr><td>S</td><td>smooth curveto</td><td>(x2 y2 x y)+</td></tr>
-     # <tr><td>Q</td><td>quadratic Bézier curveto</td><td>(x1 y1 x y)+</td></tr>
-     # <tr><td>T</td><td>smooth quadratic Bézier curveto</td><td>(x y)+</td></tr>
-     # <tr><td>A</td><td>elliptical arc</td><td>(rx ry x-axis-rotation large-arc-flag sweep-flag x y)+</td></tr>
-     # <tr><td>R</td><td><a href="http://en.wikipedia.org/wiki/Catmull–Rom_spline#Catmull.E2.80.93Rom_spline">Catmull-Rom curveto</a>*</td><td>x1 y1 (x y)+</td></tr></tbody></table>
-     * * _Catmull-Rom curveto_ is a not standard SVG command and added to make life easier.
-     * Note: there is a special case when a path consists of only three commands: `M10,10R…z`. In this case the path connects back to its starting point.
-     > Usage
-     | var c = paper.path("M10 10L90 90");
-     | // draw a diagonal line:
-     | // move to 10,10, line to 90,90
-    \*/
-    proto.path = function (d) {
-        var attr;
-        if (is(d, "object") && !is(d, "array")) {
-            attr = d;
-        } else if (d) {
-            attr = {d: d};
-        }
-        return this.el("path", attr);
-    };
-    /*\
-     * Paper.g
-     [ method ]
-     **
-     * Creates a group element
-     **
-     - varargs (…) #optional elements to nest within the group
-     = (object) the `g` element
-     **
-     > Usage
-     | var c1 = paper.circle(),
-     |     c2 = paper.rect(),
-     |     g = paper.g(c2, c1); // note that the order of elements is different
-     * or
-     | var c1 = paper.circle(),
-     |     c2 = paper.rect(),
-     |     g = paper.g();
-     | g.add(c2, c1);
-    \*/
-    /*\
-     * Paper.group
-     [ method ]
-     **
-     * See @Paper.g
-    \*/
-    proto.group = proto.g = function (first) {
-        var attr,
-            el = this.el("g");
-        if (arguments.length == 1 && first && !first.type) {
-            el.attr(first);
-        } else if (arguments.length) {
-            el.add(Array.prototype.slice.call(arguments, 0));
-        }
-        return el;
-    };
-    /*\
-     * Paper.svg
-     [ method ]
-     **
-     * Creates a nested SVG element.
-     - x (number) @optional X of the element
-     - y (number) @optional Y of the element
-     - width (number) @optional width of the element
-     - height (number) @optional height of the element
-     - vbx (number) @optional viewbox X
-     - vby (number) @optional viewbox Y
-     - vbw (number) @optional viewbox width
-     - vbh (number) @optional viewbox height
-     **
-     = (object) the `svg` element
-     **
-    \*/
-    proto.svg = function (x, y, width, height, vbx, vby, vbw, vbh) {
-        var attrs = {};
-        if (is(x, "object") && y == null) {
-            attrs = x;
-        } else {
-            if (x != null) {
-                attrs.x = x;
-            }
-            if (y != null) {
-                attrs.y = y;
-            }
-            if (width != null) {
-                attrs.width = width;
-            }
-            if (height != null) {
-                attrs.height = height;
-            }
-            if (vbx != null && vby != null && vbw != null && vbh != null) {
-                attrs.viewBox = [vbx, vby, vbw, vbh];
-            }
-        }
-        return this.el("svg", attrs);
-    };
-    /*\
-     * Paper.mask
-     [ method ]
-     **
-     * Equivalent in behaviour to @Paper.g, except it’s a mask.
-     **
-     = (object) the `mask` element
-     **
-    \*/
-    proto.mask = function (first) {
-        var attr,
-            el = this.el("mask");
-        if (arguments.length == 1 && first && !first.type) {
-            el.attr(first);
-        } else if (arguments.length) {
-            el.add(Array.prototype.slice.call(arguments, 0));
-        }
-        return el;
-    };
-    /*\
-     * Paper.ptrn
-     [ method ]
-     **
-     * Equivalent in behaviour to @Paper.g, except it’s a pattern.
-     - x (number) @optional X of the element
-     - y (number) @optional Y of the element
-     - width (number) @optional width of the element
-     - height (number) @optional height of the element
-     - vbx (number) @optional viewbox X
-     - vby (number) @optional viewbox Y
-     - vbw (number) @optional viewbox width
-     - vbh (number) @optional viewbox height
-     **
-     = (object) the `pattern` element
-     **
-    \*/
-    proto.ptrn = function (x, y, width, height, vx, vy, vw, vh) {
-        if (is(x, "object")) {
-            var attr = x;
-        } else {
-            attr = {patternUnits: "userSpaceOnUse"};
-            if (x) {
-                attr.x = x;
-            }
-            if (y) {
-                attr.y = y;
-            }
-            if (width != null) {
-                attr.width = width;
-            }
-            if (height != null) {
-                attr.height = height;
-            }
-            if (vx != null && vy != null && vw != null && vh != null) {
-                attr.viewBox = [vx, vy, vw, vh];
-            }
-        }
-        return this.el("pattern", attr);
-    };
-    /*\
-     * Paper.use
-     [ method ]
-     **
-     * Creates a <use> element.
-     - id (string) @optional id of element to link
-     * or
-     - id (Element) @optional element to link
-     **
-     = (object) the `use` element
-     **
-    \*/
-    proto.use = function (id) {
-        if (id != null) {
-            if (id instanceof Element) {
-                if (!id.attr("id")) {
-                    id.attr({id: Snap._.id(id)});
-                }
-                id = id.attr("id");
-            }
-            if (String(id).charAt() == "#") {
-                id = id.substring(1);
-            }
-            return this.el("use", {"xlink:href": "#" + id});
-        } else {
-            return Element.prototype.use.call(this);
-        }
-    };
-    /*\
-     * Paper.symbol
-     [ method ]
-     **
-     * Creates a <symbol> element.
-     - vbx (number) @optional viewbox X
-     - vby (number) @optional viewbox Y
-     - vbw (number) @optional viewbox width
-     - vbh (number) @optional viewbox height
-     = (object) the `symbol` element
-     **
-    \*/
-    proto.symbol = function (vx, vy, vw, vh) {
-        var attr = {};
-        if (vx != null && vy != null && vw != null && vh != null) {
-            attr.viewBox = [vx, vy, vw, vh];
-        }
-
-        return this.el("symbol", attr);
-    };
-    /*\
-     * Paper.text
-     [ method ]
-     **
-     * Draws a text string
-     **
-     - x (number) x coordinate position
-     - y (number) y coordinate position
-     - text (string|array) The text string to draw or array of strings to nest within separate `<tspan>` elements
-     = (object) the `text` element
-     **
-     > Usage
-     | var t1 = paper.text(50, 50, "Snap");
-     | var t2 = paper.text(50, 50, ["S","n","a","p"]);
-     | // Text path usage
-     | t1.attr({textpath: "M10,10L100,100"});
-     | // or
-     | var pth = paper.path("M10,10L100,100");
-     | t1.attr({textpath: pth});
-    \*/
-    proto.text = function (x, y, text) {
-        var attr = {};
-        if (is(x, "object")) {
-            attr = x;
-        } else if (x != null) {
-            attr = {
-                x: x,
-                y: y,
-                text: text || ""
-            };
-        }
-        return this.el("text", attr);
-    };
-    /*\
-     * Paper.line
-     [ method ]
-     **
-     * Draws a line
-     **
-     - x1 (number) x coordinate position of the start
-     - y1 (number) y coordinate position of the start
-     - x2 (number) x coordinate position of the end
-     - y2 (number) y coordinate position of the end
-     = (object) the `line` element
-     **
-     > Usage
-     | var t1 = paper.line(50, 50, 100, 100);
-    \*/
-    proto.line = function (x1, y1, x2, y2) {
-        var attr = {};
-        if (is(x1, "object")) {
-            attr = x1;
-        } else if (x1 != null) {
-            attr = {
-                x1: x1,
-                x2: x2,
-                y1: y1,
-                y2: y2
-            };
-        }
-        return this.el("line", attr);
-    };
-    /*\
-     * Paper.polyline
-     [ method ]
-     **
-     * Draws a polyline
-     **
-     - points (array) array of points
-     * or
-     - varargs (…) points
-     = (object) the `polyline` element
-     **
-     > Usage
-     | var p1 = paper.polyline([10, 10, 100, 100]);
-     | var p2 = paper.polyline(10, 10, 100, 100);
-    \*/
-    proto.polyline = function (points) {
-        if (arguments.length > 1) {
-            points = Array.prototype.slice.call(arguments, 0);
-        }
-        var attr = {};
-        if (is(points, "object") && !is(points, "array")) {
-            attr = points;
-        } else if (points != null) {
-            attr = {points: points};
-        }
-        return this.el("polyline", attr);
-    };
-    /*\
-     * Paper.polygon
-     [ method ]
-     **
-     * Draws a polygon. See @Paper.polyline
-    \*/
-    proto.polygon = function (points) {
-        if (arguments.length > 1) {
-            points = Array.prototype.slice.call(arguments, 0);
-        }
-        var attr = {};
-        if (is(points, "object") && !is(points, "array")) {
-            attr = points;
-        } else if (points != null) {
-            attr = {points: points};
-        }
-        return this.el("polygon", attr);
-    };
-    // gradients
-    (function () {
-        var $ = Snap._.$;
-        // gradients' helpers
-        function Gstops() {
-            return this.selectAll("stop");
-        }
-        function GaddStop(color, offset) {
-            var stop = $("stop"),
-                attr = {
-                    offset: +offset + "%"
-                };
-            color = Snap.color(color);
-            attr["stop-color"] = color.hex;
-            if (color.opacity < 1) {
-                attr["stop-opacity"] = color.opacity;
-            }
-            $(stop, attr);
-            this.node.appendChild(stop);
-            return this;
-        }
-        function GgetBBox() {
-            if (this.type == "linearGradient") {
-                var x1 = $(this.node, "x1") || 0,
-                    x2 = $(this.node, "x2") || 1,
-                    y1 = $(this.node, "y1") || 0,
-                    y2 = $(this.node, "y2") || 0;
-                return Snap._.box(x1, y1, math.abs(x2 - x1), math.abs(y2 - y1));
-            } else {
-                var cx = this.node.cx || .5,
-                    cy = this.node.cy || .5,
-                    r = this.node.r || 0;
-                return Snap._.box(cx - r, cy - r, r * 2, r * 2);
-            }
-        }
-        function gradient(defs, str) {
-            var grad = eve("snap.util.grad.parse", null, str).firstDefined(),
-                el;
-            if (!grad) {
-                return null;
-            }
-            grad.params.unshift(defs);
-            if (grad.type.toLowerCase() == "l") {
-                el = gradientLinear.apply(0, grad.params);
-            } else {
-                el = gradientRadial.apply(0, grad.params);
-            }
-            if (grad.type != grad.type.toLowerCase()) {
-                $(el.node, {
-                    gradientUnits: "userSpaceOnUse"
-                });
-            }
-            var stops = grad.stops,
-                len = stops.length,
-                start = 0,
-                j = 0;
-            function seed(i, end) {
-                var step = (end - start) / (i - j);
-                for (var k = j; k < i; k++) {
-                    stops[k].offset = +(+start + step * (k - j)).toFixed(2);
-                }
-                j = i;
-                start = end;
-            }
-            len--;
-            for (var i = 0; i < len; i++) if ("offset" in stops[i]) {
-                seed(i, stops[i].offset);
-            }
-            stops[len].offset = stops[len].offset || 100;
-            seed(len, stops[len].offset);
-            for (i = 0; i <= len; i++) {
-                var stop = stops[i];
-                el.addStop(stop.color, stop.offset);
-            }
-            return el;
-        }
-        function gradientLinear(defs, x1, y1, x2, y2) {
-            var el = Snap._.make("linearGradient", defs);
-            el.stops = Gstops;
-            el.addStop = GaddStop;
-            el.getBBox = GgetBBox;
-            if (x1 != null) {
-                $(el.node, {
-                    x1: x1,
-                    y1: y1,
-                    x2: x2,
-                    y2: y2
-                });
-            }
-            return el;
-        }
-        function gradientRadial(defs, cx, cy, r, fx, fy) {
-            var el = Snap._.make("radialGradient", defs);
-            el.stops = Gstops;
-            el.addStop = GaddStop;
-            el.getBBox = GgetBBox;
-            if (cx != null) {
-                $(el.node, {
-                    cx: cx,
-                    cy: cy,
-                    r: r
-                });
-            }
-            if (fx != null && fy != null) {
-                $(el.node, {
-                    fx: fx,
-                    fy: fy
-                });
-            }
-            return el;
-        }
-        /*\
-         * Paper.gradient
-         [ method ]
-         **
-         * Creates a gradient element
-         **
-         - gradient (string) gradient descriptor
-         > Gradient Descriptor
-         * The gradient descriptor is an expression formatted as
-         * follows: `<type>(<coords>)<colors>`.  The `<type>` can be
-         * either linear or radial.  The uppercase `L` or `R` letters
-         * indicate absolute coordinates offset from the SVG surface.
-         * Lowercase `l` or `r` letters indicate coordinates
-         * calculated relative to the element to which the gradient is
-         * applied.  Coordinates specify a linear gradient vector as
-         * `x1`, `y1`, `x2`, `y2`, or a radial gradient as `cx`, `cy`,
-         * `r` and optional `fx`, `fy` specifying a focal point away
-         * from the center of the circle. Specify `<colors>` as a list
-         * of dash-separated CSS color values.  Each color may be
-         * followed by a custom offset value, separated with a colon
-         * character.
-         > Examples
-         * Linear gradient, relative from top-left corner to bottom-right
-         * corner, from black through red to white:
-         | var g = paper.gradient("l(0, 0, 1, 1)#000-#f00-#fff");
-         * Linear gradient, absolute from (0, 0) to (100, 100), from black
-         * through red at 25% to white:
-         | var g = paper.gradient("L(0, 0, 100, 100)#000-#f00:25-#fff");
-         * Radial gradient, relative from the center of the element with radius
-         * half the width, from black to white:
-         | var g = paper.gradient("r(0.5, 0.5, 0.5)#000-#fff");
-         * To apply the gradient:
-         | paper.circle(50, 50, 40).attr({
-         |     fill: g
-         | });
-         = (object) the `gradient` element
-        \*/
-        proto.gradient = function (str) {
-            return gradient(this.defs, str);
-        };
-        proto.gradientLinear = function (x1, y1, x2, y2) {
-            return gradientLinear(this.defs, x1, y1, x2, y2);
-        };
-        proto.gradientRadial = function (cx, cy, r, fx, fy) {
-            return gradientRadial(this.defs, cx, cy, r, fx, fy);
-        };
-        /*\
-         * Paper.toString
-         [ method ]
-         **
-         * Returns SVG code for the @Paper
-         = (string) SVG code for the @Paper
-        \*/
-        proto.toString = function () {
-            var doc = this.node.ownerDocument,
-                f = doc.createDocumentFragment(),
-                d = doc.createElement("div"),
-                svg = this.node.cloneNode(true),
-                res;
-            f.appendChild(d);
-            d.appendChild(svg);
-            Snap._.$(svg, {xmlns: "http://www.w3.org/2000/svg"});
-            res = d.innerHTML;
-            f.removeChild(f.firstChild);
-            return res;
-        };
-        /*\
-         * Paper.toDataURL
-         [ method ]
-         **
-         * Returns SVG code for the @Paper as Data URI string.
-         = (string) Data URI string
-        \*/
-        proto.toDataURL = function () {
-            if (window && window.btoa) {
-                return "data:image/svg+xml;base64," + btoa(unescape(encodeURIComponent(this)));
-            }
-        };
-        /*\
-         * Paper.clear
-         [ method ]
-         **
-         * Removes all child nodes of the paper, except <defs>.
-        \*/
-        proto.clear = function () {
-            var node = this.node.firstChild,
-                next;
-            while (node) {
-                next = node.nextSibling;
-                if (node.tagName != "defs") {
-                    node.parentNode.removeChild(node);
-                } else {
-                    proto.clear.call({node: node});
-                }
-                node = next;
-            }
-        };
-    }());
-});
-
-// Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-// 
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-// http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-Snap.plugin(function (Snap, Element, Paper, glob) {
-    var elproto = Element.prototype,
-        is = Snap.is,
-        clone = Snap._.clone,
-        has = "hasOwnProperty",
-        p2s = /,?([a-z]),?/gi,
-        toFloat = parseFloat,
-        math = Math,
-        PI = math.PI,
-        mmin = math.min,
-        mmax = math.max,
-        pow = math.pow,
-        abs = math.abs;
-    function paths(ps) {
-        var p = paths.ps = paths.ps || {};
-        if (p[ps]) {
-            p[ps].sleep = 100;
-        } else {
-            p[ps] = {
-                sleep: 100
-            };
-        }
-        setTimeout(function () {
-            for (var key in p) if (p[has](key) && key != ps) {
-                p[key].sleep--;
-                !p[key].sleep && delete p[key];
-            }
-        });
-        return p[ps];
-    }
-    function box(x, y, width, height) {
-        if (x == null) {
-            x = y = width = height = 0;
-        }
-        if (y == null) {
-            y = x.y;
-            width = x.width;
-            height = x.height;
-            x = x.x;
-        }
-        return {
-            x: x,
-            y: y,
-            width: width,
-            w: width,
-            height: height,
-            h: height,
-            x2: x + width,
-            y2: y + height,
-            cx: x + width / 2,
-            cy: y + height / 2,
-            r1: math.min(width, height) / 2,
-            r2: math.max(width, height) / 2,
-            r0: math.sqrt(width * width + height * height) / 2,
-            path: rectPath(x, y, width, height),
-            vb: [x, y, width, height].join(" ")
-        };
-    }
-    function toString() {
-        return this.join(",").replace(p2s, "$1");
-    }
-    function pathClone(pathArray) {
-        var res = clone(pathArray);
-        res.toString = toString;
-        return res;
-    }
-    function getPointAtSegmentLength(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, length) {
-        if (length == null) {
-            return bezlen(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y);
-        } else {
-            return findDotsAtSegment(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y,
-                getTotLen(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, length));
-        }
-    }
-    function getLengthFactory(istotal, subpath) {
-        function O(val) {
-            return +(+val).toFixed(3);
-        }
-        return Snap._.cacher(function (path, length, onlystart) {
-            if (path instanceof Element) {
-                path = path.attr("d");
-            }
-            path = path2curve(path);
-            var x, y, p, l, sp = "", subpaths = {}, point,
-                len = 0;
-            for (var i = 0, ii = path.length; i < ii; i++) {
-                p = path[i];
-                if (p[0] == "M") {
-                    x = +p[1];
-                    y = +p[2];
-                } else {
-                    l = getPointAtSegmentLength(x, y, p[1], p[2], p[3], p[4], p[5], p[6]);
-                    if (len + l > length) {
-                        if (subpath && !subpaths.start) {
-                            point = getPointAtSegmentLength(x, y, p[1], p[2], p[3], p[4], p[5], p[6], length - len);
-                            sp += [
-                                "C" + O(point.start.x),
-                                O(point.start.y),
-                                O(point.m.x),
-                                O(point.m.y),
-                                O(point.x),
-                                O(point.y)
-                            ];
-                            if (onlystart) {return sp;}
-                            subpaths.start = sp;
-                            sp = [
-                                "M" + O(point.x),
-                                O(point.y) + "C" + O(point.n.x),
-                                O(point.n.y),
-                                O(point.end.x),
-                                O(point.end.y),
-                                O(p[5]),
-                                O(p[6])
-                            ].join();
-                            len += l;
-                            x = +p[5];
-                            y = +p[6];
-                            continue;
-                        }
-                        if (!istotal && !subpath) {
-                            point = getPointAtSegmentLength(x, y, p[1], p[2], p[3], p[4], p[5], p[6], length - len);
-                            return point;
-                        }
-                    }
-                    len += l;
-                    x = +p[5];
-                    y = +p[6];
-                }
-                sp += p.shift() + p;
-            }
-            subpaths.end = sp;
-            point = istotal ? len : subpath ? subpaths : findDotsAtSegment(x, y, p[0], p[1], p[2], p[3], p[4], p[5], 1);
-            return point;
-        }, null, Snap._.clone);
-    }
-    var getTotalLength = getLengthFactory(1),
-        getPointAtLength = getLengthFactory(),
-        getSubpathsAtLength = getLengthFactory(0, 1);
-    function findDotsAtSegment(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, t) {
-        var t1 = 1 - t,
-            t13 = pow(t1, 3),
-            t12 = pow(t1, 2),
-            t2 = t * t,
-            t3 = t2 * t,
-            x = t13 * p1x + t12 * 3 * t * c1x + t1 * 3 * t * t * c2x + t3 * p2x,
-            y = t13 * p1y + t12 * 3 * t * c1y + t1 * 3 * t * t * c2y + t3 * p2y,
-            mx = p1x + 2 * t * (c1x - p1x) + t2 * (c2x - 2 * c1x + p1x),
-            my = p1y + 2 * t * (c1y - p1y) + t2 * (c2y - 2 * c1y + p1y),
-            nx = c1x + 2 * t * (c2x - c1x) + t2 * (p2x - 2 * c2x + c1x),
-            ny = c1y + 2 * t * (c2y - c1y) + t2 * (p2y - 2 * c2y + c1y),
-            ax = t1 * p1x + t * c1x,
-            ay = t1 * p1y + t * c1y,
-            cx = t1 * c2x + t * p2x,
-            cy = t1 * c2y + t * p2y,
-            alpha = (90 - math.atan2(mx - nx, my - ny) * 180 / PI);
-        // (mx > nx || my < ny) && (alpha += 180);
-        return {
-            x: x,
-            y: y,
-            m: {x: mx, y: my},
-            n: {x: nx, y: ny},
-            start: {x: ax, y: ay},
-            end: {x: cx, y: cy},
-            alpha: alpha
-        };
-    }
-    function bezierBBox(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y) {
-        if (!Snap.is(p1x, "array")) {
-            p1x = [p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y];
-        }
-        var bbox = curveDim.apply(null, p1x);
-        return box(
-            bbox.min.x,
-            bbox.min.y,
-            bbox.max.x - bbox.min.x,
-            bbox.max.y - bbox.min.y
-        );
-    }
-    function isPointInsideBBox(bbox, x, y) {
-        return  x >= bbox.x &&
-                x <= bbox.x + bbox.width &&
-                y >= bbox.y &&
-                y <= bbox.y + bbox.height;
-    }
-    function isBBoxIntersect(bbox1, bbox2) {
-        bbox1 = box(bbox1);
-        bbox2 = box(bbox2);
-        return isPointInsideBBox(bbox2, bbox1.x, bbox1.y)
-            || isPointInsideBBox(bbox2, bbox1.x2, bbox1.y)
-            || isPointInsideBBox(bbox2, bbox1.x, bbox1.y2)
-            || isPointInsideBBox(bbox2, bbox1.x2, bbox1.y2)
-            || isPointInsideBBox(bbox1, bbox2.x, bbox2.y)
-            || isPointInsideBBox(bbox1, bbox2.x2, bbox2.y)
-            || isPointInsideBBox(bbox1, bbox2.x, bbox2.y2)
-            || isPointInsideBBox(bbox1, bbox2.x2, bbox2.y2)
-            || (bbox1.x < bbox2.x2 && bbox1.x > bbox2.x
-                || bbox2.x < bbox1.x2 && bbox2.x > bbox1.x)
-            && (bbox1.y < bbox2.y2 && bbox1.y > bbox2.y
-                || bbox2.y < bbox1.y2 && bbox2.y > bbox1.y);
-    }
-    function base3(t, p1, p2, p3, p4) {
-        var t1 = -3 * p1 + 9 * p2 - 9 * p3 + 3 * p4,
-            t2 = t * t1 + 6 * p1 - 12 * p2 + 6 * p3;
-        return t * t2 - 3 * p1 + 3 * p2;
-    }
-    function bezlen(x1, y1, x2, y2, x3, y3, x4, y4, z) {
-        if (z == null) {
-            z = 1;
-        }
-        z = z > 1 ? 1 : z < 0 ? 0 : z;
-        var z2 = z / 2,
-            n = 12,
-            Tvalues = [-.1252,.1252,-.3678,.3678,-.5873,.5873,-.7699,.7699,-.9041,.9041,-.9816,.9816],
-            Cvalues = [0.2491,0.2491,0.2335,0.2335,0.2032,0.2032,0.1601,0.1601,0.1069,0.1069,0.0472,0.0472],
-            sum = 0;
-        for (var i = 0; i < n; i++) {
-            var ct = z2 * Tvalues[i] + z2,
-                xbase = base3(ct, x1, x2, x3, x4),
-                ybase = base3(ct, y1, y2, y3, y4),
-                comb = xbase * xbase + ybase * ybase;
-            sum += Cvalues[i] * math.sqrt(comb);
-        }
-        return z2 * sum;
-    }
-    function getTotLen(x1, y1, x2, y2, x3, y3, x4, y4, ll) {
-        if (ll < 0 || bezlen(x1, y1, x2, y2, x3, y3, x4, y4) < ll) {
-            return;
-        }
-        var t = 1,
-            step = t / 2,
-            t2 = t - step,
-            l,
-            e = .01;
-        l = bezlen(x1, y1, x2, y2, x3, y3, x4, y4, t2);
-        while (abs(l - ll) > e) {
-            step /= 2;
-            t2 += (l < ll ? 1 : -1) * step;
-            l = bezlen(x1, y1, x2, y2, x3, y3, x4, y4, t2);
-        }
-        return t2;
-    }
-    function intersect(x1, y1, x2, y2, x3, y3, x4, y4) {
-        if (
-            mmax(x1, x2) < mmin(x3, x4) ||
-            mmin(x1, x2) > mmax(x3, x4) ||
-            mmax(y1, y2) < mmin(y3, y4) ||
-            mmin(y1, y2) > mmax(y3, y4)
-        ) {
-            return;
-        }
-        var nx = (x1 * y2 - y1 * x2) * (x3 - x4) - (x1 - x2) * (x3 * y4 - y3 * x4),
-            ny = (x1 * y2 - y1 * x2) * (y3 - y4) - (y1 - y2) * (x3 * y4 - y3 * x4),
-            denominator = (x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4);
-
-        if (!denominator) {
-            return;
-        }
-        var px = nx / denominator,
-            py = ny / denominator,
-            px2 = +px.toFixed(2),
-            py2 = +py.toFixed(2);
-        if (
-            px2 < +mmin(x1, x2).toFixed(2) ||
-            px2 > +mmax(x1, x2).toFixed(2) ||
-            px2 < +mmin(x3, x4).toFixed(2) ||
-            px2 > +mmax(x3, x4).toFixed(2) ||
-            py2 < +mmin(y1, y2).toFixed(2) ||
-            py2 > +mmax(y1, y2).toFixed(2) ||
-            py2 < +mmin(y3, y4).toFixed(2) ||
-            py2 > +mmax(y3, y4).toFixed(2)
-        ) {
-            return;
-        }
-        return {x: px, y: py};
-    }
-    function inter(bez1, bez2) {
-        return interHelper(bez1, bez2);
-    }
-    function interCount(bez1, bez2) {
-        return interHelper(bez1, bez2, 1);
-    }
-    function interHelper(bez1, bez2, justCount) {
-        var bbox1 = bezierBBox(bez1),
-            bbox2 = bezierBBox(bez2);
-        if (!isBBoxIntersect(bbox1, bbox2)) {
-            return justCount ? 0 : [];
-        }
-        var l1 = bezlen.apply(0, bez1),
-            l2 = bezlen.apply(0, bez2),
-            n1 = ~~(l1 / 8),
-            n2 = ~~(l2 / 8),
-            dots1 = [],
-            dots2 = [],
-            xy = {},
-            res = justCount ? 0 : [];
-        for (var i = 0; i < n1 + 1; i++) {
-            var p = findDotsAtSegment.apply(0, bez1.concat(i / n1));
-            dots1.push({x: p.x, y: p.y, t: i / n1});
-        }
-        for (i = 0; i < n2 + 1; i++) {
-            p = findDotsAtSegment.apply(0, bez2.concat(i / n2));
-            dots2.push({x: p.x, y: p.y, t: i / n2});
-        }
-        for (i = 0; i < n1; i++) {
-            for (var j = 0; j < n2; j++) {
-                var di = dots1[i],
-                    di1 = dots1[i + 1],
-                    dj = dots2[j],
-                    dj1 = dots2[j + 1],
-                    ci = abs(di1.x - di.x) < .001 ? "y" : "x",
-                    cj = abs(dj1.x - dj.x) < .001 ? "y" : "x",
-                    is = intersect(di.x, di.y, di1.x, di1.y, dj.x, dj.y, dj1.x, dj1.y);
-                if (is) {
-                    if (xy[is.x.toFixed(4)] == is.y.toFixed(4)) {
-                        continue;
-                    }
-                    xy[is.x.toFixed(4)] = is.y.toFixed(4);
-                    var t1 = di.t + abs((is[ci] - di[ci]) / (di1[ci] - di[ci])) * (di1.t - di.t),
-                        t2 = dj.t + abs((is[cj] - dj[cj]) / (dj1[cj] - dj[cj])) * (dj1.t - dj.t);
-                    if (t1 >= 0 && t1 <= 1 && t2 >= 0 && t2 <= 1) {
-                        if (justCount) {
-                            res++;
-                        } else {
-                            res.push({
-                                x: is.x,
-                                y: is.y,
-                                t1: t1,
-                                t2: t2
-                            });
-                        }
-                    }
-                }
-            }
-        }
-        return res;
-    }
-    function pathIntersection(path1, path2) {
-        return interPathHelper(path1, path2);
-    }
-    function pathIntersectionNumber(path1, path2) {
-        return interPathHelper(path1, path2, 1);
-    }
-    function interPathHelper(path1, path2, justCount) {
-        path1 = path2curve(path1);
-        path2 = path2curve(path2);
-        var x1, y1, x2, y2, x1m, y1m, x2m, y2m, bez1, bez2,
-            res = justCount ? 0 : [];
-        for (var i = 0, ii = path1.length; i < ii; i++) {
-            var pi = path1[i];
-            if (pi[0] == "M") {
-                x1 = x1m = pi[1];
-                y1 = y1m = pi[2];
-            } else {
-                if (pi[0] == "C") {
-                    bez1 = [x1, y1].concat(pi.slice(1));
-                    x1 = bez1[6];
-                    y1 = bez1[7];
-                } else {
-                    bez1 = [x1, y1, x1, y1, x1m, y1m, x1m, y1m];
-                    x1 = x1m;
-                    y1 = y1m;
-                }
-                for (var j = 0, jj = path2.length; j < jj; j++) {
-                    var pj = path2[j];
-                    if (pj[0] == "M") {
-                        x2 = x2m = pj[1];
-                        y2 = y2m = pj[2];
-                    } else {
-                        if (pj[0] == "C") {
-                            bez2 = [x2, y2].concat(pj.slice(1));
-                            x2 = bez2[6];
-                            y2 = bez2[7];
-                        } else {
-                            bez2 = [x2, y2, x2, y2, x2m, y2m, x2m, y2m];
-                            x2 = x2m;
-                            y2 = y2m;
-                        }
-                        var intr = interHelper(bez1, bez2, justCount);
-                        if (justCount) {
-                            res += intr;
-                        } else {
-                            for (var k = 0, kk = intr.length; k < kk; k++) {
-                                intr[k].segment1 = i;
-                                intr[k].segment2 = j;
-                                intr[k].bez1 = bez1;
-                                intr[k].bez2 = bez2;
-                            }
-                            res = res.concat(intr);
-                        }
-                    }
-                }
-            }
-        }
-        return res;
-    }
-    function isPointInsidePath(path, x, y) {
-        var bbox = pathBBox(path);
-        return isPointInsideBBox(bbox, x, y) &&
-               interPathHelper(path, [["M", x, y], ["H", bbox.x2 + 10]], 1) % 2 == 1;
-    }
-    function pathBBox(path) {
-        var pth = paths(path);
-        if (pth.bbox) {
-            return clone(pth.bbox);
-        }
-        if (!path) {
-            return box();
-        }
-        path = path2curve(path);
-        var x = 0, 
-            y = 0,
-            X = [],
-            Y = [],
-            p;
-        for (var i = 0, ii = path.length; i < ii; i++) {
-            p = path[i];
-            if (p[0] == "M") {
-                x = p[1];
-                y = p[2];
-                X.push(x);
-                Y.push(y);
-            } else {
-                var dim = curveDim(x, y, p[1], p[2], p[3], p[4], p[5], p[6]);
-                X = X.concat(dim.min.x, dim.max.x);
-                Y = Y.concat(dim.min.y, dim.max.y);
-                x = p[5];
-                y = p[6];
-            }
-        }
-        var xmin = mmin.apply(0, X),
-            ymin = mmin.apply(0, Y),
-            xmax = mmax.apply(0, X),
-            ymax = mmax.apply(0, Y),
-            bb = box(xmin, ymin, xmax - xmin, ymax - ymin);
-        pth.bbox = clone(bb);
-        return bb;
-    }
-    function rectPath(x, y, w, h, r) {
-        if (r) {
-            return [
-                ["M", +x + (+r), y],
-                ["l", w - r * 2, 0],
-                ["a", r, r, 0, 0, 1, r, r],
-                ["l", 0, h - r * 2],
-                ["a", r, r, 0, 0, 1, -r, r],
-                ["l", r * 2 - w, 0],
-                ["a", r, r, 0, 0, 1, -r, -r],
-                ["l", 0, r * 2 - h],
-                ["a", r, r, 0, 0, 1, r, -r],
-                ["z"]
-            ];
-        }
-        var res = [["M", x, y], ["l", w, 0], ["l", 0, h], ["l", -w, 0], ["z"]];
-        res.toString = toString;
-        return res;
-    }
-    function ellipsePath(x, y, rx, ry, a) {
-        if (a == null && ry == null) {
-            ry = rx;
-        }
-        x = +x;
-        y = +y;
-        rx = +rx;
-        ry = +ry;
-        if (a != null) {
-            var rad = Math.PI / 180,
-                x1 = x + rx * Math.cos(-ry * rad),
-                x2 = x + rx * Math.cos(-a * rad),
-                y1 = y + rx * Math.sin(-ry * rad),
-                y2 = y + rx * Math.sin(-a * rad),
-                res = [["M", x1, y1], ["A", rx, rx, 0, +(a - ry > 180), 0, x2, y2]];
-        } else {
-            res = [
-                ["M", x, y],
-                ["m", 0, -ry],
-                ["a", rx, ry, 0, 1, 1, 0, 2 * ry],
-                ["a", rx, ry, 0, 1, 1, 0, -2 * ry],
-                ["z"]
-            ];
-        }
-        res.toString = toString;
-        return res;
-    }
-    var unit2px = Snap._unit2px,
-        getPath = {
-        path: function (el) {
-            return el.attr("path");
-        },
-        circle: function (el) {
-            var attr = unit2px(el);
-            return ellipsePath(attr.cx, attr.cy, attr.r);
-        },
-        ellipse: function (el) {
-            var attr = unit2px(el);
-            return ellipsePath(attr.cx || 0, attr.cy || 0, attr.rx, attr.ry);
-        },
-        rect: function (el) {
-            var attr = unit2px(el);
-            return rectPath(attr.x || 0, attr.y || 0, attr.width, attr.height, attr.rx, attr.ry);
-        },
-        image: function (el) {
-            var attr = unit2px(el);
-            return rectPath(attr.x || 0, attr.y || 0, attr.width, attr.height);
-        },
-        line: function (el) {
-            return "M" + [el.attr("x1") || 0, el.attr("y1") || 0, el.attr("x2"), el.attr("y2")];
-        },
-        polyline: function (el) {
-            return "M" + el.attr("points");
-        },
-        polygon: function (el) {
-            return "M" + el.attr("points") + "z";
-        },
-        deflt: function (el) {
-            var bbox = el.node.getBBox();
-            return rectPath(bbox.x, bbox.y, bbox.width, bbox.height);
-        }
-    };
-    function pathToRelative(pathArray) {
-        var pth = paths(pathArray),
-            lowerCase = String.prototype.toLowerCase;
-        if (pth.rel) {
-            return pathClone(pth.rel);
-        }
-        if (!Snap.is(pathArray, "array") || !Snap.is(pathArray && pathArray[0], "array")) {
-            pathArray = Snap.parsePathString(pathArray);
-        }
-        var res = [],
-            x = 0,
-            y = 0,
-            mx = 0,
-            my = 0,
-            start = 0;
-        if (pathArray[0][0] == "M") {
-            x = pathArray[0][1];
-            y = pathArray[0][2];
-            mx = x;
-            my = y;
-            start++;
-            res.push(["M", x, y]);
-        }
-        for (var i = start, ii = pathArray.length; i < ii; i++) {
-            var r = res[i] = [],
-                pa = pathArray[i];
-            if (pa[0] != lowerCase.call(pa[0])) {
-                r[0] = lowerCase.call(pa[0]);
-                switch (r[0]) {
-                    case "a":
-                        r[1] = pa[1];
-                        r[2] = pa[2];
-                        r[3] = pa[3];
-                        r[4] = pa[4];
-                        r[5] = pa[5];
-                        r[6] = +(pa[6] - x).toFixed(3);
-                        r[7] = +(pa[7] - y).toFixed(3);
-                        break;
-                    case "v":
-                        r[1] = +(pa[1] - y).toFixed(3);
-                        break;
-                    case "m":
-                        mx = pa[1];
-                        my = pa[2];
-                    default:
-                        for (var j = 1, jj = pa.length; j < jj; j++) {
-                            r[j] = +(pa[j] - ((j % 2) ? x : y)).toFixed(3);
-                        }
-                }
-            } else {
-                r = res[i] = [];
-                if (pa[0] == "m") {
-                    mx = pa[1] + x;
-                    my = pa[2] + y;
-                }
-                for (var k = 0, kk = pa.length; k < kk; k++) {
-                    res[i][k] = pa[k];
-                }
-            }
-            var len = res[i].length;
-            switch (res[i][0]) {
-                case "z":
-                    x = mx;
-                    y = my;
-                    break;
-                case "h":
-                    x += +res[i][len - 1];
-                    break;
-                case "v":
-                    y += +res[i][len - 1];
-                    break;
-                default:
-                    x += +res[i][len - 2];
-                    y += +res[i][len - 1];
-            }
-        }
-        res.toString = toString;
-        pth.rel = pathClone(res);
-        return res;
-    }
-    function pathToAbsolute(pathArray) {
-        var pth = paths(pathArray);
-        if (pth.abs) {
-            return pathClone(pth.abs);
-        }
-        if (!is(pathArray, "array") || !is(pathArray && pathArray[0], "array")) { // rough assumption
-            pathArray = Snap.parsePathString(pathArray);
-        }
-        if (!pathArray || !pathArray.length) {
-            return [["M", 0, 0]];
-        }
-        var res = [],
-            x = 0,
-            y = 0,
-            mx = 0,
-            my = 0,
-            start = 0,
-            pa0;
-        if (pathArray[0][0] == "M") {
-            x = +pathArray[0][1];
-            y = +pathArray[0][2];
-            mx = x;
-            my = y;
-            start++;
-            res[0] = ["M", x, y];
-        }
-        var crz = pathArray.length == 3 &&
-            pathArray[0][0] == "M" &&
-            pathArray[1][0].toUpperCase() == "R" &&
-            pathArray[2][0].toUpperCase() == "Z";
-        for (var r, pa, i = start, ii = pathArray.length; i < ii; i++) {
-            res.push(r = []);
-            pa = pathArray[i];
-            pa0 = pa[0];
-            if (pa0 != pa0.toUpperCase()) {
-                r[0] = pa0.toUpperCase();
-                switch (r[0]) {
-                    case "A":
-                        r[1] = pa[1];
-                        r[2] = pa[2];
-                        r[3] = pa[3];
-                        r[4] = pa[4];
-                        r[5] = pa[5];
-                        r[6] = +pa[6] + x;
-                        r[7] = +pa[7] + y;
-                        break;
-                    case "V":
-                        r[1] = +pa[1] + y;
-                        break;
-                    case "H":
-                        r[1] = +pa[1] + x;
-                        break;
-                    case "R":
-                        var dots = [x, y].concat(pa.slice(1));
-                        for (var j = 2, jj = dots.length; j < jj; j++) {
-                            dots[j] = +dots[j] + x;
-                            dots[++j] = +dots[j] + y;
-                        }
-                        res.pop();
-                        res = res.concat(catmullRom2bezier(dots, crz));
-                        break;
-                    case "O":
-                        res.pop();
-                        dots = ellipsePath(x, y, pa[1], pa[2]);
-                        dots.push(dots[0]);
-                        res = res.concat(dots);
-                        break;
-                    case "U":
-                        res.pop();
-                        res = res.concat(ellipsePath(x, y, pa[1], pa[2], pa[3]));
-                        r = ["U"].concat(res[res.length - 1].slice(-2));
-                        break;
-                    case "M":
-                        mx = +pa[1] + x;
-                        my = +pa[2] + y;
-                    default:
-                        for (j = 1, jj = pa.length; j < jj; j++) {
-                            r[j] = +pa[j] + ((j % 2) ? x : y);
-                        }
-                }
-            } else if (pa0 == "R") {
-                dots = [x, y].concat(pa.slice(1));
-                res.pop();
-                res = res.concat(catmullRom2bezier(dots, crz));
-                r = ["R"].concat(pa.slice(-2));
-            } else if (pa0 == "O") {
-                res.pop();
-                dots = ellipsePath(x, y, pa[1], pa[2]);
-                dots.push(dots[0]);
-                res = res.concat(dots);
-            } else if (pa0 == "U") {
-                res.pop();
-                res = res.concat(ellipsePath(x, y, pa[1], pa[2], pa[3]));
-                r = ["U"].concat(res[res.length - 1].slice(-2));
-            } else {
-                for (var k = 0, kk = pa.length; k < kk; k++) {
-                    r[k] = pa[k];
-                }
-            }
-            pa0 = pa0.toUpperCase();
-            if (pa0 != "O") {
-                switch (r[0]) {
-                    case "Z":
-                        x = +mx;
-                        y = +my;
-                        break;
-                    case "H":
-                        x = r[1];
-                        break;
-                    case "V":
-                        y = r[1];
-                        break;
-                    case "M":
-                        mx = r[r.length - 2];
-                        my = r[r.length - 1];
-                    default:
-                        x = r[r.length - 2];
-                        y = r[r.length - 1];
-                }
-            }
-        }
-        res.toString = toString;
-        pth.abs = pathClone(res);
-        return res;
-    }
-    function l2c(x1, y1, x2, y2) {
-        return [x1, y1, x2, y2, x2, y2];
-    }
-    function q2c(x1, y1, ax, ay, x2, y2) {
-        var _13 = 1 / 3,
-            _23 = 2 / 3;
-        return [
-                _13 * x1 + _23 * ax,
-                _13 * y1 + _23 * ay,
-                _13 * x2 + _23 * ax,
-                _13 * y2 + _23 * ay,
-                x2,
-                y2
-            ];
-    }
-    function a2c(x1, y1, rx, ry, angle, large_arc_flag, sweep_flag, x2, y2, recursive) {
-        // for more information of where this math came from visit:
-        // http://www.w3.org/TR/SVG11/implnote.html#ArcImplementationNotes
-        var _120 = PI * 120 / 180,
-            rad = PI / 180 * (+angle || 0),
-            res = [],
-            xy,
-            rotate = Snap._.cacher(function (x, y, rad) {
-                var X = x * math.cos(rad) - y * math.sin(rad),
-                    Y = x * math.sin(rad) + y * math.cos(rad);
-                return {x: X, y: Y};
-            });
-        if (!recursive) {
-            xy = rotate(x1, y1, -rad);
-            x1 = xy.x;
-            y1 = xy.y;
-            xy = rotate(x2, y2, -rad);
-            x2 = xy.x;
-            y2 = xy.y;
-            var cos = math.cos(PI / 180 * angle),
-                sin = math.sin(PI / 180 * angle),
-                x = (x1 - x2) / 2,
-                y = (y1 - y2) / 2;
-            var h = (x * x) / (rx * rx) + (y * y) / (ry * ry);
-            if (h > 1) {
-                h = math.sqrt(h);
-                rx = h * rx;
-                ry = h * ry;
-            }
-            var rx2 = rx * rx,
-                ry2 = ry * ry,
-                k = (large_arc_flag == sweep_flag ? -1 : 1) *
-                    math.sqrt(abs((rx2 * ry2 - rx2 * y * y - ry2 * x * x) / (rx2 * y * y + ry2 * x * x))),
-                cx = k * rx * y / ry + (x1 + x2) / 2,
-                cy = k * -ry * x / rx + (y1 + y2) / 2,
-                f1 = math.asin(((y1 - cy) / ry).toFixed(9)),
-                f2 = math.asin(((y2 - cy) / ry).toFixed(9));
-
-            f1 = x1 < cx ? PI - f1 : f1;
-            f2 = x2 < cx ? PI - f2 : f2;
-            f1 < 0 && (f1 = PI * 2 + f1);
-            f2 < 0 && (f2 = PI * 2 + f2);
-            if (sweep_flag && f1 > f2) {
-                f1 = f1 - PI * 2;
-            }
-            if (!sweep_flag && f2 > f1) {
-                f2 = f2 - PI * 2;
-            }
-        } else {
-            f1 = recursive[0];
-            f2 = recursive[1];
-            cx = recursive[2];
-            cy = recursive[3];
-        }
-        var df = f2 - f1;
-        if (abs(df) > _120) {
-            var f2old = f2,
-                x2old = x2,
-                y2old = y2;
-            f2 = f1 + _120 * (sweep_flag && f2 > f1 ? 1 : -1);
-            x2 = cx + rx * math.cos(f2);
-            y2 = cy + ry * math.sin(f2);
-            res = a2c(x2, y2, rx, ry, angle, 0, sweep_flag, x2old, y2old, [f2, f2old, cx, cy]);
-        }
-        df = f2 - f1;
-        var c1 = math.cos(f1),
-            s1 = math.sin(f1),
-            c2 = math.cos(f2),
-            s2 = math.sin(f2),
-            t = math.tan(df / 4),
-            hx = 4 / 3 * rx * t,
-            hy = 4 / 3 * ry * t,
-            m1 = [x1, y1],
-            m2 = [x1 + hx * s1, y1 - hy * c1],
-            m3 = [x2 + hx * s2, y2 - hy * c2],
-            m4 = [x2, y2];
-        m2[0] = 2 * m1[0] - m2[0];
-        m2[1] = 2 * m1[1] - m2[1];
-        if (recursive) {
-            return [m2, m3, m4].concat(res);
-        } else {
-            res = [m2, m3, m4].concat(res).join().split(",");
-            var newres = [];
-            for (var i = 0, ii = res.length; i < ii; i++) {
-                newres[i] = i % 2 ? rotate(res[i - 1], res[i], rad).y : rotate(res[i], res[i + 1], rad).x;
-            }
-            return newres;
-        }
-    }
-    function findDotAtSegment(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, t) {
-        var t1 = 1 - t;
-        return {
-            x: pow(t1, 3) * p1x + pow(t1, 2) * 3 * t * c1x + t1 * 3 * t * t * c2x + pow(t, 3) * p2x,
-            y: pow(t1, 3) * p1y + pow(t1, 2) * 3 * t * c1y + t1 * 3 * t * t * c2y + pow(t, 3) * p2y
-        };
-    }
-    
-    // Returns bounding box of cubic bezier curve.
-    // Source: http://blog.hackers-cafe.net/2009/06/how-to-calculate-bezier-curves-bounding.html
-    // Original version: NISHIO Hirokazu
-    // Modifications: https://github.com/timo22345
-    function curveDim(x0, y0, x1, y1, x2, y2, x3, y3) {
-        var tvalues = [],
-            bounds = [[], []],
-            a, b, c, t, t1, t2, b2ac, sqrtb2ac;
-        for (var i = 0; i < 2; ++i) {
-            if (i == 0) {
-                b = 6 * x0 - 12 * x1 + 6 * x2;
-                a = -3 * x0 + 9 * x1 - 9 * x2 + 3 * x3;
-                c = 3 * x1 - 3 * x0;
-            } else {
-                b = 6 * y0 - 12 * y1 + 6 * y2;
-                a = -3 * y0 + 9 * y1 - 9 * y2 + 3 * y3;
-                c = 3 * y1 - 3 * y0;
-            }
-            if (abs(a) < 1e-12) {
-                if (abs(b) < 1e-12) {
-                    continue;
-                }
-                t = -c / b;
-                if (0 < t && t < 1) {
-                    tvalues.push(t);
-                }
-                continue;
-            }
-            b2ac = b * b - 4 * c * a;
-            sqrtb2ac = math.sqrt(b2ac);
-            if (b2ac < 0) {
-                continue;
-            }
-            t1 = (-b + sqrtb2ac) / (2 * a);
-            if (0 < t1 && t1 < 1) {
-                tvalues.push(t1);
-            }
-            t2 = (-b - sqrtb2ac) / (2 * a);
-            if (0 < t2 && t2 < 1) {
-                tvalues.push(t2);
-            }
-        }
-
-        var x, y, j = tvalues.length,
-            jlen = j,
-            mt;
-        while (j--) {
-            t = tvalues[j];
-            mt = 1 - t;
-            bounds[0][j] = (mt * mt * mt * x0) + (3 * mt * mt * t * x1) + (3 * mt * t * t * x2) + (t * t * t * x3);
-            bounds[1][j] = (mt * mt * mt * y0) + (3 * mt * mt * t * y1) + (3 * mt * t * t * y2) + (t * t * t * y3);
-        }
-
-        bounds[0][jlen] = x0;
-        bounds[1][jlen] = y0;
-        bounds[0][jlen + 1] = x3;
-        bounds[1][jlen + 1] = y3;
-        bounds[0].length = bounds[1].length = jlen + 2;
-
-
-        return {
-          min: {x: mmin.apply(0, bounds[0]), y: mmin.apply(0, bounds[1])},
-          max: {x: mmax.apply(0, bounds[0]), y: mmax.apply(0, bounds[1])}
-        };
-    }
-
-    function path2curve(path, path2) {
-        var pth = !path2 && paths(path);
-        if (!path2 && pth.curve) {
-            return pathClone(pth.curve);
-        }
-        var p = pathToAbsolute(path),
-            p2 = path2 && pathToAbsolute(path2),
-            attrs = {x: 0, y: 0, bx: 0, by: 0, X: 0, Y: 0, qx: null, qy: null},
-            attrs2 = {x: 0, y: 0, bx: 0, by: 0, X: 0, Y: 0, qx: null, qy: null},
-            processPath = function (path, d, pcom) {
-                var nx, ny;
-                if (!path) {
-                    return ["C", d.x, d.y, d.x, d.y, d.x, d.y];
-                }
-                !(path[0] in {T: 1, Q: 1}) && (d.qx = d.qy = null);
-                switch (path[0]) {
-                    case "M":
-                        d.X = path[1];
-                        d.Y = path[2];
-                        break;
-                    case "A":
-                        path = ["C"].concat(a2c.apply(0, [d.x, d.y].concat(path.slice(1))));
-                        break;
-                    case "S":
-                        if (pcom == "C" || pcom == "S") { // In "S" case we have to take into account, if the previous command is C/S.
-                            nx = d.x * 2 - d.bx;          // And reflect the previous
-                            ny = d.y * 2 - d.by;          // command's control point relative to the current point.
-                        }
-                        else {                            // or some else or nothing
-                            nx = d.x;
-                            ny = d.y;
-                        }
-                        path = ["C", nx, ny].concat(path.slice(1));
-                        break;
-                    case "T":
-                        if (pcom == "Q" || pcom == "T") { // In "T" case we have to take into account, if the previous command is Q/T.
-                            d.qx = d.x * 2 - d.qx;        // And make a reflection similar
-                            d.qy = d.y * 2 - d.qy;        // to case "S".
-                        }
-                        else {                            // or something else or nothing
-                            d.qx = d.x;
-                            d.qy = d.y;
-                        }
-                        path = ["C"].concat(q2c(d.x, d.y, d.qx, d.qy, path[1], path[2]));
-                        break;
-                    case "Q":
-                        d.qx = path[1];
-                        d.qy = path[2];
-                        path = ["C"].concat(q2c(d.x, d.y, path[1], path[2], path[3], path[4]));
-                        break;
-                    case "L":
-                        path = ["C"].concat(l2c(d.x, d.y, path[1], path[2]));
-                        break;
-                    case "H":
-                        path = ["C"].concat(l2c(d.x, d.y, path[1], d.y));
-                        break;
-                    case "V":
-                        path = ["C"].concat(l2c(d.x, d.y, d.x, path[1]));
-                        break;
-                    case "Z":
-                        path = ["C"].concat(l2c(d.x, d.y, d.X, d.Y));
-                        break;
-                }
-                return path;
-            },
-            fixArc = function (pp, i) {
-                if (pp[i].length > 7) {
-                    pp[i].shift();
-                    var pi = pp[i];
-                    while (pi.length) {
-                        pcoms1[i] = "A"; // if created multiple C:s, their original seg is saved
-                        p2 && (pcoms2[i] = "A"); // the same as above
-                        pp.splice(i++, 0, ["C"].concat(pi.splice(0, 6)));
-                    }
-                    pp.splice(i, 1);
-                    ii = mmax(p.length, p2 && p2.length || 0);
-                }
-            },
-            fixM = function (path1, path2, a1, a2, i) {
-                if (path1 && path2 && path1[i][0] == "M" && path2[i][0] != "M") {
-                    path2.splice(i, 0, ["M", a2.x, a2.y]);
-                    a1.bx = 0;
-                    a1.by = 0;
-                    a1.x = path1[i][1];
-                    a1.y = path1[i][2];
-                    ii = mmax(p.length, p2 && p2.length || 0);
-                }
-            },
-            pcoms1 = [], // path commands of original path p
-            pcoms2 = [], // path commands of original path p2
-            pfirst = "", // temporary holder for original path command
-            pcom = ""; // holder for previous path command of original path
-        for (var i = 0, ii = mmax(p.length, p2 && p2.length || 0); i < ii; i++) {
-            p[i] && (pfirst = p[i][0]); // save current path command
-
-            if (pfirst != "C") // C is not saved yet, because it may be result of conversion
-            {
-                pcoms1[i] = pfirst; // Save current path command
-                i && ( pcom = pcoms1[i - 1]); // Get previous path command pcom
-            }
-            p[i] = processPath(p[i], attrs, pcom); // Previous path command is inputted to processPath
-
-            if (pcoms1[i] != "A" && pfirst == "C") pcoms1[i] = "C"; // A is the only command
-            // which may produce multiple C:s
-            // so we have to make sure that C is also C in original path
-
-            fixArc(p, i); // fixArc adds also the right amount of A:s to pcoms1
-
-            if (p2) { // the same procedures is done to p2
-                p2[i] && (pfirst = p2[i][0]);
-                if (pfirst != "C") {
-                    pcoms2[i] = pfirst;
-                    i && (pcom = pcoms2[i - 1]);
-                }
-                p2[i] = processPath(p2[i], attrs2, pcom);
-
-                if (pcoms2[i] != "A" && pfirst == "C") {
-                    pcoms2[i] = "C";
-                }
-
-                fixArc(p2, i);
-            }
-            fixM(p, p2, attrs, attrs2, i);
-            fixM(p2, p, attrs2, attrs, i);
-            var seg = p[i],
-                seg2 = p2 && p2[i],
-                seglen = seg.length,
-                seg2len = p2 && seg2.length;
-            attrs.x = seg[seglen - 2];
-            attrs.y = seg[seglen - 1];
-            attrs.bx = toFloat(seg[seglen - 4]) || attrs.x;
-            attrs.by = toFloat(seg[seglen - 3]) || attrs.y;
-            attrs2.bx = p2 && (toFloat(seg2[seg2len - 4]) || attrs2.x);
-            attrs2.by = p2 && (toFloat(seg2[seg2len - 3]) || attrs2.y);
-            attrs2.x = p2 && seg2[seg2len - 2];
-            attrs2.y = p2 && seg2[seg2len - 1];
-        }
-        if (!p2) {
-            pth.curve = pathClone(p);
-        }
-        return p2 ? [p, p2] : p;
-    }
-    function mapPath(path, matrix) {
-        if (!matrix) {
-            return path;
-        }
-        var x, y, i, j, ii, jj, pathi;
-        path = path2curve(path);
-        for (i = 0, ii = path.length; i < ii; i++) {
-            pathi = path[i];
-            for (j = 1, jj = pathi.length; j < jj; j += 2) {
-                x = matrix.x(pathi[j], pathi[j + 1]);
-                y = matrix.y(pathi[j], pathi[j + 1]);
-                pathi[j] = x;
-                pathi[j + 1] = y;
-            }
-        }
-        return path;
-    }
-
-    // http://schepers.cc/getting-to-the-point
-    function catmullRom2bezier(crp, z) {
-        var d = [];
-        for (var i = 0, iLen = crp.length; iLen - 2 * !z > i; i += 2) {
-            var p = [
-                        {x: +crp[i - 2], y: +crp[i - 1]},
-                        {x: +crp[i],     y: +crp[i + 1]},
-                        {x: +crp[i + 2], y: +crp[i + 3]},
-                        {x: +crp[i + 4], y: +crp[i + 5]}
-                    ];
-            if (z) {
-                if (!i) {
-                    p[0] = {x: +crp[iLen - 2], y: +crp[iLen - 1]};
-                } else if (iLen - 4 == i) {
-                    p[3] = {x: +crp[0], y: +crp[1]};
-                } else if (iLen - 2 == i) {
-                    p[2] = {x: +crp[0], y: +crp[1]};
-                    p[3] = {x: +crp[2], y: +crp[3]};
-                }
-            } else {
-                if (iLen - 4 == i) {
-                    p[3] = p[2];
-                } else if (!i) {
-                    p[0] = {x: +crp[i], y: +crp[i + 1]};
-                }
-            }
-            d.push(["C",
-                  (-p[0].x + 6 * p[1].x + p[2].x) / 6,
-                  (-p[0].y + 6 * p[1].y + p[2].y) / 6,
-                  (p[1].x + 6 * p[2].x - p[3].x) / 6,
-                  (p[1].y + 6*p[2].y - p[3].y) / 6,
-                  p[2].x,
-                  p[2].y
-            ]);
-        }
-
-        return d;
-    }
-
-    // export
-    Snap.path = paths;
-
-    /*\
-     * Snap.path.getTotalLength
-     [ method ]
-     **
-     * Returns the length of the given path in pixels
-     **
-     - path (string) SVG path string
-     **
-     = (number) length
-    \*/
-    Snap.path.getTotalLength = getTotalLength;
-    /*\
-     * Snap.path.getPointAtLength
-     [ method ]
-     **
-     * Returns the coordinates of the point located at the given length along the given path
-     **
-     - path (string) SVG path string
-     - length (number) length, in pixels, from the start of the path, excluding non-rendering jumps
-     **
-     = (object) representation of the point:
-     o {
-     o     x: (number) x coordinate,
-     o     y: (number) y coordinate,
-     o     alpha: (number) angle of derivative
-     o }
-    \*/
-    Snap.path.getPointAtLength = getPointAtLength;
-    /*\
-     * Snap.path.getSubpath
-     [ method ]
-     **
-     * Returns the subpath of a given path between given start and end lengths
-     **
-     - path (string) SVG path string
-     - from (number) length, in pixels, from the start of the path to the start of the segment
-     - to (number) length, in pixels, from the start of the path to the end of the segment
-     **
-     = (string) path string definition for the segment
-    \*/
-    Snap.path.getSubpath = function (path, from, to) {
-        if (this.getTotalLength(path) - to < 1e-6) {
-            return getSubpathsAtLength(path, from).end;
-        }
-        var a = getSubpathsAtLength(path, to, 1);
-        return from ? getSubpathsAtLength(a, from).end : a;
-    };
-    /*\
-     * Element.getTotalLength
-     [ method ]
-     **
-     * Returns the length of the path in pixels (only works for `path` elements)
-     = (number) length
-    \*/
-    elproto.getTotalLength = function () {
-        if (this.node.getTotalLength) {
-            return this.node.getTotalLength();
-        }
-    };
-    // SIERRA Element.getPointAtLength()/Element.getTotalLength(): If a <path> is broken into different segments, is the jump distance to the new coordinates set by the _M_ or _m_ commands calculated as part of the path's total length?
-    /*\
-     * Element.getPointAtLength
-     [ method ]
-     **
-     * Returns coordinates of the point located at the given length on the given path (only works for `path` elements)
-     **
-     - length (number) length, in pixels, from the start of the path, excluding non-rendering jumps
-     **
-     = (object) representation of the point:
-     o {
-     o     x: (number) x coordinate,
-     o     y: (number) y coordinate,
-     o     alpha: (number) angle of derivative
-     o }
-    \*/
-    elproto.getPointAtLength = function (length) {
-        return getPointAtLength(this.attr("d"), length);
-    };
-    // SIERRA Element.getSubpath(): Similar to the problem for Element.getPointAtLength(). Unclear how this would work for a segmented path. Overall, the concept of _subpath_ and what I'm calling a _segment_ (series of non-_M_ or _Z_ commands) is unclear.
-    /*\
-     * Element.getSubpath
-     [ method ]
-     **
-     * Returns subpath of a given element from given start and end lengths (only works for `path` elements)
-     **
-     - from (number) length, in pixels, from the start of the path to the start of the segment
-     - to (number) length, in pixels, from the start of the path to the end of the segment
-     **
-     = (string) path string definition for the segment
-    \*/
-    elproto.getSubpath = function (from, to) {
-        return Snap.path.getSubpath(this.attr("d"), from, to);
-    };
-    Snap._.box = box;
-    /*\
-     * Snap.path.findDotsAtSegment
-     [ method ]
-     **
-     * Utility method
-     **
-     * Finds dot coordinates on the given cubic beziér curve at the given t
-     - p1x (number) x of the first point of the curve
-     - p1y (number) y of the first point of the curve
-     - c1x (number) x of the first anchor of the curve
-     - c1y (number) y of the first anchor of the curve
-     - c2x (number) x of the second anchor of the curve
-     - c2y (number) y of the second anchor of the curve
-     - p2x (number) x of the second point of the curve
-     - p2y (number) y of the second point of the curve
-     - t (number) position on the curve (0..1)
-     = (object) point information in format:
-     o {
-     o     x: (number) x coordinate of the point,
-     o     y: (number) y coordinate of the point,
-     o     m: {
-     o         x: (number) x coordinate of the left anchor,
-     o         y: (number) y coordinate of the left anchor
-     o     },
-     o     n: {
-     o         x: (number) x coordinate of the right anchor,
-     o         y: (number) y coordinate of the right anchor
-     o     },
-     o     start: {
-     o         x: (number) x coordinate of the start of the curve,
-     o         y: (number) y coordinate of the start of the curve
-     o     },
-     o     end: {
-     o         x: (number) x coordinate of the end of the curve,
-     o         y: (number) y coordinate of the end of the curve
-     o     },
-     o     alpha: (number) angle of the curve derivative at the point
-     o }
-    \*/
-    Snap.path.findDotsAtSegment = findDotsAtSegment;
-    /*\
-     * Snap.path.bezierBBox
-     [ method ]
-     **
-     * Utility method
-     **
-     * Returns the bounding box of a given cubic beziér curve
-     - p1x (number) x of the first point of the curve
-     - p1y (number) y of the first point of the curve
-     - c1x (number) x of the first anchor of the curve
-     - c1y (number) y of the first anchor of the curve
-     - c2x (number) x of the second anchor of the curve
-     - c2y (number) y of the second anchor of the curve
-     - p2x (number) x of the second point of the curve
-     - p2y (number) y of the second point of the curve
-     * or
-     - bez (array) array of six points for beziér curve
-     = (object) bounding box
-     o {
-     o     x: (number) x coordinate of the left top point of the box,
-     o     y: (number) y coordinate of the left top point of the box,
-     o     x2: (number) x coordinate of the right bottom point of the box,
-     o     y2: (number) y coordinate of the right bottom point of the box,
-     o     width: (number) width of the box,
-     o     height: (number) height of the box
-     o }
-    \*/
-    Snap.path.bezierBBox = bezierBBox;
-    /*\
-     * Snap.path.isPointInsideBBox
-     [ method ]
-     **
-     * Utility method
-     **
-     * Returns `true` if given point is inside bounding box
-     - bbox (string) bounding box
-     - x (string) x coordinate of the point
-     - y (string) y coordinate of the point
-     = (boolean) `true` if point is inside
-    \*/
-    Snap.path.isPointInsideBBox = isPointInsideBBox;
-    /*\
-     * Snap.path.isBBoxIntersect
-     [ method ]
-     **
-     * Utility method
-     **
-     * Returns `true` if two bounding boxes intersect
-     - bbox1 (string) first bounding box
-     - bbox2 (string) second bounding box
-     = (boolean) `true` if bounding boxes intersect
-    \*/
-    Snap.path.isBBoxIntersect = isBBoxIntersect;
-    /*\
-     * Snap.path.intersection
-     [ method ]
-     **
-     * Utility method
-     **
-     * Finds intersections of two paths
-     - path1 (string) path string
-     - path2 (string) path string
-     = (array) dots of intersection
-     o [
-     o     {
-     o         x: (number) x coordinate of the point,
-     o         y: (number) y coordinate of the point,
-     o         t1: (number) t value for segment of path1,
-     o         t2: (number) t value for segment of path2,
-     o         segment1: (number) order number for segment of path1,
-     o         segment2: (number) order number for segment of path2,
-     o         bez1: (array) eight coordinates representing beziér curve for the segment of path1,
-     o         bez2: (array) eight coordinates representing beziér curve for the segment of path2
-     o     }
-     o ]
-    \*/
-    Snap.path.intersection = pathIntersection;
-    Snap.path.intersectionNumber = pathIntersectionNumber;
-    /*\
-     * Snap.path.isPointInside
-     [ method ]
-     **
-     * Utility method
-     **
-     * Returns `true` if given point is inside a given closed path.
-     *
-     * Note: fill mode doesn’t affect the result of this method.
-     - path (string) path string
-     - x (number) x of the point
-     - y (number) y of the point
-     = (boolean) `true` if point is inside the path
-    \*/
-    Snap.path.isPointInside = isPointInsidePath;
-    /*\
-     * Snap.path.getBBox
-     [ method ]
-     **
-     * Utility method
-     **
-     * Returns the bounding box of a given path
-     - path (string) path string
-     = (object) bounding box
-     o {
-     o     x: (number) x coordinate of the left top point of the box,
-     o     y: (number) y coordinate of the left top point of the box,
-     o     x2: (number) x coordinate of the right bottom point of the box,
-     o     y2: (number) y coordinate of the right bottom point of the box,
-     o     width: (number) width of the box,
-     o     height: (number) height of the box
-     o }
-    \*/
-    Snap.path.getBBox = pathBBox;
-    Snap.path.get = getPath;
-    /*\
-     * Snap.path.toRelative
-     [ method ]
-     **
-     * Utility method
-     **
-     * Converts path coordinates into relative values
-     - path (string) path string
-     = (array) path string
-    \*/
-    Snap.path.toRelative = pathToRelative;
-    /*\
-     * Snap.path.toAbsolute
-     [ method ]
-     **
-     * Utility method
-     **
-     * Converts path coordinates into absolute values
-     - path (string) path string
-     = (array) path string
-    \*/
-    Snap.path.toAbsolute = pathToAbsolute;
-    /*\
-     * Snap.path.toCubic
-     [ method ]
-     **
-     * Utility method
-     **
-     * Converts path to a new path where all segments are cubic beziér curves
-     - pathString (string|array) path string or array of segments
-     = (array) array of segments
-    \*/
-    Snap.path.toCubic = path2curve;
-    /*\
-     * Snap.path.map
-     [ method ]
-     **
-     * Transform the path string with the given matrix
-     - path (string) path string
-     - matrix (object) see @Matrix
-     = (string) transformed path string
-    \*/
-    Snap.path.map = mapPath;
-    Snap.path.toString = toString;
-    Snap.path.clone = pathClone;
-});
-// Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-// 
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-// http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-Snap.plugin(function (Snap, Element, Paper, glob) {
-    var elproto = Element.prototype,
-    has = "hasOwnProperty",
-    supportsTouch = "createTouch" in glob.doc,
-    events = [
-        "click", "dblclick", "mousedown", "mousemove", "mouseout",
-        "mouseover", "mouseup", "touchstart", "touchmove", "touchend",
-        "touchcancel"
-    ],
-    touchMap = {
-        mousedown: "touchstart",
-        mousemove: "touchmove",
-        mouseup: "touchend"
-    },
-    getScroll = function (xy, el) {
-        var name = xy == "y" ? "scrollTop" : "scrollLeft",
-            doc = el && el.node ? el.node.ownerDocument : glob.doc;
-        return doc[name in doc.documentElement ? "documentElement" : "body"][name];
-    },
-    preventDefault = function () {
-        this.returnValue = false;
-    },
-    preventTouch = function () {
-        return this.originalEvent.preventDefault();
-    },
-    stopPropagation = function () {
-        this.cancelBubble = true;
-    },
-    stopTouch = function () {
-        return this.originalEvent.stopPropagation();
-    },
-    addEvent = (function () {
-        if (glob.doc.addEventListener) {
-            return function (obj, type, fn, element) {
-                var realName = supportsTouch && touchMap[type] ? touchMap[type] : type,
-                    f = function (e) {
-                        var scrollY = getScroll("y", element),
-                            scrollX = getScroll("x", element);
-                        if (supportsTouch && touchMap[has](type)) {
-                            for (var i = 0, ii = e.targetTouches && e.targetTouches.length; i < ii; i++) {
-                                if (e.targetTouches[i].target == obj || obj.contains(e.targetTouches[i].target)) {
-                                    var olde = e;
-                                    e = e.targetTouches[i];
-                                    e.originalEvent = olde;
-                                    e.preventDefault = preventTouch;
-                                    e.stopPropagation = stopTouch;
-                                    break;
-                                }
-                            }
-                        }
-                        var x = e.clientX + scrollX,
-                            y = e.clientY + scrollY;
-                        return fn.call(element, e, x, y);
-                    };
-
-                if (type !== realName) {
-                    obj.addEventListener(type, f, false);
-                }
-
-                obj.addEventListener(realName, f, false);
-
-                return function () {
-                    if (type !== realName) {
-                        obj.removeEventListener(type, f, false);
-                    }
-
-                    obj.removeEventListener(realName, f, false);
-                    return true;
-                };
-            };
-        } else if (glob.doc.attachEvent) {
-            return function (obj, type, fn, element) {
-                var f = function (e) {
-                    e = e || element.node.ownerDocument.window.event;
-                    var scrollY = getScroll("y", element),
-                        scrollX = getScroll("x", element),
-                        x = e.clientX + scrollX,
-                        y = e.clientY + scrollY;
-                    e.preventDefault = e.preventDefault || preventDefault;
-                    e.stopPropagation = e.stopPropagation || stopPropagation;
-                    return fn.call(element, e, x, y);
-                };
-                obj.attachEvent("on" + type, f);
-                var detacher = function () {
-                    obj.detachEvent("on" + type, f);
-                    return true;
-                };
-                return detacher;
-            };
-        }
-    })(),
-    drag = [],
-    dragMove = function (e) {
-        var x = e.clientX,
-            y = e.clientY,
-            scrollY = getScroll("y"),
-            scrollX = getScroll("x"),
-            dragi,
-            j = drag.length;
-        while (j--) {
-            dragi = drag[j];
-            if (supportsTouch) {
-                var i = e.touches && e.touches.length,
-                    touch;
-                while (i--) {
-                    touch = e.touches[i];
-                    if (touch.identifier == dragi.el._drag.id || dragi.el.node.contains(touch.target)) {
-                        x = touch.clientX;
-                        y = touch.clientY;
-                        (e.originalEvent ? e.originalEvent : e).preventDefault();
-                        break;
-                    }
-                }
-            } else {
-                e.preventDefault();
-            }
-            var node = dragi.el.node,
-                o,
-                next = node.nextSibling,
-                parent = node.parentNode,
-                display = node.style.display;
-            // glob.win.opera && parent.removeChild(node);
-            // node.style.display = "none";
-            // o = dragi.el.paper.getElementByPoint(x, y);
-            // node.style.display = display;
-            // glob.win.opera && (next ? parent.insertBefore(node, next) : parent.appendChild(node));
-            // o && eve("snap.drag.over." + dragi.el.id, dragi.el, o);
-            x += scrollX;
-            y += scrollY;
-            eve("snap.drag.move." + dragi.el.id, dragi.move_scope || dragi.el, x - dragi.el._drag.x, y - dragi.el._drag.y, x, y, e);
-        }
-    },
-    dragUp = function (e) {
-        Snap.unmousemove(dragMove).unmouseup(dragUp);
-        var i = drag.length,
-            dragi;
-        while (i--) {
-            dragi = drag[i];
-            dragi.el._drag = {};
-            eve("snap.drag.end." + dragi.el.id, dragi.end_scope || dragi.start_scope || dragi.move_scope || dragi.el, e);
-        }
-        drag = [];
-    };
-    /*\
-     * Element.click
-     [ method ]
-     **
-     * Adds a click event handler to the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    /*\
-     * Element.unclick
-     [ method ]
-     **
-     * Removes a click event handler from the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    
-    /*\
-     * Element.dblclick
-     [ method ]
-     **
-     * Adds a double click event handler to the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    /*\
-     * Element.undblclick
-     [ method ]
-     **
-     * Removes a double click event handler from the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    
-    /*\
-     * Element.mousedown
-     [ method ]
-     **
-     * Adds a mousedown event handler to the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    /*\
-     * Element.unmousedown
-     [ method ]
-     **
-     * Removes a mousedown event handler from the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    
-    /*\
-     * Element.mousemove
-     [ method ]
-     **
-     * Adds a mousemove event handler to the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    /*\
-     * Element.unmousemove
-     [ method ]
-     **
-     * Removes a mousemove event handler from the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    
-    /*\
-     * Element.mouseout
-     [ method ]
-     **
-     * Adds a mouseout event handler to the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    /*\
-     * Element.unmouseout
-     [ method ]
-     **
-     * Removes a mouseout event handler from the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    
-    /*\
-     * Element.mouseover
-     [ method ]
-     **
-     * Adds a mouseover event handler to the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    /*\
-     * Element.unmouseover
-     [ method ]
-     **
-     * Removes a mouseover event handler from the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    
-    /*\
-     * Element.mouseup
-     [ method ]
-     **
-     * Adds a mouseup event handler to the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    /*\
-     * Element.unmouseup
-     [ method ]
-     **
-     * Removes a mouseup event handler from the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    
-    /*\
-     * Element.touchstart
-     [ method ]
-     **
-     * Adds a touchstart event handler to the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    /*\
-     * Element.untouchstart
-     [ method ]
-     **
-     * Removes a touchstart event handler from the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    
-    /*\
-     * Element.touchmove
-     [ method ]
-     **
-     * Adds a touchmove event handler to the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    /*\
-     * Element.untouchmove
-     [ method ]
-     **
-     * Removes a touchmove event handler from the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    
-    /*\
-     * Element.touchend
-     [ method ]
-     **
-     * Adds a touchend event handler to the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    /*\
-     * Element.untouchend
-     [ method ]
-     **
-     * Removes a touchend event handler from the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    
-    /*\
-     * Element.touchcancel
-     [ method ]
-     **
-     * Adds a touchcancel event handler to the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    /*\
-     * Element.untouchcancel
-     [ method ]
-     **
-     * Removes a touchcancel event handler from the element
-     - handler (function) handler for the event
-     = (object) @Element
-    \*/
-    for (var i = events.length; i--;) {
-        (function (eventName) {
-            Snap[eventName] = elproto[eventName] = function (fn, scope) {
-                if (Snap.is(fn, "function")) {
-                    this.events = this.events || [];
-                    this.events.push({
-                        name: eventName,
-                        f: fn,
-                        unbind: addEvent(this.node || document, eventName, fn, scope || this)
-                    });
-                }
-                return this;
-            };
-            Snap["un" + eventName] =
-            elproto["un" + eventName] = function (fn) {
-                var events = this.events || [],
-                    l = events.length;
-                while (l--) if (events[l].name == eventName &&
-                               (events[l].f == fn || !fn)) {
-                    events[l].unbind();
-                    events.splice(l, 1);
-                    !events.length && delete this.events;
-                    return this;
-                }
-                return this;
-            };
-        })(events[i]);
-    }
-    /*\
-     * Element.hover
-     [ method ]
-     **
-     * Adds hover event handlers to the element
-     - f_in (function) handler for hover in
-     - f_out (function) handler for hover out
-     - icontext (object) #optional context for hover in handler
-     - ocontext (object) #optional context for hover out handler
-     = (object) @Element
-    \*/
-    elproto.hover = function (f_in, f_out, scope_in, scope_out) {
-        return this.mouseover(f_in, scope_in).mouseout(f_out, scope_out || scope_in);
-    };
-    /*\
-     * Element.unhover
-     [ method ]
-     **
-     * Removes hover event handlers from the element
-     - f_in (function) handler for hover in
-     - f_out (function) handler for hover out
-     = (object) @Element
-    \*/
-    elproto.unhover = function (f_in, f_out) {
-        return this.unmouseover(f_in).unmouseout(f_out);
-    };
-    var draggable = [];
-    // SIERRA unclear what _context_ refers to for starting, ending, moving the drag gesture.
-    // SIERRA Element.drag(): _x position of the mouse_: Where are the x/y values offset from?
-    // SIERRA Element.drag(): much of this member's doc appears to be duplicated for some reason.
-    // SIERRA Unclear about this sentence: _Additionally following drag events will be triggered: drag.start.<id> on start, drag.end.<id> on end and drag.move.<id> on every move._ Is there a global _drag_ object to which you can assign handlers keyed by an element's ID?
-    /*\
-     * Element.drag
-     [ method ]
-     **
-     * Adds event handlers for an element's drag gesture
-     **
-     - onmove (function) handler for moving
-     - onstart (function) handler for drag start
-     - onend (function) handler for drag end
-     - mcontext (object) #optional context for moving handler
-     - scontext (object) #optional context for drag start handler
-     - econtext (object) #optional context for drag end handler
-     * Additionaly following `drag` events are triggered: `drag.start.<id>` on start, 
-     * `drag.end.<id>` on end and `drag.move.<id>` on every move. When element is dragged over another element 
-     * `drag.over.<id>` fires as well.
-     *
-     * Start event and start handler are called in specified context or in context of the element with following parameters:
-     o x (number) x position of the mouse
-     o y (number) y position of the mouse
-     o event (object) DOM event object
-     * Move event and move handler are called in specified context or in context of the element with following parameters:
-     o dx (number) shift by x from the start point
-     o dy (number) shift by y from the start point
-     o x (number) x position of the mouse
-     o y (number) y position of the mouse
-     o event (object) DOM event object
-     * End event and end handler are called in specified context or in context of the element with following parameters:
-     o event (object) DOM event object
-     = (object) @Element
-    \*/
-    elproto.drag = function (onmove, onstart, onend, move_scope, start_scope, end_scope) {
-        if (!arguments.length) {
-            var origTransform;
-            return this.drag(function (dx, dy) {
-                this.attr({
-                    transform: origTransform + (origTransform ? "T" : "t") + [dx, dy]
-                });
-            }, function () {
-                origTransform = this.transform().local;
-            });
-        }
-        function start(e, x, y) {
-            (e.originalEvent || e).preventDefault();
-            this._drag.x = x;
-            this._drag.y = y;
-            this._drag.id = e.identifier;
-            !drag.length && Snap.mousemove(dragMove).mouseup(dragUp);
-            drag.push({el: this, move_scope: move_scope, start_scope: start_scope, end_scope: end_scope});
-            onstart && eve.on("snap.drag.start." + this.id, onstart);
-            onmove && eve.on("snap.drag.move." + this.id, onmove);
-            onend && eve.on("snap.drag.end." + this.id, onend);
-            eve("snap.drag.start." + this.id, start_scope || move_scope || this, x, y, e);
-        }
-        this._drag = {};
-        draggable.push({el: this, start: start});
-        this.mousedown(start);
-        return this;
-    };
-    /*
-     * Element.onDragOver
-     [ method ]
-     **
-     * Shortcut to assign event handler for `drag.over.<id>` event, where `id` is the element's `id` (see @Element.id)
-     - f (function) handler for event, first argument would be the element you are dragging over
-    \*/
-    // elproto.onDragOver = function (f) {
-    //     f ? eve.on("snap.drag.over." + this.id, f) : eve.unbind("snap.drag.over." + this.id);
-    // };
-    /*\
-     * Element.undrag
-     [ method ]
-     **
-     * Removes all drag event handlers from the given element
-    \*/
-    elproto.undrag = function () {
-        var i = draggable.length;
-        while (i--) if (draggable[i].el == this) {
-            this.unmousedown(draggable[i].start);
-            draggable.splice(i, 1);
-            eve.unbind("snap.drag.*." + this.id);
-        }
-        !draggable.length && Snap.unmousemove(dragMove).unmouseup(dragUp);
-        return this;
-    };
-});
-// Copyright (c) 2013 Adobe Systems Incorporated. All rights reserved.
-// 
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-// http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-Snap.plugin(function (Snap, Element, Paper, glob) {
-    var elproto = Element.prototype,
-        pproto = Paper.prototype,
-        rgurl = /^\s*url\((.+)\)/,
-        Str = String,
-        $ = Snap._.$;
-    Snap.filter = {};
-    /*\
-     * Paper.filter
-     [ method ]
-     **
-     * Creates a `<filter>` element
-     **
-     - filstr (string) SVG fragment of filter provided as a string
-     = (object) @Element
-     * Note: It is recommended to use filters embedded into the page inside an empty SVG element.
-     > Usage
-     | var f = paper.filter('<feGaussianBlur stdDeviation="2"/>'),
-     |     c = paper.circle(10, 10, 10).attr({
-     |         filter: f
-     |     });
-    \*/
-    pproto.filter = function (filstr) {
-        var paper = this;
-        if (paper.type != "svg") {
-            paper = paper.paper;
-        }
-        var f = Snap.parse(Str(filstr)),
-            id = Snap._.id(),
-            width = paper.node.offsetWidth,
-            height = paper.node.offsetHeight,
-            filter = $("filter");
-        $(filter, {
-            id: id,
-            filterUnits: "userSpaceOnUse"
-        });
-        filter.appendChild(f.node);
-        paper.defs.appendChild(filter);
-        return new Element(filter);
-    };
-    
-    eve.on("snap.util.getattr.filter", function () {
-        eve.stop();
-        var p = $(this.node, "filter");
-        if (p) {
-            var match = Str(p).match(rgurl);
-            return match && Snap.select(match[1]);
-        }
-    });
-    eve.on("snap.util.attr.filter", function (value) {
-        if (value instanceof Element && value.type == "filter") {
-            eve.stop();
-            var id = value.node.id;
-            if (!id) {
-                $(value.node, {id: value.id});
-                id = value.id;
-            }
-            $(this.node, {
-                filter: Snap.url(id)
-            });
-        }
-        if (!value || value == "none") {
-            eve.stop();
-            this.node.removeAttribute("filter");
-        }
-    });
-    /*\
-     * Snap.filter.blur
-     [ method ]
-     **
-     * Returns an SVG markup string for the blur filter
-     **
-     - x (number) amount of horizontal blur, in pixels
-     - y (number) #optional amount of vertical blur, in pixels
-     = (string) filter representation
-     > Usage
-     | var f = paper.filter(Snap.filter.blur(5, 10)),
-     |     c = paper.circle(10, 10, 10).attr({
-     |         filter: f
-     |     });
-    \*/
-    Snap.filter.blur = function (x, y) {
-        if (x == null) {
-            x = 2;
-        }
-        var def = y == null ? x : [x, y];
-        return Snap.format('\<feGaussianBlur stdDeviation="{def}"/>', {
-            def: def
-        });
-    };
-    Snap.filter.blur.toString = function () {
-        return this();
-    };
-    /*\
-     * Snap.filter.shadow
-     [ method ]
-     **
-     * Returns an SVG markup string for the shadow filter
-     **
-     - dx (number) #optional horizontal shift of the shadow, in pixels
-     - dy (number) #optional vertical shift of the shadow, in pixels
-     - blur (number) #optional amount of blur
-     - color (string) #optional color of the shadow
-     - opacity (number) #optional `0..1` opacity of the shadow
-     * or
-     - dx (number) #optional horizontal shift of the shadow, in pixels
-     - dy (number) #optional vertical shift of the shadow, in pixels
-     - color (string) #optional color of the shadow
-     - opacity (number) #optional `0..1` opacity of the shadow
-     * which makes blur default to `4`. Or
-     - dx (number) #optional horizontal shift of the shadow, in pixels
-     - dy (number) #optional vertical shift of the shadow, in pixels
-     - opacity (number) #optional `0..1` opacity of the shadow
-     = (string) filter representation
-     > Usage
-     | var f = paper.filter(Snap.filter.shadow(0, 2, 3)),
-     |     c = paper.circle(10, 10, 10).attr({
-     |         filter: f
-     |     });
-    \*/
-    Snap.filter.shadow = function (dx, dy, blur, color, opacity) {
-        if (typeof blur == "string") {
-            color = blur;
-            opacity = color;
-            blur = 4;
-        }
-        if (typeof color != "string") {
-            opacity = color;
-            color = "#000";
-        }
-        color = color || "#000";
-        if (blur == null) {
-            blur = 4;
-        }
-        if (opacity == null) {
-            opacity = 1;
-        }
-        if (dx == null) {
-            dx = 0;
-            dy = 2;
-        }
-        if (dy == null) {
-            dy = dx;
-        }
-        color = Snap.color(color);
-        return Snap.format('<feGaussianBlur in="SourceAlpha" stdDeviation="{blur}"/><feOffset dx="{dx}" dy="{dy}" result="offsetblur"/><feFlood flood-color="{color}"/><feComposite in2="offsetblur" operator="in"/><feComponentTransfer><feFuncA type="linear" slope="{opacity}"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>', {
-            color: color,
-            dx: dx,
-            dy: dy,
-            blur: blur,
-            opacity: opacity
-        });
-    };
-    Snap.filter.shadow.toString = function () {
-        return this();
-    };
-    /*\
-     * Snap.filter.grayscale
-     [ method ]
-     **
-     * Returns an SVG markup string for the grayscale filter
-     **
-     - amount (number) amount of filter (`0..1`)
-     = (string) filter representation
-    \*/
-    Snap.filter.grayscale = function (amount) {
-        if (amount == null) {
-            amount = 1;
-        }
-        return Snap.format('<feColorMatrix type="matrix" values="{a} {b} {c} 0 0 {d} {e} {f} 0 0 {g} {b} {h} 0 0 0 0 0 1 0"/>', {
-            a: 0.2126 + 0.7874 * (1 - amount),
-            b: 0.7152 - 0.7152 * (1 - amount),
-            c: 0.0722 - 0.0722 * (1 - amount),
-            d: 0.2126 - 0.2126 * (1 - amount),
-            e: 0.7152 + 0.2848 * (1 - amount),
-            f: 0.0722 - 0.0722 * (1 - amount),
-            g: 0.2126 - 0.2126 * (1 - amount),
-            h: 0.0722 + 0.9278 * (1 - amount)
-        });
-    };
-    Snap.filter.grayscale.toString = function () {
-        return this();
-    };
-    /*\
-     * Snap.filter.sepia
-     [ method ]
-     **
-     * Returns an SVG markup string for the sepia filter
-     **
-     - amount (number) amount of filter (`0..1`)
-     = (string) filter representation
-    \*/
-    Snap.filter.sepia = function (amount) {
-        if (amount == null) {
-            amount = 1;
-        }
-        return Snap.format('<feColorMatrix type="matrix" values="{a} {b} {c} 0 0 {d} {e} {f} 0 0 {g} {h} {i} 0 0 0 0 0 1 0"/>', {
-            a: 0.393 + 0.607 * (1 - amount),
-            b: 0.769 - 0.769 * (1 - amount),
-            c: 0.189 - 0.189 * (1 - amount),
-            d: 0.349 - 0.349 * (1 - amount),
-            e: 0.686 + 0.314 * (1 - amount),
-            f: 0.168 - 0.168 * (1 - amount),
-            g: 0.272 - 0.272 * (1 - amount),
-            h: 0.534 - 0.534 * (1 - amount),
-            i: 0.131 + 0.869 * (1 - amount)
-        });
-    };
-    Snap.filter.sepia.toString = function () {
-        return this();
-    };
-    /*\
-     * Snap.filter.saturate
-     [ method ]
-     **
-     * Returns an SVG markup string for the saturate filter
-     **
-     - amount (number) amount of filter (`0..1`)
-     = (string) filter representation
-    \*/
-    Snap.filter.saturate = function (amount) {
-        if (amount == null) {
-            amount = 1;
-        }
-        return Snap.format('<feColorMatrix type="saturate" values="{amount}"/>', {
-            amount: 1 - amount
-        });
-    };
-    Snap.filter.saturate.toString = function () {
-        return this();
-    };
-    /*\
-     * Snap.filter.hueRotate
-     [ method ]
-     **
-     * Returns an SVG markup string for the hue-rotate filter
-     **
-     - angle (number) angle of rotation
-     = (string) filter representation
-    \*/
-    Snap.filter.hueRotate = function (angle) {
-        angle = angle || 0;
-        return Snap.format('<feColorMatrix type="hueRotate" values="{angle}"/>', {
-            angle: angle
-        });
-    };
-    Snap.filter.hueRotate.toString = function () {
-        return this();
-    };
-    /*\
-     * Snap.filter.invert
-     [ method ]
-     **
-     * Returns an SVG markup string for the invert filter
-     **
-     - amount (number) amount of filter (`0..1`)
-     = (string) filter representation
-    \*/
-    Snap.filter.invert = function (amount) {
-        if (amount == null) {
-            amount = 1;
-        }
-        return Snap.format('<feComponentTransfer><feFuncR type="table" tableValues="{amount} {amount2}"/><feFuncG type="table" tableValues="{amount} {amount2}"/><feFuncB type="table" tableValues="{amount} {amount2}"/></feComponentTransfer>', {
-            amount: amount,
-            amount2: 1 - amount
-        });
-    };
-    Snap.filter.invert.toString = function () {
-        return this();
-    };
-    /*\
-     * Snap.filter.brightness
-     [ method ]
-     **
-     * Returns an SVG markup string for the brightness filter
-     **
-     - amount (number) amount of filter (`0..1`)
-     = (string) filter representation
-    \*/
-    Snap.filter.brightness = function (amount) {
-        if (amount == null) {
-            amount = 1;
-        }
-        return Snap.format('<feComponentTransfer><feFuncR type="linear" slope="{amount}"/><feFuncG type="linear" slope="{amount}"/><feFuncB type="linear" slope="{amount}"/></feComponentTransfer>', {
-            amount: amount
-        });
-    };
-    Snap.filter.brightness.toString = function () {
-        return this();
-    };
-    /*\
-     * Snap.filter.contrast
-     [ method ]
-     **
-     * Returns an SVG markup string for the contrast filter
-     **
-     - amount (number) amount of filter (`0..1`)
-     = (string) filter representation
-    \*/
-    Snap.filter.contrast = function (amount) {
-        if (amount == null) {
-            amount = 1;
-        }
-        return Snap.format('<feComponentTransfer><feFuncR type="linear" slope="{amount}" intercept="{amount2}"/><feFuncG type="linear" slope="{amount}" intercept="{amount2}"/><feFuncB type="linear" slope="{amount}" intercept="{amount2}"/></feComponentTransfer>', {
-            amount: amount,
-            amount2: .5 - amount / 2
-        });
-    };
-    Snap.filter.contrast.toString = function () {
-        return this();
-    };
-});
-
-return Snap;
-}));
-},{"eve":298}],300:[function(require,module,exports){
-'use strict';
-
-var snapsvg = module.exports = require('snapsvg');
-
-snapsvg.plugin(function(Snap, Element) {
-
-  /*\
-   * Element.children
-   [ method ]
-   **
-   * Returns array of all the children of the element.
-   = (array) array of Elements
-  \*/
-  Element.prototype.children = function () {
-      var out = [],
-          ch = this.node.childNodes;
-      for (var i = 0, ii = ch.length; i < ii; i++) {
-          out[i] = new Snap(ch[i]);
-      }
-      return out;
-  };
-});
-
-
-/**
- * @class ClassPlugin
- *
- * Extends snapsvg with methods to add and remove classes
- */
-snapsvg.plugin(function (Snap, Element, Paper, global) {
-
-  function split(str) {
-    return str.split(/\s+/);
-  }
-
-  function join(array) {
-    return array.join(' ');
-  }
-
-  function getClasses(e) {
-    return split(e.attr('class') || '');
-  }
-
-  function setClasses(e, classes) {
-    e.attr('class', join(classes));
-  }
-
-  /**
-   * @method snapsvg.Element#addClass
-   *
-   * @example
-   *
-   * e.attr('class', 'selector');
-   *
-   * e.addClass('foo bar'); // adds classes foo and bar
-   * e.attr('class'); // -> 'selector foo bar'
-   *
-   * e.addClass('fooBar');
-   * e.attr('class'); // -> 'selector foo bar fooBar'
-   *
-   * @param {String} cls classes to be added to the element
-   *
-   * @return {snapsvg.Element} the element (this)
-   */
-  Element.prototype.addClass = function(cls) {
-    var current = getClasses(this),
-        add = split(cls),
-        i, e;
-
-    for (i = 0, e; !!(e = add[i]); i++) {
-      if (current.indexOf(e) === -1) {
-        current.push(e);
-      }
-    }
-
-    setClasses(this, current);
-
-    return this;
-  };
-
-  /**
-   * @method snapsvg.Element#hasClass
-   *
-   * @param  {String}  cls the class to query for
-   * @return {Boolean} returns true if the element has the given class
-   */
-  Element.prototype.hasClass = function(cls) {
-    if (!cls) {
-      throw new Error('[snapsvg] syntax: hasClass(clsStr)');
-    }
-
-    return getClasses(this).indexOf(cls) !== -1;
-  };
-
-  /**
-   * @method snapsvg.Element#removeClass
-   *
-   * @example
-   *
-   * e.attr('class', 'foo bar');
-   *
-   * e.removeClass('foo');
-   * e.attr('class'); // -> 'bar'
-   *
-   * e.removeClass('foo bar'); // removes classes foo and bar
-   * e.attr('class'); // -> ''
-   *
-   * @param {String} cls classes to be removed from element
-   *
-   * @return {snapsvg.Element} the element (this)
-   */
-  Element.prototype.removeClass = function(cls) {
-    var current = getClasses(this),
-        remove = split(cls),
-        i, e, idx;
-
-    for (i = 0, e; !!(e = remove[i]); i++) {
-      idx = current.indexOf(e);
-
-      if (idx !== -1) {
-        // remove element from array
-        current.splice(idx, 1);
-      }
-    }
-
-    setClasses(this, current);
-
-    return this;
-  };
-
-});
-
-/**
- * @class TranslatePlugin
- *
- * Extends snapsvg with methods to translate elements
- */
-snapsvg.plugin(function (Snap, Element, Paper, global) {
-
-  /*
-   * @method snapsvg.Element#translate
-   *
-   * @example
-   *
-   * e.translate(10, 20);
-   *
-   * // sets transform matrix to translate(10, 20)
-   *
-   * @param {Number} x translation
-   * @param {Number} y translation
-   *
-   * @return {snapsvg.Element} the element (this)
-   */
-  Element.prototype.translate = function(x, y) {
-    var matrix = new Snap.Matrix();
-    matrix.translate(x, y);
-    return this.transform(matrix);
-  };
-});
-
-
-/**
- * @class CreatePlugin
- *
- * Create an svg element without attaching it to the dom
- */
-snapsvg.plugin(function(Snap) {
-
-  Snap.create = function(name, attrs) {
-    return Snap._.wrap(Snap._.$(name, attrs));
-  };
-});
-
-
-/**
- * @class CreatSnapAtPlugin
- *
- * Extends snap.svg with a method to create a SVG element
- * at a specific position in the DOM.
- */
-snapsvg.plugin(function(Snap, Element, Paper, global) {
-
-  /*
-   * @method snapsvg.createSnapAt
-   *
-   * @example
-   *
-   * snapsvg.createSnapAt(parentNode, 200, 200);
-   *
-   * @param {Number} width of svg
-   * @param {Number} height of svg
-   * @param {Object} parentNode svg Element will be child of this
-   *
-   * @return {snapsvg.Element} the newly created wrapped SVG element instance
-   */
-  Snap.createSnapAt = function(width, height, parentNode) {
-
-    var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svg.setAttribute('width', width);
-    svg.setAttribute('height', height);
-    if (!parentNode) {
-      parentNode = document.body;
-    }
-    parentNode.appendChild(svg);
-
-    return new Snap(svg);
-  };
-});
-},{"snapsvg":299}],301:[function(require,module,exports){
 arguments[4][82][0].apply(exports,arguments)
-},{"dup":82}],302:[function(require,module,exports){
+},{"dup":82}],255:[function(require,module,exports){
 arguments[4][83][0].apply(exports,arguments)
-},{"dup":83}],303:[function(require,module,exports){
-var LazyWrapper = require('../internal/LazyWrapper'),
-    LodashWrapper = require('../internal/LodashWrapper'),
-    baseLodash = require('../internal/baseLodash'),
-    isArray = require('../lang/isArray'),
-    isObjectLike = require('../internal/isObjectLike'),
-    wrapperClone = require('../internal/wrapperClone');
-
-/** Used for native method references. */
-var objectProto = Object.prototype;
-
-/** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
-
-/**
- * Creates a `lodash` object which wraps `value` to enable implicit chaining.
- * Methods that operate on and return arrays, collections, and functions can
- * be chained together. Methods that retrieve a single value or may return a
- * primitive value will automatically end the chain returning the unwrapped
- * value. Explicit chaining may be enabled using `_.chain`. The execution of
- * chained methods is lazy, that is, execution is deferred until `_#value`
- * is implicitly or explicitly called.
- *
- * Lazy evaluation allows several methods to support shortcut fusion. Shortcut
- * fusion is an optimization strategy which merge iteratee calls; this can help
- * to avoid the creation of intermediate data structures and greatly reduce the
- * number of iteratee executions.
- *
- * Chaining is supported in custom builds as long as the `_#value` method is
- * directly or indirectly included in the build.
- *
- * In addition to lodash methods, wrappers have `Array` and `String` methods.
- *
- * The wrapper `Array` methods are:
- * `concat`, `join`, `pop`, `push`, `reverse`, `shift`, `slice`, `sort`,
- * `splice`, and `unshift`
- *
- * The wrapper `String` methods are:
- * `replace` and `split`
- *
- * The wrapper methods that support shortcut fusion are:
- * `compact`, `drop`, `dropRight`, `dropRightWhile`, `dropWhile`, `filter`,
- * `first`, `initial`, `last`, `map`, `pluck`, `reject`, `rest`, `reverse`,
- * `slice`, `take`, `takeRight`, `takeRightWhile`, `takeWhile`, `toArray`,
- * and `where`
- *
- * The chainable wrapper methods are:
- * `after`, `ary`, `assign`, `at`, `before`, `bind`, `bindAll`, `bindKey`,
- * `callback`, `chain`, `chunk`, `commit`, `compact`, `concat`, `constant`,
- * `countBy`, `create`, `curry`, `debounce`, `defaults`, `defaultsDeep`,
- * `defer`, `delay`, `difference`, `drop`, `dropRight`, `dropRightWhile`,
- * `dropWhile`, `fill`, `filter`, `flatten`, `flattenDeep`, `flow`, `flowRight`,
- * `forEach`, `forEachRight`, `forIn`, `forInRight`, `forOwn`, `forOwnRight`,
- * `functions`, `groupBy`, `indexBy`, `initial`, `intersection`, `invert`,
- * `invoke`, `keys`, `keysIn`, `map`, `mapKeys`, `mapValues`, `matches`,
- * `matchesProperty`, `memoize`, `merge`, `method`, `methodOf`, `mixin`,
- * `modArgs`, `negate`, `omit`, `once`, `pairs`, `partial`, `partialRight`,
- * `partition`, `pick`, `plant`, `pluck`, `property`, `propertyOf`, `pull`,
- * `pullAt`, `push`, `range`, `rearg`, `reject`, `remove`, `rest`, `restParam`,
- * `reverse`, `set`, `shuffle`, `slice`, `sort`, `sortBy`, `sortByAll`,
- * `sortByOrder`, `splice`, `spread`, `take`, `takeRight`, `takeRightWhile`,
- * `takeWhile`, `tap`, `throttle`, `thru`, `times`, `toArray`, `toPlainObject`,
- * `transform`, `union`, `uniq`, `unshift`, `unzip`, `unzipWith`, `values`,
- * `valuesIn`, `where`, `without`, `wrap`, `xor`, `zip`, `zipObject`, `zipWith`
- *
- * The wrapper methods that are **not** chainable by default are:
- * `add`, `attempt`, `camelCase`, `capitalize`, `ceil`, `clone`, `cloneDeep`,
- * `deburr`, `endsWith`, `escape`, `escapeRegExp`, `every`, `find`, `findIndex`,
- * `findKey`, `findLast`, `findLastIndex`, `findLastKey`, `findWhere`, `first`,
- * `floor`, `get`, `gt`, `gte`, `has`, `identity`, `includes`, `indexOf`,
- * `inRange`, `isArguments`, `isArray`, `isBoolean`, `isDate`, `isElement`,
- * `isEmpty`, `isEqual`, `isError`, `isFinite` `isFunction`, `isMatch`,
- * `isNative`, `isNaN`, `isNull`, `isNumber`, `isObject`, `isPlainObject`,
- * `isRegExp`, `isString`, `isUndefined`, `isTypedArray`, `join`, `kebabCase`,
- * `last`, `lastIndexOf`, `lt`, `lte`, `max`, `min`, `noConflict`, `noop`,
- * `now`, `pad`, `padLeft`, `padRight`, `parseInt`, `pop`, `random`, `reduce`,
- * `reduceRight`, `repeat`, `result`, `round`, `runInContext`, `shift`, `size`,
- * `snakeCase`, `some`, `sortedIndex`, `sortedLastIndex`, `startCase`,
- * `startsWith`, `sum`, `template`, `trim`, `trimLeft`, `trimRight`, `trunc`,
- * `unescape`, `uniqueId`, `value`, and `words`
- *
- * The wrapper method `sample` will return a wrapped value when `n` is provided,
- * otherwise an unwrapped value is returned.
- *
- * @name _
- * @constructor
- * @category Chain
- * @param {*} value The value to wrap in a `lodash` instance.
- * @returns {Object} Returns the new `lodash` wrapper instance.
- * @example
- *
- * var wrapped = _([1, 2, 3]);
- *
- * // returns an unwrapped value
- * wrapped.reduce(function(total, n) {
- *   return total + n;
- * });
- * // => 6
- *
- * // returns a wrapped value
- * var squares = wrapped.map(function(n) {
- *   return n * n;
- * });
- *
- * _.isArray(squares);
- * // => false
- *
- * _.isArray(squares.value());
- * // => true
- */
-function lodash(value) {
-  if (isObjectLike(value) && !isArray(value) && !(value instanceof LazyWrapper)) {
-    if (value instanceof LodashWrapper) {
-      return value;
-    }
-    if (hasOwnProperty.call(value, '__chain__') && hasOwnProperty.call(value, '__wrapped__')) {
-      return wrapperClone(value);
-    }
-  }
-  return new LodashWrapper(value);
-}
-
-// Ensure wrappers are instances of `baseLodash`.
-lodash.prototype = baseLodash.prototype;
-
-module.exports = lodash;
-
-},{"../internal/LazyWrapper":318,"../internal/LodashWrapper":319,"../internal/baseLodash":350,"../internal/isObjectLike":396,"../internal/wrapperClone":409,"../lang/isArray":411}],304:[function(require,module,exports){
+},{"dup":83}],256:[function(require,module,exports){
 module.exports = require('./some');
 
-},{"./some":312}],305:[function(require,module,exports){
-arguments[4][84][0].apply(exports,arguments)
-},{"../internal/arrayEvery":323,"../internal/baseCallback":331,"../internal/baseEvery":337,"../internal/isIterateeCall":392,"../lang/isArray":411,"dup":84}],306:[function(require,module,exports){
+},{"./some":262}],257:[function(require,module,exports){
 arguments[4][85][0].apply(exports,arguments)
-},{"../internal/arrayFilter":324,"../internal/baseCallback":331,"../internal/baseFilter":338,"../lang/isArray":411,"dup":85}],307:[function(require,module,exports){
+},{"../internal/arrayFilter":267,"../internal/baseCallback":274,"../internal/baseFilter":279,"../lang/isArray":330,"dup":85}],258:[function(require,module,exports){
 arguments[4][86][0].apply(exports,arguments)
-},{"../internal/baseEach":336,"../internal/createFind":375,"dup":86}],308:[function(require,module,exports){
+},{"../internal/baseEach":278,"../internal/createFind":307,"dup":86}],259:[function(require,module,exports){
 arguments[4][87][0].apply(exports,arguments)
-},{"../internal/arrayEach":322,"../internal/baseEach":336,"../internal/createForEach":376,"dup":87}],309:[function(require,module,exports){
-var createAggregator = require('../internal/createAggregator');
-
-/** Used for native method references. */
-var objectProto = Object.prototype;
-
-/** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
-
-/**
- * Creates an object composed of keys generated from the results of running
- * each element of `collection` through `iteratee`. The corresponding value
- * of each key is an array of the elements responsible for generating the key.
- * The `iteratee` is bound to `thisArg` and invoked with three arguments:
- * (value, index|key, collection).
- *
- * If a property name is provided for `iteratee` the created `_.property`
- * style callback returns the property value of the given element.
- *
- * If a value is also provided for `thisArg` the created `_.matchesProperty`
- * style callback returns `true` for elements that have a matching property
- * value, else `false`.
- *
- * If an object is provided for `iteratee` the created `_.matches` style
- * callback returns `true` for elements that have the properties of the given
- * object, else `false`.
- *
- * @static
- * @memberOf _
- * @category Collection
- * @param {Array|Object|string} collection The collection to iterate over.
- * @param {Function|Object|string} [iteratee=_.identity] The function invoked
- *  per iteration.
- * @param {*} [thisArg] The `this` binding of `iteratee`.
- * @returns {Object} Returns the composed aggregate object.
- * @example
- *
- * _.groupBy([4.2, 6.1, 6.4], function(n) {
- *   return Math.floor(n);
- * });
- * // => { '4': [4.2], '6': [6.1, 6.4] }
- *
- * _.groupBy([4.2, 6.1, 6.4], function(n) {
- *   return this.floor(n);
- * }, Math);
- * // => { '4': [4.2], '6': [6.1, 6.4] }
- *
- * // using the `_.property` callback shorthand
- * _.groupBy(['one', 'two', 'three'], 'length');
- * // => { '3': ['one', 'two'], '5': ['three'] }
- */
-var groupBy = createAggregator(function(result, value, key) {
-  if (hasOwnProperty.call(result, key)) {
-    result[key].push(value);
-  } else {
-    result[key] = [value];
-  }
-});
-
-module.exports = groupBy;
-
-},{"../internal/createAggregator":368}],310:[function(require,module,exports){
+},{"../internal/arrayEach":266,"../internal/baseEach":278,"../internal/createForEach":308,"dup":87}],260:[function(require,module,exports){
 arguments[4][89][0].apply(exports,arguments)
-},{"../internal/arrayMap":325,"../internal/baseCallback":331,"../internal/baseMap":351,"../lang/isArray":411,"dup":89}],311:[function(require,module,exports){
+},{"../internal/arrayMap":268,"../internal/baseCallback":274,"../internal/baseMap":291,"../lang/isArray":330,"dup":89}],261:[function(require,module,exports){
 arguments[4][90][0].apply(exports,arguments)
-},{"../internal/arrayReduce":327,"../internal/baseEach":336,"../internal/createReduce":379,"dup":90}],312:[function(require,module,exports){
+},{"../internal/arrayReduce":270,"../internal/baseEach":278,"../internal/createReduce":309,"dup":90}],262:[function(require,module,exports){
 arguments[4][91][0].apply(exports,arguments)
-},{"../internal/arraySome":328,"../internal/baseCallback":331,"../internal/baseSome":361,"../internal/isIterateeCall":392,"../lang/isArray":411,"dup":91}],313:[function(require,module,exports){
-var getNative = require('../internal/getNative');
-
-/* Native method references for those with the same name as other `lodash` methods. */
-var nativeNow = getNative(Date, 'now');
-
-/**
- * Gets the number of milliseconds that have elapsed since the Unix epoch
- * (1 January 1970 00:00:00 UTC).
- *
- * @static
- * @memberOf _
- * @category Date
- * @example
- *
- * _.defer(function(stamp) {
- *   console.log(_.now() - stamp);
- * }, _.now());
- * // => logs the number of milliseconds it took for the deferred function to be invoked
- */
-var now = nativeNow || function() {
-  return new Date().getTime();
-};
-
-module.exports = now;
-
-},{"../internal/getNative":388}],314:[function(require,module,exports){
-var createWrapper = require('../internal/createWrapper'),
-    replaceHolders = require('../internal/replaceHolders'),
-    restParam = require('./restParam');
-
-/** Used to compose bitmasks for wrapper metadata. */
-var BIND_FLAG = 1,
-    PARTIAL_FLAG = 32;
-
-/**
- * Creates a function that invokes `func` with the `this` binding of `thisArg`
- * and prepends any additional `_.bind` arguments to those provided to the
- * bound function.
- *
- * The `_.bind.placeholder` value, which defaults to `_` in monolithic builds,
- * may be used as a placeholder for partially applied arguments.
- *
- * **Note:** Unlike native `Function#bind` this method does not set the "length"
- * property of bound functions.
- *
- * @static
- * @memberOf _
- * @category Function
- * @param {Function} func The function to bind.
- * @param {*} thisArg The `this` binding of `func`.
- * @param {...*} [partials] The arguments to be partially applied.
- * @returns {Function} Returns the new bound function.
- * @example
- *
- * var greet = function(greeting, punctuation) {
- *   return greeting + ' ' + this.user + punctuation;
- * };
- *
- * var object = { 'user': 'fred' };
- *
- * var bound = _.bind(greet, object, 'hi');
- * bound('!');
- * // => 'hi fred!'
- *
- * // using placeholders
- * var bound = _.bind(greet, object, _, '!');
- * bound('hi');
- * // => 'hi fred!'
- */
-var bind = restParam(function(func, thisArg, partials) {
-  var bitmask = BIND_FLAG;
-  if (partials.length) {
-    var holders = replaceHolders(partials, bind.placeholder);
-    bitmask |= PARTIAL_FLAG;
-  }
-  return createWrapper(func, bitmask, thisArg, partials, holders);
-});
-
-// Assign default placeholders.
-bind.placeholder = {};
-
-module.exports = bind;
-
-},{"../internal/createWrapper":380,"../internal/replaceHolders":404,"./restParam":317}],315:[function(require,module,exports){
-var isObject = require('../lang/isObject'),
-    now = require('../date/now');
-
-/** Used as the `TypeError` message for "Functions" methods. */
-var FUNC_ERROR_TEXT = 'Expected a function';
-
-/* Native method references for those with the same name as other `lodash` methods. */
-var nativeMax = Math.max;
-
-/**
- * Creates a debounced function that delays invoking `func` until after `wait`
- * milliseconds have elapsed since the last time the debounced function was
- * invoked. The debounced function comes with a `cancel` method to cancel
- * delayed invocations. Provide an options object to indicate that `func`
- * should be invoked on the leading and/or trailing edge of the `wait` timeout.
- * Subsequent calls to the debounced function return the result of the last
- * `func` invocation.
- *
- * **Note:** If `leading` and `trailing` options are `true`, `func` is invoked
- * on the trailing edge of the timeout only if the the debounced function is
- * invoked more than once during the `wait` timeout.
- *
- * See [David Corbacho's article](http://drupalmotion.com/article/debounce-and-throttle-visual-explanation)
- * for details over the differences between `_.debounce` and `_.throttle`.
- *
- * @static
- * @memberOf _
- * @category Function
- * @param {Function} func The function to debounce.
- * @param {number} [wait=0] The number of milliseconds to delay.
- * @param {Object} [options] The options object.
- * @param {boolean} [options.leading=false] Specify invoking on the leading
- *  edge of the timeout.
- * @param {number} [options.maxWait] The maximum time `func` is allowed to be
- *  delayed before it's invoked.
- * @param {boolean} [options.trailing=true] Specify invoking on the trailing
- *  edge of the timeout.
- * @returns {Function} Returns the new debounced function.
- * @example
- *
- * // avoid costly calculations while the window size is in flux
- * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
- *
- * // invoke `sendMail` when the click event is fired, debouncing subsequent calls
- * jQuery('#postbox').on('click', _.debounce(sendMail, 300, {
- *   'leading': true,
- *   'trailing': false
- * }));
- *
- * // ensure `batchLog` is invoked once after 1 second of debounced calls
- * var source = new EventSource('/stream');
- * jQuery(source).on('message', _.debounce(batchLog, 250, {
- *   'maxWait': 1000
- * }));
- *
- * // cancel a debounced call
- * var todoChanges = _.debounce(batchLog, 1000);
- * Object.observe(models.todo, todoChanges);
- *
- * Object.observe(models, function(changes) {
- *   if (_.find(changes, { 'user': 'todo', 'type': 'delete'})) {
- *     todoChanges.cancel();
- *   }
- * }, ['delete']);
- *
- * // ...at some point `models.todo` is changed
- * models.todo.completed = true;
- *
- * // ...before 1 second has passed `models.todo` is deleted
- * // which cancels the debounced `todoChanges` call
- * delete models.todo;
- */
-function debounce(func, wait, options) {
-  var args,
-      maxTimeoutId,
-      result,
-      stamp,
-      thisArg,
-      timeoutId,
-      trailingCall,
-      lastCalled = 0,
-      maxWait = false,
-      trailing = true;
-
-  if (typeof func != 'function') {
-    throw new TypeError(FUNC_ERROR_TEXT);
-  }
-  wait = wait < 0 ? 0 : (+wait || 0);
-  if (options === true) {
-    var leading = true;
-    trailing = false;
-  } else if (isObject(options)) {
-    leading = !!options.leading;
-    maxWait = 'maxWait' in options && nativeMax(+options.maxWait || 0, wait);
-    trailing = 'trailing' in options ? !!options.trailing : trailing;
-  }
-
-  function cancel() {
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-    }
-    if (maxTimeoutId) {
-      clearTimeout(maxTimeoutId);
-    }
-    lastCalled = 0;
-    maxTimeoutId = timeoutId = trailingCall = undefined;
-  }
-
-  function complete(isCalled, id) {
-    if (id) {
-      clearTimeout(id);
-    }
-    maxTimeoutId = timeoutId = trailingCall = undefined;
-    if (isCalled) {
-      lastCalled = now();
-      result = func.apply(thisArg, args);
-      if (!timeoutId && !maxTimeoutId) {
-        args = thisArg = undefined;
-      }
-    }
-  }
-
-  function delayed() {
-    var remaining = wait - (now() - stamp);
-    if (remaining <= 0 || remaining > wait) {
-      complete(trailingCall, maxTimeoutId);
-    } else {
-      timeoutId = setTimeout(delayed, remaining);
-    }
-  }
-
-  function maxDelayed() {
-    complete(trailing, timeoutId);
-  }
-
-  function debounced() {
-    args = arguments;
-    stamp = now();
-    thisArg = this;
-    trailingCall = trailing && (timeoutId || !leading);
-
-    if (maxWait === false) {
-      var leadingCall = leading && !timeoutId;
-    } else {
-      if (!maxTimeoutId && !leading) {
-        lastCalled = stamp;
-      }
-      var remaining = maxWait - (stamp - lastCalled),
-          isCalled = remaining <= 0 || remaining > maxWait;
-
-      if (isCalled) {
-        if (maxTimeoutId) {
-          maxTimeoutId = clearTimeout(maxTimeoutId);
-        }
-        lastCalled = stamp;
-        result = func.apply(thisArg, args);
-      }
-      else if (!maxTimeoutId) {
-        maxTimeoutId = setTimeout(maxDelayed, remaining);
-      }
-    }
-    if (isCalled && timeoutId) {
-      timeoutId = clearTimeout(timeoutId);
-    }
-    else if (!timeoutId && wait !== maxWait) {
-      timeoutId = setTimeout(delayed, wait);
-    }
-    if (leadingCall) {
-      isCalled = true;
-      result = func.apply(thisArg, args);
-    }
-    if (isCalled && !timeoutId && !maxTimeoutId) {
-      args = thisArg = undefined;
-    }
-    return result;
-  }
-  debounced.cancel = cancel;
-  return debounced;
-}
-
-module.exports = debounce;
-
-},{"../date/now":313,"../lang/isObject":415}],316:[function(require,module,exports){
+},{"../internal/arraySome":271,"../internal/baseCallback":274,"../internal/baseSome":298,"../internal/isIterateeCall":319,"../lang/isArray":330,"dup":91}],263:[function(require,module,exports){
 arguments[4][92][0].apply(exports,arguments)
-},{"../internal/baseDelay":334,"./restParam":317,"dup":92}],317:[function(require,module,exports){
+},{"../internal/baseDelay":276,"./restParam":264,"dup":92}],264:[function(require,module,exports){
 arguments[4][93][0].apply(exports,arguments)
-},{"dup":93}],318:[function(require,module,exports){
-var baseCreate = require('./baseCreate'),
-    baseLodash = require('./baseLodash');
-
-/** Used as references for `-Infinity` and `Infinity`. */
-var POSITIVE_INFINITY = Number.POSITIVE_INFINITY;
-
-/**
- * Creates a lazy wrapper object which wraps `value` to enable lazy evaluation.
- *
- * @private
- * @param {*} value The value to wrap.
- */
-function LazyWrapper(value) {
-  this.__wrapped__ = value;
-  this.__actions__ = [];
-  this.__dir__ = 1;
-  this.__filtered__ = false;
-  this.__iteratees__ = [];
-  this.__takeCount__ = POSITIVE_INFINITY;
-  this.__views__ = [];
-}
-
-LazyWrapper.prototype = baseCreate(baseLodash.prototype);
-LazyWrapper.prototype.constructor = LazyWrapper;
-
-module.exports = LazyWrapper;
-
-},{"./baseCreate":333,"./baseLodash":350}],319:[function(require,module,exports){
-var baseCreate = require('./baseCreate'),
-    baseLodash = require('./baseLodash');
-
-/**
- * The base constructor for creating `lodash` wrapper objects.
- *
- * @private
- * @param {*} value The value to wrap.
- * @param {boolean} [chainAll] Enable chaining for all wrapper methods.
- * @param {Array} [actions=[]] Actions to peform to resolve the unwrapped value.
- */
-function LodashWrapper(value, chainAll, actions) {
-  this.__wrapped__ = value;
-  this.__actions__ = actions || [];
-  this.__chain__ = !!chainAll;
-}
-
-LodashWrapper.prototype = baseCreate(baseLodash.prototype);
-LodashWrapper.prototype.constructor = LodashWrapper;
-
-module.exports = LodashWrapper;
-
-},{"./baseCreate":333,"./baseLodash":350}],320:[function(require,module,exports){
+},{"dup":93}],265:[function(require,module,exports){
 arguments[4][94][0].apply(exports,arguments)
-},{"./cachePush":365,"./getNative":388,"dup":94}],321:[function(require,module,exports){
-/**
- * Copies the values of `source` to `array`.
- *
- * @private
- * @param {Array} source The array to copy values from.
- * @param {Array} [array=[]] The array to copy values to.
- * @returns {Array} Returns `array`.
- */
-function arrayCopy(source, array) {
-  var index = -1,
-      length = source.length;
-
-  array || (array = Array(length));
-  while (++index < length) {
-    array[index] = source[index];
-  }
-  return array;
-}
-
-module.exports = arrayCopy;
-
-},{}],322:[function(require,module,exports){
+},{"./cachePush":302,"./getNative":315,"dup":94}],266:[function(require,module,exports){
 arguments[4][95][0].apply(exports,arguments)
-},{"dup":95}],323:[function(require,module,exports){
-arguments[4][96][0].apply(exports,arguments)
-},{"dup":96}],324:[function(require,module,exports){
+},{"dup":95}],267:[function(require,module,exports){
 arguments[4][97][0].apply(exports,arguments)
-},{"dup":97}],325:[function(require,module,exports){
+},{"dup":97}],268:[function(require,module,exports){
 arguments[4][98][0].apply(exports,arguments)
-},{"dup":98}],326:[function(require,module,exports){
+},{"dup":98}],269:[function(require,module,exports){
 arguments[4][99][0].apply(exports,arguments)
-},{"dup":99}],327:[function(require,module,exports){
+},{"dup":99}],270:[function(require,module,exports){
 arguments[4][100][0].apply(exports,arguments)
-},{"dup":100}],328:[function(require,module,exports){
+},{"dup":100}],271:[function(require,module,exports){
 arguments[4][101][0].apply(exports,arguments)
-},{"dup":101}],329:[function(require,module,exports){
+},{"dup":101}],272:[function(require,module,exports){
 arguments[4][102][0].apply(exports,arguments)
-},{"../object/keys":421,"dup":102}],330:[function(require,module,exports){
+},{"../object/keys":338,"dup":102}],273:[function(require,module,exports){
 arguments[4][103][0].apply(exports,arguments)
-},{"../object/keys":421,"./baseCopy":332,"dup":103}],331:[function(require,module,exports){
+},{"../object/keys":338,"./baseCopy":275,"dup":103}],274:[function(require,module,exports){
 arguments[4][104][0].apply(exports,arguments)
-},{"../utility/identity":427,"../utility/property":429,"./baseMatches":352,"./baseMatchesProperty":353,"./bindCallback":363,"dup":104}],332:[function(require,module,exports){
+},{"../utility/identity":343,"../utility/property":344,"./baseMatches":292,"./baseMatchesProperty":293,"./bindCallback":300,"dup":104}],275:[function(require,module,exports){
 arguments[4][105][0].apply(exports,arguments)
-},{"dup":105}],333:[function(require,module,exports){
-var isObject = require('../lang/isObject');
-
-/**
- * The base implementation of `_.create` without support for assigning
- * properties to the created object.
- *
- * @private
- * @param {Object} prototype The object to inherit from.
- * @returns {Object} Returns the new object.
- */
-var baseCreate = (function() {
-  function object() {}
-  return function(prototype) {
-    if (isObject(prototype)) {
-      object.prototype = prototype;
-      var result = new object;
-      object.prototype = undefined;
-    }
-    return result || {};
-  };
-}());
-
-module.exports = baseCreate;
-
-},{"../lang/isObject":415}],334:[function(require,module,exports){
+},{"dup":105}],276:[function(require,module,exports){
 arguments[4][106][0].apply(exports,arguments)
-},{"dup":106}],335:[function(require,module,exports){
+},{"dup":106}],277:[function(require,module,exports){
 arguments[4][107][0].apply(exports,arguments)
-},{"./baseIndexOf":346,"./cacheIndexOf":364,"./createCache":373,"dup":107}],336:[function(require,module,exports){
+},{"./baseIndexOf":287,"./cacheIndexOf":301,"./createCache":306,"dup":107}],278:[function(require,module,exports){
 arguments[4][108][0].apply(exports,arguments)
-},{"./baseForOwn":344,"./createBaseEach":370,"dup":108}],337:[function(require,module,exports){
-arguments[4][109][0].apply(exports,arguments)
-},{"./baseEach":336,"dup":109}],338:[function(require,module,exports){
+},{"./baseForOwn":285,"./createBaseEach":304,"dup":108}],279:[function(require,module,exports){
 arguments[4][110][0].apply(exports,arguments)
-},{"./baseEach":336,"dup":110}],339:[function(require,module,exports){
+},{"./baseEach":278,"dup":110}],280:[function(require,module,exports){
 arguments[4][111][0].apply(exports,arguments)
-},{"dup":111}],340:[function(require,module,exports){
+},{"dup":111}],281:[function(require,module,exports){
 arguments[4][112][0].apply(exports,arguments)
-},{"dup":112}],341:[function(require,module,exports){
+},{"dup":112}],282:[function(require,module,exports){
 arguments[4][113][0].apply(exports,arguments)
-},{"../lang/isArguments":410,"../lang/isArray":411,"./arrayPush":326,"./isArrayLike":390,"./isObjectLike":396,"dup":113}],342:[function(require,module,exports){
+},{"../lang/isArguments":329,"../lang/isArray":330,"./arrayPush":269,"./isArrayLike":317,"./isObjectLike":322,"dup":113}],283:[function(require,module,exports){
 arguments[4][114][0].apply(exports,arguments)
-},{"./createBaseFor":371,"dup":114}],343:[function(require,module,exports){
+},{"./createBaseFor":305,"dup":114}],284:[function(require,module,exports){
 arguments[4][115][0].apply(exports,arguments)
-},{"../object/keysIn":422,"./baseFor":342,"dup":115}],344:[function(require,module,exports){
+},{"../object/keysIn":339,"./baseFor":283,"dup":115}],285:[function(require,module,exports){
 arguments[4][116][0].apply(exports,arguments)
-},{"../object/keys":421,"./baseFor":342,"dup":116}],345:[function(require,module,exports){
+},{"../object/keys":338,"./baseFor":283,"dup":116}],286:[function(require,module,exports){
 arguments[4][117][0].apply(exports,arguments)
-},{"./toObject":407,"dup":117}],346:[function(require,module,exports){
+},{"./toObject":327,"dup":117}],287:[function(require,module,exports){
 arguments[4][118][0].apply(exports,arguments)
-},{"./indexOfNaN":389,"dup":118}],347:[function(require,module,exports){
+},{"./indexOfNaN":316,"dup":118}],288:[function(require,module,exports){
 arguments[4][119][0].apply(exports,arguments)
-},{"../lang/isObject":415,"./baseIsEqualDeep":348,"./isObjectLike":396,"dup":119}],348:[function(require,module,exports){
+},{"../lang/isObject":334,"./baseIsEqualDeep":289,"./isObjectLike":322,"dup":119}],289:[function(require,module,exports){
 arguments[4][120][0].apply(exports,arguments)
-},{"../lang/isArray":411,"../lang/isTypedArray":418,"./equalArrays":381,"./equalByTag":382,"./equalObjects":383,"dup":120}],349:[function(require,module,exports){
+},{"../lang/isArray":330,"../lang/isTypedArray":336,"./equalArrays":310,"./equalByTag":311,"./equalObjects":312,"dup":120}],290:[function(require,module,exports){
 arguments[4][121][0].apply(exports,arguments)
-},{"./baseIsEqual":347,"./toObject":407,"dup":121}],350:[function(require,module,exports){
-/**
- * The function whose prototype all chaining wrappers inherit from.
- *
- * @private
- */
-function baseLodash() {
-  // No operation performed.
-}
-
-module.exports = baseLodash;
-
-},{}],351:[function(require,module,exports){
+},{"./baseIsEqual":288,"./toObject":327,"dup":121}],291:[function(require,module,exports){
 arguments[4][122][0].apply(exports,arguments)
-},{"./baseEach":336,"./isArrayLike":390,"dup":122}],352:[function(require,module,exports){
+},{"./baseEach":278,"./isArrayLike":317,"dup":122}],292:[function(require,module,exports){
 arguments[4][123][0].apply(exports,arguments)
-},{"./baseIsMatch":349,"./getMatchData":387,"./toObject":407,"dup":123}],353:[function(require,module,exports){
+},{"./baseIsMatch":290,"./getMatchData":314,"./toObject":327,"dup":123}],293:[function(require,module,exports){
 arguments[4][124][0].apply(exports,arguments)
-},{"../array/last":302,"../lang/isArray":411,"./baseGet":345,"./baseIsEqual":347,"./baseSlice":360,"./isKey":393,"./isStrictComparable":397,"./toObject":407,"./toPath":408,"dup":124}],354:[function(require,module,exports){
-var arrayEach = require('./arrayEach'),
-    baseMergeDeep = require('./baseMergeDeep'),
-    isArray = require('../lang/isArray'),
-    isArrayLike = require('./isArrayLike'),
-    isObject = require('../lang/isObject'),
-    isObjectLike = require('./isObjectLike'),
-    isTypedArray = require('../lang/isTypedArray'),
-    keys = require('../object/keys');
-
-/**
- * The base implementation of `_.merge` without support for argument juggling,
- * multiple sources, and `this` binding `customizer` functions.
- *
- * @private
- * @param {Object} object The destination object.
- * @param {Object} source The source object.
- * @param {Function} [customizer] The function to customize merged values.
- * @param {Array} [stackA=[]] Tracks traversed source objects.
- * @param {Array} [stackB=[]] Associates values with source counterparts.
- * @returns {Object} Returns `object`.
- */
-function baseMerge(object, source, customizer, stackA, stackB) {
-  if (!isObject(object)) {
-    return object;
-  }
-  var isSrcArr = isArrayLike(source) && (isArray(source) || isTypedArray(source)),
-      props = isSrcArr ? undefined : keys(source);
-
-  arrayEach(props || source, function(srcValue, key) {
-    if (props) {
-      key = srcValue;
-      srcValue = source[key];
-    }
-    if (isObjectLike(srcValue)) {
-      stackA || (stackA = []);
-      stackB || (stackB = []);
-      baseMergeDeep(object, source, key, baseMerge, customizer, stackA, stackB);
-    }
-    else {
-      var value = object[key],
-          result = customizer ? customizer(value, srcValue, key, object, source) : undefined,
-          isCommon = result === undefined;
-
-      if (isCommon) {
-        result = srcValue;
-      }
-      if ((result !== undefined || (isSrcArr && !(key in object))) &&
-          (isCommon || (result === result ? (result !== value) : (value === value)))) {
-        object[key] = result;
-      }
-    }
-  });
-  return object;
-}
-
-module.exports = baseMerge;
-
-},{"../lang/isArray":411,"../lang/isObject":415,"../lang/isTypedArray":418,"../object/keys":421,"./arrayEach":322,"./baseMergeDeep":355,"./isArrayLike":390,"./isObjectLike":396}],355:[function(require,module,exports){
-var arrayCopy = require('./arrayCopy'),
-    isArguments = require('../lang/isArguments'),
-    isArray = require('../lang/isArray'),
-    isArrayLike = require('./isArrayLike'),
-    isPlainObject = require('../lang/isPlainObject'),
-    isTypedArray = require('../lang/isTypedArray'),
-    toPlainObject = require('../lang/toPlainObject');
-
-/**
- * A specialized version of `baseMerge` for arrays and objects which performs
- * deep merges and tracks traversed objects enabling objects with circular
- * references to be merged.
- *
- * @private
- * @param {Object} object The destination object.
- * @param {Object} source The source object.
- * @param {string} key The key of the value to merge.
- * @param {Function} mergeFunc The function to merge values.
- * @param {Function} [customizer] The function to customize merged values.
- * @param {Array} [stackA=[]] Tracks traversed source objects.
- * @param {Array} [stackB=[]] Associates values with source counterparts.
- * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
- */
-function baseMergeDeep(object, source, key, mergeFunc, customizer, stackA, stackB) {
-  var length = stackA.length,
-      srcValue = source[key];
-
-  while (length--) {
-    if (stackA[length] == srcValue) {
-      object[key] = stackB[length];
-      return;
-    }
-  }
-  var value = object[key],
-      result = customizer ? customizer(value, srcValue, key, object, source) : undefined,
-      isCommon = result === undefined;
-
-  if (isCommon) {
-    result = srcValue;
-    if (isArrayLike(srcValue) && (isArray(srcValue) || isTypedArray(srcValue))) {
-      result = isArray(value)
-        ? value
-        : (isArrayLike(value) ? arrayCopy(value) : []);
-    }
-    else if (isPlainObject(srcValue) || isArguments(srcValue)) {
-      result = isArguments(value)
-        ? toPlainObject(value)
-        : (isPlainObject(value) ? value : {});
-    }
-    else {
-      isCommon = false;
-    }
-  }
-  // Add the source value to the stack of traversed objects and associate
-  // it with its merged value.
-  stackA.push(srcValue);
-  stackB.push(result);
-
-  if (isCommon) {
-    // Recursively merge objects and arrays (susceptible to call stack limits).
-    object[key] = mergeFunc(result, srcValue, customizer, stackA, stackB);
-  } else if (result === result ? (result !== value) : (value === value)) {
-    object[key] = result;
-  }
-}
-
-module.exports = baseMergeDeep;
-
-},{"../lang/isArguments":410,"../lang/isArray":411,"../lang/isPlainObject":416,"../lang/isTypedArray":418,"../lang/toPlainObject":419,"./arrayCopy":321,"./isArrayLike":390}],356:[function(require,module,exports){
+},{"../array/last":255,"../lang/isArray":330,"./baseGet":286,"./baseIsEqual":288,"./baseSlice":297,"./isKey":320,"./isStrictComparable":323,"./toObject":327,"./toPath":328,"dup":124}],294:[function(require,module,exports){
 arguments[4][125][0].apply(exports,arguments)
-},{"dup":125}],357:[function(require,module,exports){
+},{"dup":125}],295:[function(require,module,exports){
 arguments[4][126][0].apply(exports,arguments)
-},{"./baseGet":345,"./toPath":408,"dup":126}],358:[function(require,module,exports){
+},{"./baseGet":286,"./toPath":328,"dup":126}],296:[function(require,module,exports){
 arguments[4][127][0].apply(exports,arguments)
-},{"dup":127}],359:[function(require,module,exports){
-var identity = require('../utility/identity'),
-    metaMap = require('./metaMap');
-
-/**
- * The base implementation of `setData` without support for hot loop detection.
- *
- * @private
- * @param {Function} func The function to associate metadata with.
- * @param {*} data The metadata.
- * @returns {Function} Returns `func`.
- */
-var baseSetData = !metaMap ? identity : function(func, data) {
-  metaMap.set(func, data);
-  return func;
-};
-
-module.exports = baseSetData;
-
-},{"../utility/identity":427,"./metaMap":399}],360:[function(require,module,exports){
+},{"dup":127}],297:[function(require,module,exports){
 arguments[4][128][0].apply(exports,arguments)
-},{"dup":128}],361:[function(require,module,exports){
+},{"dup":128}],298:[function(require,module,exports){
 arguments[4][129][0].apply(exports,arguments)
-},{"./baseEach":336,"dup":129}],362:[function(require,module,exports){
+},{"./baseEach":278,"dup":129}],299:[function(require,module,exports){
 arguments[4][130][0].apply(exports,arguments)
-},{"dup":130}],363:[function(require,module,exports){
+},{"dup":130}],300:[function(require,module,exports){
 arguments[4][132][0].apply(exports,arguments)
-},{"../utility/identity":427,"dup":132}],364:[function(require,module,exports){
+},{"../utility/identity":343,"dup":132}],301:[function(require,module,exports){
 arguments[4][133][0].apply(exports,arguments)
-},{"../lang/isObject":415,"dup":133}],365:[function(require,module,exports){
+},{"../lang/isObject":334,"dup":133}],302:[function(require,module,exports){
 arguments[4][134][0].apply(exports,arguments)
-},{"../lang/isObject":415,"dup":134}],366:[function(require,module,exports){
-/* Native method references for those with the same name as other `lodash` methods. */
-var nativeMax = Math.max;
-
-/**
- * Creates an array that is the composition of partially applied arguments,
- * placeholders, and provided arguments into a single array of arguments.
- *
- * @private
- * @param {Array|Object} args The provided arguments.
- * @param {Array} partials The arguments to prepend to those provided.
- * @param {Array} holders The `partials` placeholder indexes.
- * @returns {Array} Returns the new array of composed arguments.
- */
-function composeArgs(args, partials, holders) {
-  var holdersLength = holders.length,
-      argsIndex = -1,
-      argsLength = nativeMax(args.length - holdersLength, 0),
-      leftIndex = -1,
-      leftLength = partials.length,
-      result = Array(leftLength + argsLength);
-
-  while (++leftIndex < leftLength) {
-    result[leftIndex] = partials[leftIndex];
-  }
-  while (++argsIndex < holdersLength) {
-    result[holders[argsIndex]] = args[argsIndex];
-  }
-  while (argsLength--) {
-    result[leftIndex++] = args[argsIndex++];
-  }
-  return result;
-}
-
-module.exports = composeArgs;
-
-},{}],367:[function(require,module,exports){
-/* Native method references for those with the same name as other `lodash` methods. */
-var nativeMax = Math.max;
-
-/**
- * This function is like `composeArgs` except that the arguments composition
- * is tailored for `_.partialRight`.
- *
- * @private
- * @param {Array|Object} args The provided arguments.
- * @param {Array} partials The arguments to append to those provided.
- * @param {Array} holders The `partials` placeholder indexes.
- * @returns {Array} Returns the new array of composed arguments.
- */
-function composeArgsRight(args, partials, holders) {
-  var holdersIndex = -1,
-      holdersLength = holders.length,
-      argsIndex = -1,
-      argsLength = nativeMax(args.length - holdersLength, 0),
-      rightIndex = -1,
-      rightLength = partials.length,
-      result = Array(argsLength + rightLength);
-
-  while (++argsIndex < argsLength) {
-    result[argsIndex] = args[argsIndex];
-  }
-  var offset = argsIndex;
-  while (++rightIndex < rightLength) {
-    result[offset + rightIndex] = partials[rightIndex];
-  }
-  while (++holdersIndex < holdersLength) {
-    result[offset + holders[holdersIndex]] = args[argsIndex++];
-  }
-  return result;
-}
-
-module.exports = composeArgsRight;
-
-},{}],368:[function(require,module,exports){
-var baseCallback = require('./baseCallback'),
-    baseEach = require('./baseEach'),
-    isArray = require('../lang/isArray');
-
-/**
- * Creates a `_.countBy`, `_.groupBy`, `_.indexBy`, or `_.partition` function.
- *
- * @private
- * @param {Function} setter The function to set keys and values of the accumulator object.
- * @param {Function} [initializer] The function to initialize the accumulator object.
- * @returns {Function} Returns the new aggregator function.
- */
-function createAggregator(setter, initializer) {
-  return function(collection, iteratee, thisArg) {
-    var result = initializer ? initializer() : {};
-    iteratee = baseCallback(iteratee, thisArg, 3);
-
-    if (isArray(collection)) {
-      var index = -1,
-          length = collection.length;
-
-      while (++index < length) {
-        var value = collection[index];
-        setter(result, value, iteratee(value, index, collection), collection);
-      }
-    } else {
-      baseEach(collection, function(value, key, collection) {
-        setter(result, value, iteratee(value, key, collection), collection);
-      });
-    }
-    return result;
-  };
-}
-
-module.exports = createAggregator;
-
-},{"../lang/isArray":411,"./baseCallback":331,"./baseEach":336}],369:[function(require,module,exports){
+},{"../lang/isObject":334,"dup":134}],303:[function(require,module,exports){
 arguments[4][135][0].apply(exports,arguments)
-},{"../function/restParam":317,"./bindCallback":363,"./isIterateeCall":392,"dup":135}],370:[function(require,module,exports){
+},{"../function/restParam":264,"./bindCallback":300,"./isIterateeCall":319,"dup":135}],304:[function(require,module,exports){
 arguments[4][136][0].apply(exports,arguments)
-},{"./getLength":386,"./isLength":395,"./toObject":407,"dup":136}],371:[function(require,module,exports){
+},{"./getLength":313,"./isLength":321,"./toObject":327,"dup":136}],305:[function(require,module,exports){
 arguments[4][137][0].apply(exports,arguments)
-},{"./toObject":407,"dup":137}],372:[function(require,module,exports){
-(function (global){
-var createCtorWrapper = require('./createCtorWrapper');
-
-/**
- * Creates a function that wraps `func` and invokes it with the `this`
- * binding of `thisArg`.
- *
- * @private
- * @param {Function} func The function to bind.
- * @param {*} [thisArg] The `this` binding of `func`.
- * @returns {Function} Returns the new bound function.
- */
-function createBindWrapper(func, thisArg) {
-  var Ctor = createCtorWrapper(func);
-
-  function wrapper() {
-    var fn = (this && this !== global && this instanceof wrapper) ? Ctor : func;
-    return fn.apply(thisArg, arguments);
-  }
-  return wrapper;
-}
-
-module.exports = createBindWrapper;
-
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./createCtorWrapper":374}],373:[function(require,module,exports){
+},{"./toObject":327,"dup":137}],306:[function(require,module,exports){
 arguments[4][138][0].apply(exports,arguments)
-},{"./SetCache":320,"./getNative":388,"dup":138}],374:[function(require,module,exports){
-var baseCreate = require('./baseCreate'),
-    isObject = require('../lang/isObject');
-
-/**
- * Creates a function that produces an instance of `Ctor` regardless of
- * whether it was invoked as part of a `new` expression or by `call` or `apply`.
- *
- * @private
- * @param {Function} Ctor The constructor to wrap.
- * @returns {Function} Returns the new wrapped function.
- */
-function createCtorWrapper(Ctor) {
-  return function() {
-    // Use a `switch` statement to work with class constructors.
-    // See http://ecma-international.org/ecma-262/6.0/#sec-ecmascript-function-objects-call-thisargument-argumentslist
-    // for more details.
-    var args = arguments;
-    switch (args.length) {
-      case 0: return new Ctor;
-      case 1: return new Ctor(args[0]);
-      case 2: return new Ctor(args[0], args[1]);
-      case 3: return new Ctor(args[0], args[1], args[2]);
-      case 4: return new Ctor(args[0], args[1], args[2], args[3]);
-      case 5: return new Ctor(args[0], args[1], args[2], args[3], args[4]);
-      case 6: return new Ctor(args[0], args[1], args[2], args[3], args[4], args[5]);
-      case 7: return new Ctor(args[0], args[1], args[2], args[3], args[4], args[5], args[6]);
-    }
-    var thisBinding = baseCreate(Ctor.prototype),
-        result = Ctor.apply(thisBinding, args);
-
-    // Mimic the constructor's `return` behavior.
-    // See https://es5.github.io/#x13.2.2 for more details.
-    return isObject(result) ? result : thisBinding;
-  };
-}
-
-module.exports = createCtorWrapper;
-
-},{"../lang/isObject":415,"./baseCreate":333}],375:[function(require,module,exports){
+},{"./SetCache":265,"./getNative":315,"dup":138}],307:[function(require,module,exports){
 arguments[4][139][0].apply(exports,arguments)
-},{"../lang/isArray":411,"./baseCallback":331,"./baseFind":339,"./baseFindIndex":340,"dup":139}],376:[function(require,module,exports){
+},{"../lang/isArray":330,"./baseCallback":274,"./baseFind":280,"./baseFindIndex":281,"dup":139}],308:[function(require,module,exports){
 arguments[4][140][0].apply(exports,arguments)
-},{"../lang/isArray":411,"./bindCallback":363,"dup":140}],377:[function(require,module,exports){
-(function (global){
-var arrayCopy = require('./arrayCopy'),
-    composeArgs = require('./composeArgs'),
-    composeArgsRight = require('./composeArgsRight'),
-    createCtorWrapper = require('./createCtorWrapper'),
-    isLaziable = require('./isLaziable'),
-    reorder = require('./reorder'),
-    replaceHolders = require('./replaceHolders'),
-    setData = require('./setData');
-
-/** Used to compose bitmasks for wrapper metadata. */
-var BIND_FLAG = 1,
-    BIND_KEY_FLAG = 2,
-    CURRY_BOUND_FLAG = 4,
-    CURRY_FLAG = 8,
-    CURRY_RIGHT_FLAG = 16,
-    PARTIAL_FLAG = 32,
-    PARTIAL_RIGHT_FLAG = 64,
-    ARY_FLAG = 128;
-
-/* Native method references for those with the same name as other `lodash` methods. */
-var nativeMax = Math.max;
-
-/**
- * Creates a function that wraps `func` and invokes it with optional `this`
- * binding of, partial application, and currying.
- *
- * @private
- * @param {Function|string} func The function or method name to reference.
- * @param {number} bitmask The bitmask of flags. See `createWrapper` for more details.
- * @param {*} [thisArg] The `this` binding of `func`.
- * @param {Array} [partials] The arguments to prepend to those provided to the new function.
- * @param {Array} [holders] The `partials` placeholder indexes.
- * @param {Array} [partialsRight] The arguments to append to those provided to the new function.
- * @param {Array} [holdersRight] The `partialsRight` placeholder indexes.
- * @param {Array} [argPos] The argument positions of the new function.
- * @param {number} [ary] The arity cap of `func`.
- * @param {number} [arity] The arity of `func`.
- * @returns {Function} Returns the new wrapped function.
- */
-function createHybridWrapper(func, bitmask, thisArg, partials, holders, partialsRight, holdersRight, argPos, ary, arity) {
-  var isAry = bitmask & ARY_FLAG,
-      isBind = bitmask & BIND_FLAG,
-      isBindKey = bitmask & BIND_KEY_FLAG,
-      isCurry = bitmask & CURRY_FLAG,
-      isCurryBound = bitmask & CURRY_BOUND_FLAG,
-      isCurryRight = bitmask & CURRY_RIGHT_FLAG,
-      Ctor = isBindKey ? undefined : createCtorWrapper(func);
-
-  function wrapper() {
-    // Avoid `arguments` object use disqualifying optimizations by
-    // converting it to an array before providing it to other functions.
-    var length = arguments.length,
-        index = length,
-        args = Array(length);
-
-    while (index--) {
-      args[index] = arguments[index];
-    }
-    if (partials) {
-      args = composeArgs(args, partials, holders);
-    }
-    if (partialsRight) {
-      args = composeArgsRight(args, partialsRight, holdersRight);
-    }
-    if (isCurry || isCurryRight) {
-      var placeholder = wrapper.placeholder,
-          argsHolders = replaceHolders(args, placeholder);
-
-      length -= argsHolders.length;
-      if (length < arity) {
-        var newArgPos = argPos ? arrayCopy(argPos) : undefined,
-            newArity = nativeMax(arity - length, 0),
-            newsHolders = isCurry ? argsHolders : undefined,
-            newHoldersRight = isCurry ? undefined : argsHolders,
-            newPartials = isCurry ? args : undefined,
-            newPartialsRight = isCurry ? undefined : args;
-
-        bitmask |= (isCurry ? PARTIAL_FLAG : PARTIAL_RIGHT_FLAG);
-        bitmask &= ~(isCurry ? PARTIAL_RIGHT_FLAG : PARTIAL_FLAG);
-
-        if (!isCurryBound) {
-          bitmask &= ~(BIND_FLAG | BIND_KEY_FLAG);
-        }
-        var newData = [func, bitmask, thisArg, newPartials, newsHolders, newPartialsRight, newHoldersRight, newArgPos, ary, newArity],
-            result = createHybridWrapper.apply(undefined, newData);
-
-        if (isLaziable(func)) {
-          setData(result, newData);
-        }
-        result.placeholder = placeholder;
-        return result;
-      }
-    }
-    var thisBinding = isBind ? thisArg : this,
-        fn = isBindKey ? thisBinding[func] : func;
-
-    if (argPos) {
-      args = reorder(args, argPos);
-    }
-    if (isAry && ary < args.length) {
-      args.length = ary;
-    }
-    if (this && this !== global && this instanceof wrapper) {
-      fn = Ctor || createCtorWrapper(func);
-    }
-    return fn.apply(thisBinding, args);
-  }
-  return wrapper;
-}
-
-module.exports = createHybridWrapper;
-
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./arrayCopy":321,"./composeArgs":366,"./composeArgsRight":367,"./createCtorWrapper":374,"./isLaziable":394,"./reorder":403,"./replaceHolders":404,"./setData":405}],378:[function(require,module,exports){
-(function (global){
-var createCtorWrapper = require('./createCtorWrapper');
-
-/** Used to compose bitmasks for wrapper metadata. */
-var BIND_FLAG = 1;
-
-/**
- * Creates a function that wraps `func` and invokes it with the optional `this`
- * binding of `thisArg` and the `partials` prepended to those provided to
- * the wrapper.
- *
- * @private
- * @param {Function} func The function to partially apply arguments to.
- * @param {number} bitmask The bitmask of flags. See `createWrapper` for more details.
- * @param {*} thisArg The `this` binding of `func`.
- * @param {Array} partials The arguments to prepend to those provided to the new function.
- * @returns {Function} Returns the new bound function.
- */
-function createPartialWrapper(func, bitmask, thisArg, partials) {
-  var isBind = bitmask & BIND_FLAG,
-      Ctor = createCtorWrapper(func);
-
-  function wrapper() {
-    // Avoid `arguments` object use disqualifying optimizations by
-    // converting it to an array before providing it `func`.
-    var argsIndex = -1,
-        argsLength = arguments.length,
-        leftIndex = -1,
-        leftLength = partials.length,
-        args = Array(leftLength + argsLength);
-
-    while (++leftIndex < leftLength) {
-      args[leftIndex] = partials[leftIndex];
-    }
-    while (argsLength--) {
-      args[leftIndex++] = arguments[++argsIndex];
-    }
-    var fn = (this && this !== global && this instanceof wrapper) ? Ctor : func;
-    return fn.apply(isBind ? thisArg : this, args);
-  }
-  return wrapper;
-}
-
-module.exports = createPartialWrapper;
-
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./createCtorWrapper":374}],379:[function(require,module,exports){
+},{"../lang/isArray":330,"./bindCallback":300,"dup":140}],309:[function(require,module,exports){
 arguments[4][141][0].apply(exports,arguments)
-},{"../lang/isArray":411,"./baseCallback":331,"./baseReduce":358,"dup":141}],380:[function(require,module,exports){
-var baseSetData = require('./baseSetData'),
-    createBindWrapper = require('./createBindWrapper'),
-    createHybridWrapper = require('./createHybridWrapper'),
-    createPartialWrapper = require('./createPartialWrapper'),
-    getData = require('./getData'),
-    mergeData = require('./mergeData'),
-    setData = require('./setData');
-
-/** Used to compose bitmasks for wrapper metadata. */
-var BIND_FLAG = 1,
-    BIND_KEY_FLAG = 2,
-    PARTIAL_FLAG = 32,
-    PARTIAL_RIGHT_FLAG = 64;
-
-/** Used as the `TypeError` message for "Functions" methods. */
-var FUNC_ERROR_TEXT = 'Expected a function';
-
-/* Native method references for those with the same name as other `lodash` methods. */
-var nativeMax = Math.max;
-
-/**
- * Creates a function that either curries or invokes `func` with optional
- * `this` binding and partially applied arguments.
- *
- * @private
- * @param {Function|string} func The function or method name to reference.
- * @param {number} bitmask The bitmask of flags.
- *  The bitmask may be composed of the following flags:
- *     1 - `_.bind`
- *     2 - `_.bindKey`
- *     4 - `_.curry` or `_.curryRight` of a bound function
- *     8 - `_.curry`
- *    16 - `_.curryRight`
- *    32 - `_.partial`
- *    64 - `_.partialRight`
- *   128 - `_.rearg`
- *   256 - `_.ary`
- * @param {*} [thisArg] The `this` binding of `func`.
- * @param {Array} [partials] The arguments to be partially applied.
- * @param {Array} [holders] The `partials` placeholder indexes.
- * @param {Array} [argPos] The argument positions of the new function.
- * @param {number} [ary] The arity cap of `func`.
- * @param {number} [arity] The arity of `func`.
- * @returns {Function} Returns the new wrapped function.
- */
-function createWrapper(func, bitmask, thisArg, partials, holders, argPos, ary, arity) {
-  var isBindKey = bitmask & BIND_KEY_FLAG;
-  if (!isBindKey && typeof func != 'function') {
-    throw new TypeError(FUNC_ERROR_TEXT);
-  }
-  var length = partials ? partials.length : 0;
-  if (!length) {
-    bitmask &= ~(PARTIAL_FLAG | PARTIAL_RIGHT_FLAG);
-    partials = holders = undefined;
-  }
-  length -= (holders ? holders.length : 0);
-  if (bitmask & PARTIAL_RIGHT_FLAG) {
-    var partialsRight = partials,
-        holdersRight = holders;
-
-    partials = holders = undefined;
-  }
-  var data = isBindKey ? undefined : getData(func),
-      newData = [func, bitmask, thisArg, partials, holders, partialsRight, holdersRight, argPos, ary, arity];
-
-  if (data) {
-    mergeData(newData, data);
-    bitmask = newData[1];
-    arity = newData[9];
-  }
-  newData[9] = arity == null
-    ? (isBindKey ? 0 : func.length)
-    : (nativeMax(arity - length, 0) || 0);
-
-  if (bitmask == BIND_FLAG) {
-    var result = createBindWrapper(newData[0], newData[2]);
-  } else if ((bitmask == PARTIAL_FLAG || bitmask == (BIND_FLAG | PARTIAL_FLAG)) && !newData[4].length) {
-    result = createPartialWrapper.apply(undefined, newData);
-  } else {
-    result = createHybridWrapper.apply(undefined, newData);
-  }
-  var setter = data ? baseSetData : setData;
-  return setter(result, newData);
-}
-
-module.exports = createWrapper;
-
-},{"./baseSetData":359,"./createBindWrapper":372,"./createHybridWrapper":377,"./createPartialWrapper":378,"./getData":384,"./mergeData":398,"./setData":405}],381:[function(require,module,exports){
+},{"../lang/isArray":330,"./baseCallback":274,"./baseReduce":296,"dup":141}],310:[function(require,module,exports){
 arguments[4][142][0].apply(exports,arguments)
-},{"./arraySome":328,"dup":142}],382:[function(require,module,exports){
+},{"./arraySome":271,"dup":142}],311:[function(require,module,exports){
 arguments[4][143][0].apply(exports,arguments)
-},{"dup":143}],383:[function(require,module,exports){
+},{"dup":143}],312:[function(require,module,exports){
 arguments[4][144][0].apply(exports,arguments)
-},{"../object/keys":421,"dup":144}],384:[function(require,module,exports){
-var metaMap = require('./metaMap'),
-    noop = require('../utility/noop');
-
-/**
- * Gets metadata for `func`.
- *
- * @private
- * @param {Function} func The function to query.
- * @returns {*} Returns the metadata for `func`.
- */
-var getData = !metaMap ? noop : function(func) {
-  return metaMap.get(func);
-};
-
-module.exports = getData;
-
-},{"../utility/noop":428,"./metaMap":399}],385:[function(require,module,exports){
-var realNames = require('./realNames');
-
-/**
- * Gets the name of `func`.
- *
- * @private
- * @param {Function} func The function to query.
- * @returns {string} Returns the function name.
- */
-function getFuncName(func) {
-  var result = (func.name + ''),
-      array = realNames[result],
-      length = array ? array.length : 0;
-
-  while (length--) {
-    var data = array[length],
-        otherFunc = data.func;
-    if (otherFunc == null || otherFunc == func) {
-      return data.name;
-    }
-  }
-  return result;
-}
-
-module.exports = getFuncName;
-
-},{"./realNames":402}],386:[function(require,module,exports){
+},{"../object/keys":338,"dup":144}],313:[function(require,module,exports){
 arguments[4][145][0].apply(exports,arguments)
-},{"./baseProperty":356,"dup":145}],387:[function(require,module,exports){
+},{"./baseProperty":294,"dup":145}],314:[function(require,module,exports){
 arguments[4][146][0].apply(exports,arguments)
-},{"../object/pairs":425,"./isStrictComparable":397,"dup":146}],388:[function(require,module,exports){
+},{"../object/pairs":341,"./isStrictComparable":323,"dup":146}],315:[function(require,module,exports){
 arguments[4][147][0].apply(exports,arguments)
-},{"../lang/isNative":413,"dup":147}],389:[function(require,module,exports){
+},{"../lang/isNative":332,"dup":147}],316:[function(require,module,exports){
 arguments[4][148][0].apply(exports,arguments)
-},{"dup":148}],390:[function(require,module,exports){
+},{"dup":148}],317:[function(require,module,exports){
 arguments[4][149][0].apply(exports,arguments)
-},{"./getLength":386,"./isLength":395,"dup":149}],391:[function(require,module,exports){
+},{"./getLength":313,"./isLength":321,"dup":149}],318:[function(require,module,exports){
 arguments[4][150][0].apply(exports,arguments)
-},{"dup":150}],392:[function(require,module,exports){
+},{"dup":150}],319:[function(require,module,exports){
 arguments[4][151][0].apply(exports,arguments)
-},{"../lang/isObject":415,"./isArrayLike":390,"./isIndex":391,"dup":151}],393:[function(require,module,exports){
+},{"../lang/isObject":334,"./isArrayLike":317,"./isIndex":318,"dup":151}],320:[function(require,module,exports){
 arguments[4][152][0].apply(exports,arguments)
-},{"../lang/isArray":411,"./toObject":407,"dup":152}],394:[function(require,module,exports){
-var LazyWrapper = require('./LazyWrapper'),
-    getData = require('./getData'),
-    getFuncName = require('./getFuncName'),
-    lodash = require('../chain/lodash');
-
-/**
- * Checks if `func` has a lazy counterpart.
- *
- * @private
- * @param {Function} func The function to check.
- * @returns {boolean} Returns `true` if `func` has a lazy counterpart, else `false`.
- */
-function isLaziable(func) {
-  var funcName = getFuncName(func),
-      other = lodash[funcName];
-
-  if (typeof other != 'function' || !(funcName in LazyWrapper.prototype)) {
-    return false;
-  }
-  if (func === other) {
-    return true;
-  }
-  var data = getData(other);
-  return !!data && func === data[0];
-}
-
-module.exports = isLaziable;
-
-},{"../chain/lodash":303,"./LazyWrapper":318,"./getData":384,"./getFuncName":385}],395:[function(require,module,exports){
+},{"../lang/isArray":330,"./toObject":327,"dup":152}],321:[function(require,module,exports){
 arguments[4][153][0].apply(exports,arguments)
-},{"dup":153}],396:[function(require,module,exports){
+},{"dup":153}],322:[function(require,module,exports){
 arguments[4][154][0].apply(exports,arguments)
-},{"dup":154}],397:[function(require,module,exports){
+},{"dup":154}],323:[function(require,module,exports){
 arguments[4][155][0].apply(exports,arguments)
-},{"../lang/isObject":415,"dup":155}],398:[function(require,module,exports){
-var arrayCopy = require('./arrayCopy'),
-    composeArgs = require('./composeArgs'),
-    composeArgsRight = require('./composeArgsRight'),
-    replaceHolders = require('./replaceHolders');
-
-/** Used to compose bitmasks for wrapper metadata. */
-var BIND_FLAG = 1,
-    CURRY_BOUND_FLAG = 4,
-    CURRY_FLAG = 8,
-    ARY_FLAG = 128,
-    REARG_FLAG = 256;
-
-/** Used as the internal argument placeholder. */
-var PLACEHOLDER = '__lodash_placeholder__';
-
-/* Native method references for those with the same name as other `lodash` methods. */
-var nativeMin = Math.min;
-
-/**
- * Merges the function metadata of `source` into `data`.
- *
- * Merging metadata reduces the number of wrappers required to invoke a function.
- * This is possible because methods like `_.bind`, `_.curry`, and `_.partial`
- * may be applied regardless of execution order. Methods like `_.ary` and `_.rearg`
- * augment function arguments, making the order in which they are executed important,
- * preventing the merging of metadata. However, we make an exception for a safe
- * common case where curried functions have `_.ary` and or `_.rearg` applied.
- *
- * @private
- * @param {Array} data The destination metadata.
- * @param {Array} source The source metadata.
- * @returns {Array} Returns `data`.
- */
-function mergeData(data, source) {
-  var bitmask = data[1],
-      srcBitmask = source[1],
-      newBitmask = bitmask | srcBitmask,
-      isCommon = newBitmask < ARY_FLAG;
-
-  var isCombo =
-    (srcBitmask == ARY_FLAG && bitmask == CURRY_FLAG) ||
-    (srcBitmask == ARY_FLAG && bitmask == REARG_FLAG && data[7].length <= source[8]) ||
-    (srcBitmask == (ARY_FLAG | REARG_FLAG) && bitmask == CURRY_FLAG);
-
-  // Exit early if metadata can't be merged.
-  if (!(isCommon || isCombo)) {
-    return data;
-  }
-  // Use source `thisArg` if available.
-  if (srcBitmask & BIND_FLAG) {
-    data[2] = source[2];
-    // Set when currying a bound function.
-    newBitmask |= (bitmask & BIND_FLAG) ? 0 : CURRY_BOUND_FLAG;
-  }
-  // Compose partial arguments.
-  var value = source[3];
-  if (value) {
-    var partials = data[3];
-    data[3] = partials ? composeArgs(partials, value, source[4]) : arrayCopy(value);
-    data[4] = partials ? replaceHolders(data[3], PLACEHOLDER) : arrayCopy(source[4]);
-  }
-  // Compose partial right arguments.
-  value = source[5];
-  if (value) {
-    partials = data[5];
-    data[5] = partials ? composeArgsRight(partials, value, source[6]) : arrayCopy(value);
-    data[6] = partials ? replaceHolders(data[5], PLACEHOLDER) : arrayCopy(source[6]);
-  }
-  // Use source `argPos` if available.
-  value = source[7];
-  if (value) {
-    data[7] = arrayCopy(value);
-  }
-  // Use source `ary` if it's smaller.
-  if (srcBitmask & ARY_FLAG) {
-    data[8] = data[8] == null ? source[8] : nativeMin(data[8], source[8]);
-  }
-  // Use source `arity` if one is not provided.
-  if (data[9] == null) {
-    data[9] = source[9];
-  }
-  // Use source `func` and merge bitmasks.
-  data[0] = source[0];
-  data[1] = newBitmask;
-
-  return data;
-}
-
-module.exports = mergeData;
-
-},{"./arrayCopy":321,"./composeArgs":366,"./composeArgsRight":367,"./replaceHolders":404}],399:[function(require,module,exports){
-(function (global){
-var getNative = require('./getNative');
-
-/** Native method references. */
-var WeakMap = getNative(global, 'WeakMap');
-
-/** Used to store function metadata. */
-var metaMap = WeakMap && new WeakMap;
-
-module.exports = metaMap;
-
-}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./getNative":388}],400:[function(require,module,exports){
+},{"../lang/isObject":334,"dup":155}],324:[function(require,module,exports){
 arguments[4][156][0].apply(exports,arguments)
-},{"./toObject":407,"dup":156}],401:[function(require,module,exports){
+},{"./toObject":327,"dup":156}],325:[function(require,module,exports){
 arguments[4][157][0].apply(exports,arguments)
-},{"./baseForIn":343,"dup":157}],402:[function(require,module,exports){
-/** Used to lookup unminified function names. */
-var realNames = {};
-
-module.exports = realNames;
-
-},{}],403:[function(require,module,exports){
-var arrayCopy = require('./arrayCopy'),
-    isIndex = require('./isIndex');
-
-/* Native method references for those with the same name as other `lodash` methods. */
-var nativeMin = Math.min;
-
-/**
- * Reorder `array` according to the specified indexes where the element at
- * the first index is assigned as the first element, the element at
- * the second index is assigned as the second element, and so on.
- *
- * @private
- * @param {Array} array The array to reorder.
- * @param {Array} indexes The arranged array indexes.
- * @returns {Array} Returns `array`.
- */
-function reorder(array, indexes) {
-  var arrLength = array.length,
-      length = nativeMin(indexes.length, arrLength),
-      oldArray = arrayCopy(array);
-
-  while (length--) {
-    var index = indexes[length];
-    array[length] = isIndex(index, arrLength) ? oldArray[index] : undefined;
-  }
-  return array;
-}
-
-module.exports = reorder;
-
-},{"./arrayCopy":321,"./isIndex":391}],404:[function(require,module,exports){
-/** Used as the internal argument placeholder. */
-var PLACEHOLDER = '__lodash_placeholder__';
-
-/**
- * Replaces all `placeholder` elements in `array` with an internal placeholder
- * and returns an array of their indexes.
- *
- * @private
- * @param {Array} array The array to modify.
- * @param {*} placeholder The placeholder to replace.
- * @returns {Array} Returns the new array of placeholder indexes.
- */
-function replaceHolders(array, placeholder) {
-  var index = -1,
-      length = array.length,
-      resIndex = -1,
-      result = [];
-
-  while (++index < length) {
-    if (array[index] === placeholder) {
-      array[index] = PLACEHOLDER;
-      result[++resIndex] = index;
-    }
-  }
-  return result;
-}
-
-module.exports = replaceHolders;
-
-},{}],405:[function(require,module,exports){
-var baseSetData = require('./baseSetData'),
-    now = require('../date/now');
-
-/** Used to detect when a function becomes hot. */
-var HOT_COUNT = 150,
-    HOT_SPAN = 16;
-
-/**
- * Sets metadata for `func`.
- *
- * **Note:** If this function becomes hot, i.e. is invoked a lot in a short
- * period of time, it will trip its breaker and transition to an identity function
- * to avoid garbage collection pauses in V8. See [V8 issue 2070](https://code.google.com/p/v8/issues/detail?id=2070)
- * for more details.
- *
- * @private
- * @param {Function} func The function to associate metadata with.
- * @param {*} data The metadata.
- * @returns {Function} Returns `func`.
- */
-var setData = (function() {
-  var count = 0,
-      lastCalled = 0;
-
-  return function(key, value) {
-    var stamp = now(),
-        remaining = HOT_SPAN - (stamp - lastCalled);
-
-    lastCalled = stamp;
-    if (remaining > 0) {
-      if (++count >= HOT_COUNT) {
-        return key;
-      }
-    } else {
-      count = 0;
-    }
-    return baseSetData(key, value);
-  };
-}());
-
-module.exports = setData;
-
-},{"../date/now":313,"./baseSetData":359}],406:[function(require,module,exports){
+},{"./baseForIn":284,"dup":157}],326:[function(require,module,exports){
 arguments[4][158][0].apply(exports,arguments)
-},{"../lang/isArguments":410,"../lang/isArray":411,"../object/keysIn":422,"./isIndex":391,"./isLength":395,"dup":158}],407:[function(require,module,exports){
+},{"../lang/isArguments":329,"../lang/isArray":330,"../object/keysIn":339,"./isIndex":318,"./isLength":321,"dup":158}],327:[function(require,module,exports){
 arguments[4][159][0].apply(exports,arguments)
-},{"../lang/isObject":415,"dup":159}],408:[function(require,module,exports){
+},{"../lang/isObject":334,"dup":159}],328:[function(require,module,exports){
 arguments[4][160][0].apply(exports,arguments)
-},{"../lang/isArray":411,"./baseToString":362,"dup":160}],409:[function(require,module,exports){
-var LazyWrapper = require('./LazyWrapper'),
-    LodashWrapper = require('./LodashWrapper'),
-    arrayCopy = require('./arrayCopy');
-
-/**
- * Creates a clone of `wrapper`.
- *
- * @private
- * @param {Object} wrapper The wrapper to clone.
- * @returns {Object} Returns the cloned wrapper.
- */
-function wrapperClone(wrapper) {
-  return wrapper instanceof LazyWrapper
-    ? wrapper.clone()
-    : new LodashWrapper(wrapper.__wrapped__, wrapper.__chain__, arrayCopy(wrapper.__actions__));
-}
-
-module.exports = wrapperClone;
-
-},{"./LazyWrapper":318,"./LodashWrapper":319,"./arrayCopy":321}],410:[function(require,module,exports){
+},{"../lang/isArray":330,"./baseToString":299,"dup":160}],329:[function(require,module,exports){
 arguments[4][161][0].apply(exports,arguments)
-},{"../internal/isArrayLike":390,"../internal/isObjectLike":396,"dup":161}],411:[function(require,module,exports){
+},{"../internal/isArrayLike":317,"../internal/isObjectLike":322,"dup":161}],330:[function(require,module,exports){
 arguments[4][162][0].apply(exports,arguments)
-},{"../internal/getNative":388,"../internal/isLength":395,"../internal/isObjectLike":396,"dup":162}],412:[function(require,module,exports){
+},{"../internal/getNative":315,"../internal/isLength":321,"../internal/isObjectLike":322,"dup":162}],331:[function(require,module,exports){
 arguments[4][163][0].apply(exports,arguments)
-},{"./isObject":415,"dup":163}],413:[function(require,module,exports){
+},{"./isObject":334,"dup":163}],332:[function(require,module,exports){
 arguments[4][164][0].apply(exports,arguments)
-},{"../internal/isObjectLike":396,"./isFunction":412,"dup":164}],414:[function(require,module,exports){
+},{"../internal/isObjectLike":322,"./isFunction":331,"dup":164}],333:[function(require,module,exports){
 arguments[4][165][0].apply(exports,arguments)
-},{"../internal/isObjectLike":396,"dup":165}],415:[function(require,module,exports){
+},{"../internal/isObjectLike":322,"dup":165}],334:[function(require,module,exports){
 arguments[4][166][0].apply(exports,arguments)
-},{"dup":166}],416:[function(require,module,exports){
-var baseForIn = require('../internal/baseForIn'),
-    isArguments = require('./isArguments'),
-    isObjectLike = require('../internal/isObjectLike');
-
-/** `Object#toString` result references. */
-var objectTag = '[object Object]';
-
-/** Used for native method references. */
-var objectProto = Object.prototype;
-
-/** Used to check objects for own properties. */
-var hasOwnProperty = objectProto.hasOwnProperty;
-
-/**
- * Used to resolve the [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
- * of values.
- */
-var objToString = objectProto.toString;
-
-/**
- * Checks if `value` is a plain object, that is, an object created by the
- * `Object` constructor or one with a `[[Prototype]]` of `null`.
- *
- * **Note:** This method assumes objects created by the `Object` constructor
- * have no inherited enumerable properties.
- *
- * @static
- * @memberOf _
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
- * @example
- *
- * function Foo() {
- *   this.a = 1;
- * }
- *
- * _.isPlainObject(new Foo);
- * // => false
- *
- * _.isPlainObject([1, 2, 3]);
- * // => false
- *
- * _.isPlainObject({ 'x': 0, 'y': 0 });
- * // => true
- *
- * _.isPlainObject(Object.create(null));
- * // => true
- */
-function isPlainObject(value) {
-  var Ctor;
-
-  // Exit early for non `Object` objects.
-  if (!(isObjectLike(value) && objToString.call(value) == objectTag && !isArguments(value)) ||
-      (!hasOwnProperty.call(value, 'constructor') && (Ctor = value.constructor, typeof Ctor == 'function' && !(Ctor instanceof Ctor)))) {
-    return false;
-  }
-  // IE < 9 iterates inherited properties before own properties. If the first
-  // iterated property is an object's own property then there are no inherited
-  // enumerable properties.
-  var result;
-  // In most environments an object's own properties are iterated before
-  // its inherited properties. If the last iterated property is an object's
-  // own property then there are no inherited enumerable properties.
-  baseForIn(value, function(subValue, key) {
-    result = key;
-  });
-  return result === undefined || hasOwnProperty.call(value, result);
-}
-
-module.exports = isPlainObject;
-
-},{"../internal/baseForIn":343,"../internal/isObjectLike":396,"./isArguments":410}],417:[function(require,module,exports){
+},{"dup":166}],335:[function(require,module,exports){
 arguments[4][167][0].apply(exports,arguments)
-},{"../internal/isObjectLike":396,"dup":167}],418:[function(require,module,exports){
+},{"../internal/isObjectLike":322,"dup":167}],336:[function(require,module,exports){
 arguments[4][168][0].apply(exports,arguments)
-},{"../internal/isLength":395,"../internal/isObjectLike":396,"dup":168}],419:[function(require,module,exports){
-var baseCopy = require('../internal/baseCopy'),
-    keysIn = require('../object/keysIn');
-
-/**
- * Converts `value` to a plain object flattening inherited enumerable
- * properties of `value` to own properties of the plain object.
- *
- * @static
- * @memberOf _
- * @category Lang
- * @param {*} value The value to convert.
- * @returns {Object} Returns the converted plain object.
- * @example
- *
- * function Foo() {
- *   this.b = 2;
- * }
- *
- * Foo.prototype.c = 3;
- *
- * _.assign({ 'a': 1 }, new Foo);
- * // => { 'a': 1, 'b': 2 }
- *
- * _.assign({ 'a': 1 }, _.toPlainObject(new Foo));
- * // => { 'a': 1, 'b': 2, 'c': 3 }
- */
-function toPlainObject(value) {
-  return baseCopy(value, keysIn(value));
-}
-
-module.exports = toPlainObject;
-
-},{"../internal/baseCopy":332,"../object/keysIn":422}],420:[function(require,module,exports){
+},{"../internal/isLength":321,"../internal/isObjectLike":322,"dup":168}],337:[function(require,module,exports){
 arguments[4][169][0].apply(exports,arguments)
-},{"../internal/assignWith":329,"../internal/baseAssign":330,"../internal/createAssigner":369,"dup":169}],421:[function(require,module,exports){
+},{"../internal/assignWith":272,"../internal/baseAssign":273,"../internal/createAssigner":303,"dup":169}],338:[function(require,module,exports){
 arguments[4][170][0].apply(exports,arguments)
-},{"../internal/getNative":388,"../internal/isArrayLike":390,"../internal/shimKeys":406,"../lang/isObject":415,"dup":170}],422:[function(require,module,exports){
+},{"../internal/getNative":315,"../internal/isArrayLike":317,"../internal/shimKeys":326,"../lang/isObject":334,"dup":170}],339:[function(require,module,exports){
 arguments[4][171][0].apply(exports,arguments)
-},{"../internal/isIndex":391,"../internal/isLength":395,"../lang/isArguments":410,"../lang/isArray":411,"../lang/isObject":415,"dup":171}],423:[function(require,module,exports){
-var baseMerge = require('../internal/baseMerge'),
-    createAssigner = require('../internal/createAssigner');
-
-/**
- * Recursively merges own enumerable properties of the source object(s), that
- * don't resolve to `undefined` into the destination object. Subsequent sources
- * overwrite property assignments of previous sources. If `customizer` is
- * provided it's invoked to produce the merged values of the destination and
- * source properties. If `customizer` returns `undefined` merging is handled
- * by the method instead. The `customizer` is bound to `thisArg` and invoked
- * with five arguments: (objectValue, sourceValue, key, object, source).
- *
- * @static
- * @memberOf _
- * @category Object
- * @param {Object} object The destination object.
- * @param {...Object} [sources] The source objects.
- * @param {Function} [customizer] The function to customize assigned values.
- * @param {*} [thisArg] The `this` binding of `customizer`.
- * @returns {Object} Returns `object`.
- * @example
- *
- * var users = {
- *   'data': [{ 'user': 'barney' }, { 'user': 'fred' }]
- * };
- *
- * var ages = {
- *   'data': [{ 'age': 36 }, { 'age': 40 }]
- * };
- *
- * _.merge(users, ages);
- * // => { 'data': [{ 'user': 'barney', 'age': 36 }, { 'user': 'fred', 'age': 40 }] }
- *
- * // using a customizer callback
- * var object = {
- *   'fruits': ['apple'],
- *   'vegetables': ['beet']
- * };
- *
- * var other = {
- *   'fruits': ['banana'],
- *   'vegetables': ['carrot']
- * };
- *
- * _.merge(object, other, function(a, b) {
- *   if (_.isArray(a)) {
- *     return a.concat(b);
- *   }
- * });
- * // => { 'fruits': ['apple', 'banana'], 'vegetables': ['beet', 'carrot'] }
- */
-var merge = createAssigner(baseMerge);
-
-module.exports = merge;
-
-},{"../internal/baseMerge":354,"../internal/createAssigner":369}],424:[function(require,module,exports){
+},{"../internal/isIndex":318,"../internal/isLength":321,"../lang/isArguments":329,"../lang/isArray":330,"../lang/isObject":334,"dup":171}],340:[function(require,module,exports){
 arguments[4][172][0].apply(exports,arguments)
-},{"../function/restParam":317,"../internal/arrayMap":325,"../internal/baseDifference":335,"../internal/baseFlatten":341,"../internal/bindCallback":363,"../internal/pickByArray":400,"../internal/pickByCallback":401,"./keysIn":422,"dup":172}],425:[function(require,module,exports){
+},{"../function/restParam":264,"../internal/arrayMap":268,"../internal/baseDifference":277,"../internal/baseFlatten":282,"../internal/bindCallback":300,"../internal/pickByArray":324,"../internal/pickByCallback":325,"./keysIn":339,"dup":172}],341:[function(require,module,exports){
 arguments[4][173][0].apply(exports,arguments)
-},{"../internal/toObject":407,"./keys":421,"dup":173}],426:[function(require,module,exports){
+},{"../internal/toObject":327,"./keys":338,"dup":173}],342:[function(require,module,exports){
 arguments[4][174][0].apply(exports,arguments)
-},{"../function/restParam":317,"../internal/baseFlatten":341,"../internal/bindCallback":363,"../internal/pickByArray":400,"../internal/pickByCallback":401,"dup":174}],427:[function(require,module,exports){
+},{"../function/restParam":264,"../internal/baseFlatten":282,"../internal/bindCallback":300,"../internal/pickByArray":324,"../internal/pickByCallback":325,"dup":174}],343:[function(require,module,exports){
 arguments[4][176][0].apply(exports,arguments)
-},{"dup":176}],428:[function(require,module,exports){
-/**
- * A no-operation function that returns `undefined` regardless of the
- * arguments it receives.
- *
- * @static
- * @memberOf _
- * @category Utility
- * @example
- *
- * var object = { 'user': 'fred' };
- *
- * _.noop(object) === undefined;
- * // => true
- */
-function noop() {
-  // No operation performed.
-}
-
-module.exports = noop;
-
-},{}],429:[function(require,module,exports){
+},{"dup":176}],344:[function(require,module,exports){
 arguments[4][177][0].apply(exports,arguments)
-},{"../internal/baseProperty":356,"../internal/basePropertyDeep":357,"../internal/isKey":393,"dup":177}],430:[function(require,module,exports){
-/**
- * Set attribute `name` to `val`, or get attr `name`.
- *
- * @param {Element} el
- * @param {String} name
- * @param {String} [val]
- * @api public
- */
-
-module.exports = function(el, name, val) {
-  // get
-  if (arguments.length == 2) {
-    return el.getAttribute(name);
-  }
-
-  // remove
-  if (val === null) {
-    return el.removeAttribute(name);
-  }
-
-  // set
-  el.setAttribute(name, val);
-
-  return el;
-};
-},{}],431:[function(require,module,exports){
-module.exports = require('component-classes');
-},{"component-classes":439}],432:[function(require,module,exports){
-module.exports = function(el) {
-
-  var c;
-
-  while (el.childNodes.length) {
-    c = el.childNodes[0];
-    el.removeChild(c);
-  }
-
-  return el;
-};
-},{}],433:[function(require,module,exports){
-module.exports = require('component-closest');
-},{"component-closest":441}],434:[function(require,module,exports){
+},{"../internal/baseProperty":294,"../internal/basePropertyDeep":295,"../internal/isKey":320,"dup":177}],345:[function(require,module,exports){
 arguments[4][178][0].apply(exports,arguments)
-},{"component-delegate":442,"dup":178}],435:[function(require,module,exports){
+},{"component-delegate":351,"dup":178}],346:[function(require,module,exports){
 arguments[4][179][0].apply(exports,arguments)
-},{"domify":446,"dup":179}],436:[function(require,module,exports){
+},{"domify":355,"dup":179}],347:[function(require,module,exports){
 arguments[4][180][0].apply(exports,arguments)
-},{"component-event":443,"dup":180}],437:[function(require,module,exports){
+},{"component-event":352,"dup":180}],348:[function(require,module,exports){
 arguments[4][181][0].apply(exports,arguments)
-},{"component-query":445,"dup":181}],438:[function(require,module,exports){
+},{"component-query":354,"dup":181}],349:[function(require,module,exports){
 arguments[4][182][0].apply(exports,arguments)
-},{"dup":182}],439:[function(require,module,exports){
-/**
- * Module dependencies.
- */
-
-try {
-  var index = require('indexof');
-} catch (err) {
-  var index = require('component-indexof');
-}
-
-/**
- * Whitespace regexp.
- */
-
-var re = /\s+/;
-
-/**
- * toString reference.
- */
-
-var toString = Object.prototype.toString;
-
-/**
- * Wrap `el` in a `ClassList`.
- *
- * @param {Element} el
- * @return {ClassList}
- * @api public
- */
-
-module.exports = function(el){
-  return new ClassList(el);
-};
-
-/**
- * Initialize a new ClassList for `el`.
- *
- * @param {Element} el
- * @api private
- */
-
-function ClassList(el) {
-  if (!el || !el.nodeType) {
-    throw new Error('A DOM element reference is required');
-  }
-  this.el = el;
-  this.list = el.classList;
-}
-
-/**
- * Add class `name` if not already present.
- *
- * @param {String} name
- * @return {ClassList}
- * @api public
- */
-
-ClassList.prototype.add = function(name){
-  // classList
-  if (this.list) {
-    this.list.add(name);
-    return this;
-  }
-
-  // fallback
-  var arr = this.array();
-  var i = index(arr, name);
-  if (!~i) arr.push(name);
-  this.el.className = arr.join(' ');
-  return this;
-};
-
-/**
- * Remove class `name` when present, or
- * pass a regular expression to remove
- * any which match.
- *
- * @param {String|RegExp} name
- * @return {ClassList}
- * @api public
- */
-
-ClassList.prototype.remove = function(name){
-  if ('[object RegExp]' == toString.call(name)) {
-    return this.removeMatching(name);
-  }
-
-  // classList
-  if (this.list) {
-    this.list.remove(name);
-    return this;
-  }
-
-  // fallback
-  var arr = this.array();
-  var i = index(arr, name);
-  if (~i) arr.splice(i, 1);
-  this.el.className = arr.join(' ');
-  return this;
-};
-
-/**
- * Remove all classes matching `re`.
- *
- * @param {RegExp} re
- * @return {ClassList}
- * @api private
- */
-
-ClassList.prototype.removeMatching = function(re){
-  var arr = this.array();
-  for (var i = 0; i < arr.length; i++) {
-    if (re.test(arr[i])) {
-      this.remove(arr[i]);
-    }
-  }
-  return this;
-};
-
-/**
- * Toggle class `name`, can force state via `force`.
- *
- * For browsers that support classList, but do not support `force` yet,
- * the mistake will be detected and corrected.
- *
- * @param {String} name
- * @param {Boolean} force
- * @return {ClassList}
- * @api public
- */
-
-ClassList.prototype.toggle = function(name, force){
-  // classList
-  if (this.list) {
-    if ("undefined" !== typeof force) {
-      if (force !== this.list.toggle(name, force)) {
-        this.list.toggle(name); // toggle again to correct
-      }
-    } else {
-      this.list.toggle(name);
-    }
-    return this;
-  }
-
-  // fallback
-  if ("undefined" !== typeof force) {
-    if (!force) {
-      this.remove(name);
-    } else {
-      this.add(name);
-    }
-  } else {
-    if (this.has(name)) {
-      this.remove(name);
-    } else {
-      this.add(name);
-    }
-  }
-
-  return this;
-};
-
-/**
- * Return an array of classes.
- *
- * @return {Array}
- * @api public
- */
-
-ClassList.prototype.array = function(){
-  var className = this.el.getAttribute('class') || '';
-  var str = className.replace(/^\s+|\s+$/g, '');
-  var arr = str.split(re);
-  if ('' === arr[0]) arr.shift();
-  return arr;
-};
-
-/**
- * Check if class `name` is present.
- *
- * @param {String} name
- * @return {ClassList}
- * @api public
- */
-
-ClassList.prototype.has =
-ClassList.prototype.contains = function(name){
-  return this.list
-    ? this.list.contains(name)
-    : !! ~index(this.array(), name);
-};
-
-},{"component-indexof":440,"indexof":440}],440:[function(require,module,exports){
-module.exports = function(arr, obj){
-  if (arr.indexOf) return arr.indexOf(obj);
-  for (var i = 0; i < arr.length; ++i) {
-    if (arr[i] === obj) return i;
-  }
-  return -1;
-};
-},{}],441:[function(require,module,exports){
+},{"dup":182}],350:[function(require,module,exports){
 arguments[4][183][0].apply(exports,arguments)
-},{"dup":183,"matches-selector":444}],442:[function(require,module,exports){
+},{"dup":183,"matches-selector":353}],351:[function(require,module,exports){
 arguments[4][184][0].apply(exports,arguments)
-},{"closest":441,"component-closest":441,"component-event":443,"dup":184,"event":443}],443:[function(require,module,exports){
+},{"closest":350,"component-closest":350,"component-event":352,"dup":184,"event":352}],352:[function(require,module,exports){
 arguments[4][185][0].apply(exports,arguments)
-},{"dup":185}],444:[function(require,module,exports){
+},{"dup":185}],353:[function(require,module,exports){
 arguments[4][186][0].apply(exports,arguments)
-},{"component-query":445,"dup":186,"query":445}],445:[function(require,module,exports){
+},{"component-query":354,"dup":186,"query":354}],354:[function(require,module,exports){
 arguments[4][187][0].apply(exports,arguments)
-},{"dup":187}],446:[function(require,module,exports){
+},{"dup":187}],355:[function(require,module,exports){
 arguments[4][188][0].apply(exports,arguments)
-},{"dup":188}],447:[function(require,module,exports){
+},{"dup":188}],356:[function(require,module,exports){
 arguments[4][189][0].apply(exports,arguments)
-},{"./lib/collection":448,"./lib/refs":449,"dup":189}],448:[function(require,module,exports){
+},{"./lib/collection":357,"./lib/refs":358,"dup":189}],357:[function(require,module,exports){
 arguments[4][190][0].apply(exports,arguments)
-},{"dup":190}],449:[function(require,module,exports){
+},{"dup":190}],358:[function(require,module,exports){
 arguments[4][191][0].apply(exports,arguments)
-},{"./collection":448,"dup":191}],450:[function(require,module,exports){
-arguments[4][254][0].apply(exports,arguments)
-},{"./lib/Diagram":451,"dup":254}],451:[function(require,module,exports){
+},{"./collection":357,"dup":191}],359:[function(require,module,exports){
+arguments[4][192][0].apply(exports,arguments)
+},{"./appendTo":360,"dup":192}],360:[function(require,module,exports){
+arguments[4][193][0].apply(exports,arguments)
+},{"./util/ensureImported":367,"dup":193}],361:[function(require,module,exports){
+arguments[4][194][0].apply(exports,arguments)
+},{"dup":194}],362:[function(require,module,exports){
+arguments[4][195][0].apply(exports,arguments)
+},{"dup":195}],363:[function(require,module,exports){
+arguments[4][196][0].apply(exports,arguments)
+},{"./remove":366,"dup":196}],364:[function(require,module,exports){
+arguments[4][197][0].apply(exports,arguments)
+},{"./attr":361,"./util/ns":368,"./util/parse":369,"dup":197}],365:[function(require,module,exports){
+arguments[4][198][0].apply(exports,arguments)
+},{"./appendTo":360,"./clear":363,"./util/parse":369,"./util/serialize":370,"dup":198}],366:[function(require,module,exports){
+arguments[4][199][0].apply(exports,arguments)
+},{"dup":199}],367:[function(require,module,exports){
+arguments[4][200][0].apply(exports,arguments)
+},{"dup":200}],368:[function(require,module,exports){
+arguments[4][201][0].apply(exports,arguments)
+},{"dup":201}],369:[function(require,module,exports){
+arguments[4][202][0].apply(exports,arguments)
+},{"./ns":368,"dup":202}],370:[function(require,module,exports){
+arguments[4][203][0].apply(exports,arguments)
+},{"dup":203}],371:[function(require,module,exports){
+module.exports = require('./lib/Diagram');
+},{"./lib/Diagram":372}],372:[function(require,module,exports){
 'use strict';
 
 var di = require('didi');
@@ -66589,7 +52287,7 @@ Diagram.prototype.clear = function() {
   this.get('eventBus').fire('diagram.clear');
 };
 
-},{"./core":460,"didi":582}],452:[function(require,module,exports){
+},{"./core":381,"didi":503}],373:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -66740,7 +52438,7 @@ forEach(hooks, function(hook) {
   };
 });
 
-},{"lodash/collection/forEach":597,"lodash/lang/isArray":712,"lodash/lang/isFunction":713,"lodash/lang/isNumber":715}],453:[function(require,module,exports){
+},{"lodash/collection/forEach":518,"lodash/lang/isArray":633,"lodash/lang/isFunction":634,"lodash/lang/isNumber":636}],374:[function(require,module,exports){
 'use strict';
 
 var unique = require('lodash/array/unique'),
@@ -67244,12 +52942,12 @@ CommandStack.prototype._setHandler = function(command, handler) {
   this._handlerMap[command] = handler;
 };
 
-},{"../core/EventBus":458,"lodash/array/unique":591,"lodash/lang/isArray":712,"lodash/object/assign":721}],454:[function(require,module,exports){
+},{"../core/EventBus":379,"lodash/array/unique":512,"lodash/lang/isArray":633,"lodash/object/assign":642}],375:[function(require,module,exports){
 module.exports = {
   commandStack: [ 'type', require('./CommandStack') ]
 };
 
-},{"./CommandStack":453}],455:[function(require,module,exports){
+},{"./CommandStack":374}],376:[function(require,module,exports){
 'use strict';
 
 var isNumber = require('lodash/lang/isNumber'),
@@ -68235,9 +53933,58 @@ Canvas.prototype.resized = function() {
   this._eventBus.fire('canvas.resized');
 };
 
-},{"../util/Collections":563,"../util/Elements":566,"lodash/collection/every":594,"lodash/collection/forEach":597,"lodash/function/debounce":606,"lodash/lang/isNumber":715,"lodash/object/assign":721,"tiny-svg/lib/append":752,"tiny-svg/lib/attr":754,"tiny-svg/lib/classes":755,"tiny-svg/lib/create":758,"tiny-svg/lib/geometry":759,"tiny-svg/lib/transform":761}],456:[function(require,module,exports){
-arguments[4][257][0].apply(exports,arguments)
-},{"../model":554,"dup":257,"lodash/object/assign":721}],457:[function(require,module,exports){
+},{"../util/Collections":484,"../util/Elements":487,"lodash/collection/every":515,"lodash/collection/forEach":518,"lodash/function/debounce":527,"lodash/lang/isNumber":636,"lodash/object/assign":642,"tiny-svg/lib/append":673,"tiny-svg/lib/attr":675,"tiny-svg/lib/classes":676,"tiny-svg/lib/create":679,"tiny-svg/lib/geometry":680,"tiny-svg/lib/transform":682}],377:[function(require,module,exports){
+'use strict';
+
+var Model = require('../model');
+
+var assign = require('lodash/object/assign');
+
+/**
+ * A factory for diagram-js shapes
+ */
+function ElementFactory() {
+  this._uid = 12;
+}
+
+module.exports = ElementFactory;
+
+
+ElementFactory.prototype.createRoot = function(attrs) {
+  return this.create('root', attrs);
+};
+
+ElementFactory.prototype.createLabel = function(attrs) {
+  return this.create('label', attrs);
+};
+
+ElementFactory.prototype.createShape = function(attrs) {
+  return this.create('shape', attrs);
+};
+
+ElementFactory.prototype.createConnection = function(attrs) {
+  return this.create('connection', attrs);
+};
+
+/**
+ * Create a model element with the given type and
+ * a number of pre-set attributes.
+ *
+ * @param  {String} type
+ * @param  {Object} attrs
+ * @return {djs.model.Base} the newly created model instance
+ */
+ElementFactory.prototype.create = function(type, attrs) {
+
+  attrs = assign({}, attrs || {});
+
+  if (!attrs.id) {
+    attrs.id = type + '_' + (this._uid++);
+  }
+
+  return Model.create(type, attrs);
+};
+},{"../model":475,"lodash/object/assign":642}],378:[function(require,module,exports){
 'use strict';
 
 var ELEMENT_ID = 'data-element-id';
@@ -68439,9 +54186,465 @@ ElementRegistry.prototype._validateId = function(id) {
   }
 };
 
-},{"tiny-svg/lib/attr":754}],458:[function(require,module,exports){
-arguments[4][259][0].apply(exports,arguments)
-},{"dup":259,"lodash/function/bind":605,"lodash/lang/isArray":712,"lodash/lang/isFunction":713,"lodash/lang/isNumber":715,"lodash/object/assign":721}],459:[function(require,module,exports){
+},{"tiny-svg/lib/attr":675}],379:[function(require,module,exports){
+'use strict';
+
+var isFunction = require('lodash/lang/isFunction'),
+    isArray = require('lodash/lang/isArray'),
+    isNumber = require('lodash/lang/isNumber'),
+    bind = require('lodash/function/bind'),
+    assign = require('lodash/object/assign');
+
+var FN_REF = '__fn';
+
+var DEFAULT_PRIORITY = 1000;
+
+var slice = Array.prototype.slice;
+
+/**
+ * A general purpose event bus.
+ *
+ * This component is used to communicate across a diagram instance.
+ * Other parts of a diagram can use it to listen to and broadcast events.
+ *
+ *
+ * ## Registering for Events
+ *
+ * The event bus provides the {@link EventBus#on} and {@link EventBus#once}
+ * methods to register for events. {@link EventBus#off} can be used to
+ * remove event registrations. Listeners receive an instance of {@link Event}
+ * as the first argument. It allows them to hook into the event execution.
+ *
+ * ```javascript
+ *
+ * // listen for event
+ * eventBus.on('foo', function(event) {
+ *
+ *   // access event type
+ *   event.type; // 'foo'
+ *
+ *   // stop propagation to other listeners
+ *   event.stopPropagation();
+ *
+ *   // prevent event default
+ *   event.preventDefault();
+ * });
+ *
+ * // listen for event with custom payload
+ * eventBus.on('bar', function(event, payload) {
+ *   console.log(payload);
+ * });
+ *
+ * // listen for event returning value
+ * eventBus.on('foobar', function(event) {
+ *
+ *   // stop event propagation + prevent default
+ *   return false;
+ *
+ *   // stop event propagation + return custom result
+ *   return {
+ *     complex: 'listening result'
+ *   };
+ * });
+ *
+ *
+ * // listen with custom priority (default=1000, higher is better)
+ * eventBus.on('priorityfoo', 1500, function(event) {
+ *   console.log('invoked first!');
+ * });
+ *
+ *
+ * // listen for event and pass the context (`this`)
+ * eventBus.on('foobar', function(event) {
+ *   this.foo();
+ * }, this);
+ * ```
+ *
+ *
+ * ## Emitting Events
+ *
+ * Events can be emitted via the event bus using {@link EventBus#fire}.
+ *
+ * ```javascript
+ *
+ * // false indicates that the default action
+ * // was prevented by listeners
+ * if (eventBus.fire('foo') === false) {
+ *   console.log('default has been prevented!');
+ * };
+ *
+ *
+ * // custom args + return value listener
+ * eventBus.on('sum', function(event, a, b) {
+ *   return a + b;
+ * });
+ *
+ * // you can pass custom arguments + retrieve result values.
+ * var sum = eventBus.fire('sum', 1, 2);
+ * console.log(sum); // 3
+ * ```
+ */
+function EventBus() {
+  this._listeners = {};
+
+  // cleanup on destroy on lowest priority to allow
+  // message passing until the bitter end
+  this.on('diagram.destroy', 1, this._destroy, this);
+}
+
+module.exports = EventBus;
+
+
+/**
+ * Register an event listener for events with the given name.
+ *
+ * The callback will be invoked with `event, ...additionalArguments`
+ * that have been passed to {@link EventBus#fire}.
+ *
+ * Returning false from a listener will prevent the events default action
+ * (if any is specified). To stop an event from being processed further in
+ * other listeners execute {@link Event#stopPropagation}.
+ *
+ * Returning anything but `undefined` from a listener will stop the listener propagation.
+ *
+ * @param {String|Array<String>} events
+ * @param {Number} [priority=1000] the priority in which this listener is called, larger is higher
+ * @param {Function} callback
+ * @param {Object} [that] Pass context (`this`) to the callback
+ */
+EventBus.prototype.on = function(events, priority, callback, that) {
+
+  events = isArray(events) ? events : [ events ];
+
+  if (isFunction(priority)) {
+    that = callback;
+    callback = priority;
+    priority = DEFAULT_PRIORITY;
+  }
+
+  if (!isNumber(priority)) {
+    throw new Error('priority must be a number');
+  }
+
+  var actualCallback = callback;
+
+  if (that) {
+    actualCallback = bind(callback, that);
+
+    // make sure we remember and are able to remove
+    // bound callbacks via {@link #off} using the original
+    // callback
+    actualCallback[FN_REF] = callback[FN_REF] || callback;
+  }
+
+  var self = this,
+      listener = { priority: priority, callback: actualCallback };
+
+  events.forEach(function(e) {
+    self._addListener(e, listener);
+  });
+};
+
+
+/**
+ * Register an event listener that is executed only once.
+ *
+ * @param {String} event the event name to register for
+ * @param {Function} callback the callback to execute
+ * @param {Object} [that] Pass context (`this`) to the callback
+ */
+EventBus.prototype.once = function(event, priority, callback, that) {
+  var self = this;
+
+  if (isFunction(priority)) {
+    that = callback;
+    callback = priority;
+    priority = DEFAULT_PRIORITY;
+  }
+
+  if (!isNumber(priority)) {
+    throw new Error('priority must be a number');
+  }
+
+  function wrappedCallback() {
+    self.off(event, wrappedCallback);
+    return callback.apply(that, arguments);
+  }
+
+  // make sure we remember and are able to remove
+  // bound callbacks via {@link #off} using the original
+  // callback
+  wrappedCallback[FN_REF] = callback;
+
+  this.on(event, priority, wrappedCallback);
+};
+
+
+/**
+ * Removes event listeners by event and callback.
+ *
+ * If no callback is given, all listeners for a given event name are being removed.
+ *
+ * @param {String} event
+ * @param {Function} [callback]
+ */
+EventBus.prototype.off = function(event, callback) {
+  var listeners = this._getListeners(event),
+      listener,
+      listenerCallback,
+      idx;
+
+  if (callback) {
+
+    // move through listeners from back to front
+    // and remove matching listeners
+    for (idx = listeners.length - 1; (listener = listeners[idx]); idx--) {
+      listenerCallback = listener.callback;
+
+      if (listenerCallback === callback || listenerCallback[FN_REF] === callback) {
+        listeners.splice(idx, 1);
+      }
+    }
+  } else {
+    // clear listeners
+    listeners.length = 0;
+  }
+};
+
+
+/**
+ * Fires a named event.
+ *
+ * @example
+ *
+ * // fire event by name
+ * events.fire('foo');
+ *
+ * // fire event object with nested type
+ * var event = { type: 'foo' };
+ * events.fire(event);
+ *
+ * // fire event with explicit type
+ * var event = { x: 10, y: 20 };
+ * events.fire('element.moved', event);
+ *
+ * // pass additional arguments to the event
+ * events.on('foo', function(event, bar) {
+ *   alert(bar);
+ * });
+ *
+ * events.fire({ type: 'foo' }, 'I am bar!');
+ *
+ * @param {String} [name] the optional event name
+ * @param {Object} [event] the event object
+ * @param {...Object} additional arguments to be passed to the callback functions
+ *
+ * @return {Boolean} the events return value, if specified or false if the
+ *                   default action was prevented by listeners
+ */
+EventBus.prototype.fire = function(type, data) {
+
+  var event,
+      listeners,
+      returnValue,
+      args;
+
+  args = slice.call(arguments);
+
+  if (typeof type === 'object') {
+    event = type;
+    type = event.type;
+  }
+
+  if (!type) {
+    throw new Error('no event type specified');
+  }
+
+  listeners = this._listeners[type];
+
+  if (!listeners) {
+    return;
+  }
+
+  // we make sure we fire instances of our home made
+  // events here. We wrap them only once, though
+  if (data instanceof Event) {
+    // we are fine, we alread have an event
+    event = data;
+  } else {
+    event = new Event();
+    event.init(data);
+  }
+
+  // ensure we pass the event as the first parameter
+  args[0] = event;
+
+  // original event type (in case we delegate)
+  var originalType = event.type;
+
+  // update event type before delegation
+  if (type !== originalType) {
+    event.type = type;
+  }
+
+  try {
+    returnValue = this._invokeListeners(event, args, listeners);
+  } finally {
+    // reset event type after delegation
+    if (type !== originalType) {
+      event.type = originalType;
+    }
+  }
+
+  // set the return value to false if the event default
+  // got prevented and no other return value exists
+  if (returnValue === undefined && event.defaultPrevented) {
+    returnValue = false;
+  }
+
+  return returnValue;
+};
+
+
+EventBus.prototype.handleError = function(error) {
+  return this.fire('error', { error: error }) === false;
+};
+
+
+EventBus.prototype._destroy = function() {
+  this._listeners = {};
+};
+
+EventBus.prototype._invokeListeners = function(event, args, listeners) {
+
+  var idx,
+      listener,
+      returnValue;
+
+  for (idx = 0; (listener = listeners[idx]); idx++) {
+
+    // handle stopped propagation
+    if (event.cancelBubble) {
+      break;
+    }
+
+    returnValue = this._invokeListener(event, args, listener);
+  }
+
+  return returnValue;
+};
+
+EventBus.prototype._invokeListener = function(event, args, listener) {
+
+  var returnValue;
+
+  try {
+    // returning false prevents the default action
+    returnValue = invokeFunction(listener.callback, args);
+
+    // stop propagation on return value
+    if (returnValue !== undefined) {
+      event.returnValue = returnValue;
+      event.stopPropagation();
+    }
+
+    // prevent default on return false
+    if (returnValue === false) {
+      event.preventDefault();
+    }
+  } catch (e) {
+    if (!this.handleError(e)) {
+      console.error('unhandled error in event listener');
+      console.error(e.stack);
+
+      throw e;
+    }
+  }
+
+  return returnValue;
+};
+
+/*
+ * Add new listener with a certain priority to the list
+ * of listeners (for the given event).
+ *
+ * The semantics of listener registration / listener execution are
+ * first register, first serve: New listeners will always be inserted
+ * after existing listeners with the same priority.
+ *
+ * Example: Inserting two listeners with priority 1000 and 1300
+ *
+ *    * before: [ 1500, 1500, 1000, 1000 ]
+ *    * after: [ 1500, 1500, (new=1300), 1000, 1000, (new=1000) ]
+ *
+ * @param {String} event
+ * @param {Object} listener { priority, callback }
+ */
+EventBus.prototype._addListener = function(event, newListener) {
+
+  var listeners = this._getListeners(event),
+      existingListener,
+      idx;
+
+  // ensure we order listeners by priority from
+  // 0 (high) to n > 0 (low)
+  for (idx = 0; (existingListener = listeners[idx]); idx++) {
+    if (existingListener.priority < newListener.priority) {
+
+      // prepend newListener at before existingListener
+      listeners.splice(idx, 0, newListener);
+      return;
+    }
+  }
+
+  listeners.push(newListener);
+};
+
+
+EventBus.prototype._getListeners = function(name) {
+  var listeners = this._listeners[name];
+
+  if (!listeners) {
+    this._listeners[name] = listeners = [];
+  }
+
+  return listeners;
+};
+
+
+/**
+ * A event that is emitted via the event bus.
+ */
+function Event() { }
+
+module.exports.Event = Event;
+
+Event.prototype.stopPropagation = function() {
+  this.cancelBubble = true;
+};
+
+Event.prototype.preventDefault = function() {
+  this.defaultPrevented = true;
+};
+
+Event.prototype.init = function(data) {
+  assign(this, data || {});
+};
+
+
+/**
+ * Invoke function. Be fast...
+ *
+ * @param {Function} fn
+ * @param {Array<Object>} args
+ *
+ * @return {Any}
+ */
+function invokeFunction(fn, args) {
+  return fn.apply(null, args);
+}
+
+},{"lodash/function/bind":526,"lodash/lang/isArray":633,"lodash/lang/isFunction":634,"lodash/lang/isNumber":636,"lodash/object/assign":642}],380:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -68658,11 +54861,108 @@ function prependTo(newNode, parentNode) {
   parentNode.insertBefore(newNode, parentNode.firstChild);
 }
 
-},{"../util/GraphicsUtil":569,"../util/SvgTransformUtil":579,"lodash/collection/forEach":597,"lodash/collection/reduce":600,"min-dom/lib/clear":733,"tiny-svg/lib/append":752,"tiny-svg/lib/attr":754,"tiny-svg/lib/classes":755,"tiny-svg/lib/create":758,"tiny-svg/lib/remove":760}],460:[function(require,module,exports){
-arguments[4][261][0].apply(exports,arguments)
-},{"../draw":464,"./Canvas":455,"./ElementFactory":456,"./ElementRegistry":457,"./EventBus":458,"./GraphicsFactory":459,"dup":261}],461:[function(require,module,exports){
-arguments[4][262][0].apply(exports,arguments)
-},{"dup":262}],462:[function(require,module,exports){
+},{"../util/GraphicsUtil":490,"../util/SvgTransformUtil":500,"lodash/collection/forEach":518,"lodash/collection/reduce":521,"min-dom/lib/clear":654,"tiny-svg/lib/append":673,"tiny-svg/lib/attr":675,"tiny-svg/lib/classes":676,"tiny-svg/lib/create":679,"tiny-svg/lib/remove":681}],381:[function(require,module,exports){
+module.exports = {
+  __depends__: [ require('../draw') ],
+  __init__: [ 'canvas' ],
+  canvas: [ 'type', require('./Canvas') ],
+  elementRegistry: [ 'type', require('./ElementRegistry') ],
+  elementFactory: [ 'type', require('./ElementFactory') ],
+  eventBus: [ 'type', require('./EventBus') ],
+  graphicsFactory: [ 'type', require('./GraphicsFactory') ]
+};
+},{"../draw":385,"./Canvas":376,"./ElementFactory":377,"./ElementRegistry":378,"./EventBus":379,"./GraphicsFactory":380}],382:[function(require,module,exports){
+'use strict';
+
+var DEFAULT_RENDER_PRIORITY = 1000;
+
+/**
+ * The base implementation of shape and connection renderers.
+ *
+ * @param {EventBus} eventBus
+ * @param {Number} [renderPriority=1000]
+ */
+function BaseRenderer(eventBus, renderPriority) {
+  var self = this;
+
+  renderPriority = renderPriority || DEFAULT_RENDER_PRIORITY;
+
+  eventBus.on([ 'render.shape', 'render.connection' ], renderPriority, function(evt, context) {
+    var type = evt.type,
+        element = context.element,
+        visuals = context.gfx;
+
+    if (self.canRender(element)) {
+      if (type === 'render.shape') {
+        return self.drawShape(visuals, element);
+      } else {
+        return self.drawConnection(visuals, element);
+      }
+    }
+  });
+
+  eventBus.on([ 'render.getShapePath', 'render.getConnectionPath'], renderPriority, function(evt, element) {
+    if (self.canRender(element)) {
+      if (evt.type === 'render.getShapePath') {
+        return self.getShapePath(element);
+      } else {
+        return self.getConnectionPath(element);
+      }
+    }
+  });
+}
+
+/**
+ * Should check whether *this* renderer can render
+ * the element/connection.
+ *
+ * @param {element} element
+ *
+ * @returns {Boolean}
+ */
+BaseRenderer.prototype.canRender = function() {};
+
+/**
+ * Provides the shape's snap svg element to be drawn on the `canvas`.
+ *
+ * @param {djs.Graphics} visuals
+ * @param {Shape} shape
+ *
+ * @returns {Snap.svg} [returns a Snap.svg paper element ]
+ */
+BaseRenderer.prototype.drawShape = function() {};
+
+/**
+ * Provides the shape's snap svg element to be drawn on the `canvas`.
+ *
+ * @param {djs.Graphics} visuals
+ * @param {Connection} connection
+ *
+ * @returns {Snap.svg} [returns a Snap.svg paper element ]
+ */
+BaseRenderer.prototype.drawConnection = function() {};
+
+/**
+ * Gets the SVG path of a shape that represents it's visual bounds.
+ *
+ * @param {Shape} shape
+ *
+ * @return {string} svg path
+ */
+BaseRenderer.prototype.getShapePath = function() {};
+
+/**
+ * Gets the SVG path of a connection that represents it's visual bounds.
+ *
+ * @param {Connection} connection
+ *
+ * @return {string} svg path
+ */
+BaseRenderer.prototype.getConnectionPath = function() {};
+
+module.exports = BaseRenderer;
+
+},{}],383:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -68767,11 +55067,91 @@ DefaultRenderer.$inject = [ 'eventBus', 'styles' ];
 
 module.exports = DefaultRenderer;
 
-},{"../util/RenderUtil":578,"./BaseRenderer":461,"inherits":586,"tiny-svg/lib/append":752,"tiny-svg/lib/attr":754,"tiny-svg/lib/create":758}],463:[function(require,module,exports){
-arguments[4][264][0].apply(exports,arguments)
-},{"dup":264,"lodash/collection/reduce":600,"lodash/lang/isArray":712,"lodash/object/assign":721}],464:[function(require,module,exports){
-arguments[4][265][0].apply(exports,arguments)
-},{"./DefaultRenderer":462,"./Styles":463,"dup":265}],465:[function(require,module,exports){
+},{"../util/RenderUtil":499,"./BaseRenderer":382,"inherits":507,"tiny-svg/lib/append":673,"tiny-svg/lib/attr":675,"tiny-svg/lib/create":679}],384:[function(require,module,exports){
+'use strict';
+
+var isArray = require('lodash/lang/isArray'),
+    assign = require('lodash/object/assign'),
+    reduce = require('lodash/collection/reduce');
+
+
+/**
+ * A component that manages shape styles
+ */
+function Styles() {
+
+  var defaultTraits = {
+
+    'no-fill': {
+      fill: 'none'
+    },
+    'no-border': {
+      strokeOpacity: 0.0
+    },
+    'no-events': {
+      pointerEvents: 'none'
+    }
+  };
+
+  var self = this;
+
+  /**
+   * Builds a style definition from a className, a list of traits and an object of additional attributes.
+   *
+   * @param  {String} className
+   * @param  {Array<String>} traits
+   * @param  {Object} additionalAttrs
+   *
+   * @return {Object} the style defintion
+   */
+  this.cls = function(className, traits, additionalAttrs) {
+    var attrs = this.style(traits, additionalAttrs);
+
+    return assign(attrs, { 'class': className });
+  };
+
+  /**
+   * Builds a style definition from a list of traits and an object of additional attributes.
+   *
+   * @param  {Array<String>} traits
+   * @param  {Object} additionalAttrs
+   *
+   * @return {Object} the style defintion
+   */
+  this.style = function(traits, additionalAttrs) {
+
+    if (!isArray(traits) && !additionalAttrs) {
+      additionalAttrs = traits;
+      traits = [];
+    }
+
+    var attrs = reduce(traits, function(attrs, t) {
+      return assign(attrs, defaultTraits[t] || {});
+    }, {});
+
+    return additionalAttrs ? assign(attrs, additionalAttrs) : attrs;
+  };
+
+  this.computeStyle = function(custom, traits, defaultStyles) {
+    if (!isArray(traits)) {
+      defaultStyles = traits;
+      traits = [];
+    }
+
+    return self.style(traits || [], assign({}, defaultStyles, custom || {}));
+  };
+}
+
+module.exports = Styles;
+
+},{"lodash/collection/reduce":521,"lodash/lang/isArray":633,"lodash/object/assign":642}],385:[function(require,module,exports){
+module.exports = {
+  __init__: [ 'defaultRenderer' ],
+  defaultRenderer: [ 'type', require('./DefaultRenderer') ],
+  styles: [ 'type', require('./Styles') ]
+};
+
+},{"./DefaultRenderer":383,"./Styles":384}],386:[function(require,module,exports){
 'use strict';
 
 var Geometry = require('../../util/Geometry'),
@@ -69041,7 +55421,7 @@ BendpointMove.$inject = [ 'injector', 'eventBus', 'canvas', 'dragging', 'graphic
 
 module.exports = BendpointMove;
 
-},{"../../util/Geometry":568,"../../util/SvgTransformUtil":579,"./BendpointUtil":467,"tiny-svg/lib/classes":755,"tiny-svg/lib/remove":760}],466:[function(require,module,exports){
+},{"../../util/Geometry":489,"../../util/SvgTransformUtil":500,"./BendpointUtil":388,"tiny-svg/lib/classes":676,"tiny-svg/lib/remove":681}],387:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -69241,7 +55621,7 @@ BendpointSnapping.$inject = [ 'eventBus' ];
 
 module.exports = BendpointSnapping;
 
-},{"lodash/collection/forEach":597,"lodash/lang/isArray":712,"lodash/object/assign":721}],467:[function(require,module,exports){
+},{"lodash/collection/forEach":518,"lodash/lang/isArray":633,"lodash/object/assign":642}],388:[function(require,module,exports){
 'use strict';
 
 var Events = require('../../util/Event'),
@@ -69372,7 +55752,7 @@ module.exports.addSegmentDragger = function(parentGfx, segmentStart, segmentEnd)
   return groupGfx;
 };
 
-},{"../../util/Event":567,"../../util/Geometry":568,"../../util/SvgTransformUtil":579,"tiny-svg/lib/append":752,"tiny-svg/lib/attr":754,"tiny-svg/lib/classes":755,"tiny-svg/lib/create":758}],468:[function(require,module,exports){
+},{"../../util/Event":488,"../../util/Geometry":489,"../../util/SvgTransformUtil":500,"tiny-svg/lib/append":673,"tiny-svg/lib/attr":675,"tiny-svg/lib/classes":676,"tiny-svg/lib/create":679}],389:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -69645,7 +56025,7 @@ Bendpoints.$inject = [
 
 module.exports = Bendpoints;
 
-},{"../../util/Geometry":568,"../../util/LineIntersection":572,"../../util/SvgTransformUtil":579,"./BendpointUtil":467,"lodash/collection/forEach":597,"min-dom/lib/event":737,"min-dom/lib/query":739,"tiny-svg/lib/append":752,"tiny-svg/lib/attr":754,"tiny-svg/lib/classes":755,"tiny-svg/lib/create":758,"tiny-svg/lib/remove":760}],469:[function(require,module,exports){
+},{"../../util/Geometry":489,"../../util/LineIntersection":493,"../../util/SvgTransformUtil":500,"./BendpointUtil":388,"lodash/collection/forEach":518,"min-dom/lib/event":658,"min-dom/lib/query":660,"tiny-svg/lib/append":673,"tiny-svg/lib/attr":675,"tiny-svg/lib/classes":676,"tiny-svg/lib/create":679,"tiny-svg/lib/remove":681}],390:[function(require,module,exports){
 'use strict';
 
 var Geometry = require('../../util/Geometry'),
@@ -70048,7 +56428,7 @@ ConnectionSegmentMove.$inject = [
 
 module.exports = ConnectionSegmentMove;
 
-},{"../../layout/LayoutUtil":553,"../../util/Geometry":568,"../../util/SvgTransformUtil":579,"./BendpointUtil":467,"tiny-svg/lib/classes":755,"tiny-svg/lib/remove":760}],470:[function(require,module,exports){
+},{"../../layout/LayoutUtil":474,"../../util/Geometry":489,"../../util/SvgTransformUtil":500,"./BendpointUtil":388,"tiny-svg/lib/classes":676,"tiny-svg/lib/remove":681}],391:[function(require,module,exports){
 module.exports = {
   __depends__: [ require('../dragging'), require('../rules') ],
   __init__: [ 'bendpoints', 'bendpointSnapping' ],
@@ -70058,7 +56438,7 @@ module.exports = {
   bendpointSnapping: [ 'type', require('./BendpointSnapping') ]
 };
 
-},{"../dragging":485,"../rules":538,"./BendpointMove":465,"./BendpointSnapping":466,"./Bendpoints":468,"./ConnectionSegmentMove":469}],471:[function(require,module,exports){
+},{"../dragging":406,"../rules":459,"./BendpointMove":386,"./BendpointSnapping":387,"./Bendpoints":389,"./ConnectionSegmentMove":390}],392:[function(require,module,exports){
 'use strict';
 
 var getElementType = require('../../util/Elements').getType;
@@ -70121,12 +56501,12 @@ ChangeSupport.$inject = [ 'eventBus', 'canvas', 'elementRegistry', 'graphicsFact
 
 module.exports = ChangeSupport;
 
-},{"../../util/Elements":566}],472:[function(require,module,exports){
+},{"../../util/Elements":487}],393:[function(require,module,exports){
 module.exports = {
   __init__: [ 'changeSupport'],
   changeSupport: [ 'type', require('./ChangeSupport') ]
 };
-},{"./ChangeSupport":471}],473:[function(require,module,exports){
+},{"./ChangeSupport":392}],394:[function(require,module,exports){
 'use strict';
 
 /**
@@ -70156,12 +56536,12 @@ Clipboard.prototype.clear = function() {
 Clipboard.prototype.isEmpty = function() {
   return !this._data;
 };
-},{}],474:[function(require,module,exports){
+},{}],395:[function(require,module,exports){
 module.exports = {
   clipboard: [ 'type', require('./Clipboard') ]
 };
 
-},{"./Clipboard":473}],475:[function(require,module,exports){
+},{"./Clipboard":394}],396:[function(require,module,exports){
 'use strict';
 
 var LayoutUtil = require('../../layout/LayoutUtil');
@@ -70345,7 +56725,7 @@ Connect.$inject = [ 'eventBus', 'dragging', 'modeling', 'rules', 'canvas', 'grap
 
 module.exports = Connect;
 
-},{"../../layout/LayoutUtil":553,"tiny-svg/lib/append":752,"tiny-svg/lib/attr":754,"tiny-svg/lib/create":758,"tiny-svg/lib/remove":760}],476:[function(require,module,exports){
+},{"../../layout/LayoutUtil":474,"tiny-svg/lib/append":673,"tiny-svg/lib/attr":675,"tiny-svg/lib/create":679,"tiny-svg/lib/remove":681}],397:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../selection'),
@@ -70355,7 +56735,7 @@ module.exports = {
   connect: [ 'type', require('./Connect') ]
 };
 
-},{"../dragging":485,"../rules":538,"../selection":542,"./Connect":475}],477:[function(require,module,exports){
+},{"../dragging":406,"../rules":459,"../selection":463,"./Connect":396}],398:[function(require,module,exports){
 'use strict';
 
 var isFunction = require('lodash/lang/isFunction'),
@@ -70658,7 +57038,7 @@ function addClasses(element, classNames) {
     classes.add(cls);
   });
 }
-},{"lodash/collection/forEach":597,"lodash/lang/isArray":712,"lodash/lang/isFunction":713,"min-dom/lib/attr":731,"min-dom/lib/classes":732,"min-dom/lib/delegate":735,"min-dom/lib/domify":736,"min-dom/lib/event":737,"min-dom/lib/query":739}],478:[function(require,module,exports){
+},{"lodash/collection/forEach":518,"lodash/lang/isArray":633,"lodash/lang/isFunction":634,"min-dom/lib/attr":652,"min-dom/lib/classes":653,"min-dom/lib/delegate":656,"min-dom/lib/domify":657,"min-dom/lib/event":658,"min-dom/lib/query":660}],399:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../interaction-events'),
@@ -70666,7 +57046,7 @@ module.exports = {
   ],
   contextPad: [ 'type', require('./ContextPad') ]
 };
-},{"../interaction-events":489,"../overlays":527,"./ContextPad":477}],479:[function(require,module,exports){
+},{"../interaction-events":410,"../overlays":448,"./ContextPad":398}],400:[function(require,module,exports){
 'use strict';
 
 var isArray = require('lodash/lang/isArray'),
@@ -71129,7 +57509,7 @@ CopyPaste.prototype.createTree = function(elements) {
   return tree;
 };
 
-},{"../../util/CopyPasteUtil":564,"../../util/Elements":566,"../../util/PositionUtil":576,"lodash/array/findIndex":587,"lodash/collection/find":596,"lodash/collection/forEach":597,"lodash/collection/map":599,"lodash/collection/reduce":600,"lodash/collection/sortBy":603,"lodash/lang/isArray":712}],480:[function(require,module,exports){
+},{"../../util/CopyPasteUtil":485,"../../util/Elements":487,"../../util/PositionUtil":497,"lodash/array/findIndex":508,"lodash/collection/find":517,"lodash/collection/forEach":518,"lodash/collection/map":520,"lodash/collection/reduce":521,"lodash/collection/sortBy":524,"lodash/lang/isArray":633}],401:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../clipboard'),
@@ -71140,7 +57520,7 @@ module.exports = {
   copyPaste: [ 'type', require('./CopyPaste') ]
 };
 
-},{"../clipboard":474,"../mouse-tracking":520,"../rules":538,"./CopyPaste":479}],481:[function(require,module,exports){
+},{"../clipboard":395,"../mouse-tracking":441,"../rules":459,"./CopyPaste":400}],402:[function(require,module,exports){
 'use strict';
 
 var LOW_PRIORITY = 750;
@@ -71341,7 +57721,7 @@ Create.$inject = [ 'eventBus', 'dragging', 'rules', 'modeling', 'canvas', 'style
 
 module.exports = Create;
 
-},{"../../util/SvgTransformUtil":579,"tiny-svg/lib/append":752,"tiny-svg/lib/attr":754,"tiny-svg/lib/classes":755,"tiny-svg/lib/create":758,"tiny-svg/lib/remove":760}],482:[function(require,module,exports){
+},{"../../util/SvgTransformUtil":500,"tiny-svg/lib/append":673,"tiny-svg/lib/attr":675,"tiny-svg/lib/classes":676,"tiny-svg/lib/create":679,"tiny-svg/lib/remove":681}],403:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../dragging'),
@@ -71351,7 +57731,7 @@ module.exports = {
   create: [ 'type', require('./Create') ]
 };
 
-},{"../dragging":485,"../rules":538,"../selection":542,"./Create":481}],483:[function(require,module,exports){
+},{"../dragging":406,"../rules":459,"../selection":463,"./Create":402}],404:[function(require,module,exports){
 'use strict';
 
 /* global TouchEvent */
@@ -71861,7 +58241,7 @@ Dragging.$inject = [ 'eventBus', 'canvas', 'selection' ];
 
 module.exports = Dragging;
 
-},{"../../core/EventBus":458,"../../util/ClickTrap":562,"../../util/Cursor":565,"../../util/Event":567,"lodash/object/assign":721,"min-dom/lib/event":737}],484:[function(require,module,exports){
+},{"../../core/EventBus":379,"../../util/ClickTrap":483,"../../util/Cursor":486,"../../util/Event":488,"lodash/object/assign":642,"min-dom/lib/event":658}],405:[function(require,module,exports){
 'use strict';
 
 var domClosest = require('min-dom/lib/closest');
@@ -71952,7 +58332,7 @@ HoverFix.$inject = [ 'eventBus', 'dragging', 'elementRegistry' ];
 
 module.exports = HoverFix;
 
-},{"../../util/Event":567,"min-dom/lib/closest":734}],485:[function(require,module,exports){
+},{"../../util/Event":488,"min-dom/lib/closest":655}],406:[function(require,module,exports){
 module.exports = {
   __init__: [
     'hoverFix'
@@ -71963,7 +58343,7 @@ module.exports = {
   dragging: [ 'type', require('./Dragging') ],
   hoverFix: [ 'type', require('./HoverFix') ]
 };
-},{"../selection":542,"./Dragging":483,"./HoverFix":484}],486:[function(require,module,exports){
+},{"../selection":463,"./Dragging":404,"./HoverFix":405}],407:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -72177,7 +58557,7 @@ function error(action, message) {
   return new Error(action + ' ' + message);
 }
 
-},{"lodash/collection/forEach":597,"lodash/lang/isArray":712}],487:[function(require,module,exports){
+},{"lodash/collection/forEach":518,"lodash/lang/isArray":633}],408:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../selection'),
@@ -72188,7 +58568,7 @@ module.exports = {
   editorActions: [ 'type', require('./EditorActions') ]
 };
 
-},{"../../navigation/zoomscroll":560,"../copy-paste":480,"../selection":542,"./EditorActions":486}],488:[function(require,module,exports){
+},{"../../navigation/zoomscroll":481,"../copy-paste":401,"../selection":463,"./EditorActions":407}],409:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -72488,9 +58868,12 @@ module.exports = InteractionEvents;
  * @property {Event} originalEvent
  */
 
-},{"../../util/Mouse":574,"../../util/RenderUtil":578,"lodash/collection/forEach":597,"min-dom/lib/delegate":735,"min-dom/lib/query":739,"tiny-svg/lib/append":752,"tiny-svg/lib/attr":754,"tiny-svg/lib/create":758}],489:[function(require,module,exports){
-arguments[4][267][0].apply(exports,arguments)
-},{"./InteractionEvents":488,"dup":267}],490:[function(require,module,exports){
+},{"../../util/Mouse":495,"../../util/RenderUtil":499,"lodash/collection/forEach":518,"min-dom/lib/delegate":656,"min-dom/lib/query":660,"tiny-svg/lib/append":673,"tiny-svg/lib/attr":675,"tiny-svg/lib/create":679}],410:[function(require,module,exports){
+module.exports = {
+  __init__: [ 'interactionEvents' ],
+  interactionEvents: [ 'type', require('./InteractionEvents') ]
+};
+},{"./InteractionEvents":409}],411:[function(require,module,exports){
 'use strict';
 
 var domEvent = require('min-dom/lib/event'),
@@ -72805,13 +59188,13 @@ function isShift(modifiers) {
   return modifiers.shiftKey;
 }
 
-},{"min-dom/lib/event":737,"min-dom/lib/matches":738}],491:[function(require,module,exports){
+},{"min-dom/lib/event":658,"min-dom/lib/matches":659}],412:[function(require,module,exports){
 module.exports = {
   __init__: [ 'keyboard' ],
   keyboard: [ 'type', require('./Keyboard') ]
 };
 
-},{"./Keyboard":490}],492:[function(require,module,exports){
+},{"./Keyboard":411}],413:[function(require,module,exports){
 'use strict';
 
 var values = require('lodash/object/values');
@@ -73065,7 +59448,7 @@ function toBBox(event) {
   return bbox;
 }
 
-},{"../../util/Elements":566,"../../util/Mouse":574,"lodash/object/values":727,"tiny-svg/lib/append":752,"tiny-svg/lib/attr":754,"tiny-svg/lib/create":758,"tiny-svg/lib/remove":760}],493:[function(require,module,exports){
+},{"../../util/Elements":487,"../../util/Mouse":495,"lodash/object/values":648,"tiny-svg/lib/append":673,"tiny-svg/lib/attr":675,"tiny-svg/lib/create":679,"tiny-svg/lib/remove":681}],414:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -73074,7 +59457,7 @@ module.exports = {
   lassoTool: [ 'type', require('./LassoTool') ]
 };
 
-},{"../tool-manager":545,"./LassoTool":492}],494:[function(require,module,exports){
+},{"../tool-manager":466,"./LassoTool":413}],415:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -73506,7 +59889,7 @@ Modeling.prototype.toggleCollapse = function(shape, hints) {
   this._commandStack.execute('shape.toggleCollapse', context);
 };
 
-},{"../../model":554,"./cmd/AlignElementsHandler":495,"./cmd/AppendShapeHandler":496,"./cmd/CreateConnectionHandler":497,"./cmd/CreateLabelHandler":498,"./cmd/CreateShapeHandler":499,"./cmd/DeleteConnectionHandler":500,"./cmd/DeleteElementsHandler":501,"./cmd/DeleteShapeHandler":502,"./cmd/DistributeElementsHandler":503,"./cmd/LayoutConnectionHandler":504,"./cmd/MoveConnectionHandler":505,"./cmd/MoveElementsHandler":506,"./cmd/MoveShapeHandler":507,"./cmd/PasteHandler":509,"./cmd/ReconnectConnectionHandler":510,"./cmd/ReplaceShapeHandler":511,"./cmd/ResizeShapeHandler":512,"./cmd/SpaceToolHandler":513,"./cmd/ToggleShapeCollapseHandler":514,"./cmd/UpdateAttachmentHandler":515,"./cmd/UpdateWaypointsHandler":516,"lodash/collection/forEach":597}],495:[function(require,module,exports){
+},{"../../model":475,"./cmd/AlignElementsHandler":416,"./cmd/AppendShapeHandler":417,"./cmd/CreateConnectionHandler":418,"./cmd/CreateLabelHandler":419,"./cmd/CreateShapeHandler":420,"./cmd/DeleteConnectionHandler":421,"./cmd/DeleteElementsHandler":422,"./cmd/DeleteShapeHandler":423,"./cmd/DistributeElementsHandler":424,"./cmd/LayoutConnectionHandler":425,"./cmd/MoveConnectionHandler":426,"./cmd/MoveElementsHandler":427,"./cmd/MoveShapeHandler":428,"./cmd/PasteHandler":430,"./cmd/ReconnectConnectionHandler":431,"./cmd/ReplaceShapeHandler":432,"./cmd/ResizeShapeHandler":433,"./cmd/SpaceToolHandler":434,"./cmd/ToggleShapeCollapseHandler":435,"./cmd/UpdateAttachmentHandler":436,"./cmd/UpdateWaypointsHandler":437,"lodash/collection/forEach":518}],416:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -73565,7 +59948,7 @@ AlignElements.prototype.postExecute = function(context) {
 
 };
 
-},{"lodash/collection/forEach":597}],496:[function(require,module,exports){
+},{"lodash/collection/forEach":518}],417:[function(require,module,exports){
 'use strict';
 
 var any = require('lodash/collection/any');
@@ -73632,7 +60015,7 @@ function existsConnection(source, target) {
     return c.target === target;
   });
 }
-},{"./NoopHandler":508,"inherits":586,"lodash/collection/any":593}],497:[function(require,module,exports){
+},{"./NoopHandler":429,"inherits":507,"lodash/collection/any":514}],418:[function(require,module,exports){
 'use strict';
 
 
@@ -73694,7 +60077,7 @@ CreateConnectionHandler.prototype.revert = function(context) {
   connection.source = null;
   connection.target = null;
 };
-},{}],498:[function(require,module,exports){
+},{}],419:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -73767,7 +60150,7 @@ function ensureValidDimensions(label) {
     }
   });
 }
-},{"./CreateShapeHandler":499,"inherits":586}],499:[function(require,module,exports){
+},{"./CreateShapeHandler":420,"inherits":507}],420:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign');
@@ -73840,7 +60223,7 @@ CreateShapeHandler.prototype.revert = function(context) {
   // (3) remove form canvas
   this._canvas.removeShape(context.shape);
 };
-},{"lodash/object/assign":721}],500:[function(require,module,exports){
+},{"lodash/object/assign":642}],421:[function(require,module,exports){
 'use strict';
 
 var Collections = require('../../../util/Collections');
@@ -73913,7 +60296,7 @@ DeleteConnectionHandler.prototype.revert = function(context) {
   return connection;
 };
 
-},{"../../../util/Collections":563}],501:[function(require,module,exports){
+},{"../../../util/Collections":484}],422:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -73953,7 +60336,7 @@ DeleteElementsHandler.prototype.postExecute = function(context) {
     }
   });
 };
-},{"./NoopHandler":508,"inherits":586,"lodash/collection/forEach":597}],502:[function(require,module,exports){
+},{"./NoopHandler":429,"inherits":507,"lodash/collection/forEach":518}],423:[function(require,module,exports){
 'use strict';
 
 var Collections = require('../../../util/Collections');
@@ -74059,7 +60442,7 @@ DeleteShapeHandler.prototype.revert = function(context) {
   return shape;
 };
 
-},{"../../../util/Collections":563,"../../../util/Removal":577}],503:[function(require,module,exports){
+},{"../../../util/Collections":484,"../../../util/Removal":498}],424:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -74216,7 +60599,7 @@ DistributeElements.prototype.postExecute = function(context) {
 
 };
 
-},{"lodash/collection/forEach":597,"lodash/collection/sortBy":603}],504:[function(require,module,exports){
+},{"lodash/collection/forEach":518,"lodash/collection/sortBy":524}],425:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign');
@@ -74311,7 +60694,7 @@ function sendToFront(connection) {
   return insertIndex;
 }
 
-},{"lodash/object/assign":721}],505:[function(require,module,exports){
+},{"lodash/object/assign":642}],426:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -74393,7 +60776,7 @@ MoveConnectionHandler.prototype.revert = function(context) {
 
   return connection;
 };
-},{"../../../util/Collections":563,"lodash/collection/forEach":597}],506:[function(require,module,exports){
+},{"../../../util/Collections":484,"lodash/collection/forEach":518}],427:[function(require,module,exports){
 'use strict';
 
 var MoveHelper = require('./helper/MoveHelper');
@@ -74431,7 +60814,7 @@ MoveElementsHandler.prototype.postExecute = function(context) {
 MoveElementsHandler.prototype.execute = function(context) { };
 MoveElementsHandler.prototype.revert = function(context) { };
 
-},{"./helper/MoveHelper":518}],507:[function(require,module,exports){
+},{"./helper/MoveHelper":439}],428:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -74546,7 +60929,7 @@ MoveShapeHandler.prototype.getNewParent = function(context) {
   return context.newParent || context.shape.parent;
 };
 
-},{"../../../util/Collections":563,"./helper/AnchorsHelper":517,"./helper/MoveHelper":518,"lodash/collection/forEach":597,"lodash/object/assign":721,"lodash/object/pick":726}],508:[function(require,module,exports){
+},{"../../../util/Collections":484,"./helper/AnchorsHelper":438,"./helper/MoveHelper":439,"lodash/collection/forEach":518,"lodash/object/assign":642,"lodash/object/pick":647}],429:[function(require,module,exports){
 'use strict';
 
 function NoopHandler() {}
@@ -74555,7 +60938,7 @@ module.exports = NoopHandler;
 
 NoopHandler.prototype.execute = function() {};
 NoopHandler.prototype.revert = function() {};
-},{}],509:[function(require,module,exports){
+},{}],430:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -74840,7 +61223,7 @@ PasteHandler.prototype._getCreatedElement = function(id, tree) {
   return tree.createdElements[id] && tree.createdElements[id].element;
 };
 
-},{"./NoopHandler":508,"inherits":586,"lodash/collection/forEach":597,"lodash/collection/map":599,"lodash/collection/sortBy":603,"lodash/lang/clone":710}],510:[function(require,module,exports){
+},{"./NoopHandler":429,"inherits":507,"lodash/collection/forEach":518,"lodash/collection/map":520,"lodash/collection/sortBy":524,"lodash/lang/clone":631}],431:[function(require,module,exports){
 'use strict';
 
 var isArray = require('lodash/lang/isArray');
@@ -74915,7 +61298,7 @@ ReconnectConnectionHandler.prototype.revert = function(context) {
 
   return connection;
 };
-},{"lodash/lang/isArray":712}],511:[function(require,module,exports){
+},{"lodash/lang/isArray":633}],432:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -75073,7 +61456,7 @@ ReplaceShapeHandler.prototype.reconnectEnd = function(connection, newTarget, doc
   modeling.reconnectEnd(connection, newTarget, dockingPoint);
 };
 
-},{"lodash/collection/forEach":597}],512:[function(require,module,exports){
+},{"lodash/collection/forEach":518}],433:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -75177,7 +61560,7 @@ ResizeShapeHandler.prototype.revert = function(context) {
   return shape;
 };
 
-},{"./helper/AnchorsHelper":517,"lodash/collection/forEach":597,"lodash/object/assign":721}],513:[function(require,module,exports){
+},{"./helper/AnchorsHelper":438,"lodash/collection/forEach":518,"lodash/object/assign":642}],434:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -75228,7 +61611,7 @@ SpaceToolHandler.prototype.postExecute = function(context) {
 SpaceToolHandler.prototype.execute = function(context) {};
 SpaceToolHandler.prototype.revert = function(context) {};
 
-},{"../../space-tool/SpaceUtil":543,"lodash/collection/forEach":597}],514:[function(require,module,exports){
+},{"../../space-tool/SpaceUtil":464,"lodash/collection/forEach":518}],435:[function(require,module,exports){
 'use strict';
 
 /**
@@ -75314,7 +61697,7 @@ function restoreVisibility(elements, lastState) {
   });
 }
 
-},{}],515:[function(require,module,exports){
+},{}],436:[function(require,module,exports){
 'use strict';
 
 var Collections = require('../../../util/Collections');
@@ -75388,7 +61771,7 @@ function addAttacher(host, attacher, idx) {
   Collections.add(attachers, attacher, idx);
 }
 
-},{"../../../util/Collections":563}],516:[function(require,module,exports){
+},{"../../../util/Collections":484}],437:[function(require,module,exports){
 'use strict';
 
 function UpdateWaypointsHandler() { }
@@ -75416,7 +61799,7 @@ UpdateWaypointsHandler.prototype.revert = function(context) {
 
   return connection;
 };
-},{}],517:[function(require,module,exports){
+},{}],438:[function(require,module,exports){
 'use strict';
 
 var getNewAttachPoint = require('../../../../util/AttachUtil').getNewAttachPoint;
@@ -75487,7 +61870,7 @@ function safeGetWaypoints(connection) {
   return waypoints;
 }
 
-},{"../../../../util/AttachUtil":561}],518:[function(require,module,exports){
+},{"../../../../util/AttachUtil":482}],439:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -75586,7 +61969,7 @@ MoveHelper.prototype.getClosure = function(elements) {
   return Elements.getClosure(elements);
 };
 
-},{"../../../../util/Elements":566,"./AnchorsHelper":517,"lodash/collection/forEach":597}],519:[function(require,module,exports){
+},{"../../../../util/Elements":487,"./AnchorsHelper":438,"lodash/collection/forEach":518}],440:[function(require,module,exports){
 'use strict';
 
 var bind = require('lodash/function/bind');
@@ -75647,7 +62030,7 @@ MouseTracking.prototype._setMousePosition = function(event) {
   this._mouseY = event.layerY;
 };
 
-},{"lodash/function/bind":605}],520:[function(require,module,exports){
+},{"lodash/function/bind":526}],441:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -75655,7 +62038,7 @@ module.exports = {
   mouseTracking: [ 'type', require('./MouseTracking') ]
 };
 
-},{"./MouseTracking":519}],521:[function(require,module,exports){
+},{"./MouseTracking":440}],442:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -75879,7 +62262,7 @@ function removeNested(elements) {
   });
 }
 
-},{"../../util/Event":567,"lodash/collection/filter":595,"lodash/collection/groupBy":598,"lodash/object/assign":721}],522:[function(require,module,exports){
+},{"../../util/Event":488,"lodash/collection/filter":516,"lodash/collection/groupBy":519,"lodash/object/assign":642}],443:[function(require,module,exports){
 'use strict';
 
 var flatten = require('lodash/array/flatten'),
@@ -76099,7 +62482,7 @@ function isConnection(element) {
   return element.waypoints;
 }
 
-},{"../../util/Elements":566,"../../util/SvgTransformUtil":579,"lodash/array/flatten":588,"lodash/collection/filter":595,"lodash/collection/find":596,"lodash/collection/forEach":597,"lodash/collection/groupBy":598,"lodash/collection/map":599,"lodash/collection/size":601,"tiny-svg/lib/append":752,"tiny-svg/lib/attr":754,"tiny-svg/lib/clear":756,"tiny-svg/lib/create":758}],523:[function(require,module,exports){
+},{"../../util/Elements":487,"../../util/SvgTransformUtil":500,"lodash/array/flatten":509,"lodash/collection/filter":516,"lodash/collection/find":517,"lodash/collection/forEach":518,"lodash/collection/groupBy":519,"lodash/collection/map":520,"lodash/collection/size":522,"tiny-svg/lib/append":673,"tiny-svg/lib/attr":675,"tiny-svg/lib/clear":677,"tiny-svg/lib/create":679}],444:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../interaction-events'),
@@ -76114,7 +62497,7 @@ module.exports = {
   movePreview: [ 'type', require('./MovePreview') ]
 };
 
-},{"../dragging":485,"../interaction-events":489,"../outline":525,"../preview-support":533,"../rules":538,"../selection":542,"./Move":521,"./MovePreview":522}],524:[function(require,module,exports){
+},{"../dragging":406,"../interaction-events":410,"../outline":446,"../preview-support":454,"../rules":459,"../selection":463,"./Move":442,"./MovePreview":443}],445:[function(require,module,exports){
 'use strict';
 
 var getBBox = require('../../util/Elements').getBBox;
@@ -76237,9 +62620,14 @@ Outline.$inject = ['eventBus', 'styles', 'elementRegistry'];
 
 module.exports = Outline;
 
-},{"../../util/Elements":566,"lodash/object/assign":721,"min-dom/lib/query":739,"tiny-svg/lib/append":752,"tiny-svg/lib/attr":754,"tiny-svg/lib/create":758}],525:[function(require,module,exports){
-arguments[4][269][0].apply(exports,arguments)
-},{"./Outline":524,"dup":269}],526:[function(require,module,exports){
+},{"../../util/Elements":487,"lodash/object/assign":642,"min-dom/lib/query":660,"tiny-svg/lib/append":673,"tiny-svg/lib/attr":675,"tiny-svg/lib/create":679}],446:[function(require,module,exports){
+'use strict';
+
+module.exports = {
+  __init__: [ 'outline' ],
+  outline: [ 'type', require('./Outline') ]
+};
+},{"./Outline":445}],447:[function(require,module,exports){
 'use strict';
 
 var isArray = require('lodash/lang/isArray'),
@@ -76790,9 +63178,12 @@ Overlays.prototype._init = function() {
   eventBus.on('diagram.clear', this.clear, this);
 };
 
-},{"../../util/Elements":566,"../../util/IdGenerator":570,"lodash/collection/filter":595,"lodash/collection/find":596,"lodash/collection/forEach":597,"lodash/lang/isArray":712,"lodash/lang/isObject":716,"lodash/lang/isString":718,"lodash/object/assign":721,"min-dom/lib/attr":731,"min-dom/lib/classes":732,"min-dom/lib/clear":733,"min-dom/lib/domify":736,"min-dom/lib/remove":740}],527:[function(require,module,exports){
-arguments[4][271][0].apply(exports,arguments)
-},{"./Overlays":526,"dup":271}],528:[function(require,module,exports){
+},{"../../util/Elements":487,"../../util/IdGenerator":491,"lodash/collection/filter":516,"lodash/collection/find":517,"lodash/collection/forEach":518,"lodash/lang/isArray":633,"lodash/lang/isObject":637,"lodash/lang/isString":639,"lodash/object/assign":642,"min-dom/lib/attr":652,"min-dom/lib/classes":653,"min-dom/lib/clear":654,"min-dom/lib/domify":657,"min-dom/lib/remove":661}],448:[function(require,module,exports){
+module.exports = {
+  __init__: [ 'overlays' ],
+  overlays: [ 'type', require('./Overlays') ]
+};
+},{"./Overlays":447}],449:[function(require,module,exports){
 'use strict';
 
 var isFunction = require('lodash/lang/isFunction'),
@@ -77133,7 +63524,7 @@ function addClasses(element, classNames) {
   });
 }
 
-},{"lodash/collection/forEach":597,"lodash/lang/isArray":712,"lodash/lang/isFunction":713,"min-dom/lib/attr":731,"min-dom/lib/classes":732,"min-dom/lib/clear":733,"min-dom/lib/delegate":735,"min-dom/lib/domify":736,"min-dom/lib/event":737,"min-dom/lib/matches":738,"min-dom/lib/query":739}],529:[function(require,module,exports){
+},{"lodash/collection/forEach":518,"lodash/lang/isArray":633,"lodash/lang/isFunction":634,"min-dom/lib/attr":652,"min-dom/lib/classes":653,"min-dom/lib/clear":654,"min-dom/lib/delegate":656,"min-dom/lib/domify":657,"min-dom/lib/event":658,"min-dom/lib/matches":659,"min-dom/lib/query":660}],450:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -77142,7 +63533,7 @@ module.exports = {
   palette: [ 'type', require('./Palette') ]
 };
 
-},{"../tool-manager":545,"./Palette":528}],530:[function(require,module,exports){
+},{"../tool-manager":466,"./Palette":449}],451:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -77578,7 +63969,7 @@ PopupMenu.prototype._unbindHandlers = function() {
 
 module.exports = PopupMenu;
 
-},{"lodash/collection/find":596,"lodash/collection/forEach":597,"lodash/object/assign":721,"min-dom/lib/attr":731,"min-dom/lib/classes":732,"min-dom/lib/delegate":735,"min-dom/lib/domify":736,"min-dom/lib/remove":740}],531:[function(require,module,exports){
+},{"lodash/collection/find":517,"lodash/collection/forEach":518,"lodash/object/assign":642,"min-dom/lib/attr":652,"min-dom/lib/classes":653,"min-dom/lib/delegate":656,"min-dom/lib/domify":657,"min-dom/lib/remove":661}],452:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -77586,7 +63977,7 @@ module.exports = {
   popupMenu: [ 'type', require('./PopupMenu') ]
 };
 
-},{"./PopupMenu":530}],532:[function(require,module,exports){
+},{"./PopupMenu":451}],453:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -77706,7 +64097,7 @@ function isConnection(element) {
   return element.waypoints;
 }
 
-},{"lodash/collection/forEach":597,"tiny-svg/lib/append":752,"tiny-svg/lib/attr":754,"tiny-svg/lib/clone":757,"tiny-svg/lib/create":758}],533:[function(require,module,exports){
+},{"lodash/collection/forEach":518,"tiny-svg/lib/append":673,"tiny-svg/lib/attr":675,"tiny-svg/lib/clone":678,"tiny-svg/lib/create":679}],454:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -77714,7 +64105,7 @@ module.exports = {
   previewSupport: [ 'type', require('./PreviewSupport') ]
 };
 
-},{"./PreviewSupport":532}],534:[function(require,module,exports){
+},{"./PreviewSupport":453}],455:[function(require,module,exports){
 'use strict';
 
 
@@ -77763,7 +64154,7 @@ Replace.prototype.replaceElement = function(oldElement, newElementData, options)
   return newElement;
 };
 
-},{}],535:[function(require,module,exports){
+},{}],456:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -77771,7 +64162,7 @@ module.exports = {
   replace: [ 'type', require('./Replace') ]
 };
 
-},{"./Replace":534}],536:[function(require,module,exports){
+},{"./Replace":455}],457:[function(require,module,exports){
 
 'use strict';
 
@@ -77864,7 +64255,7 @@ RuleProvider.prototype.addRule = function(actions, priority, fn) {
  * Implement this method to add new rules during provider initialization.
  */
 RuleProvider.prototype.init = function() {};
-},{"../../command/CommandInterceptor":452,"inherits":586}],537:[function(require,module,exports){
+},{"../../command/CommandInterceptor":373,"inherits":507}],458:[function(require,module,exports){
 'use strict';
 
 /**
@@ -77915,17 +64306,192 @@ Rules.prototype.allowed = function(action, context) {
   // map undefined to true, i.e. no rules
   return allowed === undefined ? true : allowed;
 };
-},{}],538:[function(require,module,exports){
+},{}],459:[function(require,module,exports){
 module.exports = {
   __init__: [ 'rules' ],
   rules: [ 'type', require('./Rules') ]
 };
 
-},{"./Rules":537}],539:[function(require,module,exports){
-arguments[4][272][0].apply(exports,arguments)
-},{"dup":272,"lodash/collection/forEach":597,"lodash/lang/isArray":712}],540:[function(require,module,exports){
-arguments[4][273][0].apply(exports,arguments)
-},{"../../util/Mouse":574,"dup":273,"lodash/collection/find":596}],541:[function(require,module,exports){
+},{"./Rules":458}],460:[function(require,module,exports){
+'use strict';
+
+var isArray = require('lodash/lang/isArray'),
+    forEach = require('lodash/collection/forEach');
+
+
+/**
+ * A service that offers the current selection in a diagram.
+ * Offers the api to control the selection, too.
+ *
+ * @class
+ *
+ * @param {EventBus} eventBus the event bus
+ */
+function Selection(eventBus) {
+
+  this._eventBus = eventBus;
+
+  this._selectedElements = [];
+
+  var self = this;
+
+  eventBus.on([ 'shape.remove', 'connection.remove' ], function(e) {
+    var element = e.element;
+    self.deselect(element);
+  });
+
+  eventBus.on([ 'diagram.clear' ], function(e) {
+    self.select(null);
+  });
+}
+
+Selection.$inject = [ 'eventBus' ];
+
+module.exports = Selection;
+
+
+Selection.prototype.deselect = function(element) {
+  var selectedElements = this._selectedElements;
+
+  var idx = selectedElements.indexOf(element);
+
+  if (idx !== -1) {
+    var oldSelection = selectedElements.slice();
+
+    selectedElements.splice(idx, 1);
+
+    this._eventBus.fire('selection.changed', { oldSelection: oldSelection, newSelection: selectedElements });
+  }
+};
+
+
+Selection.prototype.get = function() {
+  return this._selectedElements;
+};
+
+Selection.prototype.isSelected = function(element) {
+  return this._selectedElements.indexOf(element) !== -1;
+};
+
+
+/**
+ * This method selects one or more elements on the diagram.
+ *
+ * By passing an additional add parameter you can decide whether or not the element(s)
+ * should be added to the already existing selection or not.
+ *
+ * @method Selection#select
+ *
+ * @param  {Object|Object[]} elements element or array of elements to be selected
+ * @param  {boolean} [add] whether the element(s) should be appended to the current selection, defaults to false
+ */
+Selection.prototype.select = function(elements, add) {
+  var selectedElements = this._selectedElements,
+      oldSelection = selectedElements.slice();
+
+  if (!isArray(elements)) {
+    elements = elements ? [ elements ] : [];
+  }
+
+  // selection may be cleared by passing an empty array or null
+  // to the method
+  if (add) {
+    forEach(elements, function(element) {
+      if (selectedElements.indexOf(element) !== -1) {
+        // already selected
+        return;
+      } else {
+        selectedElements.push(element);
+      }
+    });
+  } else {
+    this._selectedElements = selectedElements = elements.slice();
+  }
+
+  this._eventBus.fire('selection.changed', { oldSelection: oldSelection, newSelection: selectedElements });
+};
+
+},{"lodash/collection/forEach":518,"lodash/lang/isArray":633}],461:[function(require,module,exports){
+'use strict';
+
+var hasPrimaryModifier = require('../../util/Mouse').hasPrimaryModifier;
+
+var find = require('lodash/collection/find');
+
+
+function SelectionBehavior(eventBus, selection, canvas, elementRegistry) {
+
+  eventBus.on('create.end', 500, function(e) {
+
+    // select the created shape after a
+    // successful create operation
+    if (e.context.canExecute) {
+      selection.select(e.context.shape);
+    }
+  });
+
+  eventBus.on('connect.end', 500, function(e) {
+
+    // select the connect end target
+    // after a connect operation
+    if (e.context.canExecute && e.context.target) {
+      selection.select(e.context.target);
+    }
+  });
+
+  eventBus.on('shape.move.end', 500, function(e) {
+    var previousSelection = e.previousSelection || [];
+
+    var shape = elementRegistry.get(e.context.shape.id);
+
+    // make sure at least the main moved element is being
+    // selected after a move operation
+    var inSelection = find(previousSelection, function(selectedShape) {
+      return shape.id === selectedShape.id;
+    });
+
+    if (!inSelection) {
+      selection.select(shape);
+    }
+  });
+
+  // Shift + click selection
+  eventBus.on('element.click', function(event) {
+
+    var element = event.element;
+
+    // do not select the root element
+    // or connections
+    if (element === canvas.getRootElement()) {
+      element = null;
+    }
+
+    var isSelected = selection.isSelected(element),
+        isMultiSelect = selection.get().length > 1;
+
+    // mouse-event: SELECTION_KEY
+    var add = hasPrimaryModifier(event);
+
+    // select OR deselect element in multi selection
+    if (isSelected && isMultiSelect) {
+      if (add) {
+        return selection.deselect(element);
+      } else {
+        return selection.select(element);
+      }
+    } else
+    if (!isSelected) {
+      selection.select(element, add);
+    } else {
+      selection.deselect(element);
+    }
+  });
+}
+
+SelectionBehavior.$inject = [ 'eventBus', 'selection', 'canvas', 'elementRegistry' ];
+module.exports = SelectionBehavior;
+
+},{"../../util/Mouse":495,"lodash/collection/find":517}],462:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -78002,9 +64568,19 @@ SelectionVisuals.$inject = [
 
 module.exports = SelectionVisuals;
 
-},{"lodash/collection/forEach":597}],542:[function(require,module,exports){
-arguments[4][275][0].apply(exports,arguments)
-},{"../interaction-events":489,"../outline":525,"./Selection":539,"./SelectionBehavior":540,"./SelectionVisuals":541,"dup":275}],543:[function(require,module,exports){
+},{"lodash/collection/forEach":518}],463:[function(require,module,exports){
+module.exports = {
+  __init__: [ 'selectionVisuals', 'selectionBehavior' ],
+  __depends__: [
+    require('../interaction-events'),
+    require('../outline')
+  ],
+  selection: [ 'type', require('./Selection') ],
+  selectionVisuals: [ 'type', require('./SelectionVisuals') ],
+  selectionBehavior: [ 'type', require('./SelectionBehavior') ]
+};
+
+},{"../interaction-events":410,"../outline":446,"./Selection":460,"./SelectionBehavior":461,"./SelectionVisuals":462}],464:[function(require,module,exports){
 'use strict';
 
 /**
@@ -78094,7 +64670,7 @@ module.exports.resizeBounds = function(bounds, direction, delta) {
     throw new Error('unrecognized direction: ' + direction);
   }
 };
-},{}],544:[function(require,module,exports){
+},{}],465:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -78191,7 +64767,7 @@ ToolManager.prototype.bindEvents = function(name, events) {
   }, this);
 };
 
-},{"lodash/collection/forEach":597}],545:[function(require,module,exports){
+},{"lodash/collection/forEach":518}],466:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -78200,7 +64776,7 @@ module.exports = {
   toolManager: [ 'type', require('./ToolManager') ]
 };
 
-},{"../dragging":485,"./ToolManager":544}],546:[function(require,module,exports){
+},{"../dragging":406,"./ToolManager":465}],467:[function(require,module,exports){
 'use strict';
 
 var svgAppend = require('tiny-svg/lib/append'),
@@ -78259,7 +64835,7 @@ TouchFix.prototype.addBBoxMarker = function(svg) {
   svgAppend(svg, rect2);
 };
 
-},{"tiny-svg/lib/append":752,"tiny-svg/lib/attr":754,"tiny-svg/lib/create":758}],547:[function(require,module,exports){
+},{"tiny-svg/lib/append":673,"tiny-svg/lib/attr":675,"tiny-svg/lib/create":679}],468:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -78590,18 +65166,18 @@ TouchInteractionEvents.$inject = [
 
 module.exports = TouchInteractionEvents;
 
-},{"../../util/Event":567,"hammerjs":585,"lodash/collection/forEach":597,"min-dom/lib/closest":734,"min-dom/lib/event":737}],548:[function(require,module,exports){
+},{"../../util/Event":488,"hammerjs":506,"lodash/collection/forEach":518,"min-dom/lib/closest":655,"min-dom/lib/event":658}],469:[function(require,module,exports){
 module.exports = {
   __depends__: [ require('../interaction-events') ],
   __init__: [ 'touchInteractionEvents' ],
   touchInteractionEvents: [ 'type', require('./TouchInteractionEvents') ],
   touchFix: [ 'type', require('./TouchFix') ]
 };
-},{"../interaction-events":489,"./TouchFix":546,"./TouchInteractionEvents":547}],549:[function(require,module,exports){
+},{"../interaction-events":410,"./TouchFix":467,"./TouchInteractionEvents":468}],470:[function(require,module,exports){
 module.exports = {
   translate: [ 'value', require('./translate') ]
 };
-},{"./translate":550}],550:[function(require,module,exports){
+},{"./translate":471}],471:[function(require,module,exports){
 'use strict';
 
 /**
@@ -78630,7 +65206,7 @@ module.exports = function translate(template, replacements) {
     return replacements[key] || '{' + key + '}';
   });
 };
-},{}],551:[function(require,module,exports){
+},{}],472:[function(require,module,exports){
 'use strict';
 
 var getMid = require('./LayoutUtil').getMid;
@@ -78669,7 +65245,7 @@ BaseLayouter.prototype.layoutConnection = function(connection, hints) {
   ];
 };
 
-},{"./LayoutUtil":553}],552:[function(require,module,exports){
+},{"./LayoutUtil":474}],473:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign');
@@ -78766,7 +65342,7 @@ CroppingConnectionDocking.prototype._getGfx = function(element) {
   return this._elementRegistry.getGraphics(element);
 };
 
-},{"./LayoutUtil":553,"lodash/object/assign":721}],553:[function(require,module,exports){
+},{"./LayoutUtil":474,"lodash/object/assign":642}],474:[function(require,module,exports){
 'use strict';
 
 var isObject = require('lodash/lang/isObject'),
@@ -78956,9 +65532,223 @@ function getIntersections(a, b) {
 
 module.exports.getIntersections = getIntersections;
 
-},{"../util/Geometry":568,"../util/Intersection":571,"lodash/collection/sortBy":603,"lodash/lang/isObject":716}],554:[function(require,module,exports){
-arguments[4][276][0].apply(exports,arguments)
-},{"dup":276,"inherits":586,"lodash/object/assign":721,"object-refs":749}],555:[function(require,module,exports){
+},{"../util/Geometry":489,"../util/Intersection":492,"lodash/collection/sortBy":524,"lodash/lang/isObject":637}],475:[function(require,module,exports){
+'use strict';
+
+var assign = require('lodash/object/assign'),
+    inherits = require('inherits');
+
+var Refs = require('object-refs');
+
+var parentRefs = new Refs({ name: 'children', enumerable: true, collection: true }, { name: 'parent' }),
+    labelRefs = new Refs({ name: 'label', enumerable: true }, { name: 'labelTarget' }),
+    attacherRefs = new Refs({ name: 'attachers', collection: true }, { name: 'host' }),
+    outgoingRefs = new Refs({ name: 'outgoing', collection: true }, { name: 'source' }),
+    incomingRefs = new Refs({ name: 'incoming', collection: true }, { name: 'target' });
+
+/**
+ * @namespace djs.model
+ */
+
+/**
+ * @memberOf djs.model
+ */
+
+/**
+ * The basic graphical representation
+ *
+ * @class
+ *
+ * @abstract
+ */
+function Base() {
+
+  /**
+   * The object that backs up the shape
+   *
+   * @name Base#businessObject
+   * @type Object
+   */
+  Object.defineProperty(this, 'businessObject', {
+    writable: true
+  });
+
+  /**
+   * The parent shape
+   *
+   * @name Base#parent
+   * @type Shape
+   */
+  parentRefs.bind(this, 'parent');
+
+  /**
+   * @name Base#label
+   * @type Label
+   */
+  labelRefs.bind(this, 'label');
+
+  /**
+   * The list of outgoing connections
+   *
+   * @name Base#outgoing
+   * @type Array<Connection>
+   */
+  outgoingRefs.bind(this, 'outgoing');
+
+  /**
+   * The list of incoming connections
+   *
+   * @name Base#incoming
+   * @type Array<Connection>
+   */
+  incomingRefs.bind(this, 'incoming');
+}
+
+
+/**
+ * A graphical object
+ *
+ * @class
+ * @constructor
+ *
+ * @extends Base
+ */
+function Shape() {
+  Base.call(this);
+
+  /**
+   * The list of children
+   *
+   * @name Shape#children
+   * @type Array<Base>
+   */
+  parentRefs.bind(this, 'children');
+
+  /**
+   * @name Shape#host
+   * @type Shape
+   */
+  attacherRefs.bind(this, 'host');
+
+  /**
+   * @name Shape#attachers
+   * @type Shape
+   */
+  attacherRefs.bind(this, 'attachers');
+}
+
+inherits(Shape, Base);
+
+
+/**
+ * A root graphical object
+ *
+ * @class
+ * @constructor
+ *
+ * @extends Shape
+ */
+function Root() {
+  Shape.call(this);
+}
+
+inherits(Root, Shape);
+
+
+/**
+ * A label for an element
+ *
+ * @class
+ * @constructor
+ *
+ * @extends Shape
+ */
+function Label() {
+  Shape.call(this);
+
+  /**
+   * The labeled element
+   *
+   * @name Label#labelTarget
+   * @type Base
+   */
+  labelRefs.bind(this, 'labelTarget');
+}
+
+inherits(Label, Shape);
+
+
+/**
+ * A connection between two elements
+ *
+ * @class
+ * @constructor
+ *
+ * @extends Base
+ */
+function Connection() {
+  Base.call(this);
+
+  /**
+   * The element this connection originates from
+   *
+   * @name Connection#source
+   * @type Base
+   */
+  outgoingRefs.bind(this, 'source');
+
+  /**
+   * The element this connection points to
+   *
+   * @name Connection#target
+   * @type Base
+   */
+  incomingRefs.bind(this, 'target');
+}
+
+inherits(Connection, Base);
+
+
+var types = {
+  connection: Connection,
+  shape: Shape,
+  label: Label,
+  root: Root
+};
+
+/**
+ * Creates a new model element of the specified type
+ *
+ * @method create
+ *
+ * @example
+ *
+ * var shape1 = Model.create('shape', { x: 10, y: 10, width: 100, height: 100 });
+ * var shape2 = Model.create('shape', { x: 210, y: 210, width: 100, height: 100 });
+ *
+ * var connection = Model.create('connection', { waypoints: [ { x: 110, y: 55 }, {x: 210, y: 55 } ] });
+ *
+ * @param  {String} type lower-cased model name
+ * @param  {Object} attrs attributes to initialize the new model instance with
+ *
+ * @return {Base} the new model instance
+ */
+module.exports.create = function(type, attrs) {
+  var Type = types[type];
+  if (!Type) {
+    throw new Error('unknown type: <' + type + '>');
+  }
+  return assign(new Type(), attrs);
+};
+
+
+module.exports.Base = Base;
+module.exports.Root = Root;
+module.exports.Shape = Shape;
+module.exports.Connection = Connection;
+module.exports.Label = Label;
+
+},{"inherits":507,"lodash/object/assign":642,"object-refs":670}],476:[function(require,module,exports){
 'use strict';
 
 var Cursor = require('../../util/Cursor'),
@@ -79055,19 +65845,234 @@ MoveCanvas.$inject = [ 'eventBus', 'canvas' ];
 
 module.exports = MoveCanvas;
 
-},{"../../util/ClickTrap":562,"../../util/Cursor":565,"../../util/Event":567,"../../util/Math":573,"min-dom/lib/closest":734,"min-dom/lib/event":737}],556:[function(require,module,exports){
-arguments[4][278][0].apply(exports,arguments)
-},{"./MoveCanvas":555,"dup":278}],557:[function(require,module,exports){
+},{"../../util/ClickTrap":483,"../../util/Cursor":486,"../../util/Event":488,"../../util/Math":494,"min-dom/lib/closest":655,"min-dom/lib/event":658}],477:[function(require,module,exports){
+module.exports = {
+  __init__: [ 'moveCanvas' ],
+  moveCanvas: [ 'type', require('./MoveCanvas') ]
+};
+},{"./MoveCanvas":476}],478:[function(require,module,exports){
 module.exports = {
   __depends__: [ require('../../features/touch') ]
 };
-},{"../../features/touch":548}],558:[function(require,module,exports){
-arguments[4][279][0].apply(exports,arguments)
-},{"../../util/Math":573,"../../util/Mouse":574,"../../util/Platform":575,"./ZoomUtil":559,"dup":279,"lodash/function/bind":605,"min-dom/lib/closest":734,"min-dom/lib/event":737}],559:[function(require,module,exports){
-arguments[4][280][0].apply(exports,arguments)
-},{"../../util/Math":573,"dup":280}],560:[function(require,module,exports){
-arguments[4][281][0].apply(exports,arguments)
-},{"./ZoomScroll":558,"dup":281}],561:[function(require,module,exports){
+},{"../../features/touch":469}],479:[function(require,module,exports){
+'use strict';
+
+var domEvent = require('min-dom/lib/event'),
+    domClosest = require('min-dom/lib/closest');
+
+var hasPrimaryModifier = require('../../util/Mouse').hasPrimaryModifier,
+    hasSecondaryModifier = require('../../util/Mouse').hasSecondaryModifier;
+
+var isMac = require('../../util/Platform').isMac;
+
+var getStepRange = require('./ZoomUtil').getStepRange,
+    cap = require('./ZoomUtil').cap;
+
+var log10 = require('../../util/Math').log10;
+
+var bind = require('lodash/function/bind');
+
+var RANGE = { min: 0.2, max: 4 },
+    NUM_STEPS = 10;
+
+
+/**
+ * An implementation of zooming and scrolling within the
+ * {@link Canvas} via the mouse wheel.
+ *
+ * Mouse wheel zooming / scrolling may be disabled using
+ * the {@link toggle(enabled)} method.
+ *
+ * Additionally users can define the initial enabled state
+ * by passing `{ zoomScroll: { enabled: false } }` at diagram
+ * initialization.
+ *
+ * @param {EventBus} eventBus
+ * @param {Canvas} canvas
+ * @param {Object} config
+ */
+function ZoomScroll(eventBus, canvas, config) {
+
+  this._enabled = false;
+
+  this._canvas = canvas;
+  this._container = canvas._container;
+
+  this._handleWheel = bind(this._handleWheel, this);
+
+  var newEnabled = !config || config.enabled !== false;
+
+  var self = this;
+
+  eventBus.on('canvas.init', function(e) {
+    self._init(newEnabled);
+  });
+}
+
+ZoomScroll.$inject = [ 'eventBus', 'canvas', 'config.zoomScroll' ];
+
+module.exports = ZoomScroll;
+
+ZoomScroll.prototype.scroll = function scroll(delta) {
+  this._canvas.scroll(delta);
+};
+
+
+ZoomScroll.prototype.reset = function reset() {
+  this._canvas.zoom('fit-viewport');
+};
+
+
+ZoomScroll.prototype.zoom = function zoom(direction, position) {
+  var canvas = this._canvas;
+  var currentZoom = canvas.zoom(false);
+
+  var factor = Math.pow(1 + Math.abs(direction) , direction > 0 ? 1 : -1);
+
+  canvas.zoom(cap(RANGE, currentZoom * factor), position);
+};
+
+
+ZoomScroll.prototype._handleWheel = function handleWheel(event) {
+  // event is already handled by '.djs-scrollable'
+  if (domClosest(event.target, '.djs-scrollable', true)) {
+    return;
+  }
+
+  var element = this._container;
+
+  event.preventDefault();
+
+  // mouse-event: SELECTION_KEY
+  // mouse-event: AND_KEY
+  var isVerticalScroll = hasPrimaryModifier(event),
+      isHorizontalScroll = hasSecondaryModifier(event);
+
+  var factor;
+
+  if (isVerticalScroll || isHorizontalScroll) {
+
+    if (isMac) {
+      factor = event.deltaMode === 0 ? 1.25 : 50;
+    } else {
+      factor = event.deltaMode === 0 ? 1/40 : 1/2;
+    }
+
+    var delta = {};
+
+    if (isHorizontalScroll) {
+      delta.dx = (factor * (event.deltaX || event.deltaY));
+    } else {
+      delta.dy = (factor * event.deltaY);
+    }
+    this.scroll(delta);
+  } else {
+    factor = (event.deltaMode === 0 ? 1/40 : 1/2);
+
+    var elementRect = element.getBoundingClientRect();
+
+    var offset =  {
+      x: event.clientX - elementRect.left,
+      y: event.clientY - elementRect.top
+    };
+
+    // zoom in relative to diagram {x,y} coordinates
+    this.zoom(event.deltaY * factor / (-5), offset);
+  }
+};
+
+/**
+ * Zoom along fixed zoom steps
+ *
+ * @param {Integer} direction zoom direction (1 for zooming in, -1 for out)
+ */
+ZoomScroll.prototype.stepZoom = function stepZoom(direction, position) {
+
+  var canvas = this._canvas,
+      stepRange = getStepRange(RANGE, NUM_STEPS);
+
+  direction = direction > 0 ? 1 : -1;
+
+  var currentLinearZoomLevel = log10(canvas.zoom());
+
+  // snap to a proximate zoom step
+  var newLinearZoomLevel = Math.round(currentLinearZoomLevel / stepRange) * stepRange;
+
+  // increase or decrease one zoom step in the given direction
+  newLinearZoomLevel += stepRange * direction;
+
+  // calculate the absolute logarithmic zoom level based on the linear zoom level
+  // (e.g. 2 for an absolute x2 zoom)
+  var newLogZoomLevel = Math.pow(10, newLinearZoomLevel);
+
+  canvas.zoom(cap(RANGE, newLogZoomLevel), position);
+};
+
+
+/**
+ * Toggle the zoom scroll ability via mouse wheel.
+ *
+ * @param  {Boolean} [newEnabled] new enabled state
+ */
+ZoomScroll.prototype.toggle = function toggle(newEnabled) {
+
+  var element = this._container;
+  var handleWheel = this._handleWheel;
+
+  var oldEnabled = this._enabled;
+
+  if (typeof newEnabled === 'undefined') {
+    newEnabled = !oldEnabled;
+  }
+
+  // only react on actual changes
+  if (oldEnabled !== newEnabled) {
+
+    // add or remove wheel listener based on
+    // changed enabled state
+    domEvent[newEnabled ? 'bind' : 'unbind'](element, 'wheel', handleWheel, false);
+  }
+
+  this._enabled = newEnabled;
+
+  return newEnabled;
+};
+
+
+ZoomScroll.prototype._init = function(newEnabled) {
+  this.toggle(newEnabled);
+};
+
+},{"../../util/Math":494,"../../util/Mouse":495,"../../util/Platform":496,"./ZoomUtil":480,"lodash/function/bind":526,"min-dom/lib/closest":655,"min-dom/lib/event":658}],480:[function(require,module,exports){
+'use strict';
+
+
+var log10 = require('../../util/Math').log10;
+
+/**
+ * Get the linear range between two zoom steps based on the
+ * total number of zoom steps (defined as NUM_STEPS)
+ */
+module.exports.getStepRange = function(range, steps) {
+
+  var minLinearRange = log10(range.min),
+      maxLinearRange = log10(range.max);
+
+  var absoluteLinearRange = Math.abs(minLinearRange) + Math.abs(maxLinearRange);
+
+  return absoluteLinearRange / steps;
+};
+
+module.exports.cap = function(range, scale) {
+  return Math.max(range.min, Math.min(range.max, scale));
+};
+
+},{"../../util/Math":494}],481:[function(require,module,exports){
+module.exports = {
+  __init__: [ 'zoomScroll' ],
+  zoomScroll: [ 'type', require('./ZoomScroll') ]
+};
+},{"./ZoomScroll":479}],482:[function(require,module,exports){
 'use strict';
 
 var roundPoint = require('../layout/LayoutUtil').roundPoint;
@@ -79139,11 +66144,129 @@ function getNewAttachShapeDelta(shape, oldBounds, newBounds) {
 
 module.exports.getNewAttachShapeDelta = getNewAttachShapeDelta;
 
-},{"../layout/LayoutUtil":553,"./PositionUtil":576}],562:[function(require,module,exports){
-arguments[4][282][0].apply(exports,arguments)
-},{"./Event":567,"dup":282,"min-dom/lib/event":737}],563:[function(require,module,exports){
-arguments[4][283][0].apply(exports,arguments)
-},{"dup":283}],564:[function(require,module,exports){
+},{"../layout/LayoutUtil":474,"./PositionUtil":497}],483:[function(require,module,exports){
+'use strict';
+
+var domEvent = require('min-dom/lib/event'),
+    stopEvent = require('./Event').stopEvent;
+
+function trap(event) {
+  stopEvent(event);
+
+  toggle(false);
+}
+
+function toggle(active) {
+  domEvent[active ? 'bind' : 'unbind'](document.body, 'click', trap, true);
+}
+
+/**
+ * Installs a click trap that prevents a ghost click following a dragging operation.
+ *
+ * @return {Function} a function to immediately remove the installed trap.
+ */
+function install() {
+
+  toggle(true);
+
+  return function() {
+    toggle(false);
+  };
+}
+
+module.exports.install = install;
+},{"./Event":488,"min-dom/lib/event":658}],484:[function(require,module,exports){
+'use strict';
+
+/**
+ * Failsafe remove an element from a collection
+ *
+ * @param  {Array<Object>} [collection]
+ * @param  {Object} [element]
+ *
+ * @return {Number} the previous index of the element
+ */
+module.exports.remove = function(collection, element) {
+
+  if (!collection || !element) {
+    return -1;
+  }
+
+  var idx = collection.indexOf(element);
+
+  if (idx !== -1) {
+    collection.splice(idx, 1);
+  }
+
+  return idx;
+};
+
+/**
+ * Fail save add an element to the given connection, ensuring
+ * it does not yet exist.
+ *
+ * @param {Array<Object>} collection
+ * @param {Object} element
+ * @param {Number} idx
+ */
+module.exports.add = function(collection, element, idx) {
+
+  if (!collection || !element) {
+    return;
+  }
+
+  if (typeof idx !== 'number') {
+    idx = -1;
+  }
+
+  var currentIdx = collection.indexOf(element);
+
+  if (currentIdx !== -1) {
+
+    if (currentIdx === idx) {
+      // nothing to do, position has not changed
+      return;
+    } else {
+
+      if (idx !== -1) {
+        // remove from current position
+        collection.splice(currentIdx, 1);
+      } else {
+        // already exists in collection
+        return;
+      }
+    }
+  }
+
+  if (idx !== -1) {
+    // insert at specified position
+    collection.splice(idx, 0, element);
+  } else {
+    // push to end
+    collection.push(element);
+  }
+};
+
+
+/**
+ * Fail save get the index of an element in a collection.
+ *
+ * @param {Array<Object>} collection
+ * @param {Object} element
+ *
+ * @return {Number} the index or -1 if collection or element do
+ *                  not exist or the element is not contained.
+ */
+module.exports.indexOf = function(collection, element) {
+
+  if (!collection || !element) {
+    return -1;
+  }
+
+  return collection.indexOf(element);
+};
+
+},{}],485:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -79189,13 +66312,404 @@ function getTopLevel(elements) {
 
 module.exports.getTopLevel = getTopLevel;
 
-},{"lodash/collection/forEach":597}],565:[function(require,module,exports){
-arguments[4][284][0].apply(exports,arguments)
-},{"dup":284,"min-dom/lib/classes":732}],566:[function(require,module,exports){
-arguments[4][285][0].apply(exports,arguments)
-},{"dup":285,"lodash/collection/forEach":597,"lodash/collection/groupBy":598,"lodash/lang/isArray":712,"lodash/lang/isNumber":715}],567:[function(require,module,exports){
-arguments[4][286][0].apply(exports,arguments)
-},{"dup":286}],568:[function(require,module,exports){
+},{"lodash/collection/forEach":518}],486:[function(require,module,exports){
+'use strict';
+
+var domClasses = require('min-dom/lib/classes');
+
+var CURSOR_CLS_PATTERN = /^djs-cursor-.*$/;
+
+
+module.exports.set = function(mode) {
+  var classes = domClasses(document.body);
+
+  classes.removeMatching(CURSOR_CLS_PATTERN);
+
+  if (mode) {
+    classes.add('djs-cursor-' + mode);
+  }
+};
+
+module.exports.unset = function() {
+  this.set(null);
+};
+
+module.exports.has = function(mode) {
+  var classes = domClasses(document.body);
+
+  return classes.has('djs-cursor-' + mode);
+};
+
+},{"min-dom/lib/classes":653}],487:[function(require,module,exports){
+'use strict';
+
+var isArray = require('lodash/lang/isArray'),
+    isNumber = require('lodash/lang/isNumber'),
+    groupBy = require('lodash/collection/groupBy'),
+    forEach = require('lodash/collection/forEach');
+
+/**
+ * Adds an element to a collection and returns true if the
+ * element was added.
+ *
+ * @param {Array<Object>} elements
+ * @param {Object} e
+ * @param {Boolean} unique
+ */
+function add(elements, e, unique) {
+  var canAdd = !unique || elements.indexOf(e) === -1;
+
+  if (canAdd) {
+    elements.push(e);
+  }
+
+  return canAdd;
+}
+
+/**
+ * Iterate over each element in a collection, calling the iterator function `fn`
+ * with (element, index, recursionDepth).
+ *
+ * Recurse into all elements that are returned by `fn`.
+ *
+ * @param  {Object|Array<Object>} elements
+ * @param  {Function} fn iterator function called with (element, index, recursionDepth)
+ * @param  {Number} [depth] maximum recursion depth
+ */
+function eachElement(elements, fn, depth) {
+
+  depth = depth || 0;
+
+  if (!isArray(elements)) {
+    elements = [ elements ];
+  }
+
+  forEach(elements, function(s, i) {
+    var filter = fn(s, i, depth);
+
+    if (isArray(filter) && filter.length) {
+      eachElement(filter, fn, depth + 1);
+    }
+  });
+}
+
+/**
+ * Collects self + child elements up to a given depth from a list of elements.
+ *
+ * @param  {djs.model.Base|Array<djs.model.Base>} elements the elements to select the children from
+ * @param  {Boolean} unique whether to return a unique result set (no duplicates)
+ * @param  {Number} maxDepth the depth to search through or -1 for infinite
+ *
+ * @return {Array<djs.model.Base>} found elements
+ */
+function selfAndChildren(elements, unique, maxDepth) {
+  var result = [],
+      processedChildren = [];
+
+  eachElement(elements, function(element, i, depth) {
+    add(result, element, unique);
+
+    var children = element.children;
+
+    // max traversal depth not reached yet
+    if (maxDepth === -1 || depth < maxDepth) {
+
+      // children exist && children not yet processed
+      if (children && add(processedChildren, children, unique)) {
+        return children;
+      }
+    }
+  });
+
+  return result;
+}
+
+/**
+ * Return self + direct children for a number of elements
+ *
+ * @param  {Array<djs.model.Base>} elements to query
+ * @param  {Boolean} allowDuplicates to allow duplicates in the result set
+ *
+ * @return {Array<djs.model.Base>} the collected elements
+ */
+function selfAndDirectChildren(elements, allowDuplicates) {
+  return selfAndChildren(elements, !allowDuplicates, 1);
+}
+
+/**
+ * Return self + ALL children for a number of elements
+ *
+ * @param  {Array<djs.model.Base>} elements to query
+ * @param  {Boolean} allowDuplicates to allow duplicates in the result set
+ *
+ * @return {Array<djs.model.Base>} the collected elements
+ */
+function selfAndAllChildren(elements, allowDuplicates) {
+  return selfAndChildren(elements, !allowDuplicates, -1);
+}
+
+/**
+ * Gets the the closure for all selected elements,
+ * their connections and their attachment's connections
+ *
+ * @param {Array<djs.model.Base>} elements
+ * @return {Object} enclosure
+ */
+function getClosure(elements) {
+
+  // original elements passed to this function
+  var topLevel = groupBy(elements, function(e) { return e.id; });
+
+  var allShapes = {},
+      allConnections = {},
+      enclosedElements = {},
+      enclosedConnections = {};
+
+  function handleConnection(c) {
+    if (topLevel[c.source.id] && topLevel[c.target.id]) {
+      topLevel[c.id] = c;
+    }
+
+    // not enclosed as a child, but maybe logically
+    // (connecting two moved elements?)
+    if (allShapes[c.source.id] && allShapes[c.target.id]) {
+      enclosedConnections[c.id] = enclosedElements[c.id] = c;
+    }
+
+    allConnections[c.id] = c;
+  }
+
+  function handleElement(element) {
+
+    enclosedElements[element.id] = element;
+
+    if (element.waypoints) {
+      // remember connection
+      enclosedConnections[element.id] = allConnections[element.id] = element;
+    } else {
+      // remember shape
+      allShapes[element.id] = element;
+
+      // remember all connections
+      forEach(element.incoming, handleConnection);
+
+      forEach(element.outgoing, handleConnection);
+
+      // recurse into children
+      return element.children;
+    }
+  }
+
+  eachElement(elements, handleElement);
+
+  return {
+    allShapes: allShapes,
+    allConnections: allConnections,
+    topLevel: topLevel,
+    enclosedConnections: enclosedConnections,
+    enclosedElements: enclosedElements
+  };
+}
+
+/**
+ * Returns the surrounding bbox for all elements in
+ * the array or the element primitive.
+ *
+ * @param {Array<djs.model.Shape>|djs.model.Shape} elements
+ * @param {Boolean} stopRecursion
+ */
+function getBBox(elements, stopRecursion) {
+
+  stopRecursion = !!stopRecursion;
+  if (!isArray(elements)) {
+    elements = [elements];
+  }
+
+  var minX,
+      minY,
+      maxX,
+      maxY;
+
+  forEach(elements, function(element) {
+
+    // If element is a connection the bbox must be computed first
+    var bbox = element;
+    if (element.waypoints && !stopRecursion) {
+      bbox = getBBox(element.waypoints, true);
+    }
+
+    var x = bbox.x,
+        y = bbox.y,
+        height = bbox.height || 0,
+        width  = bbox.width  || 0;
+
+    if (x < minX || minX === undefined) {
+      minX = x;
+    }
+    if (y < minY || minY === undefined) {
+      minY = y;
+    }
+
+    if ((x + width) > maxX || maxX === undefined) {
+      maxX = x + width;
+    }
+    if ((y + height) > maxY || maxY === undefined) {
+      maxY = y + height;
+    }
+  });
+
+  return {
+    x: minX,
+    y: minY,
+    height: maxY - minY,
+    width: maxX - minX
+  };
+}
+
+
+/**
+ * Returns all elements that are enclosed from the bounding box.
+ *
+ *   * If bbox.(width|height) is not specified the method returns
+ *     all elements with element.x/y > bbox.x/y
+ *   * If only bbox.x or bbox.y is specified, method return all elements with
+ *     e.x > bbox.x or e.y > bbox.y
+ *
+ * @param {Array<djs.model.Shape>} elements List of Elements to search through
+ * @param {djs.model.Shape} bbox the enclosing bbox.
+ *
+ * @return {Array<djs.model.Shape>} enclosed elements
+ */
+function getEnclosedElements(elements, bbox) {
+
+  var filteredElements = {};
+
+  forEach(elements, function(element) {
+
+    var e = element;
+
+    if (e.waypoints) {
+      e = getBBox(e);
+    }
+
+    if (!isNumber(bbox.y) && (e.x > bbox.x)) {
+      filteredElements[element.id] = element;
+    }
+    if (!isNumber(bbox.x) && (e.y > bbox.y)) {
+      filteredElements[element.id] = element;
+    }
+    if (e.x > bbox.x && e.y > bbox.y) {
+      if (isNumber(bbox.width) && isNumber(bbox.height) &&
+          e.width  + e.x < bbox.width  + bbox.x &&
+          e.height + e.y < bbox.height + bbox.y) {
+
+        filteredElements[element.id] = element;
+      } else if (!isNumber(bbox.width) || !isNumber(bbox.height)) {
+        filteredElements[element.id] = element;
+      }
+    }
+  });
+
+  return filteredElements;
+}
+
+
+module.exports.add = add;
+module.exports.eachElement = eachElement;
+module.exports.selfAndDirectChildren = selfAndDirectChildren;
+module.exports.selfAndAllChildren = selfAndAllChildren;
+module.exports.getBBox = getBBox;
+module.exports.getEnclosedElements = getEnclosedElements;
+
+module.exports.getClosure = getClosure;
+
+
+function getElementType(element) {
+
+  if ('waypoints' in element) {
+    return 'connection';
+  }
+
+  if ('x' in element) {
+    return 'shape';
+  }
+
+  return 'root';
+}
+
+module.exports.getType = getElementType;
+},{"lodash/collection/forEach":518,"lodash/collection/groupBy":519,"lodash/lang/isArray":633,"lodash/lang/isNumber":636}],488:[function(require,module,exports){
+'use strict';
+
+function __preventDefault(event) {
+  return event && event.preventDefault();
+}
+
+function __stopPropagation(event, immediate) {
+  if (!event) {
+    return;
+  }
+
+  if (event.stopPropagation) {
+    event.stopPropagation();
+  }
+
+  if (immediate && event.stopImmediatePropagation) {
+    event.stopImmediatePropagation();
+  }
+}
+
+
+function getOriginal(event) {
+  return event.originalEvent || event.srcEvent;
+}
+
+module.exports.getOriginal = getOriginal;
+
+
+function stopEvent(event, immediate) {
+  stopPropagation(event, immediate);
+  preventDefault(event);
+}
+
+module.exports.stopEvent = stopEvent;
+
+
+function preventDefault(event) {
+  __preventDefault(event);
+  __preventDefault(getOriginal(event));
+}
+
+module.exports.preventDefault = preventDefault;
+
+
+function stopPropagation(event, immediate) {
+  __stopPropagation(event, immediate);
+  __stopPropagation(getOriginal(event), immediate);
+}
+
+module.exports.stopPropagation = stopPropagation;
+
+
+function toPoint(event) {
+
+  if (event.pointers && event.pointers.length) {
+    event = event.pointers[0];
+  }
+
+  if (event.touches && event.touches.length) {
+    event = event.touches[0];
+  }
+
+  return event ? {
+    x: event.clientX,
+    y: event.clientY
+  } : null;
+}
+
+module.exports.toPoint = toPoint;
+
+},{}],489:[function(require,module,exports){
 'use strict';
 
 /**
@@ -79300,7 +66814,7 @@ module.exports.getMidPoint = function(p, q) {
   };
 };
 
-},{}],569:[function(require,module,exports){
+},{}],490:[function(require,module,exports){
 'use strict';
 
 var domQuery = require('min-dom/lib/query');
@@ -79336,9 +66850,40 @@ function getChildren(gfx) {
 module.exports.getVisual = getVisual;
 module.exports.getChildren = getChildren;
 
-},{"min-dom/lib/query":739}],570:[function(require,module,exports){
-arguments[4][288][0].apply(exports,arguments)
-},{"dup":288}],571:[function(require,module,exports){
+},{"min-dom/lib/query":660}],491:[function(require,module,exports){
+'use strict';
+
+/**
+ * Util that provides unique IDs.
+ *
+ * @class djs.util.IdGenerator
+ * @constructor
+ * @memberOf djs.util
+ *
+ * The ids can be customized via a given prefix and contain a random value to avoid collisions.
+ *
+ * @param {String} prefix a prefix to prepend to generated ids (for better readability)
+ */
+function IdGenerator(prefix) {
+
+  this._counter = 0;
+  this._prefix = (prefix ? prefix + '-' : '') + Math.floor(Math.random() * 1000000000) + '-';
+}
+
+module.exports = IdGenerator;
+
+/**
+ * Returns a next unique ID.
+ *
+ * @method djs.util.IdGenerator#next
+ *
+ * @returns {String} the id
+ */
+IdGenerator.prototype.next = function() {
+  return this._prefix + (++this._counter);
+};
+
+},{}],492:[function(require,module,exports){
 /* eslint no-fallthrough: "off" */
 
 'use strict';
@@ -80732,7 +68277,7 @@ paths.clone = pathClone;
 
 module.exports.intersection = pathIntersection;
 
-},{}],572:[function(require,module,exports){
+},{}],493:[function(require,module,exports){
 'use strict';
 
 var pointDistance = require('./Geometry').pointDistance;
@@ -80845,13 +68390,75 @@ module.exports.getApproxIntersection = function(waypoints, reference) {
   return getBendpointIntersection(waypoints, reference) || getPathIntersection(waypoints, reference);
 };
 
-},{"./Geometry":568,"./Intersection":571}],573:[function(require,module,exports){
-arguments[4][289][0].apply(exports,arguments)
-},{"dup":289}],574:[function(require,module,exports){
-arguments[4][290][0].apply(exports,arguments)
-},{"./Event":567,"./Platform":575,"dup":290}],575:[function(require,module,exports){
-arguments[4][291][0].apply(exports,arguments)
-},{"dup":291}],576:[function(require,module,exports){
+},{"./Geometry":489,"./Intersection":492}],494:[function(require,module,exports){
+'use strict';
+
+/**
+ * Get the logarithm of x with base 10
+ * @param  {Integer} value
+ */
+function log10(x) {
+  return Math.log(x) / Math.log(10);
+}
+
+module.exports.log10 = log10;
+
+
+function substract(p1, p2) {
+  return {
+    x: p1.x - p2.x,
+    y: p1.y - p2.y
+  };
+}
+
+module.exports.substract = substract;
+
+},{}],495:[function(require,module,exports){
+'use strict';
+
+var getOriginalEvent = require('./Event').getOriginal;
+
+var isMac = require('./Platform').isMac;
+
+
+function isPrimaryButton(event) {
+  // button === 0 -> left áka primary mouse button
+  return !(getOriginalEvent(event) || event).button;
+}
+
+module.exports.isPrimaryButton = isPrimaryButton;
+
+module.exports.isMac = isMac;
+
+module.exports.hasPrimaryModifier = function(event) {
+  var originalEvent = getOriginalEvent(event) || event;
+
+  if (!isPrimaryButton(event)) {
+    return false;
+  }
+
+  // Use alt as primary modifier key for mac OS
+  if (isMac()) {
+    return originalEvent.metaKey;
+  } else {
+    return originalEvent.ctrlKey;
+  }
+};
+
+
+module.exports.hasSecondaryModifier = function(event) {
+  var originalEvent = getOriginalEvent(event) || event;
+
+  return isPrimaryButton(event) && originalEvent.shiftKey;
+};
+
+},{"./Event":488,"./Platform":496}],496:[function(require,module,exports){
+'use strict';
+
+module.exports.isMac = function isMac() {
+  return (/mac/i).test(navigator.platform);
+};
+},{}],497:[function(require,module,exports){
 'use strict';
 
 function center(bounds) {
@@ -80873,7 +68480,7 @@ function delta(a, b) {
 
 module.exports.delta = delta;
 
-},{}],577:[function(require,module,exports){
+},{}],498:[function(require,module,exports){
 'use strict';
 
 
@@ -80912,7 +68519,7 @@ module.exports.saveClear = function(collection, removeFn) {
   return collection;
 };
 
-},{}],578:[function(require,module,exports){
+},{}],499:[function(require,module,exports){
 'use strict';
 
 var svgAttr = require('tiny-svg/lib/attr'),
@@ -80953,7 +68560,7 @@ module.exports.updateLine = function(gfx, points) {
   return gfx;
 };
 
-},{"tiny-svg/lib/attr":754,"tiny-svg/lib/create":758}],579:[function(require,module,exports){
+},{"tiny-svg/lib/attr":675,"tiny-svg/lib/create":679}],500:[function(require,module,exports){
 'use strict';
 
 var svgTransform = require('tiny-svg/lib/transform');
@@ -81018,7 +68625,7 @@ module.exports.scale = function(gfx, amount) {
   svgTransform(gfx, scale);
 };
 
-},{"tiny-svg/lib/geometry":759,"tiny-svg/lib/transform":761}],580:[function(require,module,exports){
+},{"tiny-svg/lib/geometry":680,"tiny-svg/lib/transform":682}],501:[function(require,module,exports){
 'use strict';
 
 var isObject = require('lodash/lang/isObject'),
@@ -81301,15 +68908,320 @@ Text.prototype.createText = function(parent, text, options) {
 
 module.exports = Text;
 
-},{"lodash/collection/forEach":597,"lodash/collection/reduce":600,"lodash/lang/isObject":716,"lodash/object/assign":721,"lodash/object/merge":724,"lodash/object/pick":726,"tiny-svg/lib/append":752,"tiny-svg/lib/attr":754,"tiny-svg/lib/create":758,"tiny-svg/lib/remove":760}],581:[function(require,module,exports){
-arguments[4][294][0].apply(exports,arguments)
-},{"dup":294}],582:[function(require,module,exports){
-arguments[4][295][0].apply(exports,arguments)
-},{"./annotation":581,"./injector":583,"./module":584,"dup":295}],583:[function(require,module,exports){
-arguments[4][296][0].apply(exports,arguments)
-},{"./annotation":581,"./module":584,"dup":296}],584:[function(require,module,exports){
-arguments[4][297][0].apply(exports,arguments)
-},{"dup":297}],585:[function(require,module,exports){
+},{"lodash/collection/forEach":518,"lodash/collection/reduce":521,"lodash/lang/isObject":637,"lodash/object/assign":642,"lodash/object/merge":645,"lodash/object/pick":647,"tiny-svg/lib/append":673,"tiny-svg/lib/attr":675,"tiny-svg/lib/create":679,"tiny-svg/lib/remove":681}],502:[function(require,module,exports){
+
+var isArray = function(obj) {
+  return Object.prototype.toString.call(obj) === '[object Array]';
+};
+
+var annotate = function() {
+  var args = Array.prototype.slice.call(arguments);
+  
+  if (args.length === 1 && isArray(args[0])) {
+    args = args[0];
+  }
+
+  var fn = args.pop();
+
+  fn.$inject = args;
+
+  return fn;
+};
+
+
+// Current limitations:
+// - can't put into "function arg" comments
+// function /* (no parenthesis like this) */ (){}
+// function abc( /* xx (no parenthesis like this) */ a, b) {}
+//
+// Just put the comment before function or inside:
+// /* (((this is fine))) */ function(a, b) {}
+// function abc(a) { /* (((this is fine))) */}
+
+var FN_ARGS = /^function\s*[^\(]*\(\s*([^\)]*)\)/m;
+var FN_ARG = /\/\*([^\*]*)\*\//m;
+
+var parse = function(fn) {
+  if (typeof fn !== 'function') {
+    throw new Error('Cannot annotate "' + fn + '". Expected a function!');
+  }
+
+  var match = fn.toString().match(FN_ARGS);
+  return match[1] && match[1].split(',').map(function(arg) {
+    match = arg.match(FN_ARG);
+    return match ? match[1].trim() : arg.trim();
+  }) || [];
+};
+
+
+exports.annotate = annotate;
+exports.parse = parse;
+exports.isArray = isArray;
+
+},{}],503:[function(require,module,exports){
+module.exports = {
+  annotate: require('./annotation').annotate,
+  Module: require('./module'),
+  Injector: require('./injector')
+};
+
+},{"./annotation":502,"./injector":504,"./module":505}],504:[function(require,module,exports){
+var Module = require('./module');
+var autoAnnotate = require('./annotation').parse;
+var annotate = require('./annotation').annotate;
+var isArray = require('./annotation').isArray;
+
+
+var Injector = function(modules, parent) {
+  parent = parent || {
+    get: function(name, strict) {
+      currentlyResolving.push(name);
+
+      if (strict === false) {
+        return null;
+      } else {
+        throw error('No provider for "' + name + '"!');
+      }
+    }
+  };
+
+  var currentlyResolving = [];
+  var providers = this._providers = Object.create(parent._providers || null);
+  var instances = this._instances = Object.create(null);
+
+  var self = instances.injector = this;
+
+  var error = function(msg) {
+    var stack = currentlyResolving.join(' -> ');
+    currentlyResolving.length = 0;
+    return new Error(stack ? msg + ' (Resolving: ' + stack + ')' : msg);
+  };
+
+  /**
+   * Return a named service.
+   *
+   * @param {String} name
+   * @param {Boolean} [strict=true] if false, resolve missing services to null
+   *
+   * @return {Object}
+   */
+  var get = function(name, strict) {
+    if (!providers[name] && name.indexOf('.') !== -1) {
+      var parts = name.split('.');
+      var pivot = get(parts.shift());
+
+      while(parts.length) {
+        pivot = pivot[parts.shift()];
+      }
+
+      return pivot;
+    }
+
+    if (Object.hasOwnProperty.call(instances, name)) {
+      return instances[name];
+    }
+
+    if (Object.hasOwnProperty.call(providers, name)) {
+      if (currentlyResolving.indexOf(name) !== -1) {
+        currentlyResolving.push(name);
+        throw error('Cannot resolve circular dependency!');
+      }
+
+      currentlyResolving.push(name);
+      instances[name] = providers[name][0](providers[name][1]);
+      currentlyResolving.pop();
+
+      return instances[name];
+    }
+
+    return parent.get(name, strict);
+  };
+
+  var instantiate = function(Type) {
+    var instance = Object.create(Type.prototype);
+    var returned = invoke(Type, instance);
+
+    return typeof returned === 'object' ? returned : instance;
+  };
+
+  var invoke = function(fn, context) {
+    if (typeof fn !== 'function') {
+      if (isArray(fn)) {
+        fn = annotate(fn.slice());
+      } else {
+        throw new Error('Cannot invoke "' + fn + '". Expected a function!');
+      }
+    }
+
+    var inject = fn.$inject && fn.$inject || autoAnnotate(fn);
+    var dependencies = inject.map(function(dep) {
+      return get(dep);
+    });
+
+    // TODO(vojta): optimize without apply
+    return fn.apply(context, dependencies);
+  };
+
+
+  var createPrivateInjectorFactory = function(privateChildInjector) {
+    return annotate(function(key) {
+      return privateChildInjector.get(key);
+    });
+  };
+
+  var createChild = function(modules, forceNewInstances) {
+    if (forceNewInstances && forceNewInstances.length) {
+      var fromParentModule = Object.create(null);
+      var matchedScopes = Object.create(null);
+
+      var privateInjectorsCache = [];
+      var privateChildInjectors = [];
+      var privateChildFactories = [];
+
+      var provider;
+      var cacheIdx;
+      var privateChildInjector;
+      var privateChildInjectorFactory;
+      for (var name in providers) {
+        provider = providers[name];
+
+        if (forceNewInstances.indexOf(name) !== -1) {
+          if (provider[2] === 'private') {
+            cacheIdx = privateInjectorsCache.indexOf(provider[3]);
+            if (cacheIdx === -1) {
+              privateChildInjector = provider[3].createChild([], forceNewInstances);
+              privateChildInjectorFactory = createPrivateInjectorFactory(privateChildInjector);
+              privateInjectorsCache.push(provider[3]);
+              privateChildInjectors.push(privateChildInjector);
+              privateChildFactories.push(privateChildInjectorFactory);
+              fromParentModule[name] = [privateChildInjectorFactory, name, 'private', privateChildInjector];
+            } else {
+              fromParentModule[name] = [privateChildFactories[cacheIdx], name, 'private', privateChildInjectors[cacheIdx]];
+            }
+          } else {
+            fromParentModule[name] = [provider[2], provider[1]];
+          }
+          matchedScopes[name] = true;
+        }
+
+        if ((provider[2] === 'factory' || provider[2] === 'type') && provider[1].$scope) {
+          /*jshint -W083 */
+          forceNewInstances.forEach(function(scope) {
+            if (provider[1].$scope.indexOf(scope) !== -1) {
+              fromParentModule[name] = [provider[2], provider[1]];
+              matchedScopes[scope] = true;
+            }
+          });
+        }
+      }
+
+      forceNewInstances.forEach(function(scope) {
+        if (!matchedScopes[scope]) {
+          throw new Error('No provider for "' + scope + '". Cannot use provider from the parent!');
+        }
+      });
+
+      modules.unshift(fromParentModule);
+    }
+
+    return new Injector(modules, self);
+  };
+
+  var factoryMap = {
+    factory: invoke,
+    type: instantiate,
+    value: function(value) {
+      return value;
+    }
+  };
+
+  modules.forEach(function(module) {
+
+    function arrayUnwrap(type, value) {
+      if (type !== 'value' && isArray(value)) {
+        value = annotate(value.slice());
+      }
+
+      return value;
+    }
+
+    // TODO(vojta): handle wrong inputs (modules)
+    if (module instanceof Module) {
+      module.forEach(function(provider) {
+        var name = provider[0];
+        var type = provider[1];
+        var value = provider[2];
+
+        providers[name] = [factoryMap[type], arrayUnwrap(type, value), type];
+      });
+    } else if (typeof module === 'object') {
+      if (module.__exports__) {
+        var clonedModule = Object.keys(module).reduce(function(m, key) {
+          if (key.substring(0, 2) !== '__') {
+            m[key] = module[key];
+          }
+          return m;
+        }, Object.create(null));
+
+        var privateInjector = new Injector((module.__modules__ || []).concat([clonedModule]), self);
+        var getFromPrivateInjector = annotate(function(key) {
+          return privateInjector.get(key);
+        });
+        module.__exports__.forEach(function(key) {
+          providers[key] = [getFromPrivateInjector, key, 'private', privateInjector];
+        });
+      } else {
+        Object.keys(module).forEach(function(name) {
+          if (module[name][2] === 'private') {
+            providers[name] = module[name];
+            return;
+          }
+
+          var type = module[name][0];
+          var value = module[name][1];
+
+          providers[name] = [factoryMap[type], arrayUnwrap(type, value), type];
+        });
+      }
+    }
+  });
+
+  // public API
+  this.get = get;
+  this.invoke = invoke;
+  this.instantiate = instantiate;
+  this.createChild = createChild;
+};
+
+module.exports = Injector;
+
+},{"./annotation":502,"./module":505}],505:[function(require,module,exports){
+var Module = function() {
+  var providers = [];
+
+  this.factory = function(name, factory) {
+    providers.push([name, 'factory', factory]);
+    return this;
+  };
+
+  this.value = function(name, value) {
+    providers.push([name, 'value', value]);
+    return this;
+  };
+
+  this.type = function(name, type) {
+    providers.push([name, 'type', type]);
+    return this;
+  };
+
+  this.forEach = function(iterator) {
+    providers.forEach(iterator);
+  };
+};
+
+module.exports = Module;
+
+},{}],506:[function(require,module,exports){
 /*! Hammer.JS - v2.0.7 - 2016-04-22
  * http://hammerjs.github.io/
  *
@@ -83954,9 +71866,9 @@ if (typeof define === 'function' && define.amd) {
 
 })(window, document, 'Hammer');
 
-},{}],586:[function(require,module,exports){
+},{}],507:[function(require,module,exports){
 arguments[4][82][0].apply(exports,arguments)
-},{"dup":82}],587:[function(require,module,exports){
+},{"dup":82}],508:[function(require,module,exports){
 var createFindIndex = require('../internal/createFindIndex');
 
 /**
@@ -84011,7 +71923,7 @@ var findIndex = createFindIndex();
 
 module.exports = findIndex;
 
-},{"../internal/createFindIndex":671}],588:[function(require,module,exports){
+},{"../internal/createFindIndex":592}],509:[function(require,module,exports){
 var baseFlatten = require('../internal/baseFlatten'),
     isIterateeCall = require('../internal/isIterateeCall');
 
@@ -84045,9 +71957,9 @@ function flatten(array, isDeep, guard) {
 
 module.exports = flatten;
 
-},{"../internal/baseFlatten":631,"../internal/isIterateeCall":691}],589:[function(require,module,exports){
+},{"../internal/baseFlatten":552,"../internal/isIterateeCall":612}],510:[function(require,module,exports){
 arguments[4][83][0].apply(exports,arguments)
-},{"dup":83}],590:[function(require,module,exports){
+},{"dup":83}],511:[function(require,module,exports){
 var baseCallback = require('../internal/baseCallback'),
     baseUniq = require('../internal/baseUniq'),
     isIterateeCall = require('../internal/isIterateeCall'),
@@ -84120,28 +72032,212 @@ function uniq(array, isSorted, iteratee, thisArg) {
 
 module.exports = uniq;
 
-},{"../internal/baseCallback":621,"../internal/baseUniq":654,"../internal/isIterateeCall":691,"../internal/sortedUniq":706}],591:[function(require,module,exports){
+},{"../internal/baseCallback":542,"../internal/baseUniq":575,"../internal/isIterateeCall":612,"../internal/sortedUniq":627}],512:[function(require,module,exports){
 module.exports = require('./uniq');
 
-},{"./uniq":590}],592:[function(require,module,exports){
-arguments[4][303][0].apply(exports,arguments)
-},{"../internal/LazyWrapper":608,"../internal/LodashWrapper":609,"../internal/baseLodash":640,"../internal/isObjectLike":695,"../internal/wrapperClone":709,"../lang/isArray":712,"dup":303}],593:[function(require,module,exports){
-arguments[4][304][0].apply(exports,arguments)
-},{"./some":602,"dup":304}],594:[function(require,module,exports){
+},{"./uniq":511}],513:[function(require,module,exports){
+var LazyWrapper = require('../internal/LazyWrapper'),
+    LodashWrapper = require('../internal/LodashWrapper'),
+    baseLodash = require('../internal/baseLodash'),
+    isArray = require('../lang/isArray'),
+    isObjectLike = require('../internal/isObjectLike'),
+    wrapperClone = require('../internal/wrapperClone');
+
+/** Used for native method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Creates a `lodash` object which wraps `value` to enable implicit chaining.
+ * Methods that operate on and return arrays, collections, and functions can
+ * be chained together. Methods that retrieve a single value or may return a
+ * primitive value will automatically end the chain returning the unwrapped
+ * value. Explicit chaining may be enabled using `_.chain`. The execution of
+ * chained methods is lazy, that is, execution is deferred until `_#value`
+ * is implicitly or explicitly called.
+ *
+ * Lazy evaluation allows several methods to support shortcut fusion. Shortcut
+ * fusion is an optimization strategy which merge iteratee calls; this can help
+ * to avoid the creation of intermediate data structures and greatly reduce the
+ * number of iteratee executions.
+ *
+ * Chaining is supported in custom builds as long as the `_#value` method is
+ * directly or indirectly included in the build.
+ *
+ * In addition to lodash methods, wrappers have `Array` and `String` methods.
+ *
+ * The wrapper `Array` methods are:
+ * `concat`, `join`, `pop`, `push`, `reverse`, `shift`, `slice`, `sort`,
+ * `splice`, and `unshift`
+ *
+ * The wrapper `String` methods are:
+ * `replace` and `split`
+ *
+ * The wrapper methods that support shortcut fusion are:
+ * `compact`, `drop`, `dropRight`, `dropRightWhile`, `dropWhile`, `filter`,
+ * `first`, `initial`, `last`, `map`, `pluck`, `reject`, `rest`, `reverse`,
+ * `slice`, `take`, `takeRight`, `takeRightWhile`, `takeWhile`, `toArray`,
+ * and `where`
+ *
+ * The chainable wrapper methods are:
+ * `after`, `ary`, `assign`, `at`, `before`, `bind`, `bindAll`, `bindKey`,
+ * `callback`, `chain`, `chunk`, `commit`, `compact`, `concat`, `constant`,
+ * `countBy`, `create`, `curry`, `debounce`, `defaults`, `defaultsDeep`,
+ * `defer`, `delay`, `difference`, `drop`, `dropRight`, `dropRightWhile`,
+ * `dropWhile`, `fill`, `filter`, `flatten`, `flattenDeep`, `flow`, `flowRight`,
+ * `forEach`, `forEachRight`, `forIn`, `forInRight`, `forOwn`, `forOwnRight`,
+ * `functions`, `groupBy`, `indexBy`, `initial`, `intersection`, `invert`,
+ * `invoke`, `keys`, `keysIn`, `map`, `mapKeys`, `mapValues`, `matches`,
+ * `matchesProperty`, `memoize`, `merge`, `method`, `methodOf`, `mixin`,
+ * `modArgs`, `negate`, `omit`, `once`, `pairs`, `partial`, `partialRight`,
+ * `partition`, `pick`, `plant`, `pluck`, `property`, `propertyOf`, `pull`,
+ * `pullAt`, `push`, `range`, `rearg`, `reject`, `remove`, `rest`, `restParam`,
+ * `reverse`, `set`, `shuffle`, `slice`, `sort`, `sortBy`, `sortByAll`,
+ * `sortByOrder`, `splice`, `spread`, `take`, `takeRight`, `takeRightWhile`,
+ * `takeWhile`, `tap`, `throttle`, `thru`, `times`, `toArray`, `toPlainObject`,
+ * `transform`, `union`, `uniq`, `unshift`, `unzip`, `unzipWith`, `values`,
+ * `valuesIn`, `where`, `without`, `wrap`, `xor`, `zip`, `zipObject`, `zipWith`
+ *
+ * The wrapper methods that are **not** chainable by default are:
+ * `add`, `attempt`, `camelCase`, `capitalize`, `ceil`, `clone`, `cloneDeep`,
+ * `deburr`, `endsWith`, `escape`, `escapeRegExp`, `every`, `find`, `findIndex`,
+ * `findKey`, `findLast`, `findLastIndex`, `findLastKey`, `findWhere`, `first`,
+ * `floor`, `get`, `gt`, `gte`, `has`, `identity`, `includes`, `indexOf`,
+ * `inRange`, `isArguments`, `isArray`, `isBoolean`, `isDate`, `isElement`,
+ * `isEmpty`, `isEqual`, `isError`, `isFinite` `isFunction`, `isMatch`,
+ * `isNative`, `isNaN`, `isNull`, `isNumber`, `isObject`, `isPlainObject`,
+ * `isRegExp`, `isString`, `isUndefined`, `isTypedArray`, `join`, `kebabCase`,
+ * `last`, `lastIndexOf`, `lt`, `lte`, `max`, `min`, `noConflict`, `noop`,
+ * `now`, `pad`, `padLeft`, `padRight`, `parseInt`, `pop`, `random`, `reduce`,
+ * `reduceRight`, `repeat`, `result`, `round`, `runInContext`, `shift`, `size`,
+ * `snakeCase`, `some`, `sortedIndex`, `sortedLastIndex`, `startCase`,
+ * `startsWith`, `sum`, `template`, `trim`, `trimLeft`, `trimRight`, `trunc`,
+ * `unescape`, `uniqueId`, `value`, and `words`
+ *
+ * The wrapper method `sample` will return a wrapped value when `n` is provided,
+ * otherwise an unwrapped value is returned.
+ *
+ * @name _
+ * @constructor
+ * @category Chain
+ * @param {*} value The value to wrap in a `lodash` instance.
+ * @returns {Object} Returns the new `lodash` wrapper instance.
+ * @example
+ *
+ * var wrapped = _([1, 2, 3]);
+ *
+ * // returns an unwrapped value
+ * wrapped.reduce(function(total, n) {
+ *   return total + n;
+ * });
+ * // => 6
+ *
+ * // returns a wrapped value
+ * var squares = wrapped.map(function(n) {
+ *   return n * n;
+ * });
+ *
+ * _.isArray(squares);
+ * // => false
+ *
+ * _.isArray(squares.value());
+ * // => true
+ */
+function lodash(value) {
+  if (isObjectLike(value) && !isArray(value) && !(value instanceof LazyWrapper)) {
+    if (value instanceof LodashWrapper) {
+      return value;
+    }
+    if (hasOwnProperty.call(value, '__chain__') && hasOwnProperty.call(value, '__wrapped__')) {
+      return wrapperClone(value);
+    }
+  }
+  return new LodashWrapper(value);
+}
+
+// Ensure wrappers are instances of `baseLodash`.
+lodash.prototype = baseLodash.prototype;
+
+module.exports = lodash;
+
+},{"../internal/LazyWrapper":529,"../internal/LodashWrapper":530,"../internal/baseLodash":561,"../internal/isObjectLike":616,"../internal/wrapperClone":630,"../lang/isArray":633}],514:[function(require,module,exports){
+arguments[4][256][0].apply(exports,arguments)
+},{"./some":523,"dup":256}],515:[function(require,module,exports){
 arguments[4][84][0].apply(exports,arguments)
-},{"../internal/arrayEvery":613,"../internal/baseCallback":621,"../internal/baseEvery":627,"../internal/isIterateeCall":691,"../lang/isArray":712,"dup":84}],595:[function(require,module,exports){
+},{"../internal/arrayEvery":534,"../internal/baseCallback":542,"../internal/baseEvery":548,"../internal/isIterateeCall":612,"../lang/isArray":633,"dup":84}],516:[function(require,module,exports){
 arguments[4][85][0].apply(exports,arguments)
-},{"../internal/arrayFilter":614,"../internal/baseCallback":621,"../internal/baseFilter":628,"../lang/isArray":712,"dup":85}],596:[function(require,module,exports){
+},{"../internal/arrayFilter":535,"../internal/baseCallback":542,"../internal/baseFilter":549,"../lang/isArray":633,"dup":85}],517:[function(require,module,exports){
 arguments[4][86][0].apply(exports,arguments)
-},{"../internal/baseEach":626,"../internal/createFind":670,"dup":86}],597:[function(require,module,exports){
+},{"../internal/baseEach":547,"../internal/createFind":591,"dup":86}],518:[function(require,module,exports){
 arguments[4][87][0].apply(exports,arguments)
-},{"../internal/arrayEach":612,"../internal/baseEach":626,"../internal/createForEach":672,"dup":87}],598:[function(require,module,exports){
-arguments[4][309][0].apply(exports,arguments)
-},{"../internal/createAggregator":663,"dup":309}],599:[function(require,module,exports){
+},{"../internal/arrayEach":533,"../internal/baseEach":547,"../internal/createForEach":593,"dup":87}],519:[function(require,module,exports){
+var createAggregator = require('../internal/createAggregator');
+
+/** Used for native method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Creates an object composed of keys generated from the results of running
+ * each element of `collection` through `iteratee`. The corresponding value
+ * of each key is an array of the elements responsible for generating the key.
+ * The `iteratee` is bound to `thisArg` and invoked with three arguments:
+ * (value, index|key, collection).
+ *
+ * If a property name is provided for `iteratee` the created `_.property`
+ * style callback returns the property value of the given element.
+ *
+ * If a value is also provided for `thisArg` the created `_.matchesProperty`
+ * style callback returns `true` for elements that have a matching property
+ * value, else `false`.
+ *
+ * If an object is provided for `iteratee` the created `_.matches` style
+ * callback returns `true` for elements that have the properties of the given
+ * object, else `false`.
+ *
+ * @static
+ * @memberOf _
+ * @category Collection
+ * @param {Array|Object|string} collection The collection to iterate over.
+ * @param {Function|Object|string} [iteratee=_.identity] The function invoked
+ *  per iteration.
+ * @param {*} [thisArg] The `this` binding of `iteratee`.
+ * @returns {Object} Returns the composed aggregate object.
+ * @example
+ *
+ * _.groupBy([4.2, 6.1, 6.4], function(n) {
+ *   return Math.floor(n);
+ * });
+ * // => { '4': [4.2], '6': [6.1, 6.4] }
+ *
+ * _.groupBy([4.2, 6.1, 6.4], function(n) {
+ *   return this.floor(n);
+ * }, Math);
+ * // => { '4': [4.2], '6': [6.1, 6.4] }
+ *
+ * // using the `_.property` callback shorthand
+ * _.groupBy(['one', 'two', 'three'], 'length');
+ * // => { '3': ['one', 'two'], '5': ['three'] }
+ */
+var groupBy = createAggregator(function(result, value, key) {
+  if (hasOwnProperty.call(result, key)) {
+    result[key].push(value);
+  } else {
+    result[key] = [value];
+  }
+});
+
+module.exports = groupBy;
+
+},{"../internal/createAggregator":584}],520:[function(require,module,exports){
 arguments[4][89][0].apply(exports,arguments)
-},{"../internal/arrayMap":615,"../internal/baseCallback":621,"../internal/baseMap":641,"../lang/isArray":712,"dup":89}],600:[function(require,module,exports){
+},{"../internal/arrayMap":536,"../internal/baseCallback":542,"../internal/baseMap":562,"../lang/isArray":633,"dup":89}],521:[function(require,module,exports){
 arguments[4][90][0].apply(exports,arguments)
-},{"../internal/arrayReduce":617,"../internal/baseEach":626,"../internal/createReduce":675,"dup":90}],601:[function(require,module,exports){
+},{"../internal/arrayReduce":538,"../internal/baseEach":547,"../internal/createReduce":596,"dup":90}],522:[function(require,module,exports){
 var getLength = require('../internal/getLength'),
     isLength = require('../internal/isLength'),
     keys = require('../object/keys');
@@ -84173,9 +72269,9 @@ function size(collection) {
 
 module.exports = size;
 
-},{"../internal/getLength":682,"../internal/isLength":694,"../object/keys":722}],602:[function(require,module,exports){
+},{"../internal/getLength":603,"../internal/isLength":615,"../object/keys":643}],523:[function(require,module,exports){
 arguments[4][91][0].apply(exports,arguments)
-},{"../internal/arraySome":618,"../internal/baseCallback":621,"../internal/baseSome":651,"../internal/isIterateeCall":691,"../lang/isArray":712,"dup":91}],603:[function(require,module,exports){
+},{"../internal/arraySome":539,"../internal/baseCallback":542,"../internal/baseSome":572,"../internal/isIterateeCall":612,"../lang/isArray":633,"dup":91}],524:[function(require,module,exports){
 var baseCallback = require('../internal/baseCallback'),
     baseMap = require('../internal/baseMap'),
     baseSortBy = require('../internal/baseSortBy'),
@@ -84248,43 +72344,371 @@ function sortBy(collection, iteratee, thisArg) {
 
 module.exports = sortBy;
 
-},{"../internal/baseCallback":621,"../internal/baseMap":641,"../internal/baseSortBy":652,"../internal/compareAscending":660,"../internal/isIterateeCall":691}],604:[function(require,module,exports){
-arguments[4][313][0].apply(exports,arguments)
-},{"../internal/getNative":684,"dup":313}],605:[function(require,module,exports){
-arguments[4][314][0].apply(exports,arguments)
-},{"../internal/createWrapper":676,"../internal/replaceHolders":703,"./restParam":607,"dup":314}],606:[function(require,module,exports){
-arguments[4][315][0].apply(exports,arguments)
-},{"../date/now":604,"../lang/isObject":716,"dup":315}],607:[function(require,module,exports){
+},{"../internal/baseCallback":542,"../internal/baseMap":562,"../internal/baseSortBy":573,"../internal/compareAscending":581,"../internal/isIterateeCall":612}],525:[function(require,module,exports){
+var getNative = require('../internal/getNative');
+
+/* Native method references for those with the same name as other `lodash` methods. */
+var nativeNow = getNative(Date, 'now');
+
+/**
+ * Gets the number of milliseconds that have elapsed since the Unix epoch
+ * (1 January 1970 00:00:00 UTC).
+ *
+ * @static
+ * @memberOf _
+ * @category Date
+ * @example
+ *
+ * _.defer(function(stamp) {
+ *   console.log(_.now() - stamp);
+ * }, _.now());
+ * // => logs the number of milliseconds it took for the deferred function to be invoked
+ */
+var now = nativeNow || function() {
+  return new Date().getTime();
+};
+
+module.exports = now;
+
+},{"../internal/getNative":605}],526:[function(require,module,exports){
+var createWrapper = require('../internal/createWrapper'),
+    replaceHolders = require('../internal/replaceHolders'),
+    restParam = require('./restParam');
+
+/** Used to compose bitmasks for wrapper metadata. */
+var BIND_FLAG = 1,
+    PARTIAL_FLAG = 32;
+
+/**
+ * Creates a function that invokes `func` with the `this` binding of `thisArg`
+ * and prepends any additional `_.bind` arguments to those provided to the
+ * bound function.
+ *
+ * The `_.bind.placeholder` value, which defaults to `_` in monolithic builds,
+ * may be used as a placeholder for partially applied arguments.
+ *
+ * **Note:** Unlike native `Function#bind` this method does not set the "length"
+ * property of bound functions.
+ *
+ * @static
+ * @memberOf _
+ * @category Function
+ * @param {Function} func The function to bind.
+ * @param {*} thisArg The `this` binding of `func`.
+ * @param {...*} [partials] The arguments to be partially applied.
+ * @returns {Function} Returns the new bound function.
+ * @example
+ *
+ * var greet = function(greeting, punctuation) {
+ *   return greeting + ' ' + this.user + punctuation;
+ * };
+ *
+ * var object = { 'user': 'fred' };
+ *
+ * var bound = _.bind(greet, object, 'hi');
+ * bound('!');
+ * // => 'hi fred!'
+ *
+ * // using placeholders
+ * var bound = _.bind(greet, object, _, '!');
+ * bound('hi');
+ * // => 'hi fred!'
+ */
+var bind = restParam(function(func, thisArg, partials) {
+  var bitmask = BIND_FLAG;
+  if (partials.length) {
+    var holders = replaceHolders(partials, bind.placeholder);
+    bitmask |= PARTIAL_FLAG;
+  }
+  return createWrapper(func, bitmask, thisArg, partials, holders);
+});
+
+// Assign default placeholders.
+bind.placeholder = {};
+
+module.exports = bind;
+
+},{"../internal/createWrapper":597,"../internal/replaceHolders":624,"./restParam":528}],527:[function(require,module,exports){
+var isObject = require('../lang/isObject'),
+    now = require('../date/now');
+
+/** Used as the `TypeError` message for "Functions" methods. */
+var FUNC_ERROR_TEXT = 'Expected a function';
+
+/* Native method references for those with the same name as other `lodash` methods. */
+var nativeMax = Math.max;
+
+/**
+ * Creates a debounced function that delays invoking `func` until after `wait`
+ * milliseconds have elapsed since the last time the debounced function was
+ * invoked. The debounced function comes with a `cancel` method to cancel
+ * delayed invocations. Provide an options object to indicate that `func`
+ * should be invoked on the leading and/or trailing edge of the `wait` timeout.
+ * Subsequent calls to the debounced function return the result of the last
+ * `func` invocation.
+ *
+ * **Note:** If `leading` and `trailing` options are `true`, `func` is invoked
+ * on the trailing edge of the timeout only if the the debounced function is
+ * invoked more than once during the `wait` timeout.
+ *
+ * See [David Corbacho's article](http://drupalmotion.com/article/debounce-and-throttle-visual-explanation)
+ * for details over the differences between `_.debounce` and `_.throttle`.
+ *
+ * @static
+ * @memberOf _
+ * @category Function
+ * @param {Function} func The function to debounce.
+ * @param {number} [wait=0] The number of milliseconds to delay.
+ * @param {Object} [options] The options object.
+ * @param {boolean} [options.leading=false] Specify invoking on the leading
+ *  edge of the timeout.
+ * @param {number} [options.maxWait] The maximum time `func` is allowed to be
+ *  delayed before it's invoked.
+ * @param {boolean} [options.trailing=true] Specify invoking on the trailing
+ *  edge of the timeout.
+ * @returns {Function} Returns the new debounced function.
+ * @example
+ *
+ * // avoid costly calculations while the window size is in flux
+ * jQuery(window).on('resize', _.debounce(calculateLayout, 150));
+ *
+ * // invoke `sendMail` when the click event is fired, debouncing subsequent calls
+ * jQuery('#postbox').on('click', _.debounce(sendMail, 300, {
+ *   'leading': true,
+ *   'trailing': false
+ * }));
+ *
+ * // ensure `batchLog` is invoked once after 1 second of debounced calls
+ * var source = new EventSource('/stream');
+ * jQuery(source).on('message', _.debounce(batchLog, 250, {
+ *   'maxWait': 1000
+ * }));
+ *
+ * // cancel a debounced call
+ * var todoChanges = _.debounce(batchLog, 1000);
+ * Object.observe(models.todo, todoChanges);
+ *
+ * Object.observe(models, function(changes) {
+ *   if (_.find(changes, { 'user': 'todo', 'type': 'delete'})) {
+ *     todoChanges.cancel();
+ *   }
+ * }, ['delete']);
+ *
+ * // ...at some point `models.todo` is changed
+ * models.todo.completed = true;
+ *
+ * // ...before 1 second has passed `models.todo` is deleted
+ * // which cancels the debounced `todoChanges` call
+ * delete models.todo;
+ */
+function debounce(func, wait, options) {
+  var args,
+      maxTimeoutId,
+      result,
+      stamp,
+      thisArg,
+      timeoutId,
+      trailingCall,
+      lastCalled = 0,
+      maxWait = false,
+      trailing = true;
+
+  if (typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  wait = wait < 0 ? 0 : (+wait || 0);
+  if (options === true) {
+    var leading = true;
+    trailing = false;
+  } else if (isObject(options)) {
+    leading = !!options.leading;
+    maxWait = 'maxWait' in options && nativeMax(+options.maxWait || 0, wait);
+    trailing = 'trailing' in options ? !!options.trailing : trailing;
+  }
+
+  function cancel() {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    if (maxTimeoutId) {
+      clearTimeout(maxTimeoutId);
+    }
+    lastCalled = 0;
+    maxTimeoutId = timeoutId = trailingCall = undefined;
+  }
+
+  function complete(isCalled, id) {
+    if (id) {
+      clearTimeout(id);
+    }
+    maxTimeoutId = timeoutId = trailingCall = undefined;
+    if (isCalled) {
+      lastCalled = now();
+      result = func.apply(thisArg, args);
+      if (!timeoutId && !maxTimeoutId) {
+        args = thisArg = undefined;
+      }
+    }
+  }
+
+  function delayed() {
+    var remaining = wait - (now() - stamp);
+    if (remaining <= 0 || remaining > wait) {
+      complete(trailingCall, maxTimeoutId);
+    } else {
+      timeoutId = setTimeout(delayed, remaining);
+    }
+  }
+
+  function maxDelayed() {
+    complete(trailing, timeoutId);
+  }
+
+  function debounced() {
+    args = arguments;
+    stamp = now();
+    thisArg = this;
+    trailingCall = trailing && (timeoutId || !leading);
+
+    if (maxWait === false) {
+      var leadingCall = leading && !timeoutId;
+    } else {
+      if (!maxTimeoutId && !leading) {
+        lastCalled = stamp;
+      }
+      var remaining = maxWait - (stamp - lastCalled),
+          isCalled = remaining <= 0 || remaining > maxWait;
+
+      if (isCalled) {
+        if (maxTimeoutId) {
+          maxTimeoutId = clearTimeout(maxTimeoutId);
+        }
+        lastCalled = stamp;
+        result = func.apply(thisArg, args);
+      }
+      else if (!maxTimeoutId) {
+        maxTimeoutId = setTimeout(maxDelayed, remaining);
+      }
+    }
+    if (isCalled && timeoutId) {
+      timeoutId = clearTimeout(timeoutId);
+    }
+    else if (!timeoutId && wait !== maxWait) {
+      timeoutId = setTimeout(delayed, wait);
+    }
+    if (leadingCall) {
+      isCalled = true;
+      result = func.apply(thisArg, args);
+    }
+    if (isCalled && !timeoutId && !maxTimeoutId) {
+      args = thisArg = undefined;
+    }
+    return result;
+  }
+  debounced.cancel = cancel;
+  return debounced;
+}
+
+module.exports = debounce;
+
+},{"../date/now":525,"../lang/isObject":637}],528:[function(require,module,exports){
 arguments[4][93][0].apply(exports,arguments)
-},{"dup":93}],608:[function(require,module,exports){
-arguments[4][318][0].apply(exports,arguments)
-},{"./baseCreate":625,"./baseLodash":640,"dup":318}],609:[function(require,module,exports){
-arguments[4][319][0].apply(exports,arguments)
-},{"./baseCreate":625,"./baseLodash":640,"dup":319}],610:[function(require,module,exports){
+},{"dup":93}],529:[function(require,module,exports){
+var baseCreate = require('./baseCreate'),
+    baseLodash = require('./baseLodash');
+
+/** Used as references for `-Infinity` and `Infinity`. */
+var POSITIVE_INFINITY = Number.POSITIVE_INFINITY;
+
+/**
+ * Creates a lazy wrapper object which wraps `value` to enable lazy evaluation.
+ *
+ * @private
+ * @param {*} value The value to wrap.
+ */
+function LazyWrapper(value) {
+  this.__wrapped__ = value;
+  this.__actions__ = [];
+  this.__dir__ = 1;
+  this.__filtered__ = false;
+  this.__iteratees__ = [];
+  this.__takeCount__ = POSITIVE_INFINITY;
+  this.__views__ = [];
+}
+
+LazyWrapper.prototype = baseCreate(baseLodash.prototype);
+LazyWrapper.prototype.constructor = LazyWrapper;
+
+module.exports = LazyWrapper;
+
+},{"./baseCreate":546,"./baseLodash":561}],530:[function(require,module,exports){
+var baseCreate = require('./baseCreate'),
+    baseLodash = require('./baseLodash');
+
+/**
+ * The base constructor for creating `lodash` wrapper objects.
+ *
+ * @private
+ * @param {*} value The value to wrap.
+ * @param {boolean} [chainAll] Enable chaining for all wrapper methods.
+ * @param {Array} [actions=[]] Actions to peform to resolve the unwrapped value.
+ */
+function LodashWrapper(value, chainAll, actions) {
+  this.__wrapped__ = value;
+  this.__actions__ = actions || [];
+  this.__chain__ = !!chainAll;
+}
+
+LodashWrapper.prototype = baseCreate(baseLodash.prototype);
+LodashWrapper.prototype.constructor = LodashWrapper;
+
+module.exports = LodashWrapper;
+
+},{"./baseCreate":546,"./baseLodash":561}],531:[function(require,module,exports){
 arguments[4][94][0].apply(exports,arguments)
-},{"./cachePush":659,"./getNative":684,"dup":94}],611:[function(require,module,exports){
-arguments[4][321][0].apply(exports,arguments)
-},{"dup":321}],612:[function(require,module,exports){
+},{"./cachePush":580,"./getNative":605,"dup":94}],532:[function(require,module,exports){
+/**
+ * Copies the values of `source` to `array`.
+ *
+ * @private
+ * @param {Array} source The array to copy values from.
+ * @param {Array} [array=[]] The array to copy values to.
+ * @returns {Array} Returns `array`.
+ */
+function arrayCopy(source, array) {
+  var index = -1,
+      length = source.length;
+
+  array || (array = Array(length));
+  while (++index < length) {
+    array[index] = source[index];
+  }
+  return array;
+}
+
+module.exports = arrayCopy;
+
+},{}],533:[function(require,module,exports){
 arguments[4][95][0].apply(exports,arguments)
-},{"dup":95}],613:[function(require,module,exports){
+},{"dup":95}],534:[function(require,module,exports){
 arguments[4][96][0].apply(exports,arguments)
-},{"dup":96}],614:[function(require,module,exports){
+},{"dup":96}],535:[function(require,module,exports){
 arguments[4][97][0].apply(exports,arguments)
-},{"dup":97}],615:[function(require,module,exports){
+},{"dup":97}],536:[function(require,module,exports){
 arguments[4][98][0].apply(exports,arguments)
-},{"dup":98}],616:[function(require,module,exports){
+},{"dup":98}],537:[function(require,module,exports){
 arguments[4][99][0].apply(exports,arguments)
-},{"dup":99}],617:[function(require,module,exports){
+},{"dup":99}],538:[function(require,module,exports){
 arguments[4][100][0].apply(exports,arguments)
-},{"dup":100}],618:[function(require,module,exports){
+},{"dup":100}],539:[function(require,module,exports){
 arguments[4][101][0].apply(exports,arguments)
-},{"dup":101}],619:[function(require,module,exports){
+},{"dup":101}],540:[function(require,module,exports){
 arguments[4][102][0].apply(exports,arguments)
-},{"../object/keys":722,"dup":102}],620:[function(require,module,exports){
+},{"../object/keys":643,"dup":102}],541:[function(require,module,exports){
 arguments[4][103][0].apply(exports,arguments)
-},{"../object/keys":722,"./baseCopy":624,"dup":103}],621:[function(require,module,exports){
+},{"../object/keys":643,"./baseCopy":545,"dup":103}],542:[function(require,module,exports){
 arguments[4][104][0].apply(exports,arguments)
-},{"../utility/identity":728,"../utility/property":730,"./baseMatches":642,"./baseMatchesProperty":643,"./bindCallback":656,"dup":104}],622:[function(require,module,exports){
+},{"../utility/identity":649,"../utility/property":651,"./baseMatches":563,"./baseMatchesProperty":564,"./bindCallback":577,"dup":104}],543:[function(require,module,exports){
 var arrayCopy = require('./arrayCopy'),
     arrayEach = require('./arrayEach'),
     baseAssign = require('./baseAssign'),
@@ -84414,7 +72838,7 @@ function baseClone(value, isDeep, customizer, key, object, stackA, stackB) {
 
 module.exports = baseClone;
 
-},{"../lang/isArray":712,"../lang/isObject":716,"./arrayCopy":611,"./arrayEach":612,"./baseAssign":620,"./baseForOwn":634,"./initCloneArray":686,"./initCloneByTag":687,"./initCloneObject":688}],623:[function(require,module,exports){
+},{"../lang/isArray":633,"../lang/isObject":637,"./arrayCopy":532,"./arrayEach":533,"./baseAssign":541,"./baseForOwn":555,"./initCloneArray":607,"./initCloneByTag":608,"./initCloneObject":609}],544:[function(require,module,exports){
 /**
  * The base implementation of `compareAscending` which compares values and
  * sorts them in ascending order without guaranteeing a stable sort.
@@ -84450,63 +72874,236 @@ function baseCompareAscending(value, other) {
 
 module.exports = baseCompareAscending;
 
-},{}],624:[function(require,module,exports){
+},{}],545:[function(require,module,exports){
 arguments[4][105][0].apply(exports,arguments)
-},{"dup":105}],625:[function(require,module,exports){
-arguments[4][333][0].apply(exports,arguments)
-},{"../lang/isObject":716,"dup":333}],626:[function(require,module,exports){
+},{"dup":105}],546:[function(require,module,exports){
+var isObject = require('../lang/isObject');
+
+/**
+ * The base implementation of `_.create` without support for assigning
+ * properties to the created object.
+ *
+ * @private
+ * @param {Object} prototype The object to inherit from.
+ * @returns {Object} Returns the new object.
+ */
+var baseCreate = (function() {
+  function object() {}
+  return function(prototype) {
+    if (isObject(prototype)) {
+      object.prototype = prototype;
+      var result = new object;
+      object.prototype = undefined;
+    }
+    return result || {};
+  };
+}());
+
+module.exports = baseCreate;
+
+},{"../lang/isObject":637}],547:[function(require,module,exports){
 arguments[4][108][0].apply(exports,arguments)
-},{"./baseForOwn":634,"./createBaseEach":665,"dup":108}],627:[function(require,module,exports){
+},{"./baseForOwn":555,"./createBaseEach":586,"dup":108}],548:[function(require,module,exports){
 arguments[4][109][0].apply(exports,arguments)
-},{"./baseEach":626,"dup":109}],628:[function(require,module,exports){
+},{"./baseEach":547,"dup":109}],549:[function(require,module,exports){
 arguments[4][110][0].apply(exports,arguments)
-},{"./baseEach":626,"dup":110}],629:[function(require,module,exports){
+},{"./baseEach":547,"dup":110}],550:[function(require,module,exports){
 arguments[4][111][0].apply(exports,arguments)
-},{"dup":111}],630:[function(require,module,exports){
+},{"dup":111}],551:[function(require,module,exports){
 arguments[4][112][0].apply(exports,arguments)
-},{"dup":112}],631:[function(require,module,exports){
+},{"dup":112}],552:[function(require,module,exports){
 arguments[4][113][0].apply(exports,arguments)
-},{"../lang/isArguments":711,"../lang/isArray":712,"./arrayPush":616,"./isArrayLike":689,"./isObjectLike":695,"dup":113}],632:[function(require,module,exports){
+},{"../lang/isArguments":632,"../lang/isArray":633,"./arrayPush":537,"./isArrayLike":610,"./isObjectLike":616,"dup":113}],553:[function(require,module,exports){
 arguments[4][114][0].apply(exports,arguments)
-},{"./createBaseFor":666,"dup":114}],633:[function(require,module,exports){
+},{"./createBaseFor":587,"dup":114}],554:[function(require,module,exports){
 arguments[4][115][0].apply(exports,arguments)
-},{"../object/keysIn":723,"./baseFor":632,"dup":115}],634:[function(require,module,exports){
+},{"../object/keysIn":644,"./baseFor":553,"dup":115}],555:[function(require,module,exports){
 arguments[4][116][0].apply(exports,arguments)
-},{"../object/keys":722,"./baseFor":632,"dup":116}],635:[function(require,module,exports){
+},{"../object/keys":643,"./baseFor":553,"dup":116}],556:[function(require,module,exports){
 arguments[4][117][0].apply(exports,arguments)
-},{"./toObject":707,"dup":117}],636:[function(require,module,exports){
+},{"./toObject":628,"dup":117}],557:[function(require,module,exports){
 arguments[4][118][0].apply(exports,arguments)
-},{"./indexOfNaN":685,"dup":118}],637:[function(require,module,exports){
+},{"./indexOfNaN":606,"dup":118}],558:[function(require,module,exports){
 arguments[4][119][0].apply(exports,arguments)
-},{"../lang/isObject":716,"./baseIsEqualDeep":638,"./isObjectLike":695,"dup":119}],638:[function(require,module,exports){
+},{"../lang/isObject":637,"./baseIsEqualDeep":559,"./isObjectLike":616,"dup":119}],559:[function(require,module,exports){
 arguments[4][120][0].apply(exports,arguments)
-},{"../lang/isArray":712,"../lang/isTypedArray":719,"./equalArrays":677,"./equalByTag":678,"./equalObjects":679,"dup":120}],639:[function(require,module,exports){
+},{"../lang/isArray":633,"../lang/isTypedArray":640,"./equalArrays":598,"./equalByTag":599,"./equalObjects":600,"dup":120}],560:[function(require,module,exports){
 arguments[4][121][0].apply(exports,arguments)
-},{"./baseIsEqual":637,"./toObject":707,"dup":121}],640:[function(require,module,exports){
-arguments[4][350][0].apply(exports,arguments)
-},{"dup":350}],641:[function(require,module,exports){
+},{"./baseIsEqual":558,"./toObject":628,"dup":121}],561:[function(require,module,exports){
+/**
+ * The function whose prototype all chaining wrappers inherit from.
+ *
+ * @private
+ */
+function baseLodash() {
+  // No operation performed.
+}
+
+module.exports = baseLodash;
+
+},{}],562:[function(require,module,exports){
 arguments[4][122][0].apply(exports,arguments)
-},{"./baseEach":626,"./isArrayLike":689,"dup":122}],642:[function(require,module,exports){
+},{"./baseEach":547,"./isArrayLike":610,"dup":122}],563:[function(require,module,exports){
 arguments[4][123][0].apply(exports,arguments)
-},{"./baseIsMatch":639,"./getMatchData":683,"./toObject":707,"dup":123}],643:[function(require,module,exports){
+},{"./baseIsMatch":560,"./getMatchData":604,"./toObject":628,"dup":123}],564:[function(require,module,exports){
 arguments[4][124][0].apply(exports,arguments)
-},{"../array/last":589,"../lang/isArray":712,"./baseGet":635,"./baseIsEqual":637,"./baseSlice":650,"./isKey":692,"./isStrictComparable":696,"./toObject":707,"./toPath":708,"dup":124}],644:[function(require,module,exports){
-arguments[4][354][0].apply(exports,arguments)
-},{"../lang/isArray":712,"../lang/isObject":716,"../lang/isTypedArray":719,"../object/keys":722,"./arrayEach":612,"./baseMergeDeep":645,"./isArrayLike":689,"./isObjectLike":695,"dup":354}],645:[function(require,module,exports){
-arguments[4][355][0].apply(exports,arguments)
-},{"../lang/isArguments":711,"../lang/isArray":712,"../lang/isPlainObject":717,"../lang/isTypedArray":719,"../lang/toPlainObject":720,"./arrayCopy":611,"./isArrayLike":689,"dup":355}],646:[function(require,module,exports){
+},{"../array/last":510,"../lang/isArray":633,"./baseGet":556,"./baseIsEqual":558,"./baseSlice":571,"./isKey":613,"./isStrictComparable":617,"./toObject":628,"./toPath":629,"dup":124}],565:[function(require,module,exports){
+var arrayEach = require('./arrayEach'),
+    baseMergeDeep = require('./baseMergeDeep'),
+    isArray = require('../lang/isArray'),
+    isArrayLike = require('./isArrayLike'),
+    isObject = require('../lang/isObject'),
+    isObjectLike = require('./isObjectLike'),
+    isTypedArray = require('../lang/isTypedArray'),
+    keys = require('../object/keys');
+
+/**
+ * The base implementation of `_.merge` without support for argument juggling,
+ * multiple sources, and `this` binding `customizer` functions.
+ *
+ * @private
+ * @param {Object} object The destination object.
+ * @param {Object} source The source object.
+ * @param {Function} [customizer] The function to customize merged values.
+ * @param {Array} [stackA=[]] Tracks traversed source objects.
+ * @param {Array} [stackB=[]] Associates values with source counterparts.
+ * @returns {Object} Returns `object`.
+ */
+function baseMerge(object, source, customizer, stackA, stackB) {
+  if (!isObject(object)) {
+    return object;
+  }
+  var isSrcArr = isArrayLike(source) && (isArray(source) || isTypedArray(source)),
+      props = isSrcArr ? undefined : keys(source);
+
+  arrayEach(props || source, function(srcValue, key) {
+    if (props) {
+      key = srcValue;
+      srcValue = source[key];
+    }
+    if (isObjectLike(srcValue)) {
+      stackA || (stackA = []);
+      stackB || (stackB = []);
+      baseMergeDeep(object, source, key, baseMerge, customizer, stackA, stackB);
+    }
+    else {
+      var value = object[key],
+          result = customizer ? customizer(value, srcValue, key, object, source) : undefined,
+          isCommon = result === undefined;
+
+      if (isCommon) {
+        result = srcValue;
+      }
+      if ((result !== undefined || (isSrcArr && !(key in object))) &&
+          (isCommon || (result === result ? (result !== value) : (value === value)))) {
+        object[key] = result;
+      }
+    }
+  });
+  return object;
+}
+
+module.exports = baseMerge;
+
+},{"../lang/isArray":633,"../lang/isObject":637,"../lang/isTypedArray":640,"../object/keys":643,"./arrayEach":533,"./baseMergeDeep":566,"./isArrayLike":610,"./isObjectLike":616}],566:[function(require,module,exports){
+var arrayCopy = require('./arrayCopy'),
+    isArguments = require('../lang/isArguments'),
+    isArray = require('../lang/isArray'),
+    isArrayLike = require('./isArrayLike'),
+    isPlainObject = require('../lang/isPlainObject'),
+    isTypedArray = require('../lang/isTypedArray'),
+    toPlainObject = require('../lang/toPlainObject');
+
+/**
+ * A specialized version of `baseMerge` for arrays and objects which performs
+ * deep merges and tracks traversed objects enabling objects with circular
+ * references to be merged.
+ *
+ * @private
+ * @param {Object} object The destination object.
+ * @param {Object} source The source object.
+ * @param {string} key The key of the value to merge.
+ * @param {Function} mergeFunc The function to merge values.
+ * @param {Function} [customizer] The function to customize merged values.
+ * @param {Array} [stackA=[]] Tracks traversed source objects.
+ * @param {Array} [stackB=[]] Associates values with source counterparts.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */
+function baseMergeDeep(object, source, key, mergeFunc, customizer, stackA, stackB) {
+  var length = stackA.length,
+      srcValue = source[key];
+
+  while (length--) {
+    if (stackA[length] == srcValue) {
+      object[key] = stackB[length];
+      return;
+    }
+  }
+  var value = object[key],
+      result = customizer ? customizer(value, srcValue, key, object, source) : undefined,
+      isCommon = result === undefined;
+
+  if (isCommon) {
+    result = srcValue;
+    if (isArrayLike(srcValue) && (isArray(srcValue) || isTypedArray(srcValue))) {
+      result = isArray(value)
+        ? value
+        : (isArrayLike(value) ? arrayCopy(value) : []);
+    }
+    else if (isPlainObject(srcValue) || isArguments(srcValue)) {
+      result = isArguments(value)
+        ? toPlainObject(value)
+        : (isPlainObject(value) ? value : {});
+    }
+    else {
+      isCommon = false;
+    }
+  }
+  // Add the source value to the stack of traversed objects and associate
+  // it with its merged value.
+  stackA.push(srcValue);
+  stackB.push(result);
+
+  if (isCommon) {
+    // Recursively merge objects and arrays (susceptible to call stack limits).
+    object[key] = mergeFunc(result, srcValue, customizer, stackA, stackB);
+  } else if (result === result ? (result !== value) : (value === value)) {
+    object[key] = result;
+  }
+}
+
+module.exports = baseMergeDeep;
+
+},{"../lang/isArguments":632,"../lang/isArray":633,"../lang/isPlainObject":638,"../lang/isTypedArray":640,"../lang/toPlainObject":641,"./arrayCopy":532,"./isArrayLike":610}],567:[function(require,module,exports){
 arguments[4][125][0].apply(exports,arguments)
-},{"dup":125}],647:[function(require,module,exports){
+},{"dup":125}],568:[function(require,module,exports){
 arguments[4][126][0].apply(exports,arguments)
-},{"./baseGet":635,"./toPath":708,"dup":126}],648:[function(require,module,exports){
+},{"./baseGet":556,"./toPath":629,"dup":126}],569:[function(require,module,exports){
 arguments[4][127][0].apply(exports,arguments)
-},{"dup":127}],649:[function(require,module,exports){
-arguments[4][359][0].apply(exports,arguments)
-},{"../utility/identity":728,"./metaMap":698,"dup":359}],650:[function(require,module,exports){
+},{"dup":127}],570:[function(require,module,exports){
+var identity = require('../utility/identity'),
+    metaMap = require('./metaMap');
+
+/**
+ * The base implementation of `setData` without support for hot loop detection.
+ *
+ * @private
+ * @param {Function} func The function to associate metadata with.
+ * @param {*} data The metadata.
+ * @returns {Function} Returns `func`.
+ */
+var baseSetData = !metaMap ? identity : function(func, data) {
+  metaMap.set(func, data);
+  return func;
+};
+
+module.exports = baseSetData;
+
+},{"../utility/identity":649,"./metaMap":619}],571:[function(require,module,exports){
 arguments[4][128][0].apply(exports,arguments)
-},{"dup":128}],651:[function(require,module,exports){
+},{"dup":128}],572:[function(require,module,exports){
 arguments[4][129][0].apply(exports,arguments)
-},{"./baseEach":626,"dup":129}],652:[function(require,module,exports){
+},{"./baseEach":547,"dup":129}],573:[function(require,module,exports){
 /**
  * The base implementation of `_.sortBy` which uses `comparer` to define
  * the sort order of `array` and replaces criteria objects with their
@@ -84529,9 +73126,9 @@ function baseSortBy(array, comparer) {
 
 module.exports = baseSortBy;
 
-},{}],653:[function(require,module,exports){
+},{}],574:[function(require,module,exports){
 arguments[4][130][0].apply(exports,arguments)
-},{"dup":130}],654:[function(require,module,exports){
+},{"dup":130}],575:[function(require,module,exports){
 var baseIndexOf = require('./baseIndexOf'),
     cacheIndexOf = require('./cacheIndexOf'),
     createCache = require('./createCache');
@@ -84593,11 +73190,11 @@ function baseUniq(array, iteratee) {
 
 module.exports = baseUniq;
 
-},{"./baseIndexOf":636,"./cacheIndexOf":658,"./createCache":668}],655:[function(require,module,exports){
+},{"./baseIndexOf":557,"./cacheIndexOf":579,"./createCache":589}],576:[function(require,module,exports){
 arguments[4][131][0].apply(exports,arguments)
-},{"dup":131}],656:[function(require,module,exports){
+},{"dup":131}],577:[function(require,module,exports){
 arguments[4][132][0].apply(exports,arguments)
-},{"../utility/identity":728,"dup":132}],657:[function(require,module,exports){
+},{"../utility/identity":649,"dup":132}],578:[function(require,module,exports){
 (function (global){
 /** Native method references. */
 var ArrayBuffer = global.ArrayBuffer,
@@ -84621,11 +73218,11 @@ function bufferClone(buffer) {
 module.exports = bufferClone;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],658:[function(require,module,exports){
+},{}],579:[function(require,module,exports){
 arguments[4][133][0].apply(exports,arguments)
-},{"../lang/isObject":716,"dup":133}],659:[function(require,module,exports){
+},{"../lang/isObject":637,"dup":133}],580:[function(require,module,exports){
 arguments[4][134][0].apply(exports,arguments)
-},{"../lang/isObject":716,"dup":134}],660:[function(require,module,exports){
+},{"../lang/isObject":637,"dup":134}],581:[function(require,module,exports){
 var baseCompareAscending = require('./baseCompareAscending');
 
 /**
@@ -84643,27 +73240,193 @@ function compareAscending(object, other) {
 
 module.exports = compareAscending;
 
-},{"./baseCompareAscending":623}],661:[function(require,module,exports){
-arguments[4][366][0].apply(exports,arguments)
-},{"dup":366}],662:[function(require,module,exports){
-arguments[4][367][0].apply(exports,arguments)
-},{"dup":367}],663:[function(require,module,exports){
-arguments[4][368][0].apply(exports,arguments)
-},{"../lang/isArray":712,"./baseCallback":621,"./baseEach":626,"dup":368}],664:[function(require,module,exports){
+},{"./baseCompareAscending":544}],582:[function(require,module,exports){
+/* Native method references for those with the same name as other `lodash` methods. */
+var nativeMax = Math.max;
+
+/**
+ * Creates an array that is the composition of partially applied arguments,
+ * placeholders, and provided arguments into a single array of arguments.
+ *
+ * @private
+ * @param {Array|Object} args The provided arguments.
+ * @param {Array} partials The arguments to prepend to those provided.
+ * @param {Array} holders The `partials` placeholder indexes.
+ * @returns {Array} Returns the new array of composed arguments.
+ */
+function composeArgs(args, partials, holders) {
+  var holdersLength = holders.length,
+      argsIndex = -1,
+      argsLength = nativeMax(args.length - holdersLength, 0),
+      leftIndex = -1,
+      leftLength = partials.length,
+      result = Array(leftLength + argsLength);
+
+  while (++leftIndex < leftLength) {
+    result[leftIndex] = partials[leftIndex];
+  }
+  while (++argsIndex < holdersLength) {
+    result[holders[argsIndex]] = args[argsIndex];
+  }
+  while (argsLength--) {
+    result[leftIndex++] = args[argsIndex++];
+  }
+  return result;
+}
+
+module.exports = composeArgs;
+
+},{}],583:[function(require,module,exports){
+/* Native method references for those with the same name as other `lodash` methods. */
+var nativeMax = Math.max;
+
+/**
+ * This function is like `composeArgs` except that the arguments composition
+ * is tailored for `_.partialRight`.
+ *
+ * @private
+ * @param {Array|Object} args The provided arguments.
+ * @param {Array} partials The arguments to append to those provided.
+ * @param {Array} holders The `partials` placeholder indexes.
+ * @returns {Array} Returns the new array of composed arguments.
+ */
+function composeArgsRight(args, partials, holders) {
+  var holdersIndex = -1,
+      holdersLength = holders.length,
+      argsIndex = -1,
+      argsLength = nativeMax(args.length - holdersLength, 0),
+      rightIndex = -1,
+      rightLength = partials.length,
+      result = Array(argsLength + rightLength);
+
+  while (++argsIndex < argsLength) {
+    result[argsIndex] = args[argsIndex];
+  }
+  var offset = argsIndex;
+  while (++rightIndex < rightLength) {
+    result[offset + rightIndex] = partials[rightIndex];
+  }
+  while (++holdersIndex < holdersLength) {
+    result[offset + holders[holdersIndex]] = args[argsIndex++];
+  }
+  return result;
+}
+
+module.exports = composeArgsRight;
+
+},{}],584:[function(require,module,exports){
+var baseCallback = require('./baseCallback'),
+    baseEach = require('./baseEach'),
+    isArray = require('../lang/isArray');
+
+/**
+ * Creates a `_.countBy`, `_.groupBy`, `_.indexBy`, or `_.partition` function.
+ *
+ * @private
+ * @param {Function} setter The function to set keys and values of the accumulator object.
+ * @param {Function} [initializer] The function to initialize the accumulator object.
+ * @returns {Function} Returns the new aggregator function.
+ */
+function createAggregator(setter, initializer) {
+  return function(collection, iteratee, thisArg) {
+    var result = initializer ? initializer() : {};
+    iteratee = baseCallback(iteratee, thisArg, 3);
+
+    if (isArray(collection)) {
+      var index = -1,
+          length = collection.length;
+
+      while (++index < length) {
+        var value = collection[index];
+        setter(result, value, iteratee(value, index, collection), collection);
+      }
+    } else {
+      baseEach(collection, function(value, key, collection) {
+        setter(result, value, iteratee(value, key, collection), collection);
+      });
+    }
+    return result;
+  };
+}
+
+module.exports = createAggregator;
+
+},{"../lang/isArray":633,"./baseCallback":542,"./baseEach":547}],585:[function(require,module,exports){
 arguments[4][135][0].apply(exports,arguments)
-},{"../function/restParam":607,"./bindCallback":656,"./isIterateeCall":691,"dup":135}],665:[function(require,module,exports){
+},{"../function/restParam":528,"./bindCallback":577,"./isIterateeCall":612,"dup":135}],586:[function(require,module,exports){
 arguments[4][136][0].apply(exports,arguments)
-},{"./getLength":682,"./isLength":694,"./toObject":707,"dup":136}],666:[function(require,module,exports){
+},{"./getLength":603,"./isLength":615,"./toObject":628,"dup":136}],587:[function(require,module,exports){
 arguments[4][137][0].apply(exports,arguments)
-},{"./toObject":707,"dup":137}],667:[function(require,module,exports){
-arguments[4][372][0].apply(exports,arguments)
-},{"./createCtorWrapper":669,"dup":372}],668:[function(require,module,exports){
+},{"./toObject":628,"dup":137}],588:[function(require,module,exports){
+(function (global){
+var createCtorWrapper = require('./createCtorWrapper');
+
+/**
+ * Creates a function that wraps `func` and invokes it with the `this`
+ * binding of `thisArg`.
+ *
+ * @private
+ * @param {Function} func The function to bind.
+ * @param {*} [thisArg] The `this` binding of `func`.
+ * @returns {Function} Returns the new bound function.
+ */
+function createBindWrapper(func, thisArg) {
+  var Ctor = createCtorWrapper(func);
+
+  function wrapper() {
+    var fn = (this && this !== global && this instanceof wrapper) ? Ctor : func;
+    return fn.apply(thisArg, arguments);
+  }
+  return wrapper;
+}
+
+module.exports = createBindWrapper;
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"./createCtorWrapper":590}],589:[function(require,module,exports){
 arguments[4][138][0].apply(exports,arguments)
-},{"./SetCache":610,"./getNative":684,"dup":138}],669:[function(require,module,exports){
-arguments[4][374][0].apply(exports,arguments)
-},{"../lang/isObject":716,"./baseCreate":625,"dup":374}],670:[function(require,module,exports){
+},{"./SetCache":531,"./getNative":605,"dup":138}],590:[function(require,module,exports){
+var baseCreate = require('./baseCreate'),
+    isObject = require('../lang/isObject');
+
+/**
+ * Creates a function that produces an instance of `Ctor` regardless of
+ * whether it was invoked as part of a `new` expression or by `call` or `apply`.
+ *
+ * @private
+ * @param {Function} Ctor The constructor to wrap.
+ * @returns {Function} Returns the new wrapped function.
+ */
+function createCtorWrapper(Ctor) {
+  return function() {
+    // Use a `switch` statement to work with class constructors.
+    // See http://ecma-international.org/ecma-262/6.0/#sec-ecmascript-function-objects-call-thisargument-argumentslist
+    // for more details.
+    var args = arguments;
+    switch (args.length) {
+      case 0: return new Ctor;
+      case 1: return new Ctor(args[0]);
+      case 2: return new Ctor(args[0], args[1]);
+      case 3: return new Ctor(args[0], args[1], args[2]);
+      case 4: return new Ctor(args[0], args[1], args[2], args[3]);
+      case 5: return new Ctor(args[0], args[1], args[2], args[3], args[4]);
+      case 6: return new Ctor(args[0], args[1], args[2], args[3], args[4], args[5]);
+      case 7: return new Ctor(args[0], args[1], args[2], args[3], args[4], args[5], args[6]);
+    }
+    var thisBinding = baseCreate(Ctor.prototype),
+        result = Ctor.apply(thisBinding, args);
+
+    // Mimic the constructor's `return` behavior.
+    // See https://es5.github.io/#x13.2.2 for more details.
+    return isObject(result) ? result : thisBinding;
+  };
+}
+
+module.exports = createCtorWrapper;
+
+},{"../lang/isObject":637,"./baseCreate":546}],591:[function(require,module,exports){
 arguments[4][139][0].apply(exports,arguments)
-},{"../lang/isArray":712,"./baseCallback":621,"./baseFind":629,"./baseFindIndex":630,"dup":139}],671:[function(require,module,exports){
+},{"../lang/isArray":633,"./baseCallback":542,"./baseFind":550,"./baseFindIndex":551,"dup":139}],592:[function(require,module,exports){
 var baseCallback = require('./baseCallback'),
     baseFindIndex = require('./baseFindIndex');
 
@@ -84686,35 +73449,319 @@ function createFindIndex(fromRight) {
 
 module.exports = createFindIndex;
 
-},{"./baseCallback":621,"./baseFindIndex":630}],672:[function(require,module,exports){
+},{"./baseCallback":542,"./baseFindIndex":551}],593:[function(require,module,exports){
 arguments[4][140][0].apply(exports,arguments)
-},{"../lang/isArray":712,"./bindCallback":656,"dup":140}],673:[function(require,module,exports){
-arguments[4][377][0].apply(exports,arguments)
-},{"./arrayCopy":611,"./composeArgs":661,"./composeArgsRight":662,"./createCtorWrapper":669,"./isLaziable":693,"./reorder":702,"./replaceHolders":703,"./setData":704,"dup":377}],674:[function(require,module,exports){
-arguments[4][378][0].apply(exports,arguments)
-},{"./createCtorWrapper":669,"dup":378}],675:[function(require,module,exports){
+},{"../lang/isArray":633,"./bindCallback":577,"dup":140}],594:[function(require,module,exports){
+(function (global){
+var arrayCopy = require('./arrayCopy'),
+    composeArgs = require('./composeArgs'),
+    composeArgsRight = require('./composeArgsRight'),
+    createCtorWrapper = require('./createCtorWrapper'),
+    isLaziable = require('./isLaziable'),
+    reorder = require('./reorder'),
+    replaceHolders = require('./replaceHolders'),
+    setData = require('./setData');
+
+/** Used to compose bitmasks for wrapper metadata. */
+var BIND_FLAG = 1,
+    BIND_KEY_FLAG = 2,
+    CURRY_BOUND_FLAG = 4,
+    CURRY_FLAG = 8,
+    CURRY_RIGHT_FLAG = 16,
+    PARTIAL_FLAG = 32,
+    PARTIAL_RIGHT_FLAG = 64,
+    ARY_FLAG = 128;
+
+/* Native method references for those with the same name as other `lodash` methods. */
+var nativeMax = Math.max;
+
+/**
+ * Creates a function that wraps `func` and invokes it with optional `this`
+ * binding of, partial application, and currying.
+ *
+ * @private
+ * @param {Function|string} func The function or method name to reference.
+ * @param {number} bitmask The bitmask of flags. See `createWrapper` for more details.
+ * @param {*} [thisArg] The `this` binding of `func`.
+ * @param {Array} [partials] The arguments to prepend to those provided to the new function.
+ * @param {Array} [holders] The `partials` placeholder indexes.
+ * @param {Array} [partialsRight] The arguments to append to those provided to the new function.
+ * @param {Array} [holdersRight] The `partialsRight` placeholder indexes.
+ * @param {Array} [argPos] The argument positions of the new function.
+ * @param {number} [ary] The arity cap of `func`.
+ * @param {number} [arity] The arity of `func`.
+ * @returns {Function} Returns the new wrapped function.
+ */
+function createHybridWrapper(func, bitmask, thisArg, partials, holders, partialsRight, holdersRight, argPos, ary, arity) {
+  var isAry = bitmask & ARY_FLAG,
+      isBind = bitmask & BIND_FLAG,
+      isBindKey = bitmask & BIND_KEY_FLAG,
+      isCurry = bitmask & CURRY_FLAG,
+      isCurryBound = bitmask & CURRY_BOUND_FLAG,
+      isCurryRight = bitmask & CURRY_RIGHT_FLAG,
+      Ctor = isBindKey ? undefined : createCtorWrapper(func);
+
+  function wrapper() {
+    // Avoid `arguments` object use disqualifying optimizations by
+    // converting it to an array before providing it to other functions.
+    var length = arguments.length,
+        index = length,
+        args = Array(length);
+
+    while (index--) {
+      args[index] = arguments[index];
+    }
+    if (partials) {
+      args = composeArgs(args, partials, holders);
+    }
+    if (partialsRight) {
+      args = composeArgsRight(args, partialsRight, holdersRight);
+    }
+    if (isCurry || isCurryRight) {
+      var placeholder = wrapper.placeholder,
+          argsHolders = replaceHolders(args, placeholder);
+
+      length -= argsHolders.length;
+      if (length < arity) {
+        var newArgPos = argPos ? arrayCopy(argPos) : undefined,
+            newArity = nativeMax(arity - length, 0),
+            newsHolders = isCurry ? argsHolders : undefined,
+            newHoldersRight = isCurry ? undefined : argsHolders,
+            newPartials = isCurry ? args : undefined,
+            newPartialsRight = isCurry ? undefined : args;
+
+        bitmask |= (isCurry ? PARTIAL_FLAG : PARTIAL_RIGHT_FLAG);
+        bitmask &= ~(isCurry ? PARTIAL_RIGHT_FLAG : PARTIAL_FLAG);
+
+        if (!isCurryBound) {
+          bitmask &= ~(BIND_FLAG | BIND_KEY_FLAG);
+        }
+        var newData = [func, bitmask, thisArg, newPartials, newsHolders, newPartialsRight, newHoldersRight, newArgPos, ary, newArity],
+            result = createHybridWrapper.apply(undefined, newData);
+
+        if (isLaziable(func)) {
+          setData(result, newData);
+        }
+        result.placeholder = placeholder;
+        return result;
+      }
+    }
+    var thisBinding = isBind ? thisArg : this,
+        fn = isBindKey ? thisBinding[func] : func;
+
+    if (argPos) {
+      args = reorder(args, argPos);
+    }
+    if (isAry && ary < args.length) {
+      args.length = ary;
+    }
+    if (this && this !== global && this instanceof wrapper) {
+      fn = Ctor || createCtorWrapper(func);
+    }
+    return fn.apply(thisBinding, args);
+  }
+  return wrapper;
+}
+
+module.exports = createHybridWrapper;
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"./arrayCopy":532,"./composeArgs":582,"./composeArgsRight":583,"./createCtorWrapper":590,"./isLaziable":614,"./reorder":623,"./replaceHolders":624,"./setData":625}],595:[function(require,module,exports){
+(function (global){
+var createCtorWrapper = require('./createCtorWrapper');
+
+/** Used to compose bitmasks for wrapper metadata. */
+var BIND_FLAG = 1;
+
+/**
+ * Creates a function that wraps `func` and invokes it with the optional `this`
+ * binding of `thisArg` and the `partials` prepended to those provided to
+ * the wrapper.
+ *
+ * @private
+ * @param {Function} func The function to partially apply arguments to.
+ * @param {number} bitmask The bitmask of flags. See `createWrapper` for more details.
+ * @param {*} thisArg The `this` binding of `func`.
+ * @param {Array} partials The arguments to prepend to those provided to the new function.
+ * @returns {Function} Returns the new bound function.
+ */
+function createPartialWrapper(func, bitmask, thisArg, partials) {
+  var isBind = bitmask & BIND_FLAG,
+      Ctor = createCtorWrapper(func);
+
+  function wrapper() {
+    // Avoid `arguments` object use disqualifying optimizations by
+    // converting it to an array before providing it `func`.
+    var argsIndex = -1,
+        argsLength = arguments.length,
+        leftIndex = -1,
+        leftLength = partials.length,
+        args = Array(leftLength + argsLength);
+
+    while (++leftIndex < leftLength) {
+      args[leftIndex] = partials[leftIndex];
+    }
+    while (argsLength--) {
+      args[leftIndex++] = arguments[++argsIndex];
+    }
+    var fn = (this && this !== global && this instanceof wrapper) ? Ctor : func;
+    return fn.apply(isBind ? thisArg : this, args);
+  }
+  return wrapper;
+}
+
+module.exports = createPartialWrapper;
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"./createCtorWrapper":590}],596:[function(require,module,exports){
 arguments[4][141][0].apply(exports,arguments)
-},{"../lang/isArray":712,"./baseCallback":621,"./baseReduce":648,"dup":141}],676:[function(require,module,exports){
-arguments[4][380][0].apply(exports,arguments)
-},{"./baseSetData":649,"./createBindWrapper":667,"./createHybridWrapper":673,"./createPartialWrapper":674,"./getData":680,"./mergeData":697,"./setData":704,"dup":380}],677:[function(require,module,exports){
+},{"../lang/isArray":633,"./baseCallback":542,"./baseReduce":569,"dup":141}],597:[function(require,module,exports){
+var baseSetData = require('./baseSetData'),
+    createBindWrapper = require('./createBindWrapper'),
+    createHybridWrapper = require('./createHybridWrapper'),
+    createPartialWrapper = require('./createPartialWrapper'),
+    getData = require('./getData'),
+    mergeData = require('./mergeData'),
+    setData = require('./setData');
+
+/** Used to compose bitmasks for wrapper metadata. */
+var BIND_FLAG = 1,
+    BIND_KEY_FLAG = 2,
+    PARTIAL_FLAG = 32,
+    PARTIAL_RIGHT_FLAG = 64;
+
+/** Used as the `TypeError` message for "Functions" methods. */
+var FUNC_ERROR_TEXT = 'Expected a function';
+
+/* Native method references for those with the same name as other `lodash` methods. */
+var nativeMax = Math.max;
+
+/**
+ * Creates a function that either curries or invokes `func` with optional
+ * `this` binding and partially applied arguments.
+ *
+ * @private
+ * @param {Function|string} func The function or method name to reference.
+ * @param {number} bitmask The bitmask of flags.
+ *  The bitmask may be composed of the following flags:
+ *     1 - `_.bind`
+ *     2 - `_.bindKey`
+ *     4 - `_.curry` or `_.curryRight` of a bound function
+ *     8 - `_.curry`
+ *    16 - `_.curryRight`
+ *    32 - `_.partial`
+ *    64 - `_.partialRight`
+ *   128 - `_.rearg`
+ *   256 - `_.ary`
+ * @param {*} [thisArg] The `this` binding of `func`.
+ * @param {Array} [partials] The arguments to be partially applied.
+ * @param {Array} [holders] The `partials` placeholder indexes.
+ * @param {Array} [argPos] The argument positions of the new function.
+ * @param {number} [ary] The arity cap of `func`.
+ * @param {number} [arity] The arity of `func`.
+ * @returns {Function} Returns the new wrapped function.
+ */
+function createWrapper(func, bitmask, thisArg, partials, holders, argPos, ary, arity) {
+  var isBindKey = bitmask & BIND_KEY_FLAG;
+  if (!isBindKey && typeof func != 'function') {
+    throw new TypeError(FUNC_ERROR_TEXT);
+  }
+  var length = partials ? partials.length : 0;
+  if (!length) {
+    bitmask &= ~(PARTIAL_FLAG | PARTIAL_RIGHT_FLAG);
+    partials = holders = undefined;
+  }
+  length -= (holders ? holders.length : 0);
+  if (bitmask & PARTIAL_RIGHT_FLAG) {
+    var partialsRight = partials,
+        holdersRight = holders;
+
+    partials = holders = undefined;
+  }
+  var data = isBindKey ? undefined : getData(func),
+      newData = [func, bitmask, thisArg, partials, holders, partialsRight, holdersRight, argPos, ary, arity];
+
+  if (data) {
+    mergeData(newData, data);
+    bitmask = newData[1];
+    arity = newData[9];
+  }
+  newData[9] = arity == null
+    ? (isBindKey ? 0 : func.length)
+    : (nativeMax(arity - length, 0) || 0);
+
+  if (bitmask == BIND_FLAG) {
+    var result = createBindWrapper(newData[0], newData[2]);
+  } else if ((bitmask == PARTIAL_FLAG || bitmask == (BIND_FLAG | PARTIAL_FLAG)) && !newData[4].length) {
+    result = createPartialWrapper.apply(undefined, newData);
+  } else {
+    result = createHybridWrapper.apply(undefined, newData);
+  }
+  var setter = data ? baseSetData : setData;
+  return setter(result, newData);
+}
+
+module.exports = createWrapper;
+
+},{"./baseSetData":570,"./createBindWrapper":588,"./createHybridWrapper":594,"./createPartialWrapper":595,"./getData":601,"./mergeData":618,"./setData":625}],598:[function(require,module,exports){
 arguments[4][142][0].apply(exports,arguments)
-},{"./arraySome":618,"dup":142}],678:[function(require,module,exports){
+},{"./arraySome":539,"dup":142}],599:[function(require,module,exports){
 arguments[4][143][0].apply(exports,arguments)
-},{"dup":143}],679:[function(require,module,exports){
+},{"dup":143}],600:[function(require,module,exports){
 arguments[4][144][0].apply(exports,arguments)
-},{"../object/keys":722,"dup":144}],680:[function(require,module,exports){
-arguments[4][384][0].apply(exports,arguments)
-},{"../utility/noop":729,"./metaMap":698,"dup":384}],681:[function(require,module,exports){
-arguments[4][385][0].apply(exports,arguments)
-},{"./realNames":701,"dup":385}],682:[function(require,module,exports){
+},{"../object/keys":643,"dup":144}],601:[function(require,module,exports){
+var metaMap = require('./metaMap'),
+    noop = require('../utility/noop');
+
+/**
+ * Gets metadata for `func`.
+ *
+ * @private
+ * @param {Function} func The function to query.
+ * @returns {*} Returns the metadata for `func`.
+ */
+var getData = !metaMap ? noop : function(func) {
+  return metaMap.get(func);
+};
+
+module.exports = getData;
+
+},{"../utility/noop":650,"./metaMap":619}],602:[function(require,module,exports){
+var realNames = require('./realNames');
+
+/**
+ * Gets the name of `func`.
+ *
+ * @private
+ * @param {Function} func The function to query.
+ * @returns {string} Returns the function name.
+ */
+function getFuncName(func) {
+  var result = (func.name + ''),
+      array = realNames[result],
+      length = array ? array.length : 0;
+
+  while (length--) {
+    var data = array[length],
+        otherFunc = data.func;
+    if (otherFunc == null || otherFunc == func) {
+      return data.name;
+    }
+  }
+  return result;
+}
+
+module.exports = getFuncName;
+
+},{"./realNames":622}],603:[function(require,module,exports){
 arguments[4][145][0].apply(exports,arguments)
-},{"./baseProperty":646,"dup":145}],683:[function(require,module,exports){
+},{"./baseProperty":567,"dup":145}],604:[function(require,module,exports){
 arguments[4][146][0].apply(exports,arguments)
-},{"../object/pairs":725,"./isStrictComparable":696,"dup":146}],684:[function(require,module,exports){
+},{"../object/pairs":646,"./isStrictComparable":617,"dup":146}],605:[function(require,module,exports){
 arguments[4][147][0].apply(exports,arguments)
-},{"../lang/isNative":714,"dup":147}],685:[function(require,module,exports){
+},{"../lang/isNative":635,"dup":147}],606:[function(require,module,exports){
 arguments[4][148][0].apply(exports,arguments)
-},{"dup":148}],686:[function(require,module,exports){
+},{"dup":148}],607:[function(require,module,exports){
 /** Used for native method references. */
 var objectProto = Object.prototype;
 
@@ -84742,7 +73789,7 @@ function initCloneArray(array) {
 
 module.exports = initCloneArray;
 
-},{}],687:[function(require,module,exports){
+},{}],608:[function(require,module,exports){
 var bufferClone = require('./bufferClone');
 
 /** `Object#toString` result references. */
@@ -84807,7 +73854,7 @@ function initCloneByTag(object, tag, isDeep) {
 
 module.exports = initCloneByTag;
 
-},{"./bufferClone":657}],688:[function(require,module,exports){
+},{"./bufferClone":578}],609:[function(require,module,exports){
 /**
  * Initializes an object clone.
  *
@@ -84825,41 +73872,270 @@ function initCloneObject(object) {
 
 module.exports = initCloneObject;
 
-},{}],689:[function(require,module,exports){
+},{}],610:[function(require,module,exports){
 arguments[4][149][0].apply(exports,arguments)
-},{"./getLength":682,"./isLength":694,"dup":149}],690:[function(require,module,exports){
+},{"./getLength":603,"./isLength":615,"dup":149}],611:[function(require,module,exports){
 arguments[4][150][0].apply(exports,arguments)
-},{"dup":150}],691:[function(require,module,exports){
+},{"dup":150}],612:[function(require,module,exports){
 arguments[4][151][0].apply(exports,arguments)
-},{"../lang/isObject":716,"./isArrayLike":689,"./isIndex":690,"dup":151}],692:[function(require,module,exports){
+},{"../lang/isObject":637,"./isArrayLike":610,"./isIndex":611,"dup":151}],613:[function(require,module,exports){
 arguments[4][152][0].apply(exports,arguments)
-},{"../lang/isArray":712,"./toObject":707,"dup":152}],693:[function(require,module,exports){
-arguments[4][394][0].apply(exports,arguments)
-},{"../chain/lodash":592,"./LazyWrapper":608,"./getData":680,"./getFuncName":681,"dup":394}],694:[function(require,module,exports){
+},{"../lang/isArray":633,"./toObject":628,"dup":152}],614:[function(require,module,exports){
+var LazyWrapper = require('./LazyWrapper'),
+    getData = require('./getData'),
+    getFuncName = require('./getFuncName'),
+    lodash = require('../chain/lodash');
+
+/**
+ * Checks if `func` has a lazy counterpart.
+ *
+ * @private
+ * @param {Function} func The function to check.
+ * @returns {boolean} Returns `true` if `func` has a lazy counterpart, else `false`.
+ */
+function isLaziable(func) {
+  var funcName = getFuncName(func),
+      other = lodash[funcName];
+
+  if (typeof other != 'function' || !(funcName in LazyWrapper.prototype)) {
+    return false;
+  }
+  if (func === other) {
+    return true;
+  }
+  var data = getData(other);
+  return !!data && func === data[0];
+}
+
+module.exports = isLaziable;
+
+},{"../chain/lodash":513,"./LazyWrapper":529,"./getData":601,"./getFuncName":602}],615:[function(require,module,exports){
 arguments[4][153][0].apply(exports,arguments)
-},{"dup":153}],695:[function(require,module,exports){
+},{"dup":153}],616:[function(require,module,exports){
 arguments[4][154][0].apply(exports,arguments)
-},{"dup":154}],696:[function(require,module,exports){
+},{"dup":154}],617:[function(require,module,exports){
 arguments[4][155][0].apply(exports,arguments)
-},{"../lang/isObject":716,"dup":155}],697:[function(require,module,exports){
-arguments[4][398][0].apply(exports,arguments)
-},{"./arrayCopy":611,"./composeArgs":661,"./composeArgsRight":662,"./replaceHolders":703,"dup":398}],698:[function(require,module,exports){
-arguments[4][399][0].apply(exports,arguments)
-},{"./getNative":684,"dup":399}],699:[function(require,module,exports){
+},{"../lang/isObject":637,"dup":155}],618:[function(require,module,exports){
+var arrayCopy = require('./arrayCopy'),
+    composeArgs = require('./composeArgs'),
+    composeArgsRight = require('./composeArgsRight'),
+    replaceHolders = require('./replaceHolders');
+
+/** Used to compose bitmasks for wrapper metadata. */
+var BIND_FLAG = 1,
+    CURRY_BOUND_FLAG = 4,
+    CURRY_FLAG = 8,
+    ARY_FLAG = 128,
+    REARG_FLAG = 256;
+
+/** Used as the internal argument placeholder. */
+var PLACEHOLDER = '__lodash_placeholder__';
+
+/* Native method references for those with the same name as other `lodash` methods. */
+var nativeMin = Math.min;
+
+/**
+ * Merges the function metadata of `source` into `data`.
+ *
+ * Merging metadata reduces the number of wrappers required to invoke a function.
+ * This is possible because methods like `_.bind`, `_.curry`, and `_.partial`
+ * may be applied regardless of execution order. Methods like `_.ary` and `_.rearg`
+ * augment function arguments, making the order in which they are executed important,
+ * preventing the merging of metadata. However, we make an exception for a safe
+ * common case where curried functions have `_.ary` and or `_.rearg` applied.
+ *
+ * @private
+ * @param {Array} data The destination metadata.
+ * @param {Array} source The source metadata.
+ * @returns {Array} Returns `data`.
+ */
+function mergeData(data, source) {
+  var bitmask = data[1],
+      srcBitmask = source[1],
+      newBitmask = bitmask | srcBitmask,
+      isCommon = newBitmask < ARY_FLAG;
+
+  var isCombo =
+    (srcBitmask == ARY_FLAG && bitmask == CURRY_FLAG) ||
+    (srcBitmask == ARY_FLAG && bitmask == REARG_FLAG && data[7].length <= source[8]) ||
+    (srcBitmask == (ARY_FLAG | REARG_FLAG) && bitmask == CURRY_FLAG);
+
+  // Exit early if metadata can't be merged.
+  if (!(isCommon || isCombo)) {
+    return data;
+  }
+  // Use source `thisArg` if available.
+  if (srcBitmask & BIND_FLAG) {
+    data[2] = source[2];
+    // Set when currying a bound function.
+    newBitmask |= (bitmask & BIND_FLAG) ? 0 : CURRY_BOUND_FLAG;
+  }
+  // Compose partial arguments.
+  var value = source[3];
+  if (value) {
+    var partials = data[3];
+    data[3] = partials ? composeArgs(partials, value, source[4]) : arrayCopy(value);
+    data[4] = partials ? replaceHolders(data[3], PLACEHOLDER) : arrayCopy(source[4]);
+  }
+  // Compose partial right arguments.
+  value = source[5];
+  if (value) {
+    partials = data[5];
+    data[5] = partials ? composeArgsRight(partials, value, source[6]) : arrayCopy(value);
+    data[6] = partials ? replaceHolders(data[5], PLACEHOLDER) : arrayCopy(source[6]);
+  }
+  // Use source `argPos` if available.
+  value = source[7];
+  if (value) {
+    data[7] = arrayCopy(value);
+  }
+  // Use source `ary` if it's smaller.
+  if (srcBitmask & ARY_FLAG) {
+    data[8] = data[8] == null ? source[8] : nativeMin(data[8], source[8]);
+  }
+  // Use source `arity` if one is not provided.
+  if (data[9] == null) {
+    data[9] = source[9];
+  }
+  // Use source `func` and merge bitmasks.
+  data[0] = source[0];
+  data[1] = newBitmask;
+
+  return data;
+}
+
+module.exports = mergeData;
+
+},{"./arrayCopy":532,"./composeArgs":582,"./composeArgsRight":583,"./replaceHolders":624}],619:[function(require,module,exports){
+(function (global){
+var getNative = require('./getNative');
+
+/** Native method references. */
+var WeakMap = getNative(global, 'WeakMap');
+
+/** Used to store function metadata. */
+var metaMap = WeakMap && new WeakMap;
+
+module.exports = metaMap;
+
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"./getNative":605}],620:[function(require,module,exports){
 arguments[4][156][0].apply(exports,arguments)
-},{"./toObject":707,"dup":156}],700:[function(require,module,exports){
+},{"./toObject":628,"dup":156}],621:[function(require,module,exports){
 arguments[4][157][0].apply(exports,arguments)
-},{"./baseForIn":633,"dup":157}],701:[function(require,module,exports){
-arguments[4][402][0].apply(exports,arguments)
-},{"dup":402}],702:[function(require,module,exports){
-arguments[4][403][0].apply(exports,arguments)
-},{"./arrayCopy":611,"./isIndex":690,"dup":403}],703:[function(require,module,exports){
-arguments[4][404][0].apply(exports,arguments)
-},{"dup":404}],704:[function(require,module,exports){
-arguments[4][405][0].apply(exports,arguments)
-},{"../date/now":604,"./baseSetData":649,"dup":405}],705:[function(require,module,exports){
+},{"./baseForIn":554,"dup":157}],622:[function(require,module,exports){
+/** Used to lookup unminified function names. */
+var realNames = {};
+
+module.exports = realNames;
+
+},{}],623:[function(require,module,exports){
+var arrayCopy = require('./arrayCopy'),
+    isIndex = require('./isIndex');
+
+/* Native method references for those with the same name as other `lodash` methods. */
+var nativeMin = Math.min;
+
+/**
+ * Reorder `array` according to the specified indexes where the element at
+ * the first index is assigned as the first element, the element at
+ * the second index is assigned as the second element, and so on.
+ *
+ * @private
+ * @param {Array} array The array to reorder.
+ * @param {Array} indexes The arranged array indexes.
+ * @returns {Array} Returns `array`.
+ */
+function reorder(array, indexes) {
+  var arrLength = array.length,
+      length = nativeMin(indexes.length, arrLength),
+      oldArray = arrayCopy(array);
+
+  while (length--) {
+    var index = indexes[length];
+    array[length] = isIndex(index, arrLength) ? oldArray[index] : undefined;
+  }
+  return array;
+}
+
+module.exports = reorder;
+
+},{"./arrayCopy":532,"./isIndex":611}],624:[function(require,module,exports){
+/** Used as the internal argument placeholder. */
+var PLACEHOLDER = '__lodash_placeholder__';
+
+/**
+ * Replaces all `placeholder` elements in `array` with an internal placeholder
+ * and returns an array of their indexes.
+ *
+ * @private
+ * @param {Array} array The array to modify.
+ * @param {*} placeholder The placeholder to replace.
+ * @returns {Array} Returns the new array of placeholder indexes.
+ */
+function replaceHolders(array, placeholder) {
+  var index = -1,
+      length = array.length,
+      resIndex = -1,
+      result = [];
+
+  while (++index < length) {
+    if (array[index] === placeholder) {
+      array[index] = PLACEHOLDER;
+      result[++resIndex] = index;
+    }
+  }
+  return result;
+}
+
+module.exports = replaceHolders;
+
+},{}],625:[function(require,module,exports){
+var baseSetData = require('./baseSetData'),
+    now = require('../date/now');
+
+/** Used to detect when a function becomes hot. */
+var HOT_COUNT = 150,
+    HOT_SPAN = 16;
+
+/**
+ * Sets metadata for `func`.
+ *
+ * **Note:** If this function becomes hot, i.e. is invoked a lot in a short
+ * period of time, it will trip its breaker and transition to an identity function
+ * to avoid garbage collection pauses in V8. See [V8 issue 2070](https://code.google.com/p/v8/issues/detail?id=2070)
+ * for more details.
+ *
+ * @private
+ * @param {Function} func The function to associate metadata with.
+ * @param {*} data The metadata.
+ * @returns {Function} Returns `func`.
+ */
+var setData = (function() {
+  var count = 0,
+      lastCalled = 0;
+
+  return function(key, value) {
+    var stamp = now(),
+        remaining = HOT_SPAN - (stamp - lastCalled);
+
+    lastCalled = stamp;
+    if (remaining > 0) {
+      if (++count >= HOT_COUNT) {
+        return key;
+      }
+    } else {
+      count = 0;
+    }
+    return baseSetData(key, value);
+  };
+}());
+
+module.exports = setData;
+
+},{"../date/now":525,"./baseSetData":570}],626:[function(require,module,exports){
 arguments[4][158][0].apply(exports,arguments)
-},{"../lang/isArguments":711,"../lang/isArray":712,"../object/keysIn":723,"./isIndex":690,"./isLength":694,"dup":158}],706:[function(require,module,exports){
+},{"../lang/isArguments":632,"../lang/isArray":633,"../object/keysIn":644,"./isIndex":611,"./isLength":615,"dup":158}],627:[function(require,module,exports){
 /**
  * An implementation of `_.uniq` optimized for sorted arrays without support
  * for callback shorthands and `this` binding.
@@ -84890,13 +74166,31 @@ function sortedUniq(array, iteratee) {
 
 module.exports = sortedUniq;
 
-},{}],707:[function(require,module,exports){
+},{}],628:[function(require,module,exports){
 arguments[4][159][0].apply(exports,arguments)
-},{"../lang/isObject":716,"dup":159}],708:[function(require,module,exports){
+},{"../lang/isObject":637,"dup":159}],629:[function(require,module,exports){
 arguments[4][160][0].apply(exports,arguments)
-},{"../lang/isArray":712,"./baseToString":653,"dup":160}],709:[function(require,module,exports){
-arguments[4][409][0].apply(exports,arguments)
-},{"./LazyWrapper":608,"./LodashWrapper":609,"./arrayCopy":611,"dup":409}],710:[function(require,module,exports){
+},{"../lang/isArray":633,"./baseToString":574,"dup":160}],630:[function(require,module,exports){
+var LazyWrapper = require('./LazyWrapper'),
+    LodashWrapper = require('./LodashWrapper'),
+    arrayCopy = require('./arrayCopy');
+
+/**
+ * Creates a clone of `wrapper`.
+ *
+ * @private
+ * @param {Object} wrapper The wrapper to clone.
+ * @returns {Object} Returns the cloned wrapper.
+ */
+function wrapperClone(wrapper) {
+  return wrapper instanceof LazyWrapper
+    ? wrapper.clone()
+    : new LodashWrapper(wrapper.__wrapped__, wrapper.__chain__, arrayCopy(wrapper.__actions__));
+}
+
+module.exports = wrapperClone;
+
+},{"./LazyWrapper":529,"./LodashWrapper":530,"./arrayCopy":532}],631:[function(require,module,exports){
 var baseClone = require('../internal/baseClone'),
     bindCallback = require('../internal/bindCallback'),
     isIterateeCall = require('../internal/isIterateeCall');
@@ -84968,107 +74262,513 @@ function clone(value, isDeep, customizer, thisArg) {
 
 module.exports = clone;
 
-},{"../internal/baseClone":622,"../internal/bindCallback":656,"../internal/isIterateeCall":691}],711:[function(require,module,exports){
+},{"../internal/baseClone":543,"../internal/bindCallback":577,"../internal/isIterateeCall":612}],632:[function(require,module,exports){
 arguments[4][161][0].apply(exports,arguments)
-},{"../internal/isArrayLike":689,"../internal/isObjectLike":695,"dup":161}],712:[function(require,module,exports){
+},{"../internal/isArrayLike":610,"../internal/isObjectLike":616,"dup":161}],633:[function(require,module,exports){
 arguments[4][162][0].apply(exports,arguments)
-},{"../internal/getNative":684,"../internal/isLength":694,"../internal/isObjectLike":695,"dup":162}],713:[function(require,module,exports){
+},{"../internal/getNative":605,"../internal/isLength":615,"../internal/isObjectLike":616,"dup":162}],634:[function(require,module,exports){
 arguments[4][163][0].apply(exports,arguments)
-},{"./isObject":716,"dup":163}],714:[function(require,module,exports){
+},{"./isObject":637,"dup":163}],635:[function(require,module,exports){
 arguments[4][164][0].apply(exports,arguments)
-},{"../internal/isObjectLike":695,"./isFunction":713,"dup":164}],715:[function(require,module,exports){
+},{"../internal/isObjectLike":616,"./isFunction":634,"dup":164}],636:[function(require,module,exports){
 arguments[4][165][0].apply(exports,arguments)
-},{"../internal/isObjectLike":695,"dup":165}],716:[function(require,module,exports){
+},{"../internal/isObjectLike":616,"dup":165}],637:[function(require,module,exports){
 arguments[4][166][0].apply(exports,arguments)
-},{"dup":166}],717:[function(require,module,exports){
-arguments[4][416][0].apply(exports,arguments)
-},{"../internal/baseForIn":633,"../internal/isObjectLike":695,"./isArguments":711,"dup":416}],718:[function(require,module,exports){
+},{"dup":166}],638:[function(require,module,exports){
+var baseForIn = require('../internal/baseForIn'),
+    isArguments = require('./isArguments'),
+    isObjectLike = require('../internal/isObjectLike');
+
+/** `Object#toString` result references. */
+var objectTag = '[object Object]';
+
+/** Used for native method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Used to resolve the [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objToString = objectProto.toString;
+
+/**
+ * Checks if `value` is a plain object, that is, an object created by the
+ * `Object` constructor or one with a `[[Prototype]]` of `null`.
+ *
+ * **Note:** This method assumes objects created by the `Object` constructor
+ * have no inherited enumerable properties.
+ *
+ * @static
+ * @memberOf _
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ * }
+ *
+ * _.isPlainObject(new Foo);
+ * // => false
+ *
+ * _.isPlainObject([1, 2, 3]);
+ * // => false
+ *
+ * _.isPlainObject({ 'x': 0, 'y': 0 });
+ * // => true
+ *
+ * _.isPlainObject(Object.create(null));
+ * // => true
+ */
+function isPlainObject(value) {
+  var Ctor;
+
+  // Exit early for non `Object` objects.
+  if (!(isObjectLike(value) && objToString.call(value) == objectTag && !isArguments(value)) ||
+      (!hasOwnProperty.call(value, 'constructor') && (Ctor = value.constructor, typeof Ctor == 'function' && !(Ctor instanceof Ctor)))) {
+    return false;
+  }
+  // IE < 9 iterates inherited properties before own properties. If the first
+  // iterated property is an object's own property then there are no inherited
+  // enumerable properties.
+  var result;
+  // In most environments an object's own properties are iterated before
+  // its inherited properties. If the last iterated property is an object's
+  // own property then there are no inherited enumerable properties.
+  baseForIn(value, function(subValue, key) {
+    result = key;
+  });
+  return result === undefined || hasOwnProperty.call(value, result);
+}
+
+module.exports = isPlainObject;
+
+},{"../internal/baseForIn":554,"../internal/isObjectLike":616,"./isArguments":632}],639:[function(require,module,exports){
 arguments[4][167][0].apply(exports,arguments)
-},{"../internal/isObjectLike":695,"dup":167}],719:[function(require,module,exports){
+},{"../internal/isObjectLike":616,"dup":167}],640:[function(require,module,exports){
 arguments[4][168][0].apply(exports,arguments)
-},{"../internal/isLength":694,"../internal/isObjectLike":695,"dup":168}],720:[function(require,module,exports){
-arguments[4][419][0].apply(exports,arguments)
-},{"../internal/baseCopy":624,"../object/keysIn":723,"dup":419}],721:[function(require,module,exports){
+},{"../internal/isLength":615,"../internal/isObjectLike":616,"dup":168}],641:[function(require,module,exports){
+var baseCopy = require('../internal/baseCopy'),
+    keysIn = require('../object/keysIn');
+
+/**
+ * Converts `value` to a plain object flattening inherited enumerable
+ * properties of `value` to own properties of the plain object.
+ *
+ * @static
+ * @memberOf _
+ * @category Lang
+ * @param {*} value The value to convert.
+ * @returns {Object} Returns the converted plain object.
+ * @example
+ *
+ * function Foo() {
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.assign({ 'a': 1 }, new Foo);
+ * // => { 'a': 1, 'b': 2 }
+ *
+ * _.assign({ 'a': 1 }, _.toPlainObject(new Foo));
+ * // => { 'a': 1, 'b': 2, 'c': 3 }
+ */
+function toPlainObject(value) {
+  return baseCopy(value, keysIn(value));
+}
+
+module.exports = toPlainObject;
+
+},{"../internal/baseCopy":545,"../object/keysIn":644}],642:[function(require,module,exports){
 arguments[4][169][0].apply(exports,arguments)
-},{"../internal/assignWith":619,"../internal/baseAssign":620,"../internal/createAssigner":664,"dup":169}],722:[function(require,module,exports){
+},{"../internal/assignWith":540,"../internal/baseAssign":541,"../internal/createAssigner":585,"dup":169}],643:[function(require,module,exports){
 arguments[4][170][0].apply(exports,arguments)
-},{"../internal/getNative":684,"../internal/isArrayLike":689,"../internal/shimKeys":705,"../lang/isObject":716,"dup":170}],723:[function(require,module,exports){
+},{"../internal/getNative":605,"../internal/isArrayLike":610,"../internal/shimKeys":626,"../lang/isObject":637,"dup":170}],644:[function(require,module,exports){
 arguments[4][171][0].apply(exports,arguments)
-},{"../internal/isIndex":690,"../internal/isLength":694,"../lang/isArguments":711,"../lang/isArray":712,"../lang/isObject":716,"dup":171}],724:[function(require,module,exports){
-arguments[4][423][0].apply(exports,arguments)
-},{"../internal/baseMerge":644,"../internal/createAssigner":664,"dup":423}],725:[function(require,module,exports){
+},{"../internal/isIndex":611,"../internal/isLength":615,"../lang/isArguments":632,"../lang/isArray":633,"../lang/isObject":637,"dup":171}],645:[function(require,module,exports){
+var baseMerge = require('../internal/baseMerge'),
+    createAssigner = require('../internal/createAssigner');
+
+/**
+ * Recursively merges own enumerable properties of the source object(s), that
+ * don't resolve to `undefined` into the destination object. Subsequent sources
+ * overwrite property assignments of previous sources. If `customizer` is
+ * provided it's invoked to produce the merged values of the destination and
+ * source properties. If `customizer` returns `undefined` merging is handled
+ * by the method instead. The `customizer` is bound to `thisArg` and invoked
+ * with five arguments: (objectValue, sourceValue, key, object, source).
+ *
+ * @static
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The destination object.
+ * @param {...Object} [sources] The source objects.
+ * @param {Function} [customizer] The function to customize assigned values.
+ * @param {*} [thisArg] The `this` binding of `customizer`.
+ * @returns {Object} Returns `object`.
+ * @example
+ *
+ * var users = {
+ *   'data': [{ 'user': 'barney' }, { 'user': 'fred' }]
+ * };
+ *
+ * var ages = {
+ *   'data': [{ 'age': 36 }, { 'age': 40 }]
+ * };
+ *
+ * _.merge(users, ages);
+ * // => { 'data': [{ 'user': 'barney', 'age': 36 }, { 'user': 'fred', 'age': 40 }] }
+ *
+ * // using a customizer callback
+ * var object = {
+ *   'fruits': ['apple'],
+ *   'vegetables': ['beet']
+ * };
+ *
+ * var other = {
+ *   'fruits': ['banana'],
+ *   'vegetables': ['carrot']
+ * };
+ *
+ * _.merge(object, other, function(a, b) {
+ *   if (_.isArray(a)) {
+ *     return a.concat(b);
+ *   }
+ * });
+ * // => { 'fruits': ['apple', 'banana'], 'vegetables': ['beet', 'carrot'] }
+ */
+var merge = createAssigner(baseMerge);
+
+module.exports = merge;
+
+},{"../internal/baseMerge":565,"../internal/createAssigner":585}],646:[function(require,module,exports){
 arguments[4][173][0].apply(exports,arguments)
-},{"../internal/toObject":707,"./keys":722,"dup":173}],726:[function(require,module,exports){
+},{"../internal/toObject":628,"./keys":643,"dup":173}],647:[function(require,module,exports){
 arguments[4][174][0].apply(exports,arguments)
-},{"../function/restParam":607,"../internal/baseFlatten":631,"../internal/bindCallback":656,"../internal/pickByArray":699,"../internal/pickByCallback":700,"dup":174}],727:[function(require,module,exports){
+},{"../function/restParam":528,"../internal/baseFlatten":552,"../internal/bindCallback":577,"../internal/pickByArray":620,"../internal/pickByCallback":621,"dup":174}],648:[function(require,module,exports){
 arguments[4][175][0].apply(exports,arguments)
-},{"../internal/baseValues":655,"./keys":722,"dup":175}],728:[function(require,module,exports){
+},{"../internal/baseValues":576,"./keys":643,"dup":175}],649:[function(require,module,exports){
 arguments[4][176][0].apply(exports,arguments)
-},{"dup":176}],729:[function(require,module,exports){
-arguments[4][428][0].apply(exports,arguments)
-},{"dup":428}],730:[function(require,module,exports){
+},{"dup":176}],650:[function(require,module,exports){
+/**
+ * A no-operation function that returns `undefined` regardless of the
+ * arguments it receives.
+ *
+ * @static
+ * @memberOf _
+ * @category Utility
+ * @example
+ *
+ * var object = { 'user': 'fred' };
+ *
+ * _.noop(object) === undefined;
+ * // => true
+ */
+function noop() {
+  // No operation performed.
+}
+
+module.exports = noop;
+
+},{}],651:[function(require,module,exports){
 arguments[4][177][0].apply(exports,arguments)
-},{"../internal/baseProperty":646,"../internal/basePropertyDeep":647,"../internal/isKey":692,"dup":177}],731:[function(require,module,exports){
-arguments[4][430][0].apply(exports,arguments)
-},{"dup":430}],732:[function(require,module,exports){
-arguments[4][431][0].apply(exports,arguments)
-},{"component-classes":741,"dup":431}],733:[function(require,module,exports){
-arguments[4][432][0].apply(exports,arguments)
-},{"dup":432}],734:[function(require,module,exports){
-arguments[4][433][0].apply(exports,arguments)
-},{"component-closest":743,"dup":433}],735:[function(require,module,exports){
+},{"../internal/baseProperty":567,"../internal/basePropertyDeep":568,"../internal/isKey":613,"dup":177}],652:[function(require,module,exports){
+/**
+ * Set attribute `name` to `val`, or get attr `name`.
+ *
+ * @param {Element} el
+ * @param {String} name
+ * @param {String} [val]
+ * @api public
+ */
+
+module.exports = function(el, name, val) {
+  // get
+  if (arguments.length == 2) {
+    return el.getAttribute(name);
+  }
+
+  // remove
+  if (val === null) {
+    return el.removeAttribute(name);
+  }
+
+  // set
+  el.setAttribute(name, val);
+
+  return el;
+};
+},{}],653:[function(require,module,exports){
+module.exports = require('component-classes');
+},{"component-classes":662}],654:[function(require,module,exports){
+module.exports = function(el) {
+
+  var c;
+
+  while (el.childNodes.length) {
+    c = el.childNodes[0];
+    el.removeChild(c);
+  }
+
+  return el;
+};
+},{}],655:[function(require,module,exports){
+module.exports = require('component-closest');
+},{"component-closest":664}],656:[function(require,module,exports){
 arguments[4][178][0].apply(exports,arguments)
-},{"component-delegate":744,"dup":178}],736:[function(require,module,exports){
+},{"component-delegate":665,"dup":178}],657:[function(require,module,exports){
 arguments[4][179][0].apply(exports,arguments)
-},{"domify":748,"dup":179}],737:[function(require,module,exports){
+},{"domify":669,"dup":179}],658:[function(require,module,exports){
 arguments[4][180][0].apply(exports,arguments)
-},{"component-event":745,"dup":180}],738:[function(require,module,exports){
+},{"component-event":666,"dup":180}],659:[function(require,module,exports){
 module.exports = require('component-matches-selector');
-},{"component-matches-selector":746}],739:[function(require,module,exports){
+},{"component-matches-selector":667}],660:[function(require,module,exports){
 arguments[4][181][0].apply(exports,arguments)
-},{"component-query":747,"dup":181}],740:[function(require,module,exports){
+},{"component-query":668,"dup":181}],661:[function(require,module,exports){
 arguments[4][182][0].apply(exports,arguments)
-},{"dup":182}],741:[function(require,module,exports){
-arguments[4][439][0].apply(exports,arguments)
-},{"component-indexof":742,"dup":439,"indexof":742}],742:[function(require,module,exports){
-arguments[4][440][0].apply(exports,arguments)
-},{"dup":440}],743:[function(require,module,exports){
+},{"dup":182}],662:[function(require,module,exports){
+/**
+ * Module dependencies.
+ */
+
+try {
+  var index = require('indexof');
+} catch (err) {
+  var index = require('component-indexof');
+}
+
+/**
+ * Whitespace regexp.
+ */
+
+var re = /\s+/;
+
+/**
+ * toString reference.
+ */
+
+var toString = Object.prototype.toString;
+
+/**
+ * Wrap `el` in a `ClassList`.
+ *
+ * @param {Element} el
+ * @return {ClassList}
+ * @api public
+ */
+
+module.exports = function(el){
+  return new ClassList(el);
+};
+
+/**
+ * Initialize a new ClassList for `el`.
+ *
+ * @param {Element} el
+ * @api private
+ */
+
+function ClassList(el) {
+  if (!el || !el.nodeType) {
+    throw new Error('A DOM element reference is required');
+  }
+  this.el = el;
+  this.list = el.classList;
+}
+
+/**
+ * Add class `name` if not already present.
+ *
+ * @param {String} name
+ * @return {ClassList}
+ * @api public
+ */
+
+ClassList.prototype.add = function(name){
+  // classList
+  if (this.list) {
+    this.list.add(name);
+    return this;
+  }
+
+  // fallback
+  var arr = this.array();
+  var i = index(arr, name);
+  if (!~i) arr.push(name);
+  this.el.className = arr.join(' ');
+  return this;
+};
+
+/**
+ * Remove class `name` when present, or
+ * pass a regular expression to remove
+ * any which match.
+ *
+ * @param {String|RegExp} name
+ * @return {ClassList}
+ * @api public
+ */
+
+ClassList.prototype.remove = function(name){
+  if ('[object RegExp]' == toString.call(name)) {
+    return this.removeMatching(name);
+  }
+
+  // classList
+  if (this.list) {
+    this.list.remove(name);
+    return this;
+  }
+
+  // fallback
+  var arr = this.array();
+  var i = index(arr, name);
+  if (~i) arr.splice(i, 1);
+  this.el.className = arr.join(' ');
+  return this;
+};
+
+/**
+ * Remove all classes matching `re`.
+ *
+ * @param {RegExp} re
+ * @return {ClassList}
+ * @api private
+ */
+
+ClassList.prototype.removeMatching = function(re){
+  var arr = this.array();
+  for (var i = 0; i < arr.length; i++) {
+    if (re.test(arr[i])) {
+      this.remove(arr[i]);
+    }
+  }
+  return this;
+};
+
+/**
+ * Toggle class `name`, can force state via `force`.
+ *
+ * For browsers that support classList, but do not support `force` yet,
+ * the mistake will be detected and corrected.
+ *
+ * @param {String} name
+ * @param {Boolean} force
+ * @return {ClassList}
+ * @api public
+ */
+
+ClassList.prototype.toggle = function(name, force){
+  // classList
+  if (this.list) {
+    if ("undefined" !== typeof force) {
+      if (force !== this.list.toggle(name, force)) {
+        this.list.toggle(name); // toggle again to correct
+      }
+    } else {
+      this.list.toggle(name);
+    }
+    return this;
+  }
+
+  // fallback
+  if ("undefined" !== typeof force) {
+    if (!force) {
+      this.remove(name);
+    } else {
+      this.add(name);
+    }
+  } else {
+    if (this.has(name)) {
+      this.remove(name);
+    } else {
+      this.add(name);
+    }
+  }
+
+  return this;
+};
+
+/**
+ * Return an array of classes.
+ *
+ * @return {Array}
+ * @api public
+ */
+
+ClassList.prototype.array = function(){
+  var className = this.el.getAttribute('class') || '';
+  var str = className.replace(/^\s+|\s+$/g, '');
+  var arr = str.split(re);
+  if ('' === arr[0]) arr.shift();
+  return arr;
+};
+
+/**
+ * Check if class `name` is present.
+ *
+ * @param {String} name
+ * @return {ClassList}
+ * @api public
+ */
+
+ClassList.prototype.has =
+ClassList.prototype.contains = function(name){
+  return this.list
+    ? this.list.contains(name)
+    : !! ~index(this.array(), name);
+};
+
+},{"component-indexof":663,"indexof":663}],663:[function(require,module,exports){
+module.exports = function(arr, obj){
+  if (arr.indexOf) return arr.indexOf(obj);
+  for (var i = 0; i < arr.length; ++i) {
+    if (arr[i] === obj) return i;
+  }
+  return -1;
+};
+},{}],664:[function(require,module,exports){
 arguments[4][183][0].apply(exports,arguments)
-},{"dup":183,"matches-selector":746}],744:[function(require,module,exports){
+},{"dup":183,"matches-selector":667}],665:[function(require,module,exports){
 arguments[4][184][0].apply(exports,arguments)
-},{"closest":743,"component-closest":743,"component-event":745,"dup":184,"event":745}],745:[function(require,module,exports){
+},{"closest":664,"component-closest":664,"component-event":666,"dup":184,"event":666}],666:[function(require,module,exports){
 arguments[4][185][0].apply(exports,arguments)
-},{"dup":185}],746:[function(require,module,exports){
+},{"dup":185}],667:[function(require,module,exports){
 arguments[4][186][0].apply(exports,arguments)
-},{"component-query":747,"dup":186,"query":747}],747:[function(require,module,exports){
+},{"component-query":668,"dup":186,"query":668}],668:[function(require,module,exports){
 arguments[4][187][0].apply(exports,arguments)
-},{"dup":187}],748:[function(require,module,exports){
+},{"dup":187}],669:[function(require,module,exports){
 arguments[4][188][0].apply(exports,arguments)
-},{"dup":188}],749:[function(require,module,exports){
+},{"dup":188}],670:[function(require,module,exports){
 arguments[4][189][0].apply(exports,arguments)
-},{"./lib/collection":750,"./lib/refs":751,"dup":189}],750:[function(require,module,exports){
+},{"./lib/collection":671,"./lib/refs":672,"dup":189}],671:[function(require,module,exports){
 arguments[4][190][0].apply(exports,arguments)
-},{"dup":190}],751:[function(require,module,exports){
+},{"dup":190}],672:[function(require,module,exports){
 arguments[4][191][0].apply(exports,arguments)
-},{"./collection":750,"dup":191}],752:[function(require,module,exports){
+},{"./collection":671,"dup":191}],673:[function(require,module,exports){
 arguments[4][192][0].apply(exports,arguments)
-},{"./appendTo":753,"dup":192}],753:[function(require,module,exports){
+},{"./appendTo":674,"dup":192}],674:[function(require,module,exports){
 arguments[4][193][0].apply(exports,arguments)
-},{"./util/ensureImported":762,"dup":193}],754:[function(require,module,exports){
+},{"./util/ensureImported":683,"dup":193}],675:[function(require,module,exports){
 arguments[4][194][0].apply(exports,arguments)
-},{"dup":194}],755:[function(require,module,exports){
+},{"dup":194}],676:[function(require,module,exports){
 arguments[4][195][0].apply(exports,arguments)
-},{"dup":195}],756:[function(require,module,exports){
+},{"dup":195}],677:[function(require,module,exports){
 arguments[4][196][0].apply(exports,arguments)
-},{"./remove":760,"dup":196}],757:[function(require,module,exports){
+},{"./remove":681,"dup":196}],678:[function(require,module,exports){
 module.exports = clone;
 
 function clone(element) {
   return element.cloneNode(true);
 }
-},{}],758:[function(require,module,exports){
+},{}],679:[function(require,module,exports){
 arguments[4][197][0].apply(exports,arguments)
-},{"./attr":754,"./util/ns":763,"./util/parse":764,"dup":197}],759:[function(require,module,exports){
+},{"./attr":675,"./util/ns":684,"./util/parse":685,"dup":197}],680:[function(require,module,exports){
 /**
  * Geometry helpers
  */
@@ -85137,9 +74837,9 @@ function createTransform(matrix) {
     return node.createSVGTransform();
   }
 }
-},{"./create":758}],760:[function(require,module,exports){
+},{"./create":679}],681:[function(require,module,exports){
 arguments[4][199][0].apply(exports,arguments)
-},{"dup":199}],761:[function(require,module,exports){
+},{"dup":199}],682:[function(require,module,exports){
 /**
  * transform accessor utility
  */
@@ -85179,13 +74879,13 @@ function transform(node, transforms) {
     }
   }
 }
-},{}],762:[function(require,module,exports){
+},{}],683:[function(require,module,exports){
 arguments[4][200][0].apply(exports,arguments)
-},{"dup":200}],763:[function(require,module,exports){
+},{"dup":200}],684:[function(require,module,exports){
 arguments[4][201][0].apply(exports,arguments)
-},{"dup":201}],764:[function(require,module,exports){
+},{"dup":201}],685:[function(require,module,exports){
 arguments[4][202][0].apply(exports,arguments)
-},{"./ns":763,"dup":202}],765:[function(require,module,exports){
+},{"./ns":684,"dup":202}],686:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -85426,7 +75126,7 @@ Modeler.prototype._modules = [].concat(
   Modeler.prototype._interactionModules,
   Modeler.prototype._modelingModules);
 
-},{"./Viewer":767,"./features/context-pad":774,"./features/definition-id/modeler":777,"./features/editor-actions":782,"./features/keyboard":784,"./features/label-editing":788,"./features/modeling":800,"./features/palette":802,"./table/Modeler":814,"diagram-js/lib/features/bendpoints":470,"diagram-js/lib/features/move":523,"diagram-js/lib/features/overlays":527,"diagram-js/lib/navigation/movecanvas":556,"diagram-js/lib/navigation/touch":557,"diagram-js/lib/navigation/zoomscroll":560,"ids":928,"inherits":930,"lodash/object/assign":1053}],766:[function(require,module,exports){
+},{"./Viewer":688,"./features/context-pad":695,"./features/definition-id/modeler":698,"./features/editor-actions":703,"./features/keyboard":705,"./features/label-editing":709,"./features/modeling":721,"./features/palette":723,"./table/Modeler":735,"diagram-js/lib/features/bendpoints":391,"diagram-js/lib/features/move":444,"diagram-js/lib/features/overlays":448,"diagram-js/lib/navigation/movecanvas":477,"diagram-js/lib/navigation/touch":478,"diagram-js/lib/navigation/zoomscroll":481,"ids":849,"inherits":851,"lodash/object/assign":974}],687:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -85456,7 +75156,7 @@ NavigatedViewer.prototype._modules = [].concat(
   NavigatedViewer.prototype._modules,
   NavigatedViewer.prototype._navigationModules);
 
-},{"./Viewer":767,"diagram-js/lib/navigation/movecanvas":556,"diagram-js/lib/navigation/zoomscroll":560,"inherits":930}],767:[function(require,module,exports){
+},{"./Viewer":688,"diagram-js/lib/navigation/movecanvas":477,"diagram-js/lib/navigation/zoomscroll":481,"inherits":851}],688:[function(require,module,exports){
 /**
  * The code in the <project-logo></project-logo> area
  * must not be changed.
@@ -86036,7 +75736,7 @@ function addProjectLogo(container) {
 
 /* </project-logo> */
 
-},{"./core":768,"./features/definition-id/viewer":778,"./features/drill-down":780,"./features/rules":809,"./import/Importer":812,"./table/Viewer":815,"./util/ModelUtil":902,"./util/PoweredByUtil":903,"diagram-js":450,"diagram-js/lib/features/overlays":527,"diagram-js/lib/features/selection":542,"dmn-moddle":907,"inherits":930,"lodash/collection/filter":938,"lodash/lang/isNumber":1049,"lodash/lang/isString":1051,"lodash/object/assign":1053,"lodash/object/omit":1056,"min-dom/lib/domify":1066,"min-dom/lib/event":1067,"min-dom/lib/query":1069,"min-dom/lib/remove":1070,"tiny-svg/lib/innerSVG":1154}],768:[function(require,module,exports){
+},{"./core":689,"./features/definition-id/viewer":699,"./features/drill-down":701,"./features/rules":730,"./import/Importer":733,"./table/Viewer":736,"./util/ModelUtil":823,"./util/PoweredByUtil":824,"diagram-js":371,"diagram-js/lib/features/overlays":448,"diagram-js/lib/features/selection":463,"dmn-moddle":828,"inherits":851,"lodash/collection/filter":859,"lodash/lang/isNumber":970,"lodash/lang/isString":972,"lodash/object/assign":974,"lodash/object/omit":977,"min-dom/lib/domify":987,"min-dom/lib/event":988,"min-dom/lib/query":990,"min-dom/lib/remove":991,"tiny-svg/lib/innerSVG":1075}],689:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -86046,7 +75746,7 @@ module.exports = {
   ]
 };
 
-},{"../draw":772,"../import":813}],769:[function(require,module,exports){
+},{"../draw":693,"../import":734}],690:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -86079,7 +75779,7 @@ DecisionLabelUpdater.prototype.updateDecisionLabels = function(context) {
 
 };
 
-},{"lodash/collection/forEach":940}],770:[function(require,module,exports){
+},{"lodash/collection/forEach":861}],691:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits'),
@@ -86522,7 +76222,7 @@ function getSemantic(element) {
   return element.businessObject;
 }
 
-},{"../util/ModelUtil":902,"diagram-js/lib/draw/BaseRenderer":461,"diagram-js/lib/util/RenderUtil":578,"diagram-js/lib/util/Text":580,"inherits":930,"lodash/lang/isArray":1046,"lodash/lang/isObject":1050,"lodash/object/assign":1053,"min-dom/lib/classes":1064,"min-dom/lib/query":1069,"tiny-svg/lib/append":1149,"tiny-svg/lib/attr":1151,"tiny-svg/lib/create":1153}],771:[function(require,module,exports){
+},{"../util/ModelUtil":823,"diagram-js/lib/draw/BaseRenderer":382,"diagram-js/lib/util/RenderUtil":499,"diagram-js/lib/util/Text":501,"inherits":851,"lodash/lang/isArray":967,"lodash/lang/isObject":971,"lodash/object/assign":974,"min-dom/lib/classes":985,"min-dom/lib/query":990,"tiny-svg/lib/append":1070,"tiny-svg/lib/attr":1072,"tiny-svg/lib/create":1074}],692:[function(require,module,exports){
 'use strict';
 
 /**
@@ -86726,7 +76426,7 @@ function format(str, obj) {
   });
 }
 
-},{}],772:[function(require,module,exports){
+},{}],693:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -86736,7 +76436,7 @@ module.exports = {
   decisionLabelUpdater: [ 'type', require('./DecisionLabelUpdater') ]
 };
 
-},{"./DecisionLabelUpdater":769,"./DrdRenderer":770,"./PathMap":771}],773:[function(require,module,exports){
+},{"./DecisionLabelUpdater":690,"./DrdRenderer":691,"./PathMap":692}],694:[function(require,module,exports){
 'use strict';
 
 
@@ -86973,7 +76673,7 @@ ContextPadProvider.prototype.getContextPadEntries = function(element) {
   return actions;
 };
 
-},{"../../util/ModelUtil":902,"diagram-js/lib/util/Mouse":574,"lodash/lang/isArray":1046,"lodash/object/assign":1053}],774:[function(require,module,exports){
+},{"../../util/ModelUtil":823,"diagram-js/lib/util/Mouse":495,"lodash/lang/isArray":967,"lodash/object/assign":974}],695:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -86988,7 +76688,7 @@ module.exports = {
   contextPadProvider: [ 'type', require('./ContextPadProvider') ]
 };
 
-},{"../popup-menu":804,"./ContextPadProvider":773,"diagram-js/lib/features/connect":476,"diagram-js/lib/features/context-pad":478,"diagram-js/lib/features/create":482,"diagram-js/lib/features/selection":542}],775:[function(require,module,exports){
+},{"../popup-menu":725,"./ContextPadProvider":694,"diagram-js/lib/features/connect":397,"diagram-js/lib/features/context-pad":399,"diagram-js/lib/features/create":403,"diagram-js/lib/features/selection":463}],696:[function(require,module,exports){
 'use strict';
 
 var domQuery = require('min-dom/lib/query');
@@ -87037,7 +76737,7 @@ DefinitionIdEdit.prototype._setup = function(node, type) {
 
 };
 
-},{"min-dom/lib/query":1069}],776:[function(require,module,exports){
+},{"min-dom/lib/query":990}],697:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify'),
@@ -87100,21 +76800,21 @@ DefinitionIdView.HTML_MARKUP =
     '<div class="dmn-definitions-id" title="Definition ID"></div>' +
   '</div>';
 
-},{"min-dom/lib/delegate":1065,"min-dom/lib/domify":1066,"min-dom/lib/query":1069}],777:[function(require,module,exports){
+},{"min-dom/lib/delegate":986,"min-dom/lib/domify":987,"min-dom/lib/query":990}],698:[function(require,module,exports){
 module.exports = {
   __depends__: [ ],
   __init__: [ 'definitionIdEdit' ],
   definitionIdEdit: [ 'type', require('./DefinitionIdEdit') ]
 };
 
-},{"./DefinitionIdEdit":775}],778:[function(require,module,exports){
+},{"./DefinitionIdEdit":696}],699:[function(require,module,exports){
 module.exports = {
   __depends__: [ ],
   __init__: [ 'definitionIdView' ],
   definitionIdView: [ 'type', require('./DefinitionIdView') ]
 };
 
-},{"./DefinitionIdView":776}],779:[function(require,module,exports){
+},{"./DefinitionIdView":697}],700:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify'),
@@ -87174,7 +76874,7 @@ DrillDown.prototype.bindEventListener = function(decision, overlay, id) {
   });
 };
 
-},{"min-dom/lib/delegate":1065,"min-dom/lib/domify":1066}],780:[function(require,module,exports){
+},{"min-dom/lib/delegate":986,"min-dom/lib/domify":987}],701:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -87185,7 +76885,7 @@ module.exports = {
   drillDown: [ 'type', require('./DrillDown') ]
 };
 
-},{"./DrillDown":779,"diagram-js/lib/features/context-pad":478}],781:[function(require,module,exports){
+},{"./DrillDown":700,"diagram-js/lib/features/context-pad":399}],702:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -87239,7 +76939,7 @@ DrdEditorActions.$inject = [
 
 module.exports = DrdEditorActions;
 
-},{"diagram-js/lib/features/editor-actions/EditorActions":486,"inherits":930}],782:[function(require,module,exports){
+},{"diagram-js/lib/features/editor-actions/EditorActions":407,"inherits":851}],703:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -87250,7 +76950,7 @@ module.exports = {
   editorActions: [ 'type', require('./DrdEditorActions') ]
 };
 
-},{"./DrdEditorActions":781,"diagram-js/lib/features/editor-actions":487,"diagram-js/lib/features/lasso-tool":493}],783:[function(require,module,exports){
+},{"./DrdEditorActions":702,"diagram-js/lib/features/editor-actions":408,"diagram-js/lib/features/lasso-tool":414}],704:[function(require,module,exports){
 'use strict';
 
 /**
@@ -87297,7 +76997,7 @@ DrdKeyBindings.$inject = [
 
 module.exports = DrdKeyBindings;
 
-},{}],784:[function(require,module,exports){
+},{}],705:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -87308,7 +77008,7 @@ module.exports = {
   drdKeyBindings: [ 'type', require('./DrdKeyBindings') ]
 };
 
-},{"./DrdKeyBindings":783,"diagram-js/lib/features/keyboard":491}],785:[function(require,module,exports){
+},{"./DrdKeyBindings":704,"diagram-js/lib/features/keyboard":412}],706:[function(require,module,exports){
 'use strict';
 
 var UpdateLabelHandler = require('./cmd/UpdateLabelHandler');
@@ -87440,7 +77140,7 @@ LabelEditingProvider.prototype.update = function(element, newLabel) {
   });
 };
 
-},{"../../util/ModelUtil":902,"./LabelUtil":786,"./cmd/UpdateLabelHandler":787}],786:[function(require,module,exports){
+},{"../../util/ModelUtil":823,"./LabelUtil":707,"./cmd/UpdateLabelHandler":708}],707:[function(require,module,exports){
 'use strict';
 
 var is = require('../../util/ModelUtil').is;
@@ -87485,7 +77185,7 @@ module.exports.setLabel = function(element, text, isExternal) {
   return element;
 };
 
-},{"../../util/ModelUtil":902}],787:[function(require,module,exports){
+},{"../../util/ModelUtil":823}],708:[function(require,module,exports){
 'use strict';
 
 var LabelUtil = require('../LabelUtil');
@@ -87533,7 +77233,7 @@ function UpdateLabelHandler() {
 
 module.exports = UpdateLabelHandler;
 
-},{"../LabelUtil":786}],788:[function(require,module,exports){
+},{"../LabelUtil":707}],709:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('diagram-js/lib/command'),
@@ -87544,7 +77244,7 @@ module.exports = {
   labelEditingProvider: [ 'type', require('./LabelEditingProvider') ]
 };
 
-},{"./LabelEditingProvider":785,"diagram-js-direct-editing":904,"diagram-js/lib/command":454,"diagram-js/lib/features/change-support":472}],789:[function(require,module,exports){
+},{"./LabelEditingProvider":706,"diagram-js-direct-editing":825,"diagram-js/lib/command":375,"diagram-js/lib/features/change-support":393}],710:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -87610,7 +77310,7 @@ DrdFactory.prototype.createDiWaypoint = function(waypoint) {
 
 module.exports = DrdFactory;
 
-},{"lodash/collection/forEach":940}],790:[function(require,module,exports){
+},{"lodash/collection/forEach":861}],711:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -87658,7 +77358,7 @@ function getConnectionDocking(point, shape) {
   return point ? (point.original || point) : getMid(shape);
 }
 
-},{"diagram-js/lib/layout/BaseLayouter":551,"diagram-js/lib/layout/LayoutUtil":553,"inherits":930}],791:[function(require,module,exports){
+},{"diagram-js/lib/layout/BaseLayouter":472,"diagram-js/lib/layout/LayoutUtil":474,"inherits":851}],712:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -88033,7 +77733,7 @@ DrdUpdater.prototype.updateConnectionWaypoints = function(context) {
   });
 };
 
-},{"../../util/ModelUtil":902,"diagram-js/lib/command/CommandInterceptor":452,"diagram-js/lib/util/Collections":563,"inherits":930,"lodash/collection/forEach":940,"lodash/collection/map":942,"lodash/object/assign":1053,"lodash/object/pick":1058}],792:[function(require,module,exports){
+},{"../../util/ModelUtil":823,"diagram-js/lib/command/CommandInterceptor":373,"diagram-js/lib/util/Collections":484,"inherits":851,"lodash/collection/forEach":861,"lodash/collection/map":863,"lodash/object/assign":974,"lodash/object/pick":979}],713:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -88118,7 +77818,7 @@ ElementFactory.prototype._getDefaultSize = function(semantic) {
   return { width: 100, height: 80 };
 };
 
-},{"../../util/ModelUtil":902,"diagram-js/lib/core/ElementFactory":456,"inherits":930,"lodash/object/assign":1053}],793:[function(require,module,exports){
+},{"../../util/ModelUtil":823,"diagram-js/lib/core/ElementFactory":377,"inherits":851,"lodash/object/assign":974}],714:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -88195,7 +77895,7 @@ Modeling.prototype.connect = function(source, target, attrs, hints) {
   return this.createConnection(source, target, attrs, rootElement, hints);
 };
 
-},{"./cmd/IdClaimHandler.js":798,"./cmd/UpdatePropertiesHandler.js":799,"diagram-js/lib/features/modeling/Modeling":494,"inherits":930}],794:[function(require,module,exports){
+},{"./cmd/IdClaimHandler.js":719,"./cmd/UpdatePropertiesHandler.js":720,"diagram-js/lib/features/modeling/Modeling":415,"inherits":851}],715:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -88278,7 +77978,7 @@ inherits(CreateConnectionBehavior, CommandInterceptor);
 
 module.exports = CreateConnectionBehavior;
 
-},{"../../../util/ModelUtil":902,"diagram-js/lib/command/CommandInterceptor":452,"diagram-js/lib/layout/LayoutUtil":553,"inherits":930}],795:[function(require,module,exports){
+},{"../../../util/ModelUtil":823,"diagram-js/lib/command/CommandInterceptor":373,"diagram-js/lib/layout/LayoutUtil":474,"inherits":851}],716:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -88345,7 +78045,7 @@ ReplaceConnectionBehavior.$inject = [ 'eventBus', 'modeling', 'drdRules' ];
 
 module.exports = ReplaceConnectionBehavior;
 
-},{"diagram-js/lib/command/CommandInterceptor":452,"inherits":930,"lodash/collection/filter":938}],796:[function(require,module,exports){
+},{"diagram-js/lib/command/CommandInterceptor":373,"inherits":851,"lodash/collection/filter":859}],717:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -88396,7 +78096,7 @@ ReplaceElementBehaviour.$inject = [ 'eventBus', 'modeling' ];
 
 module.exports = ReplaceElementBehaviour;
 
-},{"diagram-js/lib/command/CommandInterceptor":452,"inherits":930,"lodash/collection/filter":938,"lodash/collection/forEach":940}],797:[function(require,module,exports){
+},{"diagram-js/lib/command/CommandInterceptor":373,"inherits":851,"lodash/collection/filter":859,"lodash/collection/forEach":861}],718:[function(require,module,exports){
 module.exports = {
   __init__: [
     'createConnectionBehavior',
@@ -88408,7 +78108,7 @@ module.exports = {
   replaceElementBehavior: [ 'type', require('./ReplaceElementBehavior') ]
 };
 
-},{"./CreateConnectionBehavior":794,"./ReplaceConnectionBehavior":795,"./ReplaceElementBehavior":796}],798:[function(require,module,exports){
+},{"./CreateConnectionBehavior":715,"./ReplaceConnectionBehavior":716,"./ReplaceElementBehavior":717}],719:[function(require,module,exports){
 'use strict';
 
 
@@ -88450,7 +78150,7 @@ IdClaimHandler.prototype.revert = function(context) {
   }
 };
 
-},{}],799:[function(require,module,exports){
+},{}],720:[function(require,module,exports){
 'use strict';
 
 var reduce = require('lodash/object/transform'),
@@ -88581,7 +78281,7 @@ function setProperties(businessObject, properties) {
   });
 }
 
-},{"lodash/collection/forEach":940,"lodash/object/keys":1054,"lodash/object/transform":1059}],800:[function(require,module,exports){
+},{"lodash/collection/forEach":861,"lodash/object/keys":975,"lodash/object/transform":980}],721:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -88603,7 +78303,7 @@ module.exports = {
   connectionDocking: [ 'type', require('diagram-js/lib/layout/CroppingConnectionDocking') ]
 };
 
-},{"../definition-id/viewer":778,"../drill-down":780,"../rules":809,"./DrdFactory":789,"./DrdLayouter":790,"./DrdUpdater":791,"./ElementFactory":792,"./Modeling":793,"./behavior":797,"diagram-js/lib/command":454,"diagram-js/lib/features/change-support":472,"diagram-js/lib/features/selection":542,"diagram-js/lib/layout/CroppingConnectionDocking":552}],801:[function(require,module,exports){
+},{"../definition-id/viewer":699,"../drill-down":701,"../rules":730,"./DrdFactory":710,"./DrdLayouter":711,"./DrdUpdater":712,"./ElementFactory":713,"./Modeling":714,"./behavior":718,"diagram-js/lib/command":375,"diagram-js/lib/features/change-support":393,"diagram-js/lib/features/selection":463,"diagram-js/lib/layout/CroppingConnectionDocking":473}],722:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign');
@@ -88689,7 +78389,7 @@ PaletteProvider.prototype.getPaletteEntries = function(element) {
   return actions;
 };
 
-},{"lodash/object/assign":1053}],802:[function(require,module,exports){
+},{"lodash/object/assign":974}],723:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('diagram-js/lib/features/palette'),
@@ -88700,7 +78400,7 @@ module.exports = {
   paletteProvider: [ 'type', require('./PaletteProvider') ]
 };
 
-},{"./PaletteProvider":801,"diagram-js/lib/features/create":482,"diagram-js/lib/features/lasso-tool":493,"diagram-js/lib/features/palette":529}],803:[function(require,module,exports){
+},{"./PaletteProvider":722,"diagram-js/lib/features/create":403,"diagram-js/lib/features/lasso-tool":414,"diagram-js/lib/features/palette":450}],724:[function(require,module,exports){
 'use strict';
 
 var is = require('../../util/ModelUtil').is;
@@ -88830,7 +78530,7 @@ ReplaceMenuProvider.prototype.getHeaderEntries = function(element) {
 
 module.exports = ReplaceMenuProvider;
 
-},{"../../util/ModelUtil":902,"../replace/ReplaceOptions":806,"lodash/collection/filter":938,"lodash/collection/forEach":940}],804:[function(require,module,exports){
+},{"../../util/ModelUtil":823,"../replace/ReplaceOptions":727,"lodash/collection/filter":859,"lodash/collection/forEach":861}],725:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('diagram-js/lib/features/popup-menu'),
@@ -88840,7 +78540,7 @@ module.exports = {
   replaceMenuProvider: [ 'type', require('./ReplaceMenuProvider') ]
 };
 
-},{"../replace":807,"./ReplaceMenuProvider":803,"diagram-js/lib/features/popup-menu":531}],805:[function(require,module,exports){
+},{"../replace":728,"./ReplaceMenuProvider":724,"diagram-js/lib/features/popup-menu":452}],726:[function(require,module,exports){
 'use strict';
 
 /**
@@ -88903,7 +78603,7 @@ DrdReplace.$inject = [ 'drdFactory', 'replace', 'selection', 'modeling' ];
 
 module.exports = DrdReplace;
 
-},{}],806:[function(require,module,exports){
+},{}],727:[function(require,module,exports){
 'use strict';
 
 module.exports.DECISION = [
@@ -88939,7 +78639,7 @@ module.exports.DECISION = [
   }
 ];
 
-},{}],807:[function(require,module,exports){
+},{}],728:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('diagram-js/lib/features/replace'),
@@ -88948,7 +78648,7 @@ module.exports = {
   drdReplace: [ 'type', require('./DrdReplace') ]
 };
 
-},{"./DrdReplace":805,"diagram-js/lib/features/replace":535,"diagram-js/lib/features/selection":542}],808:[function(require,module,exports){
+},{"./DrdReplace":726,"diagram-js/lib/features/replace":456,"diagram-js/lib/features/selection":463}],729:[function(require,module,exports){
 'use strict';
 
 var ModelUtil = require('../../util/ModelUtil'),
@@ -89082,7 +78782,7 @@ function canDrillDown(element) {
   return false;
 }
 
-},{"../../util/ModelUtil":902,"diagram-js/lib/features/rules/RuleProvider":536,"inherits":930}],809:[function(require,module,exports){
+},{"../../util/ModelUtil":823,"diagram-js/lib/features/rules/RuleProvider":457,"inherits":851}],730:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -89093,7 +78793,7 @@ module.exports = {
   drdRules: [ 'type', require('./DrdRules') ]
 };
 
-},{"./DrdRules":808,"diagram-js/lib/features/rules":538}],810:[function(require,module,exports){
+},{"./DrdRules":729,"diagram-js/lib/features/rules":459}],731:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -89210,7 +78910,7 @@ DrdImporter.prototype._getShape = function(id) {
   return this._elementRegistry.get(id);
 };
 
-},{"../util/ModelUtil":902,"lodash/collection/map":942,"lodash/object/assign":1053}],811:[function(require,module,exports){
+},{"../util/ModelUtil":823,"lodash/collection/map":863,"lodash/object/assign":974}],732:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -89353,7 +79053,7 @@ function DRDTreeWalker(handler, options) {
 
 module.exports = DRDTreeWalker;
 
-},{"../util/ModelUtil":902,"lodash/collection/find":939,"lodash/collection/forEach":940}],812:[function(require,module,exports){
+},{"../util/ModelUtil":823,"lodash/collection/find":860,"lodash/collection/forEach":861}],733:[function(require,module,exports){
 'use strict';
 
 var DrdTreeWalker = require('./DrdTreeWalker');
@@ -89417,14 +79117,14 @@ function importDRD(canvas, definitions, done) {
 
 module.exports.importDRD = importDRD;
 
-},{"./DrdTreeWalker":811}],813:[function(require,module,exports){
+},{"./DrdTreeWalker":732}],734:[function(require,module,exports){
 'use strict';
 
 module.exports = {
   drdImporter: [ 'type', require('./DrdImporter') ]
 };
 
-},{"./DrdImporter":810}],814:[function(require,module,exports){
+},{"./DrdImporter":731}],735:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -89620,7 +79320,7 @@ Modeler.prototype._modules = [].concat(
   Modeler.prototype._modules,
   Modeler.prototype._modelingModules);
 
-},{"./Viewer":815,"./features/column-drag":824,"./features/context-menu":826,"./features/date-edit/modeler":829,"./features/descriptions/editing":836,"./features/editor-actions":839,"./features/expression-language":841,"./features/modeling":873,"./features/number-edit":875,"./features/simple-editing":880,"./features/string-edit/modeler":885,"ids":928,"inherits":930,"lodash/object/assign":1053,"table-js/lib/features/editing":1103,"table-js/lib/features/keyboard":1109,"table-js/lib/features/row-drag":1127}],815:[function(require,module,exports){
+},{"./Viewer":736,"./features/column-drag":745,"./features/context-menu":747,"./features/date-edit/modeler":750,"./features/descriptions/editing":757,"./features/editor-actions":760,"./features/expression-language":762,"./features/modeling":794,"./features/number-edit":796,"./features/simple-editing":801,"./features/string-edit/modeler":806,"ids":849,"inherits":851,"lodash/object/assign":974,"table-js/lib/features/editing":1024,"table-js/lib/features/keyboard":1030,"table-js/lib/features/row-drag":1048}],736:[function(require,module,exports){
 /**
  * The code in the <project-logo></project-logo> area
  * must not be changed.
@@ -90078,7 +79778,7 @@ function addProjectLogo(container) {
 
 /* </project-logo> */
 
-},{"../util/ModelUtil":902,"./../util/PoweredByUtil":903,"./core":816,"./features/annotations":821,"./features/date-edit/viewer":833,"./features/descriptions":837,"./features/hit-policy":847,"./features/io-label":851,"./features/literal-expression":854,"./features/mappings-row":858,"./features/simple-mode":882,"./features/string-edit/viewer":889,"./features/table-name":891,"./features/type-row":895,"./import/Importer":896,"dmn-moddle":907,"inherits":930,"lodash/collection/filter":938,"lodash/lang/isString":1051,"lodash/object/assign":1053,"lodash/object/omit":1056,"min-dom/lib/domify":1066,"min-dom/lib/event":1067,"min-dom/lib/query":1069,"min-dom/lib/remove":1070,"table-js":1080,"table-js/lib/features/combo-box":1095,"table-js/lib/features/complex-cell":1097,"table-js/lib/features/controls":1099,"table-js/lib/features/interaction-events":1107,"table-js/lib/features/line-numbers":1111}],816:[function(require,module,exports){
+},{"../util/ModelUtil":823,"./../util/PoweredByUtil":824,"./core":737,"./features/annotations":742,"./features/date-edit/viewer":754,"./features/descriptions":758,"./features/hit-policy":768,"./features/io-label":772,"./features/literal-expression":775,"./features/mappings-row":779,"./features/simple-mode":803,"./features/string-edit/viewer":810,"./features/table-name":812,"./features/type-row":816,"./import/Importer":817,"dmn-moddle":828,"inherits":851,"lodash/collection/filter":859,"lodash/lang/isString":972,"lodash/object/assign":974,"lodash/object/omit":977,"min-dom/lib/domify":987,"min-dom/lib/event":988,"min-dom/lib/query":990,"min-dom/lib/remove":991,"table-js":1001,"table-js/lib/features/combo-box":1016,"table-js/lib/features/complex-cell":1018,"table-js/lib/features/controls":1020,"table-js/lib/features/interaction-events":1028,"table-js/lib/features/line-numbers":1032}],737:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../import'),
@@ -90086,7 +79786,7 @@ module.exports = {
   ]
 };
 
-},{"../draw":818,"../import":900}],817:[function(require,module,exports){
+},{"../draw":739,"../import":821}],738:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -90178,13 +79878,13 @@ DmnRenderer.$inject = [ 'eventBus', 'elementRegistry', 'sheet', 'config' ];
 
 module.exports = DmnRenderer;
 
-},{"min-dom/lib/classes":1064}],818:[function(require,module,exports){
+},{"min-dom/lib/classes":985}],739:[function(require,module,exports){
 module.exports = {
   __init__: [ 'tableRenderer' ],
   tableRenderer: [ 'type', require('./TableRenderer') ]
 };
 
-},{"./TableRenderer":817}],819:[function(require,module,exports){
+},{"./TableRenderer":738}],740:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -90248,7 +79948,7 @@ Annotations.prototype.getColumn = function() {
   return this.column;
 };
 
-},{"min-dom/lib/domify":1066}],820:[function(require,module,exports){
+},{"min-dom/lib/domify":987}],741:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -90275,7 +79975,7 @@ AnnotationsRenderer.$inject = [
 
 module.exports = AnnotationsRenderer;
 
-},{"min-dom/lib/classes":1064}],821:[function(require,module,exports){
+},{"min-dom/lib/classes":985}],742:[function(require,module,exports){
 module.exports = {
   __init__: [ 'annotations', 'annotationsRenderer'],
   __depends__: [
@@ -90284,7 +79984,7 @@ module.exports = {
   annotationsRenderer: [ 'type', require('./AnnotationsRenderer') ]
 };
 
-},{"./Annotations":819,"./AnnotationsRenderer":820}],822:[function(require,module,exports){
+},{"./Annotations":740,"./AnnotationsRenderer":741}],743:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -90538,7 +80238,7 @@ ColumnDrag.prototype.isDragging = function() {
   return !!this.draggedElement;
 };
 
-},{"lodash/collection/forEach":940,"min-dom/lib/classes":1064,"min-dom/lib/domify":1066}],823:[function(require,module,exports){
+},{"lodash/collection/forEach":861,"min-dom/lib/classes":985,"min-dom/lib/domify":987}],744:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -90573,7 +80273,7 @@ DragRenderer.$inject = [
 
 module.exports = DragRenderer;
 
-},{"min-dom/lib/classes":1064,"min-dom/lib/domify":1066}],824:[function(require,module,exports){
+},{"min-dom/lib/classes":985,"min-dom/lib/domify":987}],745:[function(require,module,exports){
 module.exports = {
   __init__: [ 'columnDrag', 'columnDragRenderer' ],
   __depends__: [],
@@ -90581,7 +80281,7 @@ module.exports = {
   columnDragRenderer: [ 'type', require('./DragRenderer') ]
 };
 
-},{"./ColumnDrag":822,"./DragRenderer":823}],825:[function(require,module,exports){
+},{"./ColumnDrag":743,"./DragRenderer":744}],746:[function(require,module,exports){
 'use strict';
 
 var getEntriesType = require('../../util/SelectionUtil').getEntriesType;
@@ -90824,7 +80524,7 @@ ContextMenu.prototype.ruleClearAction = function() {
   this.close();
 };
 
-},{"../../util/SelectionUtil":901}],826:[function(require,module,exports){
+},{"../../util/SelectionUtil":822}],747:[function(require,module,exports){
 module.exports = {
   __init__: [ 'contextMenu' ],
   __depends__: [
@@ -90833,7 +80533,7 @@ module.exports = {
   contextMenu: [ 'type', require('./ContextMenu') ]
 };
 
-},{"./ContextMenu":825,"table-js/lib/features/popup-menu":1124}],827:[function(require,module,exports){
+},{"./ContextMenu":746,"table-js/lib/features/popup-menu":1045}],748:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign');
@@ -91097,7 +80797,7 @@ DateEdit.$inject = [ 'eventBus', 'simpleMode', 'elementRegistry', 'graphicsFacto
 
 module.exports = DateEdit;
 
-},{"./template-input.html":830,"./template-output.html":831,"./utils":832,"lodash/object/assign":1053,"min-dom/lib/classes":1064,"min-dom/lib/domify":1066}],828:[function(require,module,exports){
+},{"./template-input.html":751,"./template-output.html":752,"./utils":753,"lodash/object/assign":974,"min-dom/lib/classes":985,"min-dom/lib/domify":987}],749:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify'),
@@ -91187,7 +80887,7 @@ DateView.$inject = ['eventBus', 'simpleMode'];
 
 module.exports = DateView;
 
-},{"./utils":832,"min-dom/lib/domify":1066}],829:[function(require,module,exports){
+},{"./utils":753,"min-dom/lib/domify":987}],750:[function(require,module,exports){
 module.exports = {
   __init__: [ 'dateEdit' ],
   __depends__: [],
@@ -91195,13 +80895,13 @@ module.exports = {
 };
 
 
-},{"./DateEdit":827}],830:[function(require,module,exports){
+},{"./DateEdit":748}],751:[function(require,module,exports){
 module.exports = "<div>\r\n  <h4>Edit Date Condition</h4>\r\n  <select class=\"dateEdit-type-dropdown\">\r\n    <option value=\"exact\">Exactly</option>\r\n    <option value=\"before\">Before</option>\r\n    <option value=\"after\">After</option>\r\n    <option value=\"between\">Between</option>\r\n  </select>\r\n  <div class=\"date-1\">\r\n    <input type=\"text\" placeholder=\"yyyy-mm-dd'T'hh:mm:ss\" spellcheck=\"false\"><button>Today</button>\r\n    <div class=\"helptext\">yyyy-mm-dd'T'hh:mm:ss</div>\r\n  </div>\r\n  <div class=\"date-2\" style=\"display: none;\">\r\n    <div>and</div>\r\n    <input type=\"text\" placeholder=\"yyyy-mm-dd'T'hh:mm:ss\" spellcheck=\"false\"><button>Today</button>\r\n    <div class=\"helptext\">yyyy-mm-dd'T'hh:mm:ss</div>\r\n  </div>\r\n</div>\r\n";
 
-},{}],831:[function(require,module,exports){
+},{}],752:[function(require,module,exports){
 module.exports = "<div>\r\n  <h4>Edit Date Result</h4>\r\n  <div class=\"date-1\">\r\n    <input type=\"text\" placeholder=\"yyyy-mm-dd'T'hh:mm:ss\" spellcheck=\"false\"><button>Today</button>\r\n    <div class=\"helptext\">yyyy-mm-dd'T'hh:mm:ss</div>\r\n  </div>\r\n</div>\r\n";
 
-},{}],832:[function(require,module,exports){
+},{}],753:[function(require,module,exports){
 'use strict';
 
 var hasDateType = function(column) {
@@ -91272,7 +80972,7 @@ module.exports = {
   }
 };
 
-},{}],833:[function(require,module,exports){
+},{}],754:[function(require,module,exports){
 module.exports = {
   __init__: [ 'dateView' ],
   __depends__: [],
@@ -91280,7 +80980,7 @@ module.exports = {
 };
 
 
-},{"./DateView":828}],834:[function(require,module,exports){
+},{"./DateView":749}],755:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -91386,7 +81086,7 @@ Descriptions.prototype.openPopover = function(context) {
   node.textContent = context.content.description;
 };
 
-},{"diagram-js/lib/util/Mouse":574,"min-dom/lib/domify":1066}],835:[function(require,module,exports){
+},{"diagram-js/lib/util/Mouse":495,"min-dom/lib/domify":987}],756:[function(require,module,exports){
 'use strict';
 
 var debounce = require('lodash/function/debounce');
@@ -91456,20 +81156,20 @@ DescriptionsEditing.prototype.addComment = function(context) {
   descriptions.openPopover(context);
 };
 
-},{"lodash/function/debounce":947}],836:[function(require,module,exports){
+},{"lodash/function/debounce":868}],757:[function(require,module,exports){
 module.exports = {
   __init__: [ 'descriptionsEditing' ],
   descriptionsEditing: [ 'type', require('./DescriptionsEditing') ]
 };
 
 
-},{"./DescriptionsEditing":835}],837:[function(require,module,exports){
+},{"./DescriptionsEditing":756}],758:[function(require,module,exports){
 module.exports = {
   __init__: [ 'descriptions' ],
   descriptions: [ 'type', require('./Descriptions') ]
 };
 
-},{"./Descriptions":834}],838:[function(require,module,exports){
+},{"./Descriptions":755}],759:[function(require,module,exports){
 'use strict';
 
 var ids = new (require('diagram-js/lib/util/IdGenerator'))('table');
@@ -91660,13 +81360,13 @@ DmnEditorActions.$inject = [ 'modeling', 'elementRegistry', 'selection', 'editor
 
 module.exports = DmnEditorActions;
 
-},{"diagram-js/lib/util/IdGenerator":570}],839:[function(require,module,exports){
+},{"diagram-js/lib/util/IdGenerator":491}],760:[function(require,module,exports){
 module.exports = {
   __init__: [ 'dmnEditorActions' ],
   dmnEditorActions: [ 'type', require('./DmnEditorActions') ]
 };
 
-},{"./DmnEditorActions":838}],840:[function(require,module,exports){
+},{"./DmnEditorActions":759}],761:[function(require,module,exports){
 'use strict';
 
 var ComboBox = require('table-js/lib/features/combo-box');
@@ -91749,7 +81449,7 @@ ExpressionLanguage.$inject = [ 'eventBus', 'modeling', 'contextMenu', 'elementRe
 
 module.exports = ExpressionLanguage;
 
-},{"lodash/function/debounce":947,"table-js/lib/features/combo-box":1095}],841:[function(require,module,exports){
+},{"lodash/function/debounce":868,"table-js/lib/features/combo-box":1016}],762:[function(require,module,exports){
 module.exports = {
   __init__: [ 'expressionLanguage' ],
   __depends__: [],
@@ -91757,7 +81457,7 @@ module.exports = {
 };
 
 
-},{"./ExpressionLanguage":840}],842:[function(require,module,exports){
+},{"./ExpressionLanguage":761}],763:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -91820,7 +81520,7 @@ ElementFactory.prototype.create = function(elementType, attrs) {
 
 };
 
-},{"inherits":930,"table-js/lib/core/ElementFactory":1082}],843:[function(require,module,exports){
+},{"inherits":851,"table-js/lib/core/ElementFactory":1003}],764:[function(require,module,exports){
 'use strict';
 
 function TableFactory(moddle) {
@@ -91948,13 +81648,13 @@ TableFactory.prototype.createOutputValues = function(output) {
 
 module.exports = TableFactory;
 
-},{}],844:[function(require,module,exports){
+},{}],765:[function(require,module,exports){
 module.exports = {
   tableFactory: [ 'type', require('./TableFactory') ],
   elementFactory: [ 'type', require('./ElementFactory') ]
 };
 
-},{"./ElementFactory":842,"./TableFactory":843}],845:[function(require,module,exports){
+},{"./ElementFactory":763,"./TableFactory":764}],766:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify'),
@@ -92105,7 +81805,7 @@ HitPolicy.prototype.getAggregation = function() {
 
 module.exports = HitPolicy;
 
-},{"min-dom/lib/classes":1064,"min-dom/lib/domify":1066,"table-js/lib/features/combo-box":1095}],846:[function(require,module,exports){
+},{"min-dom/lib/classes":985,"min-dom/lib/domify":987,"table-js/lib/features/combo-box":1016}],767:[function(require,module,exports){
 'use strict';
 
 function convertOperators(operator) {
@@ -92140,7 +81840,7 @@ HitPolicyRenderer.$inject = [
 
 module.exports = HitPolicyRenderer;
 
-},{}],847:[function(require,module,exports){
+},{}],768:[function(require,module,exports){
 module.exports = {
   __init__: [ 'hitPolicy', 'hitPolicyRenderer' ],
   __depends__: [
@@ -92151,7 +81851,7 @@ module.exports = {
   hitPolicyRenderer: [ 'type', require('./HitPolicyRenderer') ]
 };
 
-},{"../io-label":851,"./HitPolicy":845,"./HitPolicyRenderer":846,"table-js/lib/features/utility-column":1132}],848:[function(require,module,exports){
+},{"../io-label":772,"./HitPolicy":766,"./HitPolicyRenderer":767,"table-js/lib/features/utility-column":1053}],769:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify'),
@@ -92302,7 +82002,7 @@ IoLabel.prototype.getRow = function() {
   return this.row;
 };
 
-},{"diagram-js/lib/util/IdGenerator":570,"lodash/collection/forEach":940,"min-dom/lib/domify":1066}],849:[function(require,module,exports){
+},{"diagram-js/lib/util/IdGenerator":491,"lodash/collection/forEach":861,"min-dom/lib/domify":987}],770:[function(require,module,exports){
 'use strict';
 
 function IoLabelRenderer(
@@ -92326,7 +82026,7 @@ IoLabelRenderer.$inject = [
 
 module.exports = IoLabelRenderer;
 
-},{}],850:[function(require,module,exports){
+},{}],771:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -92358,7 +82058,7 @@ IoLabelRules.prototype.init = function() {
 
 };
 
-},{"diagram-js/lib/features/rules/RuleProvider":536,"inherits":930}],851:[function(require,module,exports){
+},{"diagram-js/lib/features/rules/RuleProvider":457,"inherits":851}],772:[function(require,module,exports){
 module.exports = {
   __init__: [ 'ioLabel', 'ioLabelRules', 'ioLabelRenderer' ],
   __depends__: [],
@@ -92367,10 +82067,10 @@ module.exports = {
   ioLabelRenderer: [ 'type', require('./IoLabelRenderer') ]
 };
 
-},{"./IoLabel":848,"./IoLabelRenderer":849,"./IoLabelRules":850}],852:[function(require,module,exports){
+},{"./IoLabel":769,"./IoLabelRenderer":770,"./IoLabelRules":771}],773:[function(require,module,exports){
 module.exports = "<div class=\"literal-expression-editor\">\r\n  <textarea placeholder=\"return obj.propertyName;\"></textarea>\r\n\r\n  <div>\r\n    <div class=\"literal-expression-field\">\r\n      <div class=\"dmn-combobox\">\r\n        <label>Variable Name:</label>\r\n        <input class=\"variable-name\" placeholder=\"varName\">\r\n      </div>\r\n    </div>\r\n    <div class=\"literal-expression-field variable-type\">\r\n    </div>\r\n  </div>\r\n  <div>\r\n    <div class=\"literal-expression-field expression-language\">\r\n    </div>\r\n  </div>\r\n</div>\r\n";
 
-},{}],853:[function(require,module,exports){
+},{}],774:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -92477,17 +82177,17 @@ LiteralExpressionEditor.prototype.show = function(decision) {
 
 };
 
-},{"./EditorTemplate.html":852,"min-dom/lib/domify":1066,"table-js/lib/features/combo-box":1095}],854:[function(require,module,exports){
+},{"./EditorTemplate.html":773,"min-dom/lib/domify":987,"table-js/lib/features/combo-box":1016}],775:[function(require,module,exports){
 module.exports = {
   __init__: [ 'literalExpressionEditor' ],
   __depends__: [],
   literalExpressionEditor: [ 'type', require('./LiteralExpressionEditor') ]
 };
 
-},{"./LiteralExpressionEditor":853}],855:[function(require,module,exports){
+},{"./LiteralExpressionEditor":774}],776:[function(require,module,exports){
 module.exports = "<div>\r\n  <div class=\"links\">\r\n    <div class=\"toggle-type\">\r\n      <label>Use:</label>\r\n      <a class=\"expression\">Expression</a>\r\n      /\r\n      <a class=\"script\">Script</a>\r\n    </div>\r\n    <a class=\"dmn-icon-clear\"></a>\r\n  </div>\r\n  <div class=\"expression region\">\r\n    <div class=\"input-expression\">\r\n      <label>Expression:</label>\r\n      <input placeholder=\"propertyName\">\r\n    </div>\r\n    <div class=\"input-expression\">\r\n      <label>Input Variable Name:</label>\r\n      <input placeholder=\"cellInput\">\r\n    </div>\r\n  </div>\r\n  <div class=\"script region\">\r\n    <textarea placeholder=\"return obj.propertyName;\"></textarea>\r\n    <div class=\"input-expression\">\r\n      <label>Input Variable Name:</label>\r\n      <input placeholder=\"cellInput\">\r\n    </div>\r\n  </div>\r\n</div>\r\n";
 
-},{}],856:[function(require,module,exports){
+},{}],777:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify'),
@@ -92811,7 +82511,7 @@ MappingsRow.prototype.getRow = function() {
   return this.row;
 };
 
-},{"./ExpressionTemplate.html":855,"lodash/collection/forEach":940,"lodash/object/assign":1053,"min-dom/lib/classes":1064,"min-dom/lib/domify":1066,"table-js/lib/features/combo-box":1095}],857:[function(require,module,exports){
+},{"./ExpressionTemplate.html":776,"lodash/collection/forEach":861,"lodash/object/assign":974,"min-dom/lib/classes":985,"min-dom/lib/domify":987,"table-js/lib/features/combo-box":1016}],778:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -92851,7 +82551,7 @@ MappingsRowRenderer.$inject = [
 
 module.exports = MappingsRowRenderer;
 
-},{"min-dom/lib/classes":1064}],858:[function(require,module,exports){
+},{"min-dom/lib/classes":985}],779:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('table-js/lib/features/complex-cell')
@@ -92861,7 +82561,7 @@ module.exports = {
   mappingsRowRenderer: [ 'type', require('./MappingsRowRenderer') ]
 };
 
-},{"./MappingsRow":856,"./MappingsRowRenderer":857,"table-js/lib/features/complex-cell":1097}],859:[function(require,module,exports){
+},{"./MappingsRow":777,"./MappingsRowRenderer":778,"table-js/lib/features/complex-cell":1018}],780:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -93141,7 +82841,7 @@ Modeling.prototype.editDescription = function(businessObject, description) {
   this._commandStack.execute('description.edit', context);
 };
 
-},{"./cmd/AddAllowedValueHandler":861,"./cmd/ClearRowHandler":862,"./cmd/CopyRowHandler":863,"./cmd/EditCellExpressionLanguageHandler":864,"./cmd/EditCellHandler":865,"./cmd/EditDescriptionHandler":866,"./cmd/EditHitPolicyHandler":867,"./cmd/EditIdHandler":868,"./cmd/EditInputMappingHandler":869,"./cmd/EditLiteralExpressionHandler":870,"./cmd/EditTypeHandler":871,"./cmd/RemoveAllowedValueHandler":872,"inherits":930,"table-js/lib/features/modeling/Modeling":1112}],860:[function(require,module,exports){
+},{"./cmd/AddAllowedValueHandler":782,"./cmd/ClearRowHandler":783,"./cmd/CopyRowHandler":784,"./cmd/EditCellExpressionLanguageHandler":785,"./cmd/EditCellHandler":786,"./cmd/EditDescriptionHandler":787,"./cmd/EditHitPolicyHandler":788,"./cmd/EditIdHandler":789,"./cmd/EditInputMappingHandler":790,"./cmd/EditLiteralExpressionHandler":791,"./cmd/EditTypeHandler":792,"./cmd/RemoveAllowedValueHandler":793,"inherits":851,"table-js/lib/features/modeling/Modeling":1033}],781:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits'),
@@ -93438,7 +83138,7 @@ module.exports = TableUpdater;
 
 TableUpdater.$inject = [ 'eventBus', 'moddle', 'elementRegistry', 'tableFactory', 'tableName', 'graphicsFactory' ];
 
-},{"diagram-js/lib/command/CommandInterceptor":452,"inherits":930,"lodash/collection/forEachRight":941}],861:[function(require,module,exports){
+},{"diagram-js/lib/command/CommandInterceptor":373,"inherits":851,"lodash/collection/forEachRight":862}],782:[function(require,module,exports){
 'use strict';
 
 /**
@@ -93517,7 +83217,7 @@ AddAllowedValueHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],862:[function(require,module,exports){
+},{}],783:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -93590,7 +83290,7 @@ ClearRowHandler.prototype.revert = function(context) {
   });
 };
 
-},{"lodash/collection/forEach":940}],863:[function(require,module,exports){
+},{"lodash/collection/forEach":861}],784:[function(require,module,exports){
 'use strict';
 
 var getBusinessObject = require('../../../../util/ModelUtil').getBusinessObject;
@@ -93640,7 +83340,7 @@ CopyRowHandler.prototype.execute = function(context) {};
 
 CopyRowHandler.prototype.revert = function(context) {};
 
-},{"../../../../util/ModelUtil":902}],864:[function(require,module,exports){
+},{"../../../../util/ModelUtil":823}],785:[function(require,module,exports){
 'use strict';
 
 /**
@@ -93682,7 +83382,7 @@ EditCellExpressionLanguageHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],865:[function(require,module,exports){
+},{}],786:[function(require,module,exports){
 'use strict';
 
 var calculateSelectionUpdate = require('selection-update');
@@ -93855,7 +83555,7 @@ EditCellHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{"selection-update":1079}],866:[function(require,module,exports){
+},{"selection-update":1000}],787:[function(require,module,exports){
 'use strict';
 
 /**
@@ -93897,7 +83597,7 @@ EditDescriptionHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],867:[function(require,module,exports){
+},{}],788:[function(require,module,exports){
 'use strict';
 
 /**
@@ -93956,7 +83656,7 @@ EditHitPolicyHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],868:[function(require,module,exports){
+},{}],789:[function(require,module,exports){
 'use strict';
 
 /**
@@ -93997,7 +83697,7 @@ EditIdHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],869:[function(require,module,exports){
+},{}],790:[function(require,module,exports){
 'use strict';
 
 /**
@@ -94081,7 +83781,7 @@ EditInputMappingHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],870:[function(require,module,exports){
+},{}],791:[function(require,module,exports){
 'use strict';
 
 /**
@@ -94140,7 +83840,7 @@ EditLiteralExpressionHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],871:[function(require,module,exports){
+},{}],792:[function(require,module,exports){
 'use strict';
 
 /**
@@ -94221,7 +83921,7 @@ EditTypeHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],872:[function(require,module,exports){
+},{}],793:[function(require,module,exports){
 'use strict';
 
 /**
@@ -94287,7 +83987,7 @@ RemoveAllowedValueHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],873:[function(require,module,exports){
+},{}],794:[function(require,module,exports){
 module.exports = {
   __init__: [ 'modeling', 'tableUpdater' ],
   __depends__: [
@@ -94299,7 +83999,7 @@ module.exports = {
   tableUpdater: [ 'type', require('./TableUpdater') ]
 };
 
-},{"../factory":844,"./Modeling":859,"./TableUpdater":860,"table-js/lib/features/add-row":1091,"table-js/lib/features/modeling":1122}],874:[function(require,module,exports){
+},{"../factory":765,"./Modeling":780,"./TableUpdater":781,"table-js/lib/features/add-row":1012,"table-js/lib/features/modeling":1043}],795:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -94756,7 +84456,7 @@ NumberEdit.prototype.teardownComplexCells = function() {
   });
 };
 
-},{"./template-input.html":876,"./template-output.html":877,"./utils":878,"lodash/collection/forEach":940,"lodash/object/assign":1053,"min-dom/lib/classes":1064,"min-dom/lib/domify":1066,"min-dom/lib/query":1069}],875:[function(require,module,exports){
+},{"./template-input.html":797,"./template-output.html":798,"./utils":799,"lodash/collection/forEach":861,"lodash/object/assign":974,"min-dom/lib/classes":985,"min-dom/lib/domify":987,"min-dom/lib/query":990}],796:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -94764,13 +84464,13 @@ module.exports = {
   numberEdit: [ 'type', require('./NumberEdit') ]
 };
 
-},{"./NumberEdit":874}],876:[function(require,module,exports){
+},{"./NumberEdit":795}],797:[function(require,module,exports){
 module.exports = "<div>\r\n  <h4>Edit Number Condition</h4>\r\n  <div class=\"links\">\r\n    <div class=\"toggle-type\">\r\n      <a class=\"comparison\">Comparison</a>\r\n      /\r\n      <a class=\"range\">Range</a>\r\n    </div>\r\n  </div>\r\n  <div class=\"comparison region\">\r\n    <select class=\"comparison-dropdown\">\r\n      <option value=\"equals\">= (Equals)</option>\r\n      <option value=\"less\">&lt; (Less than)</option>\r\n      <option value=\"less-equal\">&lt;= (Less than or equal)</option>\r\n      <option value=\"greater\">&gt; (Greater than)</option>\r\n      <option value=\"greater-equal\">&gt;= (Greater than or equal)</option>\r\n    </select>\r\n    <input type=\"number\" class=\"comparison-number\" placeholder=\"number\" />\r\n  </div>\r\n  <div class=\"range region\">\r\n    <label>Include</label>\r\n    <div class=\"include-inputs\">\r\n      <input type=\"number\" placeholder=\"start\" />\r\n      <input type=\"checkbox\" placeholder=\"include-start\" />\r\n    </div>\r\n    <div class=\"include-inputs\">\r\n      <input type=\"number\" placeholder=\"end\" />\r\n      <input type=\"checkbox\" placeholder=\"include-end\" />\r\n    </div>\r\n  </div>\r\n</div>\r\n";
 
-},{}],877:[function(require,module,exports){
+},{}],798:[function(require,module,exports){
 module.exports = "<div>\r\n  <h4>Edit Number Result</h4>\r\n  <div class=\"comparison region\">\r\n    <input type=\"number\" class=\"comparison-number\" placeholder=\"number\" style=\"width: 100%\" />\r\n  </div>\r\n</div>\r\n";
 
-},{}],878:[function(require,module,exports){
+},{}],799:[function(require,module,exports){
 var types = [
   'integer',
   'long',
@@ -94806,7 +84506,7 @@ function isNumberCell(el) {
 
 module.exports.isNumberCell = isNumberCell;
 
-},{}],879:[function(require,module,exports){
+},{}],800:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -94851,14 +84551,14 @@ SimpleEditing.$inject = [ 'eventBus', 'modeling', 'simpleMode', 'elementRegistry
 
 module.exports = SimpleEditing;
 
-},{"diagram-js/lib/command/CommandInterceptor":452,"inherits":930,"min-dom/lib/classes":1064}],880:[function(require,module,exports){
+},{"diagram-js/lib/command/CommandInterceptor":373,"inherits":851,"min-dom/lib/classes":985}],801:[function(require,module,exports){
 module.exports = {
   __init__: [ 'simpleEditing' ],
   __depends__: [],
   simpleEditing: [ 'type', require('./SimpleEditing') ]
 };
 
-},{"./SimpleEditing":879}],881:[function(require,module,exports){
+},{"./SimpleEditing":800}],802:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes'),
@@ -95117,13 +84817,13 @@ SimpleMode.prototype.isString = function(textContent) {
   return firstCondition && !secondCondition;
 };
 
-},{"min-dom/lib/classes":1064,"min-dom/lib/domify":1066}],882:[function(require,module,exports){
+},{"min-dom/lib/classes":985,"min-dom/lib/domify":987}],803:[function(require,module,exports){
 module.exports = {
   __init__: [ 'simpleMode' ],
   simpleMode: [ 'type', require('./SimpleMode') ]
 };
 
-},{"./SimpleMode":881}],883:[function(require,module,exports){
+},{"./SimpleMode":802}],804:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign');
@@ -95463,7 +85163,7 @@ StringEdit.$inject = ['eventBus', 'simpleMode', 'elementRegistry', 'graphicsFact
 
 module.exports = StringEdit;
 
-},{"./template-input.html":886,"./template-output.html":887,"./utils":888,"diagram-js/lib/util/Mouse":574,"lodash/object/assign":1053,"min-dom/lib/classes":1064,"min-dom/lib/domify":1066}],884:[function(require,module,exports){
+},{"./template-input.html":807,"./template-output.html":808,"./utils":809,"diagram-js/lib/util/Mouse":495,"lodash/object/assign":974,"min-dom/lib/classes":985,"min-dom/lib/domify":987}],805:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify'),
@@ -95549,7 +85249,7 @@ StringView.$inject = ['eventBus', 'simpleMode'];
 
 module.exports = StringView;
 
-},{"./utils":888,"min-dom/lib/domify":1066}],885:[function(require,module,exports){
+},{"./utils":809,"min-dom/lib/domify":987}],806:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -95557,13 +85257,13 @@ module.exports = {
   stringEdit: [ 'type', require('./StringEdit') ]
 };
 
-},{"./StringEdit":883}],886:[function(require,module,exports){
+},{"./StringEdit":804}],807:[function(require,module,exports){
 module.exports = "<div>\r\n  <h4>Edit String Expression</h4>\r\n  <select class=\"string-type-dropdown\">\r\n    <option value=\"disjunction\">Match one of</option>\r\n    <option value=\"negation\">Match anything except</option>\r\n  </select>\r\n  <div class=\"free-input\">\r\n    <ul>\r\n    </ul>\r\n    <input type=\"text\" placeholder=\"new Value\" class=\"free-input-value-field\" />\r\n    <div class=\"helptext\">Enter value without quotes</div>\r\n  </div>\r\n  <div class=\"input-values\">\r\n    <ul>\r\n    </ul>\r\n  </div>\r\n</div>\r\n";
 
-},{}],887:[function(require,module,exports){
+},{}],808:[function(require,module,exports){
 module.exports = "<div>\r\n  <h4>Edit String Result</h4>\r\n  <div class=\"free-input\">\r\n    <textarea type=\"text\" placeholder=\"new Value\" class=\"free-input-value-field\"></textarea>\r\n    <div class=\"helptext\">Enter value without quotes</div>\r\n  </div>\r\n  <div class=\"input-values\">\r\n    <ul>\r\n    </ul>\r\n  </div>\r\n</div>\r\n";
 
-},{}],888:[function(require,module,exports){
+},{}],809:[function(require,module,exports){
 'use strict';
 
 var hasStringType = function(column) {
@@ -95655,7 +85355,7 @@ module.exports = {
   }
 };
 
-},{}],889:[function(require,module,exports){
+},{}],810:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -95663,7 +85363,7 @@ module.exports = {
   stringView: [ 'type', require('./StringView') ]
 };
 
-},{"./StringView":884}],890:[function(require,module,exports){
+},{"./StringView":805}],811:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -95735,14 +85435,14 @@ TableName.prototype.getId = function() {
   return this.semantic.id;
 };
 
-},{"inherits":930,"min-dom/lib/domify":1066,"table-js/lib/features/table-name/TableName":1128}],891:[function(require,module,exports){
+},{"inherits":851,"min-dom/lib/domify":987,"table-js/lib/features/table-name/TableName":1049}],812:[function(require,module,exports){
 module.exports = {
   __init__: [ 'tableName' ],
   __depends__: [],
   tableName: [ 'type', require('./TableName') ]
 };
 
-},{"./TableName":890}],892:[function(require,module,exports){
+},{"./TableName":811}],813:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign');
@@ -95996,7 +85696,7 @@ TypeRow.prototype.getRow = function() {
   return this.row;
 };
 
-},{"./TypeTemplate.html":894,"lodash/object/assign":1053,"min-dom/lib/classes":1064,"min-dom/lib/domify":1066,"table-js/lib/features/combo-box":1095}],893:[function(require,module,exports){
+},{"./TypeTemplate.html":815,"lodash/object/assign":974,"min-dom/lib/classes":985,"min-dom/lib/domify":987,"table-js/lib/features/combo-box":1016}],814:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -96033,10 +85733,10 @@ TypeRowRenderer.$inject = [
 
 module.exports = TypeRowRenderer;
 
-},{"min-dom/lib/classes":1064}],894:[function(require,module,exports){
+},{"min-dom/lib/classes":985}],815:[function(require,module,exports){
 module.exports = "<div>\r\n  <div class=\"allowed-values\">\r\n    <label>Input Values:</label>\r\n    <ul></ul>\r\n    <input type=\"text\" placeholder=\"value1, value2, otherValue\">\r\n  </div>\r\n</div>\r\n";
 
-},{}],895:[function(require,module,exports){
+},{}],816:[function(require,module,exports){
 module.exports = {
   __init__: [ 'typeRow', 'typeRowRenderer' ],
   __depends__: [ require('table-js/lib/features/complex-cell') ],
@@ -96044,7 +85744,7 @@ module.exports = {
   typeRowRenderer: [ 'type', require('./TypeRowRenderer') ]
 };
 
-},{"./TypeRow":892,"./TypeRowRenderer":893,"table-js/lib/features/complex-cell":1097}],896:[function(require,module,exports){
+},{"./TypeRow":813,"./TypeRowRenderer":814,"table-js/lib/features/complex-cell":1018}],817:[function(require,module,exports){
 'use strict';
 
 var TableTreeWalker = require('./TableTreeWalker');
@@ -96120,7 +85820,7 @@ function importDmnTable(sheet, definitions, decision, done) {
 
 module.exports.importDmnTable = importDmnTable;
 
-},{"./TableTreeWalker":898}],897:[function(require,module,exports){
+},{"./TableTreeWalker":819}],818:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -96314,7 +86014,7 @@ TableImporter.prototype.add = function(semantic, parentElement, definitions) {
   return element;
 };
 
-},{"./Util":899,"lodash/array/union":932,"lodash/collection/filter":938,"lodash/object/assign":1053}],898:[function(require,module,exports){
+},{"./Util":820,"lodash/array/union":853,"lodash/collection/filter":859,"lodash/object/assign":974}],819:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -96449,7 +86149,7 @@ function TableTreeWalker(handler, options) {
 
 module.exports = TableTreeWalker;
 
-},{"./Util":899,"lodash/collection/forEach":940}],899:[function(require,module,exports){
+},{"./Util":820,"lodash/collection/forEach":861}],820:[function(require,module,exports){
 'use strict';
 
 module.exports.elementToString = function(e) {
@@ -96459,7 +86159,7 @@ module.exports.elementToString = function(e) {
 
   return '<' + e.$type + (e.id ? ' id="' + e.id : '') + '" />';
 };
-},{}],900:[function(require,module,exports){
+},{}],821:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../features/factory')
@@ -96467,7 +86167,7 @@ module.exports = {
   tableImporter: [ 'type', require('./TableImporter') ]
 };
 
-},{"../features/factory":844,"./TableImporter":897}],901:[function(require,module,exports){
+},{"../features/factory":765,"./TableImporter":818}],822:[function(require,module,exports){
 'use strict';
 
 
@@ -96510,7 +86210,7 @@ function getEntriesType(context) {
 
 module.exports.getEntriesType = getEntriesType;
 
-},{}],902:[function(require,module,exports){
+},{}],823:[function(require,module,exports){
 'use strict';
 
 var any = require('lodash/collection/any');
@@ -96573,7 +86273,7 @@ function isAny(element, types) {
 
 module.exports.isAny = isAny;
 
-},{"lodash/collection/any":936}],903:[function(require,module,exports){
+},{"lodash/collection/any":857}],824:[function(require,module,exports){
 /**
  * This file must not be changed or exchanged.
  *
@@ -96658,13 +86358,13 @@ function open() {
 
 module.exports.open = open;
 
-},{"min-dom/lib/delegate":1065,"min-dom/lib/domify":1066}],904:[function(require,module,exports){
+},{"min-dom/lib/delegate":986,"min-dom/lib/domify":987}],825:[function(require,module,exports){
 module.exports = {
   __depends__: [ require('diagram-js/lib/features/interaction-events') ],
   __init__: [ 'directEditing' ],
   directEditing: [ 'type', require('./lib/DirectEditing') ]
 };
-},{"./lib/DirectEditing":905,"diagram-js/lib/features/interaction-events":489}],905:[function(require,module,exports){
+},{"./lib/DirectEditing":826,"diagram-js/lib/features/interaction-events":410}],826:[function(require,module,exports){
 'use strict';
 
 var bind = require('lodash/function/bind'),
@@ -96826,7 +86526,7 @@ DirectEditing.prototype.activate = function(element) {
 
 
 module.exports = DirectEditing;
-},{"./TextBox":906,"lodash/collection/find":939,"lodash/function/bind":946}],906:[function(require,module,exports){
+},{"./TextBox":827,"lodash/collection/find":860,"lodash/function/bind":867}],827:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -96977,9 +86677,9 @@ TextBox.prototype.setCursor = function() {
   }
 };
 
-},{"lodash/object/assign":1053,"min-dom/lib/event":1067,"min-dom/lib/remove":1070}],907:[function(require,module,exports){
+},{"lodash/object/assign":974,"min-dom/lib/event":988,"min-dom/lib/remove":991}],828:[function(require,module,exports){
 arguments[4][61][0].apply(exports,arguments)
-},{"./lib/simple":909,"dup":61}],908:[function(require,module,exports){
+},{"./lib/simple":830,"dup":61}],829:[function(require,module,exports){
 'use strict';
 
 var isString = require('lodash/lang/isString'),
@@ -97060,7 +86760,7 @@ DmnModdle.prototype.toXML = function(element, options, done) {
   }
 };
 
-},{"lodash/lang/isFunction":1047,"lodash/lang/isString":1051,"lodash/object/assign":1053,"moddle":915,"moddle-xml/lib/reader":911,"moddle-xml/lib/writer":912}],909:[function(require,module,exports){
+},{"lodash/lang/isFunction":968,"lodash/lang/isString":972,"lodash/object/assign":974,"moddle":836,"moddle-xml/lib/reader":832,"moddle-xml/lib/writer":833}],830:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign');
@@ -97078,35 +86778,35 @@ module.exports = function(additionalPackages, options) {
   return new DmnModdle(assign({}, packages, additionalPackages), options);
 };
 
-},{"../resources/dmn/bpmn-io/biodi.json":924,"../resources/dmn/bpmn-io/dc.json":925,"../resources/dmn/camunda/camunda.json":926,"../resources/dmn/json/dmn.json":927,"./dmn-moddle":908,"lodash/object/assign":1053}],910:[function(require,module,exports){
+},{"../resources/dmn/bpmn-io/biodi.json":845,"../resources/dmn/bpmn-io/dc.json":846,"../resources/dmn/camunda/camunda.json":847,"../resources/dmn/json/dmn.json":848,"./dmn-moddle":829,"lodash/object/assign":974}],831:[function(require,module,exports){
 arguments[4][64][0].apply(exports,arguments)
-},{"dup":64}],911:[function(require,module,exports){
+},{"dup":64}],832:[function(require,module,exports){
 arguments[4][65][0].apply(exports,arguments)
-},{"./common":910,"dup":65,"lodash/collection/find":939,"lodash/collection/forEach":940,"lodash/collection/reduce":943,"lodash/function/defer":948,"lodash/object/assign":1053,"moddle":915,"moddle/lib/ns":920,"moddle/lib/types":923,"sax":913,"tiny-stack":914}],912:[function(require,module,exports){
+},{"./common":831,"dup":65,"lodash/collection/find":860,"lodash/collection/forEach":861,"lodash/collection/reduce":864,"lodash/function/defer":869,"lodash/object/assign":974,"moddle":836,"moddle/lib/ns":841,"moddle/lib/types":844,"sax":834,"tiny-stack":835}],833:[function(require,module,exports){
 arguments[4][66][0].apply(exports,arguments)
-},{"./common":910,"dup":66,"lodash/collection/filter":938,"lodash/collection/forEach":940,"lodash/collection/map":942,"lodash/lang/isString":1051,"lodash/object/assign":1053,"moddle/lib/ns":920,"moddle/lib/types":923}],913:[function(require,module,exports){
+},{"./common":831,"dup":66,"lodash/collection/filter":859,"lodash/collection/forEach":861,"lodash/collection/map":863,"lodash/lang/isString":972,"lodash/object/assign":974,"moddle/lib/ns":841,"moddle/lib/types":844}],834:[function(require,module,exports){
 arguments[4][67][0].apply(exports,arguments)
-},{"buffer":1161,"dup":67,"stream":1185,"string_decoder":1186}],914:[function(require,module,exports){
+},{"buffer":1082,"dup":67,"stream":1106,"string_decoder":1107}],835:[function(require,module,exports){
 arguments[4][68][0].apply(exports,arguments)
-},{"dup":68}],915:[function(require,module,exports){
+},{"dup":68}],836:[function(require,module,exports){
 arguments[4][69][0].apply(exports,arguments)
-},{"./lib/moddle":919,"dup":69}],916:[function(require,module,exports){
+},{"./lib/moddle":840,"dup":69}],837:[function(require,module,exports){
 arguments[4][70][0].apply(exports,arguments)
-},{"dup":70}],917:[function(require,module,exports){
+},{"dup":70}],838:[function(require,module,exports){
 arguments[4][71][0].apply(exports,arguments)
-},{"./ns":920,"dup":71,"lodash/collection/forEach":940,"lodash/object/assign":1053,"lodash/object/pick":1058}],918:[function(require,module,exports){
+},{"./ns":841,"dup":71,"lodash/collection/forEach":861,"lodash/object/assign":974,"lodash/object/pick":979}],839:[function(require,module,exports){
 arguments[4][72][0].apply(exports,arguments)
-},{"./base":916,"dup":72,"lodash/collection/forEach":940}],919:[function(require,module,exports){
+},{"./base":837,"dup":72,"lodash/collection/forEach":861}],840:[function(require,module,exports){
 arguments[4][73][0].apply(exports,arguments)
-},{"./factory":918,"./ns":920,"./properties":921,"./registry":922,"dup":73,"lodash/collection/find":939,"lodash/collection/forEach":940,"lodash/lang/isObject":1050,"lodash/lang/isString":1051}],920:[function(require,module,exports){
+},{"./factory":839,"./ns":841,"./properties":842,"./registry":843,"dup":73,"lodash/collection/find":860,"lodash/collection/forEach":861,"lodash/lang/isObject":971,"lodash/lang/isString":972}],841:[function(require,module,exports){
 arguments[4][74][0].apply(exports,arguments)
-},{"dup":74}],921:[function(require,module,exports){
+},{"dup":74}],842:[function(require,module,exports){
 arguments[4][75][0].apply(exports,arguments)
-},{"dup":75}],922:[function(require,module,exports){
+},{"dup":75}],843:[function(require,module,exports){
 arguments[4][76][0].apply(exports,arguments)
-},{"./descriptor-builder":917,"./ns":920,"./types":923,"dup":76,"lodash/collection/forEach":940,"lodash/object/assign":1053}],923:[function(require,module,exports){
+},{"./descriptor-builder":838,"./ns":841,"./types":844,"dup":76,"lodash/collection/forEach":861,"lodash/object/assign":974}],844:[function(require,module,exports){
 arguments[4][77][0].apply(exports,arguments)
-},{"dup":77}],924:[function(require,module,exports){
+},{"dup":77}],845:[function(require,module,exports){
 module.exports={
   "name": "bpmn.io DI for DMN",
   "uri": "http://bpmn.io/schema/dmn/biodi/1.0",
@@ -97148,7 +86848,7 @@ module.exports={
   ]
 }
 
-},{}],925:[function(require,module,exports){
+},{}],846:[function(require,module,exports){
 module.exports={
   "name": "DC",
   "uri": "http://www.omg.org/spec/DD/20100524/DC",
@@ -97249,7 +86949,7 @@ module.exports={
   "associations": []
 }
 
-},{}],926:[function(require,module,exports){
+},{}],847:[function(require,module,exports){
 module.exports={
   "name": "Camunda",
   "uri": "http://camunda.org/schema/1.0/dmn",
@@ -97274,7 +86974,7 @@ module.exports={
   ]
 }
 
-},{}],927:[function(require,module,exports){
+},{}],848:[function(require,module,exports){
 module.exports={
   "name": "DMN",
   "uri": "http://www.omg.org/spec/DMN/20151101/dmn.xsd",
@@ -97601,7 +87301,7 @@ module.exports={
   ]
 }
 
-},{}],928:[function(require,module,exports){
+},{}],849:[function(require,module,exports){
 'use strict';
 
 var hat = require('hat');
@@ -97700,7 +87400,7 @@ Ids.prototype.clear = function() {
     this.unclaim(id);
   }
 };
-},{"hat":929}],929:[function(require,module,exports){
+},{"hat":850}],850:[function(require,module,exports){
 var hat = module.exports = function (bits, base) {
     if (!base) base = 16;
     if (bits === undefined) bits = 128;
@@ -97764,11 +87464,11 @@ hat.rack = function (bits, base, expandBy) {
     return fn;
 };
 
-},{}],930:[function(require,module,exports){
+},{}],851:[function(require,module,exports){
 arguments[4][82][0].apply(exports,arguments)
-},{"dup":82}],931:[function(require,module,exports){
+},{"dup":82}],852:[function(require,module,exports){
 arguments[4][83][0].apply(exports,arguments)
-},{"dup":83}],932:[function(require,module,exports){
+},{"dup":83}],853:[function(require,module,exports){
 var baseFlatten = require('../internal/baseFlatten'),
     baseUniq = require('../internal/baseUniq'),
     restParam = require('../function/restParam');
@@ -97794,23 +87494,23 @@ var union = restParam(function(arrays) {
 
 module.exports = union;
 
-},{"../function/restParam":949,"../internal/baseFlatten":975,"../internal/baseUniq":997}],933:[function(require,module,exports){
-arguments[4][590][0].apply(exports,arguments)
-},{"../internal/baseCallback":964,"../internal/baseUniq":997,"../internal/isIterateeCall":1026,"../internal/sortedUniq":1041,"dup":590}],934:[function(require,module,exports){
-arguments[4][591][0].apply(exports,arguments)
-},{"./uniq":933,"dup":591}],935:[function(require,module,exports){
-arguments[4][303][0].apply(exports,arguments)
-},{"../internal/LazyWrapper":950,"../internal/LodashWrapper":951,"../internal/baseLodash":986,"../internal/isObjectLike":1030,"../internal/wrapperClone":1044,"../lang/isArray":1046,"dup":303}],936:[function(require,module,exports){
-arguments[4][304][0].apply(exports,arguments)
-},{"./some":944,"dup":304}],937:[function(require,module,exports){
+},{"../function/restParam":870,"../internal/baseFlatten":896,"../internal/baseUniq":918}],854:[function(require,module,exports){
+arguments[4][511][0].apply(exports,arguments)
+},{"../internal/baseCallback":885,"../internal/baseUniq":918,"../internal/isIterateeCall":947,"../internal/sortedUniq":962,"dup":511}],855:[function(require,module,exports){
+arguments[4][512][0].apply(exports,arguments)
+},{"./uniq":854,"dup":512}],856:[function(require,module,exports){
+arguments[4][513][0].apply(exports,arguments)
+},{"../internal/LazyWrapper":871,"../internal/LodashWrapper":872,"../internal/baseLodash":907,"../internal/isObjectLike":951,"../internal/wrapperClone":965,"../lang/isArray":967,"dup":513}],857:[function(require,module,exports){
+arguments[4][256][0].apply(exports,arguments)
+},{"./some":865,"dup":256}],858:[function(require,module,exports){
 arguments[4][84][0].apply(exports,arguments)
-},{"../internal/arrayEvery":956,"../internal/baseCallback":964,"../internal/baseEvery":971,"../internal/isIterateeCall":1026,"../lang/isArray":1046,"dup":84}],938:[function(require,module,exports){
+},{"../internal/arrayEvery":877,"../internal/baseCallback":885,"../internal/baseEvery":892,"../internal/isIterateeCall":947,"../lang/isArray":967,"dup":84}],859:[function(require,module,exports){
 arguments[4][85][0].apply(exports,arguments)
-},{"../internal/arrayFilter":957,"../internal/baseCallback":964,"../internal/baseFilter":972,"../lang/isArray":1046,"dup":85}],939:[function(require,module,exports){
+},{"../internal/arrayFilter":878,"../internal/baseCallback":885,"../internal/baseFilter":893,"../lang/isArray":967,"dup":85}],860:[function(require,module,exports){
 arguments[4][86][0].apply(exports,arguments)
-},{"../internal/baseEach":969,"../internal/createFind":1009,"dup":86}],940:[function(require,module,exports){
+},{"../internal/baseEach":890,"../internal/createFind":930,"dup":86}],861:[function(require,module,exports){
 arguments[4][87][0].apply(exports,arguments)
-},{"../internal/arrayEach":954,"../internal/baseEach":969,"../internal/createForEach":1010,"dup":87}],941:[function(require,module,exports){
+},{"../internal/arrayEach":875,"../internal/baseEach":890,"../internal/createForEach":931,"dup":87}],862:[function(require,module,exports){
 var arrayEachRight = require('../internal/arrayEachRight'),
     baseEachRight = require('../internal/baseEachRight'),
     createForEach = require('../internal/createForEach');
@@ -97838,33 +87538,33 @@ var forEachRight = createForEach(arrayEachRight, baseEachRight);
 
 module.exports = forEachRight;
 
-},{"../internal/arrayEachRight":955,"../internal/baseEachRight":970,"../internal/createForEach":1010}],942:[function(require,module,exports){
+},{"../internal/arrayEachRight":876,"../internal/baseEachRight":891,"../internal/createForEach":931}],863:[function(require,module,exports){
 arguments[4][89][0].apply(exports,arguments)
-},{"../internal/arrayMap":958,"../internal/baseCallback":964,"../internal/baseMap":987,"../lang/isArray":1046,"dup":89}],943:[function(require,module,exports){
+},{"../internal/arrayMap":879,"../internal/baseCallback":885,"../internal/baseMap":908,"../lang/isArray":967,"dup":89}],864:[function(require,module,exports){
 arguments[4][90][0].apply(exports,arguments)
-},{"../internal/arrayReduce":960,"../internal/baseEach":969,"../internal/createReduce":1013,"dup":90}],944:[function(require,module,exports){
+},{"../internal/arrayReduce":881,"../internal/baseEach":890,"../internal/createReduce":934,"dup":90}],865:[function(require,module,exports){
 arguments[4][91][0].apply(exports,arguments)
-},{"../internal/arraySome":961,"../internal/baseCallback":964,"../internal/baseSome":995,"../internal/isIterateeCall":1026,"../lang/isArray":1046,"dup":91}],945:[function(require,module,exports){
-arguments[4][313][0].apply(exports,arguments)
-},{"../internal/getNative":1022,"dup":313}],946:[function(require,module,exports){
-arguments[4][314][0].apply(exports,arguments)
-},{"../internal/createWrapper":1014,"../internal/replaceHolders":1038,"./restParam":949,"dup":314}],947:[function(require,module,exports){
-arguments[4][315][0].apply(exports,arguments)
-},{"../date/now":945,"../lang/isObject":1050,"dup":315}],948:[function(require,module,exports){
+},{"../internal/arraySome":882,"../internal/baseCallback":885,"../internal/baseSome":916,"../internal/isIterateeCall":947,"../lang/isArray":967,"dup":91}],866:[function(require,module,exports){
+arguments[4][525][0].apply(exports,arguments)
+},{"../internal/getNative":943,"dup":525}],867:[function(require,module,exports){
+arguments[4][526][0].apply(exports,arguments)
+},{"../internal/createWrapper":935,"../internal/replaceHolders":959,"./restParam":870,"dup":526}],868:[function(require,module,exports){
+arguments[4][527][0].apply(exports,arguments)
+},{"../date/now":866,"../lang/isObject":971,"dup":527}],869:[function(require,module,exports){
 arguments[4][92][0].apply(exports,arguments)
-},{"../internal/baseDelay":967,"./restParam":949,"dup":92}],949:[function(require,module,exports){
+},{"../internal/baseDelay":888,"./restParam":870,"dup":92}],870:[function(require,module,exports){
 arguments[4][93][0].apply(exports,arguments)
-},{"dup":93}],950:[function(require,module,exports){
-arguments[4][318][0].apply(exports,arguments)
-},{"./baseCreate":966,"./baseLodash":986,"dup":318}],951:[function(require,module,exports){
-arguments[4][319][0].apply(exports,arguments)
-},{"./baseCreate":966,"./baseLodash":986,"dup":319}],952:[function(require,module,exports){
+},{"dup":93}],871:[function(require,module,exports){
+arguments[4][529][0].apply(exports,arguments)
+},{"./baseCreate":887,"./baseLodash":907,"dup":529}],872:[function(require,module,exports){
+arguments[4][530][0].apply(exports,arguments)
+},{"./baseCreate":887,"./baseLodash":907,"dup":530}],873:[function(require,module,exports){
 arguments[4][94][0].apply(exports,arguments)
-},{"./cachePush":1000,"./getNative":1022,"dup":94}],953:[function(require,module,exports){
-arguments[4][321][0].apply(exports,arguments)
-},{"dup":321}],954:[function(require,module,exports){
+},{"./cachePush":921,"./getNative":943,"dup":94}],874:[function(require,module,exports){
+arguments[4][532][0].apply(exports,arguments)
+},{"dup":532}],875:[function(require,module,exports){
 arguments[4][95][0].apply(exports,arguments)
-},{"dup":95}],955:[function(require,module,exports){
+},{"dup":95}],876:[function(require,module,exports){
 /**
  * A specialized version of `_.forEachRight` for arrays without support for
  * callback shorthands and `this` binding.
@@ -97887,35 +87587,35 @@ function arrayEachRight(array, iteratee) {
 
 module.exports = arrayEachRight;
 
-},{}],956:[function(require,module,exports){
+},{}],877:[function(require,module,exports){
 arguments[4][96][0].apply(exports,arguments)
-},{"dup":96}],957:[function(require,module,exports){
+},{"dup":96}],878:[function(require,module,exports){
 arguments[4][97][0].apply(exports,arguments)
-},{"dup":97}],958:[function(require,module,exports){
+},{"dup":97}],879:[function(require,module,exports){
 arguments[4][98][0].apply(exports,arguments)
-},{"dup":98}],959:[function(require,module,exports){
+},{"dup":98}],880:[function(require,module,exports){
 arguments[4][99][0].apply(exports,arguments)
-},{"dup":99}],960:[function(require,module,exports){
+},{"dup":99}],881:[function(require,module,exports){
 arguments[4][100][0].apply(exports,arguments)
-},{"dup":100}],961:[function(require,module,exports){
+},{"dup":100}],882:[function(require,module,exports){
 arguments[4][101][0].apply(exports,arguments)
-},{"dup":101}],962:[function(require,module,exports){
+},{"dup":101}],883:[function(require,module,exports){
 arguments[4][102][0].apply(exports,arguments)
-},{"../object/keys":1054,"dup":102}],963:[function(require,module,exports){
+},{"../object/keys":975,"dup":102}],884:[function(require,module,exports){
 arguments[4][103][0].apply(exports,arguments)
-},{"../object/keys":1054,"./baseCopy":965,"dup":103}],964:[function(require,module,exports){
+},{"../object/keys":975,"./baseCopy":886,"dup":103}],885:[function(require,module,exports){
 arguments[4][104][0].apply(exports,arguments)
-},{"../utility/identity":1060,"../utility/property":1062,"./baseMatches":988,"./baseMatchesProperty":989,"./bindCallback":998,"dup":104}],965:[function(require,module,exports){
+},{"../utility/identity":981,"../utility/property":983,"./baseMatches":909,"./baseMatchesProperty":910,"./bindCallback":919,"dup":104}],886:[function(require,module,exports){
 arguments[4][105][0].apply(exports,arguments)
-},{"dup":105}],966:[function(require,module,exports){
-arguments[4][333][0].apply(exports,arguments)
-},{"../lang/isObject":1050,"dup":333}],967:[function(require,module,exports){
+},{"dup":105}],887:[function(require,module,exports){
+arguments[4][546][0].apply(exports,arguments)
+},{"../lang/isObject":971,"dup":546}],888:[function(require,module,exports){
 arguments[4][106][0].apply(exports,arguments)
-},{"dup":106}],968:[function(require,module,exports){
+},{"dup":106}],889:[function(require,module,exports){
 arguments[4][107][0].apply(exports,arguments)
-},{"./baseIndexOf":982,"./cacheIndexOf":999,"./createCache":1007,"dup":107}],969:[function(require,module,exports){
+},{"./baseIndexOf":903,"./cacheIndexOf":920,"./createCache":928,"dup":107}],890:[function(require,module,exports){
 arguments[4][108][0].apply(exports,arguments)
-},{"./baseForOwn":978,"./createBaseEach":1004,"dup":108}],970:[function(require,module,exports){
+},{"./baseForOwn":899,"./createBaseEach":925,"dup":108}],891:[function(require,module,exports){
 var baseForOwnRight = require('./baseForOwnRight'),
     createBaseEach = require('./createBaseEach');
 
@@ -97932,23 +87632,23 @@ var baseEachRight = createBaseEach(baseForOwnRight, true);
 
 module.exports = baseEachRight;
 
-},{"./baseForOwnRight":979,"./createBaseEach":1004}],971:[function(require,module,exports){
+},{"./baseForOwnRight":900,"./createBaseEach":925}],892:[function(require,module,exports){
 arguments[4][109][0].apply(exports,arguments)
-},{"./baseEach":969,"dup":109}],972:[function(require,module,exports){
+},{"./baseEach":890,"dup":109}],893:[function(require,module,exports){
 arguments[4][110][0].apply(exports,arguments)
-},{"./baseEach":969,"dup":110}],973:[function(require,module,exports){
+},{"./baseEach":890,"dup":110}],894:[function(require,module,exports){
 arguments[4][111][0].apply(exports,arguments)
-},{"dup":111}],974:[function(require,module,exports){
+},{"dup":111}],895:[function(require,module,exports){
 arguments[4][112][0].apply(exports,arguments)
-},{"dup":112}],975:[function(require,module,exports){
+},{"dup":112}],896:[function(require,module,exports){
 arguments[4][113][0].apply(exports,arguments)
-},{"../lang/isArguments":1045,"../lang/isArray":1046,"./arrayPush":959,"./isArrayLike":1024,"./isObjectLike":1030,"dup":113}],976:[function(require,module,exports){
+},{"../lang/isArguments":966,"../lang/isArray":967,"./arrayPush":880,"./isArrayLike":945,"./isObjectLike":951,"dup":113}],897:[function(require,module,exports){
 arguments[4][114][0].apply(exports,arguments)
-},{"./createBaseFor":1005,"dup":114}],977:[function(require,module,exports){
+},{"./createBaseFor":926,"dup":114}],898:[function(require,module,exports){
 arguments[4][115][0].apply(exports,arguments)
-},{"../object/keysIn":1055,"./baseFor":976,"dup":115}],978:[function(require,module,exports){
+},{"../object/keysIn":976,"./baseFor":897,"dup":115}],899:[function(require,module,exports){
 arguments[4][116][0].apply(exports,arguments)
-},{"../object/keys":1054,"./baseFor":976,"dup":116}],979:[function(require,module,exports){
+},{"../object/keys":975,"./baseFor":897,"dup":116}],900:[function(require,module,exports){
 var baseForRight = require('./baseForRight'),
     keys = require('../object/keys');
 
@@ -97967,7 +87667,7 @@ function baseForOwnRight(object, iteratee) {
 
 module.exports = baseForOwnRight;
 
-},{"../object/keys":1054,"./baseForRight":980}],980:[function(require,module,exports){
+},{"../object/keys":975,"./baseForRight":901}],901:[function(require,module,exports){
 var createBaseFor = require('./createBaseFor');
 
 /**
@@ -97984,163 +87684,163 @@ var baseForRight = createBaseFor(true);
 
 module.exports = baseForRight;
 
-},{"./createBaseFor":1005}],981:[function(require,module,exports){
+},{"./createBaseFor":926}],902:[function(require,module,exports){
 arguments[4][117][0].apply(exports,arguments)
-},{"./toObject":1042,"dup":117}],982:[function(require,module,exports){
+},{"./toObject":963,"dup":117}],903:[function(require,module,exports){
 arguments[4][118][0].apply(exports,arguments)
-},{"./indexOfNaN":1023,"dup":118}],983:[function(require,module,exports){
+},{"./indexOfNaN":944,"dup":118}],904:[function(require,module,exports){
 arguments[4][119][0].apply(exports,arguments)
-},{"../lang/isObject":1050,"./baseIsEqualDeep":984,"./isObjectLike":1030,"dup":119}],984:[function(require,module,exports){
+},{"../lang/isObject":971,"./baseIsEqualDeep":905,"./isObjectLike":951,"dup":119}],905:[function(require,module,exports){
 arguments[4][120][0].apply(exports,arguments)
-},{"../lang/isArray":1046,"../lang/isTypedArray":1052,"./equalArrays":1015,"./equalByTag":1016,"./equalObjects":1017,"dup":120}],985:[function(require,module,exports){
+},{"../lang/isArray":967,"../lang/isTypedArray":973,"./equalArrays":936,"./equalByTag":937,"./equalObjects":938,"dup":120}],906:[function(require,module,exports){
 arguments[4][121][0].apply(exports,arguments)
-},{"./baseIsEqual":983,"./toObject":1042,"dup":121}],986:[function(require,module,exports){
-arguments[4][350][0].apply(exports,arguments)
-},{"dup":350}],987:[function(require,module,exports){
+},{"./baseIsEqual":904,"./toObject":963,"dup":121}],907:[function(require,module,exports){
+arguments[4][561][0].apply(exports,arguments)
+},{"dup":561}],908:[function(require,module,exports){
 arguments[4][122][0].apply(exports,arguments)
-},{"./baseEach":969,"./isArrayLike":1024,"dup":122}],988:[function(require,module,exports){
+},{"./baseEach":890,"./isArrayLike":945,"dup":122}],909:[function(require,module,exports){
 arguments[4][123][0].apply(exports,arguments)
-},{"./baseIsMatch":985,"./getMatchData":1021,"./toObject":1042,"dup":123}],989:[function(require,module,exports){
+},{"./baseIsMatch":906,"./getMatchData":942,"./toObject":963,"dup":123}],910:[function(require,module,exports){
 arguments[4][124][0].apply(exports,arguments)
-},{"../array/last":931,"../lang/isArray":1046,"./baseGet":981,"./baseIsEqual":983,"./baseSlice":994,"./isKey":1027,"./isStrictComparable":1031,"./toObject":1042,"./toPath":1043,"dup":124}],990:[function(require,module,exports){
+},{"../array/last":852,"../lang/isArray":967,"./baseGet":902,"./baseIsEqual":904,"./baseSlice":915,"./isKey":948,"./isStrictComparable":952,"./toObject":963,"./toPath":964,"dup":124}],911:[function(require,module,exports){
 arguments[4][125][0].apply(exports,arguments)
-},{"dup":125}],991:[function(require,module,exports){
+},{"dup":125}],912:[function(require,module,exports){
 arguments[4][126][0].apply(exports,arguments)
-},{"./baseGet":981,"./toPath":1043,"dup":126}],992:[function(require,module,exports){
+},{"./baseGet":902,"./toPath":964,"dup":126}],913:[function(require,module,exports){
 arguments[4][127][0].apply(exports,arguments)
-},{"dup":127}],993:[function(require,module,exports){
-arguments[4][359][0].apply(exports,arguments)
-},{"../utility/identity":1060,"./metaMap":1033,"dup":359}],994:[function(require,module,exports){
+},{"dup":127}],914:[function(require,module,exports){
+arguments[4][570][0].apply(exports,arguments)
+},{"../utility/identity":981,"./metaMap":954,"dup":570}],915:[function(require,module,exports){
 arguments[4][128][0].apply(exports,arguments)
-},{"dup":128}],995:[function(require,module,exports){
+},{"dup":128}],916:[function(require,module,exports){
 arguments[4][129][0].apply(exports,arguments)
-},{"./baseEach":969,"dup":129}],996:[function(require,module,exports){
+},{"./baseEach":890,"dup":129}],917:[function(require,module,exports){
 arguments[4][130][0].apply(exports,arguments)
-},{"dup":130}],997:[function(require,module,exports){
-arguments[4][654][0].apply(exports,arguments)
-},{"./baseIndexOf":982,"./cacheIndexOf":999,"./createCache":1007,"dup":654}],998:[function(require,module,exports){
+},{"dup":130}],918:[function(require,module,exports){
+arguments[4][575][0].apply(exports,arguments)
+},{"./baseIndexOf":903,"./cacheIndexOf":920,"./createCache":928,"dup":575}],919:[function(require,module,exports){
 arguments[4][132][0].apply(exports,arguments)
-},{"../utility/identity":1060,"dup":132}],999:[function(require,module,exports){
+},{"../utility/identity":981,"dup":132}],920:[function(require,module,exports){
 arguments[4][133][0].apply(exports,arguments)
-},{"../lang/isObject":1050,"dup":133}],1000:[function(require,module,exports){
+},{"../lang/isObject":971,"dup":133}],921:[function(require,module,exports){
 arguments[4][134][0].apply(exports,arguments)
-},{"../lang/isObject":1050,"dup":134}],1001:[function(require,module,exports){
-arguments[4][366][0].apply(exports,arguments)
-},{"dup":366}],1002:[function(require,module,exports){
-arguments[4][367][0].apply(exports,arguments)
-},{"dup":367}],1003:[function(require,module,exports){
+},{"../lang/isObject":971,"dup":134}],922:[function(require,module,exports){
+arguments[4][582][0].apply(exports,arguments)
+},{"dup":582}],923:[function(require,module,exports){
+arguments[4][583][0].apply(exports,arguments)
+},{"dup":583}],924:[function(require,module,exports){
 arguments[4][135][0].apply(exports,arguments)
-},{"../function/restParam":949,"./bindCallback":998,"./isIterateeCall":1026,"dup":135}],1004:[function(require,module,exports){
+},{"../function/restParam":870,"./bindCallback":919,"./isIterateeCall":947,"dup":135}],925:[function(require,module,exports){
 arguments[4][136][0].apply(exports,arguments)
-},{"./getLength":1020,"./isLength":1029,"./toObject":1042,"dup":136}],1005:[function(require,module,exports){
+},{"./getLength":941,"./isLength":950,"./toObject":963,"dup":136}],926:[function(require,module,exports){
 arguments[4][137][0].apply(exports,arguments)
-},{"./toObject":1042,"dup":137}],1006:[function(require,module,exports){
-arguments[4][372][0].apply(exports,arguments)
-},{"./createCtorWrapper":1008,"dup":372}],1007:[function(require,module,exports){
+},{"./toObject":963,"dup":137}],927:[function(require,module,exports){
+arguments[4][588][0].apply(exports,arguments)
+},{"./createCtorWrapper":929,"dup":588}],928:[function(require,module,exports){
 arguments[4][138][0].apply(exports,arguments)
-},{"./SetCache":952,"./getNative":1022,"dup":138}],1008:[function(require,module,exports){
-arguments[4][374][0].apply(exports,arguments)
-},{"../lang/isObject":1050,"./baseCreate":966,"dup":374}],1009:[function(require,module,exports){
+},{"./SetCache":873,"./getNative":943,"dup":138}],929:[function(require,module,exports){
+arguments[4][590][0].apply(exports,arguments)
+},{"../lang/isObject":971,"./baseCreate":887,"dup":590}],930:[function(require,module,exports){
 arguments[4][139][0].apply(exports,arguments)
-},{"../lang/isArray":1046,"./baseCallback":964,"./baseFind":973,"./baseFindIndex":974,"dup":139}],1010:[function(require,module,exports){
+},{"../lang/isArray":967,"./baseCallback":885,"./baseFind":894,"./baseFindIndex":895,"dup":139}],931:[function(require,module,exports){
 arguments[4][140][0].apply(exports,arguments)
-},{"../lang/isArray":1046,"./bindCallback":998,"dup":140}],1011:[function(require,module,exports){
-arguments[4][377][0].apply(exports,arguments)
-},{"./arrayCopy":953,"./composeArgs":1001,"./composeArgsRight":1002,"./createCtorWrapper":1008,"./isLaziable":1028,"./reorder":1037,"./replaceHolders":1038,"./setData":1039,"dup":377}],1012:[function(require,module,exports){
-arguments[4][378][0].apply(exports,arguments)
-},{"./createCtorWrapper":1008,"dup":378}],1013:[function(require,module,exports){
+},{"../lang/isArray":967,"./bindCallback":919,"dup":140}],932:[function(require,module,exports){
+arguments[4][594][0].apply(exports,arguments)
+},{"./arrayCopy":874,"./composeArgs":922,"./composeArgsRight":923,"./createCtorWrapper":929,"./isLaziable":949,"./reorder":958,"./replaceHolders":959,"./setData":960,"dup":594}],933:[function(require,module,exports){
+arguments[4][595][0].apply(exports,arguments)
+},{"./createCtorWrapper":929,"dup":595}],934:[function(require,module,exports){
 arguments[4][141][0].apply(exports,arguments)
-},{"../lang/isArray":1046,"./baseCallback":964,"./baseReduce":992,"dup":141}],1014:[function(require,module,exports){
-arguments[4][380][0].apply(exports,arguments)
-},{"./baseSetData":993,"./createBindWrapper":1006,"./createHybridWrapper":1011,"./createPartialWrapper":1012,"./getData":1018,"./mergeData":1032,"./setData":1039,"dup":380}],1015:[function(require,module,exports){
+},{"../lang/isArray":967,"./baseCallback":885,"./baseReduce":913,"dup":141}],935:[function(require,module,exports){
+arguments[4][597][0].apply(exports,arguments)
+},{"./baseSetData":914,"./createBindWrapper":927,"./createHybridWrapper":932,"./createPartialWrapper":933,"./getData":939,"./mergeData":953,"./setData":960,"dup":597}],936:[function(require,module,exports){
 arguments[4][142][0].apply(exports,arguments)
-},{"./arraySome":961,"dup":142}],1016:[function(require,module,exports){
+},{"./arraySome":882,"dup":142}],937:[function(require,module,exports){
 arguments[4][143][0].apply(exports,arguments)
-},{"dup":143}],1017:[function(require,module,exports){
+},{"dup":143}],938:[function(require,module,exports){
 arguments[4][144][0].apply(exports,arguments)
-},{"../object/keys":1054,"dup":144}],1018:[function(require,module,exports){
-arguments[4][384][0].apply(exports,arguments)
-},{"../utility/noop":1061,"./metaMap":1033,"dup":384}],1019:[function(require,module,exports){
-arguments[4][385][0].apply(exports,arguments)
-},{"./realNames":1036,"dup":385}],1020:[function(require,module,exports){
+},{"../object/keys":975,"dup":144}],939:[function(require,module,exports){
+arguments[4][601][0].apply(exports,arguments)
+},{"../utility/noop":982,"./metaMap":954,"dup":601}],940:[function(require,module,exports){
+arguments[4][602][0].apply(exports,arguments)
+},{"./realNames":957,"dup":602}],941:[function(require,module,exports){
 arguments[4][145][0].apply(exports,arguments)
-},{"./baseProperty":990,"dup":145}],1021:[function(require,module,exports){
+},{"./baseProperty":911,"dup":145}],942:[function(require,module,exports){
 arguments[4][146][0].apply(exports,arguments)
-},{"../object/pairs":1057,"./isStrictComparable":1031,"dup":146}],1022:[function(require,module,exports){
+},{"../object/pairs":978,"./isStrictComparable":952,"dup":146}],943:[function(require,module,exports){
 arguments[4][147][0].apply(exports,arguments)
-},{"../lang/isNative":1048,"dup":147}],1023:[function(require,module,exports){
+},{"../lang/isNative":969,"dup":147}],944:[function(require,module,exports){
 arguments[4][148][0].apply(exports,arguments)
-},{"dup":148}],1024:[function(require,module,exports){
+},{"dup":148}],945:[function(require,module,exports){
 arguments[4][149][0].apply(exports,arguments)
-},{"./getLength":1020,"./isLength":1029,"dup":149}],1025:[function(require,module,exports){
+},{"./getLength":941,"./isLength":950,"dup":149}],946:[function(require,module,exports){
 arguments[4][150][0].apply(exports,arguments)
-},{"dup":150}],1026:[function(require,module,exports){
+},{"dup":150}],947:[function(require,module,exports){
 arguments[4][151][0].apply(exports,arguments)
-},{"../lang/isObject":1050,"./isArrayLike":1024,"./isIndex":1025,"dup":151}],1027:[function(require,module,exports){
+},{"../lang/isObject":971,"./isArrayLike":945,"./isIndex":946,"dup":151}],948:[function(require,module,exports){
 arguments[4][152][0].apply(exports,arguments)
-},{"../lang/isArray":1046,"./toObject":1042,"dup":152}],1028:[function(require,module,exports){
-arguments[4][394][0].apply(exports,arguments)
-},{"../chain/lodash":935,"./LazyWrapper":950,"./getData":1018,"./getFuncName":1019,"dup":394}],1029:[function(require,module,exports){
+},{"../lang/isArray":967,"./toObject":963,"dup":152}],949:[function(require,module,exports){
+arguments[4][614][0].apply(exports,arguments)
+},{"../chain/lodash":856,"./LazyWrapper":871,"./getData":939,"./getFuncName":940,"dup":614}],950:[function(require,module,exports){
 arguments[4][153][0].apply(exports,arguments)
-},{"dup":153}],1030:[function(require,module,exports){
+},{"dup":153}],951:[function(require,module,exports){
 arguments[4][154][0].apply(exports,arguments)
-},{"dup":154}],1031:[function(require,module,exports){
+},{"dup":154}],952:[function(require,module,exports){
 arguments[4][155][0].apply(exports,arguments)
-},{"../lang/isObject":1050,"dup":155}],1032:[function(require,module,exports){
-arguments[4][398][0].apply(exports,arguments)
-},{"./arrayCopy":953,"./composeArgs":1001,"./composeArgsRight":1002,"./replaceHolders":1038,"dup":398}],1033:[function(require,module,exports){
-arguments[4][399][0].apply(exports,arguments)
-},{"./getNative":1022,"dup":399}],1034:[function(require,module,exports){
+},{"../lang/isObject":971,"dup":155}],953:[function(require,module,exports){
+arguments[4][618][0].apply(exports,arguments)
+},{"./arrayCopy":874,"./composeArgs":922,"./composeArgsRight":923,"./replaceHolders":959,"dup":618}],954:[function(require,module,exports){
+arguments[4][619][0].apply(exports,arguments)
+},{"./getNative":943,"dup":619}],955:[function(require,module,exports){
 arguments[4][156][0].apply(exports,arguments)
-},{"./toObject":1042,"dup":156}],1035:[function(require,module,exports){
+},{"./toObject":963,"dup":156}],956:[function(require,module,exports){
 arguments[4][157][0].apply(exports,arguments)
-},{"./baseForIn":977,"dup":157}],1036:[function(require,module,exports){
-arguments[4][402][0].apply(exports,arguments)
-},{"dup":402}],1037:[function(require,module,exports){
-arguments[4][403][0].apply(exports,arguments)
-},{"./arrayCopy":953,"./isIndex":1025,"dup":403}],1038:[function(require,module,exports){
-arguments[4][404][0].apply(exports,arguments)
-},{"dup":404}],1039:[function(require,module,exports){
-arguments[4][405][0].apply(exports,arguments)
-},{"../date/now":945,"./baseSetData":993,"dup":405}],1040:[function(require,module,exports){
+},{"./baseForIn":898,"dup":157}],957:[function(require,module,exports){
+arguments[4][622][0].apply(exports,arguments)
+},{"dup":622}],958:[function(require,module,exports){
+arguments[4][623][0].apply(exports,arguments)
+},{"./arrayCopy":874,"./isIndex":946,"dup":623}],959:[function(require,module,exports){
+arguments[4][624][0].apply(exports,arguments)
+},{"dup":624}],960:[function(require,module,exports){
+arguments[4][625][0].apply(exports,arguments)
+},{"../date/now":866,"./baseSetData":914,"dup":625}],961:[function(require,module,exports){
 arguments[4][158][0].apply(exports,arguments)
-},{"../lang/isArguments":1045,"../lang/isArray":1046,"../object/keysIn":1055,"./isIndex":1025,"./isLength":1029,"dup":158}],1041:[function(require,module,exports){
-arguments[4][706][0].apply(exports,arguments)
-},{"dup":706}],1042:[function(require,module,exports){
+},{"../lang/isArguments":966,"../lang/isArray":967,"../object/keysIn":976,"./isIndex":946,"./isLength":950,"dup":158}],962:[function(require,module,exports){
+arguments[4][627][0].apply(exports,arguments)
+},{"dup":627}],963:[function(require,module,exports){
 arguments[4][159][0].apply(exports,arguments)
-},{"../lang/isObject":1050,"dup":159}],1043:[function(require,module,exports){
+},{"../lang/isObject":971,"dup":159}],964:[function(require,module,exports){
 arguments[4][160][0].apply(exports,arguments)
-},{"../lang/isArray":1046,"./baseToString":996,"dup":160}],1044:[function(require,module,exports){
-arguments[4][409][0].apply(exports,arguments)
-},{"./LazyWrapper":950,"./LodashWrapper":951,"./arrayCopy":953,"dup":409}],1045:[function(require,module,exports){
+},{"../lang/isArray":967,"./baseToString":917,"dup":160}],965:[function(require,module,exports){
+arguments[4][630][0].apply(exports,arguments)
+},{"./LazyWrapper":871,"./LodashWrapper":872,"./arrayCopy":874,"dup":630}],966:[function(require,module,exports){
 arguments[4][161][0].apply(exports,arguments)
-},{"../internal/isArrayLike":1024,"../internal/isObjectLike":1030,"dup":161}],1046:[function(require,module,exports){
+},{"../internal/isArrayLike":945,"../internal/isObjectLike":951,"dup":161}],967:[function(require,module,exports){
 arguments[4][162][0].apply(exports,arguments)
-},{"../internal/getNative":1022,"../internal/isLength":1029,"../internal/isObjectLike":1030,"dup":162}],1047:[function(require,module,exports){
+},{"../internal/getNative":943,"../internal/isLength":950,"../internal/isObjectLike":951,"dup":162}],968:[function(require,module,exports){
 arguments[4][163][0].apply(exports,arguments)
-},{"./isObject":1050,"dup":163}],1048:[function(require,module,exports){
+},{"./isObject":971,"dup":163}],969:[function(require,module,exports){
 arguments[4][164][0].apply(exports,arguments)
-},{"../internal/isObjectLike":1030,"./isFunction":1047,"dup":164}],1049:[function(require,module,exports){
+},{"../internal/isObjectLike":951,"./isFunction":968,"dup":164}],970:[function(require,module,exports){
 arguments[4][165][0].apply(exports,arguments)
-},{"../internal/isObjectLike":1030,"dup":165}],1050:[function(require,module,exports){
+},{"../internal/isObjectLike":951,"dup":165}],971:[function(require,module,exports){
 arguments[4][166][0].apply(exports,arguments)
-},{"dup":166}],1051:[function(require,module,exports){
+},{"dup":166}],972:[function(require,module,exports){
 arguments[4][167][0].apply(exports,arguments)
-},{"../internal/isObjectLike":1030,"dup":167}],1052:[function(require,module,exports){
+},{"../internal/isObjectLike":951,"dup":167}],973:[function(require,module,exports){
 arguments[4][168][0].apply(exports,arguments)
-},{"../internal/isLength":1029,"../internal/isObjectLike":1030,"dup":168}],1053:[function(require,module,exports){
+},{"../internal/isLength":950,"../internal/isObjectLike":951,"dup":168}],974:[function(require,module,exports){
 arguments[4][169][0].apply(exports,arguments)
-},{"../internal/assignWith":962,"../internal/baseAssign":963,"../internal/createAssigner":1003,"dup":169}],1054:[function(require,module,exports){
+},{"../internal/assignWith":883,"../internal/baseAssign":884,"../internal/createAssigner":924,"dup":169}],975:[function(require,module,exports){
 arguments[4][170][0].apply(exports,arguments)
-},{"../internal/getNative":1022,"../internal/isArrayLike":1024,"../internal/shimKeys":1040,"../lang/isObject":1050,"dup":170}],1055:[function(require,module,exports){
+},{"../internal/getNative":943,"../internal/isArrayLike":945,"../internal/shimKeys":961,"../lang/isObject":971,"dup":170}],976:[function(require,module,exports){
 arguments[4][171][0].apply(exports,arguments)
-},{"../internal/isIndex":1025,"../internal/isLength":1029,"../lang/isArguments":1045,"../lang/isArray":1046,"../lang/isObject":1050,"dup":171}],1056:[function(require,module,exports){
+},{"../internal/isIndex":946,"../internal/isLength":950,"../lang/isArguments":966,"../lang/isArray":967,"../lang/isObject":971,"dup":171}],977:[function(require,module,exports){
 arguments[4][172][0].apply(exports,arguments)
-},{"../function/restParam":949,"../internal/arrayMap":958,"../internal/baseDifference":968,"../internal/baseFlatten":975,"../internal/bindCallback":998,"../internal/pickByArray":1034,"../internal/pickByCallback":1035,"./keysIn":1055,"dup":172}],1057:[function(require,module,exports){
+},{"../function/restParam":870,"../internal/arrayMap":879,"../internal/baseDifference":889,"../internal/baseFlatten":896,"../internal/bindCallback":919,"../internal/pickByArray":955,"../internal/pickByCallback":956,"./keysIn":976,"dup":172}],978:[function(require,module,exports){
 arguments[4][173][0].apply(exports,arguments)
-},{"../internal/toObject":1042,"./keys":1054,"dup":173}],1058:[function(require,module,exports){
+},{"../internal/toObject":963,"./keys":975,"dup":173}],979:[function(require,module,exports){
 arguments[4][174][0].apply(exports,arguments)
-},{"../function/restParam":949,"../internal/baseFlatten":975,"../internal/bindCallback":998,"../internal/pickByArray":1034,"../internal/pickByCallback":1035,"dup":174}],1059:[function(require,module,exports){
+},{"../function/restParam":870,"../internal/baseFlatten":896,"../internal/bindCallback":919,"../internal/pickByArray":955,"../internal/pickByCallback":956,"dup":174}],980:[function(require,module,exports){
 var arrayEach = require('../internal/arrayEach'),
     baseCallback = require('../internal/baseCallback'),
     baseCreate = require('../internal/baseCreate'),
@@ -98203,45 +87903,45 @@ function transform(object, iteratee, accumulator, thisArg) {
 
 module.exports = transform;
 
-},{"../internal/arrayEach":954,"../internal/baseCallback":964,"../internal/baseCreate":966,"../internal/baseForOwn":978,"../lang/isArray":1046,"../lang/isFunction":1047,"../lang/isObject":1050,"../lang/isTypedArray":1052}],1060:[function(require,module,exports){
+},{"../internal/arrayEach":875,"../internal/baseCallback":885,"../internal/baseCreate":887,"../internal/baseForOwn":899,"../lang/isArray":967,"../lang/isFunction":968,"../lang/isObject":971,"../lang/isTypedArray":973}],981:[function(require,module,exports){
 arguments[4][176][0].apply(exports,arguments)
-},{"dup":176}],1061:[function(require,module,exports){
-arguments[4][428][0].apply(exports,arguments)
-},{"dup":428}],1062:[function(require,module,exports){
+},{"dup":176}],982:[function(require,module,exports){
+arguments[4][650][0].apply(exports,arguments)
+},{"dup":650}],983:[function(require,module,exports){
 arguments[4][177][0].apply(exports,arguments)
-},{"../internal/baseProperty":990,"../internal/basePropertyDeep":991,"../internal/isKey":1027,"dup":177}],1063:[function(require,module,exports){
-arguments[4][430][0].apply(exports,arguments)
-},{"dup":430}],1064:[function(require,module,exports){
-arguments[4][431][0].apply(exports,arguments)
-},{"component-classes":1071,"dup":431}],1065:[function(require,module,exports){
+},{"../internal/baseProperty":911,"../internal/basePropertyDeep":912,"../internal/isKey":948,"dup":177}],984:[function(require,module,exports){
+arguments[4][652][0].apply(exports,arguments)
+},{"dup":652}],985:[function(require,module,exports){
+arguments[4][653][0].apply(exports,arguments)
+},{"component-classes":992,"dup":653}],986:[function(require,module,exports){
 arguments[4][178][0].apply(exports,arguments)
-},{"component-delegate":1074,"dup":178}],1066:[function(require,module,exports){
+},{"component-delegate":995,"dup":178}],987:[function(require,module,exports){
 arguments[4][179][0].apply(exports,arguments)
-},{"domify":1078,"dup":179}],1067:[function(require,module,exports){
+},{"domify":999,"dup":179}],988:[function(require,module,exports){
 arguments[4][180][0].apply(exports,arguments)
-},{"component-event":1075,"dup":180}],1068:[function(require,module,exports){
-arguments[4][738][0].apply(exports,arguments)
-},{"component-matches-selector":1076,"dup":738}],1069:[function(require,module,exports){
+},{"component-event":996,"dup":180}],989:[function(require,module,exports){
+arguments[4][659][0].apply(exports,arguments)
+},{"component-matches-selector":997,"dup":659}],990:[function(require,module,exports){
 arguments[4][181][0].apply(exports,arguments)
-},{"component-query":1077,"dup":181}],1070:[function(require,module,exports){
+},{"component-query":998,"dup":181}],991:[function(require,module,exports){
 arguments[4][182][0].apply(exports,arguments)
-},{"dup":182}],1071:[function(require,module,exports){
-arguments[4][439][0].apply(exports,arguments)
-},{"component-indexof":1072,"dup":439,"indexof":1072}],1072:[function(require,module,exports){
-arguments[4][440][0].apply(exports,arguments)
-},{"dup":440}],1073:[function(require,module,exports){
+},{"dup":182}],992:[function(require,module,exports){
+arguments[4][662][0].apply(exports,arguments)
+},{"component-indexof":993,"dup":662,"indexof":993}],993:[function(require,module,exports){
+arguments[4][663][0].apply(exports,arguments)
+},{"dup":663}],994:[function(require,module,exports){
 arguments[4][183][0].apply(exports,arguments)
-},{"dup":183,"matches-selector":1076}],1074:[function(require,module,exports){
+},{"dup":183,"matches-selector":997}],995:[function(require,module,exports){
 arguments[4][184][0].apply(exports,arguments)
-},{"closest":1073,"component-closest":1073,"component-event":1075,"dup":184,"event":1075}],1075:[function(require,module,exports){
+},{"closest":994,"component-closest":994,"component-event":996,"dup":184,"event":996}],996:[function(require,module,exports){
 arguments[4][185][0].apply(exports,arguments)
-},{"dup":185}],1076:[function(require,module,exports){
+},{"dup":185}],997:[function(require,module,exports){
 arguments[4][186][0].apply(exports,arguments)
-},{"component-query":1077,"dup":186,"query":1077}],1077:[function(require,module,exports){
+},{"component-query":998,"dup":186,"query":998}],998:[function(require,module,exports){
 arguments[4][187][0].apply(exports,arguments)
-},{"dup":187}],1078:[function(require,module,exports){
+},{"dup":187}],999:[function(require,module,exports){
 arguments[4][188][0].apply(exports,arguments)
-},{"dup":188}],1079:[function(require,module,exports){
+},{"dup":188}],1000:[function(require,module,exports){
 'use strict';
 
 /**
@@ -98393,10 +88093,10 @@ function splitStr(str, position) {
     after: str.substring(position)
   };
 }
-},{}],1080:[function(require,module,exports){
+},{}],1001:[function(require,module,exports){
 module.exports = require('./lib/Table');
 
-},{"./lib/Table":1081}],1081:[function(require,module,exports){
+},{"./lib/Table":1002}],1002:[function(require,module,exports){
 'use strict';
 
 var di = require('didi');
@@ -98576,7 +88276,7 @@ Table.prototype.clear = function() {
   this.get('eventBus').fire('diagram.clear');
 };
 
-},{"./core":1086,"didi":1146}],1082:[function(require,module,exports){
+},{"./core":1007,"didi":1067}],1003:[function(require,module,exports){
 'use strict';
 
 var Model = require('../model');
@@ -98624,7 +88324,7 @@ ElementFactory.prototype.create = function(type, attrs) {
   return Model.create(type, attrs);
 };
 
-},{"../model":1133}],1083:[function(require,module,exports){
+},{"../model":1054}],1004:[function(require,module,exports){
 'use strict';
 
 var ELEMENT_ID = 'data-element-id';
@@ -98825,7 +88525,7 @@ ElementRegistry.prototype._validateId = function(id) {
   }
 };
 
-},{}],1084:[function(require,module,exports){
+},{}],1005:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -98968,7 +88668,7 @@ GraphicsFactory.prototype.remove = function(element) {
   gfx.parentNode && gfx.parentNode.removeChild(gfx);
 };
 
-},{"lodash/collection/forEach":940}],1085:[function(require,module,exports){
+},{"lodash/collection/forEach":861}],1006:[function(require,module,exports){
 'use strict';
 
 var isNumber = require('lodash/lang/isNumber'),
@@ -99746,7 +89446,7 @@ Sheet.prototype.resized = function() {
   eventBus.fire('sheet.resized');
 };
 
-},{"lodash/collection/every":937,"lodash/collection/forEach":940,"lodash/lang/isNumber":1049,"lodash/object/assign":1053}],1086:[function(require,module,exports){
+},{"lodash/collection/every":858,"lodash/collection/forEach":861,"lodash/lang/isNumber":970,"lodash/object/assign":974}],1007:[function(require,module,exports){
 module.exports = {
   __depends__: [ require('../draw') ],
   __init__: [ 'sheet' ],
@@ -99757,7 +89457,7 @@ module.exports = {
   eventBus: [ 'type', require('diagram-js/lib/core/EventBus') ]
 };
 
-},{"../draw":1088,"./ElementFactory":1082,"./ElementRegistry":1083,"./GraphicsFactory":1084,"./Sheet":1085,"diagram-js/lib/core/EventBus":1137}],1087:[function(require,module,exports){
+},{"../draw":1009,"./ElementFactory":1003,"./ElementRegistry":1004,"./GraphicsFactory":1005,"./Sheet":1006,"diagram-js/lib/core/EventBus":1058}],1008:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -99861,12 +89561,12 @@ Renderer.prototype.drawCell = function drawCell(gfx, data) {
   return gfx;
 };
 
-},{"lodash/collection/forEach":940}],1088:[function(require,module,exports){
+},{"lodash/collection/forEach":861}],1009:[function(require,module,exports){
 module.exports = {
   renderer: [ 'type', require('./Renderer') ]
 };
 
-},{"./Renderer":1087}],1089:[function(require,module,exports){
+},{"./Renderer":1008}],1010:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -99915,7 +89615,7 @@ AddRow.prototype.getRow = function() {
   return this.row;
 };
 
-},{"diagram-js/lib/util/IdGenerator":1142,"min-dom/lib/domify":1066}],1090:[function(require,module,exports){
+},{"diagram-js/lib/util/IdGenerator":1063,"min-dom/lib/domify":987}],1011:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -99946,7 +89646,7 @@ AddRowRenderer.$inject = [
 
 module.exports = AddRowRenderer;
 
-},{"min-dom/lib/classes":1064}],1091:[function(require,module,exports){
+},{"min-dom/lib/classes":985}],1012:[function(require,module,exports){
 module.exports = {
   __init__: [ 'addRow', 'addRowRenderer'],
   __depends__: [
@@ -99957,7 +89657,7 @@ module.exports = {
   addRowRenderer: [ 'type', require('./AddRowRenderer') ]
 };
 
-},{"../modeling":1122,"../utility-column":1132,"./AddRow":1089,"./AddRowRenderer":1090}],1092:[function(require,module,exports){
+},{"../modeling":1043,"../utility-column":1053,"./AddRow":1010,"./AddRowRenderer":1011}],1013:[function(require,module,exports){
 'use strict';
 
 /**
@@ -100022,16 +89722,16 @@ ChangeSupport.$inject = [ 'eventBus', 'elementRegistry', 'graphicsFactory' ];
 
 module.exports = ChangeSupport;
 
-},{}],1093:[function(require,module,exports){
+},{}],1014:[function(require,module,exports){
 module.exports = {
   __init__: [ 'changeSupport'],
   changeSupport: [ 'type', require('./ChangeSupport') ]
 };
 
-},{"./ChangeSupport":1092}],1094:[function(require,module,exports){
+},{"./ChangeSupport":1013}],1015:[function(require,module,exports){
 module.exports = "<div>\n  <label></label>\n  <input tabindex=\"0\" />\n  <span class=\"cb-caret\"></span>\n</div>\n";
 
-},{}],1095:[function(require,module,exports){
+},{}],1016:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify'),
@@ -100333,7 +90033,7 @@ ComboBox.prototype.enable = function() {
 
 module.exports = ComboBox;
 
-},{"./ComboBoxTemplate.html":1094,"lodash/collection/forEach":940,"lodash/object/assign":1053,"min-dom/lib/classes":1064,"min-dom/lib/domify":1066}],1096:[function(require,module,exports){
+},{"./ComboBoxTemplate.html":1015,"lodash/collection/forEach":861,"lodash/object/assign":974,"min-dom/lib/classes":985,"min-dom/lib/domify":987}],1017:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -100543,7 +90243,7 @@ ComplexCell.$inject = [ 'eventBus', 'elementRegistry', 'sheet' ];
 
 module.exports = ComplexCell;
 
-},{"lodash/object/assign":1053,"min-dom/lib/classes":1064,"min-dom/lib/remove":1070}],1097:[function(require,module,exports){
+},{"lodash/object/assign":974,"min-dom/lib/classes":985,"min-dom/lib/remove":991}],1018:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -100551,7 +90251,7 @@ module.exports = {
   complexCell: [ 'type', require('./ComplexCell') ]
 };
 
-},{"./ComplexCell":1096}],1098:[function(require,module,exports){
+},{"./ComplexCell":1017}],1019:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -100616,7 +90316,7 @@ Controls.$inject = [ 'eventBus' ];
 
 module.exports = Controls;
 
-},{"min-dom/lib/classes":1064}],1099:[function(require,module,exports){
+},{"min-dom/lib/classes":985}],1020:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -100624,7 +90324,7 @@ module.exports = {
   controls: [ 'type', require('./Controls') ]
 };
 
-},{"./Controls":1098}],1100:[function(require,module,exports){
+},{"./Controls":1019}],1021:[function(require,module,exports){
 'use strict';
 
 var debounce = require('lodash/function/debounce');
@@ -100824,7 +90524,7 @@ EditBehavior.$inject = [
 
 module.exports = EditBehavior;
 
-},{"lodash/function/debounce":947}],1101:[function(require,module,exports){
+},{"lodash/function/debounce":868}],1022:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -100886,7 +90586,7 @@ EditRenderer.$inject = [
 
 module.exports = EditRenderer;
 
-},{"min-dom/lib/classes":1064}],1102:[function(require,module,exports){
+},{"min-dom/lib/classes":985}],1023:[function(require,module,exports){
 'use strict';
 
 /**
@@ -101019,7 +90719,7 @@ Selection.prototype.selectBelow = function() {
   }
 };
 
-},{}],1103:[function(require,module,exports){
+},{}],1024:[function(require,module,exports){
 module.exports = {
   __init__: [ 'editBehavior', 'editRenderer' ],
   __depends__: [
@@ -101033,7 +90733,7 @@ module.exports = {
   editRenderer: [ 'type', require('./EditRenderer') ]
 };
 
-},{"../interaction-events":1107,"../keyboard":1109,"../modeling":1122,"./EditBehavior":1100,"./EditRenderer":1101,"./Selection":1102,"diagram-js/lib/features/rules":1140}],1104:[function(require,module,exports){
+},{"../interaction-events":1028,"../keyboard":1030,"../modeling":1043,"./EditBehavior":1021,"./EditRenderer":1022,"./Selection":1023,"diagram-js/lib/features/rules":1061}],1025:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -101167,13 +90867,13 @@ function error(action, message) {
   return new Error(action + ' ' + message);
 }
 
-},{"lodash/collection/forEach":940}],1105:[function(require,module,exports){
+},{"lodash/collection/forEach":861}],1026:[function(require,module,exports){
 module.exports = {
   __init__: [ 'editorActions' ],
   editorActions: [ 'type', require('./EditorActions') ]
 };
 
-},{"./EditorActions":1104}],1106:[function(require,module,exports){
+},{"./EditorActions":1025}],1027:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -101420,13 +91120,13 @@ module.exports = InteractionEvents;
  * @property {Event} originalEvent
  */
 
-},{"diagram-js/lib/util/Mouse":1143,"lodash/collection/forEach":940,"min-dom/lib/delegate":1065}],1107:[function(require,module,exports){
+},{"diagram-js/lib/util/Mouse":1064,"lodash/collection/forEach":861,"min-dom/lib/delegate":986}],1028:[function(require,module,exports){
 module.exports = {
   __init__: [ 'interactionEvents' ],
   interactionEvents: [ 'type', require('./InteractionEvents') ]
 };
 
-},{"./InteractionEvents":1106}],1108:[function(require,module,exports){
+},{"./InteractionEvents":1027}],1029:[function(require,module,exports){
 'use strict';
 
 var domEvent = require('min-dom/lib/event'),
@@ -101638,7 +91338,7 @@ function isShift(modifiers) {
   return modifiers.shiftKey;
 }
 
-},{"min-dom/lib/event":1067,"min-dom/lib/matches":1068}],1109:[function(require,module,exports){
+},{"min-dom/lib/event":988,"min-dom/lib/matches":989}],1030:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('../editor-actions')
@@ -101647,7 +91347,7 @@ module.exports = {
   keyboard: [ 'type', require('./Keyboard') ]
 };
 
-},{"../editor-actions":1105,"./Keyboard":1108}],1110:[function(require,module,exports){
+},{"../editor-actions":1026,"./Keyboard":1029}],1031:[function(require,module,exports){
 'use strict';
 
 var debounce = require('lodash/function/debounce');
@@ -101710,7 +91410,7 @@ LineNumbers.prototype.updateLineNumbers = function() {
   }
 };
 
-},{"lodash/function/debounce":947}],1111:[function(require,module,exports){
+},{"lodash/function/debounce":868}],1032:[function(require,module,exports){
 module.exports = {
   __init__: [ 'lineNumbers' ],
   __depends__: [
@@ -101719,7 +91419,7 @@ module.exports = {
   lineNumbers: [ 'type', require('./LineNumbers') ]
 };
 
-},{"../utility-column":1132,"./LineNumbers":1110}],1112:[function(require,module,exports){
+},{"../utility-column":1053,"./LineNumbers":1031}],1033:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -101892,7 +91592,7 @@ Modeling.prototype.editName = function(newName) {
   return context;
 };
 
-},{"./cmd/ClearRowHandler":1113,"./cmd/CreateColumnHandler":1114,"./cmd/CreateRowHandler":1115,"./cmd/DeleteColumnHandler":1116,"./cmd/DeleteRowHandler":1117,"./cmd/EditCellHandler":1118,"./cmd/EditNameHandler":1119,"./cmd/MoveColumnHandler":1120,"./cmd/MoveRowHandler":1121,"lodash/collection/forEach":940}],1113:[function(require,module,exports){
+},{"./cmd/ClearRowHandler":1034,"./cmd/CreateColumnHandler":1035,"./cmd/CreateRowHandler":1036,"./cmd/DeleteColumnHandler":1037,"./cmd/DeleteRowHandler":1038,"./cmd/EditCellHandler":1039,"./cmd/EditNameHandler":1040,"./cmd/MoveColumnHandler":1041,"./cmd/MoveRowHandler":1042,"lodash/collection/forEach":861}],1034:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -101959,7 +91659,7 @@ DeleteRowHandler.prototype.revert = function(context) {
   });
 };
 
-},{"lodash/collection/forEach":940}],1114:[function(require,module,exports){
+},{"lodash/collection/forEach":861}],1035:[function(require,module,exports){
 'use strict';
 
 /**
@@ -102009,7 +91709,7 @@ CreateColumnHandler.prototype.revert = function(context) {
   this._sheet.removeColumn(context.column);
 };
 
-},{}],1115:[function(require,module,exports){
+},{}],1036:[function(require,module,exports){
 'use strict';
 
 /**
@@ -102059,7 +91759,7 @@ CreateRowHandler.prototype.revert = function(context) {
   this._sheet.removeRow(context.row);
 };
 
-},{}],1116:[function(require,module,exports){
+},{}],1037:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -102121,7 +91821,7 @@ DeleteColumnHandler.prototype.revert = function(context) {
   });
 };
 
-},{"lodash/collection/forEach":940}],1117:[function(require,module,exports){
+},{"lodash/collection/forEach":861}],1038:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach');
@@ -102183,7 +91883,7 @@ DeleteRowHandler.prototype.revert = function(context) {
   });
 };
 
-},{"lodash/collection/forEach":940}],1118:[function(require,module,exports){
+},{"lodash/collection/forEach":861}],1039:[function(require,module,exports){
 'use strict';
 
 /**
@@ -102224,7 +91924,7 @@ EditCellHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],1119:[function(require,module,exports){
+},{}],1040:[function(require,module,exports){
 'use strict';
 
 /**
@@ -102265,7 +91965,7 @@ EditNameHandler.prototype.revert = function(context) {
   return context;
 };
 
-},{}],1120:[function(require,module,exports){
+},{}],1041:[function(require,module,exports){
 'use strict';
 
 /**
@@ -102314,7 +92014,7 @@ MoveColumnHandler.prototype.revert = function(context) {
   }
 };
 
-},{}],1121:[function(require,module,exports){
+},{}],1042:[function(require,module,exports){
 'use strict';
 
 /**
@@ -102363,7 +92063,7 @@ MoveRowHandler.prototype.revert = function(context) {
   }
 };
 
-},{}],1122:[function(require,module,exports){
+},{}],1043:[function(require,module,exports){
 module.exports = {
   __depends__: [
     require('diagram-js/lib/command'),
@@ -102375,7 +92075,7 @@ module.exports = {
   modeling: [ 'type', require('./Modeling') ]
 };
 
-},{"../change-support":1093,"../utility-column":1132,"./Modeling":1112,"diagram-js/lib/command":1136,"diagram-js/lib/features/rules":1140}],1123:[function(require,module,exports){
+},{"../change-support":1014,"../utility-column":1053,"./Modeling":1033,"diagram-js/lib/command":1057,"diagram-js/lib/features/rules":1061}],1044:[function(require,module,exports){
 'use strict';
 
 var forEach = require('lodash/collection/forEach'),
@@ -102785,9 +92485,9 @@ PopupMenu.prototype._createEntry = function(entry, container) {
 
 module.exports = PopupMenu;
 
-},{"lodash/collection/forEach":940,"lodash/object/assign":1053,"min-dom/lib/attr":1063,"min-dom/lib/classes":1064,"min-dom/lib/delegate":1065,"min-dom/lib/domify":1066,"min-dom/lib/remove":1070}],1124:[function(require,module,exports){
-arguments[4][531][0].apply(exports,arguments)
-},{"./PopupMenu":1123,"dup":531}],1125:[function(require,module,exports){
+},{"lodash/collection/forEach":861,"lodash/object/assign":974,"min-dom/lib/attr":984,"min-dom/lib/classes":985,"min-dom/lib/delegate":986,"min-dom/lib/domify":987,"min-dom/lib/remove":991}],1045:[function(require,module,exports){
+arguments[4][452][0].apply(exports,arguments)
+},{"./PopupMenu":1044,"dup":452}],1046:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -102810,7 +92510,7 @@ DragRenderer.$inject = [
 
 module.exports = DragRenderer;
 
-},{"min-dom/lib/classes":1064}],1126:[function(require,module,exports){
+},{"min-dom/lib/classes":985}],1047:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -102987,7 +92687,7 @@ RowDrag.prototype.isDragging = function() {
   return !!this.draggedElement;
 };
 
-},{"min-dom/lib/classes":1064,"min-dom/lib/domify":1066}],1127:[function(require,module,exports){
+},{"min-dom/lib/classes":985,"min-dom/lib/domify":987}],1048:[function(require,module,exports){
 module.exports = {
   __init__: [ 'rowDrag', 'dragRenderer' ],
   __depends__: [
@@ -102997,7 +92697,7 @@ module.exports = {
   dragRenderer: [ 'type', require('./DragRenderer') ]
 };
 
-},{"../utility-column":1132,"./DragRenderer":1125,"./RowDrag":1126}],1128:[function(require,module,exports){
+},{"../utility-column":1053,"./DragRenderer":1046,"./RowDrag":1047}],1049:[function(require,module,exports){
 'use strict';
 
 var domify = require('min-dom/lib/domify');
@@ -103043,7 +92743,7 @@ TableName.prototype.getNode = function() {
   return this.node.querySelector('h3');
 };
 
-},{"min-dom/lib/domify":1066}],1129:[function(require,module,exports){
+},{"min-dom/lib/domify":987}],1050:[function(require,module,exports){
 'use strict';
 
 /**
@@ -103090,7 +92790,7 @@ UtilityColumn.prototype.getColumn = function() {
   return this.column;
 };
 
-},{}],1130:[function(require,module,exports){
+},{}],1051:[function(require,module,exports){
 'use strict';
 
 var domClasses = require('min-dom/lib/classes');
@@ -103114,7 +92814,7 @@ UtilityColumnRenderer.$inject = [
 
 module.exports = UtilityColumnRenderer;
 
-},{"min-dom/lib/classes":1064}],1131:[function(require,module,exports){
+},{"min-dom/lib/classes":985}],1052:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -103146,7 +92846,7 @@ UtilityColumnRules.prototype.init = function() {
 
 };
 
-},{"diagram-js/lib/features/rules/RuleProvider":1138,"inherits":930}],1132:[function(require,module,exports){
+},{"diagram-js/lib/features/rules/RuleProvider":1059,"inherits":851}],1053:[function(require,module,exports){
 module.exports = {
   __init__: [ 'utilityColumn', 'utilityColumnRules', 'utilityColumnRenderer' ],
   __depends__: [
@@ -103158,7 +92858,7 @@ module.exports = {
   utilityColumnRenderer: [ 'type', require('./UtilityColumnRenderer') ]
 };
 
-},{"./UtilityColumn":1129,"./UtilityColumnRenderer":1130,"./UtilityColumnRules":1131,"diagram-js/lib/command":1136,"diagram-js/lib/features/rules":1140}],1133:[function(require,module,exports){
+},{"./UtilityColumn":1050,"./UtilityColumnRenderer":1051,"./UtilityColumnRules":1052,"diagram-js/lib/command":1057,"diagram-js/lib/features/rules":1061}],1054:[function(require,module,exports){
 'use strict';
 
 var assign = require('lodash/object/assign'),
@@ -103225,9 +92925,9 @@ module.exports.Table = Table;
 module.exports.Row = Row;
 module.exports.Column = Column;
 
-},{"inherits":930,"lodash/object/assign":1053}],1134:[function(require,module,exports){
-arguments[4][452][0].apply(exports,arguments)
-},{"dup":452,"lodash/collection/forEach":940,"lodash/lang/isArray":1046,"lodash/lang/isFunction":1047,"lodash/lang/isNumber":1049}],1135:[function(require,module,exports){
+},{"inherits":851,"lodash/object/assign":974}],1055:[function(require,module,exports){
+arguments[4][373][0].apply(exports,arguments)
+},{"dup":373,"lodash/collection/forEach":861,"lodash/lang/isArray":967,"lodash/lang/isFunction":968,"lodash/lang/isNumber":970}],1056:[function(require,module,exports){
 'use strict';
 
 var unique = require('lodash/array/unique'),
@@ -103727,57 +93427,57 @@ CommandStack.prototype._setHandler = function(command, handler) {
   this._handlerMap[command] = handler;
 };
 
-},{"../core/EventBus":1137,"lodash/array/unique":934,"lodash/lang/isArray":1046,"lodash/object/assign":1053}],1136:[function(require,module,exports){
-arguments[4][454][0].apply(exports,arguments)
-},{"./CommandStack":1135,"dup":454}],1137:[function(require,module,exports){
-arguments[4][259][0].apply(exports,arguments)
-},{"dup":259,"lodash/function/bind":946,"lodash/lang/isArray":1046,"lodash/lang/isFunction":1047,"lodash/lang/isNumber":1049,"lodash/object/assign":1053}],1138:[function(require,module,exports){
-arguments[4][536][0].apply(exports,arguments)
-},{"../../command/CommandInterceptor":1134,"dup":536,"inherits":930}],1139:[function(require,module,exports){
-arguments[4][537][0].apply(exports,arguments)
-},{"dup":537}],1140:[function(require,module,exports){
-arguments[4][538][0].apply(exports,arguments)
-},{"./Rules":1139,"dup":538}],1141:[function(require,module,exports){
-arguments[4][286][0].apply(exports,arguments)
-},{"dup":286}],1142:[function(require,module,exports){
-arguments[4][288][0].apply(exports,arguments)
-},{"dup":288}],1143:[function(require,module,exports){
-arguments[4][290][0].apply(exports,arguments)
-},{"./Event":1141,"./Platform":1144,"dup":290}],1144:[function(require,module,exports){
-arguments[4][291][0].apply(exports,arguments)
-},{"dup":291}],1145:[function(require,module,exports){
-arguments[4][294][0].apply(exports,arguments)
-},{"dup":294}],1146:[function(require,module,exports){
-arguments[4][295][0].apply(exports,arguments)
-},{"./annotation":1145,"./injector":1147,"./module":1148,"dup":295}],1147:[function(require,module,exports){
-arguments[4][296][0].apply(exports,arguments)
-},{"./annotation":1145,"./module":1148,"dup":296}],1148:[function(require,module,exports){
-arguments[4][297][0].apply(exports,arguments)
-},{"dup":297}],1149:[function(require,module,exports){
+},{"../core/EventBus":1058,"lodash/array/unique":855,"lodash/lang/isArray":967,"lodash/object/assign":974}],1057:[function(require,module,exports){
+arguments[4][375][0].apply(exports,arguments)
+},{"./CommandStack":1056,"dup":375}],1058:[function(require,module,exports){
+arguments[4][379][0].apply(exports,arguments)
+},{"dup":379,"lodash/function/bind":867,"lodash/lang/isArray":967,"lodash/lang/isFunction":968,"lodash/lang/isNumber":970,"lodash/object/assign":974}],1059:[function(require,module,exports){
+arguments[4][457][0].apply(exports,arguments)
+},{"../../command/CommandInterceptor":1055,"dup":457,"inherits":851}],1060:[function(require,module,exports){
+arguments[4][458][0].apply(exports,arguments)
+},{"dup":458}],1061:[function(require,module,exports){
+arguments[4][459][0].apply(exports,arguments)
+},{"./Rules":1060,"dup":459}],1062:[function(require,module,exports){
+arguments[4][488][0].apply(exports,arguments)
+},{"dup":488}],1063:[function(require,module,exports){
+arguments[4][491][0].apply(exports,arguments)
+},{"dup":491}],1064:[function(require,module,exports){
+arguments[4][495][0].apply(exports,arguments)
+},{"./Event":1062,"./Platform":1065,"dup":495}],1065:[function(require,module,exports){
+arguments[4][496][0].apply(exports,arguments)
+},{"dup":496}],1066:[function(require,module,exports){
+arguments[4][502][0].apply(exports,arguments)
+},{"dup":502}],1067:[function(require,module,exports){
+arguments[4][503][0].apply(exports,arguments)
+},{"./annotation":1066,"./injector":1068,"./module":1069,"dup":503}],1068:[function(require,module,exports){
+arguments[4][504][0].apply(exports,arguments)
+},{"./annotation":1066,"./module":1069,"dup":504}],1069:[function(require,module,exports){
+arguments[4][505][0].apply(exports,arguments)
+},{"dup":505}],1070:[function(require,module,exports){
 arguments[4][192][0].apply(exports,arguments)
-},{"./appendTo":1150,"dup":192}],1150:[function(require,module,exports){
+},{"./appendTo":1071,"dup":192}],1071:[function(require,module,exports){
 arguments[4][193][0].apply(exports,arguments)
-},{"./util/ensureImported":1156,"dup":193}],1151:[function(require,module,exports){
+},{"./util/ensureImported":1077,"dup":193}],1072:[function(require,module,exports){
 arguments[4][194][0].apply(exports,arguments)
-},{"dup":194}],1152:[function(require,module,exports){
+},{"dup":194}],1073:[function(require,module,exports){
 arguments[4][196][0].apply(exports,arguments)
-},{"./remove":1155,"dup":196}],1153:[function(require,module,exports){
+},{"./remove":1076,"dup":196}],1074:[function(require,module,exports){
 arguments[4][197][0].apply(exports,arguments)
-},{"./attr":1151,"./util/ns":1157,"./util/parse":1158,"dup":197}],1154:[function(require,module,exports){
+},{"./attr":1072,"./util/ns":1078,"./util/parse":1079,"dup":197}],1075:[function(require,module,exports){
 arguments[4][198][0].apply(exports,arguments)
-},{"./appendTo":1150,"./clear":1152,"./util/parse":1158,"./util/serialize":1159,"dup":198}],1155:[function(require,module,exports){
+},{"./appendTo":1071,"./clear":1073,"./util/parse":1079,"./util/serialize":1080,"dup":198}],1076:[function(require,module,exports){
 arguments[4][199][0].apply(exports,arguments)
-},{"dup":199}],1156:[function(require,module,exports){
+},{"dup":199}],1077:[function(require,module,exports){
 arguments[4][200][0].apply(exports,arguments)
-},{"dup":200}],1157:[function(require,module,exports){
+},{"dup":200}],1078:[function(require,module,exports){
 arguments[4][201][0].apply(exports,arguments)
-},{"dup":201}],1158:[function(require,module,exports){
+},{"dup":201}],1079:[function(require,module,exports){
 arguments[4][202][0].apply(exports,arguments)
-},{"./ns":1157,"dup":202}],1159:[function(require,module,exports){
+},{"./ns":1078,"dup":202}],1080:[function(require,module,exports){
 arguments[4][203][0].apply(exports,arguments)
-},{"dup":203}],1160:[function(require,module,exports){
+},{"dup":203}],1081:[function(require,module,exports){
 
-},{}],1161:[function(require,module,exports){
+},{}],1082:[function(require,module,exports){
 (function (global){
 /*!
  * The buffer module from node.js, for the browser.
@@ -105329,7 +95029,7 @@ function blitBuffer (src, dst, offset, length) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"base64-js":1162,"ieee754":1163,"isarray":1164}],1162:[function(require,module,exports){
+},{"base64-js":1083,"ieee754":1084,"isarray":1085}],1083:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
 ;(function (exports) {
@@ -105455,7 +95155,7 @@ var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 	exports.fromByteArray = uint8ToBase64
 }(typeof exports === 'undefined' ? (this.base64js = {}) : exports))
 
-},{}],1163:[function(require,module,exports){
+},{}],1084:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = nBytes * 8 - mLen - 1
@@ -105541,14 +95241,14 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],1164:[function(require,module,exports){
+},{}],1085:[function(require,module,exports){
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
-},{}],1165:[function(require,module,exports){
+},{}],1086:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -105851,9 +95551,9 @@ function isUndefined(arg) {
   return arg === void 0;
 }
 
-},{}],1166:[function(require,module,exports){
+},{}],1087:[function(require,module,exports){
 arguments[4][82][0].apply(exports,arguments)
-},{"dup":82}],1167:[function(require,module,exports){
+},{"dup":82}],1088:[function(require,module,exports){
 /*!
  * Determine if an object is a Buffer
  *
@@ -105876,7 +95576,7 @@ function isSlowBuffer (obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
 }
 
-},{}],1168:[function(require,module,exports){
+},{}],1089:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -106058,10 +95758,10 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],1169:[function(require,module,exports){
+},{}],1090:[function(require,module,exports){
 module.exports = require("./lib/_stream_duplex.js")
 
-},{"./lib/_stream_duplex.js":1170}],1170:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":1091}],1091:[function(require,module,exports){
 // a duplex stream is just a stream that is both readable and writable.
 // Since JS doesn't have multiple prototypal inheritance, this class
 // prototypally inherits from Readable, and then parasitically from
@@ -106137,7 +95837,7 @@ function forEach(xs, f) {
     f(xs[i], i);
   }
 }
-},{"./_stream_readable":1172,"./_stream_writable":1174,"core-util-is":1177,"inherits":1166,"process-nextick-args":1179}],1171:[function(require,module,exports){
+},{"./_stream_readable":1093,"./_stream_writable":1095,"core-util-is":1098,"inherits":1087,"process-nextick-args":1100}],1092:[function(require,module,exports){
 // a passthrough stream.
 // basically just the most minimal sort of Transform stream.
 // Every written chunk gets output as-is.
@@ -106164,7 +95864,7 @@ function PassThrough(options) {
 PassThrough.prototype._transform = function (chunk, encoding, cb) {
   cb(null, chunk);
 };
-},{"./_stream_transform":1173,"core-util-is":1177,"inherits":1166}],1172:[function(require,module,exports){
+},{"./_stream_transform":1094,"core-util-is":1098,"inherits":1087}],1093:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -107108,7 +96808,7 @@ function indexOf(xs, x) {
   return -1;
 }
 }).call(this,require('_process'))
-},{"./_stream_duplex":1170,"./internal/streams/BufferList":1175,"_process":1168,"buffer":1161,"buffer-shims":1176,"core-util-is":1177,"events":1165,"inherits":1166,"isarray":1178,"process-nextick-args":1179,"string_decoder/":1186,"util":1160}],1173:[function(require,module,exports){
+},{"./_stream_duplex":1091,"./internal/streams/BufferList":1096,"_process":1089,"buffer":1082,"buffer-shims":1097,"core-util-is":1098,"events":1086,"inherits":1087,"isarray":1099,"process-nextick-args":1100,"string_decoder/":1107,"util":1081}],1094:[function(require,module,exports){
 // a transform stream is a readable/writable stream where you do
 // something with the data.  Sometimes it's called a "filter",
 // but that's not a great name for it, since that implies a thing where
@@ -107291,7 +96991,7 @@ function done(stream, er, data) {
 
   return stream.push(null);
 }
-},{"./_stream_duplex":1170,"core-util-is":1177,"inherits":1166}],1174:[function(require,module,exports){
+},{"./_stream_duplex":1091,"core-util-is":1098,"inherits":1087}],1095:[function(require,module,exports){
 (function (process){
 // A bit simpler than readable streams.
 // Implement an async ._write(chunk, encoding, cb), and it'll handle all
@@ -107848,7 +97548,7 @@ function CorkedRequest(state) {
   };
 }
 }).call(this,require('_process'))
-},{"./_stream_duplex":1170,"_process":1168,"buffer":1161,"buffer-shims":1176,"core-util-is":1177,"events":1165,"inherits":1166,"process-nextick-args":1179,"util-deprecate":1180}],1175:[function(require,module,exports){
+},{"./_stream_duplex":1091,"_process":1089,"buffer":1082,"buffer-shims":1097,"core-util-is":1098,"events":1086,"inherits":1087,"process-nextick-args":1100,"util-deprecate":1101}],1096:[function(require,module,exports){
 'use strict';
 
 var Buffer = require('buffer').Buffer;
@@ -107913,7 +97613,7 @@ BufferList.prototype.concat = function (n) {
   }
   return ret;
 };
-},{"buffer":1161,"buffer-shims":1176}],1176:[function(require,module,exports){
+},{"buffer":1082,"buffer-shims":1097}],1097:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -108025,7 +97725,7 @@ exports.allocUnsafeSlow = function allocUnsafeSlow(size) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"buffer":1161}],1177:[function(require,module,exports){
+},{"buffer":1082}],1098:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -108136,9 +97836,9 @@ function objectToString(o) {
 }
 
 }).call(this,{"isBuffer":require("../../../../insert-module-globals/node_modules/is-buffer/index.js")})
-},{"../../../../insert-module-globals/node_modules/is-buffer/index.js":1167}],1178:[function(require,module,exports){
-arguments[4][1164][0].apply(exports,arguments)
-},{"dup":1164}],1179:[function(require,module,exports){
+},{"../../../../insert-module-globals/node_modules/is-buffer/index.js":1088}],1099:[function(require,module,exports){
+arguments[4][1085][0].apply(exports,arguments)
+},{"dup":1085}],1100:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -108185,7 +97885,7 @@ function nextTick(fn, arg1, arg2, arg3) {
 }
 
 }).call(this,require('_process'))
-},{"_process":1168}],1180:[function(require,module,exports){
+},{"_process":1089}],1101:[function(require,module,exports){
 (function (global){
 
 /**
@@ -108256,10 +97956,10 @@ function config (name) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],1181:[function(require,module,exports){
+},{}],1102:[function(require,module,exports){
 module.exports = require("./lib/_stream_passthrough.js")
 
-},{"./lib/_stream_passthrough.js":1171}],1182:[function(require,module,exports){
+},{"./lib/_stream_passthrough.js":1092}],1103:[function(require,module,exports){
 (function (process){
 var Stream = (function (){
   try {
@@ -108279,13 +97979,13 @@ if (!process.browser && process.env.READABLE_STREAM === 'disable' && Stream) {
 }
 
 }).call(this,require('_process'))
-},{"./lib/_stream_duplex.js":1170,"./lib/_stream_passthrough.js":1171,"./lib/_stream_readable.js":1172,"./lib/_stream_transform.js":1173,"./lib/_stream_writable.js":1174,"_process":1168}],1183:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":1091,"./lib/_stream_passthrough.js":1092,"./lib/_stream_readable.js":1093,"./lib/_stream_transform.js":1094,"./lib/_stream_writable.js":1095,"_process":1089}],1104:[function(require,module,exports){
 module.exports = require("./lib/_stream_transform.js")
 
-},{"./lib/_stream_transform.js":1173}],1184:[function(require,module,exports){
+},{"./lib/_stream_transform.js":1094}],1105:[function(require,module,exports){
 module.exports = require("./lib/_stream_writable.js")
 
-},{"./lib/_stream_writable.js":1174}],1185:[function(require,module,exports){
+},{"./lib/_stream_writable.js":1095}],1106:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -108414,7 +98114,7 @@ Stream.prototype.pipe = function(dest, options) {
   return dest;
 };
 
-},{"events":1165,"inherits":1166,"readable-stream/duplex.js":1169,"readable-stream/passthrough.js":1181,"readable-stream/readable.js":1182,"readable-stream/transform.js":1183,"readable-stream/writable.js":1184}],1186:[function(require,module,exports){
+},{"events":1086,"inherits":1087,"readable-stream/duplex.js":1090,"readable-stream/passthrough.js":1102,"readable-stream/readable.js":1103,"readable-stream/transform.js":1104,"readable-stream/writable.js":1105}],1107:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -108637,7 +98337,7 @@ function base64DetectIncompleteChar(buffer) {
   this.charLength = this.charReceived ? 3 : 0;
 }
 
-},{"buffer":1161}],1187:[function(require,module,exports){
+},{"buffer":1082}],1108:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.1
  * http://jquery.com/
@@ -117829,7 +107529,7 @@ return jQuery;
 
 }));
 
-},{}],1188:[function(require,module,exports){
+},{}],1109:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -124618,7 +114318,7 @@ return jQuery;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],1189:[function(require,module,exports){
+},{}],1110:[function(require,module,exports){
 (function (global){
 //! moment.js
 //! version : 2.9.0
@@ -127665,7 +117365,7 @@ return jQuery;
 }).call(this);
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],1190:[function(require,module,exports){
+},{}],1111:[function(require,module,exports){
 /*
  * angular-ui-bootstrap
  * http://angular-ui.github.io/bootstrap/
