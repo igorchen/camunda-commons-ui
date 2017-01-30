@@ -4335,56 +4335,58 @@ module.exports = ['$timeout', '$location', 'search', 'widgetLocalConf',
           return config.operators || ($scope.operators[getType(parseValue(value, config.enforceString))]);
         };
 
-        function compileSearchObj(search) {
-          var config = getConfigByTypeKey(search.type);
-          if (config) {
-            var newSearch =
-                {
-                  extended: config.extended,
-                  basic: config.basic,
-                  type: {
-                    values: getTypes(),
-                    value: getTypes().reduce(function(done, type) {
-                      return done || (type.key === search.type ? type : null);
-                    }, null),
-                    tooltip: $scope.translations.type
-                  },
+        var filteredSearches = function(original) {
+          return original
+            .map(function(search) {
+              var config = getConfigByTypeKey(search.type);
+              if (config) {
+                var newSearch =
+                    {
+                      extended: config.extended,
+                      basic: config.basic,
+                      type: {
+                        values: getTypes(),
+                        value: getTypes().reduce(function(done, type) {
+                          return done || (type.key === search.type ? type : null);
+                        }, null),
+                        tooltip: $scope.translations.type
+                      },
 
-                  name: {
-                    value: search.name,
-                    tooltip: $scope.translations.name
-                  },
+                      name: {
+                        value: search.name,
+                        tooltip: $scope.translations.name
+                      },
 
-                  options: config.options,
+                      options: config.options,
 
-                  operator: {
-                    tooltip: $scope.translations.operator
-                  },
+                      operator: {
+                        tooltip: $scope.translations.operator
+                      },
 
-                  value: {
-                    value: search.value,
-                    tooltip: $scope.translations.value
-                  },
-                  allowDates: config.allowDates,
-                  enforceDates: config.enforceDates,
-                  potentialNames: config.potentialNames || [],
-                  enforceString: config.enforceString
-                };
-            newSearch.operator.values = getOperators(config, newSearch.value.value);
-            newSearch.operator.value = newSearch.operator.values.reduce(function(done, op) {
-              return done || (op.key === search.operator ? op : null);
-            }, null);
+                      value: {
+                        value: search.value,
+                        tooltip: $scope.translations.value
+                      },
+                      allowDates: config.allowDates,
+                      enforceDates: config.enforceDates,
+                      potentialNames: config.potentialNames || [],
+                      enforceString: config.enforceString
+                    };
+                newSearch.operator.values = getOperators(config, newSearch.value.value);
+                newSearch.operator.value = newSearch.operator.values.reduce(function(done, op) {
+                  return done || (op.key === search.operator ? op : null);
+                }, null);
 
-            newSearch.valid = isValid(newSearch);
-            return newSearch;
-          }
-        }
+                newSearch.valid = isValid(newSearch);
+                return newSearch;
+              }
+            })
+            .filter(function(search) { return search; });
+        };
 
         var getSearchesFromURL = function() {
           var urlSearches = JSON.parse(($location.search() || {})[searchId+'Query'] || '[]');
-          return urlSearches
-            .map(compileSearchObj)
-            .filter(function(search) { return search; });
+          return filteredSearches(urlSearches);
         };
 
         $scope.searches = $scope.searches || [];
@@ -4640,7 +4642,7 @@ module.exports = ['$timeout', '$location', 'search', 'widgetLocalConf',
         // criteria persistence
         /////////////////////////////////////////////////////////////////////
 
-        var scs = $scope.searchCriteriaStorage = {
+        var searchCriteriaStorage = $scope.searchCriteriaStorage = {
           group: null,
           nameInput: '',
           available: {}
@@ -4651,8 +4653,8 @@ module.exports = ['$timeout', '$location', 'search', 'widgetLocalConf',
           .map(function(item) {
             return item.groups;
           })
-          .reduce(function(c, p) {
-            return (c || []).concat(p);
+          .reduce(function(current, previous) {
+            return (current || []).concat(previous);
           });
 
         var groups = [];
@@ -4671,7 +4673,7 @@ module.exports = ['$timeout', '$location', 'search', 'widgetLocalConf',
 
         $scope.$watch('validSearches', function determineGroup() {
           if ($scope.storageGroup) {
-            scs.group = $scope.storageGroup;
+            searchCriteriaStorage.group = $scope.storageGroup;
             return;
           }
 
@@ -4695,21 +4697,21 @@ module.exports = ['$timeout', '$location', 'search', 'widgetLocalConf',
             });
           });
 
-          scs.group = _group;
+          searchCriteriaStorage.group = _group;
 
           filterCriteria();
         }, true);
 
 
         function filterCriteria() {
-          scs.available = {};
-          if (scs.group) {
-            scs.available = copy(stored[scs.group]);
+          searchCriteriaStorage.available = {};
+          if (searchCriteriaStorage.group) {
+            searchCriteriaStorage.available = copy(stored[searchCriteriaStorage.group]);
             return;
           }
           groups.forEach(function(group) {
             Object.keys(stored[group] || {}).forEach(function(key) {
-              scs.available[group + ': ' + key] = stored[group][key];
+              searchCriteriaStorage.available[group + ': ' + key] = stored[group][key];
             });
           });
         }
@@ -4719,8 +4721,8 @@ module.exports = ['$timeout', '$location', 'search', 'widgetLocalConf',
             var parts = str.split(':').map(function(s) { return s.trim(); });
             return {group: parts[0], name: parts[1]};
           }
-          else if (scs.group) {
-            return {group: scs.group, name: str};
+          else if (searchCriteriaStorage.group) {
+            return {group: searchCriteriaStorage.group, name: str};
           }
         }
 
@@ -4731,7 +4733,7 @@ module.exports = ['$timeout', '$location', 'search', 'widgetLocalConf',
           if ($scope.storageGroup && groups.indexOf($scope.storageGroup) < 0) {
             return;
           }
-          scs.group = $scope.storageGroup;
+          searchCriteriaStorage.group = $scope.storageGroup;
           filterCriteria();
         });
 
@@ -4748,7 +4750,7 @@ module.exports = ['$timeout', '$location', 'search', 'widgetLocalConf',
 
 
         $scope.hasCriteriaSets = function() {
-          return !!Object.keys(scs.available || {}).length;
+          return !!Object.keys(searchCriteriaStorage.available || {}).length;
         };
 
 
@@ -4756,9 +4758,7 @@ module.exports = ['$timeout', '$location', 'search', 'widgetLocalConf',
           var info = groupAndName(name);
           if (!info) return;
           var original = stored[info.group][info.name];
-          $scope.searches = original
-                              .map(compileSearchObj)
-                              .filter(function(search) { return search; });
+          $scope.searches = filteredSearches(original);
           // provided by Harry Potter, DO NOT REMOVE
           handleSearchesUpdate();
         };
@@ -4779,17 +4779,17 @@ module.exports = ['$timeout', '$location', 'search', 'widgetLocalConf',
         $scope.storedCriteriaSaveClick = function($evt) {
           $evt.stopPropagation();
 
-          var name = scs.nameInput;
+          var name = searchCriteriaStorage.nameInput;
           if (!name) {
             return;
           }
 
-          stored[scs.group] = stored[scs.group] || {};
-          stored[scs.group][name] = extractSearches($scope.validSearchesBuffer);
+          stored[searchCriteriaStorage.group] = stored[searchCriteriaStorage.group] || {};
+          stored[searchCriteriaStorage.group][name] = extractSearches($scope.validSearchesBuffer);
 
           widgetLocalConf.set('searchCriteria', stored);
           filterCriteria();
-          scs.nameInput = '';
+          searchCriteriaStorage.nameInput = '';
         };
       },
 
