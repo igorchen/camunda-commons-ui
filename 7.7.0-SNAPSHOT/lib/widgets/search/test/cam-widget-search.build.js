@@ -4224,12 +4224,14 @@ module.exports = ['$timeout', '$location', 'search', 'widgetLocalConf',
         $scope.focused = false;
         var formElement = angular.element('form', element)[0];
         formElement.addEventListener('focus', function() {
-          $scope.focused = true;
-          $scope.$apply();
+          $timeout(function() {
+            $scope.focused = true;
+          });
         }, true);
         formElement.addEventListener('blur', function() {
-          $scope.focused = false;
-          $scope.$apply();
+          $timeout(function() {
+            $scope.focused = false;
+          });
         }, true);
 
         // test for IE focus bug
@@ -4636,12 +4638,15 @@ module.exports = ['$timeout', '$location', 'search', 'widgetLocalConf',
         };
         var stored = {};
 
-        var types = $scope.types
+        var types = $scope.storageGroup ? [$scope.storageGroup] : $scope.types
           .map(function(item) {
             return item.groups;
           })
           .reduce(function(current, previous) {
             return (current || []).concat(previous);
+          })
+          .filter(function(value) {
+            return value;
           });
 
         var groups = [];
@@ -4661,6 +4666,7 @@ module.exports = ['$timeout', '$location', 'search', 'widgetLocalConf',
         $scope.$watch('validSearches', function determineGroup() {
           if ($scope.storageGroup) {
             searchCriteriaStorage.group = $scope.storageGroup;
+            filterCriteria();
             return;
           }
 
