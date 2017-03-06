@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/camunda/camunda-commons-ui.git"
+    "url": "git://github.com/igorchen/camunda-commons-ui.git"
   },
   "keywords": [
     "camunda"
@@ -45,7 +45,7 @@
     "bootstrap": "3.3.6",
     "bpmn-font": "0.2.0",
     "bpmn-js": "0.18.4",
-    "camunda-bpm-sdk-js": "git://github.com/camunda/camunda-bpm-sdk-js#master",
+    "camunda-bpm-sdk-js": "git://github.com/igorchen/camunda-bpm-sdk-js#master",
     "clipboard": "1.5.10",
     "cmmn-js": "0.7.4",
     "diagram-js": "0.18.2",
